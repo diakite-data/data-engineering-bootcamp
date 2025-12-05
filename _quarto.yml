@@ -11,8 +11,8 @@ website:
 
   # --- Sidebar moderne ---
   sidebar:
-    style: "floating"     
-    search: true          
+    style: "floating"
+    search: true
     collapse-level: 2
     contents:
       - index.qmd
@@ -25,14 +25,14 @@ website:
           - notebooks/beginner/04_python_basics_for_data_engineers.ipynb
           - notebooks/beginner/05_python_data_processing_for_data_engineers.ipynb
           - notebooks/beginner/06_intro_relational_databases.ipynb
-          - notebooks/beginner/07_sql_for_data_engineers_bis.ipynb
+          - notebooks/beginner/07_sql_for_data_engineers.ipynb
           - notebooks/beginner/08_intro_big_data_distributed.ipynb
           - notebooks/beginner/09_mongodb_for_data_engineers.ipynb
           - notebooks/beginner/10_elasticsearch_for_data_engineers.ipynb
           - notebooks/beginner/11_pyspark_for_data_engineering.ipynb
           - notebooks/beginner/12_orchestration_pipelines.ipynb
 
-  # --- Icons in navbar ---
+  # --- Navbar ---
   navbar:
     right:
       - icon: github
@@ -46,7 +46,7 @@ format:
     css: styles.css
     toc: true
     toc-depth: 3
-    number-sections: true
+    number-sections: false
     smooth-scroll: true
     code-fold: true
     highlight-style: dracula

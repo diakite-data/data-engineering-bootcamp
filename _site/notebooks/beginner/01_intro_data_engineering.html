@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>🧠 Introduction au Data Engineering – Bootcamp Data Engineering</title>
+<title>🧠 Introduction au Data Engineering – Bootcamp Data Engineering – From Zero to Hero</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -75,6 +75,7 @@ ul.task-list li input[type="checkbox"] {
 <style>html{ scroll-behavior: smooth; }</style>
 
 
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -247,7 +248,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">Bootcamp Data Engineering</span>
+    <span class="navbar-title">Bootcamp Data Engineering – From Zero to Hero</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -258,11 +259,6 @@ ul.task-list li input[type="checkbox"] {
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/diakite-data/data-engineering-bootcamp"> <i class="bi bi-github" role="img">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="../../#"> <i class="bi bi-lightbulb" role="img" aria-label="Mode clair/sombre">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -345,8 +341,44 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notebooks/beginner/06_intro_databases.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">🧠 Introduction aux bases de données pour Data Engineers</span></a>
+  <a href="../../notebooks/beginner/06_intro_relational_databases.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🗄️ Introduction aux Bases de Données Relationnelles</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/07_sql_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🐘 SQL for Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/08_intro_big_data_distributed.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🐘 Introduction au Big Data &amp; Traitement Distribué</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/09_mongodb_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🍃 MongoDB for Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/10_elasticsearch_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🔍 Elasticsearch for Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/11_pyspark_for_data_engineering.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">⚡ PySpark for Data Engineering</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/12_orchestration_pipelines.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">⏰ Orchestration de Pipelines Data</span></a>
   </div>
 </li>
       </ul>
@@ -361,50 +393,50 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#prérequis" id="toc-prérequis" class="nav-link active" data-scroll-target="#prérequis"><span class="header-section-number">1</span> 📋 Prérequis</a></li>
-  <li><a href="#cest-quoi-le-data-engineering" id="toc-cest-quoi-le-data-engineering" class="nav-link" data-scroll-target="#cest-quoi-le-data-engineering"><span class="header-section-number">2</span> 📌 1. C’est quoi le Data Engineering ?</a>
+  <li><a href="#prérequis" id="toc-prérequis" class="nav-link active" data-scroll-target="#prérequis">📋 Prérequis</a></li>
+  <li><a href="#cest-quoi-le-data-engineering" id="toc-cest-quoi-le-data-engineering" class="nav-link" data-scroll-target="#cest-quoi-le-data-engineering">📌 1. C’est quoi le Data Engineering ?</a>
   <ul class="collapse">
-  <li><a href="#exemples-concrets-en-entreprise" id="toc-exemples-concrets-en-entreprise" class="nav-link" data-scroll-target="#exemples-concrets-en-entreprise"><span class="header-section-number">2.1</span> 🏢 Exemples concrets en entreprise</a></li>
+  <li><a href="#exemples-concrets-en-entreprise" id="toc-exemples-concrets-en-entreprise" class="nav-link" data-scroll-target="#exemples-concrets-en-entreprise">🏢 Exemples concrets en entreprise</a></li>
   </ul></li>
-  <li><a href="#différences-entre-métiers" id="toc-différences-entre-métiers" class="nav-link" data-scroll-target="#différences-entre-métiers"><span class="header-section-number">3</span> 👨🏽‍💻 2. Différences entre métiers</a>
+  <li><a href="#différences-entre-métiers" id="toc-différences-entre-métiers" class="nav-link" data-scroll-target="#différences-entre-métiers">👨🏽‍💻 2. Différences entre métiers</a>
   <ul class="collapse">
-  <li><a href="#comment-ces-rôles-collaborent" id="toc-comment-ces-rôles-collaborent" class="nav-link" data-scroll-target="#comment-ces-rôles-collaborent"><span class="header-section-number">3.1</span> 🔄 Comment ces rôles collaborent ?</a></li>
+  <li><a href="#comment-ces-rôles-collaborent" id="toc-comment-ces-rôles-collaborent" class="nav-link" data-scroll-target="#comment-ces-rôles-collaborent">🔄 Comment ces rôles collaborent ?</a></li>
   </ul></li>
-  <li><a href="#architecture-typique-dun-pipeline-de-données-moderne" id="toc-architecture-typique-dun-pipeline-de-données-moderne" class="nav-link" data-scroll-target="#architecture-typique-dun-pipeline-de-données-moderne"><span class="header-section-number">4</span> 🏗️ 3. Architecture typique d’un pipeline de données moderne</a>
+  <li><a href="#architecture-typique-dun-pipeline-de-données-moderne" id="toc-architecture-typique-dun-pipeline-de-données-moderne" class="nav-link" data-scroll-target="#architecture-typique-dun-pipeline-de-données-moderne">🏗️ 3. Architecture typique d’un pipeline de données moderne</a>
   <ul class="collapse">
-  <li><a href="#etl-vs-elt-quelle-est-la-différence" id="toc-etl-vs-elt-quelle-est-la-différence" class="nav-link" data-scroll-target="#etl-vs-elt-quelle-est-la-différence"><span class="header-section-number">4.1</span> 🔁 ETL vs ELT — Quelle est la différence ?</a></li>
+  <li><a href="#etl-vs-elt-quelle-est-la-différence" id="toc-etl-vs-elt-quelle-est-la-différence" class="nav-link" data-scroll-target="#etl-vs-elt-quelle-est-la-différence">🔁 ETL vs ELT — Quelle est la différence ?</a></li>
   </ul></li>
-  <li><a href="#pipelines-batch-vs-streaming" id="toc-pipelines-batch-vs-streaming" class="nav-link" data-scroll-target="#pipelines-batch-vs-streaming"><span class="header-section-number">5</span> 🕘 4. Pipelines batch vs streaming</a>
+  <li><a href="#pipelines-batch-vs-streaming" id="toc-pipelines-batch-vs-streaming" class="nav-link" data-scroll-target="#pipelines-batch-vs-streaming">🕘 4. Pipelines batch vs streaming</a>
   <ul class="collapse">
-  <li><a href="#comment-choisir" id="toc-comment-choisir" class="nav-link" data-scroll-target="#comment-choisir"><span class="header-section-number">5.1</span> 🤔 Comment choisir ?</a></li>
-  <li><a href="#fondations-des-pipelines-de-données" id="toc-fondations-des-pipelines-de-données" class="nav-link" data-scroll-target="#fondations-des-pipelines-de-données"><span class="header-section-number">5.2</span> 🧱 Fondations des pipelines de données</a></li>
+  <li><a href="#comment-choisir" id="toc-comment-choisir" class="nav-link" data-scroll-target="#comment-choisir">🤔 Comment choisir ?</a></li>
+  <li><a href="#fondations-des-pipelines-de-données" id="toc-fondations-des-pipelines-de-données" class="nav-link" data-scroll-target="#fondations-des-pipelines-de-données">🧱 Fondations des pipelines de données</a></li>
   </ul></li>
-  <li><a href="#panorama-des-outils-du-data-engineer" id="toc-panorama-des-outils-du-data-engineer" class="nav-link" data-scroll-target="#panorama-des-outils-du-data-engineer"><span class="header-section-number">6</span> 🧰 5. Panorama des outils du Data Engineer</a>
+  <li><a href="#panorama-des-outils-du-data-engineer" id="toc-panorama-des-outils-du-data-engineer" class="nav-link" data-scroll-target="#panorama-des-outils-du-data-engineer">🧰 5. Panorama des outils du Data Engineer</a>
   <ul class="collapse">
-  <li><a href="#stack-moderne-typique-2024" id="toc-stack-moderne-typique-2024" class="nav-link" data-scroll-target="#stack-moderne-typique-2024"><span class="header-section-number">6.1</span> 🗺️ Stack moderne typique (2024)</a></li>
+  <li><a href="#stack-moderne-typique-2024" id="toc-stack-moderne-typique-2024" class="nav-link" data-scroll-target="#stack-moderne-typique-2024">🗺️ Stack moderne typique (2024)</a></li>
   </ul></li>
-  <li><a href="#soft-skills-mindset-du-data-engineer" id="toc-soft-skills-mindset-du-data-engineer" class="nav-link" data-scroll-target="#soft-skills-mindset-du-data-engineer"><span class="header-section-number">7</span> 🧠 6. Soft Skills &amp; Mindset du Data Engineer</a></li>
-  <li><a href="#quiz-de-fin-de-module" id="toc-quiz-de-fin-de-module" class="nav-link" data-scroll-target="#quiz-de-fin-de-module"><span class="header-section-number">8</span> 🧪 Quiz de fin de module</a>
+  <li><a href="#soft-skills-mindset-du-data-engineer" id="toc-soft-skills-mindset-du-data-engineer" class="nav-link" data-scroll-target="#soft-skills-mindset-du-data-engineer">🧠 6. Soft Skills &amp; Mindset du Data Engineer</a></li>
+  <li><a href="#quiz-de-fin-de-module" id="toc-quiz-de-fin-de-module" class="nav-link" data-scroll-target="#quiz-de-fin-de-module">🧪 Quiz de fin de module</a>
   <ul class="collapse">
-  <li><a href="#q1.-quel-est-le-rôle-principal-dun-data-engineer" id="toc-q1.-quel-est-le-rôle-principal-dun-data-engineer" class="nav-link" data-scroll-target="#q1.-quel-est-le-rôle-principal-dun-data-engineer"><span class="header-section-number">8.1</span> ❓ Q1. Quel est le rôle principal d’un Data Engineer ?</a></li>
-  <li><a href="#q2.-dans-un-pipeline-etl-que-signifie-le-t" id="toc-q2.-dans-un-pipeline-etl-que-signifie-le-t" class="nav-link" data-scroll-target="#q2.-dans-un-pipeline-etl-que-signifie-le-t"><span class="header-section-number">8.2</span> ❓ Q2. Dans un pipeline <strong>ETL</strong>, que signifie le “T” ?</a></li>
-  <li><a href="#q3.-quelle-est-la-principale-différence-entre-etl-et-elt" id="toc-q3.-quelle-est-la-principale-différence-entre-etl-et-elt" class="nav-link" data-scroll-target="#q3.-quelle-est-la-principale-différence-entre-etl-et-elt"><span class="header-section-number">8.3</span> ❓ Q3. Quelle est la principale différence entre ETL et ELT ?</a></li>
-  <li><a href="#q4.-lequel-de-ces-outils-est-utilisé-pour-orchestrer-des-pipelines" id="toc-q4.-lequel-de-ces-outils-est-utilisé-pour-orchestrer-des-pipelines" class="nav-link" data-scroll-target="#q4.-lequel-de-ces-outils-est-utilisé-pour-orchestrer-des-pipelines"><span class="header-section-number">8.4</span> ❓ Q4. Lequel de ces outils est utilisé pour orchestrer des pipelines ?</a></li>
-  <li><a href="#q5.-le-traitement-batch-consiste-à" id="toc-q5.-le-traitement-batch-consiste-à" class="nav-link" data-scroll-target="#q5.-le-traitement-batch-consiste-à"><span class="header-section-number">8.5</span> ❓ Q5. Le traitement <strong>batch</strong> consiste à :</a></li>
+  <li><a href="#q1.-quel-est-le-rôle-principal-dun-data-engineer" id="toc-q1.-quel-est-le-rôle-principal-dun-data-engineer" class="nav-link" data-scroll-target="#q1.-quel-est-le-rôle-principal-dun-data-engineer">❓ Q1. Quel est le rôle principal d’un Data Engineer ?</a></li>
+  <li><a href="#q2.-dans-un-pipeline-etl-que-signifie-le-t" id="toc-q2.-dans-un-pipeline-etl-que-signifie-le-t" class="nav-link" data-scroll-target="#q2.-dans-un-pipeline-etl-que-signifie-le-t">❓ Q2. Dans un pipeline <strong>ETL</strong>, que signifie le “T” ?</a></li>
+  <li><a href="#q3.-quelle-est-la-principale-différence-entre-etl-et-elt" id="toc-q3.-quelle-est-la-principale-différence-entre-etl-et-elt" class="nav-link" data-scroll-target="#q3.-quelle-est-la-principale-différence-entre-etl-et-elt">❓ Q3. Quelle est la principale différence entre ETL et ELT ?</a></li>
+  <li><a href="#q4.-lequel-de-ces-outils-est-utilisé-pour-orchestrer-des-pipelines" id="toc-q4.-lequel-de-ces-outils-est-utilisé-pour-orchestrer-des-pipelines" class="nav-link" data-scroll-target="#q4.-lequel-de-ces-outils-est-utilisé-pour-orchestrer-des-pipelines">❓ Q4. Lequel de ces outils est utilisé pour orchestrer des pipelines ?</a></li>
+  <li><a href="#q5.-le-traitement-batch-consiste-à" id="toc-q5.-le-traitement-batch-consiste-à" class="nav-link" data-scroll-target="#q5.-le-traitement-batch-consiste-à">❓ Q5. Le traitement <strong>batch</strong> consiste à :</a></li>
   </ul></li>
-  <li><a href="#bonus-quiz-nouveaux-paradigmes-etlt-reverse-etl" id="toc-bonus-quiz-nouveaux-paradigmes-etlt-reverse-etl" class="nav-link" data-scroll-target="#bonus-quiz-nouveaux-paradigmes-etlt-reverse-etl"><span class="header-section-number">9</span> 🧠 Bonus Quiz — Nouveaux paradigmes : ETLt &amp; Reverse ETL</a>
+  <li><a href="#bonus-quiz-nouveaux-paradigmes-etlt-reverse-etl" id="toc-bonus-quiz-nouveaux-paradigmes-etlt-reverse-etl" class="nav-link" data-scroll-target="#bonus-quiz-nouveaux-paradigmes-etlt-reverse-etl">🧠 Bonus Quiz — Nouveaux paradigmes : ETLt &amp; Reverse ETL</a>
   <ul class="collapse">
-  <li><a href="#q6.-que-signifie-etlt" id="toc-q6.-que-signifie-etlt" class="nav-link" data-scroll-target="#q6.-que-signifie-etlt"><span class="header-section-number">9.1</span> ❓ Q6. Que signifie <strong>ETLt</strong> ?</a></li>
-  <li><a href="#q7.-le-reverse-etl-est-utilisé-pour" id="toc-q7.-le-reverse-etl-est-utilisé-pour" class="nav-link" data-scroll-target="#q7.-le-reverse-etl-est-utilisé-pour"><span class="header-section-number">9.2</span> ❓ Q7. Le <strong>Reverse ETL</strong> est utilisé pour :</a></li>
+  <li><a href="#q6.-que-signifie-etlt" id="toc-q6.-que-signifie-etlt" class="nav-link" data-scroll-target="#q6.-que-signifie-etlt">❓ Q6. Que signifie <strong>ETLt</strong> ?</a></li>
+  <li><a href="#q7.-le-reverse-etl-est-utilisé-pour" id="toc-q7.-le-reverse-etl-est-utilisé-pour" class="nav-link" data-scroll-target="#q7.-le-reverse-etl-est-utilisé-pour">❓ Q7. Le <strong>Reverse ETL</strong> est utilisé pour :</a></li>
   </ul></li>
-  <li><a href="#ressources-pour-aller-plus-loin" id="toc-ressources-pour-aller-plus-loin" class="nav-link" data-scroll-target="#ressources-pour-aller-plus-loin"><span class="header-section-number">10</span> 📚 Ressources pour aller plus loin</a>
+  <li><a href="#ressources-pour-aller-plus-loin" id="toc-ressources-pour-aller-plus-loin" class="nav-link" data-scroll-target="#ressources-pour-aller-plus-loin">📚 Ressources pour aller plus loin</a>
   <ul class="collapse">
-  <li><a href="#lectures-recommandées" id="toc-lectures-recommandées" class="nav-link" data-scroll-target="#lectures-recommandées"><span class="header-section-number">10.1</span> 📖 Lectures recommandées</a></li>
-  <li><a href="#sites-blogs" id="toc-sites-blogs" class="nav-link" data-scroll-target="#sites-blogs"><span class="header-section-number">10.2</span> 🌐 Sites &amp; Blogs</a></li>
-  <li><a href="#certifications" id="toc-certifications" class="nav-link" data-scroll-target="#certifications"><span class="header-section-number">10.3</span> 🎓 Certifications</a></li>
-  <li><a href="#outils-à-explorer" id="toc-outils-à-explorer" class="nav-link" data-scroll-target="#outils-à-explorer"><span class="header-section-number">10.4</span> 🛠️ Outils à explorer</a></li>
+  <li><a href="#lectures-recommandées" id="toc-lectures-recommandées" class="nav-link" data-scroll-target="#lectures-recommandées">📖 Lectures recommandées</a></li>
+  <li><a href="#sites-blogs" id="toc-sites-blogs" class="nav-link" data-scroll-target="#sites-blogs">🌐 Sites &amp; Blogs</a></li>
+  <li><a href="#certifications" id="toc-certifications" class="nav-link" data-scroll-target="#certifications">🎓 Certifications</a></li>
+  <li><a href="#outils-à-explorer" id="toc-outils-à-explorer" class="nav-link" data-scroll-target="#outils-à-explorer">🛠️ Outils à explorer</a></li>
   </ul></li>
-  <li><a href="#prochaine-étape" id="toc-prochaine-étape" class="nav-link" data-scroll-target="#prochaine-étape"><span class="header-section-number">11</span> ➡️ Prochaine étape</a></li>
+  <li><a href="#prochaine-étape" id="toc-prochaine-étape" class="nav-link" data-scroll-target="#prochaine-étape">➡️ Prochaine étape</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="git@github.com:diakite-data/data-engineering-bootcamp.git/blob/main/notebooks/beginner/01_intro_data_engineering.ipynb" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="git@github.com:diakite-data/data-engineering-bootcamp.git/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -432,10 +464,25 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>Bienvenue dans cette première leçon du parcours <strong>Data Engineering — From Zero to Hero</strong>.</p>
-<p>Dans ce notebook, nous allons découvrir : - Ce qu’est le Data Engineering - Les différences entre Data Engineer, Data Scientist et Data Analyst - L’architecture d’un système de données moderne - ETL vs ELT — Quelle est la différence ? - Les types de pipelines (batch vs streaming) - Fondations des pipelines de données - Panorama des outils du Data Engineer - Soft Skills &amp; Mindset du Data Engineer - Quiz de fin de module</p>
+<p>Dans ce notebook, nous allons découvrir :</p>
+<ul>
+<li>Ce qu’est le Data Engineering</li>
+<li>Les différences entre Data Engineer, Data Scientist et Data Analyst</li>
+<li>L’architecture d’un système de données moderne
+<ul>
+<li>ETL vs ELT — Quelle est la différence ?</li>
+</ul></li>
+<li>Les types de pipelines (batch vs streaming)
+<ul>
+<li>Fondations des pipelines de données</li>
+</ul></li>
+<li>Panorama des outils du Data Engineer</li>
+<li>Soft Skills &amp; Mindset du Data Engineer</li>
+<li>Quiz de fin de module</li>
+</ul>
 <hr>
-<section id="prérequis" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="prérequis"><span class="header-section-number">1</span> 📋 Prérequis</h2>
+<section id="prérequis" class="level2">
+<h2 class="anchored" data-anchor-id="prérequis">📋 Prérequis</h2>
 <p>Avant de commencer ce parcours, il est recommandé d’avoir :</p>
 <table class="caption-top table">
 <colgroup>
@@ -471,13 +518,13 @@ ul.task-list li input[type="checkbox"] {
 <p>💡 <strong>Pas de panique !</strong> Ce parcours est conçu pour les débutants. Nous couvrirons tout ce dont tu as besoin.</p>
 </blockquote>
 </section>
-<section id="cest-quoi-le-data-engineering" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="cest-quoi-le-data-engineering"><span class="header-section-number">2</span> 📌 1. C’est quoi le Data Engineering ?</h2>
+<section id="cest-quoi-le-data-engineering" class="level2">
+<h2 class="anchored" data-anchor-id="cest-quoi-le-data-engineering">📌 1. C’est quoi le Data Engineering ?</h2>
 <p>Le <strong>Data Engineering</strong> (ou ingénierie des données) est une discipline qui consiste à <strong>concevoir, construire, maintenir et optimiser</strong> les systèmes de traitement de données.</p>
 <p>Le Data Engineer, spécialiste en gestion des données, conçoit et maintient l’infrastructure data (bases de données, entrepôts de données, lacs de données) et développe des pipelines automatisés qui extraient, transforment et chargent les données dans des systèmes adaptés.</p>
 <p>C’est le socle technique qui garantit la qualité, la disponibilité et la sécurité des données utilisées par les Data Analysts et Data Scientists pour générer des insights et orienter les stratégies d’entreprise.</p>
-<section id="exemples-concrets-en-entreprise" class="level3" data-number="2.1">
-<h3 data-number="2.1" class="anchored" data-anchor-id="exemples-concrets-en-entreprise"><span class="header-section-number">2.1</span> 🏢 Exemples concrets en entreprise</h3>
+<section id="exemples-concrets-en-entreprise" class="level3">
+<h3 class="anchored" data-anchor-id="exemples-concrets-en-entreprise">🏢 Exemples concrets en entreprise</h3>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 29%">
@@ -514,8 +561,8 @@ ul.task-list li input[type="checkbox"] {
 </table>
 </section>
 </section>
-<section id="différences-entre-métiers" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="différences-entre-métiers"><span class="header-section-number">3</span> 👨🏽‍💻 2. Différences entre métiers</h2>
+<section id="différences-entre-métiers" class="level2">
+<h2 class="anchored" data-anchor-id="différences-entre-métiers">👨🏽‍💻 2. Différences entre métiers</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 11%">
@@ -552,8 +599,8 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-<section id="comment-ces-rôles-collaborent" class="level3" data-number="3.1">
-<h3 data-number="3.1" class="anchored" data-anchor-id="comment-ces-rôles-collaborent"><span class="header-section-number">3.1</span> 🔄 Comment ces rôles collaborent ?</h3>
+<section id="comment-ces-rôles-collaborent" class="level3">
+<h3 class="anchored" data-anchor-id="comment-ces-rôles-collaborent">🔄 Comment ces rôles collaborent ?</h3>
 <pre><code>┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
 │  Data Engineer  │ ──▶ │  Data Scientist │ ──▶ │  Data Analyst   │
 │                 │     │                 │     │                 │
@@ -565,8 +612,8 @@ ul.task-list li input[type="checkbox"] {
         └───────────── Feedback &amp; Besoins ◀─────────────┘</code></pre>
 </section>
 </section>
-<section id="architecture-typique-dun-pipeline-de-données-moderne" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="architecture-typique-dun-pipeline-de-données-moderne"><span class="header-section-number">4</span> 🏗️ 3. Architecture typique d’un pipeline de données moderne</h2>
+<section id="architecture-typique-dun-pipeline-de-données-moderne" class="level2">
+<h2 class="anchored" data-anchor-id="architecture-typique-dun-pipeline-de-données-moderne">🏗️ 3. Architecture typique d’un pipeline de données moderne</h2>
 <p>Un pipeline de données moderne suit généralement ce flux :</p>
 <pre class="mermaid"><code>flowchart LR
     subgraph Sources["📥 Sources"]
@@ -619,8 +666,8 @@ ul.task-list li input[type="checkbox"] {
 ┌──────────────────┐
 │  📊 EXPOSITION   │  Dashboards (Tableau, Power BI), ML, APIs
 └──────────────────┘</code></pre>
-<section id="etl-vs-elt-quelle-est-la-différence" class="level3" data-number="4.1">
-<h3 data-number="4.1" class="anchored" data-anchor-id="etl-vs-elt-quelle-est-la-différence"><span class="header-section-number">4.1</span> 🔁 ETL vs ELT — Quelle est la différence ?</h3>
+<section id="etl-vs-elt-quelle-est-la-différence" class="level3">
+<h3 class="anchored" data-anchor-id="etl-vs-elt-quelle-est-la-différence">🔁 ETL vs ELT — Quelle est la différence ?</h3>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 19%">
@@ -669,8 +716,8 @@ ul.task-list li input[type="checkbox"] {
 </table>
 </section>
 </section>
-<section id="pipelines-batch-vs-streaming" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="pipelines-batch-vs-streaming"><span class="header-section-number">5</span> 🕘 4. Pipelines batch vs streaming</h2>
+<section id="pipelines-batch-vs-streaming" class="level2">
+<h2 class="anchored" data-anchor-id="pipelines-batch-vs-streaming">🕘 4. Pipelines batch vs streaming</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 16%">
@@ -701,8 +748,8 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-<section id="comment-choisir" class="level3" data-number="5.1">
-<h3 data-number="5.1" class="anchored" data-anchor-id="comment-choisir"><span class="header-section-number">5.1</span> 🤔 Comment choisir ?</h3>
+<section id="comment-choisir" class="level3">
+<h3 class="anchored" data-anchor-id="comment-choisir">🤔 Comment choisir ?</h3>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -734,8 +781,8 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 </section>
-<section id="fondations-des-pipelines-de-données" class="level3" data-number="5.2">
-<h3 data-number="5.2" class="anchored" data-anchor-id="fondations-des-pipelines-de-données"><span class="header-section-number">5.2</span> 🧱 Fondations des pipelines de données</h3>
+<section id="fondations-des-pipelines-de-données" class="level3">
+<h3 class="anchored" data-anchor-id="fondations-des-pipelines-de-données">🧱 Fondations des pipelines de données</h3>
 <p>Tout pipeline de données repose sur plusieurs piliers fondamentaux :</p>
 <table class="caption-top table">
 <colgroup>
@@ -808,8 +855,8 @@ ul.task-list li input[type="checkbox"] {
 </blockquote>
 </section>
 </section>
-<section id="panorama-des-outils-du-data-engineer" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="panorama-des-outils-du-data-engineer"><span class="header-section-number">6</span> 🧰 5. Panorama des outils du Data Engineer</h2>
+<section id="panorama-des-outils-du-data-engineer" class="level2">
+<h2 class="anchored" data-anchor-id="panorama-des-outils-du-data-engineer">🧰 5. Panorama des outils du Data Engineer</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 34%">
@@ -866,8 +913,8 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-<section id="stack-moderne-typique-2024" class="level3" data-number="6.1">
-<h3 data-number="6.1" class="anchored" data-anchor-id="stack-moderne-typique-2024"><span class="header-section-number">6.1</span> 🗺️ Stack moderne typique (2024)</h3>
+<section id="stack-moderne-typique-2024" class="level3">
+<h3 class="anchored" data-anchor-id="stack-moderne-typique-2024">🗺️ Stack moderne typique (2024)</h3>
 <pre><code>┌─────────────────────────────────────────────────────────────┐
 │                    STACK DATA MODERNE                       │
 ├─────────────────────────────────────────────────────────────┤
@@ -879,8 +926,8 @@ ul.task-list li input[type="checkbox"] {
 └─────────────────────────────────────────────────────────────┘</code></pre>
 </section>
 </section>
-<section id="soft-skills-mindset-du-data-engineer" class="level2" data-number="7">
-<h2 data-number="7" class="anchored" data-anchor-id="soft-skills-mindset-du-data-engineer"><span class="header-section-number">7</span> 🧠 6. Soft Skills &amp; Mindset du Data Engineer</h2>
+<section id="soft-skills-mindset-du-data-engineer" class="level2">
+<h2 class="anchored" data-anchor-id="soft-skills-mindset-du-data-engineer">🧠 6. Soft Skills &amp; Mindset du Data Engineer</h2>
 <p>Le métier de Data Engineer n’est pas uniquement technique. Pour réussir dans ce domaine, il faut aussi développer des compétences humaines et professionnelles essentielles :</p>
 <table class="caption-top table">
 <colgroup>
@@ -929,12 +976,12 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 </section>
-<section id="quiz-de-fin-de-module" class="level2" data-number="8">
-<h2 data-number="8" class="anchored" data-anchor-id="quiz-de-fin-de-module"><span class="header-section-number">8</span> 🧪 Quiz de fin de module</h2>
+<section id="quiz-de-fin-de-module" class="level2">
+<h2 class="anchored" data-anchor-id="quiz-de-fin-de-module">🧪 Quiz de fin de module</h2>
 <p>Réponds aux questions suivantes pour valider tes acquis 👇🏽</p>
 <hr>
-<section id="q1.-quel-est-le-rôle-principal-dun-data-engineer" class="level3" data-number="8.1">
-<h3 data-number="8.1" class="anchored" data-anchor-id="q1.-quel-est-le-rôle-principal-dun-data-engineer"><span class="header-section-number">8.1</span> ❓ Q1. Quel est le rôle principal d’un Data Engineer ?</h3>
+<section id="q1.-quel-est-le-rôle-principal-dun-data-engineer" class="level3">
+<h3 class="anchored" data-anchor-id="q1.-quel-est-le-rôle-principal-dun-data-engineer">❓ Q1. Quel est le rôle principal d’un Data Engineer ?</h3>
 <ol type="a">
 <li>Créer des modèles prédictifs<br>
 </li>
@@ -952,8 +999,8 @@ ul.task-list li input[type="checkbox"] {
 </details>
 <hr>
 </section>
-<section id="q2.-dans-un-pipeline-etl-que-signifie-le-t" class="level3" data-number="8.2">
-<h3 data-number="8.2" class="anchored" data-anchor-id="q2.-dans-un-pipeline-etl-que-signifie-le-t"><span class="header-section-number">8.2</span> ❓ Q2. Dans un pipeline <strong>ETL</strong>, que signifie le “T” ?</h3>
+<section id="q2.-dans-un-pipeline-etl-que-signifie-le-t" class="level3">
+<h3 class="anchored" data-anchor-id="q2.-dans-un-pipeline-etl-que-signifie-le-t">❓ Q2. Dans un pipeline <strong>ETL</strong>, que signifie le “T” ?</h3>
 <ol type="a">
 <li>Transfer<br>
 </li>
@@ -971,8 +1018,8 @@ ul.task-list li input[type="checkbox"] {
 </details>
 <hr>
 </section>
-<section id="q3.-quelle-est-la-principale-différence-entre-etl-et-elt" class="level3" data-number="8.3">
-<h3 data-number="8.3" class="anchored" data-anchor-id="q3.-quelle-est-la-principale-différence-entre-etl-et-elt"><span class="header-section-number">8.3</span> ❓ Q3. Quelle est la principale différence entre ETL et ELT ?</h3>
+<section id="q3.-quelle-est-la-principale-différence-entre-etl-et-elt" class="level3">
+<h3 class="anchored" data-anchor-id="q3.-quelle-est-la-principale-différence-entre-etl-et-elt">❓ Q3. Quelle est la principale différence entre ETL et ELT ?</h3>
 <ol type="a">
 <li>ELT ne fait pas de transformation<br>
 </li>
@@ -990,8 +1037,8 @@ ul.task-list li input[type="checkbox"] {
 </details>
 <hr>
 </section>
-<section id="q4.-lequel-de-ces-outils-est-utilisé-pour-orchestrer-des-pipelines" class="level3" data-number="8.4">
-<h3 data-number="8.4" class="anchored" data-anchor-id="q4.-lequel-de-ces-outils-est-utilisé-pour-orchestrer-des-pipelines"><span class="header-section-number">8.4</span> ❓ Q4. Lequel de ces outils est utilisé pour orchestrer des pipelines ?</h3>
+<section id="q4.-lequel-de-ces-outils-est-utilisé-pour-orchestrer-des-pipelines" class="level3">
+<h3 class="anchored" data-anchor-id="q4.-lequel-de-ces-outils-est-utilisé-pour-orchestrer-des-pipelines">❓ Q4. Lequel de ces outils est utilisé pour orchestrer des pipelines ?</h3>
 <ol type="a">
 <li>Apache Kafka<br>
 </li>
@@ -1009,8 +1056,8 @@ ul.task-list li input[type="checkbox"] {
 </details>
 <hr>
 </section>
-<section id="q5.-le-traitement-batch-consiste-à" class="level3" data-number="8.5">
-<h3 data-number="8.5" class="anchored" data-anchor-id="q5.-le-traitement-batch-consiste-à"><span class="header-section-number">8.5</span> ❓ Q5. Le traitement <strong>batch</strong> consiste à :</h3>
+<section id="q5.-le-traitement-batch-consiste-à" class="level3">
+<h3 class="anchored" data-anchor-id="q5.-le-traitement-batch-consiste-à">❓ Q5. Le traitement <strong>batch</strong> consiste à :</h3>
 <ol type="a">
 <li>Traiter les données en continu<br>
 </li>
@@ -1029,11 +1076,11 @@ ul.task-list li input[type="checkbox"] {
 <hr>
 </section>
 </section>
-<section id="bonus-quiz-nouveaux-paradigmes-etlt-reverse-etl" class="level2" data-number="9">
-<h2 data-number="9" class="anchored" data-anchor-id="bonus-quiz-nouveaux-paradigmes-etlt-reverse-etl"><span class="header-section-number">9</span> 🧠 Bonus Quiz — Nouveaux paradigmes : ETLt &amp; Reverse ETL</h2>
+<section id="bonus-quiz-nouveaux-paradigmes-etlt-reverse-etl" class="level2">
+<h2 class="anchored" data-anchor-id="bonus-quiz-nouveaux-paradigmes-etlt-reverse-etl">🧠 Bonus Quiz — Nouveaux paradigmes : ETLt &amp; Reverse ETL</h2>
 <hr>
-<section id="q6.-que-signifie-etlt" class="level3" data-number="9.1">
-<h3 data-number="9.1" class="anchored" data-anchor-id="q6.-que-signifie-etlt"><span class="header-section-number">9.1</span> ❓ Q6. Que signifie <strong>ETLt</strong> ?</h3>
+<section id="q6.-que-signifie-etlt" class="level3">
+<h3 class="anchored" data-anchor-id="q6.-que-signifie-etlt">❓ Q6. Que signifie <strong>ETLt</strong> ?</h3>
 <ol type="a">
 <li>Une erreur dans la chaîne ETL<br>
 </li>
@@ -1052,8 +1099,8 @@ C’est une approche hybride où une partie des transformations est faite <stron
 </details>
 <hr>
 </section>
-<section id="q7.-le-reverse-etl-est-utilisé-pour" class="level3" data-number="9.2">
-<h3 data-number="9.2" class="anchored" data-anchor-id="q7.-le-reverse-etl-est-utilisé-pour"><span class="header-section-number">9.2</span> ❓ Q7. Le <strong>Reverse ETL</strong> est utilisé pour :</h3>
+<section id="q7.-le-reverse-etl-est-utilisé-pour" class="level3">
+<h3 class="anchored" data-anchor-id="q7.-le-reverse-etl-est-utilisé-pour">❓ Q7. Le <strong>Reverse ETL</strong> est utilisé pour :</h3>
 <ol type="a">
 <li>Recharger les données sources depuis le warehouse<br>
 </li>
@@ -1072,34 +1119,34 @@ C’est une approche hybride où une partie des transformations est faite <stron
 <hr>
 </section>
 </section>
-<section id="ressources-pour-aller-plus-loin" class="level2" data-number="10">
-<h2 data-number="10" class="anchored" data-anchor-id="ressources-pour-aller-plus-loin"><span class="header-section-number">10</span> 📚 Ressources pour aller plus loin</h2>
-<section id="lectures-recommandées" class="level3" data-number="10.1">
-<h3 data-number="10.1" class="anchored" data-anchor-id="lectures-recommandées"><span class="header-section-number">10.1</span> 📖 Lectures recommandées</h3>
+<section id="ressources-pour-aller-plus-loin" class="level2">
+<h2 class="anchored" data-anchor-id="ressources-pour-aller-plus-loin">📚 Ressources pour aller plus loin</h2>
+<section id="lectures-recommandées" class="level3">
+<h3 class="anchored" data-anchor-id="lectures-recommandées">📖 Lectures recommandées</h3>
 <ul>
 <li><a href="https://www.oreilly.com/library/view/fundamentals-of-data/9781098108298/">Fundamentals of Data Engineering</a> — Joe Reis &amp; Matt Housley</li>
 <li><a href="https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/books/">The Data Warehouse Toolkit</a> — Ralph Kimball</li>
 <li><a href="https://dataintensive.net/">Designing Data-Intensive Applications</a> — Martin Kleppmann</li>
 </ul>
 </section>
-<section id="sites-blogs" class="level3" data-number="10.2">
-<h3 data-number="10.2" class="anchored" data-anchor-id="sites-blogs"><span class="header-section-number">10.2</span> 🌐 Sites &amp; Blogs</h3>
+<section id="sites-blogs" class="level3">
+<h3 class="anchored" data-anchor-id="sites-blogs">🌐 Sites &amp; Blogs</h3>
 <ul>
 <li><a href="https://www.dataengineeringweekly.com/">Data Engineering Weekly</a> — Newsletter hebdomadaire</li>
 <li><a href="https://www.youtube.com/@SeattleDataGuy">Seattle Data Guy</a> — Chaîne YouTube</li>
 <li><a href="https://www.startdataengineering.com/">Start Data Engineering</a> — Tutoriels pratiques</li>
 </ul>
 </section>
-<section id="certifications" class="level3" data-number="10.3">
-<h3 data-number="10.3" class="anchored" data-anchor-id="certifications"><span class="header-section-number">10.3</span> 🎓 Certifications</h3>
+<section id="certifications" class="level3">
+<h3 class="anchored" data-anchor-id="certifications">🎓 Certifications</h3>
 <ul>
 <li>Google Cloud Professional Data Engineer</li>
 <li>AWS Certified Data Engineer</li>
 <li>Databricks Certified Data Engineer</li>
 </ul>
 </section>
-<section id="outils-à-explorer" class="level3" data-number="10.4">
-<h3 data-number="10.4" class="anchored" data-anchor-id="outils-à-explorer"><span class="header-section-number">10.4</span> 🛠️ Outils à explorer</h3>
+<section id="outils-à-explorer" class="level3">
+<h3 class="anchored" data-anchor-id="outils-à-explorer">🛠️ Outils à explorer</h3>
 <ul>
 <li><a href="https://www.getdbt.com/">dbt</a> — Transformation de données</li>
 <li><a href="https://airbyte.com/">Airbyte</a> — Ingestion de données (open source)</li>
@@ -1108,8 +1155,8 @@ C’est une approche hybride où une partie des transformations est faite <stron
 <hr>
 </section>
 </section>
-<section id="prochaine-étape" class="level2" data-number="11">
-<h2 data-number="11" class="anchored" data-anchor-id="prochaine-étape"><span class="header-section-number">11</span> ➡️ Prochaine étape</h2>
+<section id="prochaine-étape" class="level2">
+<h2 class="anchored" data-anchor-id="prochaine-étape">➡️ Prochaine étape</h2>
 <p>Maintenant que tu as une vue d’ensemble du Data Engineering, passons à la pratique !</p>
 <p>👉 <strong>Module suivant : <code>02_bash_for_data_engineers.ipynb</code></strong> — Maîtriser la ligne de commande</p>
 <hr>
