@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/beginner/02_bash_for_data_engineers.html</loc>
+    <lastmod>2025-12-05T11:24:19.414Z</lastmod>
+  </url>
+  <url>
+    <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/beginner/04_python_basics_for_data_engineers.html</loc>
+    <lastmod>2025-12-05T11:24:19.420Z</lastmod>
+  </url>
+  <url>
+    <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/beginner/01_intro_data_engineering.html</loc>
+    <lastmod>2025-12-05T11:24:19.409Z</lastmod>
+  </url>
+  <url>
+    <loc>https://diakite-data.github.io/data-engineering-bootcamp/index.html</loc>
+    <lastmod>2025-12-05T15:19:36.297Z</lastmod>
+  </url>
+  <url>
+    <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/beginner/05_python_data_processing_for_data_engineers.html</loc>
+    <lastmod>2025-12-05T11:24:19.422Z</lastmod>
+  </url>
+  <url>
+    <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/beginner/03_git_for_data_engineers.html</loc>
+    <lastmod>2025-12-05T11:24:19.418Z</lastmod>
+  </url>
+  <url>
+    <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/beginner/06_intro_databases.html</loc>
+    <lastmod>2025-12-05T11:24:19.424Z</lastmod>
+  </url>
+</urlset>

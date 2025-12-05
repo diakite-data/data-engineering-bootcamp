@@ -4,37 +4,45 @@ project:
 
 website:
   title: "Bootcamp Data Engineering"
-  description: "Programme Data Engineering — Niveau Débutant"
+  description: "Programme Data Engineering — Niveau débutant"
   site-url: "https://diakite-data.github.io/data-engineering-bootcamp"
   repo-url: "git@github.com:diakite-data/data-engineering-bootcamp.git"
   repo-actions: [source, issue]
 
+  # --- Sidebar (menu latéral) ---
+  sidebar:
+    style: "floating"     # or "docked"
+    search: true          # active la barre de recherche
+    collapse-level: 2     # optimisation des sous-sections
+    contents:
+      - index.qmd
+      - section: "Débutant"
+        contents:
+          - notebooks/beginner/01_intro_data_engineering.ipynb
+          - notebooks/beginner/02_bash_for_data_engineers.ipynb
+          - notebooks/beginner/03_git_for_data_engineers.ipynb
+          - notebooks/beginner/04_python_basics_for_data_engineers.ipynb
+          - notebooks/beginner/05_python_data_processing_for_data_engineers.ipynb
+          - notebooks/beginner/06_intro_databases.ipynb
+
   navbar:
-    left:
-      - text: "Accueil"
-        file: index.qmd
-
-      - text: "Débutant"
-        menu:
-          - file: notebooks/beginner/01_intro_data_engineering.ipynb
-            text: "Introduction au Data Engineering"
-          - file: notebooks/beginner/02_bash_for_data_engineers.ipynb
-            text: "Bash pour Data Engineers"
-          - file: notebooks/beginner/03_git_for_data_engineers.ipynb
-            text: "Git & Versioning"
-          - file: notebooks/beginner/04_python_basics_for_data_engineers.ipynb
-            text: "Python Basics"
-          - file: notebooks/beginner/05_python_data_processing_for_data_engineers.ipynb
-            text: "Traitement de données avec Python"
-          - file: notebooks/beginner/06_intro_databases.ipynb
-            text: "Introduction aux bases de données"
-
+    right:
+      - icon: github
+        href: https://github.com/diakite-data/data-engineering-bootcamp
+      - icon: lightbulb
+        href: "#"
+        aria-label: "Mode clair/sombre"
+  
 format:
   html:
-    theme: cosmo
+    theme:
+      light: cosmo        # thème clair premium
+      dark: cyborg        # dark mode automatique
     toc: true
     toc-depth: 3
-    code-fold: true
     number-sections: true
     smooth-scroll: true
+    code-fold: true
+    highlight-style: dracula
+    search: true
 

@@ -1,62 +1,61 @@
-# Bootcamp Data Engineering  
-Bienvenue dans le Bootcamp **Data Engineering** le plus complet en francophonie.  
-Il couvre **40 notebooks** répartis en trois niveaux :
+---
+title: "Bootcamp Data Engineering – From Zero to Hero"
+format:
+  html:
+    toc: false
+---
+
+<div class="hero">
+
+# 🚀 Bootcamp Data Engineering  
+### From Zero to Hero  
+Deviens un Data Engineer opérationnel, étape par étape.
+
+</div>
 
 ---
 
-## 🟦 Niveau Débutant
-Apprenez les fondations du Data Engineering :
-- Python
-- Bash
-- Git
-- SQL
-- Bases de données
-- PySpark
-- Orchestration (Airflow)
-- NoSQL (MongoDB, Elasticsearch)
+## 🎯 Pourquoi ce Bootcamp ?
+
+Bienvenue dans le **Bootcamp Data Engineering – From Zero to Hero**, un programme structuré pensé pour :
+
+- apprendre **les bases solides** du Data Engineering,  
+- maîtriser **les outils modernes** utilisés par les Data Engineers professionnels,  
+- comprendre **les architectures data d’entreprise**,  
+- pratiquer avec des notebooks interactifs et des projets concrets,  
+- progresser du **niveau Débutant → Intermédiaire → Avancé**.
 
 ---
 
-## 🟧 Niveau Intermédiaire
-Approfondissez vos compétences :
-- Data Lakes & Lakehouse
-- Docker & Kubernetes
-- Kafka Streaming
-- Spark avancé + Scala
-- Hadoop ecosystem
-- Polars, DuckDB & Arrow
-- Data Governance & Lineage
-- Data Contracts & API
-- Performance & FinOps
-- Modern Data Stack (DBT, Airbyte)
+## 📘 Structure du programme
+
+### 🟦 **Débutant**
+- Python pour les Data Engineers  
+- Bash, Git, Bases de données  
+- SQL, Pandas, PySpark  
+- Architecture de bases & premiers pipelines  
+
+### 🟩 **Intermédiaire**
+- Spark avancé, Scala  
+- Kafka & streaming  
+- Docker, Kubernetes  
+- Data Lakes, Lakehouse, Polars, DuckDB  
+- Data Quality, Governance, CI/CD  
+
+### 🟥 **Avancé**
+- Distributed Systems  
+- Advanced Streaming (Flink/Spark)  
+- Lakehouse Internals  
+- MLOps, MLflow, Kubeflow  
+- SRE/Observability pour la Data  
+- FinOps et architectures cloud à grande échelle  
 
 ---
 
-## 🟥 Niveau Avancé
-Niveau expert / architecte :
-- Systèmes distribués
-- Flink & streaming avancé
-- Lakehouse internals (Delta/Iceberg/Hudi)
-- Feature Store temps réel & Serving ML
-- MLOps (MLflow, Kubeflow)
-- SRE appliqué à la Data
-- Sécurité avancée
-- Plateforme Data d’entreprise
-- Projet final architecture complète
+## 🚀 Ready to Start?
 
----
+👉 Navigue dans le menu à gauche pour commencer ton parcours.  
+👉 Tu peux contribuer ou proposer des améliorations via GitHub.
 
-## 🎯 Objectif du bootcamp
-À la fin de ce programme, vous serez capable de :
-- Construire des pipelines batch & streaming
-- Gérer une architecture Data Lakehouse moderne
-- Déployer des pipelines cloud robustes
-- Implémenter du MLOps à l’échelle
-- Concevoir une plateforme Data complète
-- Travailler en tant que Data Engineer intermédiaire, senior ou architecte
-
----
-
-👉 Utilisez la **barre de navigation** pour commencer votre parcours.  
-Bonne formation 🚀  
+Bonne montée en compétence ! 💪  
 
