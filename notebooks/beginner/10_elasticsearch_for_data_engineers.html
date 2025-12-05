@@ -1,0 +1,2307 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>🔍 Elasticsearch for Data Engineers – Bootcamp Data Engineering – From Zero to Hero</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-fc8d3d93f0a84b7619e1f8ff6eb63d42.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-fc8d3d93f0a84b7619e1f8ff6eb63d42.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-fc8d3d93f0a84b7619e1f8ff6eb63d42.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-6a2c4b793c0becaeb94cc5bf146c1484.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-9829addb8a8859fb2d6fc218213bf783.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-6a2c4b793c0becaeb94cc5bf146c1484.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Bootcamp Data Engineering – From Zero to Hero</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/diakite-data/data-engineering-bootcamp"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notebooks/beginner/01_intro_data_engineering.html">Débutant</a></li><li class="breadcrumb-item"><a href="../../notebooks/beginner/10_elasticsearch_for_data_engineers.html">🔍 Elasticsearch for Data Engineers</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bootcamp Data Engineering – From Zero to Hero</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Débutant</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/01_intro_data_engineering.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🧠 Introduction au Data Engineering</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/02_bash_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🧰 Bash pour Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/03_git_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">📘 Git pour Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/04_python_basics_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">📘 Python – Bases pour Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/05_python_data_processing_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">📊 Python for Data Processing - Complete Guide</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/06_intro_relational_databases.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🗄️ Introduction aux Bases de Données Relationnelles</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/07_sql_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🐘 SQL for Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/08_intro_big_data_distributed.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🐘 Introduction au Big Data &amp; Traitement Distribué</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/09_mongodb_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🍃 MongoDB for Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/10_elasticsearch_for_data_engineers.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">🔍 Elasticsearch for Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/11_pyspark_for_data_engineering.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">⚡ PySpark for Data Engineering</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/12_orchestration_pipelines.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">⏰ Orchestration de Pipelines Data</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#prérequis" id="toc-prérequis" class="nav-link active" data-scroll-target="#prérequis">📋 Prérequis</a></li>
+  <li><a href="#objectifs-du-module" id="toc-objectifs-du-module" class="nav-link" data-scroll-target="#objectifs-du-module">🎯 Objectifs du module</a></li>
+  <li><a href="#version-elasticsearch" id="toc-version-elasticsearch" class="nav-link" data-scroll-target="#version-elasticsearch">⚠️ Version Elasticsearch</a></li>
+  <li><a href="#elasticsearch-dans-lécosystème-big-data" id="toc-elasticsearch-dans-lécosystème-big-data" class="nav-link" data-scroll-target="#elasticsearch-dans-lécosystème-big-data">🎯 Elasticsearch dans l’écosystème Big Data</a>
+  <ul class="collapse">
+  <li><a href="#position-dans-les-types-nosql" id="toc-position-dans-les-types-nosql" class="nav-link" data-scroll-target="#position-dans-les-types-nosql">Position dans les types NoSQL</a></li>
+  <li><a href="#rappel-les-5v" id="toc-rappel-les-5v" class="nav-link" data-scroll-target="#rappel-les-5v">Rappel : Les 5V</a></li>
+  <li><a href="#rappel-cap-base" id="toc-rappel-cap-base" class="nav-link" data-scroll-target="#rappel-cap-base">Rappel : CAP &amp; BASE</a></li>
+  </ul></li>
+  <li><a href="#pourquoi-elasticsearch-en-data-engineering" id="toc-pourquoi-elasticsearch-en-data-engineering" class="nav-link" data-scroll-target="#pourquoi-elasticsearch-en-data-engineering">🎯 Pourquoi Elasticsearch en Data Engineering ?</a></li>
+  <li><a href="#concepts-fondamentaux" id="toc-concepts-fondamentaux" class="nav-link" data-scroll-target="#concepts-fondamentaux">📚 1. Concepts fondamentaux</a>
+  <ul class="collapse">
+  <li><a href="#vocabulaire" id="toc-vocabulaire" class="nav-link" data-scroll-target="#vocabulaire">📖 Vocabulaire</a></li>
+  <li><a href="#shards-replicas" id="toc-shards-replicas" class="nav-link" data-scroll-target="#shards-replicas">🧱 Shards &amp; Replicas</a></li>
+  <li><a href="#état-du-cluster" id="toc-état-du-cluster" class="nav-link" data-scroll-target="#état-du-cluster">📊 État du cluster</a></li>
+  </ul></li>
+  <li><a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation">⚙️ 2. Installation</a>
+  <ul class="collapse">
+  <li><a href="#étape-1-télécharger-elasticsearch" id="toc-étape-1-télécharger-elasticsearch" class="nav-link" data-scroll-target="#étape-1-télécharger-elasticsearch">📦 Étape 1 : Télécharger Elasticsearch</a></li>
+  <li><a href="#étape-2-installer-elasticvue" id="toc-étape-2-installer-elasticvue" class="nav-link" data-scroll-target="#étape-2-installer-elasticvue">🧭 Étape 2 : Installer Elasticvue</a></li>
+  </ul></li>
+  <li><a href="#guide-elasticvue-prise-en-main" id="toc-guide-elasticvue-prise-en-main" class="nav-link" data-scroll-target="#guide-elasticvue-prise-en-main">🧭 3. Guide Elasticvue — Prise en main</a>
+  <ul class="collapse">
+  <li><a href="#connexion-au-cluster" id="toc-connexion-au-cluster" class="nav-link" data-scroll-target="#connexion-au-cluster">🔌 3.1 Connexion au cluster</a></li>
+  <li><a href="#interface-principale" id="toc-interface-principale" class="nav-link" data-scroll-target="#interface-principale">🗂️ 3.2 Interface principale</a></li>
+  <li><a href="#onglets-importants" id="toc-onglets-importants" class="nav-link" data-scroll-target="#onglets-importants">📍 Onglets importants :</a></li>
+  <li><a href="#utiliser-la-console-rest" id="toc-utiliser-la-console-rest" class="nav-link" data-scroll-target="#utiliser-la-console-rest">📝 3.3 Utiliser la console REST</a></li>
+  </ul></li>
+  <li><a href="#créer-un-index-et-insérer-des-données" id="toc-créer-un-index-et-insérer-des-données" class="nav-link" data-scroll-target="#créer-un-index-et-insérer-des-données">🛠️ 4. Créer un index et insérer des données</a>
+  <ul class="collapse">
+  <li><a href="#créer-lindex-clients" id="toc-créer-lindex-clients" class="nav-link" data-scroll-target="#créer-lindex-clients">📌 4.1 Créer l’index <code>clients</code></a></li>
+  <li><a href="#comprendre-le-mapping" id="toc-comprendre-le-mapping" class="nav-link" data-scroll-target="#comprendre-le-mapping">📐 4.2 Comprendre le mapping</a></li>
+  </ul></li>
+  <li><a href="#index-templates-automatiser-les-mappings" id="toc-index-templates-automatiser-les-mappings" class="nav-link" data-scroll-target="#index-templates-automatiser-les-mappings">📋 Index Templates — Automatiser les mappings</a>
+  <ul class="collapse">
+  <li><a href="#pourquoi-utiliser-des-templates" id="toc-pourquoi-utiliser-des-templates" class="nav-link" data-scroll-target="#pourquoi-utiliser-des-templates">🤔 Pourquoi utiliser des templates ?</a></li>
+  <li><a href="#créer-un-index-template" id="toc-créer-un-index-template" class="nav-link" data-scroll-target="#créer-un-index-template">📌 Créer un Index Template</a></li>
+  <li><a href="#tester-le-template" id="toc-tester-le-template" class="nav-link" data-scroll-target="#tester-le-template">🧪 Tester le template</a></li>
+  <li><a href="#lister-les-templates-existants" id="toc-lister-les-templates-existants" class="nav-link" data-scroll-target="#lister-les-templates-existants">📋 Lister les templates existants</a></li>
+  <li><a href="#supprimer-un-template" id="toc-supprimer-un-template" class="nav-link" data-scroll-target="#supprimer-un-template">🗑️ Supprimer un template</a></li>
+  <li><a href="#bonnes-pratiques-index-templates" id="toc-bonnes-pratiques-index-templates" class="nav-link" data-scroll-target="#bonnes-pratiques-index-templates">💡 Bonnes pratiques Index Templates</a></li>
+  <li><a href="#insérer-un-document" id="toc-insérer-un-document" class="nav-link" data-scroll-target="#insérer-un-document">📝 4.3 Insérer un document</a></li>
+  <li><a href="#insérer-plusieurs-documents-bulk" id="toc-insérer-plusieurs-documents-bulk" class="nav-link" data-scroll-target="#insérer-plusieurs-documents-bulk">📝 4.4 Insérer plusieurs documents (Bulk)</a></li>
+  </ul></li>
+  <li><a href="#requêtes-de-recherche" id="toc-requêtes-de-recherche" class="nav-link" data-scroll-target="#requêtes-de-recherche">🔍 5. Requêtes de recherche</a>
+  <ul class="collapse">
+  <li><a href="#afficher-tous-les-documents" id="toc-afficher-tous-les-documents" class="nav-link" data-scroll-target="#afficher-tous-les-documents">📌 5.1 Afficher tous les documents</a></li>
+  <li><a href="#filtrer-avec-match-full-text" id="toc-filtrer-avec-match-full-text" class="nav-link" data-scroll-target="#filtrer-avec-match-full-text">📌 5.2 Filtrer avec <code>match</code> (full-text)</a></li>
+  <li><a href="#filtrer-avec-term-exact-match" id="toc-filtrer-avec-term-exact-match" class="nav-link" data-scroll-target="#filtrer-avec-term-exact-match">📌 5.3 Filtrer avec <code>term</code> (exact match)</a></li>
+  <li><a href="#filtrer-par-plage-de-valeurs-range" id="toc-filtrer-par-plage-de-valeurs-range" class="nav-link" data-scroll-target="#filtrer-par-plage-de-valeurs-range">📌 5.4 Filtrer par plage de valeurs (<code>range</code>)</a></li>
+  <li><a href="#conditions-multiples-bool" id="toc-conditions-multiples-bool" class="nav-link" data-scroll-target="#conditions-multiples-bool">📌 5.5 Conditions multiples (<code>bool</code>)</a></li>
+  <li><a href="#recherche-floue-fuzzy" id="toc-recherche-floue-fuzzy" class="nav-link" data-scroll-target="#recherche-floue-fuzzy">📌 5.6 Recherche floue (<code>fuzzy</code>)</a></li>
+  <li><a href="#trier-et-limiter-les-résultats" id="toc-trier-et-limiter-les-résultats" class="nav-link" data-scroll-target="#trier-et-limiter-les-résultats">📌 5.7 Trier et limiter les résultats</a></li>
+  </ul></li>
+  <li><a href="#agrégations-group-by" id="toc-agrégations-group-by" class="nav-link" data-scroll-target="#agrégations-group-by">📊 6. Agrégations (GROUP BY)</a>
+  <ul class="collapse">
+  <li><a href="#compter-par-catégorie-terms" id="toc-compter-par-catégorie-terms" class="nav-link" data-scroll-target="#compter-par-catégorie-terms">📌 6.1 Compter par catégorie (<code>terms</code>)</a></li>
+  <li><a href="#métriques-sum-avg-min-max" id="toc-métriques-sum-avg-min-max" class="nav-link" data-scroll-target="#métriques-sum-avg-min-max">📌 6.2 Métriques (sum, avg, min, max)</a></li>
+  <li><a href="#stats-complètes-en-une-requête" id="toc-stats-complètes-en-une-requête" class="nav-link" data-scroll-target="#stats-complètes-en-une-requête">📌 6.3 Stats complètes en une requête</a></li>
+  <li><a href="#agrégations-imbriquées-group-by-métriques" id="toc-agrégations-imbriquées-group-by-métriques" class="nav-link" data-scroll-target="#agrégations-imbriquées-group-by-métriques">📌 6.4 Agrégations imbriquées (GROUP BY + métriques)</a></li>
+  <li><a href="#filtrer-avant-dagréger" id="toc-filtrer-avant-dagréger" class="nav-link" data-scroll-target="#filtrer-avant-dagréger">📌 6.5 Filtrer avant d’agréger</a></li>
+  </ul></li>
+  <li><a href="#modifier-et-supprimer" id="toc-modifier-et-supprimer" class="nav-link" data-scroll-target="#modifier-et-supprimer">✏️ 7. Modifier et supprimer</a>
+  <ul class="collapse">
+  <li><a href="#mettre-à-jour-un-document-par-id" id="toc-mettre-à-jour-un-document-par-id" class="nav-link" data-scroll-target="#mettre-à-jour-un-document-par-id">📌 7.1 Mettre à jour un document (par ID)</a></li>
+  <li><a href="#mettre-à-jour-par-requête" id="toc-mettre-à-jour-par-requête" class="nav-link" data-scroll-target="#mettre-à-jour-par-requête">📌 7.2 Mettre à jour par requête</a></li>
+  <li><a href="#supprimer-un-document-par-id" id="toc-supprimer-un-document-par-id" class="nav-link" data-scroll-target="#supprimer-un-document-par-id">📌 7.3 Supprimer un document (par ID)</a></li>
+  <li><a href="#supprimer-par-requête" id="toc-supprimer-par-requête" class="nav-link" data-scroll-target="#supprimer-par-requête">📌 7.4 Supprimer par requête</a></li>
+  <li><a href="#supprimer-un-index-entier" id="toc-supprimer-un-index-entier" class="nav-link" data-scroll-target="#supprimer-un-index-entier">📌 7.5 Supprimer un index entier</a></li>
+  </ul></li>
+  <li><a href="#cheatsheet-elasticsearch" id="toc-cheatsheet-elasticsearch" class="nav-link" data-scroll-target="#cheatsheet-elasticsearch">📋 Cheatsheet Elasticsearch</a>
+  <ul class="collapse">
+  <li><a href="#gestion-des-index" id="toc-gestion-des-index" class="nav-link" data-scroll-target="#gestion-des-index">🔧 Gestion des index</a></li>
+  <li><a href="#crud-documents" id="toc-crud-documents" class="nav-link" data-scroll-target="#crud-documents">📝 CRUD Documents</a></li>
+  <li><a href="#types-de-requêtes" id="toc-types-de-requêtes" class="nav-link" data-scroll-target="#types-de-requêtes">🔍 Types de requêtes</a></li>
+  <li><a href="#agrégations" id="toc-agrégations" class="nav-link" data-scroll-target="#agrégations">📊 Agrégations</a></li>
+  </ul></li>
+  <li><a href="#exercices-pratiques" id="toc-exercices-pratiques" class="nav-link" data-scroll-target="#exercices-pratiques">🎯 Exercices pratiques</a>
+  <ul class="collapse">
+  <li><a href="#exercice-1-facile" id="toc-exercice-1-facile" class="nav-link" data-scroll-target="#exercice-1-facile">🏋️ Exercice 1 — Facile</a></li>
+  <li><a href="#exercice-2-facile" id="toc-exercice-2-facile" class="nav-link" data-scroll-target="#exercice-2-facile">🏋️ Exercice 2 — Facile</a></li>
+  <li><a href="#exercice-3-intermédiaire" id="toc-exercice-3-intermédiaire" class="nav-link" data-scroll-target="#exercice-3-intermédiaire">🏋️ Exercice 3 — Intermédiaire</a></li>
+  <li><a href="#exercice-4-intermédiaire" id="toc-exercice-4-intermédiaire" class="nav-link" data-scroll-target="#exercice-4-intermédiaire">🏋️ Exercice 4 — Intermédiaire</a></li>
+  <li><a href="#exercice-5-avancé" id="toc-exercice-5-avancé" class="nav-link" data-scroll-target="#exercice-5-avancé">🏋️ Exercice 5 — Avancé</a></li>
+  </ul></li>
+  <li><a href="#quiz" id="toc-quiz" class="nav-link" data-scroll-target="#quiz">🧠 Quiz</a>
+  <ul class="collapse">
+  <li><a href="#q1.-quelle-requête-crée-un-index" id="toc-q1.-quelle-requête-crée-un-index" class="nav-link" data-scroll-target="#q1.-quelle-requête-crée-un-index">❓ Q1. Quelle requête crée un index ?</a></li>
+  <li><a href="#q2.-quelle-est-la-différence-entre-text-et-keyword" id="toc-q2.-quelle-est-la-différence-entre-text-et-keyword" class="nav-link" data-scroll-target="#q2.-quelle-est-la-différence-entre-text-et-keyword">❓ Q2. Quelle est la différence entre <code>text</code> et <code>keyword</code> ?</a></li>
+  <li><a href="#q3.-quelle-requête-utiliser-pour-un-group-by" id="toc-q3.-quelle-requête-utiliser-pour-un-group-by" class="nav-link" data-scroll-target="#q3.-quelle-requête-utiliser-pour-un-group-by">❓ Q3. Quelle requête utiliser pour un GROUP BY ?</a></li>
+  <li><a href="#q4.-que-fait-size-0-dans-une-requête-dagrégation" id="toc-q4.-que-fait-size-0-dans-une-requête-dagrégation" class="nav-link" data-scroll-target="#q4.-que-fait-size-0-dans-une-requête-dagrégation">❓ Q4. Que fait <code>size: 0</code> dans une requête d’agrégation ?</a></li>
+  <li><a href="#q5.-quelle-requête-permet-de-chercher-alice-même-si-on-tape-alise" id="toc-q5.-quelle-requête-permet-de-chercher-alice-même-si-on-tape-alise" class="nav-link" data-scroll-target="#q5.-quelle-requête-permet-de-chercher-alice-même-si-on-tape-alise">❓ Q5. Quelle requête permet de chercher “Alice” même si on tape “Alise” ?</a></li>
+  </ul></li>
+  <li><a href="#ressources" id="toc-ressources" class="nav-link" data-scroll-target="#ressources">📚 Ressources</a></li>
+  <li><a href="#prochaine-étape" id="toc-prochaine-étape" class="nav-link" data-scroll-target="#prochaine-étape">➡️ Prochaine étape</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="git@github.com:diakite-data/data-engineering-bootcamp.git/blob/main/notebooks/beginner/10_elasticsearch_for_data_engineers.ipynb" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="git@github.com:diakite-data/data-engineering-bootcamp.git/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notebooks/beginner/01_intro_data_engineering.html">Débutant</a></li><li class="breadcrumb-item"><a href="../../notebooks/beginner/10_elasticsearch_for_data_engineers.html">🔍 Elasticsearch for Data Engineers</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">🔍 Elasticsearch for Data Engineers</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Ce module présente <strong>Elasticsearch</strong>, le moteur de recherche et d’analytics distribué.</p>
+<hr>
+<section id="prérequis" class="level2">
+<h2 class="anchored" data-anchor-id="prérequis">📋 Prérequis</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Niveau</th>
+<th>Compétence</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>✅ Requis</td>
+<td>Avoir suivi le module <code>08_intro_big_data_nosql</code></td>
+</tr>
+<tr class="even">
+<td>✅ Requis</td>
+<td>Avoir suivi le module <code>09_mongodb_for_data_engineers</code></td>
+</tr>
+<tr class="odd">
+<td>✅ Requis</td>
+<td>Comprendre les 5V du Big Data</td>
+</tr>
+<tr class="even">
+<td>✅ Requis</td>
+<td>Comprendre CAP et BASE</td>
+</tr>
+<tr class="odd">
+<td>✅ Requis</td>
+<td>Connaître le format JSON</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="objectifs-du-module" class="level2">
+<h2 class="anchored" data-anchor-id="objectifs-du-module">🎯 Objectifs du module</h2>
+<p>À la fin de ce notebook, tu seras capable de : - ✅ Comprendre l’architecture Elasticsearch (index, shards, replicas) - ✅ Utiliser Elasticvue pour interagir avec le cluster - ✅ Créer des index avec mapping approprié - ✅ Créer des <strong>Index Templates</strong> pour automatiser les mappings - ✅ Indexer, rechercher, modifier et supprimer des documents - ✅ Écrire des requêtes de recherche (match, bool, fuzzy, range) - ✅ Réaliser des agrégations analytiques</p>
+<hr>
+</section>
+<section id="version-elasticsearch" class="level2">
+<h2 class="anchored" data-anchor-id="version-elasticsearch">⚠️ Version Elasticsearch</h2>
+<p>Ce cours utilise <strong>Elasticsearch 8.x</strong> (version recommandée : <strong>8.12+</strong>).</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 56%">
+<col style="width: 43%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Version</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>8.x</strong></td>
+<td>✅ Recommandée — Sécurité par défaut, nouvelles fonctionnalités</td>
+</tr>
+<tr class="even">
+<td><strong>7.x</strong></td>
+<td>⚠️ Encore supportée mais migration conseillée</td>
+</tr>
+<tr class="odd">
+<td><strong>6.x et avant</strong></td>
+<td>❌ Obsolète</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="blockquote">
+<p>💡 Les exemples de ce cours fonctionnent avec ES 7.x et 8.x. Pour ES 8.x, la sécurité est activée par défaut — nous la désactivons pour les tests locaux.</p>
+</blockquote>
+<hr>
+</section>
+<section id="elasticsearch-dans-lécosystème-big-data" class="level2">
+<h2 class="anchored" data-anchor-id="elasticsearch-dans-lécosystème-big-data">🎯 Elasticsearch dans l’écosystème Big Data</h2>
+<p>Tu as vu dans le module 08 les différents types de bases NoSQL. <strong>Elasticsearch</strong> est un <strong>moteur de recherche</strong> (Search Engine), parfois classé à part des bases NoSQL traditionnelles.</p>
+<section id="position-dans-les-types-nosql" class="level3">
+<h3 class="anchored" data-anchor-id="position-dans-les-types-nosql">Position dans les types NoSQL</h3>
+<pre><code>┌─────────────────────────────────────────────────────────────────┐
+│                      BASES NoSQL                                │
+├───────────┬───────────┬───────────┬───────────┬────────────────┤
+│ Document  │ Clé-Valeur│  Colonnes │  Graphe   │ Search Engine  │
+│           │           │           │           │                │
+│  MongoDB  │   Redis   │ Cassandra │   Neo4j   │ ELASTICSEARCH  │
+│           │           │           │           │     ◄───       │
+└───────────┴───────────┴───────────┴───────────┴────────────────┘</code></pre>
+</section>
+<section id="rappel-les-5v" class="level3">
+<h3 class="anchored" data-anchor-id="rappel-les-5v">Rappel : Les 5V</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 9%">
+<col style="width: 90%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>V</th>
+<th>Comment Elasticsearch répond</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Volume</strong></td>
+<td>Sharding horizontal (données réparties sur plusieurs nœuds)</td>
+</tr>
+<tr class="even">
+<td><strong>Velocity</strong></td>
+<td>Indexation temps réel, near real-time search</td>
+</tr>
+<tr class="odd">
+<td><strong>Variety</strong></td>
+<td>Documents JSON flexibles, analyse full-text</td>
+</tr>
+<tr class="even">
+<td><strong>Veracity</strong></td>
+<td>Scoring de pertinence, recherche approximative</td>
+</tr>
+<tr class="odd">
+<td><strong>Value</strong></td>
+<td>Recherche instantanée, dashboards Kibana</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="rappel-cap-base" class="level3">
+<h3 class="anchored" data-anchor-id="rappel-cap-base">Rappel : CAP &amp; BASE</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Concept</th>
+<th>Elasticsearch</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>CAP</strong></td>
+<td>AP (Availability + Partition tolerance) par défaut</td>
+</tr>
+<tr class="even">
+<td><strong>BASE</strong></td>
+<td>Eventually consistent (cohérence éventuelle)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="pourquoi-elasticsearch-en-data-engineering" class="level2">
+<h2 class="anchored" data-anchor-id="pourquoi-elasticsearch-en-data-engineering">🎯 Pourquoi Elasticsearch en Data Engineering ?</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Cas d’usage</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>📊 <strong>Logs &amp; Monitoring</strong></td>
+<td>Stack ELK (Elasticsearch, Logstash, Kibana)</td>
+</tr>
+<tr class="even">
+<td>🔍 <strong>Recherche full-text</strong></td>
+<td>Moteur de recherche pour sites web, e-commerce</td>
+</tr>
+<tr class="odd">
+<td>📈 <strong>Analytics temps réel</strong></td>
+<td>Dashboards et métriques en temps réel</td>
+</tr>
+<tr class="even">
+<td>🔔 <strong>Alerting</strong></td>
+<td>Détection d’anomalies, alertes sur seuils</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="blockquote">
+<p>💡 <strong>ELK Stack</strong> = Elasticsearch + Logstash + Kibana — très utilisé en entreprise.</p>
+</blockquote>
+<hr>
+</section>
+<section id="concepts-fondamentaux" class="level2">
+<h2 class="anchored" data-anchor-id="concepts-fondamentaux">📚 1. Concepts fondamentaux</h2>
+<section id="vocabulaire" class="level3">
+<h3 class="anchored" data-anchor-id="vocabulaire">📖 Vocabulaire</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>SQL</th>
+<th>Elasticsearch</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Database</td>
+<td>Cluster</td>
+<td>Ensemble de nœuds</td>
+</tr>
+<tr class="even">
+<td>Table</td>
+<td><strong>Index</strong></td>
+<td>Collection de documents</td>
+</tr>
+<tr class="odd">
+<td>Row</td>
+<td><strong>Document</strong></td>
+<td>Une entrée (JSON)</td>
+</tr>
+<tr class="even">
+<td>Column</td>
+<td><strong>Field</strong></td>
+<td>Un champ du document</td>
+</tr>
+<tr class="odd">
+<td>Schema</td>
+<td><strong>Mapping</strong></td>
+<td>Structure des champs</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="shards-replicas" class="level3">
+<h3 class="anchored" data-anchor-id="shards-replicas">🧱 Shards &amp; Replicas</h3>
+<pre><code>Index "clients"
+├── Primary Shard 0  ──────►  Replica Shard 0
+├── Primary Shard 1  ──────►  Replica Shard 1
+└── Primary Shard 2  ──────►  Replica Shard 2</code></pre>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Concept</th>
+<th>Rôle</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Shard</strong></td>
+<td>Partition des données (scalabilité)</td>
+</tr>
+<tr class="even">
+<td><strong>Replica</strong></td>
+<td>Copie d’un shard (haute disponibilité)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="état-du-cluster" class="level3">
+<h3 class="anchored" data-anchor-id="état-du-cluster">📊 État du cluster</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>État</th>
+<th>Signification</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>🟢 <strong>Green</strong></td>
+<td>Tous les shards OK</td>
+</tr>
+<tr class="even">
+<td>🟡 <strong>Yellow</strong></td>
+<td>Primaires OK, replicas non alloués (1 seul nœud)</td>
+</tr>
+<tr class="odd">
+<td>🔴 <strong>Red</strong></td>
+<td>Données inaccessibles</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="installation" class="level2">
+<h2 class="anchored" data-anchor-id="installation">⚙️ 2. Installation</h2>
+<section id="étape-1-télécharger-elasticsearch" class="level3">
+<h3 class="anchored" data-anchor-id="étape-1-télécharger-elasticsearch">📦 Étape 1 : Télécharger Elasticsearch</h3>
+<p>👉 <a href="https://www.elastic.co/downloads/elasticsearch">https://www.elastic.co/downloads/elasticsearch</a></p>
+<ol type="1">
+<li>Télécharger le ZIP pour ton OS</li>
+<li>Dézipper dans un dossier (ex: <code>C:\elasticsearch</code>)</li>
+<li>Modifier <code>config/elasticsearch.yml</code> :</li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Désactiver la sécurité pour les tests</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">xpack.security.enabled</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ol start="4" type="1">
+<li>Lancer Elasticsearch :</li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Windows</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">.</span><span class="dt">\b</span>in<span class="dt">\e</span>lasticsearch.bat</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># macOS / Linux</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="ex">./bin/elasticsearch</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ol start="5" type="1">
+<li>Vérifier : ouvrir http://localhost:9200 dans le navigateur</li>
+</ol>
+<hr>
+</section>
+<section id="étape-2-installer-elasticvue" class="level3">
+<h3 class="anchored" data-anchor-id="étape-2-installer-elasticvue">🧭 Étape 2 : Installer Elasticvue</h3>
+<p><strong>Elasticvue</strong> est une interface graphique pour Elasticsearch — beaucoup plus simple que les commandes curl !</p>
+<p><strong>Options d’installation :</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Option</th>
+<th>Lien</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>🌐 <strong>App Web</strong> (recommandé)</td>
+<td><a href="https://app.elasticvue.com">https://app.elasticvue.com</a></td>
+</tr>
+<tr class="even">
+<td>🧩 <strong>Extension Chrome</strong></td>
+<td><a href="https://chrome.google.com/webstore/detail/elasticvue">Chrome Web Store</a></td>
+</tr>
+<tr class="odd">
+<td>🦊 <strong>Extension Firefox</strong></td>
+<td><a href="https://addons.mozilla.org/firefox/addon/elasticvue/">Firefox Add-ons</a></td>
+</tr>
+<tr class="even">
+<td>💻 <strong>App Desktop</strong></td>
+<td><a href="https://elasticvue.com/">elasticvue.com</a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="guide-elasticvue-prise-en-main" class="level2">
+<h2 class="anchored" data-anchor-id="guide-elasticvue-prise-en-main">🧭 3. Guide Elasticvue — Prise en main</h2>
+<section id="connexion-au-cluster" class="level3">
+<h3 class="anchored" data-anchor-id="connexion-au-cluster">🔌 3.1 Connexion au cluster</h3>
+<ol type="1">
+<li>Ouvrir Elasticvue</li>
+<li>Cliquer sur <strong>“Add Cluster”</strong></li>
+<li>Remplir :
+<ul>
+<li><strong>Name</strong> : <code>Local</code> (ou ce que tu veux)</li>
+<li><strong>URI</strong> : <code>http://localhost:9200</code></li>
+</ul></li>
+<li>Cliquer <strong>“Connect”</strong></li>
+</ol>
+<p>✅ Tu devrais voir le statut du cluster (🟢 Green ou 🟡 Yellow)</p>
+<hr>
+</section>
+<section id="interface-principale" class="level3">
+<h3 class="anchored" data-anchor-id="interface-principale">🗂️ 3.2 Interface principale</h3>
+<pre><code>┌─────────────────────────────────────────────────────────────┐
+│  Elasticvue                                    [Cluster: Local] │
+├─────────────┬───────────────────────────────────────────────┤
+│             │                                               │
+│  📊 Home    │   Cluster Health: 🟢 Green                    │
+│             │   Nodes: 1                                    │
+│  📁 Indices │   Indices: 3                                  │
+│             │   Documents: 1,234                            │
+│  🔍 Search  │                                               │
+│             │                                               │
+│  📝 REST    │   ◄── C'est ici qu'on écrit les requêtes !   │
+│             │                                               │
+│  ⚙️ Settings│                                               │
+│             │                                               │
+└─────────────┴───────────────────────────────────────────────┘</code></pre>
+</section>
+<section id="onglets-importants" class="level3">
+<h3 class="anchored" data-anchor-id="onglets-importants">📍 Onglets importants :</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Onglet</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Indices</strong></td>
+<td>Voir/créer/supprimer des index</td>
+</tr>
+<tr class="even">
+<td><strong>Search</strong></td>
+<td>Rechercher visuellement dans un index</td>
+</tr>
+<tr class="odd">
+<td><strong>REST</strong></td>
+<td>Écrire des requêtes (comme Kibana Dev Tools)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="utiliser-la-console-rest" class="level3">
+<h3 class="anchored" data-anchor-id="utiliser-la-console-rest">📝 3.3 Utiliser la console REST</h3>
+<p>L’onglet <strong>REST</strong> permet d’exécuter des requêtes Elasticsearch avec une syntaxe simple.</p>
+<section id="format-des-requêtes" class="level4">
+<h4 class="anchored" data-anchor-id="format-des-requêtes">📌 Format des requêtes</h4>
+<pre><code>MÉTHODE /chemin
+{
+  "corps": "de la requête en JSON"
+}</code></pre>
+</section>
+<section id="exemple-pas-à-pas" class="level4">
+<h4 class="anchored" data-anchor-id="exemple-pas-à-pas">🎯 Exemple pas à pas</h4>
+<pre><code>┌──────────────────────────────────────────────────────────────┐
+│  REST Query                                        [▶ Run]  │
+├──────────────────────────────────────────────────────────────┤
+│                                                              │
+│  GET /clients/_search                                        │
+│  {                                                           │
+│    "query": {                                                │
+│      "match": { "pays": "France" }                          │
+│    }                                                         │
+│  }                                                           │
+│                                                              │
+├──────────────────────────────────────────────────────────────┤
+│  Response (200 OK)                                           │
+│  {                                                           │
+│    "hits": {                                                 │
+│      "total": { "value": 2 },                                │
+│      "hits": [...]                                           │
+│    }                                                         │
+│  }                                                           │
+└──────────────────────────────────────────────────────────────┘</code></pre>
+</section>
+<section id="raccourcis-utiles" class="level4">
+<h4 class="anchored" data-anchor-id="raccourcis-utiles">⌨️ Raccourcis utiles</h4>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Raccourci</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>Ctrl + Enter</code></td>
+<td>Exécuter la requête</td>
+</tr>
+<tr class="even">
+<td><code>Ctrl + /</code></td>
+<td>Commenter une ligne</td>
+</tr>
+<tr class="odd">
+<td><code>Ctrl + Space</code></td>
+<td>Autocomplétion</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+</section>
+<section id="créer-un-index-et-insérer-des-données" class="level2">
+<h2 class="anchored" data-anchor-id="créer-un-index-et-insérer-des-données">🛠️ 4. Créer un index et insérer des données</h2>
+<section id="créer-lindex-clients" class="level3">
+<h3 class="anchored" data-anchor-id="créer-lindex-clients">📌 4.1 Créer l’index <code>clients</code></h3>
+<p>Dans l’onglet <strong>REST</strong>, copier-coller :</p>
+<pre><code>PUT /clients
+{
+  "settings": {
+    "number_of_shards": 1,
+    "number_of_replicas": 0
+  },
+  "mappings": {
+    "properties": {
+      "nom": { "type": "text" },
+      "email": { "type": "keyword" },
+      "pays": { "type": "keyword" },
+      "age": { "type": "integer" },
+      "salaire": { "type": "float" }
+    }
+  }
+}</code></pre>
+<p>✅ Réponse attendue : <code>{ "acknowledged": true }</code></p>
+<hr>
+</section>
+<section id="comprendre-le-mapping" class="level3">
+<h3 class="anchored" data-anchor-id="comprendre-le-mapping">📐 4.2 Comprendre le mapping</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Type</th>
+<th>Usage</th>
+<th>Recherche full-text</th>
+<th>Agrégation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>text</code></td>
+<td>Texte analysé</td>
+<td>✅ Oui</td>
+<td>❌ Non</td>
+</tr>
+<tr class="even">
+<td><code>keyword</code></td>
+<td>Valeur exacte</td>
+<td>❌ Non</td>
+<td>✅ Oui</td>
+</tr>
+<tr class="odd">
+<td><code>integer</code>, <code>float</code></td>
+<td>Nombres</td>
+<td>Range ✅</td>
+<td>✅ Oui</td>
+</tr>
+<tr class="even">
+<td><code>date</code></td>
+<td>Dates</td>
+<td>Range ✅</td>
+<td>✅ Oui</td>
+</tr>
+<tr class="odd">
+<td><code>boolean</code></td>
+<td>true/false</td>
+<td>✅</td>
+<td>✅ Oui</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="blockquote">
+<p>💡 <strong>Règle</strong> : Utilise <code>keyword</code> pour les champs sur lesquels tu veux faire des agrégations (GROUP BY).</p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="index-templates-automatiser-les-mappings" class="level2">
+<h2 class="anchored" data-anchor-id="index-templates-automatiser-les-mappings">📋 Index Templates — Automatiser les mappings</h2>
+<section id="pourquoi-utiliser-des-templates" class="level3">
+<h3 class="anchored" data-anchor-id="pourquoi-utiliser-des-templates">🤔 Pourquoi utiliser des templates ?</h3>
+<p>Quand tu gères des <strong>logs</strong> ou des <strong>données temporelles</strong>, tu crées souvent des index par jour ou par mois :</p>
+<pre><code>logs-2024-01-01
+logs-2024-01-02
+logs-2024-01-03
+...</code></pre>
+<p><strong>Problème</strong> : Sans template, chaque index utilise le mapping dynamique (Elasticsearch devine les types). C’est risqué !</p>
+<p><strong>Solution</strong> : Créer un <strong>Index Template</strong> qui s’applique automatiquement à tous les index correspondant à un pattern.</p>
+<hr>
+</section>
+<section id="créer-un-index-template" class="level3">
+<h3 class="anchored" data-anchor-id="créer-un-index-template">📌 Créer un Index Template</h3>
+<pre><code>PUT /_index_template/logs_template
+{
+  "index_patterns": ["logs-*"],
+  "priority": 1,
+  "template": {
+    "settings": {
+      "number_of_shards": 1,
+      "number_of_replicas": 1
+    },
+    "mappings": {
+      "properties": {
+        "timestamp": { "type": "date" },
+        "level": { "type": "keyword" },
+        "message": { "type": "text" },
+        "service": { "type": "keyword" },
+        "host": { "type": "keyword" },
+        "response_time_ms": { "type": "integer" }
+      }
+    }
+  }
+}</code></pre>
+<p>✅ <strong>Maintenant</strong>, tout index créé avec le pattern <code>logs-*</code> aura automatiquement ce mapping !</p>
+<hr>
+</section>
+<section id="tester-le-template" class="level3">
+<h3 class="anchored" data-anchor-id="tester-le-template">🧪 Tester le template</h3>
+<pre><code># Créer un index qui match le pattern
+POST /logs-2024-01-15/_doc
+{
+  "timestamp": "2024-01-15T10:30:00Z",
+  "level": "ERROR",
+  "message": "Connection timeout to database",
+  "service": "api-gateway",
+  "host": "server-01",
+  "response_time_ms": 5000
+}</code></pre>
+<pre><code># Vérifier que le mapping a été appliqué
+GET /logs-2024-01-15/_mapping</code></pre>
+<hr>
+</section>
+<section id="lister-les-templates-existants" class="level3">
+<h3 class="anchored" data-anchor-id="lister-les-templates-existants">📋 Lister les templates existants</h3>
+<pre><code>GET /_index_template</code></pre>
+</section>
+<section id="supprimer-un-template" class="level3">
+<h3 class="anchored" data-anchor-id="supprimer-un-template">🗑️ Supprimer un template</h3>
+<pre><code>DELETE /_index_template/logs_template</code></pre>
+<hr>
+</section>
+<section id="bonnes-pratiques-index-templates" class="level3">
+<h3 class="anchored" data-anchor-id="bonnes-pratiques-index-templates">💡 Bonnes pratiques Index Templates</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 43%">
+<col style="width: 56%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Pratique</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Toujours définir un mapping</strong></td>
+<td>Ne pas laisser ES deviner les types</td>
+</tr>
+<tr class="even">
+<td><strong>Utiliser <code>keyword</code> pour les agrégations</strong></td>
+<td><code>level</code>, <code>service</code>, <code>host</code> → <code>keyword</code></td>
+</tr>
+<tr class="odd">
+<td><strong>Utiliser <code>text</code> pour la recherche</strong></td>
+<td><code>message</code> → <code>text</code></td>
+</tr>
+<tr class="even">
+<td><strong>Définir <code>date</code> explicitement</strong></td>
+<td>Évite les erreurs de parsing</td>
+</tr>
+<tr class="odd">
+<td><strong>Nommer clairement</strong></td>
+<td><code>logs_template</code>, <code>metrics_template</code></td>
+</tr>
+<tr class="even">
+<td><strong>Utiliser <code>priority</code></strong></td>
+<td>Quand plusieurs templates matchent</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="insérer-un-document" class="level3">
+<h3 class="anchored" data-anchor-id="insérer-un-document">📝 4.3 Insérer un document</h3>
+<pre><code>POST /clients/_doc
+{
+  "nom": "Alice Dupont",
+  "email": "alice@email.com",
+  "pays": "France",
+  "age": 30,
+  "salaire": 55000
+}</code></pre>
+<hr>
+</section>
+<section id="insérer-plusieurs-documents-bulk" class="level3">
+<h3 class="anchored" data-anchor-id="insérer-plusieurs-documents-bulk">📝 4.4 Insérer plusieurs documents (Bulk)</h3>
+<pre><code>POST /_bulk
+{ "index": { "_index": "clients" } }
+{ "nom": "Bob Martin", "email": "bob@email.com", "pays": "France", "age": 25, "salaire": 48000 }
+{ "index": { "_index": "clients" } }
+{ "nom": "Charlie Konan", "email": "charlie@email.com", "pays": "Côte d'Ivoire", "age": 35, "salaire": 62000 }
+{ "index": { "_index": "clients" } }
+{ "nom": "Diana Schmidt", "email": "diana@email.com", "pays": "Allemagne", "age": 28, "salaire": 51000 }
+{ "index": { "_index": "clients" } }
+{ "nom": "Eve Kouassi", "email": "eve@email.com", "pays": "Côte d'Ivoire", "age": 32, "salaire": 58000 }</code></pre>
+<blockquote class="blockquote">
+<p>⚠️ <strong>Attention</strong> : En bulk, chaque ligne doit être sur une seule ligne (pas de formatage JSON multi-lignes).</p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="requêtes-de-recherche" class="level2">
+<h2 class="anchored" data-anchor-id="requêtes-de-recherche">🔍 5. Requêtes de recherche</h2>
+<section id="afficher-tous-les-documents" class="level3">
+<h3 class="anchored" data-anchor-id="afficher-tous-les-documents">📌 5.1 Afficher tous les documents</h3>
+<pre><code>GET /clients/_search</code></pre>
+<p>✅ <strong>SQL équivalent</strong> : <code>SELECT * FROM clients</code></p>
+<hr>
+</section>
+<section id="filtrer-avec-match-full-text" class="level3">
+<h3 class="anchored" data-anchor-id="filtrer-avec-match-full-text">📌 5.2 Filtrer avec <code>match</code> (full-text)</h3>
+<pre><code>GET /clients/_search
+{
+  "query": {
+    "match": { "nom": "Alice" }
+  }
+}</code></pre>
+<p>✅ <strong>SQL équivalent</strong> : <code>SELECT * FROM clients WHERE nom LIKE '%Alice%'</code></p>
+<hr>
+</section>
+<section id="filtrer-avec-term-exact-match" class="level3">
+<h3 class="anchored" data-anchor-id="filtrer-avec-term-exact-match">📌 5.3 Filtrer avec <code>term</code> (exact match)</h3>
+<pre><code>GET /clients/_search
+{
+  "query": {
+    "term": { "pays": "France" }
+  }
+}</code></pre>
+<p>✅ <strong>SQL équivalent</strong> : <code>SELECT * FROM clients WHERE pays = 'France'</code></p>
+<blockquote class="blockquote">
+<p>💡 Utilise <code>term</code> pour les champs <code>keyword</code>, <code>match</code> pour les champs <code>text</code>.</p>
+</blockquote>
+<hr>
+</section>
+<section id="filtrer-par-plage-de-valeurs-range" class="level3">
+<h3 class="anchored" data-anchor-id="filtrer-par-plage-de-valeurs-range">📌 5.4 Filtrer par plage de valeurs (<code>range</code>)</h3>
+<pre><code>GET /clients/_search
+{
+  "query": {
+    "range": {
+      "age": {
+        "gte": 25,
+        "lte": 35
+      }
+    }
+  }
+}</code></pre>
+<p>✅ <strong>SQL équivalent</strong> : <code>SELECT * FROM clients WHERE age BETWEEN 25 AND 35</code></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Opérateur</th>
+<th>Signification</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>gt</code></td>
+<td>&gt; (greater than)</td>
+</tr>
+<tr class="even">
+<td><code>gte</code></td>
+<td>&gt;= (greater than or equal)</td>
+</tr>
+<tr class="odd">
+<td><code>lt</code></td>
+<td>&lt; (less than)</td>
+</tr>
+<tr class="even">
+<td><code>lte</code></td>
+<td>&lt;= (less than or equal)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="conditions-multiples-bool" class="level3">
+<h3 class="anchored" data-anchor-id="conditions-multiples-bool">📌 5.5 Conditions multiples (<code>bool</code>)</h3>
+<p>La requête <code>bool</code> combine plusieurs conditions :</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Clause</th>
+<th>Comportement</th>
+<th>SQL équivalent</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>must</code></td>
+<td>Toutes les conditions requises</td>
+<td><code>AND</code></td>
+</tr>
+<tr class="even">
+<td><code>should</code></td>
+<td>Au moins une condition</td>
+<td><code>OR</code></td>
+</tr>
+<tr class="odd">
+<td><code>must_not</code></td>
+<td>Exclure</td>
+<td><code>NOT</code> / <code>!=</code></td>
+</tr>
+<tr class="even">
+<td><code>filter</code></td>
+<td>Comme <code>must</code> mais sans score</td>
+<td><code>WHERE</code> (optimisé)</td>
+</tr>
+</tbody>
+</table>
+<section id="exemple-clients-français-de-plus-de-25-ans" class="level4">
+<h4 class="anchored" data-anchor-id="exemple-clients-français-de-plus-de-25-ans">Exemple : Clients français de plus de 25 ans</h4>
+<pre><code>GET /clients/_search
+{
+  "query": {
+    "bool": {
+      "must": [
+        { "term": { "pays": "France" } },
+        { "range": { "age": { "gt": 25 } } }
+      ]
+    }
+  }
+}</code></pre>
+<p>✅ <strong>SQL équivalent</strong> : <code>SELECT * FROM clients WHERE pays = 'France' AND age &gt; 25</code></p>
+<hr>
+</section>
+<section id="exemple-clients-français-ou-ivoiriens-mais-pas-bob" class="level4">
+<h4 class="anchored" data-anchor-id="exemple-clients-français-ou-ivoiriens-mais-pas-bob">Exemple : Clients français OU ivoiriens, mais PAS Bob</h4>
+<pre><code>GET /clients/_search
+{
+  "query": {
+    "bool": {
+      "should": [
+        { "term": { "pays": "France" } },
+        { "term": { "pays": "Côte d'Ivoire" } }
+      ],
+      "minimum_should_match": 1,
+      "must_not": [
+        { "match": { "nom": "Bob" } }
+      ]
+    }
+  }
+}</code></pre>
+<p>✅ <strong>SQL équivalent</strong> : <code>SELECT * FROM clients WHERE (pays = 'France' OR pays = 'Côte d''Ivoire') AND nom != 'Bob'</code></p>
+<hr>
+</section>
+</section>
+<section id="recherche-floue-fuzzy" class="level3">
+<h3 class="anchored" data-anchor-id="recherche-floue-fuzzy">📌 5.6 Recherche floue (<code>fuzzy</code>)</h3>
+<p>Trouve des résultats même avec des fautes de frappe :</p>
+<pre><code>GET /clients/_search
+{
+  "query": {
+    "fuzzy": {
+      "nom": {
+        "value": "Alise",
+        "fuzziness": "AUTO"
+      }
+    }
+  }
+}</code></pre>
+<p>✅ Trouve “Alice” même si on tape “Alise” !</p>
+<blockquote class="blockquote">
+<p>💡 Pas d’équivalent simple en SQL — c’est la force d’Elasticsearch.</p>
+</blockquote>
+<hr>
+</section>
+<section id="trier-et-limiter-les-résultats" class="level3">
+<h3 class="anchored" data-anchor-id="trier-et-limiter-les-résultats">📌 5.7 Trier et limiter les résultats</h3>
+<pre><code>GET /clients/_search
+{
+  "query": { "match_all": {} },
+  "sort": [
+    { "salaire": "desc" }
+  ],
+  "size": 3
+}</code></pre>
+<p>✅ <strong>SQL équivalent</strong> : <code>SELECT * FROM clients ORDER BY salaire DESC LIMIT 3</code></p>
+<hr>
+</section>
+</section>
+<section id="agrégations-group-by" class="level2">
+<h2 class="anchored" data-anchor-id="agrégations-group-by">📊 6. Agrégations (GROUP BY)</h2>
+<section id="compter-par-catégorie-terms" class="level3">
+<h3 class="anchored" data-anchor-id="compter-par-catégorie-terms">📌 6.1 Compter par catégorie (<code>terms</code>)</h3>
+<pre><code>GET /clients/_search
+{
+  "size": 0,
+  "aggs": {
+    "par_pays": {
+      "terms": { "field": "pays" }
+    }
+  }
+}</code></pre>
+<p>✅ <strong>SQL équivalent</strong> : <code>SELECT pays, COUNT(*) FROM clients GROUP BY pays</code></p>
+<blockquote class="blockquote">
+<p>💡 <code>size: 0</code> = ne pas retourner les documents, seulement l’agrégation.</p>
+</blockquote>
+<hr>
+</section>
+<section id="métriques-sum-avg-min-max" class="level3">
+<h3 class="anchored" data-anchor-id="métriques-sum-avg-min-max">📌 6.2 Métriques (sum, avg, min, max)</h3>
+<pre><code>GET /clients/_search
+{
+  "size": 0,
+  "aggs": {
+    "salaire_moyen": { "avg": { "field": "salaire" } },
+    "salaire_max": { "max": { "field": "salaire" } },
+    "salaire_min": { "min": { "field": "salaire" } },
+    "salaire_total": { "sum": { "field": "salaire" } }
+  }
+}</code></pre>
+<p>✅ <strong>SQL équivalent</strong> : <code>SELECT AVG(salaire), MAX(salaire), MIN(salaire), SUM(salaire) FROM clients</code></p>
+<hr>
+</section>
+<section id="stats-complètes-en-une-requête" class="level3">
+<h3 class="anchored" data-anchor-id="stats-complètes-en-une-requête">📌 6.3 Stats complètes en une requête</h3>
+<pre><code>GET /clients/_search
+{
+  "size": 0,
+  "aggs": {
+    "stats_salaire": {
+      "stats": { "field": "salaire" }
+    }
+  }
+}</code></pre>
+<p><strong>Résultat</strong> : count, min, max, avg, sum en une seule requête !</p>
+<hr>
+</section>
+<section id="agrégations-imbriquées-group-by-métriques" class="level3">
+<h3 class="anchored" data-anchor-id="agrégations-imbriquées-group-by-métriques">📌 6.4 Agrégations imbriquées (GROUP BY + métriques)</h3>
+<pre><code>GET /clients/_search
+{
+  "size": 0,
+  "aggs": {
+    "par_pays": {
+      "terms": { "field": "pays" },
+      "aggs": {
+        "salaire_moyen": { "avg": { "field": "salaire" } },
+        "age_moyen": { "avg": { "field": "age" } }
+      }
+    }
+  }
+}</code></pre>
+<p>✅ <strong>SQL équivalent</strong> :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> pays, <span class="fu">AVG</span>(salaire) <span class="kw">AS</span> salaire_moyen, <span class="fu">AVG</span>(age) <span class="kw">AS</span> age_moyen</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> clients</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> pays;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="filtrer-avant-dagréger" class="level3">
+<h3 class="anchored" data-anchor-id="filtrer-avant-dagréger">📌 6.5 Filtrer avant d’agréger</h3>
+<pre><code>GET /clients/_search
+{
+  "size": 0,
+  "query": {
+    "range": { "salaire": { "gte": 50000 } }
+  },
+  "aggs": {
+    "par_pays": {
+      "terms": { "field": "pays" }
+    }
+  }
+}</code></pre>
+<p>✅ <strong>SQL équivalent</strong> :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> pays, <span class="fu">COUNT</span>(<span class="op">*</span>)</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> clients</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> salaire <span class="op">&gt;=</span> <span class="dv">50000</span></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> pays;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+</section>
+<section id="modifier-et-supprimer" class="level2">
+<h2 class="anchored" data-anchor-id="modifier-et-supprimer">✏️ 7. Modifier et supprimer</h2>
+<section id="mettre-à-jour-un-document-par-id" class="level3">
+<h3 class="anchored" data-anchor-id="mettre-à-jour-un-document-par-id">📌 7.1 Mettre à jour un document (par ID)</h3>
+<pre><code>POST /clients/_update/1
+{
+  "doc": {
+    "salaire": 60000
+  }
+}</code></pre>
+<hr>
+</section>
+<section id="mettre-à-jour-par-requête" class="level3">
+<h3 class="anchored" data-anchor-id="mettre-à-jour-par-requête">📌 7.2 Mettre à jour par requête</h3>
+<pre><code>POST /clients/_update_by_query
+{
+  "query": {
+    "term": { "pays": "France" }
+  },
+  "script": {
+    "source": "ctx._source.salaire += 1000"
+  }
+}</code></pre>
+<p>✅ <strong>SQL équivalent</strong> : <code>UPDATE clients SET salaire = salaire + 1000 WHERE pays = 'France'</code></p>
+<hr>
+</section>
+<section id="supprimer-un-document-par-id" class="level3">
+<h3 class="anchored" data-anchor-id="supprimer-un-document-par-id">📌 7.3 Supprimer un document (par ID)</h3>
+<pre><code>DELETE /clients/_doc/1</code></pre>
+<hr>
+</section>
+<section id="supprimer-par-requête" class="level3">
+<h3 class="anchored" data-anchor-id="supprimer-par-requête">📌 7.4 Supprimer par requête</h3>
+<pre><code>POST /clients/_delete_by_query
+{
+  "query": {
+    "range": { "age": { "lt": 18 } }
+  }
+}</code></pre>
+<p>✅ <strong>SQL équivalent</strong> : <code>DELETE FROM clients WHERE age &lt; 18</code></p>
+<hr>
+</section>
+<section id="supprimer-un-index-entier" class="level3">
+<h3 class="anchored" data-anchor-id="supprimer-un-index-entier">📌 7.5 Supprimer un index entier</h3>
+<pre><code>DELETE /clients</code></pre>
+<blockquote class="blockquote">
+<p>⚠️ <strong>Attention</strong> : Irréversible !</p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="cheatsheet-elasticsearch" class="level2">
+<h2 class="anchored" data-anchor-id="cheatsheet-elasticsearch">📋 Cheatsheet Elasticsearch</h2>
+<section id="gestion-des-index" class="level3">
+<h3 class="anchored" data-anchor-id="gestion-des-index">🔧 Gestion des index</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Action</th>
+<th>Requête</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Créer un index</td>
+<td><code>PUT /mon_index</code></td>
+</tr>
+<tr class="even">
+<td>Supprimer</td>
+<td><code>DELETE /mon_index</code></td>
+</tr>
+<tr class="odd">
+<td>Lister</td>
+<td><code>GET /_cat/indices?v</code></td>
+</tr>
+<tr class="even">
+<td>Voir mapping</td>
+<td><code>GET /mon_index/_mapping</code></td>
+</tr>
+<tr class="odd">
+<td>Santé cluster</td>
+<td><code>GET /_cluster/health</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="crud-documents" class="level3">
+<h3 class="anchored" data-anchor-id="crud-documents">📝 CRUD Documents</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Action</th>
+<th>Requête</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Insérer</td>
+<td><code>POST /index/_doc</code></td>
+</tr>
+<tr class="even">
+<td>Lire (ID)</td>
+<td><code>GET /index/_doc/1</code></td>
+</tr>
+<tr class="odd">
+<td>Mettre à jour</td>
+<td><code>POST /index/_update/1</code></td>
+</tr>
+<tr class="even">
+<td>Supprimer</td>
+<td><code>DELETE /index/_doc/1</code></td>
+</tr>
+<tr class="odd">
+<td>Bulk</td>
+<td><code>POST /_bulk</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="types-de-requêtes" class="level3">
+<h3 class="anchored" data-anchor-id="types-de-requêtes">🔍 Types de requêtes</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Type</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>match</code></td>
+<td>Full-text (champs <code>text</code>)</td>
+</tr>
+<tr class="even">
+<td><code>term</code></td>
+<td>Exact (champs <code>keyword</code>)</td>
+</tr>
+<tr class="odd">
+<td><code>range</code></td>
+<td>Plage (nombres, dates)</td>
+</tr>
+<tr class="even">
+<td><code>bool</code></td>
+<td>Combiner (must, should, must_not)</td>
+</tr>
+<tr class="odd">
+<td><code>fuzzy</code></td>
+<td>Tolérant aux fautes</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="agrégations" class="level3">
+<h3 class="anchored" data-anchor-id="agrégations">📊 Agrégations</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Type</th>
+<th>SQL équivalent</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>terms</code></td>
+<td>GROUP BY</td>
+</tr>
+<tr class="even">
+<td><code>sum</code>, <code>avg</code>, <code>min</code>, <code>max</code></td>
+<td>Fonctions d’agrégation</td>
+</tr>
+<tr class="odd">
+<td><code>stats</code></td>
+<td>Toutes les stats</td>
+</tr>
+<tr class="even">
+<td><code>cardinality</code></td>
+<td>COUNT(DISTINCT)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="exercices-pratiques" class="level2">
+<h2 class="anchored" data-anchor-id="exercices-pratiques">🎯 Exercices pratiques</h2>
+<p>Utilise l’onglet <strong>REST</strong> d’Elasticvue pour résoudre ces exercices.</p>
+<hr>
+<section id="exercice-1-facile" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-1-facile">🏋️ Exercice 1 — Facile</h3>
+<p>Afficher tous les clients.</p>
+<details>
+<summary>
+💡 Solution
+</summary>
+<pre><code>GET /clients/_search</code></pre>
+</details>
+<hr>
+</section>
+<section id="exercice-2-facile" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-2-facile">🏋️ Exercice 2 — Facile</h3>
+<p>Trouver les clients de Côte d’Ivoire.</p>
+<details>
+<summary>
+💡 Solution
+</summary>
+<pre><code>GET /clients/_search
+{
+  "query": {
+    "term": { "pays": "Côte d'Ivoire" }
+  }
+}</code></pre>
+</details>
+<hr>
+</section>
+<section id="exercice-3-intermédiaire" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-3-intermédiaire">🏋️ Exercice 3 — Intermédiaire</h3>
+<p>Trouver les clients avec un salaire entre 50000 et 60000, triés par âge décroissant.</p>
+<details>
+<summary>
+💡 Solution
+</summary>
+<pre><code>GET /clients/_search
+{
+  "query": {
+    "range": {
+      "salaire": { "gte": 50000, "lte": 60000 }
+    }
+  },
+  "sort": [{ "age": "desc" }]
+}</code></pre>
+</details>
+<hr>
+</section>
+<section id="exercice-4-intermédiaire" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-4-intermédiaire">🏋️ Exercice 4 — Intermédiaire</h3>
+<p>Calculer le nombre de clients par pays.</p>
+<details>
+<summary>
+💡 Solution
+</summary>
+<pre><code>GET /clients/_search
+{
+  "size": 0,
+  "aggs": {
+    "par_pays": {
+      "terms": { "field": "pays" }
+    }
+  }
+}</code></pre>
+</details>
+<hr>
+</section>
+<section id="exercice-5-avancé" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-5-avancé">🏋️ Exercice 5 — Avancé</h3>
+<p>Calculer le salaire moyen par pays, seulement pour les clients de plus de 25 ans.</p>
+<details>
+<summary>
+💡 Solution
+</summary>
+<pre><code>GET /clients/_search
+{
+  "size": 0,
+  "query": {
+    "range": { "age": { "gt": 25 } }
+  },
+  "aggs": {
+    "par_pays": {
+      "terms": { "field": "pays" },
+      "aggs": {
+        "salaire_moyen": { "avg": { "field": "salaire" } }
+      }
+    }
+  }
+}</code></pre>
+</details>
+<hr>
+</section>
+</section>
+<section id="quiz" class="level2">
+<h2 class="anchored" data-anchor-id="quiz">🧠 Quiz</h2>
+<hr>
+<section id="q1.-quelle-requête-crée-un-index" class="level3">
+<h3 class="anchored" data-anchor-id="q1.-quelle-requête-crée-un-index">❓ Q1. Quelle requête crée un index ?</h3>
+<ol type="a">
+<li><code>POST /clients</code><br>
+</li>
+<li><code>PUT /clients</code><br>
+</li>
+<li><code>GET /clients</code><br>
+</li>
+<li><code>CREATE /clients</code></li>
+</ol>
+<details>
+<summary>
+💡 Réponse
+</summary>
+✅ <strong>b</strong> — <code>PUT /index</code> crée un nouvel index.
+</details>
+<hr>
+</section>
+<section id="q2.-quelle-est-la-différence-entre-text-et-keyword" class="level3">
+<h3 class="anchored" data-anchor-id="q2.-quelle-est-la-différence-entre-text-et-keyword">❓ Q2. Quelle est la différence entre <code>text</code> et <code>keyword</code> ?</h3>
+<ol type="a">
+<li>Aucune différence<br>
+</li>
+<li><code>text</code> est analysé (tokenisé), <code>keyword</code> est stocké tel quel<br>
+</li>
+<li><code>keyword</code> est plus rapide<br>
+</li>
+<li><code>text</code> est pour les nombres</li>
+</ol>
+<details>
+<summary>
+💡 Réponse
+</summary>
+✅ <strong>b</strong> — <code>text</code> est découpé en tokens pour la recherche full-text, <code>keyword</code> reste intact pour les matchs exacts et agrégations.
+</details>
+<hr>
+</section>
+<section id="q3.-quelle-requête-utiliser-pour-un-group-by" class="level3">
+<h3 class="anchored" data-anchor-id="q3.-quelle-requête-utiliser-pour-un-group-by">❓ Q3. Quelle requête utiliser pour un GROUP BY ?</h3>
+<ol type="a">
+<li><code>match</code><br>
+</li>
+<li><code>bool</code><br>
+</li>
+<li><code>terms</code> (dans aggs)<br>
+</li>
+<li><code>range</code></li>
+</ol>
+<details>
+<summary>
+💡 Réponse
+</summary>
+✅ <strong>c</strong> — L’agrégation <code>terms</code> groupe les documents par valeur de champ.
+</details>
+<hr>
+</section>
+<section id="q4.-que-fait-size-0-dans-une-requête-dagrégation" class="level3">
+<h3 class="anchored" data-anchor-id="q4.-que-fait-size-0-dans-une-requête-dagrégation">❓ Q4. Que fait <code>size: 0</code> dans une requête d’agrégation ?</h3>
+<ol type="a">
+<li>Supprime les données<br>
+</li>
+<li>Retourne uniquement l’agrégation, pas les documents<br>
+</li>
+<li>Limite à 0 résultat d’agrégation<br>
+</li>
+<li>Erreur</li>
+</ol>
+<details>
+<summary>
+💡 Réponse
+</summary>
+✅ <strong>b</strong> — <code>size: 0</code> évite de retourner les documents, seulement les résultats d’agrégation.
+</details>
+<hr>
+</section>
+<section id="q5.-quelle-requête-permet-de-chercher-alice-même-si-on-tape-alise" class="level3">
+<h3 class="anchored" data-anchor-id="q5.-quelle-requête-permet-de-chercher-alice-même-si-on-tape-alise">❓ Q5. Quelle requête permet de chercher “Alice” même si on tape “Alise” ?</h3>
+<ol type="a">
+<li><code>match</code><br>
+</li>
+<li><code>term</code><br>
+</li>
+<li><code>fuzzy</code><br>
+</li>
+<li><code>range</code></li>
+</ol>
+<details>
+<summary>
+💡 Réponse
+</summary>
+✅ <strong>c</strong> — <code>fuzzy</code> tolère les fautes de frappe.
+</details>
+<hr>
+</section>
+</section>
+<section id="ressources" class="level2">
+<h2 class="anchored" data-anchor-id="ressources">📚 Ressources</h2>
+<ul>
+<li><a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html">Elasticsearch Documentation</a></li>
+<li><a href="https://elasticvue.com/">Elasticvue</a> — Interface graphique utilisée dans ce cours</li>
+<li><a href="https://www.elastic.co/kibana/">Kibana</a> — Visualisation et dashboards</li>
+<li><a href="https://cloud.elastic.co/">Elastic Cloud</a> — Version cloud managée</li>
+</ul>
+<hr>
+</section>
+<section id="prochaine-étape" class="level2">
+<h2 class="anchored" data-anchor-id="prochaine-étape">➡️ Prochaine étape</h2>
+<p>Tu maîtrises maintenant les bases NoSQL (MongoDB et Elasticsearch) ! Passons au <strong>traitement distribué</strong> avec PySpark.</p>
+<p>👉 <strong>Module suivant : <code>11_pyspark_for_data_engineering.ipynb</code></strong> — PySpark pour le traitement Big Data</p>
+<hr>
+<p>🎉 <strong>Félicitations !</strong> Tu as terminé le module Elasticsearch pour Data Engineers.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/diakite-data\.github\.io\/data-engineering-bootcamp");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="git@github.com:diakite-data/data-engineering-bootcamp.git/blob/main/notebooks/beginner/10_elasticsearch_for_data_engineers.ipynb" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="git@github.com:diakite-data/data-engineering-bootcamp.git/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

@@ -1,0 +1,1739 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>🧠 Introduction aux bases de données pour Data Engineers – Bootcamp Data Engineering – From Zero to Hero</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-fc8d3d93f0a84b7619e1f8ff6eb63d42.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-fc8d3d93f0a84b7619e1f8ff6eb63d42.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-fc8d3d93f0a84b7619e1f8ff6eb63d42.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-6a2c4b793c0becaeb94cc5bf146c1484.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-9829addb8a8859fb2d6fc218213bf783.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-6a2c4b793c0becaeb94cc5bf146c1484.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Bootcamp Data Engineering – From Zero to Hero</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/diakite-data/data-engineering-bootcamp"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">🧠 Introduction aux bases de données pour Data Engineers</li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bootcamp Data Engineering – From Zero to Hero</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Débutant</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/01_intro_data_engineering.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🧠 Introduction au Data Engineering</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/02_bash_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🧰 Bash pour Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/03_git_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">📘 Git pour Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/04_python_basics_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">📘 Python – Bases pour Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/05_python_data_processing_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">📊 Python for Data Processing - Complete Guide</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/06_intro_relational_databases.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🗄️ Introduction aux Bases de Données Relationnelles</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/07_sql_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🐘 SQL for Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/08_intro_big_data_distributed.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🐘 Introduction au Big Data &amp; Traitement Distribué</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/09_mongodb_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🍃 MongoDB for Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/10_elasticsearch_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🔍 Elasticsearch for Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/11_pyspark_for_data_engineering.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">⚡ PySpark for Data Engineering</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/12_orchestration_pipelines.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">⏰ Orchestration de Pipelines Data</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#prérequis" id="toc-prérequis" class="nav-link active" data-scroll-target="#prérequis">📋 Prérequis</a></li>
+  <li><a href="#objectifs-du-module" id="toc-objectifs-du-module" class="nav-link" data-scroll-target="#objectifs-du-module">🎯 Objectifs du module</a></li>
+  <li><a href="#définition-simple" id="toc-définition-simple" class="nav-link" data-scroll-target="#définition-simple">🎯 Définition Simple</a></li>
+  <li><a href="#en-une-phrase" id="toc-en-une-phrase" class="nav-link" data-scroll-target="#en-une-phrase">🌟 En Une Phrase</a></li>
+  <li><a href="#vue-densemble-des-bases-de-données" id="toc-vue-densemble-des-bases-de-données" class="nav-link" data-scroll-target="#vue-densemble-des-bases-de-données">🗺️ Vue d’ensemble des bases de données</a></li>
+  <li><a href="#types-de-bases-de-données" id="toc-types-de-bases-de-données" class="nav-link" data-scroll-target="#types-de-bases-de-données">🧩 Types de bases de données</a>
+  <ul class="collapse">
+  <li><a href="#bases-de-données-relationnelles-sql" id="toc-bases-de-données-relationnelles-sql" class="nav-link" data-scroll-target="#bases-de-données-relationnelles-sql">1. 📊 Bases de données relationnelles (SQL)</a></li>
+  <li><a href="#bases-de-données-non-relationnelles-nosql" id="toc-bases-de-données-non-relationnelles-nosql" class="nav-link" data-scroll-target="#bases-de-données-non-relationnelles-nosql">2. 📦 Bases de données non relationnelles (NoSQL)</a></li>
+  </ul></li>
+  <li><a href="#bases-de-données-relationnelles-sql-1" id="toc-bases-de-données-relationnelles-sql-1" class="nav-link" data-scroll-target="#bases-de-données-relationnelles-sql-1">🧱 Bases de données relationnelles (SQL)</a>
+  <ul class="collapse">
+  <li><a href="#structure-logique" id="toc-structure-logique" class="nav-link" data-scroll-target="#structure-logique">📐 Structure logique</a></li>
+  <li><a href="#exemple-simple-table-clients" id="toc-exemple-simple-table-clients" class="nav-link" data-scroll-target="#exemple-simple-table-clients">📊 Exemple simple : Table <code>clients</code></a></li>
+  <li><a href="#exemple-de-relation-entre-tables" id="toc-exemple-de-relation-entre-tables" class="nav-link" data-scroll-target="#exemple-de-relation-entre-tables">🔗 Exemple de relation entre tables</a></li>
+  <li><a href="#avantages-des-bases-relationnelles" id="toc-avantages-des-bases-relationnelles" class="nav-link" data-scroll-target="#avantages-des-bases-relationnelles">✅ Avantages des bases relationnelles</a></li>
+  <li><a href="#acid-4-garanties-pour-la-fiabilité-des-transactions" id="toc-acid-4-garanties-pour-la-fiabilité-des-transactions" class="nav-link" data-scroll-target="#acid-4-garanties-pour-la-fiabilité-des-transactions">🔐 ACID : 4 garanties pour la fiabilité des transactions</a></li>
+  </ul></li>
+  <li><a href="#bases-de-données-nosql" id="toc-bases-de-données-nosql" class="nav-link" data-scroll-target="#bases-de-données-nosql">📦 Bases de données NoSQL</a>
+  <ul class="collapse">
+  <li><a href="#pourquoi-nosql" id="toc-pourquoi-nosql" class="nav-link" data-scroll-target="#pourquoi-nosql">🔄 Pourquoi “NoSQL” ?</a></li>
+  <li><a href="#principaux-types-de-nosql" id="toc-principaux-types-de-nosql" class="nav-link" data-scroll-target="#principaux-types-de-nosql">🧩 Principaux types de NoSQL</a></li>
+  <li><a href="#caractéristiques-générales-des-bases-nosql" id="toc-caractéristiques-générales-des-bases-nosql" class="nav-link" data-scroll-target="#caractéristiques-générales-des-bases-nosql">🔍 Caractéristiques générales des bases NoSQL</a></li>
+  <li><a href="#exemple-mongodb-type-document" id="toc-exemple-mongodb-type-document" class="nav-link" data-scroll-target="#exemple-mongodb-type-document">📚 Exemple (MongoDB — type Document)</a></li>
+  </ul></li>
+  <li><a href="#quiz-de-fin-de-module" id="toc-quiz-de-fin-de-module" class="nav-link" data-scroll-target="#quiz-de-fin-de-module">🧪 Quiz de fin de module</a>
+  <ul class="collapse">
+  <li><a href="#q1.-que-signifie-acid" id="toc-q1.-que-signifie-acid" class="nav-link" data-scroll-target="#q1.-que-signifie-acid">❓ Q1. Que signifie “ACID” ?</a></li>
+  <li><a href="#q2.-quelle-base-de-données-est-orientée-documents" id="toc-q2.-quelle-base-de-données-est-orientée-documents" class="nav-link" data-scroll-target="#q2.-quelle-base-de-données-est-orientée-documents">❓ Q2. Quelle base de données est orientée “documents” ?</a></li>
+  <li><a href="#q3.-quel-type-de-base-est-le-plus-adapté-à-une-application-e-commerce-structurée" id="toc-q3.-quel-type-de-base-est-le-plus-adapté-à-une-application-e-commerce-structurée" class="nav-link" data-scroll-target="#q3.-quel-type-de-base-est-le-plus-adapté-à-une-application-e-commerce-structurée">❓ Q3. Quel type de base est le plus adapté à une application e-commerce structurée ?</a></li>
+  <li><a href="#q4.-que-signifie-base" id="toc-q4.-que-signifie-base" class="nav-link" data-scroll-target="#q4.-que-signifie-base">❓ Q4. Que signifie BASE ?</a></li>
+  <li><a href="#q5.-selon-le-théorème-cap-combien-de-propriétés-peut-on-garantir-simultanément" id="toc-q5.-selon-le-théorème-cap-combien-de-propriétés-peut-on-garantir-simultanément" class="nav-link" data-scroll-target="#q5.-selon-le-théorème-cap-combien-de-propriétés-peut-on-garantir-simultanément">❓ Q5. Selon le théorème CAP, combien de propriétés peut-on garantir simultanément ?</a></li>
+  <li><a href="#q6.-quelle-base-utiliser-pour-du-cache-ultra-rapide" id="toc-q6.-quelle-base-utiliser-pour-du-cache-ultra-rapide" class="nav-link" data-scroll-target="#q6.-quelle-base-utiliser-pour-du-cache-ultra-rapide">❓ Q6. Quelle base utiliser pour du cache ultra-rapide ?</a></li>
+  <li><a href="#q7.-quel-orm-python-permet-de-se-connecter-à-plusieurs-types-de-bases-sql" id="toc-q7.-quel-orm-python-permet-de-se-connecter-à-plusieurs-types-de-bases-sql" class="nav-link" data-scroll-target="#q7.-quel-orm-python-permet-de-se-connecter-à-plusieurs-types-de-bases-sql">❓ Q7. Quel ORM Python permet de se connecter à plusieurs types de bases SQL ?</a></li>
+  </ul></li>
+  <li><a href="#ressources-pour-aller-plus-loin" id="toc-ressources-pour-aller-plus-loin" class="nav-link" data-scroll-target="#ressources-pour-aller-plus-loin">📚 Ressources pour aller plus loin</a>
+  <ul class="collapse">
+  <li><a href="#documentation-officielle" id="toc-documentation-officielle" class="nav-link" data-scroll-target="#documentation-officielle">📖 Documentation officielle</a></li>
+  <li><a href="#cours-et-tutoriels" id="toc-cours-et-tutoriels" class="nav-link" data-scroll-target="#cours-et-tutoriels">🎓 Cours et tutoriels</a></li>
+  <li><a href="#outils-utiles" id="toc-outils-utiles" class="nav-link" data-scroll-target="#outils-utiles">🛠️ Outils utiles</a></li>
+  </ul></li>
+  <li><a href="#prochaine-étape" id="toc-prochaine-étape" class="nav-link" data-scroll-target="#prochaine-étape">➡️ Prochaine étape</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="git@github.com:diakite-data/data-engineering-bootcamp.git/blob/main/notebooks/beginner/06_intro_databases.ipynb" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="git@github.com:diakite-data/data-engineering-bootcamp.git/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">🧠 Introduction aux bases de données pour Data Engineers</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Ce module présente les <strong>fondamentaux des bases de données</strong> : types, concepts clés, et critères de choix.</p>
+<hr>
+<section id="prérequis" class="level2">
+<h2 class="anchored" data-anchor-id="prérequis">📋 Prérequis</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 40%">
+<col style="width: 60%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Niveau</th>
+<th>Compétence</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>✅ Requis</td>
+<td>Avoir suivi le module <code>05_python_data_processing</code></td>
+</tr>
+<tr class="even">
+<td>✅ Requis</td>
+<td>Comprendre les structures de données (listes, dictionnaires)</td>
+</tr>
+<tr class="odd">
+<td>🟡 Optionnel</td>
+<td>Notions de JSON</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="objectifs-du-module" class="level2">
+<h2 class="anchored" data-anchor-id="objectifs-du-module">🎯 Objectifs du module</h2>
+<p>À la fin de ce notebook, tu seras capable de : - ✅ Comprendre ce qu’est une base de données et son rôle - ✅ Différencier les bases <strong>SQL</strong> (relationnelles) et <strong>NoSQL</strong> - ✅ Connaître les différents types de bases NoSQL - ✅ Comprendre les concepts <strong>ACID</strong>, <strong>BASE</strong> et le théorème <strong>CAP</strong> - ✅ Choisir le bon type de base selon le cas d’usage - ✅ Connaître les solutions cloud et les connecteurs Python</p>
+<hr>
+</section>
+<section id="définition-simple" class="level2">
+<h2 class="anchored" data-anchor-id="définition-simple">🎯 Définition Simple</h2>
+<p>Une base de données est un système organisé qui permet de :</p>
+<ul>
+<li>💾 <strong>STOCKER</strong> des informations de façon permanente<br>
+</li>
+<li>🔍 <strong>RECHERCHER</strong> rapidement n’importe quelle donnée<br>
+</li>
+<li>✏️ <strong>MODIFIER</strong> et mettre à jour les informations<br>
+</li>
+<li>🔒 <strong>SÉCURISER</strong> l’accès aux données sensibles<br>
+</li>
+<li>🔗 <strong>RELIER</strong> différentes informations entre elles</li>
+</ul>
+<hr>
+</section>
+<section id="en-une-phrase" class="level2">
+<h2 class="anchored" data-anchor-id="en-une-phrase">🌟 En Une Phrase</h2>
+<blockquote class="blockquote">
+<p>“Une base de données, c’est comme un classeur numérique géant, ultra-organisé et intelligent, capable de retrouver n’importe quelle information en une fraction de seconde, même parmi des milliards de données.”</p>
+</blockquote>
+<hr>
+</section>
+<section id="vue-densemble-des-bases-de-données" class="level2">
+<h2 class="anchored" data-anchor-id="vue-densemble-des-bases-de-données">🗺️ Vue d’ensemble des bases de données</h2>
+<pre><code>                        ┌─────────────────────────────────────┐
+                        │       BASES DE DONNÉES              │
+                        └──────────────┬──────────────────────┘
+                                       │
+              ┌────────────────────────┼────────────────────────┐
+              │                        │                        │
+              ▼                        ▼                        ▼
+    ┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
+    │   RELATIONNELLE │     │     NoSQL       │     │   SPÉCIALISÉES  │
+    │      (SQL)      │     │                 │     │                 │
+    └────────┬────────┘     └────────┬────────┘     └────────┬────────┘
+             │                       │                       │
+             │              ┌────────┼────────┐              │
+             │              │        │        │              │
+             ▼              ▼        ▼        ▼              ▼
+      ┌───────────┐  ┌─────────┐┌────────┐┌───────┐  ┌────────────┐
+      │PostgreSQL │  │Document ││Clé-Val ││Graphe │  │Time-Series │
+      │  MySQL    │  │MongoDB  ││ Redis  ││ Neo4j │  │ InfluxDB   │
+      │  Oracle   │  │Couchbase││DynamoDB││       │  │TimescaleDB │
+      └───────────┘  └─────────┘└────────┘└───────┘  └────────────┘</code></pre>
+<hr>
+</section>
+<section id="types-de-bases-de-données" class="level2">
+<h2 class="anchored" data-anchor-id="types-de-bases-de-données">🧩 Types de bases de données</h2>
+<p>Il existe <strong>2 grandes familles</strong> de bases de données :</p>
+<hr>
+<section id="bases-de-données-relationnelles-sql" class="level3">
+<h3 class="anchored" data-anchor-id="bases-de-données-relationnelles-sql">1. 📊 Bases de données relationnelles (SQL)</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 34%">
+<col style="width: 44%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Type</th>
+<th>Exemples</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Relationnelle (SQL)</strong></td>
+<td>PostgreSQL, MySQL, Oracle, SQLite</td>
+<td>Données organisées en tables avec schéma strict (colonnes, types, relations). Requêtes SQL. ACID garanti.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="bases-de-données-non-relationnelles-nosql" class="level3">
+<h3 class="anchored" data-anchor-id="bases-de-données-non-relationnelles-nosql">2. 📦 Bases de données non relationnelles (NoSQL)</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 43%">
+<col style="width: 24%">
+<col style="width: 31%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Sous-type NoSQL</th>
+<th>Exemples</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Documentaire</strong></td>
+<td>MongoDB, Couchbase</td>
+<td>Stockage de documents (souvent JSON), structure flexible</td>
+</tr>
+<tr class="even">
+<td><strong>Clé-Valeur</strong></td>
+<td>Redis, DynamoDB</td>
+<td>Stockage ultra-rapide de paires clé/valeur</td>
+</tr>
+<tr class="odd">
+<td><strong>Colonnes</strong></td>
+<td>Cassandra, Bigtable</td>
+<td>Stockage orienté colonne, idéal pour volumes massifs et analytics</td>
+</tr>
+<tr class="even">
+<td><strong>Graphes</strong></td>
+<td>Neo4j, ArangoDB</td>
+<td>Modélise des relations complexes entre entités (nœuds/arêtes)</td>
+</tr>
+<tr class="odd">
+<td><strong>Time-series</strong></td>
+<td>InfluxDB, TimescaleDB</td>
+<td>Spécialisées pour des données temporelles (IoT, monitoring, logs)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<blockquote class="blockquote">
+<p>💡 Le choix entre SQL et NoSQL dépend toujours du <strong>cas d’usage</strong>, du <strong>volume de données</strong>, de la <strong>structure</strong> et de la <strong>scalabilité</strong> requise.</p>
+</blockquote>
+</section>
+</section>
+<section id="bases-de-données-relationnelles-sql-1" class="level2">
+<h2 class="anchored" data-anchor-id="bases-de-données-relationnelles-sql-1">🧱 Bases de données relationnelles (SQL)</h2>
+<p>Les bases relationnelles représentent la forme <strong>classique, structurée et la plus utilisée</strong> dans les systèmes d’information.</p>
+<hr>
+<section id="structure-logique" class="level3">
+<h3 class="anchored" data-anchor-id="structure-logique">📐 Structure logique</h3>
+<p>Une base relationnelle est composée de plusieurs <strong>tables</strong> organisées en lignes et colonnes. On y retrouve :</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 40%">
+<col style="width: 59%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Élément</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>🗂️ <strong>Base</strong></td>
+<td>Conteneur global (comme un classeur)</td>
+</tr>
+<tr class="even">
+<td>📋 <strong>Table</strong></td>
+<td>Ensemble de données organisées en lignes/colonnes</td>
+</tr>
+<tr class="odd">
+<td>🧱 <strong>Colonne</strong></td>
+<td>Un champ (ex : nom, date, email)</td>
+</tr>
+<tr class="even">
+<td>🧍 <strong>Ligne (enregistrement)</strong></td>
+<td>Une donnée individuelle (ex : un client)</td>
+</tr>
+<tr class="odd">
+<td>🔑 <strong>Clé primaire (PK)</strong></td>
+<td>Identifiant unique d’une ligne</td>
+</tr>
+<tr class="even">
+<td>🔗 <strong>Clé étrangère (FK)</strong></td>
+<td>Référence vers une autre table (relation)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="exemple-simple-table-clients" class="level3">
+<h3 class="anchored" data-anchor-id="exemple-simple-table-clients">📊 Exemple simple : Table <code>clients</code></h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>id (PK)</th>
+<th>nom</th>
+<th>email</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Alice</td>
+<td>alice@mail.com</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Bob</td>
+<td>bob@mail.com</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="exemple-de-relation-entre-tables" class="level3">
+<h3 class="anchored" data-anchor-id="exemple-de-relation-entre-tables">🔗 Exemple de relation entre tables</h3>
+<p><strong>Table <code>commandes</code></strong> (chaque commande est liée à un client via <code>client_id</code>)</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>id (PK)</th>
+<th>client_id (FK)</th>
+<th>produit</th>
+<th>montant</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>1</td>
+<td>Clavier</td>
+<td>50 €</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>2</td>
+<td>Souris</td>
+<td>25 €</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="blockquote">
+<p>🎯 Ici, <code>client_id</code> fait référence à <code>clients.id</code> → c’est une <strong>clé étrangère</strong>.</p>
+</blockquote>
+<hr>
+</section>
+<section id="avantages-des-bases-relationnelles" class="level3">
+<h3 class="anchored" data-anchor-id="avantages-des-bases-relationnelles">✅ Avantages des bases relationnelles</h3>
+<ul>
+<li>🔄 Requêtes complexes avec <strong>jointures</strong></li>
+<li>🔍 Recherche ultra précise (filtres, agrégats…)</li>
+<li>🔐 Fiabilité grâce aux <strong>propriétés ACID</strong></li>
+<li>📊 Très utilisées en BI, CRM, e-commerce, RH, finance…</li>
+</ul>
+<hr>
+</section>
+<section id="acid-4-garanties-pour-la-fiabilité-des-transactions" class="level3">
+<h3 class="anchored" data-anchor-id="acid-4-garanties-pour-la-fiabilité-des-transactions">🔐 ACID : 4 garanties pour la fiabilité des transactions</h3>
+<p>Les bases SQL appliquent le modèle <strong>ACID</strong> pour sécuriser toutes les opérations :</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 21%">
+<col style="width: 43%">
+<col style="width: 35%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Lettre</th>
+<th>Propriété</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td><strong>Atomicité</strong></td>
+<td>Tout ou rien : une transaction est indivisible</td>
+</tr>
+<tr class="even">
+<td>C</td>
+<td><strong>Cohérence</strong></td>
+<td>L’état de la base reste toujours valide</td>
+</tr>
+<tr class="odd">
+<td>I</td>
+<td><strong>Isolation</strong></td>
+<td>Les transactions simultanées ne se gênent pas</td>
+</tr>
+<tr class="even">
+<td>D</td>
+<td><strong>Durabilité</strong></td>
+<td>Une fois validée, une transaction est permanente même en cas de crash</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="blockquote">
+<p>💡 Exemple : lors d’un virement bancaire, le débit ET le crédit doivent réussir. Sinon, rien ne change.</p>
+</blockquote>
+<hr>
+<p>📌 <strong>Bases relationnelles courantes</strong> :<br>
+<code>PostgreSQL</code>, <code>MySQL</code>, <code>Oracle</code>, <code>SQL Server</code>, <code>SQLite</code></p>
+<p>📦 <strong>Cas d’usage fréquents</strong> :<br>
+ERP, CRM, finance, gestion RH, e-commerce, data warehouse</p>
+</section>
+</section>
+<section id="bases-de-données-nosql" class="level2">
+<h2 class="anchored" data-anchor-id="bases-de-données-nosql">📦 Bases de données NoSQL</h2>
+<p>Contrairement aux bases relationnelles, les bases <strong>NoSQL</strong> sont conçues pour plus de <strong>flexibilité</strong>, <strong>scalabilité</strong> et <strong>performance</strong>, souvent au détriment du schéma strict.</p>
+<hr>
+<section id="pourquoi-nosql" class="level3">
+<h3 class="anchored" data-anchor-id="pourquoi-nosql">🔄 Pourquoi “NoSQL” ?</h3>
+<ul>
+<li>“NoSQL” signifie <strong>Not Only SQL</strong> (pas seulement SQL)</li>
+<li>Ces bases <strong>n’utilisent pas forcément de tables ou de schémas fixes</strong></li>
+<li>Très utilisées pour des données <strong>non structurées ou semi-structurées</strong></li>
+<li>Sont souvent <strong>hautement distribuées</strong> et scalables horizontalement</li>
+<li>S’accommodent bien de la <strong>haute disponibilité</strong> et la <strong>tolérance aux pannes</strong></li>
+<li>Ne garantissent pas toujours les propriétés <strong>ACID</strong>, mais souvent <strong>BASE</strong></li>
+</ul>
+<hr>
+</section>
+<section id="principaux-types-de-nosql" class="level3">
+<h3 class="anchored" data-anchor-id="principaux-types-de-nosql">🧩 Principaux types de NoSQL</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 23%">
+<col style="width: 30%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Type</th>
+<th>Exemples</th>
+<th>Description</th>
+<th>Cas d’usage</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Document</strong></td>
+<td>MongoDB, Couchbase</td>
+<td>Données stockées sous forme de documents (JSON, BSON)</td>
+<td>Apps web, APIs REST, CMS</td>
+</tr>
+<tr class="even">
+<td><strong>Clé-Valeur</strong></td>
+<td>Redis, DynamoDB</td>
+<td>Accès rapide par clé unique à une valeur</td>
+<td>Cache, sessions utilisateurs</td>
+</tr>
+<tr class="odd">
+<td><strong>Colonnes</strong></td>
+<td>Cassandra, Bigtable, HBase</td>
+<td>Données stockées par colonnes (plutôt que lignes)</td>
+<td>Big Data, analyses temps réel</td>
+</tr>
+<tr class="even">
+<td><strong>Graphes</strong></td>
+<td>Neo4j, ArangoDB</td>
+<td>Stockage orienté relation (nœuds et arêtes)</td>
+<td>Réseaux sociaux, moteurs de recommandation</td>
+</tr>
+<tr class="odd">
+<td><strong>Time-Series</strong></td>
+<td>InfluxDB, TimescaleDB</td>
+<td>Optimisées pour les séries temporelles horodatées</td>
+<td>IoT, monitoring, logs serveur</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="caractéristiques-générales-des-bases-nosql" class="level3">
+<h3 class="anchored" data-anchor-id="caractéristiques-générales-des-bases-nosql">🔍 Caractéristiques générales des bases NoSQL</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 69%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Caractéristique</th>
+<th>Détail</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>📄 <strong>Flexible</strong></td>
+<td>Schéma souple, données hétérogènes possibles</td>
+</tr>
+<tr class="even">
+<td>🌐 <strong>Distribuée</strong></td>
+<td>Répartition naturelle sur plusieurs nœuds ou datacenters</td>
+</tr>
+<tr class="odd">
+<td>⚡ <strong>Haute performance</strong></td>
+<td>Optimisée pour lectures/écritures massives</td>
+</tr>
+<tr class="even">
+<td>📈 <strong>Scalable horizontalement</strong></td>
+<td>Ajout facile de serveurs sans changer l’architecture</td>
+</tr>
+<tr class="odd">
+<td>🔁 <strong>Éventuellement cohérente (BASE)</strong></td>
+<td>Pas toujours ACID, mais plus adaptée à la disponibilité</td>
+</tr>
+<tr class="even">
+<td>🔌 <strong>Spécialisée</strong></td>
+<td>Chaque type répond à un besoin précis (graphe, temps réel, etc.)</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="blockquote">
+<p>💡 <em>BASE = Basically Available, Soft state, Eventually consistent</em></p>
+</blockquote>
+<hr>
+</section>
+<section id="exemple-mongodb-type-document" class="level3">
+<h3 class="anchored" data-anchor-id="exemple-mongodb-type-document">📚 Exemple (MongoDB — type Document)</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"nom"</span><span class="fu">:</span> <span class="st">"Alice"</span><span class="fu">,</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"email"</span><span class="fu">:</span> <span class="st">"alice@mail.com"</span><span class="fu">,</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"commandes"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span> <span class="dt">"produit"</span><span class="fu">:</span> <span class="st">"Clavier"</span><span class="fu">,</span> <span class="dt">"montant"</span><span class="fu">:</span> <span class="dv">50</span> <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span> <span class="dt">"produit"</span><span class="fu">:</span> <span class="st">"Souris"</span><span class="fu">,</span> <span class="dt">"montant"</span><span class="fu">:</span> <span class="dv">25</span> <span class="fu">}</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="ot">]</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="er">##</span> <span class="er">⚖️</span> <span class="er">Comparaison</span> <span class="er">:</span> <span class="er">Bases</span> <span class="er">relationnelles</span> <span class="er">vs</span> <span class="er">NoSQL</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="er">|</span> <span class="er">Critère</span>                     <span class="er">|</span> <span class="er">Bases</span> <span class="er">Relationnelles</span> <span class="er">(SQL)</span>                                 <span class="er">|</span> <span class="er">Bases</span> <span class="er">NoSQL</span>                                           <span class="er">|</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="er">|-----------------------------|-------------------------------------------------------------|--------------------------------------------------------|</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="er">|</span> <span class="er">🧱</span> <span class="er">Structure</span>                <span class="er">|</span> <span class="er">Tables</span> <span class="er">rigides</span> <span class="er">(lignes</span> <span class="er">&amp;</span> <span class="er">colonnes,</span> <span class="er">schéma</span> <span class="er">fixe)</span>             <span class="er">|</span> <span class="er">Schéma</span> <span class="er">flexible</span> <span class="er">(documents,</span> <span class="er">paires</span> <span class="er">clé/valeur,</span> <span class="er">etc.)</span>   <span class="er">|</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="er">|</span> <span class="er">🧠</span> <span class="er">Modèle</span> <span class="er">de</span> <span class="er">données</span>        <span class="er">|</span> <span class="er">Relationnel</span> <span class="er">(jointures,</span> <span class="er">normalisation)</span>                      <span class="er">|</span> <span class="er">Non</span> <span class="er">relationnel</span> <span class="er">(document,</span> <span class="er">graphe,</span> <span class="er">colonnes,</span> <span class="er">etc.)</span>     <span class="er">|</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="er">|</span> <span class="er">🛠️</span> <span class="er">Langage</span>                 <span class="er">|</span> <span class="er">SQL</span> <span class="er">(standardisé)</span>                                           <span class="er">|</span> <span class="er">Propre</span> <span class="er">à</span> <span class="er">chaque</span> <span class="er">moteur</span> <span class="er">(Mongo</span> <span class="er">Query,</span> <span class="er">Cypher,</span> <span class="er">CQL…)</span>     <span class="er">|</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="er">|</span> <span class="er">🔐</span> <span class="er">Cohérence</span>               <span class="er">|</span> <span class="er">Forte</span> <span class="er">(ACID)</span>                                                <span class="er">|</span> <span class="er">Faible</span> <span class="er">ou</span> <span class="er">éventuelle</span> <span class="er">(BASE)</span>                            <span class="er">|</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="er">|</span> <span class="er">📏</span> <span class="er">Contraintes</span>              <span class="er">|</span> <span class="er">Types,</span> <span class="er">clés</span> <span class="er">primaires/étrangères,</span> <span class="er">contraintes</span> <span class="er">d’unicité</span>     <span class="er">|</span> <span class="er">Peu</span> <span class="er">ou</span> <span class="er">pas</span> <span class="er">de</span> <span class="er">contraintes</span>                              <span class="er">|</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="er">|</span> <span class="er">⚙️</span> <span class="er">Scalabilité</span>             <span class="er">|</span> <span class="er">Verticale</span> <span class="er">(gros</span> <span class="er">serveur)</span>                                   <span class="er">|</span> <span class="er">Horizontale</span> <span class="er">(ajout</span> <span class="er">de</span> <span class="er">nœuds)</span>                           <span class="er">|</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="er">|</span> <span class="er">⚡</span> <span class="er">Performance</span>              <span class="er">|</span> <span class="er">Optimisée</span> <span class="er">pour</span> <span class="er">les</span> <span class="er">jointures</span> <span class="er">et</span> <span class="er">les</span> <span class="er">relations</span> <span class="er">complexes</span>     <span class="er">|</span> <span class="er">Optimisée</span> <span class="er">pour</span> <span class="er">la</span> <span class="er">vitesse</span> <span class="er">et</span> <span class="er">la</span> <span class="er">haute</span> <span class="er">disponibilité</span>    <span class="er">|</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="er">|</span> <span class="er">📈</span> <span class="er">Volume</span> <span class="er">de</span> <span class="er">données</span>        <span class="er">|</span> <span class="er">Adapté</span> <span class="er">aux</span> <span class="er">données</span> <span class="er">structurées</span>                              <span class="er">|</span> <span class="er">Adapté</span> <span class="er">aux</span> <span class="er">gros</span> <span class="er">volumes</span> <span class="er">non</span> <span class="er">structurés</span> <span class="er">ou</span> <span class="er">distribués</span>    <span class="er">|</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="er">|</span> <span class="er">🔄</span> <span class="er">Flexibilité</span>              <span class="er">|</span> <span class="er">Moindre</span> <span class="er">(changement</span> <span class="er">de</span> <span class="er">schéma</span> <span class="er">difficile)</span>                    <span class="er">|</span> <span class="er">Très</span> <span class="er">flexible</span> <span class="er">(évolution</span> <span class="er">facile</span> <span class="er">du</span> <span class="er">modèle)</span>             <span class="er">|</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="er">|</span> <span class="er">🧩</span> <span class="er">Cas</span> <span class="er">d’usage</span> <span class="er">typique</span>     <span class="er">|</span> <span class="er">ERP,</span> <span class="er">finance,</span> <span class="er">CRM,</span> <span class="er">entrepôt</span> <span class="er">de</span> <span class="er">données</span>                      <span class="er">|</span> <span class="er">Apps</span> <span class="er">temps</span> <span class="er">réel,</span> <span class="er">IoT,</span> <span class="er">réseaux</span> <span class="er">sociaux,</span> <span class="er">analytics</span>       <span class="er">|</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="er">|</span> <span class="er">🌍</span> <span class="er">Exemples</span>                 <span class="er">|</span> <span class="er">PostgreSQL,</span> <span class="er">MySQL,</span> <span class="er">Oracle,</span> <span class="er">SQL</span> <span class="er">Server</span>                       <span class="er">|</span> <span class="er">MongoDB,</span> <span class="er">Cassandra,</span> <span class="er">Redis,</span> <span class="er">Neo4j,</span> <span class="er">InfluxDB</span>             <span class="er">|</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="er">---</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="er">🧠</span> <span class="er">**En</span> <span class="er">pratique</span> <span class="er">:**</span> <span class="er">beaucoup</span> <span class="er">d’architectures</span> <span class="er">modernes</span> <span class="er">utilisent</span> <span class="er">les</span> <span class="er">**deux</span> <span class="er">types**</span> <span class="er">en</span> <span class="er">fonction</span> <span class="er">des</span> <span class="er">besoins</span> <span class="er">:</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="er">-</span> <span class="er">SQL</span> <span class="er">pour</span> <span class="er">les</span> <span class="er">données</span> <span class="er">structurées</span> <span class="er">et</span> <span class="er">critiques</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="er">-</span> <span class="er">NoSQL</span> <span class="er">pour</span> <span class="er">les</span> <span class="er">données</span> <span class="er">massives,</span> <span class="er">évolutives</span> <span class="er">ou</span> <span class="er">semi-structurées</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="er">##</span> <span class="er">🧪</span> <span class="er">Le</span> <span class="er">modèle</span> <span class="er">BASE</span> <span class="er">–</span> <span class="er">La</span> <span class="er">logique</span> <span class="er">NoSQL</span></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="er">Alors</span> <span class="er">qu'**ACID**</span> <span class="er">est</span> <span class="er">la</span> <span class="er">norme</span> <span class="er">des</span> <span class="er">bases</span> <span class="er">relationnelles</span> <span class="er">pour</span> <span class="er">garantir</span> <span class="er">la</span> <span class="er">**fiabilité</span> <span class="er">stricte**,</span> <span class="er">les</span> <span class="er">bases</span> <span class="er">**NoSQL**</span> <span class="er">reposent</span> <span class="er">sur</span> <span class="er">un</span> <span class="er">modèle</span> <span class="er">plus</span> <span class="er">souple</span> <span class="er">appelé</span> <span class="er">**BASE**.</span></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a><span class="er">---</span></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a><span class="er">###</span> <span class="er">💡</span> <span class="er">BASE</span> <span class="er">=</span> <span class="er">Basically</span> <span class="er">Available,</span> <span class="er">Soft</span> <span class="er">state,</span> <span class="er">Eventually</span> <span class="er">consistent</span></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a><span class="er">|</span> <span class="er">Terme</span>                    <span class="er">|</span> <span class="er">Signification</span>                  <span class="er">|</span> <span class="er">Explication</span> <span class="er">|</span></span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a><span class="er">|--------------------------|--------------------------------|-------------|</span></span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a><span class="er">|</span> <span class="er">**Basically</span> <span class="er">Available**</span>  <span class="er">|</span> <span class="er">Toujours</span> <span class="er">disponible</span>            <span class="er">|</span> <span class="er">Le</span> <span class="er">système</span> <span class="er">répond</span> <span class="er">toujours,</span> <span class="er">même</span> <span class="er">en</span> <span class="er">cas</span> <span class="er">de</span> <span class="er">panne</span> <span class="er">partielle</span> <span class="er">|</span></span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a><span class="er">|</span> <span class="er">**Soft</span> <span class="er">State**</span>           <span class="er">|</span> <span class="er">État</span> <span class="er">temporairement</span> <span class="er">instable</span>   <span class="er">|</span> <span class="er">L’état</span> <span class="er">peut</span> <span class="er">évoluer</span> <span class="er">même</span> <span class="er">sans</span> <span class="er">nouvelle</span> <span class="er">requête</span> <span class="er">explicite</span> <span class="er">(par</span> <span class="er">ex.</span> <span class="er">:</span> <span class="er">réplication</span> <span class="er">en</span> <span class="er">cours)</span> <span class="er">|</span></span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a><span class="er">|</span> <span class="er">**Eventually</span> <span class="er">Consistent**|</span> <span class="er">Cohérence</span> <span class="er">à</span> <span class="er">terme</span>              <span class="er">|</span> <span class="er">Toutes</span> <span class="er">les</span> <span class="er">copies</span> <span class="er">de</span> <span class="er">données</span> <span class="er">finissent</span> <span class="er">par</span> <span class="er">devenir</span> <span class="er">cohérentes,</span> <span class="er">mais</span> <span class="er">pas</span> <span class="er">immédiatement</span> <span class="er">|</span></span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a><span class="er">---</span></span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a><span class="er">##</span> <span class="er">⚖️</span> <span class="er">BASE</span> <span class="er">privilégie</span> <span class="er">:</span> <span class="er">Disponibilité</span> <span class="er">+</span> <span class="er">Scalabilité</span></span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a><span class="er">Contrairement</span> <span class="er">à</span> <span class="er">ACID</span> <span class="er">qui</span> <span class="er">privilégie</span> <span class="er">la</span> <span class="er">**cohérence</span> <span class="er">immédiate**,</span> <span class="er">BASE</span> <span class="er">assume</span> <span class="er">un</span> <span class="er">compromis</span> <span class="er">:</span></span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a><span class="er">|</span> <span class="er">Priorité</span> <span class="er">BASE</span> <span class="er">/</span> <span class="er">NoSQL</span>         <span class="er">|</span> <span class="er">Pourquoi</span> <span class="er">?</span> <span class="er">|</span></span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a><span class="er">|-------------------------------|------------|</span></span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a><span class="er">|</span> <span class="er">✅</span> <span class="er">**Disponibilité**</span>           <span class="er">|</span> <span class="er">Fournir</span> <span class="er">une</span> <span class="er">réponse</span> <span class="er">même</span> <span class="er">en</span> <span class="er">cas</span> <span class="er">de</span> <span class="er">défaillance</span> <span class="er">réseau</span> <span class="er">|</span></span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a><span class="er">|</span> <span class="er">✅</span> <span class="er">**Scalabilité</span> <span class="er">horizontale**</span> <span class="er">|</span> <span class="er">Gérer</span> <span class="er">des</span> <span class="er">volumes</span> <span class="er">énormes</span> <span class="er">de</span> <span class="er">données</span> <span class="er">en</span> <span class="er">répartissant</span> <span class="er">la</span> <span class="er">charge</span> <span class="er">|</span></span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a><span class="er">|</span> <span class="er">⚠️</span> <span class="er">**Cohérence</span> <span class="er">immédiate</span> <span class="er">?**</span>   <span class="er">|</span> <span class="er">Pas</span> <span class="er">garantie</span> <span class="er">–</span> <span class="er">on</span> <span class="er">accepte</span> <span class="er">une</span> <span class="er">cohérence</span> <span class="er">**à</span> <span class="er">terme**</span> <span class="er">(*eventually</span> <span class="er">consistent*)</span> <span class="er">|</span></span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="er">🧠</span> <span class="er">BASE</span> <span class="er">est</span> <span class="er">utilisé</span> <span class="er">par</span> <span class="er">des</span> <span class="er">géants</span> <span class="er">comme</span> <span class="er">**Amazon**,</span> <span class="er">**Netflix**,</span> <span class="er">**Facebook**,</span> <span class="er">qui</span> <span class="er">gèrent</span> <span class="er">des</span> <span class="er">milliards</span> <span class="er">d’opérations</span> <span class="er">et</span> <span class="er">préfèrent</span> <span class="er">la</span> <span class="er">**performance**</span> <span class="er">à</span> <span class="er">la</span> <span class="er">cohérence</span> <span class="er">stricte.</span></span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a><span class="er">---</span></span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a><span class="er">##</span> <span class="er">🌍</span> <span class="er">Pourquoi</span> <span class="er">BASE</span> <span class="er">?</span> <span class="er">→</span> <span class="er">Car</span> <span class="er">les</span> <span class="er">systèmes</span> <span class="er">sont</span> <span class="er">distribués</span> <span class="er">!</span></span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a><span class="er">Un</span> <span class="er">**système</span> <span class="er">distribué**</span> <span class="er">est</span> <span class="er">un</span> <span class="er">ensemble</span> <span class="er">de</span> <span class="er">machines</span> <span class="er">(nœuds)</span> <span class="er">connectées</span> <span class="er">en</span> <span class="er">réseau</span> <span class="er">qui</span> <span class="er">travaillent</span> <span class="er">ensemble.</span> <span class="er">Ce</span> <span class="er">modèle</span> <span class="er">permet</span> <span class="er">:</span></span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a><span class="er">-</span> <span class="er">📈</span> <span class="er">Scalabilité</span></span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a><span class="er">-</span> <span class="er">🛡️</span> <span class="er">Résilience</span> <span class="er">aux</span> <span class="er">pannes</span></span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a><span class="er">-</span> <span class="er">⚡</span> <span class="er">Réduction</span> <span class="er">de</span> <span class="er">la</span> <span class="er">latence</span></span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a><span class="er">Mais</span> <span class="er">cela</span> <span class="er">complique</span> <span class="er">la</span> <span class="er">cohérence</span> <span class="er">!</span> <span class="er">D’où</span> <span class="er">la</span> <span class="er">naissance</span> <span class="er">du</span> <span class="er">théorème</span> <span class="er">CAP</span> <span class="er">👇</span></span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a><span class="er">---</span></span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a><span class="er">##</span> <span class="er">📚</span> <span class="er">Théorème</span> <span class="er">CAP</span> <span class="er">–</span> <span class="er">Le</span> <span class="er">fondement</span> <span class="er">du</span> <span class="er">modèle</span> <span class="er">BASE</span></span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a><span class="er">Le</span> <span class="er">**théorème</span> <span class="er">CAP**</span> <span class="er">(Eric</span> <span class="er">Brewer,</span> <span class="er">2000)</span> <span class="er">affirme</span> <span class="er">qu’un</span> <span class="er">système</span> <span class="er">**distribué**</span> <span class="er">ne</span> <span class="er">peut</span> <span class="er">garantir</span> <span class="er">simultanément</span> <span class="er">**les</span> <span class="er">trois</span> <span class="er">propriétés</span> <span class="er">suivantes**</span> <span class="er">:</span></span>
+<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a><span class="er">|</span> <span class="er">Lettre</span> <span class="er">|</span> <span class="er">Propriété</span>                    <span class="er">|</span> <span class="er">Description</span> <span class="er">|</span></span>
+<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a><span class="er">|--------|------------------------------|-------------|</span></span>
+<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a><span class="er">|</span> <span class="er">**C**</span>  <span class="er">|</span> <span class="er">Consistency</span> <span class="er">(Cohérence)</span>      <span class="er">|</span> <span class="er">Tous</span> <span class="er">les</span> <span class="er">nœuds</span> <span class="er">voient</span> <span class="er">les</span> <span class="er">mêmes</span> <span class="er">données</span> <span class="er">au</span> <span class="er">même</span> <span class="er">moment</span> <span class="er">|</span></span>
+<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a><span class="er">|</span> <span class="er">**A**</span>  <span class="er">|</span> <span class="er">Availability</span> <span class="er">(Disponibilité)</span> <span class="er">|</span> <span class="er">Chaque</span> <span class="er">requête</span> <span class="er">reçoit</span> <span class="er">une</span> <span class="er">réponse,</span> <span class="er">même</span> <span class="er">en</span> <span class="er">cas</span> <span class="er">de</span> <span class="er">panne</span> <span class="er">|</span></span>
+<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a><span class="er">|</span> <span class="er">**P**</span>  <span class="er">|</span> <span class="er">Partition</span> <span class="er">tolerance</span>          <span class="er">|</span> <span class="er">Le</span> <span class="er">système</span> <span class="er">continue</span> <span class="er">à</span> <span class="er">fonctionner</span> <span class="er">malgré</span> <span class="er">une</span> <span class="er">perte</span> <span class="er">de</span> <span class="er">communication</span> <span class="er">entre</span> <span class="er">nœuds</span> <span class="er">|</span></span>
+<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a><span class="er">---</span></span>
+<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a><span class="er">###</span> <span class="er">💥</span> <span class="er">CAP</span> <span class="er">implique</span> <span class="er">un</span> <span class="er">choix</span> <span class="er">:</span> <span class="er">2</span> <span class="er">sur</span> <span class="er">3</span> <span class="er">maximum</span></span>
+<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a><span class="er">En</span> <span class="er">cas</span> <span class="er">de</span> <span class="er">panne</span> <span class="er">réseau,</span> <span class="er">tu</span> <span class="er">dois</span> <span class="er">**sacrifier</span> <span class="er">soit</span> <span class="er">la</span> <span class="er">cohérence,</span> <span class="er">soit</span> <span class="er">la</span> <span class="er">disponibilité**.</span></span>
+<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a><span class="er">|</span> <span class="er">Système</span>            <span class="er">|</span> <span class="er">Garantit</span> <span class="er">CAP</span> <span class="er">|</span> <span class="er">Exemple</span>                        <span class="er">|</span></span>
+<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a><span class="er">|--------------------|--------------|--------------------------------|</span></span>
+<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a><span class="er">|</span> <span class="er">**SQL</span> <span class="er">classique**</span>  <span class="er">|</span> <span class="er">CA</span>            <span class="er">|</span> <span class="er">Oracle,</span> <span class="er">MySQL</span> <span class="er">(single</span> <span class="er">instance)</span> <span class="er">|</span></span>
+<span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a><span class="er">|</span> <span class="er">**NoSQL</span> <span class="er">scalable**</span> <span class="er">|</span> <span class="er">AP</span>            <span class="er">|</span> <span class="er">Cassandra,</span> <span class="er">Couchbase</span>           <span class="er">|</span></span>
+<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a><span class="er">|</span> <span class="er">**NoSQL</span> <span class="er">cohérent**</span> <span class="er">|</span> <span class="er">CP</span>            <span class="er">|</span> <span class="er">MongoDB,</span> <span class="er">HBase</span>                 <span class="er">|</span></span>
+<span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-96"><a href="#cb2-96" aria-hidden="true" tabindex="-1"></a><span class="er">---</span></span>
+<span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a><span class="er">##</span> <span class="er">📦</span> <span class="er">BASE</span> <span class="er">=</span> <span class="er">AP</span> <span class="er">selon</span> <span class="er">CAP</span></span>
+<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-100"><a href="#cb2-100" aria-hidden="true" tabindex="-1"></a><span class="er">Le</span> <span class="er">modèle</span> <span class="er">BASE</span> <span class="er">**priorise**</span> <span class="er">:</span></span>
+<span id="cb2-101"><a href="#cb2-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-102"><a href="#cb2-102" aria-hidden="true" tabindex="-1"></a><span class="er">-</span> <span class="er">✅</span> <span class="er">**A**</span> <span class="er">:</span> <span class="er">Disponibilité</span></span>
+<span id="cb2-103"><a href="#cb2-103" aria-hidden="true" tabindex="-1"></a><span class="er">-</span> <span class="er">✅</span> <span class="er">**P**</span> <span class="er">:</span> <span class="er">Tolérance</span> <span class="er">aux</span> <span class="er">partitions</span></span>
+<span id="cb2-104"><a href="#cb2-104" aria-hidden="true" tabindex="-1"></a><span class="er">-</span> <span class="er">❌</span> <span class="er">**C**</span> <span class="er">:</span> <span class="er">Pas</span> <span class="er">de</span> <span class="er">cohérence</span> <span class="er">stricte</span></span>
+<span id="cb2-105"><a href="#cb2-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-106"><a href="#cb2-106" aria-hidden="true" tabindex="-1"></a><span class="er">---</span></span>
+<span id="cb2-107"><a href="#cb2-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-108"><a href="#cb2-108" aria-hidden="true" tabindex="-1"></a><span class="er">##</span> <span class="er">🧮</span> <span class="er">Tableau</span> <span class="er">récapitulatif</span> <span class="er">:</span> <span class="er">ACID</span> <span class="er">vs</span> <span class="er">BASE</span> <span class="er">vs</span> <span class="er">CAP</span></span>
+<span id="cb2-109"><a href="#cb2-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-110"><a href="#cb2-110" aria-hidden="true" tabindex="-1"></a><span class="er">|</span> <span class="er">Modèle</span>          <span class="er">|</span> <span class="er">Objectif</span>                <span class="er">|</span> <span class="er">Cohérence</span>     <span class="er">|</span> <span class="er">Disponibilité</span> <span class="er">|</span> <span class="er">Tolérance</span> <span class="er">aux</span> <span class="er">partitions</span> <span class="er">|</span> <span class="er">Scalabilité</span>        <span class="er">|</span></span>
+<span id="cb2-111"><a href="#cb2-111" aria-hidden="true" tabindex="-1"></a><span class="er">|-----------------|-------------------------|---------------|----------------|----------------------------|---------------------|</span></span>
+<span id="cb2-112"><a href="#cb2-112" aria-hidden="true" tabindex="-1"></a><span class="er">|</span> <span class="er">**ACID</span> <span class="er">(SQL)**</span>  <span class="er">|</span> <span class="er">Intégrité</span> <span class="er">stricte</span>       <span class="er">|</span> <span class="er">✅</span> <span class="er">Immédiate</span>  <span class="er">|</span> <span class="er">⚠️</span> <span class="er">Variable</span>     <span class="er">|</span> <span class="er">❌</span> <span class="er">Non</span>                     <span class="er">|</span> <span class="er">❌</span> <span class="er">Limité</span> <span class="er">(verticale)</span> <span class="er">|</span></span>
+<span id="cb2-113"><a href="#cb2-113" aria-hidden="true" tabindex="-1"></a><span class="er">|</span> <span class="er">**BASE</span> <span class="er">(NoSQL)**|</span> <span class="er">Performance</span> <span class="er">à</span> <span class="er">grande</span> <span class="er">échelle</span> <span class="er">|</span> <span class="er">❗</span> <span class="er">Éventuelle</span> <span class="er">|</span> <span class="er">✅</span> <span class="er">Forte</span>        <span class="er">|</span> <span class="er">✅</span> <span class="er">Forte</span>                   <span class="er">|</span> <span class="er">✅</span> <span class="er">Excellente</span> <span class="er">(horizontale)</span> <span class="er">|</span></span>
+<span id="cb2-114"><a href="#cb2-114" aria-hidden="true" tabindex="-1"></a><span class="er">|</span> <span class="er">**CAP</span> <span class="er">(principe)**</span> <span class="er">|</span> <span class="er">Choix</span> <span class="er">forcé</span>           <span class="er">|</span> <span class="er">2</span> <span class="er">sur</span> <span class="er">3</span>       <span class="er">|</span> <span class="er">2</span> <span class="er">sur</span> <span class="er">3</span>        <span class="er">|</span> <span class="er">2</span> <span class="er">sur</span> <span class="er">3</span>                    <span class="er">|</span> <span class="er">–</span>                   <span class="er">|</span></span>
+<span id="cb2-115"><a href="#cb2-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-116"><a href="#cb2-116" aria-hidden="true" tabindex="-1"></a><span class="er">---</span></span>
+<span id="cb2-117"><a href="#cb2-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-118"><a href="#cb2-118" aria-hidden="true" tabindex="-1"></a><span class="er">###</span> <span class="er">🧠</span> <span class="er">À</span> <span class="er">retenir</span></span>
+<span id="cb2-119"><a href="#cb2-119" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-120"><a href="#cb2-120" aria-hidden="true" tabindex="-1"></a><span class="er">-</span> <span class="er">**ACID**</span> <span class="er">=</span> <span class="er">Tout</span> <span class="er">doit</span> <span class="er">être</span> <span class="er">cohérent,</span> <span class="er">même</span> <span class="er">si</span> <span class="er">c’est</span> <span class="er">lent</span></span>
+<span id="cb2-121"><a href="#cb2-121" aria-hidden="true" tabindex="-1"></a><span class="er">-</span> <span class="er">**BASE**</span> <span class="er">=</span> <span class="er">Le</span> <span class="er">système</span> <span class="er">reste</span> <span class="er">rapide</span> <span class="er">et</span> <span class="er">dispo,</span> <span class="er">quitte</span> <span class="er">à</span> <span class="er">être</span> <span class="er">incohérent</span> <span class="er">temporairement</span></span>
+<span id="cb2-122"><a href="#cb2-122" aria-hidden="true" tabindex="-1"></a><span class="er">-</span> <span class="er">**CAP**</span> <span class="er">=</span> <span class="er">Tu</span> <span class="er">choisis</span> <span class="er">ce</span> <span class="er">que</span> <span class="er">tu</span> <span class="er">sacrifies</span> <span class="er">:</span> <span class="er">cohérence,</span> <span class="er">disponibilité,</span> <span class="er">ou</span> <span class="er">tolérance</span> <span class="er">aux</span> <span class="er">pannes</span></span>
+<span id="cb2-123"><a href="#cb2-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-124"><a href="#cb2-124" aria-hidden="true" tabindex="-1"></a><span class="er">##</span> <span class="er">🤔</span> <span class="er">Comment</span> <span class="er">choisir</span> <span class="er">sa</span> <span class="er">base</span> <span class="er">de</span> <span class="er">données</span> <span class="er">?</span></span>
+<span id="cb2-125"><a href="#cb2-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-126"><a href="#cb2-126" aria-hidden="true" tabindex="-1"></a><span class="er">###</span> <span class="er">📊</span> <span class="er">Arbre</span> <span class="er">de</span> <span class="er">décision</span> <span class="er">simplifié</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Tes données ont-elles une structure fixe et des relations ? │ ├── OUI → As-tu besoin de transactions ACID ? │ │ │ ├── OUI → 🗄️ SQL (PostgreSQL, MySQL) │ │ │ └── NON → Volume &gt; 1TB et scalabilité horizontale ? │ │ │ ├── OUI → 📊 Colonnes (Cassandra) │ └── NON → 🗄️ SQL reste un bon choix │ └── NON → Quel type de données ? │ ├── Documents JSON flexibles → 📄 MongoDB ├── Cache / Sessions → ⚡ Redis ├── Relations complexes → 🔗 Neo4j └── Métriques temporelles → 📈 InfluxDB</p>
+<pre><code>
+### 🎯 Guide rapide par cas d'usage
+
+| Cas d'usage | Base recommandée | Pourquoi |
+|-------------|------------------|----------|
+| **E-commerce** | PostgreSQL | Transactions, relations produits/commandes |
+| **Application mobile** | MongoDB | Schéma flexible, JSON natif |
+| **Cache / Sessions** | Redis | Ultra-rapide, en mémoire |
+| **Réseau social** | Neo4j | Relations amis, recommandations |
+| **IoT / Monitoring** | InfluxDB | Optimisé pour les séries temporelles |
+| **Big Data analytics** | Cassandra | Scalabilité horizontale massive |
+| **Data Warehouse** | PostgreSQL / Snowflake | Requêtes analytiques complexes |
+| **Logs / Search** | Elasticsearch | Recherche full-text, agrégations |
+
+---
+
+## ☁️ Bases de données Cloud (Managed Services)
+
+Les cloud providers proposent des bases de données **managées** : pas de serveur à gérer, backups automatiques, scalabilité simplifiée.
+
+### 🏢 Services par provider
+
+| Type | AWS | GCP | Azure |
+|------|-----|-----|-------|
+| **SQL** | RDS, Aurora | Cloud SQL | Azure SQL |
+| **Document** | DocumentDB | Firestore | Cosmos DB |
+| **Clé-Valeur** | ElastiCache, DynamoDB | Memorystore | Cache for Redis |
+| **Data Warehouse** | Redshift | BigQuery | Synapse |
+| **Time-Series** | Timestream | – | Time Series Insights |
+
+### ✅ Avantages du Cloud
+
+| Avantage | Description |
+|----------|-------------|
+| 🔧 **Zéro maintenance** | Mises à jour, patches gérés automatiquement |
+| 💾 **Backups automatiques** | Snapshots réguliers, point-in-time recovery |
+| 📈 **Scalabilité** | Augmenter les ressources en quelques clics |
+| 🌍 **Haute disponibilité** | Réplication multi-zones |
+| 💰 **Pay-as-you-go** | Payer uniquement ce qu'on consomme |
+
+### ⚠️ Points d'attention
+
+- 💸 **Coûts** : Peut devenir cher à grande échelle
+- 🔒 **Vendor lock-in** : Migration difficile entre providers
+- 🌐 **Latence** : Dépend de la région choisie
+
+---
+
+## 🐍 Connexion Python aux bases de données
+
+En tant que Data Engineer, tu utiliseras Python pour interagir avec les bases. Voici les principaux connecteurs :
+
+### 📦 Connecteurs par type de base
+
+| Type | Package Python | Installation | Usage |
+|------|----------------|--------------|-------|
+| **PostgreSQL** | `psycopg2` | `pip install psycopg2-binary` | Connexion native |
+| **MySQL** | `mysql-connector` | `pip install mysql-connector-python` | Connexion native |
+| **SQLite** | `sqlite3` | Inclus dans Python | Bases locales |
+| **MongoDB** | `pymongo` | `pip install pymongo` | Documents JSON |
+| **Redis** | `redis` | `pip install redis` | Cache |
+| **Elasticsearch** | `elasticsearch` | `pip install elasticsearch` | Search |
+
+### 🔧 SQLAlchemy — L'ORM universel
+
+**SQLAlchemy** est un ORM (Object-Relational Mapper) qui permet d'interagir avec **n'importe quelle base SQL** de façon unifiée.
+
+```python
+# Installation
+# pip install sqlalchemy
+
+from sqlalchemy import create_engine
+
+# Connexion à différentes bases avec la même syntaxe
+engine_pg = create_engine('postgresql://user:pass@localhost/db')
+engine_mysql = create_engine('mysql://user:pass@localhost/db')
+engine_sqlite = create_engine('sqlite:///local.db')</code></pre>
+<blockquote class="blockquote">
+<p>💡 <strong>Conseil</strong> : Utilise SQLAlchemy pour les projets professionnels. Il facilite les migrations entre bases.</p>
+</blockquote>
+<hr>
+<hr>
+</section>
+</section>
+<section id="quiz-de-fin-de-module" class="level2">
+<h2 class="anchored" data-anchor-id="quiz-de-fin-de-module">🧪 Quiz de fin de module</h2>
+<hr>
+<section id="q1.-que-signifie-acid" class="level3">
+<h3 class="anchored" data-anchor-id="q1.-que-signifie-acid">❓ Q1. Que signifie “ACID” ?</h3>
+<ol type="a">
+<li>Automatisation, Cohérence, Indexation, Durabilité<br>
+</li>
+<li>Atomicité, Cohérence, Isolation, Durabilité<br>
+</li>
+<li>Architecture, Chargement, Intégration, Disponibilité</li>
+</ol>
+<details>
+<summary>
+💡 Voir la réponse
+</summary>
+<p>✅ <strong>Réponse : b</strong> — ACID garantit la fiabilité des transactions.</p>
+</details>
+<hr>
+</section>
+<section id="q2.-quelle-base-de-données-est-orientée-documents" class="level3">
+<h3 class="anchored" data-anchor-id="q2.-quelle-base-de-données-est-orientée-documents">❓ Q2. Quelle base de données est orientée “documents” ?</h3>
+<ol type="a">
+<li>MySQL<br>
+</li>
+<li>MongoDB<br>
+</li>
+<li>Redis<br>
+</li>
+<li>Neo4j</li>
+</ol>
+<details>
+<summary>
+💡 Voir la réponse
+</summary>
+<p>✅ <strong>Réponse : b</strong> — MongoDB stocke des documents JSON/BSON.</p>
+</details>
+<hr>
+</section>
+<section id="q3.-quel-type-de-base-est-le-plus-adapté-à-une-application-e-commerce-structurée" class="level3">
+<h3 class="anchored" data-anchor-id="q3.-quel-type-de-base-est-le-plus-adapté-à-une-application-e-commerce-structurée">❓ Q3. Quel type de base est le plus adapté à une application e-commerce structurée ?</h3>
+<ol type="a">
+<li>Relationnelle (SQL)<br>
+</li>
+<li>Graphe<br>
+</li>
+<li>Time Series<br>
+</li>
+<li>Clé-Valeur</li>
+</ol>
+<details>
+<summary>
+💡 Voir la réponse
+</summary>
+<p>✅ <strong>Réponse : a</strong> — Les relations produits/commandes/clients sont parfaites pour SQL.</p>
+</details>
+<hr>
+</section>
+<section id="q4.-que-signifie-base" class="level3">
+<h3 class="anchored" data-anchor-id="q4.-que-signifie-base">❓ Q4. Que signifie BASE ?</h3>
+<ol type="a">
+<li>Backup Always Secured Engine<br>
+</li>
+<li>Basically Available, Soft state, Eventually consistent<br>
+</li>
+<li>Binary API Storage Engine</li>
+</ol>
+<details>
+<summary>
+💡 Voir la réponse
+</summary>
+<p>✅ <strong>Réponse : b</strong> — BASE privilégie la disponibilité à la cohérence immédiate.</p>
+</details>
+<hr>
+</section>
+<section id="q5.-selon-le-théorème-cap-combien-de-propriétés-peut-on-garantir-simultanément" class="level3">
+<h3 class="anchored" data-anchor-id="q5.-selon-le-théorème-cap-combien-de-propriétés-peut-on-garantir-simultanément">❓ Q5. Selon le théorème CAP, combien de propriétés peut-on garantir simultanément ?</h3>
+<ol type="a">
+<li>1<br>
+</li>
+<li>2<br>
+</li>
+<li>3</li>
+</ol>
+<details>
+<summary>
+💡 Voir la réponse
+</summary>
+<p>✅ <strong>Réponse : b</strong> — On peut garantir 2 propriétés sur 3 (C, A, P).</p>
+</details>
+<hr>
+</section>
+<section id="q6.-quelle-base-utiliser-pour-du-cache-ultra-rapide" class="level3">
+<h3 class="anchored" data-anchor-id="q6.-quelle-base-utiliser-pour-du-cache-ultra-rapide">❓ Q6. Quelle base utiliser pour du cache ultra-rapide ?</h3>
+<ol type="a">
+<li>PostgreSQL<br>
+</li>
+<li>MongoDB<br>
+</li>
+<li>Redis<br>
+</li>
+<li>Cassandra</li>
+</ol>
+<details>
+<summary>
+💡 Voir la réponse
+</summary>
+<p>✅ <strong>Réponse : c</strong> — Redis est une base clé-valeur en mémoire, parfaite pour le cache.</p>
+</details>
+<hr>
+</section>
+<section id="q7.-quel-orm-python-permet-de-se-connecter-à-plusieurs-types-de-bases-sql" class="level3">
+<h3 class="anchored" data-anchor-id="q7.-quel-orm-python-permet-de-se-connecter-à-plusieurs-types-de-bases-sql">❓ Q7. Quel ORM Python permet de se connecter à plusieurs types de bases SQL ?</h3>
+<ol type="a">
+<li>pymongo<br>
+</li>
+<li>SQLAlchemy<br>
+</li>
+<li>psycopg2<br>
+</li>
+<li>redis-py</li>
+</ol>
+<details>
+<summary>
+💡 Voir la réponse
+</summary>
+<p>✅ <strong>Réponse : b</strong> — SQLAlchemy est un ORM universel pour les bases SQL.</p>
+</details>
+<hr>
+</section>
+</section>
+<section id="ressources-pour-aller-plus-loin" class="level2">
+<h2 class="anchored" data-anchor-id="ressources-pour-aller-plus-loin">📚 Ressources pour aller plus loin</h2>
+<section id="documentation-officielle" class="level3">
+<h3 class="anchored" data-anchor-id="documentation-officielle">📖 Documentation officielle</h3>
+<ul>
+<li><a href="https://www.postgresql.org/docs/">PostgreSQL Documentation</a></li>
+<li><a href="https://docs.mongodb.com/manual/">MongoDB Manual</a></li>
+<li><a href="https://redis.io/docs/">Redis Documentation</a></li>
+<li><a href="https://docs.sqlalchemy.org/en/20/tutorial/">SQLAlchemy Tutorial</a></li>
+</ul>
+</section>
+<section id="cours-et-tutoriels" class="level3">
+<h3 class="anchored" data-anchor-id="cours-et-tutoriels">🎓 Cours et tutoriels</h3>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=ztHopE5Wnpc">Database Design Course (freeCodeCamp)</a></li>
+<li><a href="https://www.mongodb.com/nosql-explained/nosql-vs-sql">SQL vs NoSQL Explained</a></li>
+<li><a href="https://mwhittaker.github.io/blog/an_illustrated_proof_of_the_cap_theorem/">CAP Theorem Visualized</a></li>
+</ul>
+</section>
+<section id="outils-utiles" class="level3">
+<h3 class="anchored" data-anchor-id="outils-utiles">🛠️ Outils utiles</h3>
+<ul>
+<li><a href="https://db-engines.com/en/ranking">DB-Engines Ranking</a> — Classement des bases de données</li>
+<li><a href="https://dbdiagram.io/">DBDiagram.io</a> — Créer des schémas de base</li>
+<li><a href="http://sqlfiddle.com/">SQL Fiddle</a> — Tester du SQL en ligne</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="prochaine-étape" class="level2">
+<h2 class="anchored" data-anchor-id="prochaine-étape">➡️ Prochaine étape</h2>
+<p>Maintenant que tu comprends les concepts des bases de données, passons à la pratique avec <strong>SQL</strong> !</p>
+<p>👉 <strong>Module suivant : <code>07_sql_for_data_engineers.ipynb</code></strong> — Requêtes SQL pour Data Engineers</p>
+<hr>
+<p>🎉 <strong>Félicitations !</strong> Tu as terminé le module Introduction aux bases de données.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/diakite-data\.github\.io\/data-engineering-bootcamp");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="git@github.com:diakite-data/data-engineering-bootcamp.git/blob/main/notebooks/beginner/06_intro_databases.ipynb" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="git@github.com:diakite-data/data-engineering-bootcamp.git/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
