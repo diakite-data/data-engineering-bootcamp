@@ -3,19 +3,20 @@ project:
   output-dir: _site
 
 website:
-  title: "Bootcamp Data Engineering"
-  description: "Programme Data Engineering — Niveau débutant"
+  title: "Bootcamp Data Engineering – From Zero to Hero"
+  description: "Programme Data Engineering — Débutant → Intermédiaire → Avancé"
   site-url: "https://diakite-data.github.io/data-engineering-bootcamp"
   repo-url: "git@github.com:diakite-data/data-engineering-bootcamp.git"
   repo-actions: [source, issue]
 
-  # --- Sidebar (menu latéral) ---
+  # --- Sidebar moderne ---
   sidebar:
-    style: "floating"     # or "docked"
-    search: true          # active la barre de recherche
-    collapse-level: 2     # optimisation des sous-sections
+    style: "floating"     
+    search: true          
+    collapse-level: 2
     contents:
       - index.qmd
+
       - section: "Débutant"
         contents:
           - notebooks/beginner/01_intro_data_engineering.ipynb
@@ -23,21 +24,26 @@ website:
           - notebooks/beginner/03_git_for_data_engineers.ipynb
           - notebooks/beginner/04_python_basics_for_data_engineers.ipynb
           - notebooks/beginner/05_python_data_processing_for_data_engineers.ipynb
-          - notebooks/beginner/06_intro_databases.ipynb
+          - notebooks/beginner/06_intro_relational_databases.ipynb
+          - notebooks/beginner/07_sql_for_data_engineers_bis.ipynb
+          - notebooks/beginner/08_intro_big_data_distributed.ipynb
+          - notebooks/beginner/09_mongodb_for_data_engineers.ipynb
+          - notebooks/beginner/10_elasticsearch_for_data_engineers.ipynb
+          - notebooks/beginner/11_pyspark_for_data_engineering.ipynb
+          - notebooks/beginner/12_orchestration_pipelines.ipynb
 
+  # --- Icons in navbar ---
   navbar:
     right:
       - icon: github
         href: https://github.com/diakite-data/data-engineering-bootcamp
-      - icon: lightbulb
-        href: "#"
-        aria-label: "Mode clair/sombre"
-  
+
 format:
   html:
     theme:
-      light: cosmo        # thème clair premium
-      dark: cyborg        # dark mode automatique
+      light: cosmo
+      dark: cyborg
+    css: styles.css
     toc: true
     toc-depth: 3
     number-sections: true
