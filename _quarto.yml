@@ -1,0 +1,40 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Bootcamp Data Engineering"
+  description: "Programme Data Engineering — Niveau Débutant"
+  site-url: "https://diakite-data.github.io/data-engineering-bootcamp"
+  repo-url: "git@github.com:diakite-data/data-engineering-bootcamp.git"
+  repo-actions: [source, issue]
+
+  navbar:
+    left:
+      - text: "Accueil"
+        file: index.qmd
+
+      - text: "Débutant"
+        menu:
+          - file: notebooks/beginner/01_intro_data_engineering.ipynb
+            text: "Introduction au Data Engineering"
+          - file: notebooks/beginner/02_bash_for_data_engineers.ipynb
+            text: "Bash pour Data Engineers"
+          - file: notebooks/beginner/03_git_for_data_engineers.ipynb
+            text: "Git & Versioning"
+          - file: notebooks/beginner/04_python_basics_for_data_engineers.ipynb
+            text: "Python Basics"
+          - file: notebooks/beginner/05_python_data_processing_for_data_engineers.ipynb
+            text: "Traitement de données avec Python"
+          - file: notebooks/beginner/06_intro_databases.ipynb
+            text: "Introduction aux bases de données"
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 3
+    code-fold: true
+    number-sections: true
+    smooth-scroll: true
+
