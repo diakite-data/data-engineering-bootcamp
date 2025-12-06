@@ -1045,182 +1045,286 @@
     "href": "notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html",
     "title": "🚀 BONUS : FastAPI pour Data Engineers",
     "section": "",
-    "text": "Ce module bonus couvre FastAPI, le framework Python moderne pour créer des APIs REST performantes. En tant que Data Engineer, tu auras souvent besoin d’exposer des données via des APIs."
+    "text": "Ce module bonus couvre FastAPI, le framework Python moderne pour créer des APIs REST performantes. En tant que Data Engineer, tu auras souvent besoin d’exposer des données via des APIs.",
+    "crumbs": [
+      "Débutant",
+      "🚀 BONUS : FastAPI pour Data Engineers"
+    ]
   },
   {
     "objectID": "notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html#prérequis",
     "href": "notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html#prérequis",
     "title": "🚀 BONUS : FastAPI pour Data Engineers",
     "section": "📋 Prérequis",
-    "text": "📋 Prérequis\n\n\n\n\n\n\n\nNiveau\nCompétence\n\n\n\n\n✅ Requis\nModule 04_python_basics (fonctions, classes, type hints)\n\n\n✅ Requis\nModule 05_python_data_processing (Pandas, JSON)\n\n\n⭐ Bonus\nModule 09_mongodb (pour les exemples avec DB)"
+    "text": "📋 Prérequis\n\n\n\n\n\n\n\nNiveau\nCompétence\n\n\n\n\n✅ Requis\nModule 04_python_basics (fonctions, classes, type hints)\n\n\n✅ Requis\nModule 05_python_data_processing (Pandas, JSON)\n\n\n⭐ Bonus\nModule 09_mongodb (pour les exemples avec DB)",
+    "crumbs": [
+      "Débutant",
+      "🚀 BONUS : FastAPI pour Data Engineers"
+    ]
   },
   {
     "objectID": "notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html#objectifs-du-module",
     "href": "notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html#objectifs-du-module",
     "title": "🚀 BONUS : FastAPI pour Data Engineers",
     "section": "🎯 Objectifs du module",
-    "text": "🎯 Objectifs du module\nÀ la fin de ce notebook, tu seras capable de :\n\n✅ Créer une API REST avec FastAPI\n✅ Définir des modèles de données avec Pydantic\n✅ Créer des endpoints CRUD (Create, Read, Update, Delete)\n✅ Valider automatiquement les données entrantes\n✅ Servir des données Pandas via API\n✅ Connecter une API à une base de données\n✅ Générer une documentation Swagger automatique\n✅ Déployer une API avec Uvicorn\n\n\n\n💡 Note : FastAPI s’exécute comme un serveur. Certains exemples seront à tester hors du notebook, dans des fichiers .py."
+    "text": "🎯 Objectifs du module\nÀ la fin de ce notebook, tu seras capable de :\n\n✅ Créer une API REST avec FastAPI\n✅ Définir des modèles de données avec Pydantic\n✅ Créer des endpoints CRUD (Create, Read, Update, Delete)\n✅ Valider automatiquement les données entrantes\n✅ Servir des données Pandas via API\n✅ Connecter une API à une base de données\n✅ Générer une documentation Swagger automatique\n✅ Déployer une API avec Uvicorn\n\n\n\n💡 Note : FastAPI s’exécute comme un serveur. Certains exemples seront à tester hors du notebook, dans des fichiers .py.",
+    "crumbs": [
+      "Débutant",
+      "🚀 BONUS : FastAPI pour Data Engineers"
+    ]
   },
   {
     "objectID": "notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html#pourquoi-fastapi-pour-un-data-engineer",
     "href": "notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html#pourquoi-fastapi-pour-un-data-engineer",
     "title": "🚀 BONUS : FastAPI pour Data Engineers",
     "section": "🤔 Pourquoi FastAPI pour un Data Engineer ?",
-    "text": "🤔 Pourquoi FastAPI pour un Data Engineer ?\n┌─────────────────────────────────────────────────────────────────┐\n│              CAS D'USAGE DATA ENGINEERING                       │\n├─────────────────────────────────────────────────────────────────┤\n│                                                                 │\n│  📊 Exposer des données traitées (datamart → API)               │\n│  🔄 Créer des webhooks pour déclencher des pipelines            │\n│  🤖 Servir des prédictions ML en production                     │\n│  📈 Fournir des métriques pour les dashboards                   │\n│  🔗 Créer des microservices data                                │\n│  ✅ Valider des données avant ingestion                         │\n│                                                                 │\n└─────────────────────────────────────────────────────────────────┘\n\n🆚 FastAPI vs autres frameworks\n\n\n\nFramework\nPerformance\nTyping\nDoc auto\nAsync\nComplexité\n\n\n\n\nFastAPI\n⭐⭐⭐\n✅ Natif\n✅ Swagger\n✅\nSimple\n\n\nFlask\n⭐⭐\n❌ Manuel\n❌ Extension\n❌\nSimple\n\n\nDjango REST\n⭐⭐\n❌ Manuel\n✅\n⚠️\nComplexe\n\n\nExpress (Node)\n⭐⭐⭐\n❌\n❌\n✅\nSimple\n\n\n\n\n💡 FastAPI combine le meilleur : performance, simplicité, et documentation automatique."
+    "text": "🤔 Pourquoi FastAPI pour un Data Engineer ?\n┌─────────────────────────────────────────────────────────────────┐\n│              CAS D'USAGE DATA ENGINEERING                       │\n├─────────────────────────────────────────────────────────────────┤\n│                                                                 │\n│  📊 Exposer des données traitées (datamart → API)               │\n│  🔄 Créer des webhooks pour déclencher des pipelines            │\n│  🤖 Servir des prédictions ML en production                     │\n│  📈 Fournir des métriques pour les dashboards                   │\n│  🔗 Créer des microservices data                                │\n│  ✅ Valider des données avant ingestion                         │\n│                                                                 │\n└─────────────────────────────────────────────────────────────────┘\n\n🆚 FastAPI vs autres frameworks\n\n\n\nFramework\nPerformance\nTyping\nDoc auto\nAsync\nComplexité\n\n\n\n\nFastAPI\n⭐⭐⭐\n✅ Natif\n✅ Swagger\n✅\nSimple\n\n\nFlask\n⭐⭐\n❌ Manuel\n❌ Extension\n❌\nSimple\n\n\nDjango REST\n⭐⭐\n❌ Manuel\n✅\n⚠️\nComplexe\n\n\nExpress (Node)\n⭐⭐⭐\n❌\n❌\n✅\nSimple\n\n\n\n\n💡 FastAPI combine le meilleur : performance, simplicité, et documentation automatique.",
+    "crumbs": [
+      "Débutant",
+      "🚀 BONUS : FastAPI pour Data Engineers"
+    ]
   },
   {
     "objectID": "notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html#installation",
     "href": "notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html#installation",
     "title": "🚀 BONUS : FastAPI pour Data Engineers",
     "section": "📦 Installation",
-    "text": "📦 Installation\n# Installation de base\npip install fastapi uvicorn\n\n# Avec toutes les dépendances optionnelles\npip install \"fastapi[all]\"\n\n\n\nPackage\nRôle\n\n\n\n\nfastapi\nLe framework\n\n\nuvicorn\nServeur ASGI (pour lancer l’API)\n\n\npydantic\nValidation de données (inclus avec FastAPI)\n\n\n\n\n\nCode\n# Installation\n!pip install fastapi uvicorn pydantic pandas --quiet\n\nprint(\"✅ Packages installés !\")"
+    "text": "📦 Installation\n# Installation de base\npip install fastapi uvicorn\n\n# Avec toutes les dépendances optionnelles\npip install \"fastapi[all]\"\n\n\n\nPackage\nRôle\n\n\n\n\nfastapi\nLe framework\n\n\nuvicorn\nServeur ASGI (pour lancer l’API)\n\n\npydantic\nValidation de données (inclus avec FastAPI)\n\n\n\n\n\nCode\n# Installation\n!pip install fastapi uvicorn pydantic pandas --quiet\n\nprint(\"✅ Packages installés !\")",
+    "crumbs": [
+      "Débutant",
+      "🚀 BONUS : FastAPI pour Data Engineers"
+    ]
   },
   {
     "objectID": "notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html#structure-minimale",
     "href": "notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html#structure-minimale",
     "title": "🚀 BONUS : FastAPI pour Data Engineers",
     "section": "📝 Structure minimale",
-    "text": "📝 Structure minimale\nCréer un fichier main.py :\n# main.py\nfrom fastapi import FastAPI\n\n# Créer l'application\napp = FastAPI()\n\n# Premier endpoint\n@app.get(\"/\")\ndef root():\n    return {\"message\": \"Hello Data Engineer!\"}\n\n@app.get(\"/health\")\ndef health_check():\n    return {\"status\": \"healthy\"}"
+    "text": "📝 Structure minimale\nCréer un fichier main.py :\n# main.py\nfrom fastapi import FastAPI\n\n# Créer l'application\napp = FastAPI()\n\n# Premier endpoint\n@app.get(\"/\")\ndef root():\n    return {\"message\": \"Hello Data Engineer!\"}\n\n@app.get(\"/health\")\ndef health_check():\n    return {\"status\": \"healthy\"}",
+    "crumbs": [
+      "Débutant",
+      "🚀 BONUS : FastAPI pour Data Engineers"
+    ]
   },
   {
     "objectID": "notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html#lancer-le-serveur",
     "href": "notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html#lancer-le-serveur",
     "title": "🚀 BONUS : FastAPI pour Data Engineers",
     "section": "🚀 Lancer le serveur",
-    "text": "🚀 Lancer le serveur\n# Dans le terminal\nuvicorn main:app --reload\n\n# main = fichier main.py\n# app = variable FastAPI()\n# --reload = redémarre automatiquement si le code change\nRésultat :\nINFO:     Uvicorn running on http://127.0.0.1:8000\nINFO:     Started reloader process"
+    "text": "🚀 Lancer le serveur\n# Dans le terminal\nuvicorn main:app --reload\n\n# main = fichier main.py\n# app = variable FastAPI()\n# --reload = redémarre automatiquement si le code change\nRésultat :\nINFO:     Uvicorn running on http://127.0.0.1:8000\nINFO:     Started reloader process",
+    "crumbs": [
+      "Débutant",
+      "🚀 BONUS : FastAPI pour Data Engineers"
+    ]
   },
   {
     "objectID": "notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html#tester-lapi",
     "href": "notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html#tester-lapi",
     "title": "🚀 BONUS : FastAPI pour Data Engineers",
     "section": "🌐 Tester l’API",
-    "text": "🌐 Tester l’API\n\n\n\nURL\nRésultat\n\n\n\n\nhttp://127.0.0.1:8000\n{\"message\": \"Hello Data Engineer!\"}\n\n\nhttp://127.0.0.1:8000/health\n{\"status\": \"healthy\"}\n\n\nhttp://127.0.0.1:8000/docs\n📄 Documentation Swagger\n\n\nhttp://127.0.0.1:8000/redoc\n📄 Documentation ReDoc"
+    "text": "🌐 Tester l’API\n\n\n\nURL\nRésultat\n\n\n\n\nhttp://127.0.0.1:8000\n{\"message\": \"Hello Data Engineer!\"}\n\n\nhttp://127.0.0.1:8000/health\n{\"status\": \"healthy\"}\n\n\nhttp://127.0.0.1:8000/docs\n📄 Documentation Swagger\n\n\nhttp://127.0.0.1:8000/redoc\n📄 Documentation ReDoc",
+    "crumbs": [
+      "Débutant",
+      "🚀 BONUS : FastAPI pour Data Engineers"
+    ]
   },
   {
     "objectID": "notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html#les-méthodes-http",
     "href": "notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html#les-méthodes-http",
     "title": "🚀 BONUS : FastAPI pour Data Engineers",
     "section": "🔄 Les méthodes HTTP",
-    "text": "🔄 Les méthodes HTTP\n┌─────────────────────────────────────────────────────────────────┐\n│                    MÉTHODES HTTP (CRUD)                         │\n├──────────┬──────────────────┬───────────────────────────────────┤\n│ Méthode  │ Action           │ Exemple                           │\n├──────────┼──────────────────┼───────────────────────────────────┤\n│ GET      │ Lire (Read)      │ GET /users → Liste des users      │\n│ POST     │ Créer (Create)   │ POST /users → Créer un user       │\n│ PUT      │ Remplacer        │ PUT /users/1 → Remplacer user 1   │\n│ PATCH    │ Modifier         │ PATCH /users/1 → Modifier user 1  │\n│ DELETE   │ Supprimer        │ DELETE /users/1 → Supprimer       │\n└──────────┴──────────────────┴───────────────────────────────────┘\nfrom fastapi import FastAPI\n\napp = FastAPI()\n\n@app.get(\"/items\")\ndef get_items():\n    return {\"action\": \"Liste des items\"}\n\n@app.post(\"/items\")\ndef create_item():\n    return {\"action\": \"Création d'un item\"}\n\n@app.put(\"/items/{item_id}\")\ndef update_item(item_id: int):\n    return {\"action\": f\"Mise à jour de l'item {item_id}\"}\n\n@app.delete(\"/items/{item_id}\")\ndef delete_item(item_id: int):\n    return {\"action\": f\"Suppression de l'item {item_id}\"}"
+    "text": "🔄 Les méthodes HTTP\n┌─────────────────────────────────────────────────────────────────┐\n│                    MÉTHODES HTTP (CRUD)                         │\n├──────────┬──────────────────┬───────────────────────────────────┤\n│ Méthode  │ Action           │ Exemple                           │\n├──────────┼──────────────────┼───────────────────────────────────┤\n│ GET      │ Lire (Read)      │ GET /users → Liste des users      │\n│ POST     │ Créer (Create)   │ POST /users → Créer un user       │\n│ PUT      │ Remplacer        │ PUT /users/1 → Remplacer user 1   │\n│ PATCH    │ Modifier         │ PATCH /users/1 → Modifier user 1  │\n│ DELETE   │ Supprimer        │ DELETE /users/1 → Supprimer       │\n└──────────┴──────────────────┴───────────────────────────────────┘\nfrom fastapi import FastAPI\n\napp = FastAPI()\n\n@app.get(\"/items\")\ndef get_items():\n    return {\"action\": \"Liste des items\"}\n\n@app.post(\"/items\")\ndef create_item():\n    return {\"action\": \"Création d'un item\"}\n\n@app.put(\"/items/{item_id}\")\ndef update_item(item_id: int):\n    return {\"action\": f\"Mise à jour de l'item {item_id}\"}\n\n@app.delete(\"/items/{item_id}\")\ndef delete_item(item_id: int):\n    return {\"action\": f\"Suppression de l'item {item_id}\"}",
+    "crumbs": [
+      "Débutant",
+      "🚀 BONUS : FastAPI pour Data Engineers"
+    ]
   },
   {
     "objectID": "notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html#paramètres-de-chemin-path-parameters",
     "href": "notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html#paramètres-de-chemin-path-parameters",
     "title": "🚀 BONUS : FastAPI pour Data Engineers",
     "section": "📍 Paramètres de chemin (Path Parameters)",
-    "text": "📍 Paramètres de chemin (Path Parameters)\nLes paramètres dans l’URL permettent d’identifier une ressource spécifique.\nfrom fastapi import FastAPI\n\napp = FastAPI()\n\n# Paramètre simple\n@app.get(\"/users/{user_id}\")\ndef get_user(user_id: int):  # Typage automatique !\n    return {\"user_id\": user_id}\n\n# Plusieurs paramètres\n@app.get(\"/users/{user_id}/orders/{order_id}\")\ndef get_user_order(user_id: int, order_id: int):\n    return {\n        \"user_id\": user_id,\n        \"order_id\": order_id\n    }\n\n✅ Validation automatique\nGET /users/42        → {\"user_id\": 42}       ✅\nGET /users/abc       → Erreur 422            ❌ (pas un int)\nGET /users/-1        → {\"user_id\": -1}       ✅ (mais logiquement faux)\n\n\n🔒 Validation avancée avec Path\nfrom fastapi import FastAPI, Path\n\napp = FastAPI()\n\n@app.get(\"/users/{user_id}\")\ndef get_user(\n    user_id: int = Path(\n        ...,  # Requis\n        title=\"User ID\",\n        description=\"L'identifiant unique de l'utilisateur\",\n        ge=1,  # Greater or Equal (&gt;= 1)\n        le=10000  # Less or Equal (&lt;= 10000)\n    )\n):\n    return {\"user_id\": user_id}"
+    "text": "📍 Paramètres de chemin (Path Parameters)\nLes paramètres dans l’URL permettent d’identifier une ressource spécifique.\nfrom fastapi import FastAPI\n\napp = FastAPI()\n\n# Paramètre simple\n@app.get(\"/users/{user_id}\")\ndef get_user(user_id: int):  # Typage automatique !\n    return {\"user_id\": user_id}\n\n# Plusieurs paramètres\n@app.get(\"/users/{user_id}/orders/{order_id}\")\ndef get_user_order(user_id: int, order_id: int):\n    return {\n        \"user_id\": user_id,\n        \"order_id\": order_id\n    }\n\n✅ Validation automatique\nGET /users/42        → {\"user_id\": 42}       ✅\nGET /users/abc       → Erreur 422            ❌ (pas un int)\nGET /users/-1        → {\"user_id\": -1}       ✅ (mais logiquement faux)\n\n\n🔒 Validation avancée avec Path\nfrom fastapi import FastAPI, Path\n\napp = FastAPI()\n\n@app.get(\"/users/{user_id}\")\ndef get_user(\n    user_id: int = Path(\n        ...,  # Requis\n        title=\"User ID\",\n        description=\"L'identifiant unique de l'utilisateur\",\n        ge=1,  # Greater or Equal (&gt;= 1)\n        le=10000  # Less or Equal (&lt;= 10000)\n    )\n):\n    return {\"user_id\": user_id}",
+    "crumbs": [
+      "Débutant",
+      "🚀 BONUS : FastAPI pour Data Engineers"
+    ]
   },
   {
     "objectID": "notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html#paramètres-de-requête-query-parameters",
     "href": "notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html#paramètres-de-requête-query-parameters",
     "title": "🚀 BONUS : FastAPI pour Data Engineers",
     "section": "🔍 Paramètres de requête (Query Parameters)",
-    "text": "🔍 Paramètres de requête (Query Parameters)\nLes paramètres après le ? dans l’URL pour filtrer, paginer, etc.\nGET /users?skip=0&limit=10&active=true\n         └──────────┬──────────────┘\n              Query parameters\nfrom fastapi import FastAPI\nfrom typing import Optional\n\napp = FastAPI()\n\n@app.get(\"/users\")\ndef get_users(\n    skip: int = 0,           # Défaut = 0\n    limit: int = 10,         # Défaut = 10\n    active: bool = True,     # Défaut = True\n    search: Optional[str] = None  # Optionnel\n):\n    return {\n        \"skip\": skip,\n        \"limit\": limit,\n        \"active\": active,\n        \"search\": search\n    }\n\n📊 Cas d’usage Data Engineering : Pagination\n@app.get(\"/data\")\ndef get_data(\n    page: int = 1,\n    page_size: int = 100,\n    sort_by: str = \"created_at\",\n    order: str = \"desc\"\n):\n    # Calculer l'offset\n    offset = (page - 1) * page_size\n    \n    return {\n        \"page\": page,\n        \"page_size\": page_size,\n        \"offset\": offset,\n        \"sort_by\": sort_by,\n        \"order\": order\n    }"
+    "text": "🔍 Paramètres de requête (Query Parameters)\nLes paramètres après le ? dans l’URL pour filtrer, paginer, etc.\nGET /users?skip=0&limit=10&active=true\n         └──────────┬──────────────┘\n              Query parameters\nfrom fastapi import FastAPI\nfrom typing import Optional\n\napp = FastAPI()\n\n@app.get(\"/users\")\ndef get_users(\n    skip: int = 0,           # Défaut = 0\n    limit: int = 10,         # Défaut = 10\n    active: bool = True,     # Défaut = True\n    search: Optional[str] = None  # Optionnel\n):\n    return {\n        \"skip\": skip,\n        \"limit\": limit,\n        \"active\": active,\n        \"search\": search\n    }\n\n📊 Cas d’usage Data Engineering : Pagination\n@app.get(\"/data\")\ndef get_data(\n    page: int = 1,\n    page_size: int = 100,\n    sort_by: str = \"created_at\",\n    order: str = \"desc\"\n):\n    # Calculer l'offset\n    offset = (page - 1) * page_size\n    \n    return {\n        \"page\": page,\n        \"page_size\": page_size,\n        \"offset\": offset,\n        \"sort_by\": sort_by,\n        \"order\": order\n    }",
+    "crumbs": [
+      "Débutant",
+      "🚀 BONUS : FastAPI pour Data Engineers"
+    ]
   },
   {
     "objectID": "notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html#définir-un-modèle",
     "href": "notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html#définir-un-modèle",
     "title": "🚀 BONUS : FastAPI pour Data Engineers",
     "section": "📝 Définir un modèle",
-    "text": "📝 Définir un modèle\nfrom pydantic import BaseModel, Field, EmailStr\nfrom typing import Optional\nfrom datetime import datetime\n\nclass User(BaseModel):\n    \"\"\"Modèle utilisateur pour l'API.\"\"\"\n    \n    id: Optional[int] = None\n    nom: str = Field(..., min_length=2, max_length=50)\n    email: EmailStr\n    age: int = Field(..., ge=0, le=150)\n    actif: bool = True\n    created_at: datetime = Field(default_factory=datetime.now)\n    \n    class Config:\n        # Exemple pour la documentation\n        json_schema_extra = {\n            \"example\": {\n                \"nom\": \"Alice Dupont\",\n                \"email\": \"alice@example.com\",\n                \"age\": 30,\n                \"actif\": True\n            }\n        }\n\n🔒 Validateurs disponibles\n\n\n\nValidateur\nExemple\nDescription\n\n\n\n\nmin_length\nField(min_length=2)\nLongueur min string\n\n\nmax_length\nField(max_length=50)\nLongueur max string\n\n\nge\nField(ge=0)\nGreater or Equal\n\n\nle\nField(le=100)\nLess or Equal\n\n\ngt\nField(gt=0)\nGreater Than\n\n\nlt\nField(lt=100)\nLess Than\n\n\nregex\nField(regex='^[A-Z]')\nPattern regex\n\n\nEmailStr\nType spécial\nValide format email\n\n\n\n\n\nCode\n# Exemple Pydantic dans le notebook\nfrom pydantic import BaseModel, Field, field_validator\nfrom typing import Optional\nfrom datetime import datetime\n\nclass Transaction(BaseModel):\n    \"\"\"Modèle de transaction pour pipeline ETL.\"\"\"\n    \n    id: Optional[int] = None\n    montant: float = Field(..., gt=0, description=\"Montant positif\")\n    devise: str = Field(..., min_length=3, max_length=3)\n    description: str = Field(..., min_length=1, max_length=200)\n    timestamp: datetime = Field(default_factory=datetime.now)\n    \n    @field_validator('devise')\n    @classmethod\n    def devise_uppercase(cls, v):\n        return v.upper()\n\n# Test de validation\ntry:\n    # ✅ Valide\n    tx1 = Transaction(montant=100.50, devise=\"eur\", description=\"Achat\")\n    print(f\"✅ Transaction valide : {tx1}\")\n    print(f\"   Devise convertie : {tx1.devise}\")\n    \n    # ❌ Invalide\n    tx2 = Transaction(montant=-50, devise=\"EUR\", description=\"Test\")\nexcept Exception as e:\n    print(f\"\\n❌ Erreur de validation : {e}\")"
+    "text": "📝 Définir un modèle\nfrom pydantic import BaseModel, Field, EmailStr\nfrom typing import Optional\nfrom datetime import datetime\n\nclass User(BaseModel):\n    \"\"\"Modèle utilisateur pour l'API.\"\"\"\n    \n    id: Optional[int] = None\n    nom: str = Field(..., min_length=2, max_length=50)\n    email: EmailStr\n    age: int = Field(..., ge=0, le=150)\n    actif: bool = True\n    created_at: datetime = Field(default_factory=datetime.now)\n    \n    class Config:\n        # Exemple pour la documentation\n        json_schema_extra = {\n            \"example\": {\n                \"nom\": \"Alice Dupont\",\n                \"email\": \"alice@example.com\",\n                \"age\": 30,\n                \"actif\": True\n            }\n        }\n\n🔒 Validateurs disponibles\n\n\n\nValidateur\nExemple\nDescription\n\n\n\n\nmin_length\nField(min_length=2)\nLongueur min string\n\n\nmax_length\nField(max_length=50)\nLongueur max string\n\n\nge\nField(ge=0)\nGreater or Equal\n\n\nle\nField(le=100)\nLess or Equal\n\n\ngt\nField(gt=0)\nGreater Than\n\n\nlt\nField(lt=100)\nLess Than\n\n\nregex\nField(regex='^[A-Z]')\nPattern regex\n\n\nEmailStr\nType spécial\nValide format email\n\n\n\n\n\nCode\n# Exemple Pydantic dans le notebook\nfrom pydantic import BaseModel, Field, field_validator\nfrom typing import Optional\nfrom datetime import datetime\n\nclass Transaction(BaseModel):\n    \"\"\"Modèle de transaction pour pipeline ETL.\"\"\"\n    \n    id: Optional[int] = None\n    montant: float = Field(..., gt=0, description=\"Montant positif\")\n    devise: str = Field(..., min_length=3, max_length=3)\n    description: str = Field(..., min_length=1, max_length=200)\n    timestamp: datetime = Field(default_factory=datetime.now)\n    \n    @field_validator('devise')\n    @classmethod\n    def devise_uppercase(cls, v):\n        return v.upper()\n\n# Test de validation\ntry:\n    # ✅ Valide\n    tx1 = Transaction(montant=100.50, devise=\"eur\", description=\"Achat\")\n    print(f\"✅ Transaction valide : {tx1}\")\n    print(f\"   Devise convertie : {tx1.devise}\")\n    \n    # ❌ Invalide\n    tx2 = Transaction(montant=-50, devise=\"EUR\", description=\"Test\")\nexcept Exception as e:\n    print(f\"\\n❌ Erreur de validation : {e}\")",
+    "crumbs": [
+      "Débutant",
+      "🚀 BONUS : FastAPI pour Data Engineers"
+    ]
   },
   {
     "objectID": "notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html#corps-de-requête-request-body",
     "href": "notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html#corps-de-requête-request-body",
     "title": "🚀 BONUS : FastAPI pour Data Engineers",
     "section": "📨 Corps de requête (Request Body)",
-    "text": "📨 Corps de requête (Request Body)\nPour les requêtes POST/PUT, les données sont envoyées dans le body (corps) en JSON.\nfrom fastapi import FastAPI\nfrom pydantic import BaseModel\n\napp = FastAPI()\n\nclass UserCreate(BaseModel):\n    nom: str\n    email: str\n    age: int\n\nclass UserResponse(BaseModel):\n    id: int\n    nom: str\n    email: str\n    age: int\n\n# Base de données fictive\nusers_db = []\nuser_id_counter = 1\n\n@app.post(\"/users\", response_model=UserResponse)\ndef create_user(user: UserCreate):\n    global user_id_counter\n    \n    # Créer le user avec un ID\n    new_user = {\n        \"id\": user_id_counter,\n        \"nom\": user.nom,\n        \"email\": user.email,\n        \"age\": user.age\n    }\n    \n    users_db.append(new_user)\n    user_id_counter += 1\n    \n    return new_user\n\n📤 Requête avec curl\ncurl -X POST \"http://127.0.0.1:8000/users\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"nom\": \"Alice\", \"email\": \"alice@test.com\", \"age\": 30}'\n\n\n📤 Requête avec Python requests\nimport requests\n\nresponse = requests.post(\n    \"http://127.0.0.1:8000/users\",\n    json={\"nom\": \"Alice\", \"email\": \"alice@test.com\", \"age\": 30}\n)\nprint(response.json())"
+    "text": "📨 Corps de requête (Request Body)\nPour les requêtes POST/PUT, les données sont envoyées dans le body (corps) en JSON.\nfrom fastapi import FastAPI\nfrom pydantic import BaseModel\n\napp = FastAPI()\n\nclass UserCreate(BaseModel):\n    nom: str\n    email: str\n    age: int\n\nclass UserResponse(BaseModel):\n    id: int\n    nom: str\n    email: str\n    age: int\n\n# Base de données fictive\nusers_db = []\nuser_id_counter = 1\n\n@app.post(\"/users\", response_model=UserResponse)\ndef create_user(user: UserCreate):\n    global user_id_counter\n    \n    # Créer le user avec un ID\n    new_user = {\n        \"id\": user_id_counter,\n        \"nom\": user.nom,\n        \"email\": user.email,\n        \"age\": user.age\n    }\n    \n    users_db.append(new_user)\n    user_id_counter += 1\n    \n    return new_user\n\n📤 Requête avec curl\ncurl -X POST \"http://127.0.0.1:8000/users\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"nom\": \"Alice\", \"email\": \"alice@test.com\", \"age\": 30}'\n\n\n📤 Requête avec Python requests\nimport requests\n\nresponse = requests.post(\n    \"http://127.0.0.1:8000/users\",\n    json={\"nom\": \"Alice\", \"email\": \"alice@test.com\", \"age\": 30}\n)\nprint(response.json())",
+    "crumbs": [
+      "Débutant",
+      "🚀 BONUS : FastAPI pour Data Engineers"
+    ]
   },
   {
     "objectID": "notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html#gestion-des-erreurs",
     "href": "notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html#gestion-des-erreurs",
     "title": "🚀 BONUS : FastAPI pour Data Engineers",
     "section": "⚠️ Gestion des erreurs",
-    "text": "⚠️ Gestion des erreurs\nFastAPI utilise HTTPException pour retourner des erreurs HTTP propres.\nfrom fastapi import FastAPI, HTTPException, status\n\napp = FastAPI()\n\n@app.get(\"/users/{user_id}\")\ndef get_user(user_id: int):\n    user = find_user_by_id(user_id)  # Fonction fictive\n    \n    if user is None:\n        raise HTTPException(\n            status_code=status.HTTP_404_NOT_FOUND,\n            detail=f\"User {user_id} non trouvé\",\n            headers={\"X-Error\": \"User not found\"}\n        )\n    \n    return user\n\n📋 Codes HTTP courants\n\n\n\nCode\nNom\nUsage\n\n\n\n\n200\nOK\nSuccès (GET, PUT)\n\n\n201\nCreated\nCréation réussie (POST)\n\n\n204\nNo Content\nSuppression réussie (DELETE)\n\n\n400\nBad Request\nRequête invalide\n\n\n401\nUnauthorized\nNon authentifié\n\n\n403\nForbidden\nNon autorisé\n\n\n404\nNot Found\nRessource introuvable\n\n\n422\nUnprocessable Entity\nErreur de validation\n\n\n500\nInternal Server Error\nErreur serveur"
+    "text": "⚠️ Gestion des erreurs\nFastAPI utilise HTTPException pour retourner des erreurs HTTP propres.\nfrom fastapi import FastAPI, HTTPException, status\n\napp = FastAPI()\n\n@app.get(\"/users/{user_id}\")\ndef get_user(user_id: int):\n    user = find_user_by_id(user_id)  # Fonction fictive\n    \n    if user is None:\n        raise HTTPException(\n            status_code=status.HTTP_404_NOT_FOUND,\n            detail=f\"User {user_id} non trouvé\",\n            headers={\"X-Error\": \"User not found\"}\n        )\n    \n    return user\n\n📋 Codes HTTP courants\n\n\n\nCode\nNom\nUsage\n\n\n\n\n200\nOK\nSuccès (GET, PUT)\n\n\n201\nCreated\nCréation réussie (POST)\n\n\n204\nNo Content\nSuppression réussie (DELETE)\n\n\n400\nBad Request\nRequête invalide\n\n\n401\nUnauthorized\nNon authentifié\n\n\n403\nForbidden\nNon autorisé\n\n\n404\nNot Found\nRessource introuvable\n\n\n422\nUnprocessable Entity\nErreur de validation\n\n\n500\nInternal Server Error\nErreur serveur",
+    "crumbs": [
+      "Débutant",
+      "🚀 BONUS : FastAPI pour Data Engineers"
+    ]
   },
   {
     "objectID": "notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html#avec-sqlalchemy-postgresql-mysql-sqlite",
     "href": "notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html#avec-sqlalchemy-postgresql-mysql-sqlite",
     "title": "🚀 BONUS : FastAPI pour Data Engineers",
     "section": "🗄️ Avec SQLAlchemy (PostgreSQL, MySQL, SQLite)",
-    "text": "🗄️ Avec SQLAlchemy (PostgreSQL, MySQL, SQLite)\n# database.py\nfrom sqlalchemy import create_engine\nfrom sqlalchemy.orm import sessionmaker, declarative_base\n\n# URL de connexion\nDATABASE_URL = \"postgresql://user:password@localhost:5432/mydb\"\n# Pour SQLite: \"sqlite:///./data.db\"\n\nengine = create_engine(DATABASE_URL)\nSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)\nBase = declarative_base()\n\n# Dependency pour injecter la session\ndef get_db():\n    db = SessionLocal()\n    try:\n        yield db\n    finally:\n        db.close()\n# models.py\nfrom sqlalchemy import Column, Integer, String, Float, DateTime\nfrom database import Base\nfrom datetime import datetime\n\nclass User(Base):\n    __tablename__ = \"users\"\n    \n    id = Column(Integer, primary_key=True, index=True)\n    nom = Column(String(100), nullable=False)\n    email = Column(String(100), unique=True, index=True)\n    age = Column(Integer)\n    created_at = Column(DateTime, default=datetime.now)\n# main.py\nfrom fastapi import FastAPI, Depends\nfrom sqlalchemy.orm import Session\nfrom database import get_db\nimport models\n\napp = FastAPI()\n\n@app.get(\"/users\")\ndef get_users(db: Session = Depends(get_db), skip: int = 0, limit: int = 10):\n    users = db.query(models.User).offset(skip).limit(limit).all()\n    return users"
+    "text": "🗄️ Avec SQLAlchemy (PostgreSQL, MySQL, SQLite)\n# database.py\nfrom sqlalchemy import create_engine\nfrom sqlalchemy.orm import sessionmaker, declarative_base\n\n# URL de connexion\nDATABASE_URL = \"postgresql://user:password@localhost:5432/mydb\"\n# Pour SQLite: \"sqlite:///./data.db\"\n\nengine = create_engine(DATABASE_URL)\nSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)\nBase = declarative_base()\n\n# Dependency pour injecter la session\ndef get_db():\n    db = SessionLocal()\n    try:\n        yield db\n    finally:\n        db.close()\n# models.py\nfrom sqlalchemy import Column, Integer, String, Float, DateTime\nfrom database import Base\nfrom datetime import datetime\n\nclass User(Base):\n    __tablename__ = \"users\"\n    \n    id = Column(Integer, primary_key=True, index=True)\n    nom = Column(String(100), nullable=False)\n    email = Column(String(100), unique=True, index=True)\n    age = Column(Integer)\n    created_at = Column(DateTime, default=datetime.now)\n# main.py\nfrom fastapi import FastAPI, Depends\nfrom sqlalchemy.orm import Session\nfrom database import get_db\nimport models\n\napp = FastAPI()\n\n@app.get(\"/users\")\ndef get_users(db: Session = Depends(get_db), skip: int = 0, limit: int = 10):\n    users = db.query(models.User).offset(skip).limit(limit).all()\n    return users",
+    "crumbs": [
+      "Débutant",
+      "🚀 BONUS : FastAPI pour Data Engineers"
+    ]
   },
   {
     "objectID": "notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html#avec-mongodb-pymongo",
     "href": "notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html#avec-mongodb-pymongo",
     "title": "🚀 BONUS : FastAPI pour Data Engineers",
     "section": "🍃 Avec MongoDB (PyMongo)",
-    "text": "🍃 Avec MongoDB (PyMongo)\n# mongodb_api.py\nfrom fastapi import FastAPI, HTTPException\nfrom pydantic import BaseModel, Field\nfrom pymongo import MongoClient\nfrom bson import ObjectId\nfrom typing import Optional\n\napp = FastAPI(title=\"MongoDB API\")\n\n# Connexion MongoDB\nclient = MongoClient(\"mongodb://localhost:27017\")\ndb = client[\"data_engineering\"]\ncollection = db[\"pipelines\"]\n\n# Helper pour ObjectId\nclass PyObjectId(ObjectId):\n    @classmethod\n    def __get_validators__(cls):\n        yield cls.validate\n    \n    @classmethod\n    def validate(cls, v, field):\n        if not ObjectId.is_valid(v):\n            raise ValueError(\"Invalid ObjectId\")\n        return ObjectId(v)\n\n# Modèle\nclass Pipeline(BaseModel):\n    id: Optional[str] = Field(default=None, alias=\"_id\")\n    nom: str\n    description: str\n    schedule: str\n    \n    class Config:\n        populate_by_name = True\n\n# CRUD\n@app.get(\"/pipelines\")\ndef list_pipelines():\n    pipelines = []\n    for doc in collection.find():\n        doc[\"_id\"] = str(doc[\"_id\"])\n        pipelines.append(doc)\n    return pipelines\n\n@app.post(\"/pipelines\")\ndef create_pipeline(pipeline: Pipeline):\n    result = collection.insert_one(pipeline.model_dump(exclude={\"id\"}))\n    return {\"id\": str(result.inserted_id)}\n\n@app.get(\"/pipelines/{pipeline_id}\")\ndef get_pipeline(pipeline_id: str):\n    doc = collection.find_one({\"_id\": ObjectId(pipeline_id)})\n    if not doc:\n        raise HTTPException(status_code=404, detail=\"Pipeline non trouvé\")\n    doc[\"_id\"] = str(doc[\"_id\"])\n    return doc\n\n@app.delete(\"/pipelines/{pipeline_id}\")\ndef delete_pipeline(pipeline_id: str):\n    result = collection.delete_one({\"_id\": ObjectId(pipeline_id)})\n    if result.deleted_count == 0:\n        raise HTTPException(status_code=404, detail=\"Pipeline non trouvé\")\n    return {\"deleted\": True}"
+    "text": "🍃 Avec MongoDB (PyMongo)\n# mongodb_api.py\nfrom fastapi import FastAPI, HTTPException\nfrom pydantic import BaseModel, Field\nfrom pymongo import MongoClient\nfrom bson import ObjectId\nfrom typing import Optional\n\napp = FastAPI(title=\"MongoDB API\")\n\n# Connexion MongoDB\nclient = MongoClient(\"mongodb://localhost:27017\")\ndb = client[\"data_engineering\"]\ncollection = db[\"pipelines\"]\n\n# Helper pour ObjectId\nclass PyObjectId(ObjectId):\n    @classmethod\n    def __get_validators__(cls):\n        yield cls.validate\n    \n    @classmethod\n    def validate(cls, v, field):\n        if not ObjectId.is_valid(v):\n            raise ValueError(\"Invalid ObjectId\")\n        return ObjectId(v)\n\n# Modèle\nclass Pipeline(BaseModel):\n    id: Optional[str] = Field(default=None, alias=\"_id\")\n    nom: str\n    description: str\n    schedule: str\n    \n    class Config:\n        populate_by_name = True\n\n# CRUD\n@app.get(\"/pipelines\")\ndef list_pipelines():\n    pipelines = []\n    for doc in collection.find():\n        doc[\"_id\"] = str(doc[\"_id\"])\n        pipelines.append(doc)\n    return pipelines\n\n@app.post(\"/pipelines\")\ndef create_pipeline(pipeline: Pipeline):\n    result = collection.insert_one(pipeline.model_dump(exclude={\"id\"}))\n    return {\"id\": str(result.inserted_id)}\n\n@app.get(\"/pipelines/{pipeline_id}\")\ndef get_pipeline(pipeline_id: str):\n    doc = collection.find_one({\"_id\": ObjectId(pipeline_id)})\n    if not doc:\n        raise HTTPException(status_code=404, detail=\"Pipeline non trouvé\")\n    doc[\"_id\"] = str(doc[\"_id\"])\n    return doc\n\n@app.delete(\"/pipelines/{pipeline_id}\")\ndef delete_pipeline(pipeline_id: str):\n    result = collection.delete_one({\"_id\": ObjectId(pipeline_id)})\n    if result.deleted_count == 0:\n        raise HTTPException(status_code=404, detail=\"Pipeline non trouvé\")\n    return {\"deleted\": True}",
+    "crumbs": [
+      "Débutant",
+      "🚀 BONUS : FastAPI pour Data Engineers"
+    ]
   },
   {
     "objectID": "notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html#background-tasks-tâches-en-arrière-plan",
     "href": "notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html#background-tasks-tâches-en-arrière-plan",
     "title": "🚀 BONUS : FastAPI pour Data Engineers",
     "section": "⏰ Background Tasks (tâches en arrière-plan)",
-    "text": "⏰ Background Tasks (tâches en arrière-plan)\nUtile pour les webhooks et le déclenchement de pipelines.\nfrom fastapi import FastAPI, BackgroundTasks\nimport time\n\napp = FastAPI()\n\ndef run_etl_pipeline(pipeline_id: int):\n    \"\"\"Simule l'exécution d'un pipeline ETL.\"\"\"\n    print(f\"🚀 Démarrage du pipeline {pipeline_id}\")\n    time.sleep(10)  # Simule un traitement long\n    print(f\"✅ Pipeline {pipeline_id} terminé\")\n\n@app.post(\"/pipelines/{pipeline_id}/run\")\ndef trigger_pipeline(pipeline_id: int, background_tasks: BackgroundTasks):\n    \"\"\"Déclenche un pipeline en arrière-plan.\"\"\"\n    \n    # Ajoute la tâche en arrière-plan\n    background_tasks.add_task(run_etl_pipeline, pipeline_id)\n    \n    # Répond immédiatement\n    return {\n        \"message\": f\"Pipeline {pipeline_id} déclenché\",\n        \"status\": \"running\"\n    }\n\n🔗 Webhook pour déclencher un pipeline\n@app.post(\"/webhook/data-arrival\")\ndef webhook_data_arrival(\n    payload: dict,\n    background_tasks: BackgroundTasks\n):\n    \"\"\"Webhook appelé quand de nouvelles données arrivent.\"\"\"\n    \n    source = payload.get(\"source\")\n    file_path = payload.get(\"file_path\")\n    \n    # Déclencher le pipeline approprié\n    background_tasks.add_task(\n        process_new_data, \n        source=source, \n        file_path=file_path\n    )\n    \n    return {\"status\": \"accepted\", \"message\": \"Pipeline déclenché\"}"
+    "text": "⏰ Background Tasks (tâches en arrière-plan)\nUtile pour les webhooks et le déclenchement de pipelines.\nfrom fastapi import FastAPI, BackgroundTasks\nimport time\n\napp = FastAPI()\n\ndef run_etl_pipeline(pipeline_id: int):\n    \"\"\"Simule l'exécution d'un pipeline ETL.\"\"\"\n    print(f\"🚀 Démarrage du pipeline {pipeline_id}\")\n    time.sleep(10)  # Simule un traitement long\n    print(f\"✅ Pipeline {pipeline_id} terminé\")\n\n@app.post(\"/pipelines/{pipeline_id}/run\")\ndef trigger_pipeline(pipeline_id: int, background_tasks: BackgroundTasks):\n    \"\"\"Déclenche un pipeline en arrière-plan.\"\"\"\n    \n    # Ajoute la tâche en arrière-plan\n    background_tasks.add_task(run_etl_pipeline, pipeline_id)\n    \n    # Répond immédiatement\n    return {\n        \"message\": f\"Pipeline {pipeline_id} déclenché\",\n        \"status\": \"running\"\n    }\n\n🔗 Webhook pour déclencher un pipeline\n@app.post(\"/webhook/data-arrival\")\ndef webhook_data_arrival(\n    payload: dict,\n    background_tasks: BackgroundTasks\n):\n    \"\"\"Webhook appelé quand de nouvelles données arrivent.\"\"\"\n    \n    source = payload.get(\"source\")\n    file_path = payload.get(\"file_path\")\n    \n    # Déclencher le pipeline approprié\n    background_tasks.add_task(\n        process_new_data, \n        source=source, \n        file_path=file_path\n    )\n    \n    return {\"status\": \"accepted\", \"message\": \"Pipeline déclenché\"}",
+    "crumbs": [
+      "Débutant",
+      "🚀 BONUS : FastAPI pour Data Engineers"
+    ]
   },
   {
     "objectID": "notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html#upload-de-fichiers",
     "href": "notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html#upload-de-fichiers",
     "title": "🚀 BONUS : FastAPI pour Data Engineers",
     "section": "📁 Upload de fichiers",
-    "text": "📁 Upload de fichiers\nPermet d’ingérer des fichiers (CSV, JSON, Parquet) via API.\nfrom fastapi import FastAPI, UploadFile, File\nimport pandas as pd\nimport io\n\napp = FastAPI()\n\n@app.post(\"/upload/csv\")\nasync def upload_csv(file: UploadFile = File(...)):\n    \"\"\"Upload et analyse un fichier CSV.\"\"\"\n    \n    # Vérifier l'extension\n    if not file.filename.endswith('.csv'):\n        raise HTTPException(status_code=400, detail=\"Fichier CSV requis\")\n    \n    # Lire le contenu\n    contents = await file.read()\n    \n    # Charger dans Pandas\n    df = pd.read_csv(io.StringIO(contents.decode('utf-8')))\n    \n    return {\n        \"filename\": file.filename,\n        \"rows\": len(df),\n        \"columns\": list(df.columns),\n        \"dtypes\": df.dtypes.astype(str).to_dict(),\n        \"preview\": df.head(5).to_dict(orient=\"records\")\n    }\n\n@app.post(\"/upload/batch\")\nasync def upload_multiple(files: list[UploadFile] = File(...)):\n    \"\"\"Upload plusieurs fichiers.\"\"\"\n    \n    results = []\n    for file in files:\n        results.append({\n            \"filename\": file.filename,\n            \"size\": len(await file.read())\n        })\n    \n    return {\"uploaded\": len(files), \"files\": results}"
+    "text": "📁 Upload de fichiers\nPermet d’ingérer des fichiers (CSV, JSON, Parquet) via API.\nfrom fastapi import FastAPI, UploadFile, File\nimport pandas as pd\nimport io\n\napp = FastAPI()\n\n@app.post(\"/upload/csv\")\nasync def upload_csv(file: UploadFile = File(...)):\n    \"\"\"Upload et analyse un fichier CSV.\"\"\"\n    \n    # Vérifier l'extension\n    if not file.filename.endswith('.csv'):\n        raise HTTPException(status_code=400, detail=\"Fichier CSV requis\")\n    \n    # Lire le contenu\n    contents = await file.read()\n    \n    # Charger dans Pandas\n    df = pd.read_csv(io.StringIO(contents.decode('utf-8')))\n    \n    return {\n        \"filename\": file.filename,\n        \"rows\": len(df),\n        \"columns\": list(df.columns),\n        \"dtypes\": df.dtypes.astype(str).to_dict(),\n        \"preview\": df.head(5).to_dict(orient=\"records\")\n    }\n\n@app.post(\"/upload/batch\")\nasync def upload_multiple(files: list[UploadFile] = File(...)):\n    \"\"\"Upload plusieurs fichiers.\"\"\"\n    \n    results = []\n    for file in files:\n        results.append({\n            \"filename\": file.filename,\n            \"size\": len(await file.read())\n        })\n    \n    return {\"uploaded\": len(files), \"files\": results}",
+    "crumbs": [
+      "Débutant",
+      "🚀 BONUS : FastAPI pour Data Engineers"
+    ]
   },
   {
     "objectID": "notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html#documentation-automatique",
     "href": "notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html#documentation-automatique",
     "title": "🚀 BONUS : FastAPI pour Data Engineers",
     "section": "📄 Documentation automatique",
-    "text": "📄 Documentation automatique\nFastAPI génère automatiquement une documentation interactive !\n\n🌐 URLs de documentation\n\n\n\nURL\nType\nDescription\n\n\n\n\n/docs\nSwagger UI\nInterface interactive pour tester\n\n\n/redoc\nReDoc\nDocumentation lisible\n\n\n/openapi.json\nOpenAPI\nSchéma JSON de l’API\n\n\n\n\n\n🎨 Personnaliser la documentation\nfrom fastapi import FastAPI\n\napp = FastAPI(\n    title=\"Data Pipeline API\",\n    description=\"\"\"\n    ## 🚀 API pour gérer les pipelines de données\n    \n    Cette API permet de :\n    - Gérer les pipelines ETL\n    - Consulter les données\n    - Déclencher des exécutions\n    \n    ### Authentification\n    Utilise un token Bearer dans le header `Authorization`.\n    \"\"\",\n    version=\"1.0.0\",\n    contact={\n        \"name\": \"Data Team\",\n        \"email\": \"data@company.com\"\n    },\n    license_info={\n        \"name\": \"MIT\"\n    }\n)\n\n# Documenter un endpoint\n@app.get(\n    \"/pipelines\",\n    summary=\"Liste les pipelines\",\n    description=\"Retourne tous les pipelines avec pagination\",\n    response_description=\"Liste des pipelines\",\n    tags=[\"Pipelines\"]\n)\ndef list_pipelines():\n    pass"
+    "text": "📄 Documentation automatique\nFastAPI génère automatiquement une documentation interactive !\n\n🌐 URLs de documentation\n\n\n\nURL\nType\nDescription\n\n\n\n\n/docs\nSwagger UI\nInterface interactive pour tester\n\n\n/redoc\nReDoc\nDocumentation lisible\n\n\n/openapi.json\nOpenAPI\nSchéma JSON de l’API\n\n\n\n\n\n🎨 Personnaliser la documentation\nfrom fastapi import FastAPI\n\napp = FastAPI(\n    title=\"Data Pipeline API\",\n    description=\"\"\"\n    ## 🚀 API pour gérer les pipelines de données\n    \n    Cette API permet de :\n    - Gérer les pipelines ETL\n    - Consulter les données\n    - Déclencher des exécutions\n    \n    ### Authentification\n    Utilise un token Bearer dans le header `Authorization`.\n    \"\"\",\n    version=\"1.0.0\",\n    contact={\n        \"name\": \"Data Team\",\n        \"email\": \"data@company.com\"\n    },\n    license_info={\n        \"name\": \"MIT\"\n    }\n)\n\n# Documenter un endpoint\n@app.get(\n    \"/pipelines\",\n    summary=\"Liste les pipelines\",\n    description=\"Retourne tous les pipelines avec pagination\",\n    response_description=\"Liste des pipelines\",\n    tags=[\"Pipelines\"]\n)\ndef list_pipelines():\n    pass",
+    "crumbs": [
+      "Débutant",
+      "🚀 BONUS : FastAPI pour Data Engineers"
+    ]
   },
   {
     "objectID": "notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html#avec-docker",
     "href": "notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html#avec-docker",
     "title": "🚀 BONUS : FastAPI pour Data Engineers",
     "section": "🐳 Avec Docker",
-    "text": "🐳 Avec Docker\n# Dockerfile\nFROM python:3.11-slim\n\nWORKDIR /app\n\nCOPY requirements.txt .\nRUN pip install --no-cache-dir -r requirements.txt\n\nCOPY . .\n\nEXPOSE 8000\n\nCMD [\"uvicorn\", \"main:app\", \"--host\", \"0.0.0.0\", \"--port\", \"8000\"]\n# requirements.txt\nfastapi==0.109.0\nuvicorn==0.27.0\npydantic==2.5.0\npandas==2.1.0\n# Build et run\ndocker build -t data-api .\ndocker run -p 8000:8000 data-api"
+    "text": "🐳 Avec Docker\n# Dockerfile\nFROM python:3.11-slim\n\nWORKDIR /app\n\nCOPY requirements.txt .\nRUN pip install --no-cache-dir -r requirements.txt\n\nCOPY . .\n\nEXPOSE 8000\n\nCMD [\"uvicorn\", \"main:app\", \"--host\", \"0.0.0.0\", \"--port\", \"8000\"]\n# requirements.txt\nfastapi==0.109.0\nuvicorn==0.27.0\npydantic==2.5.0\npandas==2.1.0\n# Build et run\ndocker build -t data-api .\ndocker run -p 8000:8000 data-api",
+    "crumbs": [
+      "Débutant",
+      "🚀 BONUS : FastAPI pour Data Engineers"
+    ]
   },
   {
     "objectID": "notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html#options-de-déploiement-cloud",
     "href": "notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html#options-de-déploiement-cloud",
     "title": "🚀 BONUS : FastAPI pour Data Engineers",
     "section": "☁️ Options de déploiement cloud",
-    "text": "☁️ Options de déploiement cloud\n\n\n\nService\nDifficulté\nCoût\nNotes\n\n\n\n\nRailway\n⭐ Facile\nGratuit/Payant\nIdéal pour débuter\n\n\nRender\n⭐ Facile\nGratuit/Payant\nAuto-deploy depuis Git\n\n\nFly.io\n⭐⭐ Moyen\nGratuit/Payant\nDocker natif\n\n\nAWS Lambda\n⭐⭐ Moyen\nPay-per-use\nAvec Mangum adapter\n\n\nGCP Cloud Run\n⭐⭐ Moyen\nPay-per-use\nContainer serverless\n\n\nKubernetes\n⭐⭐⭐ Avancé\nVariable\nProduction enterprise"
+    "text": "☁️ Options de déploiement cloud\n\n\n\nService\nDifficulté\nCoût\nNotes\n\n\n\n\nRailway\n⭐ Facile\nGratuit/Payant\nIdéal pour débuter\n\n\nRender\n⭐ Facile\nGratuit/Payant\nAuto-deploy depuis Git\n\n\nFly.io\n⭐⭐ Moyen\nGratuit/Payant\nDocker natif\n\n\nAWS Lambda\n⭐⭐ Moyen\nPay-per-use\nAvec Mangum adapter\n\n\nGCP Cloud Run\n⭐⭐ Moyen\nPay-per-use\nContainer serverless\n\n\nKubernetes\n⭐⭐⭐ Avancé\nVariable\nProduction enterprise",
+    "crumbs": [
+      "Débutant",
+      "🚀 BONUS : FastAPI pour Data Engineers"
+    ]
   },
   {
     "objectID": "notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html#structure-de-projet-recommandée",
     "href": "notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html#structure-de-projet-recommandée",
     "title": "🚀 BONUS : FastAPI pour Data Engineers",
     "section": "✅ Structure de projet recommandée",
-    "text": "✅ Structure de projet recommandée\nmy_api/\n├── app/\n│   ├── __init__.py\n│   ├── main.py              # Point d'entrée FastAPI\n│   ├── config.py            # Configuration (env vars)\n│   ├── database.py          # Connexion DB\n│   ├── models/              # Modèles SQLAlchemy/Pydantic\n│   │   ├── __init__.py\n│   │   └── pipeline.py\n│   ├── schemas/             # Schémas Pydantic (request/response)\n│   │   ├── __init__.py\n│   │   └── pipeline.py\n│   ├── routers/             # Endpoints par domaine\n│   │   ├── __init__.py\n│   │   ├── pipelines.py\n│   │   └── data.py\n│   └── services/            # Logique métier\n│       ├── __init__.py\n│       └── etl.py\n├── tests/\n│   ├── __init__.py\n│   └── test_pipelines.py\n├── Dockerfile\n├── docker-compose.yml\n├── requirements.txt\n└── README.md"
+    "text": "✅ Structure de projet recommandée\nmy_api/\n├── app/\n│   ├── __init__.py\n│   ├── main.py              # Point d'entrée FastAPI\n│   ├── config.py            # Configuration (env vars)\n│   ├── database.py          # Connexion DB\n│   ├── models/              # Modèles SQLAlchemy/Pydantic\n│   │   ├── __init__.py\n│   │   └── pipeline.py\n│   ├── schemas/             # Schémas Pydantic (request/response)\n│   │   ├── __init__.py\n│   │   └── pipeline.py\n│   ├── routers/             # Endpoints par domaine\n│   │   ├── __init__.py\n│   │   ├── pipelines.py\n│   │   └── data.py\n│   └── services/            # Logique métier\n│       ├── __init__.py\n│       └── etl.py\n├── tests/\n│   ├── __init__.py\n│   └── test_pipelines.py\n├── Dockerfile\n├── docker-compose.yml\n├── requirements.txt\n└── README.md",
+    "crumbs": [
+      "Débutant",
+      "🚀 BONUS : FastAPI pour Data Engineers"
+    ]
   },
   {
     "objectID": "notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html#sécurité",
     "href": "notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html#sécurité",
     "title": "🚀 BONUS : FastAPI pour Data Engineers",
     "section": "🔐 Sécurité",
-    "text": "🔐 Sécurité\n# Ne jamais hardcoder les secrets !\nimport os\nfrom dotenv import load_dotenv\n\nload_dotenv()\n\nDATABASE_URL = os.getenv(\"DATABASE_URL\")\nAPI_KEY = os.getenv(\"API_KEY\")"
+    "text": "🔐 Sécurité\n# Ne jamais hardcoder les secrets !\nimport os\nfrom dotenv import load_dotenv\n\nload_dotenv()\n\nDATABASE_URL = os.getenv(\"DATABASE_URL\")\nAPI_KEY = os.getenv(\"API_KEY\")",
+    "crumbs": [
+      "Débutant",
+      "🚀 BONUS : FastAPI pour Data Engineers"
+    ]
   },
   {
     "objectID": "notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html#checklist-production",
     "href": "notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html#checklist-production",
     "title": "🚀 BONUS : FastAPI pour Data Engineers",
     "section": "📋 Checklist production",
-    "text": "📋 Checklist production\n\n\n\n✅\nItem\n\n\n\n\n☐\nVariables d’environnement pour les secrets\n\n\n☐\nValidation des entrées (Pydantic)\n\n\n☐\nGestion des erreurs (HTTPException)\n\n\n☐\nLogging structuré\n\n\n☐\nRate limiting\n\n\n☐\nCORS configuré\n\n\n☐\nTests automatisés\n\n\n☐\nDocumentation à jour\n\n\n☐\nHealth check endpoint"
+    "text": "📋 Checklist production\n\n\n\n✅\nItem\n\n\n\n\n☐\nVariables d’environnement pour les secrets\n\n\n☐\nValidation des entrées (Pydantic)\n\n\n☐\nGestion des erreurs (HTTPException)\n\n\n☐\nLogging structuré\n\n\n☐\nRate limiting\n\n\n☐\nCORS configuré\n\n\n☐\nTests automatisés\n\n\n☐\nDocumentation à jour\n\n\n☐\nHealth check endpoint",
+    "crumbs": [
+      "Débutant",
+      "🚀 BONUS : FastAPI pour Data Engineers"
+    ]
   },
   {
     "objectID": "notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html#résumé",
     "href": "notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html#résumé",
     "title": "🚀 BONUS : FastAPI pour Data Engineers",
     "section": "📋 Résumé",
-    "text": "📋 Résumé\n\nCe que tu as appris\n\n\n\nConcept\nDescription\n\n\n\n\nFastAPI\nFramework moderne pour APIs REST\n\n\nPydantic\nValidation automatique des données\n\n\nEndpoints CRUD\nGET, POST, PUT, PATCH, DELETE\n\n\nPath/Query params\nParamètres d’URL et de requête\n\n\nPandas + API\nServir des données via HTTP\n\n\nBackground tasks\nExécuter des tâches asynchrones\n\n\nDocumentation\nSwagger automatique\n\n\n\n\n\n🎯 Cas d’usage Data Engineering\n\n\n\nCas\nExemple\n\n\n\n\nExposer des données\nAPI pour dashboard/BI\n\n\nWebhook\nDéclencher un pipeline à l’arrivée de données\n\n\nValidation\nVérifier les données avant ingestion\n\n\nMonitoring\nAPI de statut des pipelines\n\n\nML Serving\nExposer des prédictions\n\n\n\n\n\n📦 Commandes essentielles\n# Installation\npip install fastapi uvicorn\n\n# Lancer en dev\nuvicorn main:app --reload\n\n# Lancer en prod\nuvicorn main:app --host 0.0.0.0 --port 8000 --workers 4"
+    "text": "📋 Résumé\n\nCe que tu as appris\n\n\n\nConcept\nDescription\n\n\n\n\nFastAPI\nFramework moderne pour APIs REST\n\n\nPydantic\nValidation automatique des données\n\n\nEndpoints CRUD\nGET, POST, PUT, PATCH, DELETE\n\n\nPath/Query params\nParamètres d’URL et de requête\n\n\nPandas + API\nServir des données via HTTP\n\n\nBackground tasks\nExécuter des tâches asynchrones\n\n\nDocumentation\nSwagger automatique\n\n\n\n\n\n🎯 Cas d’usage Data Engineering\n\n\n\nCas\nExemple\n\n\n\n\nExposer des données\nAPI pour dashboard/BI\n\n\nWebhook\nDéclencher un pipeline à l’arrivée de données\n\n\nValidation\nVérifier les données avant ingestion\n\n\nMonitoring\nAPI de statut des pipelines\n\n\nML Serving\nExposer des prédictions\n\n\n\n\n\n📦 Commandes essentielles\n# Installation\npip install fastapi uvicorn\n\n# Lancer en dev\nuvicorn main:app --reload\n\n# Lancer en prod\nuvicorn main:app --host 0.0.0.0 --port 8000 --workers 4",
+    "crumbs": [
+      "Débutant",
+      "🚀 BONUS : FastAPI pour Data Engineers"
+    ]
   },
   {
     "objectID": "notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html#ressources",
     "href": "notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html#ressources",
     "title": "🚀 BONUS : FastAPI pour Data Engineers",
     "section": "📚 Ressources",
-    "text": "📚 Ressources\n\nDocumentation officielle\n\nFastAPI Documentation — Excellente et complète\nPydantic Documentation\nUvicorn Documentation\n\n\n\nTutoriels\n\nFastAPI Tutorial — Tutoriel officiel\nReal Python - FastAPI\nTestDriven.io - FastAPI\n\n\n\nOutils complémentaires\n\nSQLModel — ORM par le créateur de FastAPI\nStrawberry — GraphQL avec FastAPI\nCelery — Tâches asynchrones avancées\n\n\n🎉 Félicitations ! Tu maîtrises maintenant FastAPI pour le Data Engineering."
+    "text": "📚 Ressources\n\nDocumentation officielle\n\nFastAPI Documentation — Excellente et complète\nPydantic Documentation\nUvicorn Documentation\n\n\n\nTutoriels\n\nFastAPI Tutorial — Tutoriel officiel\nReal Python - FastAPI\nTestDriven.io - FastAPI\n\n\n\nOutils complémentaires\n\nSQLModel — ORM par le créateur de FastAPI\nStrawberry — GraphQL avec FastAPI\nCelery — Tâches asynchrones avancées\n\n\n🎉 Félicitations ! Tu maîtrises maintenant FastAPI pour le Data Engineering.",
+    "crumbs": [
+      "Débutant",
+      "🚀 BONUS : FastAPI pour Data Engineers"
+    ]
   },
   {
     "objectID": "notebooks/beginner/09_mongodb_for_data_engineers.html",
