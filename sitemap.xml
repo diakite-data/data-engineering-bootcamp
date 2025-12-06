@@ -10,31 +10,35 @@
   </url>
   <url>
     <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/beginner/10_elasticsearch_for_data_engineers.html</loc>
-    <lastmod>2025-12-06T14:12:20.712Z</lastmod>
+    <lastmod>2025-12-06T16:32:24.544Z</lastmod>
   </url>
   <url>
     <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/beginner/12_orchestration_pipelines.html</loc>
-    <lastmod>2025-12-06T14:16:00.541Z</lastmod>
+    <lastmod>2025-12-06T17:05:51.239Z</lastmod>
   </url>
   <url>
     <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/beginner/01_intro_data_engineering.html</loc>
     <lastmod>2025-12-06T11:40:13.195Z</lastmod>
   </url>
   <url>
-    <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/beginner/07_sql_for_data_engineers.html</loc>
-    <lastmod>2025-12-06T14:07:38.769Z</lastmod>
+    <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html</loc>
+    <lastmod>2025-12-06T17:09:39.085Z</lastmod>
   </url>
   <url>
-    <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/beginner/08_intro_big_data_distributed.html</loc>
-    <lastmod>2025-12-06T14:09:23.538Z</lastmod>
+    <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/beginner/09_mongodb_for_data_engineers.html</loc>
+    <lastmod>2025-12-06T16:32:03.201Z</lastmod>
   </url>
   <url>
     <loc>https://diakite-data.github.io/data-engineering-bootcamp/index.html</loc>
     <lastmod>2025-12-05T22:49:04.467Z</lastmod>
   </url>
   <url>
-    <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/beginner/09_mongodb_for_data_engineers.html</loc>
-    <lastmod>2025-12-06T14:11:15.956Z</lastmod>
+    <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/beginner/08_intro_big_data_distributed.html</loc>
+    <lastmod>2025-12-06T16:31:21.977Z</lastmod>
+  </url>
+  <url>
+    <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/beginner/07_sql_for_data_engineers.html</loc>
+    <lastmod>2025-12-06T16:23:54.491Z</lastmod>
   </url>
   <url>
     <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/beginner/05_python_data_processing_for_data_engineers.html</loc>
