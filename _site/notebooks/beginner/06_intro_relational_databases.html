@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>🗄️ Introduction aux Bases de Données Relationnelles – Bootcamp Data Engineering</title>
+<title>🗄️ Introduction aux Bases de Données Relationnelles – Bootcamp Data Engineering – From Zero to Hero</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -75,6 +75,7 @@ ul.task-list li input[type="checkbox"] {
 <style>html{ scroll-behavior: smooth; }</style>
 
 
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -247,7 +248,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">Bootcamp Data Engineering</span>
+    <span class="navbar-title">Bootcamp Data Engineering – From Zero to Hero</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -258,11 +259,6 @@ ul.task-list li input[type="checkbox"] {
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/diakite-data/data-engineering-bootcamp"> <i class="bi bi-github" role="img">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="../../#"> <i class="bi bi-lightbulb" role="img" aria-label="Mode clair/sombre">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -278,7 +274,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">🗄️ Introduction aux Bases de Données Relationnelles</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notebooks/beginner/01_intro_data_engineering.html">Débutant</a></li><li class="breadcrumb-item"><a href="../../notebooks/beginner/06_intro_relational_databases.html">🗄️ Introduction aux Bases de Données Relationnelles</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -345,8 +341,44 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notebooks/beginner/06_intro_databases.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">🧠 Introduction aux bases de données pour Data Engineers</span></a>
+  <a href="../../notebooks/beginner/06_intro_relational_databases.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">🗄️ Introduction aux Bases de Données Relationnelles</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/07_sql_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🐘 SQL for Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/08_intro_big_data_distributed.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🐘 Introduction au Big Data &amp; Traitement Distribué</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/09_mongodb_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🍃 MongoDB for Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/10_elasticsearch_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🔍 Elasticsearch for Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/11_pyspark_for_data_engineering.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">⚡ PySpark for Data Engineering</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/12_orchestration_pipelines.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">⏰ Orchestration de Pipelines Data</span></a>
   </div>
 </li>
       </ul>
@@ -361,77 +393,77 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#prérequis" id="toc-prérequis" class="nav-link active" data-scroll-target="#prérequis"><span class="header-section-number">1</span> 📋 Prérequis</a></li>
-  <li><a href="#objectifs-du-module" id="toc-objectifs-du-module" class="nav-link" data-scroll-target="#objectifs-du-module"><span class="header-section-number">2</span> 🎯 Objectifs du module</a></li>
-  <li><a href="#cest-quoi-une-base-de-données" id="toc-cest-quoi-une-base-de-données" class="nav-link" data-scroll-target="#cest-quoi-une-base-de-données"><span class="header-section-number">3</span> 🎯 1. C’est quoi une Base de Données ?</a>
+  <li><a href="#prérequis" id="toc-prérequis" class="nav-link active" data-scroll-target="#prérequis">📋 Prérequis</a></li>
+  <li><a href="#objectifs-du-module" id="toc-objectifs-du-module" class="nav-link" data-scroll-target="#objectifs-du-module">🎯 Objectifs du module</a></li>
+  <li><a href="#cest-quoi-une-base-de-données" id="toc-cest-quoi-une-base-de-données" class="nav-link" data-scroll-target="#cest-quoi-une-base-de-données">🎯 1. C’est quoi une Base de Données ?</a>
   <ul class="collapse">
-  <li><a href="#définition" id="toc-définition" class="nav-link" data-scroll-target="#définition"><span class="header-section-number">3.1</span> 📖 Définition</a></li>
-  <li><a href="#en-une-phrase" id="toc-en-une-phrase" class="nav-link" data-scroll-target="#en-une-phrase"><span class="header-section-number">3.2</span> 🌟 En une phrase</a></li>
-  <li><a href="#fichiers-vs-base-de-données" id="toc-fichiers-vs-base-de-données" class="nav-link" data-scroll-target="#fichiers-vs-base-de-données"><span class="header-section-number">3.3</span> 📁 Fichiers vs Base de données</a></li>
+  <li><a href="#définition" id="toc-définition" class="nav-link" data-scroll-target="#définition">📖 Définition</a></li>
+  <li><a href="#en-une-phrase" id="toc-en-une-phrase" class="nav-link" data-scroll-target="#en-une-phrase">🌟 En une phrase</a></li>
+  <li><a href="#fichiers-vs-base-de-données" id="toc-fichiers-vs-base-de-données" class="nav-link" data-scroll-target="#fichiers-vs-base-de-données">📁 Fichiers vs Base de données</a></li>
   </ul></li>
-  <li><a href="#le-sgbd-système-de-gestion-de-base-de-données" id="toc-le-sgbd-système-de-gestion-de-base-de-données" class="nav-link" data-scroll-target="#le-sgbd-système-de-gestion-de-base-de-données"><span class="header-section-number">4</span> 🖥️ 2. Le SGBD — Système de Gestion de Base de Données</a>
+  <li><a href="#le-sgbd-système-de-gestion-de-base-de-données" id="toc-le-sgbd-système-de-gestion-de-base-de-données" class="nav-link" data-scroll-target="#le-sgbd-système-de-gestion-de-base-de-données">🖥️ 2. Le SGBD — Système de Gestion de Base de Données</a>
   <ul class="collapse">
-  <li><a href="#sgbd-relationnels-populaires" id="toc-sgbd-relationnels-populaires" class="nav-link" data-scroll-target="#sgbd-relationnels-populaires"><span class="header-section-number">4.1</span> 🏆 SGBD Relationnels populaires</a></li>
+  <li><a href="#sgbd-relationnels-populaires" id="toc-sgbd-relationnels-populaires" class="nav-link" data-scroll-target="#sgbd-relationnels-populaires">🏆 SGBD Relationnels populaires</a></li>
   </ul></li>
-  <li><a href="#le-modèle-relationnel" id="toc-le-modèle-relationnel" class="nav-link" data-scroll-target="#le-modèle-relationnel"><span class="header-section-number">5</span> 📊 3. Le Modèle Relationnel</a>
+  <li><a href="#le-modèle-relationnel" id="toc-le-modèle-relationnel" class="nav-link" data-scroll-target="#le-modèle-relationnel">📊 3. Le Modèle Relationnel</a>
   <ul class="collapse">
-  <li><a href="#vocabulaire-de-base" id="toc-vocabulaire-de-base" class="nav-link" data-scroll-target="#vocabulaire-de-base"><span class="header-section-number">5.1</span> 🧱 Vocabulaire de base</a></li>
-  <li><a href="#terminologie" id="toc-terminologie" class="nav-link" data-scroll-target="#terminologie"><span class="header-section-number">5.2</span> 📚 Terminologie</a></li>
+  <li><a href="#vocabulaire-de-base" id="toc-vocabulaire-de-base" class="nav-link" data-scroll-target="#vocabulaire-de-base">🧱 Vocabulaire de base</a></li>
+  <li><a href="#terminologie" id="toc-terminologie" class="nav-link" data-scroll-target="#terminologie">📚 Terminologie</a></li>
   </ul></li>
-  <li><a href="#types-de-données" id="toc-types-de-données" class="nav-link" data-scroll-target="#types-de-données"><span class="header-section-number">6</span> 🔢 4. Types de données</a>
+  <li><a href="#types-de-données" id="toc-types-de-données" class="nav-link" data-scroll-target="#types-de-données">🔢 4. Types de données</a>
   <ul class="collapse">
-  <li><a href="#types-courants-postgresql" id="toc-types-courants-postgresql" class="nav-link" data-scroll-target="#types-courants-postgresql"><span class="header-section-number">6.1</span> 📋 Types courants (PostgreSQL)</a></li>
-  <li><a href="#bonnes-pratiques" id="toc-bonnes-pratiques" class="nav-link" data-scroll-target="#bonnes-pratiques"><span class="header-section-number">6.2</span> 💡 Bonnes pratiques</a></li>
+  <li><a href="#types-courants-postgresql" id="toc-types-courants-postgresql" class="nav-link" data-scroll-target="#types-courants-postgresql">📋 Types courants (PostgreSQL)</a></li>
+  <li><a href="#bonnes-pratiques" id="toc-bonnes-pratiques" class="nav-link" data-scroll-target="#bonnes-pratiques">💡 Bonnes pratiques</a></li>
   </ul></li>
-  <li><a href="#clé-primaire-primary-key" id="toc-clé-primaire-primary-key" class="nav-link" data-scroll-target="#clé-primaire-primary-key"><span class="header-section-number">7</span> 🔑 5. Clé Primaire (Primary Key)</a>
+  <li><a href="#clé-primaire-primary-key" id="toc-clé-primaire-primary-key" class="nav-link" data-scroll-target="#clé-primaire-primary-key">🔑 5. Clé Primaire (Primary Key)</a>
   <ul class="collapse">
-  <li><a href="#règles" id="toc-règles" class="nav-link" data-scroll-target="#règles"><span class="header-section-number">7.1</span> 📐 Règles</a></li>
-  <li><a href="#exemple" id="toc-exemple" class="nav-link" data-scroll-target="#exemple"><span class="header-section-number">7.2</span> 📊 Exemple</a></li>
-  <li><a href="#types-de-clés-primaires" id="toc-types-de-clés-primaires" class="nav-link" data-scroll-target="#types-de-clés-primaires"><span class="header-section-number">7.3</span> 🔢 Types de clés primaires</a></li>
+  <li><a href="#règles" id="toc-règles" class="nav-link" data-scroll-target="#règles">📐 Règles</a></li>
+  <li><a href="#exemple" id="toc-exemple" class="nav-link" data-scroll-target="#exemple">📊 Exemple</a></li>
+  <li><a href="#types-de-clés-primaires" id="toc-types-de-clés-primaires" class="nav-link" data-scroll-target="#types-de-clés-primaires">🔢 Types de clés primaires</a></li>
   </ul></li>
-  <li><a href="#clé-étrangère-foreign-key" id="toc-clé-étrangère-foreign-key" class="nav-link" data-scroll-target="#clé-étrangère-foreign-key"><span class="header-section-number">8</span> 🔗 6. Clé Étrangère (Foreign Key)</a>
+  <li><a href="#clé-étrangère-foreign-key" id="toc-clé-étrangère-foreign-key" class="nav-link" data-scroll-target="#clé-étrangère-foreign-key">🔗 6. Clé Étrangère (Foreign Key)</a>
   <ul class="collapse">
-  <li><a href="#principe" id="toc-principe" class="nav-link" data-scroll-target="#principe"><span class="header-section-number">8.1</span> 📐 Principe</a></li>
-  <li><a href="#ce-que-garantit-la-fk" id="toc-ce-que-garantit-la-fk" class="nav-link" data-scroll-target="#ce-que-garantit-la-fk"><span class="header-section-number">8.2</span> ✅ Ce que garantit la FK</a></li>
-  <li><a href="#actions-en-cascade" id="toc-actions-en-cascade" class="nav-link" data-scroll-target="#actions-en-cascade"><span class="header-section-number">8.3</span> 🗑️ Actions en cascade</a></li>
+  <li><a href="#principe" id="toc-principe" class="nav-link" data-scroll-target="#principe">📐 Principe</a></li>
+  <li><a href="#ce-que-garantit-la-fk" id="toc-ce-que-garantit-la-fk" class="nav-link" data-scroll-target="#ce-que-garantit-la-fk">✅ Ce que garantit la FK</a></li>
+  <li><a href="#actions-en-cascade" id="toc-actions-en-cascade" class="nav-link" data-scroll-target="#actions-en-cascade">🗑️ Actions en cascade</a></li>
   </ul></li>
-  <li><a href="#types-de-relations" id="toc-types-de-relations" class="nav-link" data-scroll-target="#types-de-relations"><span class="header-section-number">9</span> 🔀 7. Types de Relations</a>
+  <li><a href="#types-de-relations" id="toc-types-de-relations" class="nav-link" data-scroll-target="#types-de-relations">🔀 7. Types de Relations</a>
   <ul class="collapse">
-  <li><a href="#relation-un-à-un-11" id="toc-relation-un-à-un-11" class="nav-link" data-scroll-target="#relation-un-à-un-11"><span class="header-section-number">9.1</span> 1️⃣ Relation Un-à-Un (1:1)</a></li>
-  <li><a href="#relation-un-à-plusieurs-1n" id="toc-relation-un-à-plusieurs-1n" class="nav-link" data-scroll-target="#relation-un-à-plusieurs-1n"><span class="header-section-number">9.2</span> 1️⃣➡️🔢 Relation Un-à-Plusieurs (1:N)</a></li>
-  <li><a href="#relation-plusieurs-à-plusieurs-nn" id="toc-relation-plusieurs-à-plusieurs-nn" class="nav-link" data-scroll-target="#relation-plusieurs-à-plusieurs-nn"><span class="header-section-number">9.3</span> 🔢↔︎️🔢 Relation Plusieurs-à-Plusieurs (N:N)</a></li>
+  <li><a href="#relation-un-à-un-11" id="toc-relation-un-à-un-11" class="nav-link" data-scroll-target="#relation-un-à-un-11">1️⃣ Relation Un-à-Un (1:1)</a></li>
+  <li><a href="#relation-un-à-plusieurs-1n" id="toc-relation-un-à-plusieurs-1n" class="nav-link" data-scroll-target="#relation-un-à-plusieurs-1n">1️⃣➡️🔢 Relation Un-à-Plusieurs (1:N)</a></li>
+  <li><a href="#relation-plusieurs-à-plusieurs-nn" id="toc-relation-plusieurs-à-plusieurs-nn" class="nav-link" data-scroll-target="#relation-plusieurs-à-plusieurs-nn">🔢↔︎️🔢 Relation Plusieurs-à-Plusieurs (N:N)</a></li>
   </ul></li>
-  <li><a href="#normalisation" id="toc-normalisation" class="nav-link" data-scroll-target="#normalisation"><span class="header-section-number">10</span> 📐 8. Normalisation</a>
+  <li><a href="#normalisation" id="toc-normalisation" class="nav-link" data-scroll-target="#normalisation">📐 8. Normalisation</a>
   <ul class="collapse">
-  <li><a href="#exemple-non-normalisé" id="toc-exemple-non-normalisé" class="nav-link" data-scroll-target="#exemple-non-normalisé"><span class="header-section-number">10.1</span> ❌ Exemple NON normalisé</a></li>
-  <li><a href="#exemple-normalisé" id="toc-exemple-normalisé" class="nav-link" data-scroll-target="#exemple-normalisé"><span class="header-section-number">10.2</span> ✅ Exemple normalisé</a></li>
-  <li><a href="#formes-normales-résumé" id="toc-formes-normales-résumé" class="nav-link" data-scroll-target="#formes-normales-résumé"><span class="header-section-number">10.3</span> 📊 Formes normales (résumé)</a></li>
+  <li><a href="#exemple-non-normalisé" id="toc-exemple-non-normalisé" class="nav-link" data-scroll-target="#exemple-non-normalisé">❌ Exemple NON normalisé</a></li>
+  <li><a href="#exemple-normalisé" id="toc-exemple-normalisé" class="nav-link" data-scroll-target="#exemple-normalisé">✅ Exemple normalisé</a></li>
+  <li><a href="#formes-normales-résumé" id="toc-formes-normales-résumé" class="nav-link" data-scroll-target="#formes-normales-résumé">📊 Formes normales (résumé)</a></li>
   </ul></li>
-  <li><a href="#propriétés-acid" id="toc-propriétés-acid" class="nav-link" data-scroll-target="#propriétés-acid"><span class="header-section-number">11</span> 🔐 9. Propriétés ACID</a>
+  <li><a href="#propriétés-acid" id="toc-propriétés-acid" class="nav-link" data-scroll-target="#propriétés-acid">🔐 9. Propriétés ACID</a>
   <ul class="collapse">
-  <li><a href="#les-4-propriétés" id="toc-les-4-propriétés" class="nav-link" data-scroll-target="#les-4-propriétés"><span class="header-section-number">11.1</span> 📊 Les 4 propriétés</a></li>
-  <li><a href="#détail-de-chaque-propriété" id="toc-détail-de-chaque-propriété" class="nav-link" data-scroll-target="#détail-de-chaque-propriété"><span class="header-section-number">11.2</span> 📋 Détail de chaque propriété</a></li>
-  <li><a href="#exemple-virement-bancaire" id="toc-exemple-virement-bancaire" class="nav-link" data-scroll-target="#exemple-virement-bancaire"><span class="header-section-number">11.3</span> 💰 Exemple : Virement bancaire</a></li>
+  <li><a href="#les-4-propriétés" id="toc-les-4-propriétés" class="nav-link" data-scroll-target="#les-4-propriétés">📊 Les 4 propriétés</a></li>
+  <li><a href="#détail-de-chaque-propriété" id="toc-détail-de-chaque-propriété" class="nav-link" data-scroll-target="#détail-de-chaque-propriété">📋 Détail de chaque propriété</a></li>
+  <li><a href="#exemple-virement-bancaire" id="toc-exemple-virement-bancaire" class="nav-link" data-scroll-target="#exemple-virement-bancaire">💰 Exemple : Virement bancaire</a></li>
   </ul></li>
-  <li><a href="#exemple-complet-schéma-dune-boutique-en-ligne" id="toc-exemple-complet-schéma-dune-boutique-en-ligne" class="nav-link" data-scroll-target="#exemple-complet-schéma-dune-boutique-en-ligne"><span class="header-section-number">12</span> 🏗️ 10. Exemple complet : Schéma d’une boutique en ligne</a></li>
-  <li><a href="#résumé" id="toc-résumé" class="nav-link" data-scroll-target="#résumé"><span class="header-section-number">13</span> 📋 Résumé</a>
+  <li><a href="#exemple-complet-schéma-dune-boutique-en-ligne" id="toc-exemple-complet-schéma-dune-boutique-en-ligne" class="nav-link" data-scroll-target="#exemple-complet-schéma-dune-boutique-en-ligne">🏗️ 10. Exemple complet : Schéma d’une boutique en ligne</a></li>
+  <li><a href="#résumé" id="toc-résumé" class="nav-link" data-scroll-target="#résumé">📋 Résumé</a>
   <ul class="collapse">
-  <li><a href="#vocabulaire" id="toc-vocabulaire" class="nav-link" data-scroll-target="#vocabulaire"><span class="header-section-number">13.1</span> 🧱 Vocabulaire</a></li>
-  <li><a href="#relations" id="toc-relations" class="nav-link" data-scroll-target="#relations"><span class="header-section-number">13.2</span> 🔀 Relations</a></li>
-  <li><a href="#acid" id="toc-acid" class="nav-link" data-scroll-target="#acid"><span class="header-section-number">13.3</span> 🔐 ACID</a></li>
+  <li><a href="#vocabulaire" id="toc-vocabulaire" class="nav-link" data-scroll-target="#vocabulaire">🧱 Vocabulaire</a></li>
+  <li><a href="#relations" id="toc-relations" class="nav-link" data-scroll-target="#relations">🔀 Relations</a></li>
+  <li><a href="#acid" id="toc-acid" class="nav-link" data-scroll-target="#acid">🔐 ACID</a></li>
   </ul></li>
-  <li><a href="#quiz" id="toc-quiz" class="nav-link" data-scroll-target="#quiz"><span class="header-section-number">14</span> 🧠 Quiz</a>
+  <li><a href="#quiz" id="toc-quiz" class="nav-link" data-scroll-target="#quiz">🧠 Quiz</a>
   <ul class="collapse">
-  <li><a href="#q1.-quest-ce-quune-clé-primaire" id="toc-q1.-quest-ce-quune-clé-primaire" class="nav-link" data-scroll-target="#q1.-quest-ce-quune-clé-primaire"><span class="header-section-number">14.1</span> ❓ Q1. Qu’est-ce qu’une clé primaire ?</a></li>
-  <li><a href="#q2.-à-quoi-sert-une-clé-étrangère" id="toc-q2.-à-quoi-sert-une-clé-étrangère" class="nav-link" data-scroll-target="#q2.-à-quoi-sert-une-clé-étrangère"><span class="header-section-number">14.2</span> ❓ Q2. À quoi sert une clé étrangère ?</a></li>
-  <li><a href="#q3.-quelle-relation-nécessite-une-table-de-jonction" id="toc-q3.-quelle-relation-nécessite-une-table-de-jonction" class="nav-link" data-scroll-target="#q3.-quelle-relation-nécessite-une-table-de-jonction"><span class="header-section-number">14.3</span> ❓ Q3. Quelle relation nécessite une table de jonction ?</a></li>
-  <li><a href="#q4.-que-signifie-le-a-de-acid" id="toc-q4.-que-signifie-le-a-de-acid" class="nav-link" data-scroll-target="#q4.-que-signifie-le-a-de-acid"><span class="header-section-number">14.4</span> ❓ Q4. Que signifie le A de ACID ?</a></li>
-  <li><a href="#q5.-pourquoi-normaliser-une-base-de-données" id="toc-q5.-pourquoi-normaliser-une-base-de-données" class="nav-link" data-scroll-target="#q5.-pourquoi-normaliser-une-base-de-données"><span class="header-section-number">14.5</span> ❓ Q5. Pourquoi normaliser une base de données ?</a></li>
-  <li><a href="#q6.-quel-sgbd-est-open-source-et-très-complet" id="toc-q6.-quel-sgbd-est-open-source-et-très-complet" class="nav-link" data-scroll-target="#q6.-quel-sgbd-est-open-source-et-très-complet"><span class="header-section-number">14.6</span> ❓ Q6. Quel SGBD est open source ET très complet ?</a></li>
-  <li><a href="#q7.-quel-type-utiliser-pour-stocker-des-montants-en-euros" id="toc-q7.-quel-type-utiliser-pour-stocker-des-montants-en-euros" class="nav-link" data-scroll-target="#q7.-quel-type-utiliser-pour-stocker-des-montants-en-euros"><span class="header-section-number">14.7</span> ❓ Q7. Quel type utiliser pour stocker des montants en euros ?</a></li>
+  <li><a href="#q1.-quest-ce-quune-clé-primaire" id="toc-q1.-quest-ce-quune-clé-primaire" class="nav-link" data-scroll-target="#q1.-quest-ce-quune-clé-primaire">❓ Q1. Qu’est-ce qu’une clé primaire ?</a></li>
+  <li><a href="#q2.-à-quoi-sert-une-clé-étrangère" id="toc-q2.-à-quoi-sert-une-clé-étrangère" class="nav-link" data-scroll-target="#q2.-à-quoi-sert-une-clé-étrangère">❓ Q2. À quoi sert une clé étrangère ?</a></li>
+  <li><a href="#q3.-quelle-relation-nécessite-une-table-de-jonction" id="toc-q3.-quelle-relation-nécessite-une-table-de-jonction" class="nav-link" data-scroll-target="#q3.-quelle-relation-nécessite-une-table-de-jonction">❓ Q3. Quelle relation nécessite une table de jonction ?</a></li>
+  <li><a href="#q4.-que-signifie-le-a-de-acid" id="toc-q4.-que-signifie-le-a-de-acid" class="nav-link" data-scroll-target="#q4.-que-signifie-le-a-de-acid">❓ Q4. Que signifie le A de ACID ?</a></li>
+  <li><a href="#q5.-pourquoi-normaliser-une-base-de-données" id="toc-q5.-pourquoi-normaliser-une-base-de-données" class="nav-link" data-scroll-target="#q5.-pourquoi-normaliser-une-base-de-données">❓ Q5. Pourquoi normaliser une base de données ?</a></li>
+  <li><a href="#q6.-quel-sgbd-est-open-source-et-très-complet" id="toc-q6.-quel-sgbd-est-open-source-et-très-complet" class="nav-link" data-scroll-target="#q6.-quel-sgbd-est-open-source-et-très-complet">❓ Q6. Quel SGBD est open source ET très complet ?</a></li>
+  <li><a href="#q7.-quel-type-utiliser-pour-stocker-des-montants-en-euros" id="toc-q7.-quel-type-utiliser-pour-stocker-des-montants-en-euros" class="nav-link" data-scroll-target="#q7.-quel-type-utiliser-pour-stocker-des-montants-en-euros">❓ Q7. Quel type utiliser pour stocker des montants en euros ?</a></li>
   </ul></li>
-  <li><a href="#ressources" id="toc-ressources" class="nav-link" data-scroll-target="#ressources"><span class="header-section-number">15</span> 📚 Ressources</a></li>
-  <li><a href="#prochaine-étape" id="toc-prochaine-étape" class="nav-link" data-scroll-target="#prochaine-étape"><span class="header-section-number">16</span> ➡️ Prochaine étape</a></li>
+  <li><a href="#ressources" id="toc-ressources" class="nav-link" data-scroll-target="#ressources">📚 Ressources</a></li>
+  <li><a href="#prochaine-étape" id="toc-prochaine-étape" class="nav-link" data-scroll-target="#prochaine-étape">➡️ Prochaine étape</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="git@github.com:diakite-data/data-engineering-bootcamp.git/blob/main/notebooks/beginner/06_intro_relational_databases.ipynb" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="git@github.com:diakite-data/data-engineering-bootcamp.git/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -439,7 +471,7 @@ ul.task-list li input[type="checkbox"] {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notebooks/beginner/01_intro_data_engineering.html">Débutant</a></li><li class="breadcrumb-item"><a href="../../notebooks/beginner/06_intro_relational_databases.html">🗄️ Introduction aux Bases de Données Relationnelles</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">🗄️ Introduction aux Bases de Données Relationnelles</h1>
 </div>
@@ -460,8 +492,8 @@ ul.task-list li input[type="checkbox"] {
 
 <p>Ce module présente les <strong>concepts fondamentaux</strong> des bases de données relationnelles.</p>
 <hr>
-<section id="prérequis" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="prérequis"><span class="header-section-number">1</span> 📋 Prérequis</h2>
+<section id="prérequis" class="level2">
+<h2 class="anchored" data-anchor-id="prérequis">📋 Prérequis</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 40%">
@@ -485,8 +517,8 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 </section>
-<section id="objectifs-du-module" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="objectifs-du-module"><span class="header-section-number">2</span> 🎯 Objectifs du module</h2>
+<section id="objectifs-du-module" class="level2">
+<h2 class="anchored" data-anchor-id="objectifs-du-module">🎯 Objectifs du module</h2>
 <p>À la fin de ce notebook, tu seras capable de : - ✅ Expliquer ce qu’est une base de données - ✅ Comprendre le modèle relationnel (tables, colonnes, lignes) - ✅ Définir les clés primaires et étrangères - ✅ Identifier les types de relations (1-1, 1-N, N-N) - ✅ Comprendre les principes de normalisation - ✅ Expliquer les propriétés ACID</p>
 <hr>
 <blockquote class="blockquote">
@@ -494,10 +526,10 @@ ul.task-list li input[type="checkbox"] {
 </blockquote>
 <hr>
 </section>
-<section id="cest-quoi-une-base-de-données" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="cest-quoi-une-base-de-données"><span class="header-section-number">3</span> 🎯 1. C’est quoi une Base de Données ?</h2>
-<section id="définition" class="level3" data-number="3.1">
-<h3 data-number="3.1" class="anchored" data-anchor-id="définition"><span class="header-section-number">3.1</span> 📖 Définition</h3>
+<section id="cest-quoi-une-base-de-données" class="level2">
+<h2 class="anchored" data-anchor-id="cest-quoi-une-base-de-données">🎯 1. C’est quoi une Base de Données ?</h2>
+<section id="définition" class="level3">
+<h3 class="anchored" data-anchor-id="définition">📖 Définition</h3>
 <p>Une <strong>base de données</strong> est un système organisé pour :</p>
 <table class="caption-top table">
 <thead>
@@ -531,15 +563,15 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <hr>
 </section>
-<section id="en-une-phrase" class="level3" data-number="3.2">
-<h3 data-number="3.2" class="anchored" data-anchor-id="en-une-phrase"><span class="header-section-number">3.2</span> 🌟 En une phrase</h3>
+<section id="en-une-phrase" class="level3">
+<h3 class="anchored" data-anchor-id="en-une-phrase">🌟 En une phrase</h3>
 <blockquote class="blockquote">
 <p>“Une base de données, c’est comme un <strong>classeur numérique géant</strong>, ultra-organisé et intelligent, capable de retrouver n’importe quelle information parmi des milliards de données.”</p>
 </blockquote>
 <hr>
 </section>
-<section id="fichiers-vs-base-de-données" class="level3" data-number="3.3">
-<h3 data-number="3.3" class="anchored" data-anchor-id="fichiers-vs-base-de-données"><span class="header-section-number">3.3</span> 📁 Fichiers vs Base de données</h3>
+<section id="fichiers-vs-base-de-données" class="level3">
+<h3 class="anchored" data-anchor-id="fichiers-vs-base-de-données">📁 Fichiers vs Base de données</h3>
 <p>Pourquoi ne pas simplement utiliser des fichiers CSV ou Excel ?</p>
 <table class="caption-top table">
 <colgroup>
@@ -590,8 +622,8 @@ ul.task-list li input[type="checkbox"] {
 <hr>
 </section>
 </section>
-<section id="le-sgbd-système-de-gestion-de-base-de-données" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="le-sgbd-système-de-gestion-de-base-de-données"><span class="header-section-number">4</span> 🖥️ 2. Le SGBD — Système de Gestion de Base de Données</h2>
+<section id="le-sgbd-système-de-gestion-de-base-de-données" class="level2">
+<h2 class="anchored" data-anchor-id="le-sgbd-système-de-gestion-de-base-de-données">🖥️ 2. Le SGBD — Système de Gestion de Base de Données</h2>
 <p>Un <strong>SGBD</strong> (ou DBMS en anglais) est le logiciel qui gère la base de données.</p>
 <pre><code>┌─────────────────────────────────────────────────────────────┐
 │                        APPLICATION                          │
@@ -614,8 +646,8 @@ ul.task-list li input[type="checkbox"] {
 │                   (données stockées)                        │
 └─────────────────────────────────────────────────────────────┘</code></pre>
 <hr>
-<section id="sgbd-relationnels-populaires" class="level3" data-number="4.1">
-<h3 data-number="4.1" class="anchored" data-anchor-id="sgbd-relationnels-populaires"><span class="header-section-number">4.1</span> 🏆 SGBD Relationnels populaires</h3>
+<section id="sgbd-relationnels-populaires" class="level3">
+<h3 class="anchored" data-anchor-id="sgbd-relationnels-populaires">🏆 SGBD Relationnels populaires</h3>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 15%">
@@ -670,11 +702,11 @@ ul.task-list li input[type="checkbox"] {
 <hr>
 </section>
 </section>
-<section id="le-modèle-relationnel" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="le-modèle-relationnel"><span class="header-section-number">5</span> 📊 3. Le Modèle Relationnel</h2>
+<section id="le-modèle-relationnel" class="level2">
+<h2 class="anchored" data-anchor-id="le-modèle-relationnel">📊 3. Le Modèle Relationnel</h2>
 <p>Le <strong>modèle relationnel</strong> a été inventé par <strong>Edgar F. Codd</strong> (IBM) en 1970. C’est le modèle le plus utilisé depuis 50 ans !</p>
-<section id="vocabulaire-de-base" class="level3" data-number="5.1">
-<h3 data-number="5.1" class="anchored" data-anchor-id="vocabulaire-de-base"><span class="header-section-number">5.1</span> 🧱 Vocabulaire de base</h3>
+<section id="vocabulaire-de-base" class="level3">
+<h3 class="anchored" data-anchor-id="vocabulaire-de-base">🧱 Vocabulaire de base</h3>
 <pre><code>BASE DE DONNÉES : ma_boutique
 │
 ├── TABLE : clients
@@ -698,8 +730,8 @@ ul.task-list li input[type="checkbox"] {
     └── ...</code></pre>
 <hr>
 </section>
-<section id="terminologie" class="level3" data-number="5.2">
-<h3 data-number="5.2" class="anchored" data-anchor-id="terminologie"><span class="header-section-number">5.2</span> 📚 Terminologie</h3>
+<section id="terminologie" class="level3">
+<h3 class="anchored" data-anchor-id="terminologie">📚 Terminologie</h3>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -739,11 +771,11 @@ ul.task-list li input[type="checkbox"] {
 <hr>
 </section>
 </section>
-<section id="types-de-données" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="types-de-données"><span class="header-section-number">6</span> 🔢 4. Types de données</h2>
+<section id="types-de-données" class="level2">
+<h2 class="anchored" data-anchor-id="types-de-données">🔢 4. Types de données</h2>
 <p>Chaque colonne a un <strong>type</strong> qui définit les valeurs autorisées.</p>
-<section id="types-courants-postgresql" class="level3" data-number="6.1">
-<h3 data-number="6.1" class="anchored" data-anchor-id="types-courants-postgresql"><span class="header-section-number">6.1</span> 📋 Types courants (PostgreSQL)</h3>
+<section id="types-courants-postgresql" class="level3">
+<h3 class="anchored" data-anchor-id="types-courants-postgresql">📋 Types courants (PostgreSQL)</h3>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -842,8 +874,8 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <hr>
 </section>
-<section id="bonnes-pratiques" class="level3" data-number="6.2">
-<h3 data-number="6.2" class="anchored" data-anchor-id="bonnes-pratiques"><span class="header-section-number">6.2</span> 💡 Bonnes pratiques</h3>
+<section id="bonnes-pratiques" class="level3">
+<h3 class="anchored" data-anchor-id="bonnes-pratiques">💡 Bonnes pratiques</h3>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -873,11 +905,11 @@ ul.task-list li input[type="checkbox"] {
 <hr>
 </section>
 </section>
-<section id="clé-primaire-primary-key" class="level2" data-number="7">
-<h2 data-number="7" class="anchored" data-anchor-id="clé-primaire-primary-key"><span class="header-section-number">7</span> 🔑 5. Clé Primaire (Primary Key)</h2>
+<section id="clé-primaire-primary-key" class="level2">
+<h2 class="anchored" data-anchor-id="clé-primaire-primary-key">🔑 5. Clé Primaire (Primary Key)</h2>
 <p>La <strong>clé primaire (PK)</strong> identifie <strong>de façon unique</strong> chaque ligne d’une table.</p>
-<section id="règles" class="level3" data-number="7.1">
-<h3 data-number="7.1" class="anchored" data-anchor-id="règles"><span class="header-section-number">7.1</span> 📐 Règles</h3>
+<section id="règles" class="level3">
+<h3 class="anchored" data-anchor-id="règles">📐 Règles</h3>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -902,8 +934,8 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <hr>
 </section>
-<section id="exemple" class="level3" data-number="7.2">
-<h3 data-number="7.2" class="anchored" data-anchor-id="exemple"><span class="header-section-number">7.2</span> 📊 Exemple</h3>
+<section id="exemple" class="level3">
+<h3 class="anchored" data-anchor-id="exemple">📊 Exemple</h3>
 <pre><code>Table : clients
 ┌─────────┬──────────┬─────────────────┐
 │ id (PK) │   nom    │      email      │
@@ -916,8 +948,8 @@ ul.task-list li input[type="checkbox"] {
      Clé primaire : garantit l'unicité</code></pre>
 <hr>
 </section>
-<section id="types-de-clés-primaires" class="level3" data-number="7.3">
-<h3 data-number="7.3" class="anchored" data-anchor-id="types-de-clés-primaires"><span class="header-section-number">7.3</span> 🔢 Types de clés primaires</h3>
+<section id="types-de-clés-primaires" class="level3">
+<h3 class="anchored" data-anchor-id="types-de-clés-primaires">🔢 Types de clés primaires</h3>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 22%">
@@ -960,11 +992,11 @@ ul.task-list li input[type="checkbox"] {
 <hr>
 </section>
 </section>
-<section id="clé-étrangère-foreign-key" class="level2" data-number="8">
-<h2 data-number="8" class="anchored" data-anchor-id="clé-étrangère-foreign-key"><span class="header-section-number">8</span> 🔗 6. Clé Étrangère (Foreign Key)</h2>
+<section id="clé-étrangère-foreign-key" class="level2">
+<h2 class="anchored" data-anchor-id="clé-étrangère-foreign-key">🔗 6. Clé Étrangère (Foreign Key)</h2>
 <p>La <strong>clé étrangère (FK)</strong> crée un <strong>lien</strong> entre deux tables.</p>
-<section id="principe" class="level3" data-number="8.1">
-<h3 data-number="8.1" class="anchored" data-anchor-id="principe"><span class="header-section-number">8.1</span> 📐 Principe</h3>
+<section id="principe" class="level3">
+<h3 class="anchored" data-anchor-id="principe">📐 Principe</h3>
 <pre><code>Table : clients                    Table : commandes
 ┌─────────┬──────────┐            ┌─────────┬─────────────┬─────────┐
 │ id (PK) │   nom    │            │ id (PK) │ client_id(FK)│ produit │
@@ -977,8 +1009,8 @@ ul.task-list li input[type="checkbox"] {
                                     Clé étrangère : référence clients.id</code></pre>
 <hr>
 </section>
-<section id="ce-que-garantit-la-fk" class="level3" data-number="8.2">
-<h3 data-number="8.2" class="anchored" data-anchor-id="ce-que-garantit-la-fk"><span class="header-section-number">8.2</span> ✅ Ce que garantit la FK</h3>
+<section id="ce-que-garantit-la-fk" class="level3">
+<h3 class="anchored" data-anchor-id="ce-que-garantit-la-fk">✅ Ce que garantit la FK</h3>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 43%">
@@ -1003,8 +1035,8 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <hr>
 </section>
-<section id="actions-en-cascade" class="level3" data-number="8.3">
-<h3 data-number="8.3" class="anchored" data-anchor-id="actions-en-cascade"><span class="header-section-number">8.3</span> 🗑️ Actions en cascade</h3>
+<section id="actions-en-cascade" class="level3">
+<h3 class="anchored" data-anchor-id="actions-en-cascade">🗑️ Actions en cascade</h3>
 <p>Que se passe-t-il si on supprime ou modifie la ligne référencée ?</p>
 <table class="caption-top table">
 <thead>
@@ -1039,10 +1071,10 @@ ul.task-list li input[type="checkbox"] {
 <hr>
 </section>
 </section>
-<section id="types-de-relations" class="level2" data-number="9">
-<h2 data-number="9" class="anchored" data-anchor-id="types-de-relations"><span class="header-section-number">9</span> 🔀 7. Types de Relations</h2>
-<section id="relation-un-à-un-11" class="level3" data-number="9.1">
-<h3 data-number="9.1" class="anchored" data-anchor-id="relation-un-à-un-11"><span class="header-section-number">9.1</span> 1️⃣ Relation Un-à-Un (1:1)</h3>
+<section id="types-de-relations" class="level2">
+<h2 class="anchored" data-anchor-id="types-de-relations">🔀 7. Types de Relations</h2>
+<section id="relation-un-à-un-11" class="level3">
+<h3 class="anchored" data-anchor-id="relation-un-à-un-11">1️⃣ Relation Un-à-Un (1:1)</h3>
 <p>Une ligne dans A correspond à <strong>exactement une</strong> ligne dans B.</p>
 <pre><code>utilisateurs              profils
 ┌────┬─────────┐         ┌────┬─────────┬───────────┐
@@ -1054,8 +1086,8 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Cas d’usage</strong> : Séparer des données rarement utilisées (optimisation).</p>
 <hr>
 </section>
-<section id="relation-un-à-plusieurs-1n" class="level3" data-number="9.2">
-<h3 data-number="9.2" class="anchored" data-anchor-id="relation-un-à-plusieurs-1n"><span class="header-section-number">9.2</span> 1️⃣➡️🔢 Relation Un-à-Plusieurs (1:N)</h3>
+<section id="relation-un-à-plusieurs-1n" class="level3">
+<h3 class="anchored" data-anchor-id="relation-un-à-plusieurs-1n">1️⃣➡️🔢 Relation Un-à-Plusieurs (1:N)</h3>
 <p>Une ligne dans A peut correspondre à <strong>plusieurs</strong> lignes dans B.</p>
 <pre><code>clients                   commandes
 ┌────┬─────────┐         ┌────┬───────────┬─────────┐
@@ -1068,8 +1100,8 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Cas d’usage</strong> : Client → Commandes, Auteur → Articles, Pays → Villes.</p>
 <hr>
 </section>
-<section id="relation-plusieurs-à-plusieurs-nn" class="level3" data-number="9.3">
-<h3 data-number="9.3" class="anchored" data-anchor-id="relation-plusieurs-à-plusieurs-nn"><span class="header-section-number">9.3</span> 🔢↔︎️🔢 Relation Plusieurs-à-Plusieurs (N:N)</h3>
+<section id="relation-plusieurs-à-plusieurs-nn" class="level3">
+<h3 class="anchored" data-anchor-id="relation-plusieurs-à-plusieurs-nn">🔢↔︎️🔢 Relation Plusieurs-à-Plusieurs (N:N)</h3>
 <p>Plusieurs lignes dans A correspondent à plusieurs lignes dans B.</p>
 <p><strong>Nécessite une table de jonction !</strong></p>
 <pre><code>etudiants          inscriptions         cours
@@ -1086,12 +1118,12 @@ ul.task-list li input[type="checkbox"] {
 <hr>
 </section>
 </section>
-<section id="normalisation" class="level2" data-number="10">
-<h2 data-number="10" class="anchored" data-anchor-id="normalisation"><span class="header-section-number">10</span> 📐 8. Normalisation</h2>
+<section id="normalisation" class="level2">
+<h2 class="anchored" data-anchor-id="normalisation">📐 8. Normalisation</h2>
 <p>La <strong>normalisation</strong> consiste à organiser les données pour : - ❌ Éviter la <strong>redondance</strong> (données dupliquées) - ❌ Éviter les <strong>anomalies</strong> (incohérences lors de modifications) - ✅ Garantir l’<strong>intégrité</strong> des données</p>
 <hr>
-<section id="exemple-non-normalisé" class="level3" data-number="10.1">
-<h3 data-number="10.1" class="anchored" data-anchor-id="exemple-non-normalisé"><span class="header-section-number">10.1</span> ❌ Exemple NON normalisé</h3>
+<section id="exemple-non-normalisé" class="level3">
+<h3 class="anchored" data-anchor-id="exemple-non-normalisé">❌ Exemple NON normalisé</h3>
 <pre><code>Table : commandes (MAUVAIS)
 ┌────┬─────────┬───────────────┬─────────┬──────────────┐
 │ id │ client  │ client_email  │ produit │    ville     │
@@ -1107,8 +1139,8 @@ ul.task-list li input[type="checkbox"] {
   - Espace gaspillé</code></pre>
 <hr>
 </section>
-<section id="exemple-normalisé" class="level3" data-number="10.2">
-<h3 data-number="10.2" class="anchored" data-anchor-id="exemple-normalisé"><span class="header-section-number">10.2</span> ✅ Exemple normalisé</h3>
+<section id="exemple-normalisé" class="level3">
+<h3 class="anchored" data-anchor-id="exemple-normalisé">✅ Exemple normalisé</h3>
 <pre><code>Table : clients               Table : commandes
 ┌────┬─────────┬─────────────┐   ┌────┬───────────┬─────────┐
 │ id │   nom   │    email    │   │ id │ client_id │ produit │
@@ -1124,8 +1156,8 @@ ul.task-list li input[type="checkbox"] {
   - Données cohérentes</code></pre>
 <hr>
 </section>
-<section id="formes-normales-résumé" class="level3" data-number="10.3">
-<h3 data-number="10.3" class="anchored" data-anchor-id="formes-normales-résumé"><span class="header-section-number">10.3</span> 📊 Formes normales (résumé)</h3>
+<section id="formes-normales-résumé" class="level3">
+<h3 class="anchored" data-anchor-id="formes-normales-résumé">📊 Formes normales (résumé)</h3>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -1154,11 +1186,11 @@ ul.task-list li input[type="checkbox"] {
 <hr>
 </section>
 </section>
-<section id="propriétés-acid" class="level2" data-number="11">
-<h2 data-number="11" class="anchored" data-anchor-id="propriétés-acid"><span class="header-section-number">11</span> 🔐 9. Propriétés ACID</h2>
+<section id="propriétés-acid" class="level2">
+<h2 class="anchored" data-anchor-id="propriétés-acid">🔐 9. Propriétés ACID</h2>
 <p><strong>ACID</strong> garantit la <strong>fiabilité</strong> des transactions dans une base relationnelle.</p>
-<section id="les-4-propriétés" class="level3" data-number="11.1">
-<h3 data-number="11.1" class="anchored" data-anchor-id="les-4-propriétés"><span class="header-section-number">11.1</span> 📊 Les 4 propriétés</h3>
+<section id="les-4-propriétés" class="level3">
+<h3 class="anchored" data-anchor-id="les-4-propriétés">📊 Les 4 propriétés</h3>
 <pre><code>                    ┌─────────────────┐
                     │   TRANSACTION   │
                     │   (ex: virement │
@@ -1181,8 +1213,8 @@ ul.task-list li input[type="checkbox"] {
                       └───────────┘</code></pre>
 <hr>
 </section>
-<section id="détail-de-chaque-propriété" class="level3" data-number="11.2">
-<h3 data-number="11.2" class="anchored" data-anchor-id="détail-de-chaque-propriété"><span class="header-section-number">11.2</span> 📋 Détail de chaque propriété</h3>
+<section id="détail-de-chaque-propriété" class="level3">
+<h3 class="anchored" data-anchor-id="détail-de-chaque-propriété">📋 Détail de chaque propriété</h3>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 20%">
@@ -1227,8 +1259,8 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <hr>
 </section>
-<section id="exemple-virement-bancaire" class="level3" data-number="11.3">
-<h3 data-number="11.3" class="anchored" data-anchor-id="exemple-virement-bancaire"><span class="header-section-number">11.3</span> 💰 Exemple : Virement bancaire</h3>
+<section id="exemple-virement-bancaire" class="level3">
+<h3 class="anchored" data-anchor-id="exemple-virement-bancaire">💰 Exemple : Virement bancaire</h3>
 <pre><code>TRANSACTION : Virer 100€ de Alice vers Bob
 
   1. Débiter 100€ du compte Alice
@@ -1252,8 +1284,8 @@ DURABILITÉ :
 <hr>
 </section>
 </section>
-<section id="exemple-complet-schéma-dune-boutique-en-ligne" class="level2" data-number="12">
-<h2 data-number="12" class="anchored" data-anchor-id="exemple-complet-schéma-dune-boutique-en-ligne"><span class="header-section-number">12</span> 🏗️ 10. Exemple complet : Schéma d’une boutique en ligne</h2>
+<section id="exemple-complet-schéma-dune-boutique-en-ligne" class="level2">
+<h2 class="anchored" data-anchor-id="exemple-complet-schéma-dune-boutique-en-ligne">🏗️ 10. Exemple complet : Schéma d’une boutique en ligne</h2>
 <pre><code>┌─────────────────────────────────────────────────────────────────────────┐
 │                        BASE DE DONNÉES : ma_boutique                    │
 ├─────────────────────────────────────────────────────────────────────────┤
@@ -1289,10 +1321,10 @@ RELATIONS :
   • produits (1) ───► (N) lignes_commande  : Un produit dans plusieurs lignes</code></pre>
 <hr>
 </section>
-<section id="résumé" class="level2" data-number="13">
-<h2 data-number="13" class="anchored" data-anchor-id="résumé"><span class="header-section-number">13</span> 📋 Résumé</h2>
-<section id="vocabulaire" class="level3" data-number="13.1">
-<h3 data-number="13.1" class="anchored" data-anchor-id="vocabulaire"><span class="header-section-number">13.1</span> 🧱 Vocabulaire</h3>
+<section id="résumé" class="level2">
+<h2 class="anchored" data-anchor-id="résumé">📋 Résumé</h2>
+<section id="vocabulaire" class="level3">
+<h3 class="anchored" data-anchor-id="vocabulaire">🧱 Vocabulaire</h3>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -1328,8 +1360,8 @@ RELATIONS :
 </tbody>
 </table>
 </section>
-<section id="relations" class="level3" data-number="13.2">
-<h3 data-number="13.2" class="anchored" data-anchor-id="relations"><span class="header-section-number">13.2</span> 🔀 Relations</h3>
+<section id="relations" class="level3">
+<h3 class="anchored" data-anchor-id="relations">🔀 Relations</h3>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -1357,8 +1389,8 @@ RELATIONS :
 </tbody>
 </table>
 </section>
-<section id="acid" class="level3" data-number="13.3">
-<h3 data-number="13.3" class="anchored" data-anchor-id="acid"><span class="header-section-number">13.3</span> 🔐 ACID</h3>
+<section id="acid" class="level3">
+<h3 class="anchored" data-anchor-id="acid">🔐 ACID</h3>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -1388,11 +1420,11 @@ RELATIONS :
 <hr>
 </section>
 </section>
-<section id="quiz" class="level2" data-number="14">
-<h2 data-number="14" class="anchored" data-anchor-id="quiz"><span class="header-section-number">14</span> 🧠 Quiz</h2>
+<section id="quiz" class="level2">
+<h2 class="anchored" data-anchor-id="quiz">🧠 Quiz</h2>
 <hr>
-<section id="q1.-quest-ce-quune-clé-primaire" class="level3" data-number="14.1">
-<h3 data-number="14.1" class="anchored" data-anchor-id="q1.-quest-ce-quune-clé-primaire"><span class="header-section-number">14.1</span> ❓ Q1. Qu’est-ce qu’une clé primaire ?</h3>
+<section id="q1.-quest-ce-quune-clé-primaire" class="level3">
+<h3 class="anchored" data-anchor-id="q1.-quest-ce-quune-clé-primaire">❓ Q1. Qu’est-ce qu’une clé primaire ?</h3>
 <ol type="a">
 <li>Une clé de chiffrement<br>
 </li>
@@ -1410,8 +1442,8 @@ RELATIONS :
 </details>
 <hr>
 </section>
-<section id="q2.-à-quoi-sert-une-clé-étrangère" class="level3" data-number="14.2">
-<h3 data-number="14.2" class="anchored" data-anchor-id="q2.-à-quoi-sert-une-clé-étrangère"><span class="header-section-number">14.2</span> ❓ Q2. À quoi sert une clé étrangère ?</h3>
+<section id="q2.-à-quoi-sert-une-clé-étrangère" class="level3">
+<h3 class="anchored" data-anchor-id="q2.-à-quoi-sert-une-clé-étrangère">❓ Q2. À quoi sert une clé étrangère ?</h3>
 <ol type="a">
 <li>À chiffrer les données<br>
 </li>
@@ -1429,8 +1461,8 @@ RELATIONS :
 </details>
 <hr>
 </section>
-<section id="q3.-quelle-relation-nécessite-une-table-de-jonction" class="level3" data-number="14.3">
-<h3 data-number="14.3" class="anchored" data-anchor-id="q3.-quelle-relation-nécessite-une-table-de-jonction"><span class="header-section-number">14.3</span> ❓ Q3. Quelle relation nécessite une table de jonction ?</h3>
+<section id="q3.-quelle-relation-nécessite-une-table-de-jonction" class="level3">
+<h3 class="anchored" data-anchor-id="q3.-quelle-relation-nécessite-une-table-de-jonction">❓ Q3. Quelle relation nécessite une table de jonction ?</h3>
 <ol type="a">
 <li>Un-à-Un (1:1)<br>
 </li>
@@ -1448,8 +1480,8 @@ RELATIONS :
 </details>
 <hr>
 </section>
-<section id="q4.-que-signifie-le-a-de-acid" class="level3" data-number="14.4">
-<h3 data-number="14.4" class="anchored" data-anchor-id="q4.-que-signifie-le-a-de-acid"><span class="header-section-number">14.4</span> ❓ Q4. Que signifie le A de ACID ?</h3>
+<section id="q4.-que-signifie-le-a-de-acid" class="level3">
+<h3 class="anchored" data-anchor-id="q4.-que-signifie-le-a-de-acid">❓ Q4. Que signifie le A de ACID ?</h3>
 <ol type="a">
 <li>Authentification<br>
 </li>
@@ -1467,8 +1499,8 @@ RELATIONS :
 </details>
 <hr>
 </section>
-<section id="q5.-pourquoi-normaliser-une-base-de-données" class="level3" data-number="14.5">
-<h3 data-number="14.5" class="anchored" data-anchor-id="q5.-pourquoi-normaliser-une-base-de-données"><span class="header-section-number">14.5</span> ❓ Q5. Pourquoi normaliser une base de données ?</h3>
+<section id="q5.-pourquoi-normaliser-une-base-de-données" class="level3">
+<h3 class="anchored" data-anchor-id="q5.-pourquoi-normaliser-une-base-de-données">❓ Q5. Pourquoi normaliser une base de données ?</h3>
 <ol type="a">
 <li>Pour la rendre plus rapide<br>
 </li>
@@ -1486,8 +1518,8 @@ RELATIONS :
 </details>
 <hr>
 </section>
-<section id="q6.-quel-sgbd-est-open-source-et-très-complet" class="level3" data-number="14.6">
-<h3 data-number="14.6" class="anchored" data-anchor-id="q6.-quel-sgbd-est-open-source-et-très-complet"><span class="header-section-number">14.6</span> ❓ Q6. Quel SGBD est open source ET très complet ?</h3>
+<section id="q6.-quel-sgbd-est-open-source-et-très-complet" class="level3">
+<h3 class="anchored" data-anchor-id="q6.-quel-sgbd-est-open-source-et-très-complet">❓ Q6. Quel SGBD est open source ET très complet ?</h3>
 <ol type="a">
 <li>Oracle<br>
 </li>
@@ -1505,8 +1537,8 @@ RELATIONS :
 </details>
 <hr>
 </section>
-<section id="q7.-quel-type-utiliser-pour-stocker-des-montants-en-euros" class="level3" data-number="14.7">
-<h3 data-number="14.7" class="anchored" data-anchor-id="q7.-quel-type-utiliser-pour-stocker-des-montants-en-euros"><span class="header-section-number">14.7</span> ❓ Q7. Quel type utiliser pour stocker des montants en euros ?</h3>
+<section id="q7.-quel-type-utiliser-pour-stocker-des-montants-en-euros" class="level3">
+<h3 class="anchored" data-anchor-id="q7.-quel-type-utiliser-pour-stocker-des-montants-en-euros">❓ Q7. Quel type utiliser pour stocker des montants en euros ?</h3>
 <ol type="a">
 <li>FLOAT<br>
 </li>
@@ -1525,8 +1557,8 @@ RELATIONS :
 <hr>
 </section>
 </section>
-<section id="ressources" class="level2" data-number="15">
-<h2 data-number="15" class="anchored" data-anchor-id="ressources"><span class="header-section-number">15</span> 📚 Ressources</h2>
+<section id="ressources" class="level2">
+<h2 class="anchored" data-anchor-id="ressources">📚 Ressources</h2>
 <ul>
 <li><a href="https://www.postgresql.org/docs/current/">PostgreSQL Documentation</a></li>
 <li><a href="https://sqlbolt.com/">SQLBolt</a> — Tutoriel interactif</li>
@@ -1535,8 +1567,8 @@ RELATIONS :
 </ul>
 <hr>
 </section>
-<section id="prochaine-étape" class="level2" data-number="16">
-<h2 data-number="16" class="anchored" data-anchor-id="prochaine-étape"><span class="header-section-number">16</span> ➡️ Prochaine étape</h2>
+<section id="prochaine-étape" class="level2">
+<h2 class="anchored" data-anchor-id="prochaine-étape">➡️ Prochaine étape</h2>
 <p>Tu connais maintenant la théorie des bases de données relationnelles. Passons à la <strong>pratique</strong> !</p>
 <p>👉 <strong>Module suivant : <code>07_sql_for_data_engineers.ipynb</code></strong> — Écrire des requêtes SQL</p>
 <hr>

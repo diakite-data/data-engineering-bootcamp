@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>🧠 Introduction aux bases de données pour Data Engineers – Bootcamp Data Engineering</title>
+<title>🧠 Introduction aux bases de données pour Data Engineers – Bootcamp Data Engineering – From Zero to Hero</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -72,10 +72,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-fc8d3d93f0a84b7619e1f8ff6eb63d42.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-fc8d3d93f0a84b7619e1f8ff6eb63d42.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-fc8d3d93f0a84b7619e1f8ff6eb63d42.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-5b4ad623e5705c0698d39aec6f10cf02.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-6a2c4b793c0becaeb94cc5bf146c1484.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-9829addb8a8859fb2d6fc218213bf783.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-6a2c4b793c0becaeb94cc5bf146c1484.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -106,9 +110,172 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <style>html{ scroll-behavior: smooth; }</style>
 
 
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -116,7 +283,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">Bootcamp Data Engineering</span>
+    <span class="navbar-title">Bootcamp Data Engineering – From Zero to Hero</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -124,105 +291,191 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
-<span class="menu-text">Accueil</span></a>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/diakite-data/data-engineering-bootcamp"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
   </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-débutant" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Débutant</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-débutant">    
-        <li>
-    <a class="dropdown-item" href="../../notebooks/beginner/01_intro_data_engineering.html">
- <span class="dropdown-text">Introduction au Data Engineering</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../notebooks/beginner/02_bash_for_data_engineers.html">
- <span class="dropdown-text">Bash pour Data Engineers</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../notebooks/beginner/03_git_for_data_engineers.html">
- <span class="dropdown-text">Git &amp; Versioning</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../notebooks/beginner/04_python_basics_for_data_engineers.html">
- <span class="dropdown-text">Python Basics</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../notebooks/beginner/05_python_data_processing_for_data_engineers.html">
- <span class="dropdown-text">Traitement de données avec Python</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../notebooks/beginner/06_intro_databases.html">
- <span class="dropdown-text">Introduction aux bases de données</span></a>
-  </li>  
-    </ul>
-  </li>
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">🧠 Introduction aux bases de données pour Data Engineers</li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bootcamp Data Engineering – From Zero to Hero</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Débutant</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/01_intro_data_engineering.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🧠 Introduction au Data Engineering</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/02_bash_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🧰 Bash pour Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/03_git_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">📘 Git pour Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/04_python_basics_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">📘 Python – Bases pour Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/05_python_data_processing_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">📊 Python for Data Processing - Complete Guide</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/06_intro_relational_databases.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🗄️ Introduction aux Bases de Données Relationnelles</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/07_sql_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🐘 SQL for Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/08_intro_big_data_distributed.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🐘 Introduction au Big Data &amp; Traitement Distribué</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/09_mongodb_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🍃 MongoDB for Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/10_elasticsearch_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🔍 Elasticsearch for Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/11_pyspark_for_data_engineering.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">⚡ PySpark for Data Engineering</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/12_orchestration_pipelines.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">⏰ Orchestration de Pipelines Data</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#prérequis" id="toc-prérequis" class="nav-link active" data-scroll-target="#prérequis"><span class="header-section-number">1</span> 📋 Prérequis</a></li>
-  <li><a href="#objectifs-du-module" id="toc-objectifs-du-module" class="nav-link" data-scroll-target="#objectifs-du-module"><span class="header-section-number">2</span> 🎯 Objectifs du module</a></li>
-  <li><a href="#définition-simple" id="toc-définition-simple" class="nav-link" data-scroll-target="#définition-simple"><span class="header-section-number">3</span> 🎯 Définition Simple</a></li>
-  <li><a href="#en-une-phrase" id="toc-en-une-phrase" class="nav-link" data-scroll-target="#en-une-phrase"><span class="header-section-number">4</span> 🌟 En Une Phrase</a></li>
-  <li><a href="#vue-densemble-des-bases-de-données" id="toc-vue-densemble-des-bases-de-données" class="nav-link" data-scroll-target="#vue-densemble-des-bases-de-données"><span class="header-section-number">5</span> 🗺️ Vue d’ensemble des bases de données</a></li>
-  <li><a href="#types-de-bases-de-données" id="toc-types-de-bases-de-données" class="nav-link" data-scroll-target="#types-de-bases-de-données"><span class="header-section-number">6</span> 🧩 Types de bases de données</a>
+  <li><a href="#prérequis" id="toc-prérequis" class="nav-link active" data-scroll-target="#prérequis">📋 Prérequis</a></li>
+  <li><a href="#objectifs-du-module" id="toc-objectifs-du-module" class="nav-link" data-scroll-target="#objectifs-du-module">🎯 Objectifs du module</a></li>
+  <li><a href="#définition-simple" id="toc-définition-simple" class="nav-link" data-scroll-target="#définition-simple">🎯 Définition Simple</a></li>
+  <li><a href="#en-une-phrase" id="toc-en-une-phrase" class="nav-link" data-scroll-target="#en-une-phrase">🌟 En Une Phrase</a></li>
+  <li><a href="#vue-densemble-des-bases-de-données" id="toc-vue-densemble-des-bases-de-données" class="nav-link" data-scroll-target="#vue-densemble-des-bases-de-données">🗺️ Vue d’ensemble des bases de données</a></li>
+  <li><a href="#types-de-bases-de-données" id="toc-types-de-bases-de-données" class="nav-link" data-scroll-target="#types-de-bases-de-données">🧩 Types de bases de données</a>
   <ul class="collapse">
-  <li><a href="#bases-de-données-relationnelles-sql" id="toc-bases-de-données-relationnelles-sql" class="nav-link" data-scroll-target="#bases-de-données-relationnelles-sql"><span class="header-section-number">6.1</span> 1. 📊 Bases de données relationnelles (SQL)</a></li>
-  <li><a href="#bases-de-données-non-relationnelles-nosql" id="toc-bases-de-données-non-relationnelles-nosql" class="nav-link" data-scroll-target="#bases-de-données-non-relationnelles-nosql"><span class="header-section-number">6.2</span> 2. 📦 Bases de données non relationnelles (NoSQL)</a></li>
+  <li><a href="#bases-de-données-relationnelles-sql" id="toc-bases-de-données-relationnelles-sql" class="nav-link" data-scroll-target="#bases-de-données-relationnelles-sql">1. 📊 Bases de données relationnelles (SQL)</a></li>
+  <li><a href="#bases-de-données-non-relationnelles-nosql" id="toc-bases-de-données-non-relationnelles-nosql" class="nav-link" data-scroll-target="#bases-de-données-non-relationnelles-nosql">2. 📦 Bases de données non relationnelles (NoSQL)</a></li>
   </ul></li>
-  <li><a href="#bases-de-données-relationnelles-sql-1" id="toc-bases-de-données-relationnelles-sql-1" class="nav-link" data-scroll-target="#bases-de-données-relationnelles-sql-1"><span class="header-section-number">7</span> 🧱 Bases de données relationnelles (SQL)</a>
+  <li><a href="#bases-de-données-relationnelles-sql-1" id="toc-bases-de-données-relationnelles-sql-1" class="nav-link" data-scroll-target="#bases-de-données-relationnelles-sql-1">🧱 Bases de données relationnelles (SQL)</a>
   <ul class="collapse">
-  <li><a href="#structure-logique" id="toc-structure-logique" class="nav-link" data-scroll-target="#structure-logique"><span class="header-section-number">7.1</span> 📐 Structure logique</a></li>
-  <li><a href="#exemple-simple-table-clients" id="toc-exemple-simple-table-clients" class="nav-link" data-scroll-target="#exemple-simple-table-clients"><span class="header-section-number">7.2</span> 📊 Exemple simple : Table <code>clients</code></a></li>
-  <li><a href="#exemple-de-relation-entre-tables" id="toc-exemple-de-relation-entre-tables" class="nav-link" data-scroll-target="#exemple-de-relation-entre-tables"><span class="header-section-number">7.3</span> 🔗 Exemple de relation entre tables</a></li>
-  <li><a href="#avantages-des-bases-relationnelles" id="toc-avantages-des-bases-relationnelles" class="nav-link" data-scroll-target="#avantages-des-bases-relationnelles"><span class="header-section-number">7.4</span> ✅ Avantages des bases relationnelles</a></li>
-  <li><a href="#acid-4-garanties-pour-la-fiabilité-des-transactions" id="toc-acid-4-garanties-pour-la-fiabilité-des-transactions" class="nav-link" data-scroll-target="#acid-4-garanties-pour-la-fiabilité-des-transactions"><span class="header-section-number">7.5</span> 🔐 ACID : 4 garanties pour la fiabilité des transactions</a></li>
+  <li><a href="#structure-logique" id="toc-structure-logique" class="nav-link" data-scroll-target="#structure-logique">📐 Structure logique</a></li>
+  <li><a href="#exemple-simple-table-clients" id="toc-exemple-simple-table-clients" class="nav-link" data-scroll-target="#exemple-simple-table-clients">📊 Exemple simple : Table <code>clients</code></a></li>
+  <li><a href="#exemple-de-relation-entre-tables" id="toc-exemple-de-relation-entre-tables" class="nav-link" data-scroll-target="#exemple-de-relation-entre-tables">🔗 Exemple de relation entre tables</a></li>
+  <li><a href="#avantages-des-bases-relationnelles" id="toc-avantages-des-bases-relationnelles" class="nav-link" data-scroll-target="#avantages-des-bases-relationnelles">✅ Avantages des bases relationnelles</a></li>
+  <li><a href="#acid-4-garanties-pour-la-fiabilité-des-transactions" id="toc-acid-4-garanties-pour-la-fiabilité-des-transactions" class="nav-link" data-scroll-target="#acid-4-garanties-pour-la-fiabilité-des-transactions">🔐 ACID : 4 garanties pour la fiabilité des transactions</a></li>
   </ul></li>
-  <li><a href="#bases-de-données-nosql" id="toc-bases-de-données-nosql" class="nav-link" data-scroll-target="#bases-de-données-nosql"><span class="header-section-number">8</span> 📦 Bases de données NoSQL</a>
+  <li><a href="#bases-de-données-nosql" id="toc-bases-de-données-nosql" class="nav-link" data-scroll-target="#bases-de-données-nosql">📦 Bases de données NoSQL</a>
   <ul class="collapse">
-  <li><a href="#pourquoi-nosql" id="toc-pourquoi-nosql" class="nav-link" data-scroll-target="#pourquoi-nosql"><span class="header-section-number">8.1</span> 🔄 Pourquoi “NoSQL” ?</a></li>
-  <li><a href="#principaux-types-de-nosql" id="toc-principaux-types-de-nosql" class="nav-link" data-scroll-target="#principaux-types-de-nosql"><span class="header-section-number">8.2</span> 🧩 Principaux types de NoSQL</a></li>
-  <li><a href="#caractéristiques-générales-des-bases-nosql" id="toc-caractéristiques-générales-des-bases-nosql" class="nav-link" data-scroll-target="#caractéristiques-générales-des-bases-nosql"><span class="header-section-number">8.3</span> 🔍 Caractéristiques générales des bases NoSQL</a></li>
-  <li><a href="#exemple-mongodb-type-document" id="toc-exemple-mongodb-type-document" class="nav-link" data-scroll-target="#exemple-mongodb-type-document"><span class="header-section-number">8.4</span> 📚 Exemple (MongoDB — type Document)</a></li>
+  <li><a href="#pourquoi-nosql" id="toc-pourquoi-nosql" class="nav-link" data-scroll-target="#pourquoi-nosql">🔄 Pourquoi “NoSQL” ?</a></li>
+  <li><a href="#principaux-types-de-nosql" id="toc-principaux-types-de-nosql" class="nav-link" data-scroll-target="#principaux-types-de-nosql">🧩 Principaux types de NoSQL</a></li>
+  <li><a href="#caractéristiques-générales-des-bases-nosql" id="toc-caractéristiques-générales-des-bases-nosql" class="nav-link" data-scroll-target="#caractéristiques-générales-des-bases-nosql">🔍 Caractéristiques générales des bases NoSQL</a></li>
+  <li><a href="#exemple-mongodb-type-document" id="toc-exemple-mongodb-type-document" class="nav-link" data-scroll-target="#exemple-mongodb-type-document">📚 Exemple (MongoDB — type Document)</a></li>
   </ul></li>
-  <li><a href="#quiz-de-fin-de-module" id="toc-quiz-de-fin-de-module" class="nav-link" data-scroll-target="#quiz-de-fin-de-module"><span class="header-section-number">9</span> 🧪 Quiz de fin de module</a>
+  <li><a href="#quiz-de-fin-de-module" id="toc-quiz-de-fin-de-module" class="nav-link" data-scroll-target="#quiz-de-fin-de-module">🧪 Quiz de fin de module</a>
   <ul class="collapse">
-  <li><a href="#q1.-que-signifie-acid" id="toc-q1.-que-signifie-acid" class="nav-link" data-scroll-target="#q1.-que-signifie-acid"><span class="header-section-number">9.1</span> ❓ Q1. Que signifie “ACID” ?</a></li>
-  <li><a href="#q2.-quelle-base-de-données-est-orientée-documents" id="toc-q2.-quelle-base-de-données-est-orientée-documents" class="nav-link" data-scroll-target="#q2.-quelle-base-de-données-est-orientée-documents"><span class="header-section-number">9.2</span> ❓ Q2. Quelle base de données est orientée “documents” ?</a></li>
-  <li><a href="#q3.-quel-type-de-base-est-le-plus-adapté-à-une-application-e-commerce-structurée" id="toc-q3.-quel-type-de-base-est-le-plus-adapté-à-une-application-e-commerce-structurée" class="nav-link" data-scroll-target="#q3.-quel-type-de-base-est-le-plus-adapté-à-une-application-e-commerce-structurée"><span class="header-section-number">9.3</span> ❓ Q3. Quel type de base est le plus adapté à une application e-commerce structurée ?</a></li>
-  <li><a href="#q4.-que-signifie-base" id="toc-q4.-que-signifie-base" class="nav-link" data-scroll-target="#q4.-que-signifie-base"><span class="header-section-number">9.4</span> ❓ Q4. Que signifie BASE ?</a></li>
-  <li><a href="#q5.-selon-le-théorème-cap-combien-de-propriétés-peut-on-garantir-simultanément" id="toc-q5.-selon-le-théorème-cap-combien-de-propriétés-peut-on-garantir-simultanément" class="nav-link" data-scroll-target="#q5.-selon-le-théorème-cap-combien-de-propriétés-peut-on-garantir-simultanément"><span class="header-section-number">9.5</span> ❓ Q5. Selon le théorème CAP, combien de propriétés peut-on garantir simultanément ?</a></li>
-  <li><a href="#q6.-quelle-base-utiliser-pour-du-cache-ultra-rapide" id="toc-q6.-quelle-base-utiliser-pour-du-cache-ultra-rapide" class="nav-link" data-scroll-target="#q6.-quelle-base-utiliser-pour-du-cache-ultra-rapide"><span class="header-section-number">9.6</span> ❓ Q6. Quelle base utiliser pour du cache ultra-rapide ?</a></li>
-  <li><a href="#q7.-quel-orm-python-permet-de-se-connecter-à-plusieurs-types-de-bases-sql" id="toc-q7.-quel-orm-python-permet-de-se-connecter-à-plusieurs-types-de-bases-sql" class="nav-link" data-scroll-target="#q7.-quel-orm-python-permet-de-se-connecter-à-plusieurs-types-de-bases-sql"><span class="header-section-number">9.7</span> ❓ Q7. Quel ORM Python permet de se connecter à plusieurs types de bases SQL ?</a></li>
+  <li><a href="#q1.-que-signifie-acid" id="toc-q1.-que-signifie-acid" class="nav-link" data-scroll-target="#q1.-que-signifie-acid">❓ Q1. Que signifie “ACID” ?</a></li>
+  <li><a href="#q2.-quelle-base-de-données-est-orientée-documents" id="toc-q2.-quelle-base-de-données-est-orientée-documents" class="nav-link" data-scroll-target="#q2.-quelle-base-de-données-est-orientée-documents">❓ Q2. Quelle base de données est orientée “documents” ?</a></li>
+  <li><a href="#q3.-quel-type-de-base-est-le-plus-adapté-à-une-application-e-commerce-structurée" id="toc-q3.-quel-type-de-base-est-le-plus-adapté-à-une-application-e-commerce-structurée" class="nav-link" data-scroll-target="#q3.-quel-type-de-base-est-le-plus-adapté-à-une-application-e-commerce-structurée">❓ Q3. Quel type de base est le plus adapté à une application e-commerce structurée ?</a></li>
+  <li><a href="#q4.-que-signifie-base" id="toc-q4.-que-signifie-base" class="nav-link" data-scroll-target="#q4.-que-signifie-base">❓ Q4. Que signifie BASE ?</a></li>
+  <li><a href="#q5.-selon-le-théorème-cap-combien-de-propriétés-peut-on-garantir-simultanément" id="toc-q5.-selon-le-théorème-cap-combien-de-propriétés-peut-on-garantir-simultanément" class="nav-link" data-scroll-target="#q5.-selon-le-théorème-cap-combien-de-propriétés-peut-on-garantir-simultanément">❓ Q5. Selon le théorème CAP, combien de propriétés peut-on garantir simultanément ?</a></li>
+  <li><a href="#q6.-quelle-base-utiliser-pour-du-cache-ultra-rapide" id="toc-q6.-quelle-base-utiliser-pour-du-cache-ultra-rapide" class="nav-link" data-scroll-target="#q6.-quelle-base-utiliser-pour-du-cache-ultra-rapide">❓ Q6. Quelle base utiliser pour du cache ultra-rapide ?</a></li>
+  <li><a href="#q7.-quel-orm-python-permet-de-se-connecter-à-plusieurs-types-de-bases-sql" id="toc-q7.-quel-orm-python-permet-de-se-connecter-à-plusieurs-types-de-bases-sql" class="nav-link" data-scroll-target="#q7.-quel-orm-python-permet-de-se-connecter-à-plusieurs-types-de-bases-sql">❓ Q7. Quel ORM Python permet de se connecter à plusieurs types de bases SQL ?</a></li>
   </ul></li>
-  <li><a href="#ressources-pour-aller-plus-loin" id="toc-ressources-pour-aller-plus-loin" class="nav-link" data-scroll-target="#ressources-pour-aller-plus-loin"><span class="header-section-number">10</span> 📚 Ressources pour aller plus loin</a>
+  <li><a href="#ressources-pour-aller-plus-loin" id="toc-ressources-pour-aller-plus-loin" class="nav-link" data-scroll-target="#ressources-pour-aller-plus-loin">📚 Ressources pour aller plus loin</a>
   <ul class="collapse">
-  <li><a href="#documentation-officielle" id="toc-documentation-officielle" class="nav-link" data-scroll-target="#documentation-officielle"><span class="header-section-number">10.1</span> 📖 Documentation officielle</a></li>
-  <li><a href="#cours-et-tutoriels" id="toc-cours-et-tutoriels" class="nav-link" data-scroll-target="#cours-et-tutoriels"><span class="header-section-number">10.2</span> 🎓 Cours et tutoriels</a></li>
-  <li><a href="#outils-utiles" id="toc-outils-utiles" class="nav-link" data-scroll-target="#outils-utiles"><span class="header-section-number">10.3</span> 🛠️ Outils utiles</a></li>
+  <li><a href="#documentation-officielle" id="toc-documentation-officielle" class="nav-link" data-scroll-target="#documentation-officielle">📖 Documentation officielle</a></li>
+  <li><a href="#cours-et-tutoriels" id="toc-cours-et-tutoriels" class="nav-link" data-scroll-target="#cours-et-tutoriels">🎓 Cours et tutoriels</a></li>
+  <li><a href="#outils-utiles" id="toc-outils-utiles" class="nav-link" data-scroll-target="#outils-utiles">🛠️ Outils utiles</a></li>
   </ul></li>
-  <li><a href="#prochaine-étape" id="toc-prochaine-étape" class="nav-link" data-scroll-target="#prochaine-étape"><span class="header-section-number">11</span> ➡️ Prochaine étape</a></li>
+  <li><a href="#prochaine-étape" id="toc-prochaine-étape" class="nav-link" data-scroll-target="#prochaine-étape">➡️ Prochaine étape</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="git@github.com:diakite-data/data-engineering-bootcamp.git/blob/main/notebooks/beginner/06_intro_databases.ipynb" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="git@github.com:diakite-data/data-engineering-bootcamp.git/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
+
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -245,8 +498,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>Ce module présente les <strong>fondamentaux des bases de données</strong> : types, concepts clés, et critères de choix.</p>
 <hr>
-<section id="prérequis" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="prérequis"><span class="header-section-number">1</span> 📋 Prérequis</h2>
+<section id="prérequis" class="level2">
+<h2 class="anchored" data-anchor-id="prérequis">📋 Prérequis</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 40%">
@@ -274,13 +527,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 </section>
-<section id="objectifs-du-module" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="objectifs-du-module"><span class="header-section-number">2</span> 🎯 Objectifs du module</h2>
+<section id="objectifs-du-module" class="level2">
+<h2 class="anchored" data-anchor-id="objectifs-du-module">🎯 Objectifs du module</h2>
 <p>À la fin de ce notebook, tu seras capable de : - ✅ Comprendre ce qu’est une base de données et son rôle - ✅ Différencier les bases <strong>SQL</strong> (relationnelles) et <strong>NoSQL</strong> - ✅ Connaître les différents types de bases NoSQL - ✅ Comprendre les concepts <strong>ACID</strong>, <strong>BASE</strong> et le théorème <strong>CAP</strong> - ✅ Choisir le bon type de base selon le cas d’usage - ✅ Connaître les solutions cloud et les connecteurs Python</p>
 <hr>
 </section>
-<section id="définition-simple" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="définition-simple"><span class="header-section-number">3</span> 🎯 Définition Simple</h2>
+<section id="définition-simple" class="level2">
+<h2 class="anchored" data-anchor-id="définition-simple">🎯 Définition Simple</h2>
 <p>Une base de données est un système organisé qui permet de :</p>
 <ul>
 <li>💾 <strong>STOCKER</strong> des informations de façon permanente<br>
@@ -295,15 +548,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <hr>
 </section>
-<section id="en-une-phrase" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="en-une-phrase"><span class="header-section-number">4</span> 🌟 En Une Phrase</h2>
+<section id="en-une-phrase" class="level2">
+<h2 class="anchored" data-anchor-id="en-une-phrase">🌟 En Une Phrase</h2>
 <blockquote class="blockquote">
 <p>“Une base de données, c’est comme un classeur numérique géant, ultra-organisé et intelligent, capable de retrouver n’importe quelle information en une fraction de seconde, même parmi des milliards de données.”</p>
 </blockquote>
 <hr>
 </section>
-<section id="vue-densemble-des-bases-de-données" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="vue-densemble-des-bases-de-données"><span class="header-section-number">5</span> 🗺️ Vue d’ensemble des bases de données</h2>
+<section id="vue-densemble-des-bases-de-données" class="level2">
+<h2 class="anchored" data-anchor-id="vue-densemble-des-bases-de-données">🗺️ Vue d’ensemble des bases de données</h2>
 <pre><code>                        ┌─────────────────────────────────────┐
                         │       BASES DE DONNÉES              │
                         └──────────────┬──────────────────────┘
@@ -326,12 +579,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       └───────────┘  └─────────┘└────────┘└───────┘  └────────────┘</code></pre>
 <hr>
 </section>
-<section id="types-de-bases-de-données" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="types-de-bases-de-données"><span class="header-section-number">6</span> 🧩 Types de bases de données</h2>
+<section id="types-de-bases-de-données" class="level2">
+<h2 class="anchored" data-anchor-id="types-de-bases-de-données">🧩 Types de bases de données</h2>
 <p>Il existe <strong>2 grandes familles</strong> de bases de données :</p>
 <hr>
-<section id="bases-de-données-relationnelles-sql" class="level3" data-number="6.1">
-<h3 data-number="6.1" class="anchored" data-anchor-id="bases-de-données-relationnelles-sql"><span class="header-section-number">6.1</span> 1. 📊 Bases de données relationnelles (SQL)</h3>
+<section id="bases-de-données-relationnelles-sql" class="level3">
+<h3 class="anchored" data-anchor-id="bases-de-données-relationnelles-sql">1. 📊 Bases de données relationnelles (SQL)</h3>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 20%">
@@ -355,8 +608,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 <hr>
 </section>
-<section id="bases-de-données-non-relationnelles-nosql" class="level3" data-number="6.2">
-<h3 data-number="6.2" class="anchored" data-anchor-id="bases-de-données-non-relationnelles-nosql"><span class="header-section-number">6.2</span> 2. 📦 Bases de données non relationnelles (NoSQL)</h3>
+<section id="bases-de-données-non-relationnelles-nosql" class="level3">
+<h3 class="anchored" data-anchor-id="bases-de-données-non-relationnelles-nosql">2. 📦 Bases de données non relationnelles (NoSQL)</h3>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 43%">
@@ -404,12 +657,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </blockquote>
 </section>
 </section>
-<section id="bases-de-données-relationnelles-sql-1" class="level2" data-number="7">
-<h2 data-number="7" class="anchored" data-anchor-id="bases-de-données-relationnelles-sql-1"><span class="header-section-number">7</span> 🧱 Bases de données relationnelles (SQL)</h2>
+<section id="bases-de-données-relationnelles-sql-1" class="level2">
+<h2 class="anchored" data-anchor-id="bases-de-données-relationnelles-sql-1">🧱 Bases de données relationnelles (SQL)</h2>
 <p>Les bases relationnelles représentent la forme <strong>classique, structurée et la plus utilisée</strong> dans les systèmes d’information.</p>
 <hr>
-<section id="structure-logique" class="level3" data-number="7.1">
-<h3 data-number="7.1" class="anchored" data-anchor-id="structure-logique"><span class="header-section-number">7.1</span> 📐 Structure logique</h3>
+<section id="structure-logique" class="level3">
+<h3 class="anchored" data-anchor-id="structure-logique">📐 Structure logique</h3>
 <p>Une base relationnelle est composée de plusieurs <strong>tables</strong> organisées en lignes et colonnes. On y retrouve :</p>
 <table class="caption-top table">
 <colgroup>
@@ -451,8 +704,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 <hr>
 </section>
-<section id="exemple-simple-table-clients" class="level3" data-number="7.2">
-<h3 data-number="7.2" class="anchored" data-anchor-id="exemple-simple-table-clients"><span class="header-section-number">7.2</span> 📊 Exemple simple : Table <code>clients</code></h3>
+<section id="exemple-simple-table-clients" class="level3">
+<h3 class="anchored" data-anchor-id="exemple-simple-table-clients">📊 Exemple simple : Table <code>clients</code></h3>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -476,8 +729,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 <hr>
 </section>
-<section id="exemple-de-relation-entre-tables" class="level3" data-number="7.3">
-<h3 data-number="7.3" class="anchored" data-anchor-id="exemple-de-relation-entre-tables"><span class="header-section-number">7.3</span> 🔗 Exemple de relation entre tables</h3>
+<section id="exemple-de-relation-entre-tables" class="level3">
+<h3 class="anchored" data-anchor-id="exemple-de-relation-entre-tables">🔗 Exemple de relation entre tables</h3>
 <p><strong>Table <code>commandes</code></strong> (chaque commande est liée à un client via <code>client_id</code>)</p>
 <table class="caption-top table">
 <thead>
@@ -508,8 +761,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </blockquote>
 <hr>
 </section>
-<section id="avantages-des-bases-relationnelles" class="level3" data-number="7.4">
-<h3 data-number="7.4" class="anchored" data-anchor-id="avantages-des-bases-relationnelles"><span class="header-section-number">7.4</span> ✅ Avantages des bases relationnelles</h3>
+<section id="avantages-des-bases-relationnelles" class="level3">
+<h3 class="anchored" data-anchor-id="avantages-des-bases-relationnelles">✅ Avantages des bases relationnelles</h3>
 <ul>
 <li>🔄 Requêtes complexes avec <strong>jointures</strong></li>
 <li>🔍 Recherche ultra précise (filtres, agrégats…)</li>
@@ -518,8 +771,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <hr>
 </section>
-<section id="acid-4-garanties-pour-la-fiabilité-des-transactions" class="level3" data-number="7.5">
-<h3 data-number="7.5" class="anchored" data-anchor-id="acid-4-garanties-pour-la-fiabilité-des-transactions"><span class="header-section-number">7.5</span> 🔐 ACID : 4 garanties pour la fiabilité des transactions</h3>
+<section id="acid-4-garanties-pour-la-fiabilité-des-transactions" class="level3">
+<h3 class="anchored" data-anchor-id="acid-4-garanties-pour-la-fiabilité-des-transactions">🔐 ACID : 4 garanties pour la fiabilité des transactions</h3>
 <p>Les bases SQL appliquent le modèle <strong>ACID</strong> pour sécuriser toutes les opérations :</p>
 <table class="caption-top table">
 <colgroup>
@@ -567,12 +820,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 ERP, CRM, finance, gestion RH, e-commerce, data warehouse</p>
 </section>
 </section>
-<section id="bases-de-données-nosql" class="level2" data-number="8">
-<h2 data-number="8" class="anchored" data-anchor-id="bases-de-données-nosql"><span class="header-section-number">8</span> 📦 Bases de données NoSQL</h2>
+<section id="bases-de-données-nosql" class="level2">
+<h2 class="anchored" data-anchor-id="bases-de-données-nosql">📦 Bases de données NoSQL</h2>
 <p>Contrairement aux bases relationnelles, les bases <strong>NoSQL</strong> sont conçues pour plus de <strong>flexibilité</strong>, <strong>scalabilité</strong> et <strong>performance</strong>, souvent au détriment du schéma strict.</p>
 <hr>
-<section id="pourquoi-nosql" class="level3" data-number="8.1">
-<h3 data-number="8.1" class="anchored" data-anchor-id="pourquoi-nosql"><span class="header-section-number">8.1</span> 🔄 Pourquoi “NoSQL” ?</h3>
+<section id="pourquoi-nosql" class="level3">
+<h3 class="anchored" data-anchor-id="pourquoi-nosql">🔄 Pourquoi “NoSQL” ?</h3>
 <ul>
 <li>“NoSQL” signifie <strong>Not Only SQL</strong> (pas seulement SQL)</li>
 <li>Ces bases <strong>n’utilisent pas forcément de tables ou de schémas fixes</strong></li>
@@ -583,8 +836,8 @@ ERP, CRM, finance, gestion RH, e-commerce, data warehouse</p>
 </ul>
 <hr>
 </section>
-<section id="principaux-types-de-nosql" class="level3" data-number="8.2">
-<h3 data-number="8.2" class="anchored" data-anchor-id="principaux-types-de-nosql"><span class="header-section-number">8.2</span> 🧩 Principaux types de NoSQL</h3>
+<section id="principaux-types-de-nosql" class="level3">
+<h3 class="anchored" data-anchor-id="principaux-types-de-nosql">🧩 Principaux types de NoSQL</h3>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 14%">
@@ -635,8 +888,8 @@ ERP, CRM, finance, gestion RH, e-commerce, data warehouse</p>
 </table>
 <hr>
 </section>
-<section id="caractéristiques-générales-des-bases-nosql" class="level3" data-number="8.3">
-<h3 data-number="8.3" class="anchored" data-anchor-id="caractéristiques-générales-des-bases-nosql"><span class="header-section-number">8.3</span> 🔍 Caractéristiques générales des bases NoSQL</h3>
+<section id="caractéristiques-générales-des-bases-nosql" class="level3">
+<h3 class="anchored" data-anchor-id="caractéristiques-générales-des-bases-nosql">🔍 Caractéristiques générales des bases NoSQL</h3>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 69%">
@@ -680,8 +933,8 @@ ERP, CRM, finance, gestion RH, e-commerce, data warehouse</p>
 </blockquote>
 <hr>
 </section>
-<section id="exemple-mongodb-type-document" class="level3" data-number="8.4">
-<h3 data-number="8.4" class="anchored" data-anchor-id="exemple-mongodb-type-document"><span class="header-section-number">8.4</span> 📚 Exemple (MongoDB — type Document)</h3>
+<section id="exemple-mongodb-type-document" class="level3">
+<h3 class="anchored" data-anchor-id="exemple-mongodb-type-document">📚 Exemple (MongoDB — type Document)</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"nom"</span><span class="fu">:</span> <span class="st">"Alice"</span><span class="fu">,</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"email"</span><span class="fu">:</span> <span class="st">"alice@mail.com"</span><span class="fu">,</span></span>
@@ -893,11 +1146,11 @@ engine_sqlite = create_engine('sqlite:///local.db')</code></pre>
 <hr>
 </section>
 </section>
-<section id="quiz-de-fin-de-module" class="level2" data-number="9">
-<h2 data-number="9" class="anchored" data-anchor-id="quiz-de-fin-de-module"><span class="header-section-number">9</span> 🧪 Quiz de fin de module</h2>
+<section id="quiz-de-fin-de-module" class="level2">
+<h2 class="anchored" data-anchor-id="quiz-de-fin-de-module">🧪 Quiz de fin de module</h2>
 <hr>
-<section id="q1.-que-signifie-acid" class="level3" data-number="9.1">
-<h3 data-number="9.1" class="anchored" data-anchor-id="q1.-que-signifie-acid"><span class="header-section-number">9.1</span> ❓ Q1. Que signifie “ACID” ?</h3>
+<section id="q1.-que-signifie-acid" class="level3">
+<h3 class="anchored" data-anchor-id="q1.-que-signifie-acid">❓ Q1. Que signifie “ACID” ?</h3>
 <ol type="a">
 <li>Automatisation, Cohérence, Indexation, Durabilité<br>
 </li>
@@ -913,8 +1166,8 @@ engine_sqlite = create_engine('sqlite:///local.db')</code></pre>
 </details>
 <hr>
 </section>
-<section id="q2.-quelle-base-de-données-est-orientée-documents" class="level3" data-number="9.2">
-<h3 data-number="9.2" class="anchored" data-anchor-id="q2.-quelle-base-de-données-est-orientée-documents"><span class="header-section-number">9.2</span> ❓ Q2. Quelle base de données est orientée “documents” ?</h3>
+<section id="q2.-quelle-base-de-données-est-orientée-documents" class="level3">
+<h3 class="anchored" data-anchor-id="q2.-quelle-base-de-données-est-orientée-documents">❓ Q2. Quelle base de données est orientée “documents” ?</h3>
 <ol type="a">
 <li>MySQL<br>
 </li>
@@ -932,8 +1185,8 @@ engine_sqlite = create_engine('sqlite:///local.db')</code></pre>
 </details>
 <hr>
 </section>
-<section id="q3.-quel-type-de-base-est-le-plus-adapté-à-une-application-e-commerce-structurée" class="level3" data-number="9.3">
-<h3 data-number="9.3" class="anchored" data-anchor-id="q3.-quel-type-de-base-est-le-plus-adapté-à-une-application-e-commerce-structurée"><span class="header-section-number">9.3</span> ❓ Q3. Quel type de base est le plus adapté à une application e-commerce structurée ?</h3>
+<section id="q3.-quel-type-de-base-est-le-plus-adapté-à-une-application-e-commerce-structurée" class="level3">
+<h3 class="anchored" data-anchor-id="q3.-quel-type-de-base-est-le-plus-adapté-à-une-application-e-commerce-structurée">❓ Q3. Quel type de base est le plus adapté à une application e-commerce structurée ?</h3>
 <ol type="a">
 <li>Relationnelle (SQL)<br>
 </li>
@@ -951,8 +1204,8 @@ engine_sqlite = create_engine('sqlite:///local.db')</code></pre>
 </details>
 <hr>
 </section>
-<section id="q4.-que-signifie-base" class="level3" data-number="9.4">
-<h3 data-number="9.4" class="anchored" data-anchor-id="q4.-que-signifie-base"><span class="header-section-number">9.4</span> ❓ Q4. Que signifie BASE ?</h3>
+<section id="q4.-que-signifie-base" class="level3">
+<h3 class="anchored" data-anchor-id="q4.-que-signifie-base">❓ Q4. Que signifie BASE ?</h3>
 <ol type="a">
 <li>Backup Always Secured Engine<br>
 </li>
@@ -968,8 +1221,8 @@ engine_sqlite = create_engine('sqlite:///local.db')</code></pre>
 </details>
 <hr>
 </section>
-<section id="q5.-selon-le-théorème-cap-combien-de-propriétés-peut-on-garantir-simultanément" class="level3" data-number="9.5">
-<h3 data-number="9.5" class="anchored" data-anchor-id="q5.-selon-le-théorème-cap-combien-de-propriétés-peut-on-garantir-simultanément"><span class="header-section-number">9.5</span> ❓ Q5. Selon le théorème CAP, combien de propriétés peut-on garantir simultanément ?</h3>
+<section id="q5.-selon-le-théorème-cap-combien-de-propriétés-peut-on-garantir-simultanément" class="level3">
+<h3 class="anchored" data-anchor-id="q5.-selon-le-théorème-cap-combien-de-propriétés-peut-on-garantir-simultanément">❓ Q5. Selon le théorème CAP, combien de propriétés peut-on garantir simultanément ?</h3>
 <ol type="a">
 <li>1<br>
 </li>
@@ -985,8 +1238,8 @@ engine_sqlite = create_engine('sqlite:///local.db')</code></pre>
 </details>
 <hr>
 </section>
-<section id="q6.-quelle-base-utiliser-pour-du-cache-ultra-rapide" class="level3" data-number="9.6">
-<h3 data-number="9.6" class="anchored" data-anchor-id="q6.-quelle-base-utiliser-pour-du-cache-ultra-rapide"><span class="header-section-number">9.6</span> ❓ Q6. Quelle base utiliser pour du cache ultra-rapide ?</h3>
+<section id="q6.-quelle-base-utiliser-pour-du-cache-ultra-rapide" class="level3">
+<h3 class="anchored" data-anchor-id="q6.-quelle-base-utiliser-pour-du-cache-ultra-rapide">❓ Q6. Quelle base utiliser pour du cache ultra-rapide ?</h3>
 <ol type="a">
 <li>PostgreSQL<br>
 </li>
@@ -1004,8 +1257,8 @@ engine_sqlite = create_engine('sqlite:///local.db')</code></pre>
 </details>
 <hr>
 </section>
-<section id="q7.-quel-orm-python-permet-de-se-connecter-à-plusieurs-types-de-bases-sql" class="level3" data-number="9.7">
-<h3 data-number="9.7" class="anchored" data-anchor-id="q7.-quel-orm-python-permet-de-se-connecter-à-plusieurs-types-de-bases-sql"><span class="header-section-number">9.7</span> ❓ Q7. Quel ORM Python permet de se connecter à plusieurs types de bases SQL ?</h3>
+<section id="q7.-quel-orm-python-permet-de-se-connecter-à-plusieurs-types-de-bases-sql" class="level3">
+<h3 class="anchored" data-anchor-id="q7.-quel-orm-python-permet-de-se-connecter-à-plusieurs-types-de-bases-sql">❓ Q7. Quel ORM Python permet de se connecter à plusieurs types de bases SQL ?</h3>
 <ol type="a">
 <li>pymongo<br>
 </li>
@@ -1024,10 +1277,10 @@ engine_sqlite = create_engine('sqlite:///local.db')</code></pre>
 <hr>
 </section>
 </section>
-<section id="ressources-pour-aller-plus-loin" class="level2" data-number="10">
-<h2 data-number="10" class="anchored" data-anchor-id="ressources-pour-aller-plus-loin"><span class="header-section-number">10</span> 📚 Ressources pour aller plus loin</h2>
-<section id="documentation-officielle" class="level3" data-number="10.1">
-<h3 data-number="10.1" class="anchored" data-anchor-id="documentation-officielle"><span class="header-section-number">10.1</span> 📖 Documentation officielle</h3>
+<section id="ressources-pour-aller-plus-loin" class="level2">
+<h2 class="anchored" data-anchor-id="ressources-pour-aller-plus-loin">📚 Ressources pour aller plus loin</h2>
+<section id="documentation-officielle" class="level3">
+<h3 class="anchored" data-anchor-id="documentation-officielle">📖 Documentation officielle</h3>
 <ul>
 <li><a href="https://www.postgresql.org/docs/">PostgreSQL Documentation</a></li>
 <li><a href="https://docs.mongodb.com/manual/">MongoDB Manual</a></li>
@@ -1035,16 +1288,16 @@ engine_sqlite = create_engine('sqlite:///local.db')</code></pre>
 <li><a href="https://docs.sqlalchemy.org/en/20/tutorial/">SQLAlchemy Tutorial</a></li>
 </ul>
 </section>
-<section id="cours-et-tutoriels" class="level3" data-number="10.2">
-<h3 data-number="10.2" class="anchored" data-anchor-id="cours-et-tutoriels"><span class="header-section-number">10.2</span> 🎓 Cours et tutoriels</h3>
+<section id="cours-et-tutoriels" class="level3">
+<h3 class="anchored" data-anchor-id="cours-et-tutoriels">🎓 Cours et tutoriels</h3>
 <ul>
 <li><a href="https://www.youtube.com/watch?v=ztHopE5Wnpc">Database Design Course (freeCodeCamp)</a></li>
 <li><a href="https://www.mongodb.com/nosql-explained/nosql-vs-sql">SQL vs NoSQL Explained</a></li>
 <li><a href="https://mwhittaker.github.io/blog/an_illustrated_proof_of_the_cap_theorem/">CAP Theorem Visualized</a></li>
 </ul>
 </section>
-<section id="outils-utiles" class="level3" data-number="10.3">
-<h3 data-number="10.3" class="anchored" data-anchor-id="outils-utiles"><span class="header-section-number">10.3</span> 🛠️ Outils utiles</h3>
+<section id="outils-utiles" class="level3">
+<h3 class="anchored" data-anchor-id="outils-utiles">🛠️ Outils utiles</h3>
 <ul>
 <li><a href="https://db-engines.com/en/ranking">DB-Engines Ranking</a> — Classement des bases de données</li>
 <li><a href="https://dbdiagram.io/">DBDiagram.io</a> — Créer des schémas de base</li>
@@ -1053,8 +1306,8 @@ engine_sqlite = create_engine('sqlite:///local.db')</code></pre>
 <hr>
 </section>
 </section>
-<section id="prochaine-étape" class="level2" data-number="11">
-<h2 data-number="11" class="anchored" data-anchor-id="prochaine-étape"><span class="header-section-number">11</span> ➡️ Prochaine étape</h2>
+<section id="prochaine-étape" class="level2">
+<h2 class="anchored" data-anchor-id="prochaine-étape">➡️ Prochaine étape</h2>
 <p>Maintenant que tu comprends les concepts des bases de données, passons à la pratique avec <strong>SQL</strong> !</p>
 <p>👉 <strong>Module suivant : <code>07_sql_for_data_engineers.ipynb</code></strong> — Requêtes SQL pour Data Engineers</p>
 <hr>
@@ -1066,6 +1319,19 @@ engine_sqlite = create_engine('sqlite:///local.db')</code></pre>
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {

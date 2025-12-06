@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>📘 Git pour Data Engineers – Bootcamp Data Engineering</title>
+<title>📘 Git pour Data Engineers – Bootcamp Data Engineering – From Zero to Hero</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -110,6 +110,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <style>html{ scroll-behavior: smooth; }</style>
 
 
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -282,7 +283,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">Bootcamp Data Engineering</span>
+    <span class="navbar-title">Bootcamp Data Engineering – From Zero to Hero</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -293,11 +294,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/diakite-data/data-engineering-bootcamp"> <i class="bi bi-github" role="img">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="../../#"> <i class="bi bi-lightbulb" role="img" aria-label="Mode clair/sombre">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -380,8 +376,44 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notebooks/beginner/06_intro_databases.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">🧠 Introduction aux bases de données pour Data Engineers</span></a>
+  <a href="../../notebooks/beginner/06_intro_relational_databases.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🗄️ Introduction aux Bases de Données Relationnelles</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/07_sql_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🐘 SQL for Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/08_intro_big_data_distributed.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🐘 Introduction au Big Data &amp; Traitement Distribué</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/09_mongodb_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🍃 MongoDB for Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/10_elasticsearch_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🔍 Elasticsearch for Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/11_pyspark_for_data_engineering.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">⚡ PySpark for Data Engineering</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/12_orchestration_pipelines.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">⏰ Orchestration de Pipelines Data</span></a>
   </div>
 </li>
       </ul>
@@ -396,93 +428,93 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#prérequis" id="toc-prérequis" class="nav-link active" data-scroll-target="#prérequis"><span class="header-section-number">0.1</span> 📋 Prérequis</a></li>
-  <li><a href="#objectifs-du-module" id="toc-objectifs-du-module" class="nav-link" data-scroll-target="#objectifs-du-module"><span class="header-section-number">0.2</span> 🎯 Objectifs du module</a></li>
-  <li><a href="#pourquoi-git-est-essentiel-pour-un-data-engineer" id="toc-pourquoi-git-est-essentiel-pour-un-data-engineer" class="nav-link" data-scroll-target="#pourquoi-git-est-essentiel-pour-un-data-engineer"><span class="header-section-number">0.3</span> 🧰 Pourquoi Git est essentiel pour un Data Engineer ?</a></li>
-  <li><a href="#définitions-git-github-et-gitlab" id="toc-définitions-git-github-et-gitlab" class="nav-link" data-scroll-target="#définitions-git-github-et-gitlab"><span class="header-section-number">0.4</span> 1️⃣ Définitions : Git, GitHub et GitLab</a>
+  <li><a href="#prérequis" id="toc-prérequis" class="nav-link active" data-scroll-target="#prérequis">📋 Prérequis</a></li>
+  <li><a href="#objectifs-du-module" id="toc-objectifs-du-module" class="nav-link" data-scroll-target="#objectifs-du-module">🎯 Objectifs du module</a></li>
+  <li><a href="#pourquoi-git-est-essentiel-pour-un-data-engineer" id="toc-pourquoi-git-est-essentiel-pour-un-data-engineer" class="nav-link" data-scroll-target="#pourquoi-git-est-essentiel-pour-un-data-engineer">🧰 Pourquoi Git est essentiel pour un Data Engineer ?</a></li>
+  <li><a href="#définitions-git-github-et-gitlab" id="toc-définitions-git-github-et-gitlab" class="nav-link" data-scroll-target="#définitions-git-github-et-gitlab">1️⃣ Définitions : Git, GitHub et GitLab</a>
   <ul class="collapse">
-  <li><a href="#quest-ce-que-git" id="toc-quest-ce-que-git" class="nav-link" data-scroll-target="#quest-ce-que-git"><span class="header-section-number">0.4.1</span> 🧩 Qu’est-ce que <strong>Git</strong> ?</a></li>
-  <li><a href="#quest-ce-que-github" id="toc-quest-ce-que-github" class="nav-link" data-scroll-target="#quest-ce-que-github"><span class="header-section-number">0.4.2</span> ☁️ Qu’est-ce que <strong>GitHub</strong> ?</a></li>
-  <li><a href="#quest-ce-que-gitlab" id="toc-quest-ce-que-gitlab" class="nav-link" data-scroll-target="#quest-ce-que-gitlab"><span class="header-section-number">0.4.3</span> 🏗️ Qu’est-ce que <strong>GitLab</strong> ?</a></li>
+  <li><a href="#quest-ce-que-git" id="toc-quest-ce-que-git" class="nav-link" data-scroll-target="#quest-ce-que-git">🧩 Qu’est-ce que <strong>Git</strong> ?</a></li>
+  <li><a href="#quest-ce-que-github" id="toc-quest-ce-que-github" class="nav-link" data-scroll-target="#quest-ce-que-github">☁️ Qu’est-ce que <strong>GitHub</strong> ?</a></li>
+  <li><a href="#quest-ce-que-gitlab" id="toc-quest-ce-que-gitlab" class="nav-link" data-scroll-target="#quest-ce-que-gitlab">🏗️ Qu’est-ce que <strong>GitLab</strong> ?</a></li>
   </ul></li>
-  <li><a href="#github-vs-gitlab-comparatif" id="toc-github-vs-gitlab-comparatif" class="nav-link" data-scroll-target="#github-vs-gitlab-comparatif"><span class="header-section-number">0.5</span> 2️⃣ GitHub vs GitLab — Comparatif</a></li>
-  <li><a href="#installation-et-configuration-de-git" id="toc-installation-et-configuration-de-git" class="nav-link" data-scroll-target="#installation-et-configuration-de-git"><span class="header-section-number">0.6</span> 3️⃣ Installation et configuration de Git</a>
+  <li><a href="#github-vs-gitlab-comparatif" id="toc-github-vs-gitlab-comparatif" class="nav-link" data-scroll-target="#github-vs-gitlab-comparatif">2️⃣ GitHub vs GitLab — Comparatif</a></li>
+  <li><a href="#installation-et-configuration-de-git" id="toc-installation-et-configuration-de-git" class="nav-link" data-scroll-target="#installation-et-configuration-de-git">3️⃣ Installation et configuration de Git</a>
   <ul class="collapse">
-  <li><a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation"><span class="header-section-number">0.6.1</span> 🧰 Installation</a></li>
+  <li><a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation">🧰 Installation</a></li>
   </ul></li>
-  <li><a href="#comprendre-le-workflow-git" id="toc-comprendre-le-workflow-git" class="nav-link" data-scroll-target="#comprendre-le-workflow-git"><span class="header-section-number">0.7</span> 4️⃣ Comprendre le workflow Git</a>
+  <li><a href="#comprendre-le-workflow-git" id="toc-comprendre-le-workflow-git" class="nav-link" data-scroll-target="#comprendre-le-workflow-git">4️⃣ Comprendre le workflow Git</a>
   <ul class="collapse">
-  <li><a href="#les-4-zones-de-git" id="toc-les-4-zones-de-git" class="nav-link" data-scroll-target="#les-4-zones-de-git"><span class="header-section-number">0.7.1</span> 📊 Les 4 zones de Git</a></li>
-  <li><a href="#cycle-de-vie-dun-fichier" id="toc-cycle-de-vie-dun-fichier" class="nav-link" data-scroll-target="#cycle-de-vie-dun-fichier"><span class="header-section-number">0.7.2</span> 🔄 Cycle de vie d’un fichier</a></li>
+  <li><a href="#les-4-zones-de-git" id="toc-les-4-zones-de-git" class="nav-link" data-scroll-target="#les-4-zones-de-git">📊 Les 4 zones de Git</a></li>
+  <li><a href="#cycle-de-vie-dun-fichier" id="toc-cycle-de-vie-dun-fichier" class="nav-link" data-scroll-target="#cycle-de-vie-dun-fichier">🔄 Cycle de vie d’un fichier</a></li>
   </ul></li>
-  <li><a href="#clients-git-alternatives-aux-commandes" id="toc-clients-git-alternatives-aux-commandes" class="nav-link" data-scroll-target="#clients-git-alternatives-aux-commandes"><span class="header-section-number">0.8</span> 🖥️ Clients Git (alternatives aux commandes)</a>
+  <li><a href="#clients-git-alternatives-aux-commandes" id="toc-clients-git-alternatives-aux-commandes" class="nav-link" data-scroll-target="#clients-git-alternatives-aux-commandes">🖥️ Clients Git (alternatives aux commandes)</a>
   <ul class="collapse">
-  <li><a href="#clients-populaires" id="toc-clients-populaires" class="nav-link" data-scroll-target="#clients-populaires"><span class="header-section-number">0.8.1</span> 📱 Clients populaires</a></li>
-  <li><a href="#terminal-vs-gui-quand-utiliser-quoi" id="toc-terminal-vs-gui-quand-utiliser-quoi" class="nav-link" data-scroll-target="#terminal-vs-gui-quand-utiliser-quoi"><span class="header-section-number">0.8.2</span> 🤔 Terminal vs GUI : quand utiliser quoi ?</a></li>
+  <li><a href="#clients-populaires" id="toc-clients-populaires" class="nav-link" data-scroll-target="#clients-populaires">📱 Clients populaires</a></li>
+  <li><a href="#terminal-vs-gui-quand-utiliser-quoi" id="toc-terminal-vs-gui-quand-utiliser-quoi" class="nav-link" data-scroll-target="#terminal-vs-gui-quand-utiliser-quoi">🤔 Terminal vs GUI : quand utiliser quoi ?</a></li>
   </ul></li>
-  <li><a href="#utilisation-de-git-pas-à-pas" id="toc-utilisation-de-git-pas-à-pas" class="nav-link" data-scroll-target="#utilisation-de-git-pas-à-pas"><span class="header-section-number">0.9</span> 5️⃣ Utilisation de Git pas à pas</a>
+  <li><a href="#utilisation-de-git-pas-à-pas" id="toc-utilisation-de-git-pas-à-pas" class="nav-link" data-scroll-target="#utilisation-de-git-pas-à-pas">5️⃣ Utilisation de Git pas à pas</a>
   <ul class="collapse">
-  <li><a href="#étape-1-créer-un-projet-et-initialiser-git" id="toc-étape-1-créer-un-projet-et-initialiser-git" class="nav-link" data-scroll-target="#étape-1-créer-un-projet-et-initialiser-git"><span class="header-section-number">0.9.1</span> Étape 1 : Créer un projet et initialiser Git</a></li>
-  <li><a href="#étape-2-ajouter-des-fichiers-et-commiter" id="toc-étape-2-ajouter-des-fichiers-et-commiter" class="nav-link" data-scroll-target="#étape-2-ajouter-des-fichiers-et-commiter"><span class="header-section-number">0.9.2</span> Étape 2 : Ajouter des fichiers et commiter</a></li>
-  <li><a href="#conventions-de-commits-conventional-commits" id="toc-conventions-de-commits-conventional-commits" class="nav-link" data-scroll-target="#conventions-de-commits-conventional-commits"><span class="header-section-number">0.9.3</span> 📝 Conventions de commits (Conventional Commits)</a></li>
+  <li><a href="#étape-1-créer-un-projet-et-initialiser-git" id="toc-étape-1-créer-un-projet-et-initialiser-git" class="nav-link" data-scroll-target="#étape-1-créer-un-projet-et-initialiser-git">Étape 1 : Créer un projet et initialiser Git</a></li>
+  <li><a href="#étape-2-ajouter-des-fichiers-et-commiter" id="toc-étape-2-ajouter-des-fichiers-et-commiter" class="nav-link" data-scroll-target="#étape-2-ajouter-des-fichiers-et-commiter">Étape 2 : Ajouter des fichiers et commiter</a></li>
+  <li><a href="#conventions-de-commits-conventional-commits" id="toc-conventions-de-commits-conventional-commits" class="nav-link" data-scroll-target="#conventions-de-commits-conventional-commits">📝 Conventions de commits (Conventional Commits)</a></li>
   </ul></li>
-  <li><a href="#le-fichier-.gitignore-essentiel-pour-data-engineers" id="toc-le-fichier-.gitignore-essentiel-pour-data-engineers" class="nav-link" data-scroll-target="#le-fichier-.gitignore-essentiel-pour-data-engineers"><span class="header-section-number">0.10</span> 6️⃣ Le fichier .gitignore — ESSENTIEL pour Data Engineers</a>
+  <li><a href="#le-fichier-.gitignore-essentiel-pour-data-engineers" id="toc-le-fichier-.gitignore-essentiel-pour-data-engineers" class="nav-link" data-scroll-target="#le-fichier-.gitignore-essentiel-pour-data-engineers">6️⃣ Le fichier .gitignore — ESSENTIEL pour Data Engineers</a>
   <ul class="collapse">
-  <li><a href="#ne-jamais-versionner" id="toc-ne-jamais-versionner" class="nav-link" data-scroll-target="#ne-jamais-versionner"><span class="header-section-number">0.10.1</span> ⚠️ Ne JAMAIS versionner :</a></li>
-  <li><a href="#astuces-.gitignore" id="toc-astuces-.gitignore" class="nav-link" data-scroll-target="#astuces-.gitignore"><span class="header-section-number">0.10.2</span> 💡 Astuces .gitignore</a></li>
+  <li><a href="#ne-jamais-versionner" id="toc-ne-jamais-versionner" class="nav-link" data-scroll-target="#ne-jamais-versionner">⚠️ Ne JAMAIS versionner :</a></li>
+  <li><a href="#astuces-.gitignore" id="toc-astuces-.gitignore" class="nav-link" data-scroll-target="#astuces-.gitignore">💡 Astuces .gitignore</a></li>
   </ul></li>
-  <li><a href="#lier-à-un-dépôt-distant-githubgitlab" id="toc-lier-à-un-dépôt-distant-githubgitlab" class="nav-link" data-scroll-target="#lier-à-un-dépôt-distant-githubgitlab"><span class="header-section-number">0.11</span> 7️⃣ Lier à un dépôt distant (GitHub/GitLab)</a>
+  <li><a href="#lier-à-un-dépôt-distant-githubgitlab" id="toc-lier-à-un-dépôt-distant-githubgitlab" class="nav-link" data-scroll-target="#lier-à-un-dépôt-distant-githubgitlab">7️⃣ Lier à un dépôt distant (GitHub/GitLab)</a>
   <ul class="collapse">
-  <li><a href="#étape-1-créer-un-dépôt-sur-githubgitlab" id="toc-étape-1-créer-un-dépôt-sur-githubgitlab" class="nav-link" data-scroll-target="#étape-1-créer-un-dépôt-sur-githubgitlab"><span class="header-section-number">0.11.1</span> Étape 1 : Créer un dépôt sur GitHub/GitLab</a></li>
-  <li><a href="#étape-2-connecter-le-dépôt-local" id="toc-étape-2-connecter-le-dépôt-local" class="nav-link" data-scroll-target="#étape-2-connecter-le-dépôt-local"><span class="header-section-number">0.11.2</span> Étape 2 : Connecter le dépôt local</a></li>
-  <li><a href="#cloner-un-projet-existant" id="toc-cloner-un-projet-existant" class="nav-link" data-scroll-target="#cloner-un-projet-existant"><span class="header-section-number">0.11.3</span> 📥 Cloner un projet existant</a></li>
-  <li><a href="#synchroniser-avec-le-distant" id="toc-synchroniser-avec-le-distant" class="nav-link" data-scroll-target="#synchroniser-avec-le-distant"><span class="header-section-number">0.11.4</span> 🔄 Synchroniser avec le distant</a></li>
+  <li><a href="#étape-1-créer-un-dépôt-sur-githubgitlab" id="toc-étape-1-créer-un-dépôt-sur-githubgitlab" class="nav-link" data-scroll-target="#étape-1-créer-un-dépôt-sur-githubgitlab">Étape 1 : Créer un dépôt sur GitHub/GitLab</a></li>
+  <li><a href="#étape-2-connecter-le-dépôt-local" id="toc-étape-2-connecter-le-dépôt-local" class="nav-link" data-scroll-target="#étape-2-connecter-le-dépôt-local">Étape 2 : Connecter le dépôt local</a></li>
+  <li><a href="#cloner-un-projet-existant" id="toc-cloner-un-projet-existant" class="nav-link" data-scroll-target="#cloner-un-projet-existant">📥 Cloner un projet existant</a></li>
+  <li><a href="#synchroniser-avec-le-distant" id="toc-synchroniser-avec-le-distant" class="nav-link" data-scroll-target="#synchroniser-avec-le-distant">🔄 Synchroniser avec le distant</a></li>
   </ul></li>
-  <li><a href="#travailler-avec-les-branches" id="toc-travailler-avec-les-branches" class="nav-link" data-scroll-target="#travailler-avec-les-branches"><span class="header-section-number">0.12</span> 8️⃣ Travailler avec les branches</a>
+  <li><a href="#travailler-avec-les-branches" id="toc-travailler-avec-les-branches" class="nav-link" data-scroll-target="#travailler-avec-les-branches">8️⃣ Travailler avec les branches</a>
   <ul class="collapse">
-  <li><a href="#workflow-de-branches-recommandé-pour-data-engineers" id="toc-workflow-de-branches-recommandé-pour-data-engineers" class="nav-link" data-scroll-target="#workflow-de-branches-recommandé-pour-data-engineers"><span class="header-section-number">0.12.1</span> 🌿 Workflow de branches recommandé pour Data Engineers</a></li>
+  <li><a href="#workflow-de-branches-recommandé-pour-data-engineers" id="toc-workflow-de-branches-recommandé-pour-data-engineers" class="nav-link" data-scroll-target="#workflow-de-branches-recommandé-pour-data-engineers">🌿 Workflow de branches recommandé pour Data Engineers</a></li>
   </ul></li>
-  <li><a href="#résoudre-les-conflits-de-merge" id="toc-résoudre-les-conflits-de-merge" class="nav-link" data-scroll-target="#résoudre-les-conflits-de-merge"><span class="header-section-number">0.13</span> 9️⃣ Résoudre les conflits de merge</a>
+  <li><a href="#résoudre-les-conflits-de-merge" id="toc-résoudre-les-conflits-de-merge" class="nav-link" data-scroll-target="#résoudre-les-conflits-de-merge">9️⃣ Résoudre les conflits de merge</a>
   <ul class="collapse">
-  <li><a href="#à-quoi-ressemble-un-conflit" id="toc-à-quoi-ressemble-un-conflit" class="nav-link" data-scroll-target="#à-quoi-ressemble-un-conflit"><span class="header-section-number">0.13.1</span> 🔍 À quoi ressemble un conflit ?</a></li>
-  <li><a href="#comment-résoudre" id="toc-comment-résoudre" class="nav-link" data-scroll-target="#comment-résoudre"><span class="header-section-number">0.13.2</span> ✅ Comment résoudre ?</a></li>
+  <li><a href="#à-quoi-ressemble-un-conflit" id="toc-à-quoi-ressemble-un-conflit" class="nav-link" data-scroll-target="#à-quoi-ressemble-un-conflit">🔍 À quoi ressemble un conflit ?</a></li>
+  <li><a href="#comment-résoudre" id="toc-comment-résoudre" class="nav-link" data-scroll-target="#comment-résoudre">✅ Comment résoudre ?</a></li>
   </ul></li>
-  <li><a href="#commandes-utiles-avancées" id="toc-commandes-utiles-avancées" class="nav-link" data-scroll-target="#commandes-utiles-avancées"><span class="header-section-number">0.14</span> 🔧 Commandes utiles avancées</a>
+  <li><a href="#commandes-utiles-avancées" id="toc-commandes-utiles-avancées" class="nav-link" data-scroll-target="#commandes-utiles-avancées">🔧 Commandes utiles avancées</a>
   <ul class="collapse">
-  <li><a href="#git-stash-mettre-de-côté-temporairement" id="toc-git-stash-mettre-de-côté-temporairement" class="nav-link" data-scroll-target="#git-stash-mettre-de-côté-temporairement"><span class="header-section-number">0.14.1</span> 📦 git stash — Mettre de côté temporairement</a></li>
-  <li><a href="#annuler-des-changements" id="toc-annuler-des-changements" class="nav-link" data-scroll-target="#annuler-des-changements"><span class="header-section-number">0.14.2</span> ↩︎️ Annuler des changements</a></li>
-  <li><a href="#inspecter-lhistorique" id="toc-inspecter-lhistorique" class="nav-link" data-scroll-target="#inspecter-lhistorique"><span class="header-section-number">0.14.3</span> 🔍 Inspecter l’historique</a></li>
+  <li><a href="#git-stash-mettre-de-côté-temporairement" id="toc-git-stash-mettre-de-côté-temporairement" class="nav-link" data-scroll-target="#git-stash-mettre-de-côté-temporairement">📦 git stash — Mettre de côté temporairement</a></li>
+  <li><a href="#annuler-des-changements" id="toc-annuler-des-changements" class="nav-link" data-scroll-target="#annuler-des-changements">↩︎️ Annuler des changements</a></li>
+  <li><a href="#inspecter-lhistorique" id="toc-inspecter-lhistorique" class="nav-link" data-scroll-target="#inspecter-lhistorique">🔍 Inspecter l’historique</a></li>
   </ul></li>
-  <li><a href="#cheatsheet-commandes-essentielles" id="toc-cheatsheet-commandes-essentielles" class="nav-link" data-scroll-target="#cheatsheet-commandes-essentielles"><span class="header-section-number">0.15</span> 📋 Cheatsheet — Commandes essentielles</a></li>
-  <li><a href="#quiz-de-fin-de-module" id="toc-quiz-de-fin-de-module" class="nav-link" data-scroll-target="#quiz-de-fin-de-module"><span class="header-section-number">0.16</span> 🧪 Quiz de fin de module</a>
+  <li><a href="#cheatsheet-commandes-essentielles" id="toc-cheatsheet-commandes-essentielles" class="nav-link" data-scroll-target="#cheatsheet-commandes-essentielles">📋 Cheatsheet — Commandes essentielles</a></li>
+  <li><a href="#quiz-de-fin-de-module" id="toc-quiz-de-fin-de-module" class="nav-link" data-scroll-target="#quiz-de-fin-de-module">🧪 Quiz de fin de module</a>
   <ul class="collapse">
-  <li><a href="#q1.-git-est-un-outil-de" id="toc-q1.-git-est-un-outil-de" class="nav-link" data-scroll-target="#q1.-git-est-un-outil-de"><span class="header-section-number">0.16.1</span> ❓ Q1. Git est un outil de :</a></li>
-  <li><a href="#q2.-quelle-commande-initialise-un-dépôt-git" id="toc-q2.-quelle-commande-initialise-un-dépôt-git" class="nav-link" data-scroll-target="#q2.-quelle-commande-initialise-un-dépôt-git"><span class="header-section-number">0.16.2</span> ❓ Q2. Quelle commande initialise un dépôt Git ?</a></li>
-  <li><a href="#q3.-quelle-est-la-différence-entre-git-commit-et-git-push" id="toc-q3.-quelle-est-la-différence-entre-git-commit-et-git-push" class="nav-link" data-scroll-target="#q3.-quelle-est-la-différence-entre-git-commit-et-git-push"><span class="header-section-number">0.16.3</span> ❓ Q3. Quelle est la différence entre <code>git commit</code> et <code>git push</code> ?</a></li>
-  <li><a href="#q4.-que-faut-il-mettre-dans-le-.gitignore-pour-un-projet-data" id="toc-q4.-que-faut-il-mettre-dans-le-.gitignore-pour-un-projet-data" class="nav-link" data-scroll-target="#q4.-que-faut-il-mettre-dans-le-.gitignore-pour-un-projet-data"><span class="header-section-number">0.16.4</span> ❓ Q4. Que faut-il mettre dans le <code>.gitignore</code> pour un projet Data ?</a></li>
-  <li><a href="#q5.-quelle-commande-crée-une-nouvelle-branche-et-bascule-dessus" id="toc-q5.-quelle-commande-crée-une-nouvelle-branche-et-bascule-dessus" class="nav-link" data-scroll-target="#q5.-quelle-commande-crée-une-nouvelle-branche-et-bascule-dessus"><span class="header-section-number">0.16.5</span> ❓ Q5. Quelle commande crée une nouvelle branche et bascule dessus ?</a></li>
-  <li><a href="#q6.-comment-annuler-le-dernier-commit-tout-en-gardant-les-fichiers" id="toc-q6.-comment-annuler-le-dernier-commit-tout-en-gardant-les-fichiers" class="nav-link" data-scroll-target="#q6.-comment-annuler-le-dernier-commit-tout-en-gardant-les-fichiers"><span class="header-section-number">0.16.6</span> ❓ Q6. Comment annuler le dernier commit tout en gardant les fichiers ?</a></li>
+  <li><a href="#q1.-git-est-un-outil-de" id="toc-q1.-git-est-un-outil-de" class="nav-link" data-scroll-target="#q1.-git-est-un-outil-de">❓ Q1. Git est un outil de :</a></li>
+  <li><a href="#q2.-quelle-commande-initialise-un-dépôt-git" id="toc-q2.-quelle-commande-initialise-un-dépôt-git" class="nav-link" data-scroll-target="#q2.-quelle-commande-initialise-un-dépôt-git">❓ Q2. Quelle commande initialise un dépôt Git ?</a></li>
+  <li><a href="#q3.-quelle-est-la-différence-entre-git-commit-et-git-push" id="toc-q3.-quelle-est-la-différence-entre-git-commit-et-git-push" class="nav-link" data-scroll-target="#q3.-quelle-est-la-différence-entre-git-commit-et-git-push">❓ Q3. Quelle est la différence entre <code>git commit</code> et <code>git push</code> ?</a></li>
+  <li><a href="#q4.-que-faut-il-mettre-dans-le-.gitignore-pour-un-projet-data" id="toc-q4.-que-faut-il-mettre-dans-le-.gitignore-pour-un-projet-data" class="nav-link" data-scroll-target="#q4.-que-faut-il-mettre-dans-le-.gitignore-pour-un-projet-data">❓ Q4. Que faut-il mettre dans le <code>.gitignore</code> pour un projet Data ?</a></li>
+  <li><a href="#q5.-quelle-commande-crée-une-nouvelle-branche-et-bascule-dessus" id="toc-q5.-quelle-commande-crée-une-nouvelle-branche-et-bascule-dessus" class="nav-link" data-scroll-target="#q5.-quelle-commande-crée-une-nouvelle-branche-et-bascule-dessus">❓ Q5. Quelle commande crée une nouvelle branche et bascule dessus ?</a></li>
+  <li><a href="#q6.-comment-annuler-le-dernier-commit-tout-en-gardant-les-fichiers" id="toc-q6.-comment-annuler-le-dernier-commit-tout-en-gardant-les-fichiers" class="nav-link" data-scroll-target="#q6.-comment-annuler-le-dernier-commit-tout-en-gardant-les-fichiers">❓ Q6. Comment annuler le dernier commit tout en gardant les fichiers ?</a></li>
   </ul></li>
-  <li><a href="#exercice-pratique" id="toc-exercice-pratique" class="nav-link" data-scroll-target="#exercice-pratique"><span class="header-section-number">0.17</span> 💻 Exercice pratique</a>
+  <li><a href="#exercice-pratique" id="toc-exercice-pratique" class="nav-link" data-scroll-target="#exercice-pratique">💻 Exercice pratique</a>
   <ul class="collapse">
-  <li><a href="#objectif" id="toc-objectif" class="nav-link" data-scroll-target="#objectif"><span class="header-section-number">0.17.1</span> 🎯 Objectif</a></li>
-  <li><a href="#instructions" id="toc-instructions" class="nav-link" data-scroll-target="#instructions"><span class="header-section-number">0.17.2</span> 📝 Instructions</a></li>
-  <li><a href="#solution" id="toc-solution" class="nav-link" data-scroll-target="#solution"><span class="header-section-number">0.17.3</span> ✅ Solution</a></li>
+  <li><a href="#objectif" id="toc-objectif" class="nav-link" data-scroll-target="#objectif">🎯 Objectif</a></li>
+  <li><a href="#instructions" id="toc-instructions" class="nav-link" data-scroll-target="#instructions">📝 Instructions</a></li>
+  <li><a href="#solution" id="toc-solution" class="nav-link" data-scroll-target="#solution">✅ Solution</a></li>
   </ul></li>
-  <li><a href="#premier-commit" id="toc-premier-commit" class="nav-link" data-scroll-target="#premier-commit"><span class="header-section-number">1</span> 6. Premier commit</a></li>
-  <li><a href="#créer-une-branche" id="toc-créer-une-branche" class="nav-link" data-scroll-target="#créer-une-branche"><span class="header-section-number">2</span> 7. Créer une branche</a></li>
-  <li><a href="#ajouter-la-config" id="toc-ajouter-la-config" class="nav-link" data-scroll-target="#ajouter-la-config"><span class="header-section-number">3</span> 8. Ajouter la config</a></li>
-  <li><a href="#merger-dans-main" id="toc-merger-dans-main" class="nav-link" data-scroll-target="#merger-dans-main"><span class="header-section-number">4</span> 9. Merger dans main</a></li>
-  <li><a href="#pousser-sur-github" id="toc-pousser-sur-github" class="nav-link" data-scroll-target="#pousser-sur-github"><span class="header-section-number">5</span> 10. Pousser sur GitHub</a>
+  <li><a href="#premier-commit" id="toc-premier-commit" class="nav-link" data-scroll-target="#premier-commit">6. Premier commit</a></li>
+  <li><a href="#créer-une-branche" id="toc-créer-une-branche" class="nav-link" data-scroll-target="#créer-une-branche">7. Créer une branche</a></li>
+  <li><a href="#ajouter-la-config" id="toc-ajouter-la-config" class="nav-link" data-scroll-target="#ajouter-la-config">8. Ajouter la config</a></li>
+  <li><a href="#merger-dans-main" id="toc-merger-dans-main" class="nav-link" data-scroll-target="#merger-dans-main">9. Merger dans main</a></li>
+  <li><a href="#pousser-sur-github" id="toc-pousser-sur-github" class="nav-link" data-scroll-target="#pousser-sur-github">10. Pousser sur GitHub</a>
   <ul class="collapse">
-  <li><a href="#ressources-pour-aller-plus-loin" id="toc-ressources-pour-aller-plus-loin" class="nav-link" data-scroll-target="#ressources-pour-aller-plus-loin"><span class="header-section-number">5.1</span> 📚 Ressources pour aller plus loin</a>
+  <li><a href="#ressources-pour-aller-plus-loin" id="toc-ressources-pour-aller-plus-loin" class="nav-link" data-scroll-target="#ressources-pour-aller-plus-loin">📚 Ressources pour aller plus loin</a>
   <ul class="collapse">
-  <li><a href="#apprendre-en-pratiquant" id="toc-apprendre-en-pratiquant" class="nav-link" data-scroll-target="#apprendre-en-pratiquant"><span class="header-section-number">5.1.1</span> 🎮 Apprendre en pratiquant</a></li>
-  <li><a href="#documentation" id="toc-documentation" class="nav-link" data-scroll-target="#documentation"><span class="header-section-number">5.1.2</span> 📖 Documentation</a></li>
-  <li><a href="#outils" id="toc-outils" class="nav-link" data-scroll-target="#outils"><span class="header-section-number">5.1.3</span> 🛠️ Outils</a></li>
+  <li><a href="#apprendre-en-pratiquant" id="toc-apprendre-en-pratiquant" class="nav-link" data-scroll-target="#apprendre-en-pratiquant">🎮 Apprendre en pratiquant</a></li>
+  <li><a href="#documentation" id="toc-documentation" class="nav-link" data-scroll-target="#documentation">📖 Documentation</a></li>
+  <li><a href="#outils" id="toc-outils" class="nav-link" data-scroll-target="#outils">🛠️ Outils</a></li>
   </ul></li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">5.2</span> ✅ Conclusion</a></li>
-  <li><a href="#prochaine-étape" id="toc-prochaine-étape" class="nav-link" data-scroll-target="#prochaine-étape"><span class="header-section-number">5.3</span> ➡️ Prochaine étape</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">✅ Conclusion</a></li>
+  <li><a href="#prochaine-étape" id="toc-prochaine-étape" class="nav-link" data-scroll-target="#prochaine-étape">➡️ Prochaine étape</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="git@github.com:diakite-data/data-engineering-bootcamp.git/blob/main/notebooks/beginner/03_git_for_data_engineers.ipynb" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="git@github.com:diakite-data/data-engineering-bootcamp.git/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -512,8 +544,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p><strong>Objectif :</strong> Comprendre Git, GitHub et GitLab, savoir versionner ses scripts, notebooks et configurations.</p>
 <hr>
-<section id="prérequis" class="level2" data-number="0.1">
-<h2 data-number="0.1" class="anchored" data-anchor-id="prérequis"><span class="header-section-number">0.1</span> 📋 Prérequis</h2>
+<section id="prérequis" class="level2">
+<h2 class="anchored" data-anchor-id="prérequis">📋 Prérequis</h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -537,12 +569,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 </section>
-<section id="objectifs-du-module" class="level2" data-number="0.2">
-<h2 data-number="0.2" class="anchored" data-anchor-id="objectifs-du-module"><span class="header-section-number">0.2</span> 🎯 Objectifs du module</h2>
+<section id="objectifs-du-module" class="level2">
+<h2 class="anchored" data-anchor-id="objectifs-du-module">🎯 Objectifs du module</h2>
 <p>À la fin de ce module, tu seras capable de : - Comprendre les concepts de versioning - Initialiser et configurer un dépôt Git - Maîtriser le workflow : add → commit → push - Travailler avec les branches - Collaborer efficacement avec une équipe - Utiliser .gitignore pour protéger les données sensibles</p>
 </section>
-<section id="pourquoi-git-est-essentiel-pour-un-data-engineer" class="level2" data-number="0.3">
-<h2 data-number="0.3" class="anchored" data-anchor-id="pourquoi-git-est-essentiel-pour-un-data-engineer"><span class="header-section-number">0.3</span> 🧰 Pourquoi Git est essentiel pour un Data Engineer ?</h2>
+<section id="pourquoi-git-est-essentiel-pour-un-data-engineer" class="level2">
+<h2 class="anchored" data-anchor-id="pourquoi-git-est-essentiel-pour-un-data-engineer">🧰 Pourquoi Git est essentiel pour un Data Engineer ?</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 44%">
@@ -586,10 +618,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </blockquote>
 <hr>
 </section>
-<section id="définitions-git-github-et-gitlab" class="level2" data-number="0.4">
-<h2 data-number="0.4" class="anchored" data-anchor-id="définitions-git-github-et-gitlab"><span class="header-section-number">0.4</span> 1️⃣ Définitions : Git, GitHub et GitLab</h2>
-<section id="quest-ce-que-git" class="level3" data-number="0.4.1">
-<h3 data-number="0.4.1" class="anchored" data-anchor-id="quest-ce-que-git"><span class="header-section-number">0.4.1</span> 🧩 Qu’est-ce que <strong>Git</strong> ?</h3>
+<section id="définitions-git-github-et-gitlab" class="level2">
+<h2 class="anchored" data-anchor-id="définitions-git-github-et-gitlab">1️⃣ Définitions : Git, GitHub et GitLab</h2>
+<section id="quest-ce-que-git" class="level3">
+<h3 class="anchored" data-anchor-id="quest-ce-que-git">🧩 Qu’est-ce que <strong>Git</strong> ?</h3>
 <p>Git est un <strong>logiciel de gestion de versions distribué</strong>. Il permet de : - Suivre l’évolution de vos fichiers au fil du temps - Créer des <strong>points de restauration</strong> (commits) - Travailler en parallèle sur différentes fonctionnalités (branches) - Fusionner le travail de plusieurs personnes</p>
 <pre><code>📁 Ton projet
     │
@@ -598,18 +630,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     ├── 📁 .git/            ← Dossier caché contenant l'historique
     └── 📁 data/            ← ⚠️ À NE PAS versionner !</code></pre>
 </section>
-<section id="quest-ce-que-github" class="level3" data-number="0.4.2">
-<h3 data-number="0.4.2" class="anchored" data-anchor-id="quest-ce-que-github"><span class="header-section-number">0.4.2</span> ☁️ Qu’est-ce que <strong>GitHub</strong> ?</h3>
+<section id="quest-ce-que-github" class="level3">
+<h3 class="anchored" data-anchor-id="quest-ce-que-github">☁️ Qu’est-ce que <strong>GitHub</strong> ?</h3>
 <p>GitHub est une <strong>plateforme cloud</strong> (propriété de Microsoft) qui héberge vos dépôts Git. - Interface web moderne - Très populaire pour l’open source - GitHub Actions pour la CI/CD</p>
 </section>
-<section id="quest-ce-que-gitlab" class="level3" data-number="0.4.3">
-<h3 data-number="0.4.3" class="anchored" data-anchor-id="quest-ce-que-gitlab"><span class="header-section-number">0.4.3</span> 🏗️ Qu’est-ce que <strong>GitLab</strong> ?</h3>
+<section id="quest-ce-que-gitlab" class="level3">
+<h3 class="anchored" data-anchor-id="quest-ce-que-gitlab">🏗️ Qu’est-ce que <strong>GitLab</strong> ?</h3>
 <p>GitLab est une alternative <strong>open source</strong> à GitHub : - Peut être auto-hébergé (on-premise) - CI/CD intégré très puissant - Souvent utilisé en entreprise</p>
 <hr>
 </section>
 </section>
-<section id="github-vs-gitlab-comparatif" class="level2" data-number="0.5">
-<h2 data-number="0.5" class="anchored" data-anchor-id="github-vs-gitlab-comparatif"><span class="header-section-number">0.5</span> 2️⃣ GitHub vs GitLab — Comparatif</h2>
+<section id="github-vs-gitlab-comparatif" class="level2">
+<h2 class="anchored" data-anchor-id="github-vs-gitlab-comparatif">2️⃣ GitHub vs GitLab — Comparatif</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -666,10 +698,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </blockquote>
 <hr>
 </section>
-<section id="installation-et-configuration-de-git" class="level2" data-number="0.6">
-<h2 data-number="0.6" class="anchored" data-anchor-id="installation-et-configuration-de-git"><span class="header-section-number">0.6</span> 3️⃣ Installation et configuration de Git</h2>
-<section id="installation" class="level3" data-number="0.6.1">
-<h3 data-number="0.6.1" class="anchored" data-anchor-id="installation"><span class="header-section-number">0.6.1</span> 🧰 Installation</h3>
+<section id="installation-et-configuration-de-git" class="level2">
+<h2 class="anchored" data-anchor-id="installation-et-configuration-de-git">3️⃣ Installation et configuration de Git</h2>
+<section id="installation" class="level3">
+<h3 class="anchored" data-anchor-id="installation">🧰 Installation</h3>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -719,10 +751,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 </section>
-<section id="comprendre-le-workflow-git" class="level2" data-number="0.7">
-<h2 data-number="0.7" class="anchored" data-anchor-id="comprendre-le-workflow-git"><span class="header-section-number">0.7</span> 4️⃣ Comprendre le workflow Git</h2>
-<section id="les-4-zones-de-git" class="level3" data-number="0.7.1">
-<h3 data-number="0.7.1" class="anchored" data-anchor-id="les-4-zones-de-git"><span class="header-section-number">0.7.1</span> 📊 Les 4 zones de Git</h3>
+<section id="comprendre-le-workflow-git" class="level2">
+<h2 class="anchored" data-anchor-id="comprendre-le-workflow-git">4️⃣ Comprendre le workflow Git</h2>
+<section id="les-4-zones-de-git" class="level3">
+<h3 class="anchored" data-anchor-id="les-4-zones-de-git">📊 Les 4 zones de Git</h3>
 <pre><code>┌─────────────────┐    git add     ┌─────────────────┐
 │  Working Dir    │ ─────────────▶ │  Staging Area   │
 │  (tes fichiers) │                │  (index)        │
@@ -734,8 +766,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 │  (GitHub/GitLab)│                │  (.git)         │
 └─────────────────┘                └─────────────────┘</code></pre>
 </section>
-<section id="cycle-de-vie-dun-fichier" class="level3" data-number="0.7.2">
-<h3 data-number="0.7.2" class="anchored" data-anchor-id="cycle-de-vie-dun-fichier"><span class="header-section-number">0.7.2</span> 🔄 Cycle de vie d’un fichier</h3>
+<section id="cycle-de-vie-dun-fichier" class="level3">
+<h3 class="anchored" data-anchor-id="cycle-de-vie-dun-fichier">🔄 Cycle de vie d’un fichier</h3>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -770,11 +802,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 </section>
-<section id="clients-git-alternatives-aux-commandes" class="level2" data-number="0.8">
-<h2 data-number="0.8" class="anchored" data-anchor-id="clients-git-alternatives-aux-commandes"><span class="header-section-number">0.8</span> 🖥️ Clients Git (alternatives aux commandes)</h2>
+<section id="clients-git-alternatives-aux-commandes" class="level2">
+<h2 class="anchored" data-anchor-id="clients-git-alternatives-aux-commandes">🖥️ Clients Git (alternatives aux commandes)</h2>
 <p>Tu n’es pas obligé d’utiliser le terminal ! Il existe des <strong>interfaces graphiques (GUI)</strong> pour Git qui facilitent la visualisation et certaines opérations.</p>
-<section id="clients-populaires" class="level3" data-number="0.8.1">
-<h3 data-number="0.8.1" class="anchored" data-anchor-id="clients-populaires"><span class="header-section-number">0.8.1</span> 📱 Clients populaires</h3>
+<section id="clients-populaires" class="level3">
+<h3 class="anchored" data-anchor-id="clients-populaires">📱 Clients populaires</h3>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -818,8 +850,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 </section>
-<section id="terminal-vs-gui-quand-utiliser-quoi" class="level3" data-number="0.8.2">
-<h3 data-number="0.8.2" class="anchored" data-anchor-id="terminal-vs-gui-quand-utiliser-quoi"><span class="header-section-number">0.8.2</span> 🤔 Terminal vs GUI : quand utiliser quoi ?</h3>
+<section id="terminal-vs-gui-quand-utiliser-quoi" class="level3">
+<h3 class="anchored" data-anchor-id="terminal-vs-gui-quand-utiliser-quoi">🤔 Terminal vs GUI : quand utiliser quoi ?</h3>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 42%">
@@ -864,10 +896,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 </section>
-<section id="utilisation-de-git-pas-à-pas" class="level2" data-number="0.9">
-<h2 data-number="0.9" class="anchored" data-anchor-id="utilisation-de-git-pas-à-pas"><span class="header-section-number">0.9</span> 5️⃣ Utilisation de Git pas à pas</h2>
-<section id="étape-1-créer-un-projet-et-initialiser-git" class="level3" data-number="0.9.1">
-<h3 data-number="0.9.1" class="anchored" data-anchor-id="étape-1-créer-un-projet-et-initialiser-git"><span class="header-section-number">0.9.1</span> Étape 1 : Créer un projet et initialiser Git</h3>
+<section id="utilisation-de-git-pas-à-pas" class="level2">
+<h2 class="anchored" data-anchor-id="utilisation-de-git-pas-à-pas">5️⃣ Utilisation de Git pas à pas</h2>
+<section id="étape-1-créer-un-projet-et-initialiser-git" class="level3">
+<h3 class="anchored" data-anchor-id="étape-1-créer-un-projet-et-initialiser-git">Étape 1 : Créer un projet et initialiser Git</h3>
 <div id="3ec44226" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -884,8 +916,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="étape-2-ajouter-des-fichiers-et-commiter" class="level3" data-number="0.9.2">
-<h3 data-number="0.9.2" class="anchored" data-anchor-id="étape-2-ajouter-des-fichiers-et-commiter"><span class="header-section-number">0.9.2</span> Étape 2 : Ajouter des fichiers et commiter</h3>
+<section id="étape-2-ajouter-des-fichiers-et-commiter" class="level3">
+<h3 class="anchored" data-anchor-id="étape-2-ajouter-des-fichiers-et-commiter">Étape 2 : Ajouter des fichiers et commiter</h3>
 <div id="a0dee159" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -912,8 +944,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="conventions-de-commits-conventional-commits" class="level3" data-number="0.9.3">
-<h3 data-number="0.9.3" class="anchored" data-anchor-id="conventions-de-commits-conventional-commits"><span class="header-section-number">0.9.3</span> 📝 Conventions de commits (Conventional Commits)</h3>
+<section id="conventions-de-commits-conventional-commits" class="level3">
+<h3 class="anchored" data-anchor-id="conventions-de-commits-conventional-commits">📝 Conventions de commits (Conventional Commits)</h3>
 <p>Utilise des préfixes standardisés pour des messages clairs :</p>
 <table class="caption-top table">
 <colgroup>
@@ -970,11 +1002,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 </section>
-<section id="le-fichier-.gitignore-essentiel-pour-data-engineers" class="level2" data-number="0.10">
-<h2 data-number="0.10" class="anchored" data-anchor-id="le-fichier-.gitignore-essentiel-pour-data-engineers"><span class="header-section-number">0.10</span> 6️⃣ Le fichier .gitignore — ESSENTIEL pour Data Engineers</h2>
+<section id="le-fichier-.gitignore-essentiel-pour-data-engineers" class="level2">
+<h2 class="anchored" data-anchor-id="le-fichier-.gitignore-essentiel-pour-data-engineers">6️⃣ Le fichier .gitignore — ESSENTIEL pour Data Engineers</h2>
 <p>Le <code>.gitignore</code> indique à Git quels fichiers <strong>NE PAS versionner</strong>.</p>
-<section id="ne-jamais-versionner" class="level3" data-number="0.10.1">
-<h3 data-number="0.10.1" class="anchored" data-anchor-id="ne-jamais-versionner"><span class="header-section-number">0.10.1</span> ⚠️ Ne JAMAIS versionner :</h3>
+<section id="ne-jamais-versionner" class="level3">
+<h3 class="anchored" data-anchor-id="ne-jamais-versionner">⚠️ Ne JAMAIS versionner :</h3>
 <ul>
 <li>📊 <strong>Fichiers de données</strong> (CSV, Parquet, JSON volumineux)</li>
 <li>🔑 <strong>Secrets et credentials</strong> (mots de passe, clés API)</li>
@@ -1036,8 +1068,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="astuces-.gitignore" class="level3" data-number="0.10.2">
-<h3 data-number="0.10.2" class="anchored" data-anchor-id="astuces-.gitignore"><span class="header-section-number">0.10.2</span> 💡 Astuces .gitignore</h3>
+<section id="astuces-.gitignore" class="level3">
+<h3 class="anchored" data-anchor-id="astuces-.gitignore">💡 Astuces .gitignore</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ignorer un dossier</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ex">data/</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1056,10 +1088,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 </section>
-<section id="lier-à-un-dépôt-distant-githubgitlab" class="level2" data-number="0.11">
-<h2 data-number="0.11" class="anchored" data-anchor-id="lier-à-un-dépôt-distant-githubgitlab"><span class="header-section-number">0.11</span> 7️⃣ Lier à un dépôt distant (GitHub/GitLab)</h2>
-<section id="étape-1-créer-un-dépôt-sur-githubgitlab" class="level3" data-number="0.11.1">
-<h3 data-number="0.11.1" class="anchored" data-anchor-id="étape-1-créer-un-dépôt-sur-githubgitlab"><span class="header-section-number">0.11.1</span> Étape 1 : Créer un dépôt sur GitHub/GitLab</h3>
+<section id="lier-à-un-dépôt-distant-githubgitlab" class="level2">
+<h2 class="anchored" data-anchor-id="lier-à-un-dépôt-distant-githubgitlab">7️⃣ Lier à un dépôt distant (GitHub/GitLab)</h2>
+<section id="étape-1-créer-un-dépôt-sur-githubgitlab" class="level3">
+<h3 class="anchored" data-anchor-id="étape-1-créer-un-dépôt-sur-githubgitlab">Étape 1 : Créer un dépôt sur GitHub/GitLab</h3>
 <ol type="1">
 <li>Va sur <a href="https://github.com">github.com</a> ou <a href="https://gitlab.com">gitlab.com</a></li>
 <li>Clique sur <strong>“New repository”</strong> / <strong>“New project”</strong></li>
@@ -1068,8 +1100,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Copie l’URL HTTPS</li>
 </ol>
 </section>
-<section id="étape-2-connecter-le-dépôt-local" class="level3" data-number="0.11.2">
-<h3 data-number="0.11.2" class="anchored" data-anchor-id="étape-2-connecter-le-dépôt-local"><span class="header-section-number">0.11.2</span> Étape 2 : Connecter le dépôt local</h3>
+<section id="étape-2-connecter-le-dépôt-local" class="level3">
+<h3 class="anchored" data-anchor-id="étape-2-connecter-le-dépôt-local">Étape 2 : Connecter le dépôt local</h3>
 <div id="9f42df63" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1090,16 +1122,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="cloner-un-projet-existant" class="level3" data-number="0.11.3">
-<h3 data-number="0.11.3" class="anchored" data-anchor-id="cloner-un-projet-existant"><span class="header-section-number">0.11.3</span> 📥 Cloner un projet existant</h3>
+<section id="cloner-un-projet-existant" class="level3">
+<h3 class="anchored" data-anchor-id="cloner-un-projet-existant">📥 Cloner un projet existant</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cloner un dépôt</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/username/projet.git</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Cloner dans un dossier spécifique</span></span>
 <span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/username/projet.git mon_dossier</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="synchroniser-avec-le-distant" class="level3" data-number="0.11.4">
-<h3 data-number="0.11.4" class="anchored" data-anchor-id="synchroniser-avec-le-distant"><span class="header-section-number">0.11.4</span> 🔄 Synchroniser avec le distant</h3>
+<section id="synchroniser-avec-le-distant" class="level3">
+<h3 class="anchored" data-anchor-id="synchroniser-avec-le-distant">🔄 Synchroniser avec le distant</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Récupérer les modifications (fetch + merge)</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1109,8 +1141,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 </section>
-<section id="travailler-avec-les-branches" class="level2" data-number="0.12">
-<h2 data-number="0.12" class="anchored" data-anchor-id="travailler-avec-les-branches"><span class="header-section-number">0.12</span> 8️⃣ Travailler avec les branches</h2>
+<section id="travailler-avec-les-branches" class="level2">
+<h2 class="anchored" data-anchor-id="travailler-avec-les-branches">8️⃣ Travailler avec les branches</h2>
 <p>Les branches permettent de travailler sur des fonctionnalités <strong>en parallèle</strong> sans affecter le code principal.</p>
 <pre><code>main         ●───●───●───────────●───●  (code stable)
                   │               ↑
@@ -1148,8 +1180,8 @@ feature/etl       └───●───●───●───┘     (nouve
 <span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-d</span> feature/add-validation</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<section id="workflow-de-branches-recommandé-pour-data-engineers" class="level3" data-number="0.12.1">
-<h3 data-number="0.12.1" class="anchored" data-anchor-id="workflow-de-branches-recommandé-pour-data-engineers"><span class="header-section-number">0.12.1</span> 🌿 Workflow de branches recommandé pour Data Engineers</h3>
+<section id="workflow-de-branches-recommandé-pour-data-engineers" class="level3">
+<h3 class="anchored" data-anchor-id="workflow-de-branches-recommandé-pour-data-engineers">🌿 Workflow de branches recommandé pour Data Engineers</h3>
 <pre><code>main (production)
   │
   ├── develop (intégration)
@@ -1192,11 +1224,11 @@ feature/etl       └───●───●───●───┘     (nouve
 <hr>
 </section>
 </section>
-<section id="résoudre-les-conflits-de-merge" class="level2" data-number="0.13">
-<h2 data-number="0.13" class="anchored" data-anchor-id="résoudre-les-conflits-de-merge"><span class="header-section-number">0.13</span> 9️⃣ Résoudre les conflits de merge</h2>
+<section id="résoudre-les-conflits-de-merge" class="level2">
+<h2 class="anchored" data-anchor-id="résoudre-les-conflits-de-merge">9️⃣ Résoudre les conflits de merge</h2>
 <p>Un <strong>conflit</strong> survient quand deux personnes modifient la même ligne.</p>
-<section id="à-quoi-ressemble-un-conflit" class="level3" data-number="0.13.1">
-<h3 data-number="0.13.1" class="anchored" data-anchor-id="à-quoi-ressemble-un-conflit"><span class="header-section-number">0.13.1</span> 🔍 À quoi ressemble un conflit ?</h3>
+<section id="à-quoi-ressemble-un-conflit" class="level3">
+<h3 class="anchored" data-anchor-id="à-quoi-ressemble-un-conflit">🔍 À quoi ressemble un conflit ?</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span> HEAD</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> process_data(df):</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> df.dropna()</span>
@@ -1205,8 +1237,8 @@ feature/etl       └───●───●───●───┘     (nouve
 <span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> dataframe.fillna(<span class="dv">0</span>)</span>
 <span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span> feature<span class="op">/</span>autre<span class="op">-</span>branche</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="comment-résoudre" class="level3" data-number="0.13.2">
-<h3 data-number="0.13.2" class="anchored" data-anchor-id="comment-résoudre"><span class="header-section-number">0.13.2</span> ✅ Comment résoudre ?</h3>
+<section id="comment-résoudre" class="level3">
+<h3 class="anchored" data-anchor-id="comment-résoudre">✅ Comment résoudre ?</h3>
 <ol type="1">
 <li><strong>Ouvrir le fichier</strong> et choisir la bonne version</li>
 <li><strong>Supprimer les marqueurs</strong> (<code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=======</code>, <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>)</li>
@@ -1222,10 +1254,10 @@ feature/etl       └───●───●───●───┘     (nouve
 <hr>
 </section>
 </section>
-<section id="commandes-utiles-avancées" class="level2" data-number="0.14">
-<h2 data-number="0.14" class="anchored" data-anchor-id="commandes-utiles-avancées"><span class="header-section-number">0.14</span> 🔧 Commandes utiles avancées</h2>
-<section id="git-stash-mettre-de-côté-temporairement" class="level3" data-number="0.14.1">
-<h3 data-number="0.14.1" class="anchored" data-anchor-id="git-stash-mettre-de-côté-temporairement"><span class="header-section-number">0.14.1</span> 📦 git stash — Mettre de côté temporairement</h3>
+<section id="commandes-utiles-avancées" class="level2">
+<h2 class="anchored" data-anchor-id="commandes-utiles-avancées">🔧 Commandes utiles avancées</h2>
+<section id="git-stash-mettre-de-côté-temporairement" class="level3">
+<h3 class="anchored" data-anchor-id="git-stash-mettre-de-côté-temporairement">📦 git stash — Mettre de côté temporairement</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Sauvegarder les modifications en cours</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> stash</span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1238,8 +1270,8 @@ feature/etl       └───●───●───●───┘     (nouve
 <span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Récupérer un stash spécifique</span></span>
 <span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> stash apply stash@{0}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="annuler-des-changements" class="level3" data-number="0.14.2">
-<h3 data-number="0.14.2" class="anchored" data-anchor-id="annuler-des-changements"><span class="header-section-number">0.14.2</span> ↩︎️ Annuler des changements</h3>
+<section id="annuler-des-changements" class="level3">
+<h3 class="anchored" data-anchor-id="annuler-des-changements">↩︎️ Annuler des changements</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Annuler les modifications d'un fichier (non commité)</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">--</span> fichier.py</span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1255,8 +1287,8 @@ feature/etl       └───●───●───●───┘     (nouve
 <span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Créer un commit qui annule un commit précédent</span></span>
 <span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> revert <span class="op">&lt;</span>commit-hash<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="inspecter-lhistorique" class="level3" data-number="0.14.3">
-<h3 data-number="0.14.3" class="anchored" data-anchor-id="inspecter-lhistorique"><span class="header-section-number">0.14.3</span> 🔍 Inspecter l’historique</h3>
+<section id="inspecter-lhistorique" class="level3">
+<h3 class="anchored" data-anchor-id="inspecter-lhistorique">🔍 Inspecter l’historique</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Historique compact</span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log <span class="at">--oneline</span></span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1274,8 +1306,8 @@ feature/etl       └───●───●───●───┘     (nouve
 <hr>
 </section>
 </section>
-<section id="cheatsheet-commandes-essentielles" class="level2" data-number="0.15">
-<h2 data-number="0.15" class="anchored" data-anchor-id="cheatsheet-commandes-essentielles"><span class="header-section-number">0.15</span> 📋 Cheatsheet — Commandes essentielles</h2>
+<section id="cheatsheet-commandes-essentielles" class="level2">
+<h2 class="anchored" data-anchor-id="cheatsheet-commandes-essentielles">📋 Cheatsheet — Commandes essentielles</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -1400,11 +1432,11 @@ feature/etl       └───●───●───●───┘     (nouve
 <p>📥 <a href="https://education.github.com/git-cheat-sheet-education.pdf">Télécharger le Git Cheatsheet officiel (PDF)</a></p>
 <hr>
 </section>
-<section id="quiz-de-fin-de-module" class="level2" data-number="0.16">
-<h2 data-number="0.16" class="anchored" data-anchor-id="quiz-de-fin-de-module"><span class="header-section-number">0.16</span> 🧪 Quiz de fin de module</h2>
+<section id="quiz-de-fin-de-module" class="level2">
+<h2 class="anchored" data-anchor-id="quiz-de-fin-de-module">🧪 Quiz de fin de module</h2>
 <hr>
-<section id="q1.-git-est-un-outil-de" class="level3" data-number="0.16.1">
-<h3 data-number="0.16.1" class="anchored" data-anchor-id="q1.-git-est-un-outil-de"><span class="header-section-number">0.16.1</span> ❓ Q1. Git est un outil de :</h3>
+<section id="q1.-git-est-un-outil-de" class="level3">
+<h3 class="anchored" data-anchor-id="q1.-git-est-un-outil-de">❓ Q1. Git est un outil de :</h3>
 <ol type="a">
 <li>Design graphique<br>
 </li>
@@ -1422,8 +1454,8 @@ feature/etl       └───●───●───●───┘     (nouve
 </details>
 <hr>
 </section>
-<section id="q2.-quelle-commande-initialise-un-dépôt-git" class="level3" data-number="0.16.2">
-<h3 data-number="0.16.2" class="anchored" data-anchor-id="q2.-quelle-commande-initialise-un-dépôt-git"><span class="header-section-number">0.16.2</span> ❓ Q2. Quelle commande initialise un dépôt Git ?</h3>
+<section id="q2.-quelle-commande-initialise-un-dépôt-git" class="level3">
+<h3 class="anchored" data-anchor-id="q2.-quelle-commande-initialise-un-dépôt-git">❓ Q2. Quelle commande initialise un dépôt Git ?</h3>
 <ol type="a">
 <li><code>git start</code><br>
 </li>
@@ -1441,8 +1473,8 @@ feature/etl       └───●───●───●───┘     (nouve
 </details>
 <hr>
 </section>
-<section id="q3.-quelle-est-la-différence-entre-git-commit-et-git-push" class="level3" data-number="0.16.3">
-<h3 data-number="0.16.3" class="anchored" data-anchor-id="q3.-quelle-est-la-différence-entre-git-commit-et-git-push"><span class="header-section-number">0.16.3</span> ❓ Q3. Quelle est la différence entre <code>git commit</code> et <code>git push</code> ?</h3>
+<section id="q3.-quelle-est-la-différence-entre-git-commit-et-git-push" class="level3">
+<h3 class="anchored" data-anchor-id="q3.-quelle-est-la-différence-entre-git-commit-et-git-push">❓ Q3. Quelle est la différence entre <code>git commit</code> et <code>git push</code> ?</h3>
 <ol type="a">
 <li><code>commit</code> enregistre localement, <code>push</code> envoie au serveur distant<br>
 </li>
@@ -1460,8 +1492,8 @@ feature/etl       └───●───●───●───┘     (nouve
 </details>
 <hr>
 </section>
-<section id="q4.-que-faut-il-mettre-dans-le-.gitignore-pour-un-projet-data" class="level3" data-number="0.16.4">
-<h3 data-number="0.16.4" class="anchored" data-anchor-id="q4.-que-faut-il-mettre-dans-le-.gitignore-pour-un-projet-data"><span class="header-section-number">0.16.4</span> ❓ Q4. Que faut-il mettre dans le <code>.gitignore</code> pour un projet Data ?</h3>
+<section id="q4.-que-faut-il-mettre-dans-le-.gitignore-pour-un-projet-data" class="level3">
+<h3 class="anchored" data-anchor-id="q4.-que-faut-il-mettre-dans-le-.gitignore-pour-un-projet-data">❓ Q4. Que faut-il mettre dans le <code>.gitignore</code> pour un projet Data ?</h3>
 <ol type="a">
 <li>Les fichiers Python<br>
 </li>
@@ -1479,8 +1511,8 @@ feature/etl       └───●───●───●───┘     (nouve
 </details>
 <hr>
 </section>
-<section id="q5.-quelle-commande-crée-une-nouvelle-branche-et-bascule-dessus" class="level3" data-number="0.16.5">
-<h3 data-number="0.16.5" class="anchored" data-anchor-id="q5.-quelle-commande-crée-une-nouvelle-branche-et-bascule-dessus"><span class="header-section-number">0.16.5</span> ❓ Q5. Quelle commande crée une nouvelle branche et bascule dessus ?</h3>
+<section id="q5.-quelle-commande-crée-une-nouvelle-branche-et-bascule-dessus" class="level3">
+<h3 class="anchored" data-anchor-id="q5.-quelle-commande-crée-une-nouvelle-branche-et-bascule-dessus">❓ Q5. Quelle commande crée une nouvelle branche et bascule dessus ?</h3>
 <ol type="a">
 <li><code>git branch new</code><br>
 </li>
@@ -1498,8 +1530,8 @@ feature/etl       └───●───●───●───┘     (nouve
 </details>
 <hr>
 </section>
-<section id="q6.-comment-annuler-le-dernier-commit-tout-en-gardant-les-fichiers" class="level3" data-number="0.16.6">
-<h3 data-number="0.16.6" class="anchored" data-anchor-id="q6.-comment-annuler-le-dernier-commit-tout-en-gardant-les-fichiers"><span class="header-section-number">0.16.6</span> ❓ Q6. Comment annuler le dernier commit tout en gardant les fichiers ?</h3>
+<section id="q6.-comment-annuler-le-dernier-commit-tout-en-gardant-les-fichiers" class="level3">
+<h3 class="anchored" data-anchor-id="q6.-comment-annuler-le-dernier-commit-tout-en-gardant-les-fichiers">❓ Q6. Comment annuler le dernier commit tout en gardant les fichiers ?</h3>
 <ol type="a">
 <li><code>git delete commit</code><br>
 </li>
@@ -1518,14 +1550,14 @@ feature/etl       └───●───●───●───┘     (nouve
 <hr>
 </section>
 </section>
-<section id="exercice-pratique" class="level2" data-number="0.17">
-<h2 data-number="0.17" class="anchored" data-anchor-id="exercice-pratique"><span class="header-section-number">0.17</span> 💻 Exercice pratique</h2>
-<section id="objectif" class="level3" data-number="0.17.1">
-<h3 data-number="0.17.1" class="anchored" data-anchor-id="objectif"><span class="header-section-number">0.17.1</span> 🎯 Objectif</h3>
+<section id="exercice-pratique" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-pratique">💻 Exercice pratique</h2>
+<section id="objectif" class="level3">
+<h3 class="anchored" data-anchor-id="objectif">🎯 Objectif</h3>
 <p>Créer un projet Data Engineering versionné et le pousser sur GitHub/GitLab.</p>
 </section>
-<section id="instructions" class="level3" data-number="0.17.2">
-<h3 data-number="0.17.2" class="anchored" data-anchor-id="instructions"><span class="header-section-number">0.17.2</span> 📝 Instructions</h3>
+<section id="instructions" class="level3">
+<h3 class="anchored" data-anchor-id="instructions">📝 Instructions</h3>
 <ol type="1">
 <li>Créer un dossier <code>projet_etl</code></li>
 <li>Initialiser Git</li>
@@ -1539,8 +1571,8 @@ feature/etl       └───●───●───●───┘     (nouve
 <li>Créer un dépôt sur GitHub et pousser le code</li>
 </ol>
 </section>
-<section id="solution" class="level3" data-number="0.17.3">
-<h3 data-number="0.17.3" class="anchored" data-anchor-id="solution"><span class="header-section-number">0.17.3</span> ✅ Solution</h3>
+<section id="solution" class="level3">
+<h3 class="anchored" data-anchor-id="solution">✅ Solution</h3>
 <details>
 <summary>
 📥 Afficher la solution complète
@@ -1604,50 +1636,50 @@ feature/etl       └───●───●───●───┘     (nouve
 <p>EOF</p>
 </details></section>
 </section>
-<section id="premier-commit" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> 6. Premier commit</h1>
+<section id="premier-commit" class="level1">
+<h1>6. Premier commit</h1>
 <p>git add . git commit -m “feat: initialiser projet ETL”</p>
 </section>
-<section id="créer-une-branche" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> 7. Créer une branche</h1>
+<section id="créer-une-branche" class="level1">
+<h1>7. Créer une branche</h1>
 <p>git switch -c feature/add-config</p>
 </section>
-<section id="ajouter-la-config" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> 8. Ajouter la config</h1>
+<section id="ajouter-la-config" class="level1">
+<h1>8. Ajouter la config</h1>
 <p>cat &lt;&lt; ‘EOF’ &gt; config.yaml database: host: localhost port: 5432 name: datawarehouse</p>
 <p>etl: batch_size: 1000 log_level: INFO EOF</p>
 <p>git add config.yaml git commit -m “feat: ajouter fichier de configuration”</p>
 </section>
-<section id="merger-dans-main" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> 9. Merger dans main</h1>
+<section id="merger-dans-main" class="level1">
+<h1>9. Merger dans main</h1>
 <p>git switch main git merge feature/add-config git branch -d feature/add-config</p>
 </section>
-<section id="pousser-sur-github" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> 10. Pousser sur GitHub</h1>
+<section id="pousser-sur-github" class="level1">
+<h1>10. Pousser sur GitHub</h1>
 <p>git remote add origin https://github.com/ton-username/projet_etl.git git push -u origin main</p>
 <p>echo “🎉 Projet créé et poussé avec succès !” ```</p>
 
 <hr>
-<section id="ressources-pour-aller-plus-loin" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="ressources-pour-aller-plus-loin"><span class="header-section-number">5.1</span> 📚 Ressources pour aller plus loin</h2>
-<section id="apprendre-en-pratiquant" class="level3" data-number="5.1.1">
-<h3 data-number="5.1.1" class="anchored" data-anchor-id="apprendre-en-pratiquant"><span class="header-section-number">5.1.1</span> 🎮 Apprendre en pratiquant</h3>
+<section id="ressources-pour-aller-plus-loin" class="level2">
+<h2 class="anchored" data-anchor-id="ressources-pour-aller-plus-loin">📚 Ressources pour aller plus loin</h2>
+<section id="apprendre-en-pratiquant" class="level3">
+<h3 class="anchored" data-anchor-id="apprendre-en-pratiquant">🎮 Apprendre en pratiquant</h3>
 <ul>
 <li><a href="https://learngitbranching.js.org/">Learn Git Branching</a> — Tutoriel interactif visuel</li>
 <li><a href="https://ohmygit.org/">Oh My Git!</a> — Jeu pour apprendre Git</li>
 <li><a href="https://github.com/eficode-academy/git-katas">Git Katas</a> — Exercices pratiques</li>
 </ul>
 </section>
-<section id="documentation" class="level3" data-number="5.1.2">
-<h3 data-number="5.1.2" class="anchored" data-anchor-id="documentation"><span class="header-section-number">5.1.2</span> 📖 Documentation</h3>
+<section id="documentation" class="level3">
+<h3 class="anchored" data-anchor-id="documentation">📖 Documentation</h3>
 <ul>
 <li><a href="https://git-scm.com/book/fr/v2">Pro Git Book</a> — Livre gratuit (en français)</li>
 <li><a href="https://docs.github.com/">GitHub Docs</a></li>
 <li><a href="https://docs.gitlab.com/">GitLab Docs</a></li>
 </ul>
 </section>
-<section id="outils" class="level3" data-number="5.1.3">
-<h3 data-number="5.1.3" class="anchored" data-anchor-id="outils"><span class="header-section-number">5.1.3</span> 🛠️ Outils</h3>
+<section id="outils" class="level3">
+<h3 class="anchored" data-anchor-id="outils">🛠️ Outils</h3>
 <ul>
 <li><a href="https://desktop.github.com/">GitHub Desktop</a> — Interface graphique</li>
 <li><a href="https://www.gitkraken.com/">GitKraken</a> — Client Git visuel</li>
@@ -1656,13 +1688,13 @@ feature/etl       └───●───●───●───┘     (nouve
 <hr>
 </section>
 </section>
-<section id="conclusion" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">5.2</span> ✅ Conclusion</h2>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">✅ Conclusion</h2>
 <p>Tu sais maintenant : - ✅ Ce qu’est Git, GitHub et GitLab - ✅ Comment initialiser et configurer un projet - ✅ Le workflow : add → commit → push - ✅ Travailler avec les branches - ✅ Utiliser <code>.gitignore</code> pour protéger les données sensibles - ✅ Résoudre les conflits de merge - ✅ Les commandes avancées (stash, reset, revert)</p>
 <hr>
 </section>
-<section id="prochaine-étape" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="prochaine-étape"><span class="header-section-number">5.3</span> ➡️ Prochaine étape</h2>
+<section id="prochaine-étape" class="level2">
+<h2 class="anchored" data-anchor-id="prochaine-étape">➡️ Prochaine étape</h2>
 <p>Maintenant que tu sais versionner ton code, passons aux <strong>bases de données</strong> !</p>
 <p>👉 <strong>Module suivant : <code>04_python_basics_for_data_engineers.ipynb</code></strong> — Les fondamentaux de Python</p>
 <hr>

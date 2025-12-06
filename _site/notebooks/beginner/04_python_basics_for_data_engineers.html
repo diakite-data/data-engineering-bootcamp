@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>📘 Python – Bases pour Data Engineers – Bootcamp Data Engineering</title>
+<title>📘 Python – Bases pour Data Engineers – Bootcamp Data Engineering – From Zero to Hero</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -110,6 +110,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <style>html{ scroll-behavior: smooth; }</style>
 
 
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -282,7 +283,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">Bootcamp Data Engineering</span>
+    <span class="navbar-title">Bootcamp Data Engineering – From Zero to Hero</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -293,11 +294,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/diakite-data/data-engineering-bootcamp"> <i class="bi bi-github" role="img">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="../../#"> <i class="bi bi-lightbulb" role="img" aria-label="Mode clair/sombre">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -380,8 +376,44 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notebooks/beginner/06_intro_databases.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">🧠 Introduction aux bases de données pour Data Engineers</span></a>
+  <a href="../../notebooks/beginner/06_intro_relational_databases.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🗄️ Introduction aux Bases de Données Relationnelles</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/07_sql_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🐘 SQL for Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/08_intro_big_data_distributed.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🐘 Introduction au Big Data &amp; Traitement Distribué</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/09_mongodb_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🍃 MongoDB for Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/10_elasticsearch_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🔍 Elasticsearch for Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/11_pyspark_for_data_engineering.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">⚡ PySpark for Data Engineering</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/12_orchestration_pipelines.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">⏰ Orchestration de Pipelines Data</span></a>
   </div>
 </li>
       </ul>
@@ -396,148 +428,148 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#prérequis" id="toc-prérequis" class="nav-link active" data-scroll-target="#prérequis"><span class="header-section-number">0.1</span> 📋 Prérequis</a></li>
-  <li><a href="#objectifs-du-module" id="toc-objectifs-du-module" class="nav-link" data-scroll-target="#objectifs-du-module"><span class="header-section-number">0.2</span> 🎯 Objectifs du module</a></li>
-  <li><a href="#pourquoi-python-pour-le-data-engineering" id="toc-pourquoi-python-pour-le-data-engineering" class="nav-link" data-scroll-target="#pourquoi-python-pour-le-data-engineering"><span class="header-section-number">0.3</span> 🐍 Pourquoi Python pour le Data Engineering ?</a></li>
-  <li><a href="#installation-environnement" id="toc-installation-environnement" class="nav-link" data-scroll-target="#installation-environnement"><span class="header-section-number">0.4</span> 0. Installation &amp; Environnement 🛠️</a>
+  <li><a href="#prérequis" id="toc-prérequis" class="nav-link active" data-scroll-target="#prérequis">📋 Prérequis</a></li>
+  <li><a href="#objectifs-du-module" id="toc-objectifs-du-module" class="nav-link" data-scroll-target="#objectifs-du-module">🎯 Objectifs du module</a></li>
+  <li><a href="#pourquoi-python-pour-le-data-engineering" id="toc-pourquoi-python-pour-le-data-engineering" class="nav-link" data-scroll-target="#pourquoi-python-pour-le-data-engineering">🐍 Pourquoi Python pour le Data Engineering ?</a></li>
+  <li><a href="#installation-environnement" id="toc-installation-environnement" class="nav-link" data-scroll-target="#installation-environnement">0. Installation &amp; Environnement 🛠️</a>
   <ul class="collapse">
-  <li><a href="#installer-python" id="toc-installer-python" class="nav-link" data-scroll-target="#installer-python"><span class="header-section-number">0.4.1</span> 0.1 Installer Python</a></li>
-  <li><a href="#vérifier-linstallation-de-python" id="toc-vérifier-linstallation-de-python" class="nav-link" data-scroll-target="#vérifier-linstallation-de-python"><span class="header-section-number">0.4.2</span> 0.2 Vérifier l’installation de Python</a></li>
-  <li><a href="#installer-visual-studio-code-vs-code" id="toc-installer-visual-studio-code-vs-code" class="nav-link" data-scroll-target="#installer-visual-studio-code-vs-code"><span class="header-section-number">0.4.3</span> 0.3 Installer Visual Studio Code (VS Code)</a></li>
-  <li><a href="#extensions-vs-code-python-jupyter" id="toc-extensions-vs-code-python-jupyter" class="nav-link" data-scroll-target="#extensions-vs-code-python-jupyter"><span class="header-section-number">0.4.4</span> 0.4 Extensions VS Code : Python &amp; Jupyter</a></li>
-  <li><a href="#installer-jupyter-notebook" id="toc-installer-jupyter-notebook" class="nav-link" data-scroll-target="#installer-jupyter-notebook"><span class="header-section-number">0.4.5</span> 0.5 Installer Jupyter Notebook</a></li>
-  <li><a href="#premier-test-python" id="toc-premier-test-python" class="nav-link" data-scroll-target="#premier-test-python"><span class="header-section-number">0.4.6</span> 0.6 Premier test Python</a></li>
+  <li><a href="#installer-python" id="toc-installer-python" class="nav-link" data-scroll-target="#installer-python">0.1 Installer Python</a></li>
+  <li><a href="#vérifier-linstallation-de-python" id="toc-vérifier-linstallation-de-python" class="nav-link" data-scroll-target="#vérifier-linstallation-de-python">0.2 Vérifier l’installation de Python</a></li>
+  <li><a href="#installer-visual-studio-code-vs-code" id="toc-installer-visual-studio-code-vs-code" class="nav-link" data-scroll-target="#installer-visual-studio-code-vs-code">0.3 Installer Visual Studio Code (VS Code)</a></li>
+  <li><a href="#extensions-vs-code-python-jupyter" id="toc-extensions-vs-code-python-jupyter" class="nav-link" data-scroll-target="#extensions-vs-code-python-jupyter">0.4 Extensions VS Code : Python &amp; Jupyter</a></li>
+  <li><a href="#installer-jupyter-notebook" id="toc-installer-jupyter-notebook" class="nav-link" data-scroll-target="#installer-jupyter-notebook">0.5 Installer Jupyter Notebook</a></li>
+  <li><a href="#premier-test-python" id="toc-premier-test-python" class="nav-link" data-scroll-target="#premier-test-python">0.6 Premier test Python</a></li>
   </ul></li>
-  <li><a href="#environnements-virtuels" id="toc-environnements-virtuels" class="nav-link" data-scroll-target="#environnements-virtuels"><span class="header-section-number">0.5</span> 0.7 Environnements virtuels 🔒</a>
+  <li><a href="#environnements-virtuels" id="toc-environnements-virtuels" class="nav-link" data-scroll-target="#environnements-virtuels">0.7 Environnements virtuels 🔒</a>
   <ul class="collapse">
-  <li><a href="#pourquoi-utiliser-un-environnement-virtuel" id="toc-pourquoi-utiliser-un-environnement-virtuel" class="nav-link" data-scroll-target="#pourquoi-utiliser-un-environnement-virtuel"><span class="header-section-number">0.5.1</span> Pourquoi utiliser un environnement virtuel ?</a></li>
-  <li><a href="#option-1-venv-intégré-à-python" id="toc-option-1-venv-intégré-à-python" class="nav-link" data-scroll-target="#option-1-venv-intégré-à-python"><span class="header-section-number">0.5.2</span> Option 1 : <code>venv</code> (intégré à Python)</a></li>
-  <li><a href="#option-2-conda-anacondaminiconda" id="toc-option-2-conda-anacondaminiconda" class="nav-link" data-scroll-target="#option-2-conda-anacondaminiconda"><span class="header-section-number">0.5.3</span> Option 2 : <code>conda</code> (Anaconda/Miniconda)</a></li>
-  <li><a href="#recommandation-pour-data-engineers" id="toc-recommandation-pour-data-engineers" class="nav-link" data-scroll-target="#recommandation-pour-data-engineers"><span class="header-section-number">0.5.4</span> 💡 Recommandation pour Data Engineers</a></li>
+  <li><a href="#pourquoi-utiliser-un-environnement-virtuel" id="toc-pourquoi-utiliser-un-environnement-virtuel" class="nav-link" data-scroll-target="#pourquoi-utiliser-un-environnement-virtuel">Pourquoi utiliser un environnement virtuel ?</a></li>
+  <li><a href="#option-1-venv-intégré-à-python" id="toc-option-1-venv-intégré-à-python" class="nav-link" data-scroll-target="#option-1-venv-intégré-à-python">Option 1 : <code>venv</code> (intégré à Python)</a></li>
+  <li><a href="#option-2-conda-anacondaminiconda" id="toc-option-2-conda-anacondaminiconda" class="nav-link" data-scroll-target="#option-2-conda-anacondaminiconda">Option 2 : <code>conda</code> (Anaconda/Miniconda)</a></li>
+  <li><a href="#recommandation-pour-data-engineers" id="toc-recommandation-pour-data-engineers" class="nav-link" data-scroll-target="#recommandation-pour-data-engineers">💡 Recommandation pour Data Engineers</a></li>
   </ul></li>
-  <li><a href="#gestion-des-packages-avec-pip" id="toc-gestion-des-packages-avec-pip" class="nav-link" data-scroll-target="#gestion-des-packages-avec-pip"><span class="header-section-number">0.6</span> 0.8 Gestion des packages avec pip 📦</a>
+  <li><a href="#gestion-des-packages-avec-pip" id="toc-gestion-des-packages-avec-pip" class="nav-link" data-scroll-target="#gestion-des-packages-avec-pip">0.8 Gestion des packages avec pip 📦</a>
   <ul class="collapse">
-  <li><a href="#commandes-essentielles" id="toc-commandes-essentielles" class="nav-link" data-scroll-target="#commandes-essentielles"><span class="header-section-number">0.6.1</span> Commandes essentielles</a></li>
-  <li><a href="#le-fichier-requirements.txt" id="toc-le-fichier-requirements.txt" class="nav-link" data-scroll-target="#le-fichier-requirements.txt"><span class="header-section-number">0.6.2</span> Le fichier <code>requirements.txt</code></a></li>
-  <li><a href="#exemple-de-requirements.txt-pour-data-engineering" id="toc-exemple-de-requirements.txt-pour-data-engineering" class="nav-link" data-scroll-target="#exemple-de-requirements.txt-pour-data-engineering"><span class="header-section-number">0.6.3</span> Exemple de <code>requirements.txt</code> pour Data Engineering</a></li>
+  <li><a href="#commandes-essentielles" id="toc-commandes-essentielles" class="nav-link" data-scroll-target="#commandes-essentielles">Commandes essentielles</a></li>
+  <li><a href="#le-fichier-requirements.txt" id="toc-le-fichier-requirements.txt" class="nav-link" data-scroll-target="#le-fichier-requirements.txt">Le fichier <code>requirements.txt</code></a></li>
+  <li><a href="#exemple-de-requirements.txt-pour-data-engineering" id="toc-exemple-de-requirements.txt-pour-data-engineering" class="nav-link" data-scroll-target="#exemple-de-requirements.txt-pour-data-engineering">Exemple de <code>requirements.txt</code> pour Data Engineering</a></li>
   </ul></li>
-  <li><a href="#variables-et-types" id="toc-variables-et-types" class="nav-link" data-scroll-target="#variables-et-types"><span class="header-section-number">0.7</span> 1. Variables et Types 🔤</a>
+  <li><a href="#variables-et-types" id="toc-variables-et-types" class="nav-link" data-scroll-target="#variables-et-types">1. Variables et Types 🔤</a>
   <ul class="collapse">
-  <li><a href="#conversion-de-types" id="toc-conversion-de-types" class="nav-link" data-scroll-target="#conversion-de-types"><span class="header-section-number">0.7.1</span> Conversion de types</a></li>
+  <li><a href="#conversion-de-types" id="toc-conversion-de-types" class="nav-link" data-scroll-target="#conversion-de-types">Conversion de types</a></li>
   </ul></li>
-  <li><a href="#conditions-et-boucles" id="toc-conditions-et-boucles" class="nav-link" data-scroll-target="#conditions-et-boucles"><span class="header-section-number">0.8</span> 🔁 2. Conditions et Boucles</a>
+  <li><a href="#conditions-et-boucles" id="toc-conditions-et-boucles" class="nav-link" data-scroll-target="#conditions-et-boucles">🔁 2. Conditions et Boucles</a>
   <ul class="collapse">
-  <li><a href="#conditions-if-elif-else" id="toc-conditions-if-elif-else" class="nav-link" data-scroll-target="#conditions-if-elif-else"><span class="header-section-number">0.8.1</span> 🎯 2.1 Conditions (if / elif / else)</a></li>
-  <li><a href="#boucles-for-et-while" id="toc-boucles-for-et-while" class="nav-link" data-scroll-target="#boucles-for-et-while"><span class="header-section-number">0.8.2</span> 🔄 2.2 Boucles (for et while)</a></li>
-  <li><a href="#boucles-avancées-enumerate-et-zip" id="toc-boucles-avancées-enumerate-et-zip" class="nav-link" data-scroll-target="#boucles-avancées-enumerate-et-zip"><span class="header-section-number">0.8.3</span> 🔍 2.3 Boucles avancées : <code>enumerate()</code> et <code>zip()</code></a></li>
-  <li><a href="#erreurs-fréquentes-et-bonnes-pratiques" id="toc-erreurs-fréquentes-et-bonnes-pratiques" class="nav-link" data-scroll-target="#erreurs-fréquentes-et-bonnes-pratiques"><span class="header-section-number">0.8.4</span> ⚠️ Erreurs fréquentes et bonnes pratiques</a></li>
-  <li><a href="#récapitulatif" id="toc-récapitulatif" class="nav-link" data-scroll-target="#récapitulatif"><span class="header-section-number">0.8.5</span> 📚 Récapitulatif</a></li>
-  <li><a href="#points-clés-à-retenir" id="toc-points-clés-à-retenir" class="nav-link" data-scroll-target="#points-clés-à-retenir"><span class="header-section-number">0.8.6</span> 🎯 Points clés à retenir</a></li>
+  <li><a href="#conditions-if-elif-else" id="toc-conditions-if-elif-else" class="nav-link" data-scroll-target="#conditions-if-elif-else">🎯 2.1 Conditions (if / elif / else)</a></li>
+  <li><a href="#boucles-for-et-while" id="toc-boucles-for-et-while" class="nav-link" data-scroll-target="#boucles-for-et-while">🔄 2.2 Boucles (for et while)</a></li>
+  <li><a href="#boucles-avancées-enumerate-et-zip" id="toc-boucles-avancées-enumerate-et-zip" class="nav-link" data-scroll-target="#boucles-avancées-enumerate-et-zip">🔍 2.3 Boucles avancées : <code>enumerate()</code> et <code>zip()</code></a></li>
+  <li><a href="#erreurs-fréquentes-et-bonnes-pratiques" id="toc-erreurs-fréquentes-et-bonnes-pratiques" class="nav-link" data-scroll-target="#erreurs-fréquentes-et-bonnes-pratiques">⚠️ Erreurs fréquentes et bonnes pratiques</a></li>
+  <li><a href="#récapitulatif" id="toc-récapitulatif" class="nav-link" data-scroll-target="#récapitulatif">📚 Récapitulatif</a></li>
+  <li><a href="#points-clés-à-retenir" id="toc-points-clés-à-retenir" class="nav-link" data-scroll-target="#points-clés-à-retenir">🎯 Points clés à retenir</a></li>
   </ul></li>
-  <li><a href="#structures-de-données" id="toc-structures-de-données" class="nav-link" data-scroll-target="#structures-de-données"><span class="header-section-number">0.9</span> 3. Structures de données 🧱</a>
+  <li><a href="#structures-de-données" id="toc-structures-de-données" class="nav-link" data-scroll-target="#structures-de-données">3. Structures de données 🧱</a>
   <ul class="collapse">
-  <li><a href="#listes-list" id="toc-listes-list" class="nav-link" data-scroll-target="#listes-list"><span class="header-section-number">0.9.1</span> 3.1 Listes (<code>list</code>)</a></li>
-  <li><a href="#dictionnaires-dict" id="toc-dictionnaires-dict" class="nav-link" data-scroll-target="#dictionnaires-dict"><span class="header-section-number">0.9.2</span> 3.2 Dictionnaires (<code>dict</code>)</a></li>
-  <li><a href="#tuples-tuple" id="toc-tuples-tuple" class="nav-link" data-scroll-target="#tuples-tuple"><span class="header-section-number">0.9.3</span> 3.3 Tuples (<code>tuple</code>)</a></li>
-  <li><a href="#ensembles-set" id="toc-ensembles-set" class="nav-link" data-scroll-target="#ensembles-set"><span class="header-section-number">0.9.4</span> 3.4 Ensembles (<code>set</code>)</a></li>
-  <li><a href="#mini-exercice-structures-de-données" id="toc-mini-exercice-structures-de-données" class="nav-link" data-scroll-target="#mini-exercice-structures-de-données"><span class="header-section-number">0.9.5</span> 🧱 3.5 Mini-exercice — Structures de données</a></li>
+  <li><a href="#listes-list" id="toc-listes-list" class="nav-link" data-scroll-target="#listes-list">3.1 Listes (<code>list</code>)</a></li>
+  <li><a href="#dictionnaires-dict" id="toc-dictionnaires-dict" class="nav-link" data-scroll-target="#dictionnaires-dict">3.2 Dictionnaires (<code>dict</code>)</a></li>
+  <li><a href="#tuples-tuple" id="toc-tuples-tuple" class="nav-link" data-scroll-target="#tuples-tuple">3.3 Tuples (<code>tuple</code>)</a></li>
+  <li><a href="#ensembles-set" id="toc-ensembles-set" class="nav-link" data-scroll-target="#ensembles-set">3.4 Ensembles (<code>set</code>)</a></li>
+  <li><a href="#mini-exercice-structures-de-données" id="toc-mini-exercice-structures-de-données" class="nav-link" data-scroll-target="#mini-exercice-structures-de-données">🧱 3.5 Mini-exercice — Structures de données</a></li>
   </ul></li>
-  <li><a href="#fonctions" id="toc-fonctions" class="nav-link" data-scroll-target="#fonctions"><span class="header-section-number">0.10</span> 4. Fonctions</a>
+  <li><a href="#fonctions" id="toc-fonctions" class="nav-link" data-scroll-target="#fonctions">4. Fonctions</a>
   <ul class="collapse">
-  <li><a href="#fonction-pure-sans-effet-externe" id="toc-fonction-pure-sans-effet-externe" class="nav-link" data-scroll-target="#fonction-pure-sans-effet-externe"><span class="header-section-number">0.10.1</span> ✔️ <strong>4.1 Fonction pure (sans effet externe)</strong></a></li>
-  <li><a href="#paramètres-valeurs-par-défaut" id="toc-paramètres-valeurs-par-défaut" class="nav-link" data-scroll-target="#paramètres-valeurs-par-défaut"><span class="header-section-number">0.10.2</span> ⚙️ 4.2 Paramètres + valeurs par défaut</a></li>
-  <li><a href="#retourner-plusieurs-valeurs-tuple" id="toc-retourner-plusieurs-valeurs-tuple" class="nav-link" data-scroll-target="#retourner-plusieurs-valeurs-tuple"><span class="header-section-number">0.10.3</span> 📊 4.3 Retourner plusieurs valeurs (tuple)</a></li>
-  <li><a href="#fonctions-qui-manipulent-un-dictionnaire" id="toc-fonctions-qui-manipulent-un-dictionnaire" class="nav-link" data-scroll-target="#fonctions-qui-manipulent-un-dictionnaire"><span class="header-section-number">0.10.4</span> 🔗 4.4 Fonctions qui manipulent un dictionnaire</a></li>
-  <li><a href="#mini-exercice-fonctions-sur-des-posts" id="toc-mini-exercice-fonctions-sur-des-posts" class="nav-link" data-scroll-target="#mini-exercice-fonctions-sur-des-posts"><span class="header-section-number">0.10.5</span> 🧪 Mini-exercice — Fonctions sur des posts</a></li>
+  <li><a href="#fonction-pure-sans-effet-externe" id="toc-fonction-pure-sans-effet-externe" class="nav-link" data-scroll-target="#fonction-pure-sans-effet-externe">✔️ <strong>4.1 Fonction pure (sans effet externe)</strong></a></li>
+  <li><a href="#paramètres-valeurs-par-défaut" id="toc-paramètres-valeurs-par-défaut" class="nav-link" data-scroll-target="#paramètres-valeurs-par-défaut">⚙️ 4.2 Paramètres + valeurs par défaut</a></li>
+  <li><a href="#retourner-plusieurs-valeurs-tuple" id="toc-retourner-plusieurs-valeurs-tuple" class="nav-link" data-scroll-target="#retourner-plusieurs-valeurs-tuple">📊 4.3 Retourner plusieurs valeurs (tuple)</a></li>
+  <li><a href="#fonctions-qui-manipulent-un-dictionnaire" id="toc-fonctions-qui-manipulent-un-dictionnaire" class="nav-link" data-scroll-target="#fonctions-qui-manipulent-un-dictionnaire">🔗 4.4 Fonctions qui manipulent un dictionnaire</a></li>
+  <li><a href="#mini-exercice-fonctions-sur-des-posts" id="toc-mini-exercice-fonctions-sur-des-posts" class="nav-link" data-scroll-target="#mini-exercice-fonctions-sur-des-posts">🧪 Mini-exercice — Fonctions sur des posts</a></li>
   </ul></li>
-  <li><a href="#classes-et-objets" id="toc-classes-et-objets" class="nav-link" data-scroll-target="#classes-et-objets"><span class="header-section-number">1</span> 5. Classes et Objets 🧩</a>
+  <li><a href="#classes-et-objets" id="toc-classes-et-objets" class="nav-link" data-scroll-target="#classes-et-objets">5. Classes et Objets 🧩</a>
   <ul class="collapse">
-  <li><a href="#exemple-simple-modéliser-un-utilisateur" id="toc-exemple-simple-modéliser-un-utilisateur" class="nav-link" data-scroll-target="#exemple-simple-modéliser-un-utilisateur"><span class="header-section-number">1.1</span> 5.1 Exemple simple : Modéliser un utilisateur 👤</a></li>
-  <li><a href="#ajouter-une-méthode-utile" id="toc-ajouter-une-méthode-utile" class="nav-link" data-scroll-target="#ajouter-une-méthode-utile"><span class="header-section-number">1.2</span> 5.2 Ajouter une méthode utile 🏙️</a></li>
-  <li><a href="#encapsulation-attributs-protégésprivés" id="toc-encapsulation-attributs-protégésprivés" class="nav-link" data-scroll-target="#encapsulation-attributs-protégésprivés"><span class="header-section-number">1.3</span> 5.3 Encapsulation : attributs protégés/privés 🔒</a></li>
-  <li><a href="#représentation-textuelle-str" id="toc-représentation-textuelle-str" class="nav-link" data-scroll-target="#représentation-textuelle-str"><span class="header-section-number">1.4</span> 5.4 Représentation textuelle (<strong>str</strong>) 📝</a></li>
-  <li><a href="#composition-dobjets-objet-dans-un-objet" id="toc-composition-dobjets-objet-dans-un-objet" class="nav-link" data-scroll-target="#composition-dobjets-objet-dans-un-objet"><span class="header-section-number">1.5</span> 5.5 Composition d’objets (objet dans un objet) 🧱</a></li>
-  <li><a href="#pourquoi-utiliser-des-classes-en-data-engineering" id="toc-pourquoi-utiliser-des-classes-en-data-engineering" class="nav-link" data-scroll-target="#pourquoi-utiliser-des-classes-en-data-engineering"><span class="header-section-number">1.6</span> 5.6 Pourquoi utiliser des classes en Data Engineering ? ⚙️</a></li>
-  <li><a href="#erreurs-fréquentes" id="toc-erreurs-fréquentes" class="nav-link" data-scroll-target="#erreurs-fréquentes"><span class="header-section-number">1.7</span> 5.7 Erreurs fréquentes ⚠️</a></li>
-  <li><a href="#gestion-derreurs-indispensable-en-data-engineering" id="toc-gestion-derreurs-indispensable-en-data-engineering" class="nav-link" data-scroll-target="#gestion-derreurs-indispensable-en-data-engineering"><span class="header-section-number">1.8</span> 6. Gestion d’erreurs 🛑 — (Indispensable en Data Engineering)</a>
+  <li><a href="#exemple-simple-modéliser-un-utilisateur" id="toc-exemple-simple-modéliser-un-utilisateur" class="nav-link" data-scroll-target="#exemple-simple-modéliser-un-utilisateur">5.1 Exemple simple : Modéliser un utilisateur 👤</a></li>
+  <li><a href="#ajouter-une-méthode-utile" id="toc-ajouter-une-méthode-utile" class="nav-link" data-scroll-target="#ajouter-une-méthode-utile">5.2 Ajouter une méthode utile 🏙️</a></li>
+  <li><a href="#encapsulation-attributs-protégésprivés" id="toc-encapsulation-attributs-protégésprivés" class="nav-link" data-scroll-target="#encapsulation-attributs-protégésprivés">5.3 Encapsulation : attributs protégés/privés 🔒</a></li>
+  <li><a href="#représentation-textuelle-str" id="toc-représentation-textuelle-str" class="nav-link" data-scroll-target="#représentation-textuelle-str">5.4 Représentation textuelle (<strong>str</strong>) 📝</a></li>
+  <li><a href="#composition-dobjets-objet-dans-un-objet" id="toc-composition-dobjets-objet-dans-un-objet" class="nav-link" data-scroll-target="#composition-dobjets-objet-dans-un-objet">5.5 Composition d’objets (objet dans un objet) 🧱</a></li>
+  <li><a href="#pourquoi-utiliser-des-classes-en-data-engineering" id="toc-pourquoi-utiliser-des-classes-en-data-engineering" class="nav-link" data-scroll-target="#pourquoi-utiliser-des-classes-en-data-engineering">5.6 Pourquoi utiliser des classes en Data Engineering ? ⚙️</a></li>
+  <li><a href="#erreurs-fréquentes" id="toc-erreurs-fréquentes" class="nav-link" data-scroll-target="#erreurs-fréquentes">5.7 Erreurs fréquentes ⚠️</a></li>
+  <li><a href="#gestion-derreurs-indispensable-en-data-engineering" id="toc-gestion-derreurs-indispensable-en-data-engineering" class="nav-link" data-scroll-target="#gestion-derreurs-indispensable-en-data-engineering">6. Gestion d’erreurs 🛑 — (Indispensable en Data Engineering)</a>
   <ul class="collapse">
-  <li><a href="#exemple-simple-division-sécurisée" id="toc-exemple-simple-division-sécurisée" class="nav-link" data-scroll-target="#exemple-simple-division-sécurisée"><span class="header-section-number">1.8.1</span> 🎯 Exemple simple — division sécurisée</a></li>
-  <li><a href="#exemple-plus-réaliste-lecture-de-fichier" id="toc-exemple-plus-réaliste-lecture-de-fichier" class="nav-link" data-scroll-target="#exemple-plus-réaliste-lecture-de-fichier"><span class="header-section-number">1.8.2</span> 🧰 Exemple plus réaliste — lecture de fichier</a></li>
-  <li><a href="#else-et-finally" id="toc-else-et-finally" class="nav-link" data-scroll-target="#else-et-finally"><span class="header-section-number">1.8.3</span> 💡 <code>else</code> et <code>finally</code></a></li>
-  <li><a href="#exemple-data-engineering-appel-api-sécurisé" id="toc-exemple-data-engineering-appel-api-sécurisé" class="nav-link" data-scroll-target="#exemple-data-engineering-appel-api-sécurisé"><span class="header-section-number">1.8.4</span> 🏗️ Exemple Data Engineering : appel API sécurisé</a></li>
-  <li><a href="#erreurs-fréquentes-à-éviter" id="toc-erreurs-fréquentes-à-éviter" class="nav-link" data-scroll-target="#erreurs-fréquentes-à-éviter"><span class="header-section-number">1.8.5</span> ⚠️ Erreurs fréquentes à éviter</a></li>
-  <li><a href="#conseil-pro-très-utile-en-data-engineering" id="toc-conseil-pro-très-utile-en-data-engineering" class="nav-link" data-scroll-target="#conseil-pro-très-utile-en-data-engineering"><span class="header-section-number">1.8.6</span> 🚀 Conseil pro (très utile en Data Engineering)</a></li>
-  <li><a href="#à-retenir" id="toc-à-retenir" class="nav-link" data-scroll-target="#à-retenir"><span class="header-section-number">1.8.7</span> 📌 À retenir</a></li>
+  <li><a href="#exemple-simple-division-sécurisée" id="toc-exemple-simple-division-sécurisée" class="nav-link" data-scroll-target="#exemple-simple-division-sécurisée">🎯 Exemple simple — division sécurisée</a></li>
+  <li><a href="#exemple-plus-réaliste-lecture-de-fichier" id="toc-exemple-plus-réaliste-lecture-de-fichier" class="nav-link" data-scroll-target="#exemple-plus-réaliste-lecture-de-fichier">🧰 Exemple plus réaliste — lecture de fichier</a></li>
+  <li><a href="#else-et-finally" id="toc-else-et-finally" class="nav-link" data-scroll-target="#else-et-finally">💡 <code>else</code> et <code>finally</code></a></li>
+  <li><a href="#exemple-data-engineering-appel-api-sécurisé" id="toc-exemple-data-engineering-appel-api-sécurisé" class="nav-link" data-scroll-target="#exemple-data-engineering-appel-api-sécurisé">🏗️ Exemple Data Engineering : appel API sécurisé</a></li>
+  <li><a href="#erreurs-fréquentes-à-éviter" id="toc-erreurs-fréquentes-à-éviter" class="nav-link" data-scroll-target="#erreurs-fréquentes-à-éviter">⚠️ Erreurs fréquentes à éviter</a></li>
+  <li><a href="#conseil-pro-très-utile-en-data-engineering" id="toc-conseil-pro-très-utile-en-data-engineering" class="nav-link" data-scroll-target="#conseil-pro-très-utile-en-data-engineering">🚀 Conseil pro (très utile en Data Engineering)</a></li>
+  <li><a href="#à-retenir" id="toc-à-retenir" class="nav-link" data-scroll-target="#à-retenir">📌 À retenir</a></li>
   </ul></li>
-  <li><a href="#modules-et-imports-structurer-son-code-comme-un-data-engineer" id="toc-modules-et-imports-structurer-son-code-comme-un-data-engineer" class="nav-link" data-scroll-target="#modules-et-imports-structurer-son-code-comme-un-data-engineer"><span class="header-section-number">1.9</span> 7. Modules et Imports 📦 — Structurer son code comme un Data Engineer</a>
+  <li><a href="#modules-et-imports-structurer-son-code-comme-un-data-engineer" id="toc-modules-et-imports-structurer-son-code-comme-un-data-engineer" class="nav-link" data-scroll-target="#modules-et-imports-structurer-son-code-comme-un-data-engineer">7. Modules et Imports 📦 — Structurer son code comme un Data Engineer</a>
   <ul class="collapse">
-  <li><a href="#exemple-de-structure-de-projet-propre-professionnelle" id="toc-exemple-de-structure-de-projet-propre-professionnelle" class="nav-link" data-scroll-target="#exemple-de-structure-de-projet-propre-professionnelle"><span class="header-section-number">1.9.1</span> 🗂️ Exemple de structure de projet (propre &amp; professionnelle)</a></li>
-  <li><a href="#contenu-du-module-utilsmath_utils.py" id="toc-contenu-du-module-utilsmath_utils.py" class="nav-link" data-scroll-target="#contenu-du-module-utilsmath_utils.py"><span class="header-section-number">1.9.2</span> 📌 Contenu du module : <code>utils/math_utils.py</code></a></li>
-  <li><a href="#contenu-dun-autre-module-processorstext_cleaner.py" id="toc-contenu-dun-autre-module-processorstext_cleaner.py" class="nav-link" data-scroll-target="#contenu-dun-autre-module-processorstext_cleaner.py"><span class="header-section-number">1.9.3</span> 📌 Contenu d’un autre module : <code>processors/text_cleaner.py</code></a></li>
-  <li><a href="#importer-dans-main.py" id="toc-importer-dans-main.py" class="nav-link" data-scroll-target="#importer-dans-main.py"><span class="header-section-number">1.9.4</span> 📌 Importer dans <code>main.py</code></a></li>
+  <li><a href="#exemple-de-structure-de-projet-propre-professionnelle" id="toc-exemple-de-structure-de-projet-propre-professionnelle" class="nav-link" data-scroll-target="#exemple-de-structure-de-projet-propre-professionnelle">🗂️ Exemple de structure de projet (propre &amp; professionnelle)</a></li>
+  <li><a href="#contenu-du-module-utilsmath_utils.py" id="toc-contenu-du-module-utilsmath_utils.py" class="nav-link" data-scroll-target="#contenu-du-module-utilsmath_utils.py">📌 Contenu du module : <code>utils/math_utils.py</code></a></li>
+  <li><a href="#contenu-dun-autre-module-processorstext_cleaner.py" id="toc-contenu-dun-autre-module-processorstext_cleaner.py" class="nav-link" data-scroll-target="#contenu-dun-autre-module-processorstext_cleaner.py">📌 Contenu d’un autre module : <code>processors/text_cleaner.py</code></a></li>
+  <li><a href="#importer-dans-main.py" id="toc-importer-dans-main.py" class="nav-link" data-scroll-target="#importer-dans-main.py">📌 Importer dans <code>main.py</code></a></li>
   </ul></li>
-  <li><a href="#import-absolu-vs-import-relatif" id="toc-import-absolu-vs-import-relatif" class="nav-link" data-scroll-target="#import-absolu-vs-import-relatif"><span class="header-section-number">1.10</span> 🔍 💡 Import absolu vs import relatif</a>
+  <li><a href="#import-absolu-vs-import-relatif" id="toc-import-absolu-vs-import-relatif" class="nav-link" data-scroll-target="#import-absolu-vs-import-relatif">🔍 💡 Import absolu vs import relatif</a>
   <ul class="collapse">
-  <li><a href="#import-absolu-recommandé" id="toc-import-absolu-recommandé" class="nav-link" data-scroll-target="#import-absolu-recommandé"><span class="header-section-number">1.10.1</span> ✔️ Import absolu (recommandé)</a></li>
-  <li><a href="#import-relatif-utile-dans-les-packages" id="toc-import-relatif-utile-dans-les-packages" class="nav-link" data-scroll-target="#import-relatif-utile-dans-les-packages"><span class="header-section-number">1.10.2</span> ✔️ Import relatif (utile dans les packages)</a></li>
+  <li><a href="#import-absolu-recommandé" id="toc-import-absolu-recommandé" class="nav-link" data-scroll-target="#import-absolu-recommandé">✔️ Import absolu (recommandé)</a></li>
+  <li><a href="#import-relatif-utile-dans-les-packages" id="toc-import-relatif-utile-dans-les-packages" class="nav-link" data-scroll-target="#import-relatif-utile-dans-les-packages">✔️ Import relatif (utile dans les packages)</a></li>
   </ul></li>
-  <li><a href="#pourquoi-cest-important-en-data-engineering" id="toc-pourquoi-cest-important-en-data-engineering" class="nav-link" data-scroll-target="#pourquoi-cest-important-en-data-engineering"><span class="header-section-number">1.11</span> 🧠 Pourquoi c’est important en Data Engineering ?</a></li>
-  <li><a href="#erreurs-fréquentes-solutions" id="toc-erreurs-fréquentes-solutions" class="nav-link" data-scroll-target="#erreurs-fréquentes-solutions"><span class="header-section-number">1.12</span> ⚠️ Erreurs fréquentes &amp; solutions</a>
+  <li><a href="#pourquoi-cest-important-en-data-engineering" id="toc-pourquoi-cest-important-en-data-engineering" class="nav-link" data-scroll-target="#pourquoi-cest-important-en-data-engineering">🧠 Pourquoi c’est important en Data Engineering ?</a></li>
+  <li><a href="#erreurs-fréquentes-solutions" id="toc-erreurs-fréquentes-solutions" class="nav-link" data-scroll-target="#erreurs-fréquentes-solutions">⚠️ Erreurs fréquentes &amp; solutions</a>
   <ul class="collapse">
-  <li><a href="#astuce-pro-vérifier-ton-pythonpath" id="toc-astuce-pro-vérifier-ton-pythonpath" class="nav-link" data-scroll-target="#astuce-pro-vérifier-ton-pythonpath"><span class="header-section-number">1.12.1</span> ✔️ Astuce pro : vérifier ton <code>PYTHONPATH</code></a></li>
-  <li><a href="#rappel-essentiel" id="toc-rappel-essentiel" class="nav-link" data-scroll-target="#rappel-essentiel"><span class="header-section-number">1.12.2</span> ⭐ Rappel essentiel</a></li>
+  <li><a href="#astuce-pro-vérifier-ton-pythonpath" id="toc-astuce-pro-vérifier-ton-pythonpath" class="nav-link" data-scroll-target="#astuce-pro-vérifier-ton-pythonpath">✔️ Astuce pro : vérifier ton <code>PYTHONPATH</code></a></li>
+  <li><a href="#rappel-essentiel" id="toc-rappel-essentiel" class="nav-link" data-scroll-target="#rappel-essentiel">⭐ Rappel essentiel</a></li>
   </ul></li>
-  <li><a href="#manipulation-de-fichiers-compétence-essentielle-du-data-engineer" id="toc-manipulation-de-fichiers-compétence-essentielle-du-data-engineer" class="nav-link" data-scroll-target="#manipulation-de-fichiers-compétence-essentielle-du-data-engineer"><span class="header-section-number">1.13</span> 8. Manipulation de fichiers 📁 — Compétence essentielle du Data Engineer</a>
+  <li><a href="#manipulation-de-fichiers-compétence-essentielle-du-data-engineer" id="toc-manipulation-de-fichiers-compétence-essentielle-du-data-engineer" class="nav-link" data-scroll-target="#manipulation-de-fichiers-compétence-essentielle-du-data-engineer">8. Manipulation de fichiers 📁 — Compétence essentielle du Data Engineer</a>
   <ul class="collapse">
-  <li><a href="#initialisation-du-dossier-data" id="toc-initialisation-du-dossier-data" class="nav-link" data-scroll-target="#initialisation-du-dossier-data"><span class="header-section-number">1.13.1</span> 🗂️ Initialisation du dossier <code>data/</code></a></li>
+  <li><a href="#initialisation-du-dossier-data" id="toc-initialisation-du-dossier-data" class="nav-link" data-scroll-target="#initialisation-du-dossier-data">🗂️ Initialisation du dossier <code>data/</code></a></li>
   </ul></li>
-  <li><a href="#manipulation-dun-fichier-texte-logs-outputs" id="toc-manipulation-dun-fichier-texte-logs-outputs" class="nav-link" data-scroll-target="#manipulation-dun-fichier-texte-logs-outputs"><span class="header-section-number">1.14</span> 8.1 📄 Manipulation d’un fichier texte (logs, outputs…)</a></li>
-  <li><a href="#manipulation-dun-fichier-json" id="toc-manipulation-dun-fichier-json" class="nav-link" data-scroll-target="#manipulation-dun-fichier-json"><span class="header-section-number">1.15</span> 8.2 🧩 Manipulation d’un fichier JSON</a></li>
-  <li><a href="#optionnel-manipulation-dun-csv-avec-pandas" id="toc-optionnel-manipulation-dun-csv-avec-pandas" class="nav-link" data-scroll-target="#optionnel-manipulation-dun-csv-avec-pandas"><span class="header-section-number">1.16</span> 8.3 📊 (Optionnel) Manipulation d’un CSV avec Pandas</a></li>
-  <li><a href="#erreurs-fréquentes-comment-les-éviter" id="toc-erreurs-fréquentes-comment-les-éviter" class="nav-link" data-scroll-target="#erreurs-fréquentes-comment-les-éviter"><span class="header-section-number">1.17</span> ⚠️ Erreurs fréquentes &amp; comment les éviter</a></li>
-  <li><a href="#points-clés-à-retenir-1" id="toc-points-clés-à-retenir-1" class="nav-link" data-scroll-target="#points-clés-à-retenir-1"><span class="header-section-number">1.18</span> 🎓 Points clés à retenir</a></li>
-  <li><a href="#packages-et-pip-gérer-les-dépendances-comme-un-data-engineer" id="toc-packages-et-pip-gérer-les-dépendances-comme-un-data-engineer" class="nav-link" data-scroll-target="#packages-et-pip-gérer-les-dépendances-comme-un-data-engineer"><span class="header-section-number">1.19</span> 9. Packages et <code>pip</code> 📦 — Gérer les dépendances comme un Data Engineer</a></li>
-  <li><a href="#installer-un-package-avec-pip" id="toc-installer-un-package-avec-pip" class="nav-link" data-scroll-target="#installer-un-package-avec-pip"><span class="header-section-number">1.20</span> 🔧 Installer un package avec <code>pip</code></a></li>
-  <li><a href="#utilisation-dans-un-script" id="toc-utilisation-dans-un-script" class="nav-link" data-scroll-target="#utilisation-dans-un-script"><span class="header-section-number">1.21</span> 📌 Utilisation dans un script</a></li>
-  <li><a href="#installer-plusieurs-packages-requirements.txt" id="toc-installer-plusieurs-packages-requirements.txt" class="nav-link" data-scroll-target="#installer-plusieurs-packages-requirements.txt"><span class="header-section-number">1.22</span> 📁 Installer plusieurs packages — <code>requirements.txt</code></a></li>
-  <li><a href="#mettre-à-jour-un-package" id="toc-mettre-à-jour-un-package" class="nav-link" data-scroll-target="#mettre-à-jour-un-package"><span class="header-section-number">1.23</span> ♻️ Mettre à jour un package</a></li>
-  <li><a href="#désinstaller-un-package" id="toc-désinstaller-un-package" class="nav-link" data-scroll-target="#désinstaller-un-package"><span class="header-section-number">1.24</span> 🧹 Désinstaller un package</a></li>
-  <li><a href="#où-sont-installés-les-packages" id="toc-où-sont-installés-les-packages" class="nav-link" data-scroll-target="#où-sont-installés-les-packages"><span class="header-section-number">1.25</span> 📦 Où sont installés les packages ?</a></li>
-  <li><a href="#erreurs-fréquentes-bonnes-pratiques" id="toc-erreurs-fréquentes-bonnes-pratiques" class="nav-link" data-scroll-target="#erreurs-fréquentes-bonnes-pratiques"><span class="header-section-number">1.26</span> ⚠️ Erreurs fréquentes &amp; bonnes pratiques</a></li>
-  <li><a href="#astuce-pro-figer-les-versions-pour-la-production" id="toc-astuce-pro-figer-les-versions-pour-la-production" class="nav-link" data-scroll-target="#astuce-pro-figer-les-versions-pour-la-production"><span class="header-section-number">1.27</span> ⭐ Astuce Pro : figer les versions pour la production</a></li>
-  <li><a href="#logging-traçabilité-indispensable-en-data-engineering" id="toc-logging-traçabilité-indispensable-en-data-engineering" class="nav-link" data-scroll-target="#logging-traçabilité-indispensable-en-data-engineering"><span class="header-section-number">1.28</span> 10. Logging 🧾 — Traçabilité indispensable en Data Engineering</a></li>
-  <li><a href="#pourquoi-utiliser-logging" id="toc-pourquoi-utiliser-logging" class="nav-link" data-scroll-target="#pourquoi-utiliser-logging"><span class="header-section-number">1.29</span> 🔍 10.1 Pourquoi utiliser <code>logging</code> ?</a></li>
-  <li><a href="#configuration-minimale-recommandée" id="toc-configuration-minimale-recommandée" class="nav-link" data-scroll-target="#configuration-minimale-recommandée"><span class="header-section-number">1.30</span> 🔧 Configuration minimale recommandée</a></li>
-  <li><a href="#exemple-dutilisation" id="toc-exemple-dutilisation" class="nav-link" data-scroll-target="#exemple-dutilisation"><span class="header-section-number">1.31</span> 🧪 Exemple d’utilisation</a></li>
-  <li><a href="#écrire-les-logs-dans-un-fichier-cas-réel-data-engineering" id="toc-écrire-les-logs-dans-un-fichier-cas-réel-data-engineering" class="nav-link" data-scroll-target="#écrire-les-logs-dans-un-fichier-cas-réel-data-engineering"><span class="header-section-number">1.32</span> 📁 10.2 Écrire les logs dans un fichier (cas réel Data Engineering)</a></li>
-  <li><a href="#exemple-typique-dans-une-fonction" id="toc-exemple-typique-dans-une-fonction" class="nav-link" data-scroll-target="#exemple-typique-dans-une-fonction"><span class="header-section-number">1.33</span> 🧰 10.3 Exemple typique dans une fonction</a></li>
-  <li><a href="#erreurs-fréquentes-comment-les-éviter-1" id="toc-erreurs-fréquentes-comment-les-éviter-1" class="nav-link" data-scroll-target="#erreurs-fréquentes-comment-les-éviter-1"><span class="header-section-number">1.34</span> ⚠️ Erreurs fréquentes &amp; comment les éviter</a></li>
-  <li><a href="#astuce-pro-logger-dans-la-console-et-dans-un-fichier" id="toc-astuce-pro-logger-dans-la-console-et-dans-un-fichier" class="nav-link" data-scroll-target="#astuce-pro-logger-dans-la-console-et-dans-un-fichier"><span class="header-section-number">1.35</span> ⭐ Astuce pro : Logger dans la console <strong>et</strong> dans un fichier</a></li>
-  <li><a href="#à-retenir-1" id="toc-à-retenir-1" class="nav-link" data-scroll-target="#à-retenir-1"><span class="header-section-number">1.36</span> 🎓 À retenir</a></li>
-  <li><a href="#exercices-pratiques" id="toc-exercices-pratiques" class="nav-link" data-scroll-target="#exercices-pratiques"><span class="header-section-number">1.37</span> 11. Exercices pratiques 🧪</a>
+  <li><a href="#manipulation-dun-fichier-texte-logs-outputs" id="toc-manipulation-dun-fichier-texte-logs-outputs" class="nav-link" data-scroll-target="#manipulation-dun-fichier-texte-logs-outputs">8.1 📄 Manipulation d’un fichier texte (logs, outputs…)</a></li>
+  <li><a href="#manipulation-dun-fichier-json" id="toc-manipulation-dun-fichier-json" class="nav-link" data-scroll-target="#manipulation-dun-fichier-json">8.2 🧩 Manipulation d’un fichier JSON</a></li>
+  <li><a href="#optionnel-manipulation-dun-csv-avec-pandas" id="toc-optionnel-manipulation-dun-csv-avec-pandas" class="nav-link" data-scroll-target="#optionnel-manipulation-dun-csv-avec-pandas">8.3 📊 (Optionnel) Manipulation d’un CSV avec Pandas</a></li>
+  <li><a href="#erreurs-fréquentes-comment-les-éviter" id="toc-erreurs-fréquentes-comment-les-éviter" class="nav-link" data-scroll-target="#erreurs-fréquentes-comment-les-éviter">⚠️ Erreurs fréquentes &amp; comment les éviter</a></li>
+  <li><a href="#points-clés-à-retenir-1" id="toc-points-clés-à-retenir-1" class="nav-link" data-scroll-target="#points-clés-à-retenir-1">🎓 Points clés à retenir</a></li>
+  <li><a href="#packages-et-pip-gérer-les-dépendances-comme-un-data-engineer" id="toc-packages-et-pip-gérer-les-dépendances-comme-un-data-engineer" class="nav-link" data-scroll-target="#packages-et-pip-gérer-les-dépendances-comme-un-data-engineer">9. Packages et <code>pip</code> 📦 — Gérer les dépendances comme un Data Engineer</a></li>
+  <li><a href="#installer-un-package-avec-pip" id="toc-installer-un-package-avec-pip" class="nav-link" data-scroll-target="#installer-un-package-avec-pip">🔧 Installer un package avec <code>pip</code></a></li>
+  <li><a href="#utilisation-dans-un-script" id="toc-utilisation-dans-un-script" class="nav-link" data-scroll-target="#utilisation-dans-un-script">📌 Utilisation dans un script</a></li>
+  <li><a href="#installer-plusieurs-packages-requirements.txt" id="toc-installer-plusieurs-packages-requirements.txt" class="nav-link" data-scroll-target="#installer-plusieurs-packages-requirements.txt">📁 Installer plusieurs packages — <code>requirements.txt</code></a></li>
+  <li><a href="#mettre-à-jour-un-package" id="toc-mettre-à-jour-un-package" class="nav-link" data-scroll-target="#mettre-à-jour-un-package">♻️ Mettre à jour un package</a></li>
+  <li><a href="#désinstaller-un-package" id="toc-désinstaller-un-package" class="nav-link" data-scroll-target="#désinstaller-un-package">🧹 Désinstaller un package</a></li>
+  <li><a href="#où-sont-installés-les-packages" id="toc-où-sont-installés-les-packages" class="nav-link" data-scroll-target="#où-sont-installés-les-packages">📦 Où sont installés les packages ?</a></li>
+  <li><a href="#erreurs-fréquentes-bonnes-pratiques" id="toc-erreurs-fréquentes-bonnes-pratiques" class="nav-link" data-scroll-target="#erreurs-fréquentes-bonnes-pratiques">⚠️ Erreurs fréquentes &amp; bonnes pratiques</a></li>
+  <li><a href="#astuce-pro-figer-les-versions-pour-la-production" id="toc-astuce-pro-figer-les-versions-pour-la-production" class="nav-link" data-scroll-target="#astuce-pro-figer-les-versions-pour-la-production">⭐ Astuce Pro : figer les versions pour la production</a></li>
+  <li><a href="#logging-traçabilité-indispensable-en-data-engineering" id="toc-logging-traçabilité-indispensable-en-data-engineering" class="nav-link" data-scroll-target="#logging-traçabilité-indispensable-en-data-engineering">10. Logging 🧾 — Traçabilité indispensable en Data Engineering</a></li>
+  <li><a href="#pourquoi-utiliser-logging" id="toc-pourquoi-utiliser-logging" class="nav-link" data-scroll-target="#pourquoi-utiliser-logging">🔍 10.1 Pourquoi utiliser <code>logging</code> ?</a></li>
+  <li><a href="#configuration-minimale-recommandée" id="toc-configuration-minimale-recommandée" class="nav-link" data-scroll-target="#configuration-minimale-recommandée">🔧 Configuration minimale recommandée</a></li>
+  <li><a href="#exemple-dutilisation" id="toc-exemple-dutilisation" class="nav-link" data-scroll-target="#exemple-dutilisation">🧪 Exemple d’utilisation</a></li>
+  <li><a href="#écrire-les-logs-dans-un-fichier-cas-réel-data-engineering" id="toc-écrire-les-logs-dans-un-fichier-cas-réel-data-engineering" class="nav-link" data-scroll-target="#écrire-les-logs-dans-un-fichier-cas-réel-data-engineering">📁 10.2 Écrire les logs dans un fichier (cas réel Data Engineering)</a></li>
+  <li><a href="#exemple-typique-dans-une-fonction" id="toc-exemple-typique-dans-une-fonction" class="nav-link" data-scroll-target="#exemple-typique-dans-une-fonction">🧰 10.3 Exemple typique dans une fonction</a></li>
+  <li><a href="#erreurs-fréquentes-comment-les-éviter-1" id="toc-erreurs-fréquentes-comment-les-éviter-1" class="nav-link" data-scroll-target="#erreurs-fréquentes-comment-les-éviter-1">⚠️ Erreurs fréquentes &amp; comment les éviter</a></li>
+  <li><a href="#astuce-pro-logger-dans-la-console-et-dans-un-fichier" id="toc-astuce-pro-logger-dans-la-console-et-dans-un-fichier" class="nav-link" data-scroll-target="#astuce-pro-logger-dans-la-console-et-dans-un-fichier">⭐ Astuce pro : Logger dans la console <strong>et</strong> dans un fichier</a></li>
+  <li><a href="#à-retenir-1" id="toc-à-retenir-1" class="nav-link" data-scroll-target="#à-retenir-1">🎓 À retenir</a></li>
+  <li><a href="#exercices-pratiques" id="toc-exercices-pratiques" class="nav-link" data-scroll-target="#exercices-pratiques">11. Exercices pratiques 🧪</a>
   <ul class="collapse">
-  <li><a href="#exercice-1-validation-dâge" id="toc-exercice-1-validation-dâge" class="nav-link" data-scroll-target="#exercice-1-validation-dâge"><span class="header-section-number">1.37.1</span> Exercice 1 – Validation d’âge</a></li>
-  <li><a href="#exercice-2-compter-les-posts-par-utilisateur" id="toc-exercice-2-compter-les-posts-par-utilisateur" class="nav-link" data-scroll-target="#exercice-2-compter-les-posts-par-utilisateur"><span class="header-section-number">1.37.2</span> Exercice 2 – Compter les posts par utilisateur</a></li>
-  <li><a href="#exercice-3-classe-post" id="toc-exercice-3-classe-post" class="nav-link" data-scroll-target="#exercice-3-classe-post"><span class="header-section-number">1.37.3</span> Exercice 3 – Classe <code>Post</code></a></li>
+  <li><a href="#exercice-1-validation-dâge" id="toc-exercice-1-validation-dâge" class="nav-link" data-scroll-target="#exercice-1-validation-dâge">Exercice 1 – Validation d’âge</a></li>
+  <li><a href="#exercice-2-compter-les-posts-par-utilisateur" id="toc-exercice-2-compter-les-posts-par-utilisateur" class="nav-link" data-scroll-target="#exercice-2-compter-les-posts-par-utilisateur">Exercice 2 – Compter les posts par utilisateur</a></li>
+  <li><a href="#exercice-3-classe-post" id="toc-exercice-3-classe-post" class="nav-link" data-scroll-target="#exercice-3-classe-post">Exercice 3 – Classe <code>Post</code></a></li>
   </ul></li>
-  <li><a href="#quiz-final" id="toc-quiz-final" class="nav-link" data-scroll-target="#quiz-final"><span class="header-section-number">1.38</span> 12. Quiz final 🎯</a>
+  <li><a href="#quiz-final" id="toc-quiz-final" class="nav-link" data-scroll-target="#quiz-final">12. Quiz final 🎯</a>
   <ul class="collapse">
-  <li><a href="#q1.-quel-type-correspond-à-une-chaîne-de-caractères" id="toc-q1.-quel-type-correspond-à-une-chaîne-de-caractères" class="nav-link" data-scroll-target="#q1.-quel-type-correspond-à-une-chaîne-de-caractères"><span class="header-section-number">1.38.1</span> ❓ Q1. Quel type correspond à une chaîne de caractères ?</a></li>
-  <li><a href="#q2.-quelle-structure-est-la-plus-adaptée-pour-représenter-un-objet-json" id="toc-q2.-quelle-structure-est-la-plus-adaptée-pour-représenter-un-objet-json" class="nav-link" data-scroll-target="#q2.-quelle-structure-est-la-plus-adaptée-pour-représenter-un-objet-json"><span class="header-section-number">1.38.2</span> ❓ Q2. Quelle structure est la plus adaptée pour représenter un objet JSON ?</a></li>
-  <li><a href="#q3.-laquelle-de-ces-boucles-risque-le-plus-de-devenir-infinie" id="toc-q3.-laquelle-de-ces-boucles-risque-le-plus-de-devenir-infinie" class="nav-link" data-scroll-target="#q3.-laquelle-de-ces-boucles-risque-le-plus-de-devenir-infinie"><span class="header-section-number">1.38.3</span> ❓ Q3. Laquelle de ces boucles risque le plus de devenir infinie ?</a></li>
-  <li><a href="#q4.-quel-mot-clé-permet-de-gérer-une-erreur" id="toc-q4.-quel-mot-clé-permet-de-gérer-une-erreur" class="nav-link" data-scroll-target="#q4.-quel-mot-clé-permet-de-gérer-une-erreur"><span class="header-section-number">1.38.4</span> ❓ Q4. Quel mot-clé permet de gérer une erreur ?</a></li>
-  <li><a href="#q5.-quel-module-est-utilisé-pour-le-logging" id="toc-q5.-quel-module-est-utilisé-pour-le-logging" class="nav-link" data-scroll-target="#q5.-quel-module-est-utilisé-pour-le-logging"><span class="header-section-number">1.38.5</span> ❓ Q5. Quel module est utilisé pour le logging ?</a></li>
-  <li><a href="#q6.-comment-créer-un-environnement-virtuel-avec-venv" id="toc-q6.-comment-créer-un-environnement-virtuel-avec-venv" class="nav-link" data-scroll-target="#q6.-comment-créer-un-environnement-virtuel-avec-venv"><span class="header-section-number">1.38.6</span> ❓ Q6. Comment créer un environnement virtuel avec venv ?</a></li>
-  <li><a href="#q7.-quel-fichier-liste-les-dépendances-dun-projet-python" id="toc-q7.-quel-fichier-liste-les-dépendances-dun-projet-python" class="nav-link" data-scroll-target="#q7.-quel-fichier-liste-les-dépendances-dun-projet-python"><span class="header-section-number">1.38.7</span> ❓ Q7. Quel fichier liste les dépendances d’un projet Python ?</a></li>
+  <li><a href="#q1.-quel-type-correspond-à-une-chaîne-de-caractères" id="toc-q1.-quel-type-correspond-à-une-chaîne-de-caractères" class="nav-link" data-scroll-target="#q1.-quel-type-correspond-à-une-chaîne-de-caractères">❓ Q1. Quel type correspond à une chaîne de caractères ?</a></li>
+  <li><a href="#q2.-quelle-structure-est-la-plus-adaptée-pour-représenter-un-objet-json" id="toc-q2.-quelle-structure-est-la-plus-adaptée-pour-représenter-un-objet-json" class="nav-link" data-scroll-target="#q2.-quelle-structure-est-la-plus-adaptée-pour-représenter-un-objet-json">❓ Q2. Quelle structure est la plus adaptée pour représenter un objet JSON ?</a></li>
+  <li><a href="#q3.-laquelle-de-ces-boucles-risque-le-plus-de-devenir-infinie" id="toc-q3.-laquelle-de-ces-boucles-risque-le-plus-de-devenir-infinie" class="nav-link" data-scroll-target="#q3.-laquelle-de-ces-boucles-risque-le-plus-de-devenir-infinie">❓ Q3. Laquelle de ces boucles risque le plus de devenir infinie ?</a></li>
+  <li><a href="#q4.-quel-mot-clé-permet-de-gérer-une-erreur" id="toc-q4.-quel-mot-clé-permet-de-gérer-une-erreur" class="nav-link" data-scroll-target="#q4.-quel-mot-clé-permet-de-gérer-une-erreur">❓ Q4. Quel mot-clé permet de gérer une erreur ?</a></li>
+  <li><a href="#q5.-quel-module-est-utilisé-pour-le-logging" id="toc-q5.-quel-module-est-utilisé-pour-le-logging" class="nav-link" data-scroll-target="#q5.-quel-module-est-utilisé-pour-le-logging">❓ Q5. Quel module est utilisé pour le logging ?</a></li>
+  <li><a href="#q6.-comment-créer-un-environnement-virtuel-avec-venv" id="toc-q6.-comment-créer-un-environnement-virtuel-avec-venv" class="nav-link" data-scroll-target="#q6.-comment-créer-un-environnement-virtuel-avec-venv">❓ Q6. Comment créer un environnement virtuel avec venv ?</a></li>
+  <li><a href="#q7.-quel-fichier-liste-les-dépendances-dun-projet-python" id="toc-q7.-quel-fichier-liste-les-dépendances-dun-projet-python" class="nav-link" data-scroll-target="#q7.-quel-fichier-liste-les-dépendances-dun-projet-python">❓ Q7. Quel fichier liste les dépendances d’un projet Python ?</a></li>
   </ul></li>
-  <li><a href="#ressources-pour-aller-plus-loin" id="toc-ressources-pour-aller-plus-loin" class="nav-link" data-scroll-target="#ressources-pour-aller-plus-loin"><span class="header-section-number">1.39</span> 📚 Ressources pour aller plus loin</a>
+  <li><a href="#ressources-pour-aller-plus-loin" id="toc-ressources-pour-aller-plus-loin" class="nav-link" data-scroll-target="#ressources-pour-aller-plus-loin">📚 Ressources pour aller plus loin</a>
   <ul class="collapse">
-  <li><a href="#documentation-officielle" id="toc-documentation-officielle" class="nav-link" data-scroll-target="#documentation-officielle"><span class="header-section-number">1.39.1</span> 📖 Documentation officielle</a></li>
-  <li><a href="#cours-et-tutoriels" id="toc-cours-et-tutoriels" class="nav-link" data-scroll-target="#cours-et-tutoriels"><span class="header-section-number">1.39.2</span> 🎓 Cours et tutoriels</a></li>
-  <li><a href="#outils-recommandés" id="toc-outils-recommandés" class="nav-link" data-scroll-target="#outils-recommandés"><span class="header-section-number">1.39.3</span> 🛠️ Outils recommandés</a></li>
-  <li><a href="#packages-data-engineering-essentiels" id="toc-packages-data-engineering-essentiels" class="nav-link" data-scroll-target="#packages-data-engineering-essentiels"><span class="header-section-number">1.39.4</span> 📊 Packages Data Engineering essentiels</a></li>
+  <li><a href="#documentation-officielle" id="toc-documentation-officielle" class="nav-link" data-scroll-target="#documentation-officielle">📖 Documentation officielle</a></li>
+  <li><a href="#cours-et-tutoriels" id="toc-cours-et-tutoriels" class="nav-link" data-scroll-target="#cours-et-tutoriels">🎓 Cours et tutoriels</a></li>
+  <li><a href="#outils-recommandés" id="toc-outils-recommandés" class="nav-link" data-scroll-target="#outils-recommandés">🛠️ Outils recommandés</a></li>
+  <li><a href="#packages-data-engineering-essentiels" id="toc-packages-data-engineering-essentiels" class="nav-link" data-scroll-target="#packages-data-engineering-essentiels">📊 Packages Data Engineering essentiels</a></li>
   </ul></li>
-  <li><a href="#prochaine-étape" id="toc-prochaine-étape" class="nav-link" data-scroll-target="#prochaine-étape"><span class="header-section-number">1.40</span> ➡️ Prochaine étape</a></li>
+  <li><a href="#prochaine-étape" id="toc-prochaine-étape" class="nav-link" data-scroll-target="#prochaine-étape">➡️ Prochaine étape</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="git@github.com:diakite-data/data-engineering-bootcamp.git/blob/main/notebooks/beginner/04_python_basics_for_data_engineers.ipynb" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="git@github.com:diakite-data/data-engineering-bootcamp.git/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -567,8 +599,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>Ce notebook donne les <strong>bases de Python</strong> nécessaires pour la suite du parcours <strong>Data Engineering From Zero to Hero</strong>.</p>
 <hr>
-<section id="prérequis" class="level2" data-number="0.1">
-<h2 data-number="0.1" class="anchored" data-anchor-id="prérequis"><span class="header-section-number">0.1</span> 📋 Prérequis</h2>
+<section id="prérequis" class="level2">
+<h2 class="anchored" data-anchor-id="prérequis">📋 Prérequis</h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -592,13 +624,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 </section>
-<section id="objectifs-du-module" class="level2" data-number="0.2">
-<h2 data-number="0.2" class="anchored" data-anchor-id="objectifs-du-module"><span class="header-section-number">0.2</span> 🎯 Objectifs du module</h2>
+<section id="objectifs-du-module" class="level2">
+<h2 class="anchored" data-anchor-id="objectifs-du-module">🎯 Objectifs du module</h2>
 <p>À la fin de ce notebook, tu seras capable de : - ✅ Installer et configurer ton environnement Python - ✅ Créer et gérer des environnements virtuels - ✅ Manipuler les types de base (nombres, chaînes, listes, dictionnaires) - ✅ Utiliser les conditions et boucles - ✅ Écrire des fonctions et des classes simples - ✅ Gérer les erreurs avec <code>try / except</code> - ✅ Lire et écrire des fichiers (texte, JSON) - ✅ Utiliser le module <code>logging</code> pour tracer un script</p>
 <hr>
 </section>
-<section id="pourquoi-python-pour-le-data-engineering" class="level2" data-number="0.3">
-<h2 data-number="0.3" class="anchored" data-anchor-id="pourquoi-python-pour-le-data-engineering"><span class="header-section-number">0.3</span> 🐍 Pourquoi Python pour le Data Engineering ?</h2>
+<section id="pourquoi-python-pour-le-data-engineering" class="level2">
+<h2 class="anchored" data-anchor-id="pourquoi-python-pour-le-data-engineering">🐍 Pourquoi Python pour le Data Engineering ?</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -634,13 +666,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 </section>
-<section id="installation-environnement" class="level2" data-number="0.4">
-<h2 data-number="0.4" class="anchored" data-anchor-id="installation-environnement"><span class="header-section-number">0.4</span> 0. Installation &amp; Environnement 🛠️</h2>
+<section id="installation-environnement" class="level2">
+<h2 class="anchored" data-anchor-id="installation-environnement">0. Installation &amp; Environnement 🛠️</h2>
 <p>Cette section explique <strong>comment installer Python, VS Code, Jupyter</strong> et vérifier que tout fonctionne. Les commandes sont données pour <strong>Windows</strong>, <strong>Linux</strong> et <strong>macOS</strong>.</p>
-<section id="installer-python" class="level3" data-number="0.4.1">
-<h3 data-number="0.4.1" class="anchored" data-anchor-id="installer-python"><span class="header-section-number">0.4.1</span> 0.1 Installer Python</h3>
-<section id="sous-windows" class="level4" data-number="0.4.1.1">
-<h4 data-number="0.4.1.1" class="anchored" data-anchor-id="sous-windows"><span class="header-section-number">0.4.1.1</span> Sous Windows</h4>
+<section id="installer-python" class="level3">
+<h3 class="anchored" data-anchor-id="installer-python">0.1 Installer Python</h3>
+<section id="sous-windows" class="level4">
+<h4 class="anchored" data-anchor-id="sous-windows">Sous Windows</h4>
 <ol type="1">
 <li>Aller sur le site officiel : https://www.python.org/downloads/</li>
 <li>Télécharger la dernière version stable de <strong>Python 3.x</strong>.</li>
@@ -651,13 +683,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul></li>
 </ol>
 </section>
-<section id="sous-linux-ubuntu-debian" class="level4" data-number="0.4.1.2">
-<h4 data-number="0.4.1.2" class="anchored" data-anchor-id="sous-linux-ubuntu-debian"><span class="header-section-number">0.4.1.2</span> Sous Linux (Ubuntu / Debian)</h4>
+<section id="sous-linux-ubuntu-debian" class="level4">
+<h4 class="anchored" data-anchor-id="sous-linux-ubuntu-debian">Sous Linux (Ubuntu / Debian)</h4>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt update</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install <span class="at">-y</span> python3 python3-pip</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="sous-macos" class="level4" data-number="0.4.1.3">
-<h4 data-number="0.4.1.3" class="anchored" data-anchor-id="sous-macos"><span class="header-section-number">0.4.1.3</span> Sous macOS</h4>
+<section id="sous-macos" class="level4">
+<h4 class="anchored" data-anchor-id="sous-macos">Sous macOS</h4>
 <ul>
 <li>Option 1 : paquet officiel :
 <ul>
@@ -669,15 +701,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install python</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
-<section id="vérifier-linstallation-de-python" class="level3" data-number="0.4.2">
-<h3 data-number="0.4.2" class="anchored" data-anchor-id="vérifier-linstallation-de-python"><span class="header-section-number">0.4.2</span> 0.2 Vérifier l’installation de Python</h3>
+<section id="vérifier-linstallation-de-python" class="level3">
+<h3 class="anchored" data-anchor-id="vérifier-linstallation-de-python">0.2 Vérifier l’installation de Python</h3>
 <p>Ouvrir un terminal (ou PowerShell sous Windows) puis taper :</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">--version</span>   <span class="co"># ou parfois: python3 --version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Tu dois voir une version du type : <code>Python 3.12.x</code>.</p>
 <p>⚠️ <strong>Erreurs fréquentes</strong> : - <code>python</code> n’est pas reconnu → Python n’est pas dans le PATH ; - sur Linux/macOS, il faut parfois utiliser <code>python3</code> au lieu de <code>python</code>.</p>
 </section>
-<section id="installer-visual-studio-code-vs-code" class="level3" data-number="0.4.3">
-<h3 data-number="0.4.3" class="anchored" data-anchor-id="installer-visual-studio-code-vs-code"><span class="header-section-number">0.4.3</span> 0.3 Installer Visual Studio Code (VS Code)</h3>
+<section id="installer-visual-studio-code-vs-code" class="level3">
+<h3 class="anchored" data-anchor-id="installer-visual-studio-code-vs-code">0.3 Installer Visual Studio Code (VS Code)</h3>
 <ol type="1">
 <li>Télécharger VS Code : https://code.visualstudio.com/</li>
 <li>Installer la version adaptée à ton système (Windows, Linux, macOS).</li>
@@ -685,8 +717,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 <p>VS Code servira à : - éditer des scripts <code>.py</code> ; - ouvrir des notebooks Jupyter (<code>.ipynb</code>) ; - organiser un projet de data engineering complet.</p>
 </section>
-<section id="extensions-vs-code-python-jupyter" class="level3" data-number="0.4.4">
-<h3 data-number="0.4.4" class="anchored" data-anchor-id="extensions-vs-code-python-jupyter"><span class="header-section-number">0.4.4</span> 0.4 Extensions VS Code : Python &amp; Jupyter</h3>
+<section id="extensions-vs-code-python-jupyter" class="level3">
+<h3 class="anchored" data-anchor-id="extensions-vs-code-python-jupyter">0.4 Extensions VS Code : Python &amp; Jupyter</h3>
 <p>Dans VS Code, aller dans l’onglet <strong>Extensions</strong> (icône de blocs à gauche), puis :</p>
 <ol type="1">
 <li>Rechercher <strong>“Python”</strong> (éditeur : Microsoft) et l’installer ;</li>
@@ -694,27 +726,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 <p>Ensuite, ouvrir un fichier <code>.py</code> ou <code>.ipynb</code> : VS Code proposera de sélectionner un <strong>interpréteur Python</strong> (en bas à droite). Choisir ton installation Python 3.x.</p>
 </section>
-<section id="installer-jupyter-notebook" class="level3" data-number="0.4.5">
-<h3 data-number="0.4.5" class="anchored" data-anchor-id="installer-jupyter-notebook"><span class="header-section-number">0.4.5</span> 0.5 Installer Jupyter Notebook</h3>
+<section id="installer-jupyter-notebook" class="level3">
+<h3 class="anchored" data-anchor-id="installer-jupyter-notebook">0.5 Installer Jupyter Notebook</h3>
 <p>Dans un terminal (avec Python installé) :</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> pip install notebook</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Puis lancer Jupyter :</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">jupyter</span> notebook</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Un navigateur s’ouvrira sur <code>http://localhost:8888</code> et affichera la liste des fichiers.</p>
 </section>
-<section id="premier-test-python" class="level3" data-number="0.4.6">
-<h3 data-number="0.4.6" class="anchored" data-anchor-id="premier-test-python"><span class="header-section-number">0.4.6</span> 0.6 Premier test Python</h3>
+<section id="premier-test-python" class="level3">
+<h3 class="anchored" data-anchor-id="premier-test-python">0.6 Premier test Python</h3>
 <p>Dans un terminal :</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(<span class="st">"Hello Data Engineer"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Tu dois voir :</p>
 <pre class="text"><code>Hello Data Engineer</code></pre>
 </section>
 </section>
-<section id="environnements-virtuels" class="level2" data-number="0.5">
-<h2 data-number="0.5" class="anchored" data-anchor-id="environnements-virtuels"><span class="header-section-number">0.5</span> 0.7 Environnements virtuels 🔒</h2>
+<section id="environnements-virtuels" class="level2">
+<h2 class="anchored" data-anchor-id="environnements-virtuels">0.7 Environnements virtuels 🔒</h2>
 <p>Un <strong>environnement virtuel</strong> isole les dépendances de chaque projet. C’est <strong>indispensable</strong> en Data Engineering pour éviter les conflits de versions.</p>
-<section id="pourquoi-utiliser-un-environnement-virtuel" class="level3" data-number="0.5.1">
-<h3 data-number="0.5.1" class="anchored" data-anchor-id="pourquoi-utiliser-un-environnement-virtuel"><span class="header-section-number">0.5.1</span> Pourquoi utiliser un environnement virtuel ?</h3>
+<section id="pourquoi-utiliser-un-environnement-virtuel" class="level3">
+<h3 class="anchored" data-anchor-id="pourquoi-utiliser-un-environnement-virtuel">Pourquoi utiliser un environnement virtuel ?</h3>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 49%">
@@ -742,8 +774,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 </section>
-<section id="option-1-venv-intégré-à-python" class="level3" data-number="0.5.2">
-<h3 data-number="0.5.2" class="anchored" data-anchor-id="option-1-venv-intégré-à-python"><span class="header-section-number">0.5.2</span> Option 1 : <code>venv</code> (intégré à Python)</h3>
+<section id="option-1-venv-intégré-à-python" class="level3">
+<h3 class="anchored" data-anchor-id="option-1-venv-intégré-à-python">Option 1 : <code>venv</code> (intégré à Python)</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Créer un environnement virtuel</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> venv mon_env</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -759,8 +791,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Désactiver l'environnement</span></span>
 <span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="ex">deactivate</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="option-2-conda-anacondaminiconda" class="level3" data-number="0.5.3">
-<h3 data-number="0.5.3" class="anchored" data-anchor-id="option-2-conda-anacondaminiconda"><span class="header-section-number">0.5.3</span> Option 2 : <code>conda</code> (Anaconda/Miniconda)</h3>
+<section id="option-2-conda-anacondaminiconda" class="level3">
+<h3 class="anchored" data-anchor-id="option-2-conda-anacondaminiconda">Option 2 : <code>conda</code> (Anaconda/Miniconda)</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Créer un environnement</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">-n</span> mon_projet python=3.11</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -773,8 +805,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Lister les environnements</span></span>
 <span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> env list</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="recommandation-pour-data-engineers" class="level3" data-number="0.5.4">
-<h3 data-number="0.5.4" class="anchored" data-anchor-id="recommandation-pour-data-engineers"><span class="header-section-number">0.5.4</span> 💡 Recommandation pour Data Engineers</h3>
+<section id="recommandation-pour-data-engineers" class="level3">
+<h3 class="anchored" data-anchor-id="recommandation-pour-data-engineers">💡 Recommandation pour Data Engineers</h3>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -795,11 +827,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 </section>
 </section>
-<section id="gestion-des-packages-avec-pip" class="level2" data-number="0.6">
-<h2 data-number="0.6" class="anchored" data-anchor-id="gestion-des-packages-avec-pip"><span class="header-section-number">0.6</span> 0.8 Gestion des packages avec pip 📦</h2>
+<section id="gestion-des-packages-avec-pip" class="level2">
+<h2 class="anchored" data-anchor-id="gestion-des-packages-avec-pip">0.8 Gestion des packages avec pip 📦</h2>
 <p><code>pip</code> est le gestionnaire de packages Python. Tu l’utiliseras pour installer les librairies Data Engineering.</p>
-<section id="commandes-essentielles" class="level3" data-number="0.6.1">
-<h3 data-number="0.6.1" class="anchored" data-anchor-id="commandes-essentielles"><span class="header-section-number">0.6.1</span> Commandes essentielles</h3>
+<section id="commandes-essentielles" class="level3">
+<h3 class="anchored" data-anchor-id="commandes-essentielles">Commandes essentielles</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Installer un package</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install pandas</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -821,8 +853,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Voir les infos d'un package</span></span>
 <span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> show pandas</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="le-fichier-requirements.txt" class="level3" data-number="0.6.2">
-<h3 data-number="0.6.2" class="anchored" data-anchor-id="le-fichier-requirements.txt"><span class="header-section-number">0.6.2</span> Le fichier <code>requirements.txt</code></h3>
+<section id="le-fichier-requirements.txt" class="level3">
+<h3 class="anchored" data-anchor-id="le-fichier-requirements.txt">Le fichier <code>requirements.txt</code></h3>
 <p>Ce fichier liste toutes les dépendances d’un projet. <strong>Indispensable</strong> pour la reproductibilité.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Générer le fichier à partir de l'environnement actuel</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> freeze <span class="op">&gt;</span> requirements.txt</span>
@@ -830,8 +862,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Installer toutes les dépendances d'un projet</span></span>
 <span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-r</span> requirements.txt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="exemple-de-requirements.txt-pour-data-engineering" class="level3" data-number="0.6.3">
-<h3 data-number="0.6.3" class="anchored" data-anchor-id="exemple-de-requirements.txt-pour-data-engineering"><span class="header-section-number">0.6.3</span> Exemple de <code>requirements.txt</code> pour Data Engineering</h3>
+<section id="exemple-de-requirements.txt-pour-data-engineering" class="level3">
+<h3 class="anchored" data-anchor-id="exemple-de-requirements.txt-pour-data-engineering">Exemple de <code>requirements.txt</code> pour Data Engineering</h3>
 <pre class="text"><code># Data Processing
 pandas&gt;=2.0.0
 numpy&gt;=1.24.0
@@ -852,8 +884,8 @@ pytest&gt;=7.0.0</code></pre>
 </blockquote>
 </section>
 </section>
-<section id="variables-et-types" class="level2" data-number="0.7">
-<h2 data-number="0.7" class="anchored" data-anchor-id="variables-et-types"><span class="header-section-number">0.7</span> 1. Variables et Types 🔤</h2>
+<section id="variables-et-types" class="level2">
+<h2 class="anchored" data-anchor-id="variables-et-types">1. Variables et Types 🔤</h2>
 <p>Une <strong>variable</strong> est un nom qui référence une valeur en mémoire.</p>
 <p>Python possède plusieurs types intégrés (<em>builtins</em>). Voici ceux <strong>à maîtriser absolument</strong> en Data Engineering :</p>
 <table class="caption-top table">
@@ -929,8 +961,8 @@ pytest&gt;=7.0.0</code></pre>
 </tbody>
 </table>
 <hr>
-<section id="exemples-de-variables" class="level4" data-number="0.7.0.1">
-<h4 data-number="0.7.0.1" class="anchored" data-anchor-id="exemples-de-variables"><span class="header-section-number">0.7.0.1</span> Exemples de variables</h4>
+<section id="exemples-de-variables" class="level4">
+<h4 class="anchored" data-anchor-id="exemples-de-variables">Exemples de variables</h4>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>age <span class="op">=</span> <span class="dv">30</span>              <span class="co"># int</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>pi <span class="op">=</span> <span class="fl">3.14</span>             <span class="co"># float</span></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>nom <span class="op">=</span> <span class="st">"Alice"</span>         <span class="co"># str</span></span>
@@ -941,27 +973,27 @@ pytest&gt;=7.0.0</code></pre>
 <span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(nom, <span class="bu">type</span>(nom))</span>
 <span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(est_data_engineer, <span class="bu">type</span>(est_data_engineer))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="conversion-de-types" class="level3" data-number="0.7.1">
-<h3 data-number="0.7.1" class="anchored" data-anchor-id="conversion-de-types"><span class="header-section-number">0.7.1</span> Conversion de types</h3>
+<section id="conversion-de-types" class="level3">
+<h3 class="anchored" data-anchor-id="conversion-de-types">Conversion de types</h3>
 <p>Il est fréquent de convertir des chaînes en nombres, par exemple après lecture d’un fichier.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>age_str <span class="op">=</span> <span class="st">"25"</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>age_int <span class="op">=</span> <span class="bu">int</span>(age_str)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>⚠️ <strong>Erreurs fréquentes</strong> : - Essayer de convertir une chaîne non numérique : <code>int("abc")</code> → <code>ValueError</code> ; - Additionner directement un <code>str</code> et un <code>int</code> : - <code>"25" + 3</code> ❌ - <code>int("25") + 3</code> ✔️</p>
 </section>
 </section>
-<section id="conditions-et-boucles" class="level2" data-number="0.8">
-<h2 data-number="0.8" class="anchored" data-anchor-id="conditions-et-boucles"><span class="header-section-number">0.8</span> 🔁 2. Conditions et Boucles</h2>
+<section id="conditions-et-boucles" class="level2">
+<h2 class="anchored" data-anchor-id="conditions-et-boucles">🔁 2. Conditions et Boucles</h2>
 <p>Les <strong>conditions</strong> permettent de prendre des décisions dans le code.<br>
 Les <strong>boucles</strong> permettent de répéter des actions automatiquement.</p>
 <blockquote class="blockquote">
 <p>💡 <strong>En Data Engineering</strong>, ces structures sont essentielles pour : - Filtrer des données (conditions) - Traiter plusieurs fichiers (boucles) - Valider des règles métier (conditions) - Parcourir des bases de données (boucles)</p>
 </blockquote>
 <hr>
-<section id="conditions-if-elif-else" class="level3" data-number="0.8.1">
-<h3 data-number="0.8.1" class="anchored" data-anchor-id="conditions-if-elif-else"><span class="header-section-number">0.8.1</span> 🎯 2.1 Conditions (if / elif / else)</h3>
+<section id="conditions-if-elif-else" class="level3">
+<h3 class="anchored" data-anchor-id="conditions-if-elif-else">🎯 2.1 Conditions (if / elif / else)</h3>
 <p>Les conditions testent des critères et exécutent du code selon le résultat.</p>
-<section id="syntaxe-de-base" class="level4" data-number="0.8.1.1">
-<h4 data-number="0.8.1.1" class="anchored" data-anchor-id="syntaxe-de-base"><span class="header-section-number">0.8.1.1</span> Syntaxe de base</h4>
+<section id="syntaxe-de-base" class="level4">
+<h4 class="anchored" data-anchor-id="syntaxe-de-base">Syntaxe de base</h4>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>age <span class="op">=</span> <span class="dv">20</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> age <span class="op">&lt;</span> <span class="dv">18</span>:</span>
@@ -972,8 +1004,8 @@ Les <strong>boucles</strong> permettent de répéter des actions automatiquement
 <span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Majeur"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Fonctionnement :</strong> 1. <strong><code>if</code></strong> : Première condition testée 2. <strong><code>elif</code></strong> : Condition alternative (si <code>if</code> est fausse) 3. <strong><code>else</code></strong> : Cas par défaut (si toutes les conditions sont fausses)</p>
 </section>
-<section id="opérateurs-de-comparaison" class="level4" data-number="0.8.1.2">
-<h4 data-number="0.8.1.2" class="anchored" data-anchor-id="opérateurs-de-comparaison"><span class="header-section-number">0.8.1.2</span> Opérateurs de comparaison</h4>
+<section id="opérateurs-de-comparaison" class="level4">
+<h4 class="anchored" data-anchor-id="opérateurs-de-comparaison">Opérateurs de comparaison</h4>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -1016,8 +1048,8 @@ Les <strong>boucles</strong> permettent de répéter des actions automatiquement
 </tbody>
 </table>
 </section>
-<section id="conditions-multiples" class="level4" data-number="0.8.1.3">
-<h4 data-number="0.8.1.3" class="anchored" data-anchor-id="conditions-multiples"><span class="header-section-number">0.8.1.3</span> Conditions multiples</h4>
+<section id="conditions-multiples" class="level4">
+<h4 class="anchored" data-anchor-id="conditions-multiples">Conditions multiples</h4>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>age <span class="op">=</span> <span class="dv">25</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>pays <span class="op">=</span> <span class="st">"France"</span></span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1035,11 +1067,11 @@ Les <strong>boucles</strong> permettent de répéter des actions automatiquement
 <hr>
 </section>
 </section>
-<section id="boucles-for-et-while" class="level3" data-number="0.8.2">
-<h3 data-number="0.8.2" class="anchored" data-anchor-id="boucles-for-et-while"><span class="header-section-number">0.8.2</span> 🔄 2.2 Boucles (for et while)</h3>
+<section id="boucles-for-et-while" class="level3">
+<h3 class="anchored" data-anchor-id="boucles-for-et-while">🔄 2.2 Boucles (for et while)</h3>
 <p>Les boucles permettent d’exécuter du code de manière répétée.</p>
-<section id="boucle-for-parcourir-une-séquence" class="level4" data-number="0.8.2.1">
-<h4 data-number="0.8.2.1" class="anchored" data-anchor-id="boucle-for-parcourir-une-séquence"><span class="header-section-number">0.8.2.1</span> Boucle <code>for</code> : Parcourir une séquence</h4>
+<section id="boucle-for-parcourir-une-séquence" class="level4">
+<h4 class="anchored" data-anchor-id="boucle-for-parcourir-une-séquence">Boucle <code>for</code> : Parcourir une séquence</h4>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Parcourir une liste</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>noms <span class="op">=</span> [<span class="st">"Alice"</span>, <span class="st">"Bob"</span>, <span class="st">"Charlie"</span>]</span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1051,8 +1083,8 @@ Les <strong>boucles</strong> permettent de répéter des actions automatiquement
 <span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Bonjour Bob</span></span>
 <span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Bonjour Charlie</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="boucle-avec-range" class="level4" data-number="0.8.2.2">
-<h4 data-number="0.8.2.2" class="anchored" data-anchor-id="boucle-avec-range"><span class="header-section-number">0.8.2.2</span> Boucle avec <code>range()</code></h4>
+<section id="boucle-avec-range" class="level4">
+<h4 class="anchored" data-anchor-id="boucle-avec-range">Boucle avec <code>range()</code></h4>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># range(n) génère les nombres de 0 à n-1</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Itération </span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">"</span>)</span>
@@ -1063,8 +1095,8 @@ Les <strong>boucles</strong> permettent de répéter des actions automatiquement
 <span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">2</span>):</span>
 <span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)  <span class="co"># 0, 2, 4, 6, 8</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="boucle-while-répéter-tant-quune-condition-est-vraie" class="level4" data-number="0.8.2.3">
-<h4 data-number="0.8.2.3" class="anchored" data-anchor-id="boucle-while-répéter-tant-quune-condition-est-vraie"><span class="header-section-number">0.8.2.3</span> Boucle <code>while</code> : Répéter tant qu’une condition est vraie</h4>
+<section id="boucle-while-répéter-tant-quune-condition-est-vraie" class="level4">
+<h4 class="anchored" data-anchor-id="boucle-while-répéter-tant-quune-condition-est-vraie">Boucle <code>while</code> : Répéter tant qu’une condition est vraie</h4>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>compteur <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> compteur <span class="op">&lt;</span> <span class="dv">3</span>:</span>
@@ -1076,8 +1108,8 @@ Les <strong>boucles</strong> permettent de répéter des actions automatiquement
 <span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Compteur = 1</span></span>
 <span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Compteur = 2</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="contrôle-de-flux-break-et-continue" class="level4" data-number="0.8.2.4">
-<h4 data-number="0.8.2.4" class="anchored" data-anchor-id="contrôle-de-flux-break-et-continue"><span class="header-section-number">0.8.2.4</span> Contrôle de flux : <code>break</code> et <code>continue</code></h4>
+<section id="contrôle-de-flux-break-et-continue" class="level4">
+<h4 class="anchored" data-anchor-id="contrôle-de-flux-break-et-continue">Contrôle de flux : <code>break</code> et <code>continue</code></h4>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># break : Sortir immédiatement de la boucle</span></span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i <span class="op">==</span> <span class="dv">5</span>:</span>
@@ -1090,8 +1122,8 @@ Les <strong>boucles</strong> permettent de répéter des actions automatiquement
 <span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">continue</span>  <span class="co"># Saute l'itération quand i=2</span></span>
 <span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)  <span class="co"># Affiche 0, 1, 3, 4</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="cas-dusage-data-engineering" class="level4" data-number="0.8.2.5">
-<h4 data-number="0.8.2.5" class="anchored" data-anchor-id="cas-dusage-data-engineering"><span class="header-section-number">0.8.2.5</span> 📌 Cas d’usage Data Engineering</h4>
+<section id="cas-dusage-data-engineering" class="level4">
+<h4 class="anchored" data-anchor-id="cas-dusage-data-engineering">📌 Cas d’usage Data Engineering</h4>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Exemple 1 : Traitement de fichiers multiples</span></span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>fichiers <span class="op">=</span> [<span class="st">"users_2024_01.csv"</span>, <span class="st">"users_2024_02.csv"</span>, <span class="st">"users_2024_03.csv"</span>]</span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1140,10 +1172,10 @@ Les <strong>boucles</strong> permettent de répéter des actions automatiquement
 <hr>
 </section>
 </section>
-<section id="boucles-avancées-enumerate-et-zip" class="level3" data-number="0.8.3">
-<h3 data-number="0.8.3" class="anchored" data-anchor-id="boucles-avancées-enumerate-et-zip"><span class="header-section-number">0.8.3</span> 🔍 2.3 Boucles avancées : <code>enumerate()</code> et <code>zip()</code></h3>
-<section id="enumerate-obtenir-lindex-et-la-valeur" class="level4" data-number="0.8.3.1">
-<h4 data-number="0.8.3.1" class="anchored" data-anchor-id="enumerate-obtenir-lindex-et-la-valeur"><span class="header-section-number">0.8.3.1</span> <code>enumerate()</code> : Obtenir l’index ET la valeur</h4>
+<section id="boucles-avancées-enumerate-et-zip" class="level3">
+<h3 class="anchored" data-anchor-id="boucles-avancées-enumerate-et-zip">🔍 2.3 Boucles avancées : <code>enumerate()</code> et <code>zip()</code></h3>
+<section id="enumerate-obtenir-lindex-et-la-valeur" class="level4">
+<h4 class="anchored" data-anchor-id="enumerate-obtenir-lindex-et-la-valeur"><code>enumerate()</code> : Obtenir l’index ET la valeur</h4>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>fruits <span class="op">=</span> [<span class="st">"pomme"</span>, <span class="st">"banane"</span>, <span class="st">"orange"</span>]</span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Sans enumerate (moins pratique)</span></span>
@@ -1158,8 +1190,8 @@ Les <strong>boucles</strong> permettent de répéter des actions automatiquement
 <span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> num, fruit <span class="kw">in</span> <span class="bu">enumerate</span>(fruits, start<span class="op">=</span><span class="dv">1</span>):</span>
 <span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Fruit #</span><span class="sc">{</span>num<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>fruit<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="zip-parcourir-plusieurs-listes-simultanément" class="level4" data-number="0.8.3.2">
-<h4 data-number="0.8.3.2" class="anchored" data-anchor-id="zip-parcourir-plusieurs-listes-simultanément"><span class="header-section-number">0.8.3.2</span> <code>zip()</code> : Parcourir plusieurs listes simultanément</h4>
+<section id="zip-parcourir-plusieurs-listes-simultanément" class="level4">
+<h4 class="anchored" data-anchor-id="zip-parcourir-plusieurs-listes-simultanément"><code>zip()</code> : Parcourir plusieurs listes simultanément</h4>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>noms <span class="op">=</span> [<span class="st">"Alice"</span>, <span class="st">"Bob"</span>, <span class="st">"Charlie"</span>]</span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>ages <span class="op">=</span> [<span class="dv">25</span>, <span class="dv">30</span>, <span class="dv">35</span>]</span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>villes <span class="op">=</span> [<span class="st">"Paris"</span>, <span class="st">"Lyon"</span>, <span class="st">"Marseille"</span>]</span>
@@ -1174,8 +1206,8 @@ Les <strong>boucles</strong> permettent de répéter des actions automatiquement
 <hr>
 </section>
 </section>
-<section id="erreurs-fréquentes-et-bonnes-pratiques" class="level3" data-number="0.8.4">
-<h3 data-number="0.8.4" class="anchored" data-anchor-id="erreurs-fréquentes-et-bonnes-pratiques"><span class="header-section-number">0.8.4</span> ⚠️ Erreurs fréquentes et bonnes pratiques</h3>
+<section id="erreurs-fréquentes-et-bonnes-pratiques" class="level3">
+<h3 class="anchored" data-anchor-id="erreurs-fréquentes-et-bonnes-pratiques">⚠️ Erreurs fréquentes et bonnes pratiques</h3>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 26%">
@@ -1249,8 +1281,8 @@ Les <strong>boucles</strong> permettent de répéter des actions automatiquement
 <span id="cb24-29"><a href="#cb24-29" aria-hidden="true" tabindex="-1"></a>nombres_impairs <span class="op">=</span> [n <span class="cf">for</span> n <span class="kw">in</span> nombres <span class="cf">if</span> n <span class="op">%</span> <span class="dv">2</span> <span class="op">!=</span> <span class="dv">0</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
-<section id="récapitulatif" class="level3" data-number="0.8.5">
-<h3 data-number="0.8.5" class="anchored" data-anchor-id="récapitulatif"><span class="header-section-number">0.8.5</span> 📚 Récapitulatif</h3>
+<section id="récapitulatif" class="level3">
+<h3 class="anchored" data-anchor-id="récapitulatif">📚 Récapitulatif</h3>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -1299,8 +1331,8 @@ Les <strong>boucles</strong> permettent de répéter des actions automatiquement
 </table>
 <hr>
 </section>
-<section id="points-clés-à-retenir" class="level3" data-number="0.8.6">
-<h3 data-number="0.8.6" class="anchored" data-anchor-id="points-clés-à-retenir"><span class="header-section-number">0.8.6</span> 🎯 Points clés à retenir</h3>
+<section id="points-clés-à-retenir" class="level3">
+<h3 class="anchored" data-anchor-id="points-clés-à-retenir">🎯 Points clés à retenir</h3>
 <ol type="1">
 <li><strong>Conditions</strong> : Utilisent <code>==</code> pour comparer (pas <code>=</code>)</li>
 <li><strong>Indentation</strong> : 4 espaces obligatoires après <code>:</code></li>
@@ -1311,8 +1343,8 @@ Les <strong>boucles</strong> permettent de répéter des actions automatiquement
 <hr>
 </section>
 </section>
-<section id="structures-de-données" class="level2" data-number="0.9">
-<h2 data-number="0.9" class="anchored" data-anchor-id="structures-de-données"><span class="header-section-number">0.9</span> 3. Structures de données 🧱</h2>
+<section id="structures-de-données" class="level2">
+<h2 class="anchored" data-anchor-id="structures-de-données">3. Structures de données 🧱</h2>
 <p>Python propose plusieurs structures très utilisées en data engineering.</p>
 <table class="caption-top table">
 <thead>
@@ -1355,8 +1387,8 @@ Les <strong>boucles</strong> permettent de répéter des actions automatiquement
 </tr>
 </tbody>
 </table>
-<section id="listes-list" class="level3" data-number="0.9.1">
-<h3 data-number="0.9.1" class="anchored" data-anchor-id="listes-list"><span class="header-section-number">0.9.1</span> 3.1 Listes (<code>list</code>)</h3>
+<section id="listes-list" class="level3">
+<h3 class="anchored" data-anchor-id="listes-list">3.1 Listes (<code>list</code>)</h3>
 <p>Une liste est une <strong>séquence ordonnée</strong> et <strong>modifiable</strong>.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Création d'une liste</span></span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>nombres <span class="op">=</span> [<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>]</span>
@@ -1384,8 +1416,8 @@ Les <strong>boucles</strong> permettent de répéter des actions automatiquement
 <span id="cb25-24"><a href="#cb25-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Suppression par index</span></span>
 <span id="cb25-25"><a href="#cb25-25" aria-hidden="true" tabindex="-1"></a><span class="kw">del</span> nombres[<span class="dv">0</span>]</span>
 <span id="cb25-26"><a href="#cb25-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Après del :"</span>, nombres)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<section id="création-dynamique-de-listes" class="level4" data-number="0.9.1.1">
-<h4 data-number="0.9.1.1" class="anchored" data-anchor-id="création-dynamique-de-listes"><span class="header-section-number">0.9.1.1</span> Création dynamique de listes</h4>
+<section id="création-dynamique-de-listes" class="level4">
+<h4 class="anchored" data-anchor-id="création-dynamique-de-listes">Création dynamique de listes</h4>
 <p>On crée très souvent des listes <strong>à partir d’autres listes</strong>, avec une boucle ou une <em>list comprehension</em>.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>nombres <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]</span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -1403,8 +1435,8 @@ Les <strong>boucles</strong> permettent de répéter des actions automatiquement
 <p>⚠️ <strong>Erreurs fréquentes avec les listes</strong> : - <code>nombres[10]</code> alors que la liste a moins d’éléments → <code>IndexError</code> ; - <code>nombres.remove(999)</code> alors que 999 n’est pas dans la liste → <code>ValueError</code>.</p>
 </section>
 </section>
-<section id="dictionnaires-dict" class="level3" data-number="0.9.2">
-<h3 data-number="0.9.2" class="anchored" data-anchor-id="dictionnaires-dict"><span class="header-section-number">0.9.2</span> 3.2 Dictionnaires (<code>dict</code>)</h3>
+<section id="dictionnaires-dict" class="level3">
+<h3 class="anchored" data-anchor-id="dictionnaires-dict">3.2 Dictionnaires (<code>dict</code>)</h3>
 <p>Un dictionnaire stocke des paires <strong>clé → valeur</strong>. C’est l’équivalent naturel des objets JSON, très utilisé pour les APIs et NoSQL.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>utilisateur <span class="op">=</span> {</span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"id"</span>: <span class="dv">1</span>,</span>
@@ -1423,14 +1455,14 @@ Les <strong>boucles</strong> permettent de répéter des actions automatiquement
 <span id="cb27-15"><a href="#cb27-15" aria-hidden="true" tabindex="-1"></a><span class="kw">del</span> utilisateur[<span class="st">"id"</span>]</span>
 <span id="cb27-16"><a href="#cb27-16" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-17"><a href="#cb27-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(utilisateur)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<section id="accès-sécurisé-avec-.get" class="level4" data-number="0.9.2.1">
-<h4 data-number="0.9.2.1" class="anchored" data-anchor-id="accès-sécurisé-avec-.get"><span class="header-section-number">0.9.2.1</span> Accès sécurisé avec <code>.get()</code></h4>
+<section id="accès-sécurisé-avec-.get" class="level4">
+<h4 class="anchored" data-anchor-id="accès-sécurisé-avec-.get">Accès sécurisé avec <code>.get()</code></h4>
 <p>Utiliser <code>dict.get()</code> permet d’éviter un <code>KeyError</code> si la clé n’existe pas.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(utilisateur.get(<span class="st">"email"</span>))           <span class="co"># None</span></span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(utilisateur.get(<span class="st">"email"</span>, <span class="st">"Inconnu"</span>))  <span class="co"># Inconnu</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="création-dynamique-comptage-doccurrences" class="level4" data-number="0.9.2.2">
-<h4 data-number="0.9.2.2" class="anchored" data-anchor-id="création-dynamique-comptage-doccurrences"><span class="header-section-number">0.9.2.2</span> Création dynamique : comptage d’occurrences</h4>
+<section id="création-dynamique-comptage-doccurrences" class="level4">
+<h4 class="anchored" data-anchor-id="création-dynamique-comptage-doccurrences">Création dynamique : comptage d’occurrences</h4>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>noms <span class="op">=</span> [<span class="st">"bob"</span>, <span class="st">"alice"</span>, <span class="st">"bob"</span>, <span class="st">"charlie"</span>, <span class="st">"alice"</span>]</span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>compte <span class="op">=</span> {}</span>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1441,8 +1473,8 @@ Les <strong>boucles</strong> permettent de répéter des actions automatiquement
 <p>⚠️ <strong>Erreurs fréquentes avec les dictionnaires</strong> : - <code>utilisateur["email"]</code> alors que la clé n’existe pas → <code>KeyError</code> ; - supposer qu’un dictionnaire est indexé comme une liste (<code>utilisateur[0]</code>).</p>
 </section>
 </section>
-<section id="tuples-tuple" class="level3" data-number="0.9.3">
-<h3 data-number="0.9.3" class="anchored" data-anchor-id="tuples-tuple"><span class="header-section-number">0.9.3</span> 3.3 Tuples (<code>tuple</code>)</h3>
+<section id="tuples-tuple" class="level3">
+<h3 class="anchored" data-anchor-id="tuples-tuple">3.3 Tuples (<code>tuple</code>)</h3>
 <p>Un tuple est comme une liste <strong>non modifiable</strong> (immutable). On l’utilise pour représenter des collections <strong>fixes</strong> de valeurs : coordonnées, dates, etc.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>coord <span class="op">=</span> (<span class="fl">5.0</span>, <span class="fl">10.0</span>)</span>
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(coord[<span class="dv">0</span>])  <span class="co"># 5.0</span></span>
@@ -1451,8 +1483,8 @@ Les <strong>boucles</strong> permettent de répéter des actions automatiquement
 <span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a><span class="co"># coord[0] = 20.0  # ❌ TypeError : un tuple n'est pas modifiable</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>En data engineering, les tuples sont utiles pour : - retourner plusieurs valeurs depuis une fonction ; - représenter des clés composites (ex : <code>(année, mois)</code>).</p>
 </section>
-<section id="ensembles-set" class="level3" data-number="0.9.4">
-<h3 data-number="0.9.4" class="anchored" data-anchor-id="ensembles-set"><span class="header-section-number">0.9.4</span> 3.4 Ensembles (<code>set</code>)</h3>
+<section id="ensembles-set" class="level3">
+<h3 class="anchored" data-anchor-id="ensembles-set">3.4 Ensembles (<code>set</code>)</h3>
 <p>Un ensemble (<code>set</code>) contient des valeurs <strong>uniques</strong>, sans ordre garanti. Très utile pour <strong>dédupliquer</strong> une liste.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>tags <span class="op">=</span> {<span class="st">"python"</span>, <span class="st">"data"</span>, <span class="st">"python"</span>}</span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(tags)  <span class="co"># 'python' n'apparaît qu'une seule fois</span></span>
@@ -1473,8 +1505,8 @@ Les <strong>boucles</strong> permettent de répéter des actions automatiquement
 <span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(emails_uniques)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>⚠️ <strong>Erreurs fréquentes</strong> : - Compter sur l’ordre d’un <code>set</code> (l’ordre n’est pas garanti) ; - Utiliser <code>remove()</code> pour un élément possiblement absent → préférer <code>discard()</code>.</p>
 </section>
-<section id="mini-exercice-structures-de-données" class="level3" data-number="0.9.5">
-<h3 data-number="0.9.5" class="anchored" data-anchor-id="mini-exercice-structures-de-données"><span class="header-section-number">0.9.5</span> 🧱 3.5 Mini-exercice — Structures de données</h3>
+<section id="mini-exercice-structures-de-données" class="level3">
+<h3 class="anchored" data-anchor-id="mini-exercice-structures-de-données">🧱 3.5 Mini-exercice — Structures de données</h3>
 <p>📌 <strong>Données</strong></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>logs <span class="op">=</span> [</span>
 <span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>    {<span class="st">"user"</span>: <span class="st">"alice"</span>, <span class="st">"status"</span>: <span class="dv">200</span>},</span>
@@ -1526,8 +1558,8 @@ Les <strong>boucles</strong> permettent de répéter des actions automatiquement
 </details>
 </section>
 </section>
-<section id="fonctions" class="level2" data-number="0.10">
-<h2 data-number="0.10" class="anchored" data-anchor-id="fonctions"><span class="header-section-number">0.10</span> 4. Fonctions</h2>
+<section id="fonctions" class="level2">
+<h2 class="anchored" data-anchor-id="fonctions">4. Fonctions</h2>
 <p>Une fonction permet de : - réutiliser du code ; - encapsuler de la logique métier (nettoyage, validation…) ; - sécuriser la qualité de données (type, structure…).</p>
 <p>Syntaxe générale :</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> nom(param1, param2<span class="op">=</span>valeur_par_defaut) <span class="op">-&gt;</span> type_retour:</span>
@@ -1540,16 +1572,16 @@ Les <strong>boucles</strong> permettent de répéter des actions automatiquement
 <span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>resultat <span class="op">=</span> somme(<span class="dv">3</span>, <span class="dv">5</span>)</span>
 <span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Résultat :"</span>, resultat)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<section id="fonction-pure-sans-effet-externe" class="level3" data-number="0.10.1">
-<h3 data-number="0.10.1" class="anchored" data-anchor-id="fonction-pure-sans-effet-externe"><span class="header-section-number">0.10.1</span> ✔️ <strong>4.1 Fonction pure (sans effet externe)</strong></h3>
+<section id="fonction-pure-sans-effet-externe" class="level3">
+<h3 class="anchored" data-anchor-id="fonction-pure-sans-effet-externe">✔️ <strong>4.1 Fonction pure (sans effet externe)</strong></h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> normaliser_nom(nom: <span class="bu">str</span>) <span class="op">-&gt;</span> <span class="bu">str</span>:</span>
 <span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Nettoie un nom : supprime espaces, met en minuscule et capitalise."""</span></span>
 <span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> nom.strip().lower().capitalize()</span>
 <span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(normaliser_nom(<span class="st">"  aLiCe  "</span>))  <span class="co"># Alice</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="paramètres-valeurs-par-défaut" class="level3" data-number="0.10.2">
-<h3 data-number="0.10.2" class="anchored" data-anchor-id="paramètres-valeurs-par-défaut"><span class="header-section-number">0.10.2</span> ⚙️ 4.2 Paramètres + valeurs par défaut</h3>
+<section id="paramètres-valeurs-par-défaut" class="level3">
+<h3 class="anchored" data-anchor-id="paramètres-valeurs-par-défaut">⚙️ 4.2 Paramètres + valeurs par défaut</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> calculer_total(prix: <span class="bu">float</span>, quantite: <span class="bu">int</span> <span class="op">=</span> <span class="dv">1</span>, taxe: <span class="bu">float</span> <span class="op">=</span> <span class="fl">0.18</span>) <span class="op">-&gt;</span> <span class="bu">float</span>:</span>
 <span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Retourne le prix total avec taxe."""</span></span>
 <span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> prix <span class="op">*</span> quantite <span class="op">*</span> (<span class="dv">1</span> <span class="op">+</span> taxe)</span>
@@ -1557,8 +1589,8 @@ Les <strong>boucles</strong> permettent de répéter des actions automatiquement
 <span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(calculer_total(<span class="dv">2000</span>))  </span>
 <span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(calculer_total(<span class="dv">2000</span>, quantite<span class="op">=</span><span class="dv">3</span>, taxe<span class="op">=</span><span class="fl">0.09</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="retourner-plusieurs-valeurs-tuple" class="level3" data-number="0.10.3">
-<h3 data-number="0.10.3" class="anchored" data-anchor-id="retourner-plusieurs-valeurs-tuple"><span class="header-section-number">0.10.3</span> 📊 4.3 Retourner plusieurs valeurs (tuple)</h3>
+<section id="retourner-plusieurs-valeurs-tuple" class="level3">
+<h3 class="anchored" data-anchor-id="retourner-plusieurs-valeurs-tuple">📊 4.3 Retourner plusieurs valeurs (tuple)</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> stats_notes(notes: <span class="bu">list</span>[<span class="bu">int</span>]) <span class="op">-&gt;</span> <span class="bu">tuple</span>[<span class="bu">float</span>, <span class="bu">float</span>]:</span>
 <span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Retourne moyenne et maximum d'une liste de notes."""</span></span>
 <span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>    moyenne <span class="op">=</span> <span class="bu">sum</span>(notes) <span class="op">/</span> <span class="bu">len</span>(notes)</span>
@@ -1568,8 +1600,8 @@ Les <strong>boucles</strong> permettent de répéter des actions automatiquement
 <span id="cb40-7"><a href="#cb40-7" aria-hidden="true" tabindex="-1"></a>m, mx <span class="op">=</span> stats_notes([<span class="dv">14</span>, <span class="dv">9</span>, <span class="dv">18</span>])</span>
 <span id="cb40-8"><a href="#cb40-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Moyenne:"</span>, m, <span class="st">"Max:"</span>, mx)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="fonctions-qui-manipulent-un-dictionnaire" class="level3" data-number="0.10.4">
-<h3 data-number="0.10.4" class="anchored" data-anchor-id="fonctions-qui-manipulent-un-dictionnaire"><span class="header-section-number">0.10.4</span> 🔗 4.4 Fonctions qui manipulent un dictionnaire</h3>
+<section id="fonctions-qui-manipulent-un-dictionnaire" class="level3">
+<h3 class="anchored" data-anchor-id="fonctions-qui-manipulent-un-dictionnaire">🔗 4.4 Fonctions qui manipulent un dictionnaire</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> extraire_champ(data: <span class="bu">dict</span>, champ: <span class="bu">str</span>, default<span class="op">=</span><span class="va">None</span>):</span>
 <span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Récupère un champ d'un dict, évite KeyError."""</span></span>
 <span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> data.get(champ, default)</span>
@@ -1588,18 +1620,18 @@ Les <strong>boucles</strong> permettent de répéter des actions automatiquement
 <span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>    liste.append(element)</span>
 <span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> liste</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="mini-exercice-fonctions-sur-des-posts" class="level3" data-number="0.10.5">
-<h3 data-number="0.10.5" class="anchored" data-anchor-id="mini-exercice-fonctions-sur-des-posts"><span class="header-section-number">0.10.5</span> 🧪 Mini-exercice — Fonctions sur des posts</h3>
-<section id="dataset-simulé" class="level4" data-number="0.10.5.1">
-<h4 data-number="0.10.5.1" class="anchored" data-anchor-id="dataset-simulé"><span class="header-section-number">0.10.5.1</span> 📌 Dataset simulé</h4>
+<section id="mini-exercice-fonctions-sur-des-posts" class="level3">
+<h3 class="anchored" data-anchor-id="mini-exercice-fonctions-sur-des-posts">🧪 Mini-exercice — Fonctions sur des posts</h3>
+<section id="dataset-simulé" class="level4">
+<h4 class="anchored" data-anchor-id="dataset-simulé">📌 Dataset simulé</h4>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>posts <span class="op">=</span> [</span>
 <span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>  {<span class="st">"user"</span>: <span class="st">"alice"</span>, <span class="st">"text"</span>: <span class="st">"  Hello World  "</span>},</span>
 <span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>  {<span class="st">"user"</span>: <span class="st">"bob"</span>, <span class="st">"text"</span>: <span class="st">"Data Engineer ici"</span>},</span>
 <span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>  {<span class="st">"user"</span>: <span class="st">"alice"</span>, <span class="st">"text"</span>: <span class="st">"Python est top "</span>}</span>
 <span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="instructions" class="level4" data-number="0.10.5.2">
-<h4 data-number="0.10.5.2" class="anchored" data-anchor-id="instructions"><span class="header-section-number">0.10.5.2</span> 🎯 Instructions</h4>
+<section id="instructions" class="level4">
+<h4 class="anchored" data-anchor-id="instructions">🎯 Instructions</h4>
 <p>Créer 3 fonctions :</p>
 <ol type="1">
 <li><p><strong><code>nettoyer_texte(text: str) -&gt; str</code></strong><br>
@@ -1632,14 +1664,14 @@ Retour attendu : <code>(moyenne, maximum, minimum)</code> des longueurs de texte
 </section>
 </section>
 </section>
-<section id="classes-et-objets" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> 5. Classes et Objets 🧩</h1>
+<section id="classes-et-objets" class="level1">
+<h1>5. Classes et Objets 🧩</h1>
 <p>Les <strong>classes</strong> permettent de créer des modèles (ou <em>plans</em>) d’objets combinant :<br>
 - des <strong>données</strong> → <em>attributs</em><br>
 - des <strong>comportements</strong> → <em>méthodes</em></p>
 <p>En Data Engineering, elles sont très utiles pour structurer des pipelines, représenter des données complexes, encapsuler des transformations et rendre le code réutilisable.</p>
-<section id="exemple-simple-modéliser-un-utilisateur" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="exemple-simple-modéliser-un-utilisateur"><span class="header-section-number">1.1</span> 5.1 Exemple simple : Modéliser un utilisateur 👤</h2>
+<section id="exemple-simple-modéliser-un-utilisateur" class="level2">
+<h2 class="anchored" data-anchor-id="exemple-simple-modéliser-un-utilisateur">5.1 Exemple simple : Modéliser un utilisateur 👤</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Utilisateur:</span>
 <span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, identifiant: <span class="bu">int</span>, nom: <span class="bu">str</span>, ville: <span class="bu">str</span>) <span class="op">-&gt;</span> <span class="va">None</span>:</span>
 <span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.identifiant <span class="op">=</span> identifiant</span>
@@ -1651,8 +1683,8 @@ Retour attendu : <code>(moyenne, maximum, minimum)</code> des longueurs de texte
 <span id="cb47-9"><a href="#cb47-9" aria-hidden="true" tabindex="-1"></a>u <span class="op">=</span> Utilisateur(<span class="dv">1</span>, <span class="st">"Alice"</span>, <span class="st">"Abidjan"</span>)</span>
 <span id="cb47-10"><a href="#cb47-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(u.presentation())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="ajouter-une-méthode-utile" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="ajouter-une-méthode-utile"><span class="header-section-number">1.2</span> 5.2 Ajouter une méthode utile 🏙️</h2>
+<section id="ajouter-une-méthode-utile" class="level2">
+<h2 class="anchored" data-anchor-id="ajouter-une-méthode-utile">5.2 Ajouter une méthode utile 🏙️</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Utilisateur:</span>
 <span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, identifiant: <span class="bu">int</span>, nom: <span class="bu">str</span>, ville: <span class="bu">str</span>) <span class="op">-&gt;</span> <span class="va">None</span>:</span>
 <span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.identifiant <span class="op">=</span> identifiant</span>
@@ -1665,15 +1697,15 @@ Retour attendu : <code>(moyenne, maximum, minimum)</code> des longueurs de texte
 <span id="cb48-10"><a href="#cb48-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> changer_ville(<span class="va">self</span>, nouvelle_ville: <span class="bu">str</span>) <span class="op">-&gt;</span> <span class="va">None</span>:</span>
 <span id="cb48-11"><a href="#cb48-11" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.ville <span class="op">=</span> nouvelle_ville</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="encapsulation-attributs-protégésprivés" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="encapsulation-attributs-protégésprivés"><span class="header-section-number">1.3</span> 5.3 Encapsulation : attributs protégés/privés 🔒</h2>
+<section id="encapsulation-attributs-protégésprivés" class="level2">
+<h2 class="anchored" data-anchor-id="encapsulation-attributs-protégésprivés">5.3 Encapsulation : attributs protégés/privés 🔒</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Compte:</span>
 <span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, solde: <span class="bu">float</span>):</span>
 <span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>._solde <span class="op">=</span> solde        <span class="co"># usage interne</span></span>
 <span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.__secret <span class="op">=</span> <span class="st">"XYZ123"</span>   <span class="co"># privé via name mangling</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="représentation-textuelle-str" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="représentation-textuelle-str"><span class="header-section-number">1.4</span> 5.4 Représentation textuelle (<strong>str</strong>) 📝</h2>
+<section id="représentation-textuelle-str" class="level2">
+<h2 class="anchored" data-anchor-id="représentation-textuelle-str">5.4 Représentation textuelle (<strong>str</strong>) 📝</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Utilisateur:</span>
 <span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, identifiant, nom, ville):</span>
 <span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.identifiant <span class="op">=</span> identifiant</span>
@@ -1683,8 +1715,8 @@ Retour attendu : <code>(moyenne, maximum, minimum)</code> des longueurs de texte
 <span id="cb50-7"><a href="#cb50-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__str__</span>(<span class="va">self</span>) <span class="op">-&gt;</span> <span class="bu">str</span>:</span>
 <span id="cb50-8"><a href="#cb50-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f"[</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>identifiant<span class="sc">}</span><span class="ss">] </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>nom<span class="sc">}</span><span class="ss"> (</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>ville<span class="sc">}</span><span class="ss">)"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="composition-dobjets-objet-dans-un-objet" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="composition-dobjets-objet-dans-un-objet"><span class="header-section-number">1.5</span> 5.5 Composition d’objets (objet dans un objet) 🧱</h2>
+<section id="composition-dobjets-objet-dans-un-objet" class="level2">
+<h2 class="anchored" data-anchor-id="composition-dobjets-objet-dans-un-objet">5.5 Composition d’objets (objet dans un objet) 🧱</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb51"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Adresse:</span>
 <span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, rue: <span class="bu">str</span>, ville: <span class="bu">str</span>, pays: <span class="bu">str</span>) <span class="op">-&gt;</span> <span class="va">None</span>:</span>
 <span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.rue <span class="op">=</span> rue</span>
@@ -1703,8 +1735,8 @@ Retour attendu : <code>(moyenne, maximum, minimum)</code> des longueurs de texte
 <span id="cb51-16"><a href="#cb51-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> presentation(<span class="va">self</span>) <span class="op">-&gt;</span> <span class="bu">str</span>:</span>
 <span id="cb51-17"><a href="#cb51-17" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f"Je m'appelle </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>nom<span class="sc">}</span><span class="ss"> et j'habite à </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>adresse<span class="sc">}</span><span class="ss">."</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="pourquoi-utiliser-des-classes-en-data-engineering" class="level2" data-number="1.6">
-<h2 data-number="1.6" class="anchored" data-anchor-id="pourquoi-utiliser-des-classes-en-data-engineering"><span class="header-section-number">1.6</span> 5.6 Pourquoi utiliser des classes en Data Engineering ? ⚙️</h2>
+<section id="pourquoi-utiliser-des-classes-en-data-engineering" class="level2">
+<h2 class="anchored" data-anchor-id="pourquoi-utiliser-des-classes-en-data-engineering">5.6 Pourquoi utiliser des classes en Data Engineering ? ⚙️</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb52"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Transaction:</span>
 <span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, <span class="bu">id</span>, montant, devise, timestamp):</span>
 <span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.<span class="bu">id</span> <span class="op">=</span> <span class="bu">id</span></span>
@@ -1735,8 +1767,8 @@ Retour attendu : <code>(moyenne, maximum, minimum)</code> des longueurs de texte
 <span id="cb52-28"><a href="#cb52-28" aria-hidden="true" tabindex="-1"></a>event.validate()</span>
 <span id="cb52-29"><a href="#cb52-29" aria-hidden="true" tabindex="-1"></a>event.to_parquet()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="erreurs-fréquentes" class="level2" data-number="1.7">
-<h2 data-number="1.7" class="anchored" data-anchor-id="erreurs-fréquentes"><span class="header-section-number">1.7</span> 5.7 Erreurs fréquentes ⚠️</h2>
+<section id="erreurs-fréquentes" class="level2">
+<h2 class="anchored" data-anchor-id="erreurs-fréquentes">5.7 Erreurs fréquentes ⚠️</h2>
 <ul>
 <li>Oublier <code>self</code> dans les méthodes.</li>
 <li>Accéder à un attribut avant de l’avoir créé.</li>
@@ -1745,8 +1777,8 @@ Retour attendu : <code>(moyenne, maximum, minimum)</code> des longueurs de texte
 <li>Faire une classe « God Object » avec trop de responsabilités.</li>
 </ul>
 </section>
-<section id="gestion-derreurs-indispensable-en-data-engineering" class="level2" data-number="1.8">
-<h2 data-number="1.8" class="anchored" data-anchor-id="gestion-derreurs-indispensable-en-data-engineering"><span class="header-section-number">1.8</span> 6. Gestion d’erreurs 🛑 — (Indispensable en Data Engineering)</h2>
+<section id="gestion-derreurs-indispensable-en-data-engineering" class="level2">
+<h2 class="anchored" data-anchor-id="gestion-derreurs-indispensable-en-data-engineering">6. Gestion d’erreurs 🛑 — (Indispensable en Data Engineering)</h2>
 <p>En Data Engineering, les erreurs sont <strong>inévitables</strong> :<br>
 - fichiers manquants<br>
 - API indisponible<br>
@@ -1757,8 +1789,8 @@ Retour attendu : <code>(moyenne, maximum, minimum)</code> des longueurs de texte
 <p>👉 La bonne pratique consiste à <strong>capturer</strong>, <strong>expliquer</strong>, puis <strong>continuer proprement</strong>.<br>
 C’est le rôle de <code>try / except</code>.</p>
 <hr>
-<section id="exemple-simple-division-sécurisée" class="level3" data-number="1.8.1">
-<h3 data-number="1.8.1" class="anchored" data-anchor-id="exemple-simple-division-sécurisée"><span class="header-section-number">1.8.1</span> 🎯 Exemple simple — division sécurisée</h3>
+<section id="exemple-simple-division-sécurisée" class="level3">
+<h3 class="anchored" data-anchor-id="exemple-simple-division-sécurisée">🎯 Exemple simple — division sécurisée</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb53"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> division(a: <span class="bu">float</span>, b: <span class="bu">float</span>) <span class="op">-&gt;</span> <span class="bu">float</span> <span class="op">|</span> <span class="va">None</span>:</span>
 <span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>:</span>
 <span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> a <span class="op">/</span> b</span>
@@ -1769,8 +1801,8 @@ C’est le rôle de <code>try / except</code>.</p>
 <span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(division(<span class="dv">10</span>, <span class="dv">0</span>))  <span class="co"># Erreur gérée</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
-<section id="exemple-plus-réaliste-lecture-de-fichier" class="level3" data-number="1.8.2">
-<h3 data-number="1.8.2" class="anchored" data-anchor-id="exemple-plus-réaliste-lecture-de-fichier"><span class="header-section-number">1.8.2</span> 🧰 Exemple plus réaliste — lecture de fichier</h3>
+<section id="exemple-plus-réaliste-lecture-de-fichier" class="level3">
+<h3 class="anchored" data-anchor-id="exemple-plus-réaliste-lecture-de-fichier">🧰 Exemple plus réaliste — lecture de fichier</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb55"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> lire_csv(chemin: <span class="bu">str</span>) <span class="op">-&gt;</span> <span class="bu">list</span> <span class="op">|</span> <span class="va">None</span>:</span>
 <span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>:</span>
 <span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">with</span> <span class="bu">open</span>(chemin, <span class="st">"r"</span>) <span class="im">as</span> f:</span>
@@ -1780,8 +1812,8 @@ C’est le rôle de <code>try / except</code>.</p>
 <span id="cb55-7"><a href="#cb55-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">None</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
-<section id="else-et-finally" class="level3" data-number="1.8.3">
-<h3 data-number="1.8.3" class="anchored" data-anchor-id="else-et-finally"><span class="header-section-number">1.8.3</span> 💡 <code>else</code> et <code>finally</code></h3>
+<section id="else-et-finally" class="level3">
+<h3 class="anchored" data-anchor-id="else-et-finally">💡 <code>else</code> et <code>finally</code></h3>
 <p>On peut améliorer la lisibilité avec <code>else</code> et <code>finally</code> :</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb56"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>:</span>
 <span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> <span class="dv">10</span> <span class="op">/</span> <span class="dv">2</span></span>
@@ -1793,8 +1825,8 @@ C’est le rôle de <code>try / except</code>.</p>
 <span id="cb56-8"><a href="#cb56-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Bloc exécuté dans tous les cas"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
-<section id="exemple-data-engineering-appel-api-sécurisé" class="level3" data-number="1.8.4">
-<h3 data-number="1.8.4" class="anchored" data-anchor-id="exemple-data-engineering-appel-api-sécurisé"><span class="header-section-number">1.8.4</span> 🏗️ Exemple Data Engineering : appel API sécurisé</h3>
+<section id="exemple-data-engineering-appel-api-sécurisé" class="level3">
+<h3 class="anchored" data-anchor-id="exemple-data-engineering-appel-api-sécurisé">🏗️ Exemple Data Engineering : appel API sécurisé</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb57"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
 <span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fetch_json(url: <span class="bu">str</span>) <span class="op">-&gt;</span> <span class="bu">dict</span> <span class="op">|</span> <span class="va">None</span>:</span>
@@ -1813,8 +1845,8 @@ C’est le rôle de <code>try / except</code>.</p>
 <span id="cb57-16"><a href="#cb57-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="va">None</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
-<section id="erreurs-fréquentes-à-éviter" class="level3" data-number="1.8.5">
-<h3 data-number="1.8.5" class="anchored" data-anchor-id="erreurs-fréquentes-à-éviter"><span class="header-section-number">1.8.5</span> ⚠️ Erreurs fréquentes à éviter</h3>
+<section id="erreurs-fréquentes-à-éviter" class="level3">
+<h3 class="anchored" data-anchor-id="erreurs-fréquentes-à-éviter">⚠️ Erreurs fréquentes à éviter</h3>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 53%">
@@ -1851,8 +1883,8 @@ C’est le rôle de <code>try / except</code>.</p>
 </table>
 <hr>
 </section>
-<section id="conseil-pro-très-utile-en-data-engineering" class="level3" data-number="1.8.6">
-<h3 data-number="1.8.6" class="anchored" data-anchor-id="conseil-pro-très-utile-en-data-engineering"><span class="header-section-number">1.8.6</span> 🚀 Conseil pro (très utile en Data Engineering)</h3>
+<section id="conseil-pro-très-utile-en-data-engineering" class="level3">
+<h3 class="anchored" data-anchor-id="conseil-pro-très-utile-en-data-engineering">🚀 Conseil pro (très utile en Data Engineering)</h3>
 <p>Utiliser <code>raise</code> pour <strong>propager l’erreur</strong> si elle doit être traitée ailleurs :</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb58"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> parse_json(data: <span class="bu">str</span>) <span class="op">-&gt;</span> <span class="bu">dict</span>:</span>
 <span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>:</span>
@@ -1861,8 +1893,8 @@ C’est le rôle de <code>try / except</code>.</p>
 <span id="cb58-5"><a href="#cb58-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="ss">f"JSON invalide : </span><span class="sc">{</span>e<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
-<section id="à-retenir" class="level3" data-number="1.8.7">
-<h3 data-number="1.8.7" class="anchored" data-anchor-id="à-retenir"><span class="header-section-number">1.8.7</span> 📌 À retenir</h3>
+<section id="à-retenir" class="level3">
+<h3 class="anchored" data-anchor-id="à-retenir">📌 À retenir</h3>
 <ol type="1">
 <li><strong>Toujours attraper le type exact d’erreur.</strong><br>
 </li>
@@ -1876,8 +1908,8 @@ C’est le rôle de <code>try / except</code>.</p>
 </ol>
 </section>
 </section>
-<section id="modules-et-imports-structurer-son-code-comme-un-data-engineer" class="level2" data-number="1.9">
-<h2 data-number="1.9" class="anchored" data-anchor-id="modules-et-imports-structurer-son-code-comme-un-data-engineer"><span class="header-section-number">1.9</span> 7. Modules et Imports 📦 — Structurer son code comme un Data Engineer</h2>
+<section id="modules-et-imports-structurer-son-code-comme-un-data-engineer" class="level2">
+<h2 class="anchored" data-anchor-id="modules-et-imports-structurer-son-code-comme-un-data-engineer">7. Modules et Imports 📦 — Structurer son code comme un Data Engineer</h2>
 <p>En Python :</p>
 <ul>
 <li>Un <strong>module</strong> = un fichier <code>.py</code></li>
@@ -1886,8 +1918,8 @@ C’est le rôle de <code>try / except</code>.</p>
 <p>👉 Cela permet d’organiser un projet data en blocs logiques :<br>
 ingestion, nettoyage, transformation, validation, etc.</p>
 <hr>
-<section id="exemple-de-structure-de-projet-propre-professionnelle" class="level3" data-number="1.9.1">
-<h3 data-number="1.9.1" class="anchored" data-anchor-id="exemple-de-structure-de-projet-propre-professionnelle"><span class="header-section-number">1.9.1</span> 🗂️ Exemple de structure de projet (propre &amp; professionnelle)</h3>
+<section id="exemple-de-structure-de-projet-propre-professionnelle" class="level3">
+<h3 class="anchored" data-anchor-id="exemple-de-structure-de-projet-propre-professionnelle">🗂️ Exemple de structure de projet (propre &amp; professionnelle)</h3>
 <pre><code>project/
 ├── utils/               ← Package (outils réutilisables)
 │   ├── __init__.py      ← Indique que `utils` est un package
@@ -1898,20 +1930,20 @@ ingestion, nettoyage, transformation, validation, etc.</p>
 └── main.py               ← Point d’entrée du projet</code></pre>
 <hr>
 </section>
-<section id="contenu-du-module-utilsmath_utils.py" class="level3" data-number="1.9.2">
-<h3 data-number="1.9.2" class="anchored" data-anchor-id="contenu-du-module-utilsmath_utils.py"><span class="header-section-number">1.9.2</span> 📌 Contenu du module : <code>utils/math_utils.py</code></h3>
+<section id="contenu-du-module-utilsmath_utils.py" class="level3">
+<h3 class="anchored" data-anchor-id="contenu-du-module-utilsmath_utils.py">📌 Contenu du module : <code>utils/math_utils.py</code></h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb60"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> somme(a, b):</span>
 <span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> a <span class="op">+</span> b</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
-<section id="contenu-dun-autre-module-processorstext_cleaner.py" class="level3" data-number="1.9.3">
-<h3 data-number="1.9.3" class="anchored" data-anchor-id="contenu-dun-autre-module-processorstext_cleaner.py"><span class="header-section-number">1.9.3</span> 📌 Contenu d’un autre module : <code>processors/text_cleaner.py</code></h3>
+<section id="contenu-dun-autre-module-processorstext_cleaner.py" class="level3">
+<h3 class="anchored" data-anchor-id="contenu-dun-autre-module-processorstext_cleaner.py">📌 Contenu d’un autre module : <code>processors/text_cleaner.py</code></h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb61"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> nettoyer_texte(text: <span class="bu">str</span>) <span class="op">-&gt;</span> <span class="bu">str</span>:</span>
 <span id="cb61-2"><a href="#cb61-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> text.strip().lower()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
-<section id="importer-dans-main.py" class="level3" data-number="1.9.4">
-<h3 data-number="1.9.4" class="anchored" data-anchor-id="importer-dans-main.py"><span class="header-section-number">1.9.4</span> 📌 Importer dans <code>main.py</code></h3>
+<section id="importer-dans-main.py" class="level3">
+<h3 class="anchored" data-anchor-id="importer-dans-main.py">📌 Importer dans <code>main.py</code></h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb62"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> utils.math_utils <span class="im">import</span> somme</span>
 <span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> processors.text_cleaner <span class="im">import</span> nettoyer_texte</span>
 <span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1920,22 +1952,22 @@ ingestion, nettoyage, transformation, validation, etc.</p>
 <hr>
 </section>
 </section>
-<section id="import-absolu-vs-import-relatif" class="level2" data-number="1.10">
-<h2 data-number="1.10" class="anchored" data-anchor-id="import-absolu-vs-import-relatif"><span class="header-section-number">1.10</span> 🔍 💡 Import absolu vs import relatif</h2>
-<section id="import-absolu-recommandé" class="level3" data-number="1.10.1">
-<h3 data-number="1.10.1" class="anchored" data-anchor-id="import-absolu-recommandé"><span class="header-section-number">1.10.1</span> ✔️ Import absolu (recommandé)</h3>
+<section id="import-absolu-vs-import-relatif" class="level2">
+<h2 class="anchored" data-anchor-id="import-absolu-vs-import-relatif">🔍 💡 Import absolu vs import relatif</h2>
+<section id="import-absolu-recommandé" class="level3">
+<h3 class="anchored" data-anchor-id="import-absolu-recommandé">✔️ Import absolu (recommandé)</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb63"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> utils.math_utils <span class="im">import</span> somme</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>➡️ Le plus lisible, idéal pour projets pro / Data Engineering.</p>
 </section>
-<section id="import-relatif-utile-dans-les-packages" class="level3" data-number="1.10.2">
-<h3 data-number="1.10.2" class="anchored" data-anchor-id="import-relatif-utile-dans-les-packages"><span class="header-section-number">1.10.2</span> ✔️ Import relatif (utile dans les packages)</h3>
+<section id="import-relatif-utile-dans-les-packages" class="level3">
+<h3 class="anchored" data-anchor-id="import-relatif-utile-dans-les-packages">✔️ Import relatif (utile dans les packages)</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb64"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> .math_utils <span class="im">import</span> somme</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>➡️ Courant dans les gros projets et dans les packages pip.</p>
 <hr>
 </section>
 </section>
-<section id="pourquoi-cest-important-en-data-engineering" class="level2" data-number="1.11">
-<h2 data-number="1.11" class="anchored" data-anchor-id="pourquoi-cest-important-en-data-engineering"><span class="header-section-number">1.11</span> 🧠 Pourquoi c’est important en Data Engineering ?</h2>
+<section id="pourquoi-cest-important-en-data-engineering" class="level2">
+<h2 class="anchored" data-anchor-id="pourquoi-cest-important-en-data-engineering">🧠 Pourquoi c’est important en Data Engineering ?</h2>
 <ul>
 <li>Créer des modules = rendre ton code <strong>réutilisable</strong> (API, pipelines, notebooks)</li>
 <li>Structurer ton projet = éviter le “script spaghetti”</li>
@@ -1945,8 +1977,8 @@ ingestion, nettoyage, transformation, validation, etc.</p>
 </ul>
 <hr>
 </section>
-<section id="erreurs-fréquentes-solutions" class="level2" data-number="1.12">
-<h2 data-number="1.12" class="anchored" data-anchor-id="erreurs-fréquentes-solutions"><span class="header-section-number">1.12</span> ⚠️ Erreurs fréquentes &amp; solutions</h2>
+<section id="erreurs-fréquentes-solutions" class="level2">
+<h2 class="anchored" data-anchor-id="erreurs-fréquentes-solutions">⚠️ Erreurs fréquentes &amp; solutions</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 38%">
@@ -1984,23 +2016,23 @@ ingestion, nettoyage, transformation, validation, etc.</p>
 </tbody>
 </table>
 <hr>
-<section id="astuce-pro-vérifier-ton-pythonpath" class="level3" data-number="1.12.1">
-<h3 data-number="1.12.1" class="anchored" data-anchor-id="astuce-pro-vérifier-ton-pythonpath"><span class="header-section-number">1.12.1</span> ✔️ Astuce pro : vérifier ton <code>PYTHONPATH</code></h3>
+<section id="astuce-pro-vérifier-ton-pythonpath" class="level3">
+<h3 class="anchored" data-anchor-id="astuce-pro-vérifier-ton-pythonpath">✔️ Astuce pro : vérifier ton <code>PYTHONPATH</code></h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb65"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
 <span id="cb65-2"><a href="#cb65-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sys.path)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Cela indique où Python cherche les modules.</p>
 <hr>
 </section>
-<section id="rappel-essentiel" class="level3" data-number="1.12.2">
-<h3 data-number="1.12.2" class="anchored" data-anchor-id="rappel-essentiel"><span class="header-section-number">1.12.2</span> ⭐ Rappel essentiel</h3>
+<section id="rappel-essentiel" class="level3">
+<h3 class="anchored" data-anchor-id="rappel-essentiel">⭐ Rappel essentiel</h3>
 <blockquote class="blockquote">
 <p><strong>Importer = Réutiliser.<br>
 Structurer = Devenir un vrai Data Engineer.</strong></p>
 </blockquote>
 </section>
 </section>
-<section id="manipulation-de-fichiers-compétence-essentielle-du-data-engineer" class="level2" data-number="1.13">
-<h2 data-number="1.13" class="anchored" data-anchor-id="manipulation-de-fichiers-compétence-essentielle-du-data-engineer"><span class="header-section-number">1.13</span> 8. Manipulation de fichiers 📁 — Compétence essentielle du Data Engineer</h2>
+<section id="manipulation-de-fichiers-compétence-essentielle-du-data-engineer" class="level2">
+<h2 class="anchored" data-anchor-id="manipulation-de-fichiers-compétence-essentielle-du-data-engineer">8. Manipulation de fichiers 📁 — Compétence essentielle du Data Engineer</h2>
 <p>Dans un pipeline Data, on manipule en permanence des fichiers : - fichiers <strong>texte</strong> (logs, outputs) - fichiers <strong>CSV</strong> (exports métier, ingestion) - fichiers <strong>JSON</strong> (APIs, NoSQL, événements Kafka) - dossiers qui contiennent les données</p>
 <p>Python fournit des outils natifs très puissants pour cela :</p>
 <ul>
@@ -2011,8 +2043,8 @@ Structurer = Devenir un vrai Data Engineer.</strong></p>
 <li><code>json</code> → sérialiser/désérialiser des données JSON</li>
 </ul>
 <hr>
-<section id="initialisation-du-dossier-data" class="level3" data-number="1.13.1">
-<h3 data-number="1.13.1" class="anchored" data-anchor-id="initialisation-du-dossier-data"><span class="header-section-number">1.13.1</span> 🗂️ Initialisation du dossier <code>data/</code></h3>
+<section id="initialisation-du-dossier-data" class="level3">
+<h3 class="anchored" data-anchor-id="initialisation-du-dossier-data">🗂️ Initialisation du dossier <code>data/</code></h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb66"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb66-2"><a href="#cb66-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json</span>
 <span id="cb66-3"><a href="#cb66-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -2022,8 +2054,8 @@ Structurer = Devenir un vrai Data Engineer.</strong></p>
 <hr>
 </section>
 </section>
-<section id="manipulation-dun-fichier-texte-logs-outputs" class="level2" data-number="1.14">
-<h2 data-number="1.14" class="anchored" data-anchor-id="manipulation-dun-fichier-texte-logs-outputs"><span class="header-section-number">1.14</span> 8.1 📄 Manipulation d’un fichier texte (logs, outputs…)</h2>
+<section id="manipulation-dun-fichier-texte-logs-outputs" class="level2">
+<h2 class="anchored" data-anchor-id="manipulation-dun-fichier-texte-logs-outputs">8.1 📄 Manipulation d’un fichier texte (logs, outputs…)</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb67"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a>texte_path <span class="op">=</span> DATA_DIR <span class="op">/</span> <span class="st">"exemple.txt"</span></span>
 <span id="cb67-2"><a href="#cb67-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb67-3"><a href="#cb67-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Écriture</span></span>
@@ -2039,8 +2071,8 @@ Structurer = Devenir un vrai Data Engineer.</strong></p>
 - Toujours utiliser <code>with ...</code> (fermeture automatique du fichier)</p>
 <hr>
 </section>
-<section id="manipulation-dun-fichier-json" class="level2" data-number="1.15">
-<h2 data-number="1.15" class="anchored" data-anchor-id="manipulation-dun-fichier-json"><span class="header-section-number">1.15</span> 8.2 🧩 Manipulation d’un fichier JSON</h2>
+<section id="manipulation-dun-fichier-json" class="level2">
+<h2 class="anchored" data-anchor-id="manipulation-dun-fichier-json">8.2 🧩 Manipulation d’un fichier JSON</h2>
 <p>Format le plus utilisé dans : - <strong>APIs REST</strong> - <strong>MongoDB</strong> - <strong>Events Kafka / Kinesis</strong> - <strong>Configurations de job</strong></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb68"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a>json_path <span class="op">=</span> DATA_DIR <span class="op">/</span> <span class="st">"utilisateur.json"</span></span>
 <span id="cb68-2"><a href="#cb68-2" aria-hidden="true" tabindex="-1"></a>utilisateur <span class="op">=</span> {<span class="st">"nom"</span>: <span class="st">"Alice"</span>, <span class="st">"age"</span>: <span class="dv">30</span>}</span>
@@ -2058,8 +2090,8 @@ Structurer = Devenir un vrai Data Engineer.</strong></p>
 💡 <code>indent=2</code> rend le JSON lisible (log, debug, audits…).</p>
 <hr>
 </section>
-<section id="optionnel-manipulation-dun-csv-avec-pandas" class="level2" data-number="1.16">
-<h2 data-number="1.16" class="anchored" data-anchor-id="optionnel-manipulation-dun-csv-avec-pandas"><span class="header-section-number">1.16</span> 8.3 📊 (Optionnel) Manipulation d’un CSV avec Pandas</h2>
+<section id="optionnel-manipulation-dun-csv-avec-pandas" class="level2">
+<h2 class="anchored" data-anchor-id="optionnel-manipulation-dun-csv-avec-pandas">8.3 📊 (Optionnel) Manipulation d’un CSV avec Pandas</h2>
 <p>Souvent utilisé en ingestion de données.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb69"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb69-2"><a href="#cb69-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -2076,8 +2108,8 @@ Structurer = Devenir un vrai Data Engineer.</strong></p>
 <span id="cb69-13"><a href="#cb69-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_loaded)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
-<section id="erreurs-fréquentes-comment-les-éviter" class="level2" data-number="1.17">
-<h2 data-number="1.17" class="anchored" data-anchor-id="erreurs-fréquentes-comment-les-éviter"><span class="header-section-number">1.17</span> ⚠️ Erreurs fréquentes &amp; comment les éviter</h2>
+<section id="erreurs-fréquentes-comment-les-éviter" class="level2">
+<h2 class="anchored" data-anchor-id="erreurs-fréquentes-comment-les-éviter">⚠️ Erreurs fréquentes &amp; comment les éviter</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 38%">
@@ -2121,8 +2153,8 @@ Structurer = Devenir un vrai Data Engineer.</strong></p>
 </table>
 <hr>
 </section>
-<section id="points-clés-à-retenir-1" class="level2" data-number="1.18">
-<h2 data-number="1.18" class="anchored" data-anchor-id="points-clés-à-retenir-1"><span class="header-section-number">1.18</span> 🎓 Points clés à retenir</h2>
+<section id="points-clés-à-retenir-1" class="level2">
+<h2 class="anchored" data-anchor-id="points-clés-à-retenir-1">🎓 Points clés à retenir</h2>
 <ol type="1">
 <li><code>pathlib.Path</code> simplifie la gestion des chemins.<br>
 </li>
@@ -2135,31 +2167,31 @@ Structurer = Devenir un vrai Data Engineer.</strong></p>
 <li>Le dossier <code>data/</code> centralise vos fichiers dans un projet propre.</li>
 </ol>
 </section>
-<section id="packages-et-pip-gérer-les-dépendances-comme-un-data-engineer" class="level2" data-number="1.19">
-<h2 data-number="1.19" class="anchored" data-anchor-id="packages-et-pip-gérer-les-dépendances-comme-un-data-engineer"><span class="header-section-number">1.19</span> 9. Packages et <code>pip</code> 📦 — Gérer les dépendances comme un Data Engineer</h2>
+<section id="packages-et-pip-gérer-les-dépendances-comme-un-data-engineer" class="level2">
+<h2 class="anchored" data-anchor-id="packages-et-pip-gérer-les-dépendances-comme-un-data-engineer">9. Packages et <code>pip</code> 📦 — Gérer les dépendances comme un Data Engineer</h2>
 <p>Python devient puissant grâce à ses <strong>packages externes</strong> :<br>
 Pandas, Requests, SQLAlchemy, PyMongo, Polars, FastAPI, etc.</p>
 <p>Pour installer ces packages, on utilise <strong><code>pip</code></strong>, le gestionnaire officiel de Python.</p>
 <hr>
 </section>
-<section id="installer-un-package-avec-pip" class="level2" data-number="1.20">
-<h2 data-number="1.20" class="anchored" data-anchor-id="installer-un-package-avec-pip"><span class="header-section-number">1.20</span> 🔧 Installer un package avec <code>pip</code></h2>
+<section id="installer-un-package-avec-pip" class="level2">
+<h2 class="anchored" data-anchor-id="installer-un-package-avec-pip">🔧 Installer un package avec <code>pip</code></h2>
 <p>Exemple : installer <strong>requests</strong> pour faire des appels HTTP (API REST).</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb70"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> pip install requests</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>👉 Pourquoi <code>python -m pip</code> et pas juste <code>pip install</code> ?<br>
 Parce que cela garantit qu’on utilise <strong>le pip lié à la bonne version de Python</strong>, surtout si plusieurs versions sont installées.</p>
 <hr>
 </section>
-<section id="utilisation-dans-un-script" class="level2" data-number="1.21">
-<h2 data-number="1.21" class="anchored" data-anchor-id="utilisation-dans-un-script"><span class="header-section-number">1.21</span> 📌 Utilisation dans un script</h2>
+<section id="utilisation-dans-un-script" class="level2">
+<h2 class="anchored" data-anchor-id="utilisation-dans-un-script">📌 Utilisation dans un script</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb71"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
 <span id="cb71-2"><a href="#cb71-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb71-3"><a href="#cb71-3" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> requests.get(<span class="st">"https://api.github.com"</span>)</span>
 <span id="cb71-4"><a href="#cb71-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(response.status_code)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
-<section id="installer-plusieurs-packages-requirements.txt" class="level2" data-number="1.22">
-<h2 data-number="1.22" class="anchored" data-anchor-id="installer-plusieurs-packages-requirements.txt"><span class="header-section-number">1.22</span> 📁 Installer plusieurs packages — <code>requirements.txt</code></h2>
+<section id="installer-plusieurs-packages-requirements.txt" class="level2">
+<h2 class="anchored" data-anchor-id="installer-plusieurs-packages-requirements.txt">📁 Installer plusieurs packages — <code>requirements.txt</code></h2>
 <p>Dans un vrai projet Data Engineering, on liste les dépendances dans un fichier :</p>
 <pre><code>requests
 pandas
@@ -2169,24 +2201,24 @@ pymongo</code></pre>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb73"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> pip install <span class="at">-r</span> requirements.txt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
-<section id="mettre-à-jour-un-package" class="level2" data-number="1.23">
-<h2 data-number="1.23" class="anchored" data-anchor-id="mettre-à-jour-un-package"><span class="header-section-number">1.23</span> ♻️ Mettre à jour un package</h2>
+<section id="mettre-à-jour-un-package" class="level2">
+<h2 class="anchored" data-anchor-id="mettre-à-jour-un-package">♻️ Mettre à jour un package</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb74"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> pip install <span class="at">--upgrade</span> requests</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
-<section id="désinstaller-un-package" class="level2" data-number="1.24">
-<h2 data-number="1.24" class="anchored" data-anchor-id="désinstaller-un-package"><span class="header-section-number">1.24</span> 🧹 Désinstaller un package</h2>
+<section id="désinstaller-un-package" class="level2">
+<h2 class="anchored" data-anchor-id="désinstaller-un-package">🧹 Désinstaller un package</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb75"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> pip uninstall requests</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
-<section id="où-sont-installés-les-packages" class="level2" data-number="1.25">
-<h2 data-number="1.25" class="anchored" data-anchor-id="où-sont-installés-les-packages"><span class="header-section-number">1.25</span> 📦 Où sont installés les packages ?</h2>
+<section id="où-sont-installés-les-packages" class="level2">
+<h2 class="anchored" data-anchor-id="où-sont-installés-les-packages">📦 Où sont installés les packages ?</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb76"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> pip show requests</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Donne : version, emplacement, dépendances, etc.</p>
 <hr>
 </section>
-<section id="erreurs-fréquentes-bonnes-pratiques" class="level2" data-number="1.26">
-<h2 data-number="1.26" class="anchored" data-anchor-id="erreurs-fréquentes-bonnes-pratiques"><span class="header-section-number">1.26</span> ⚠️ Erreurs fréquentes &amp; bonnes pratiques</h2>
+<section id="erreurs-fréquentes-bonnes-pratiques" class="level2">
+<h2 class="anchored" data-anchor-id="erreurs-fréquentes-bonnes-pratiques">⚠️ Erreurs fréquentes &amp; bonnes pratiques</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 36%">
@@ -2225,13 +2257,13 @@ pymongo</code></pre>
 </table>
 <hr>
 </section>
-<section id="astuce-pro-figer-les-versions-pour-la-production" class="level2" data-number="1.27">
-<h2 data-number="1.27" class="anchored" data-anchor-id="astuce-pro-figer-les-versions-pour-la-production"><span class="header-section-number">1.27</span> ⭐ Astuce Pro : figer les versions pour la production</h2>
+<section id="astuce-pro-figer-les-versions-pour-la-production" class="level2">
+<h2 class="anchored" data-anchor-id="astuce-pro-figer-les-versions-pour-la-production">⭐ Astuce Pro : figer les versions pour la production</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb77"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> pip freeze <span class="op">&gt;</span> requirements.txt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>➡️ Cela capture <strong>exactement</strong> les versions utilisées dans ton environnement.</p>
 </section>
-<section id="logging-traçabilité-indispensable-en-data-engineering" class="level2" data-number="1.28">
-<h2 data-number="1.28" class="anchored" data-anchor-id="logging-traçabilité-indispensable-en-data-engineering"><span class="header-section-number">1.28</span> 10. Logging 🧾 — Traçabilité indispensable en Data Engineering</h2>
+<section id="logging-traçabilité-indispensable-en-data-engineering" class="level2">
+<h2 class="anchored" data-anchor-id="logging-traçabilité-indispensable-en-data-engineering">10. Logging 🧾 — Traçabilité indispensable en Data Engineering</h2>
 <p>Dans un vrai pipeline Data (ingestion, nettoyage, transformation…), on doit <strong>suivre ce qu’il se passe</strong> :</p>
 <ul>
 <li>Fichier introuvable ?</li>
@@ -2244,8 +2276,8 @@ pymongo</code></pre>
 ➡️ Le module <strong><code>logging</code></strong> est le standard utilisé en entreprise.</p>
 <hr>
 </section>
-<section id="pourquoi-utiliser-logging" class="level2" data-number="1.29">
-<h2 data-number="1.29" class="anchored" data-anchor-id="pourquoi-utiliser-logging"><span class="header-section-number">1.29</span> 🔍 10.1 Pourquoi utiliser <code>logging</code> ?</h2>
+<section id="pourquoi-utiliser-logging" class="level2">
+<h2 class="anchored" data-anchor-id="pourquoi-utiliser-logging">🔍 10.1 Pourquoi utiliser <code>logging</code> ?</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 43%">
@@ -2282,8 +2314,8 @@ pymongo</code></pre>
 </table>
 <hr>
 </section>
-<section id="configuration-minimale-recommandée" class="level2" data-number="1.30">
-<h2 data-number="1.30" class="anchored" data-anchor-id="configuration-minimale-recommandée"><span class="header-section-number">1.30</span> 🔧 Configuration minimale recommandée</h2>
+<section id="configuration-minimale-recommandée" class="level2">
+<h2 class="anchored" data-anchor-id="configuration-minimale-recommandée">🔧 Configuration minimale recommandée</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb78"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> logging</span>
 <span id="cb78-2"><a href="#cb78-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb78-3"><a href="#cb78-3" aria-hidden="true" tabindex="-1"></a>logging.basicConfig(</span>
@@ -2293,8 +2325,8 @@ pymongo</code></pre>
 <p><strong>Explications :</strong> - <code>level=INFO</code> → DEBUG est ignoré - <code>%(asctime)s</code> → timestamp (important dans les pipelines) - <code>%(levelname)s</code> → niveau (INFO, ERROR…) - <code>%(message)s</code> → contenu du message</p>
 <hr>
 </section>
-<section id="exemple-dutilisation" class="level2" data-number="1.31">
-<h2 data-number="1.31" class="anchored" data-anchor-id="exemple-dutilisation"><span class="header-section-number">1.31</span> 🧪 Exemple d’utilisation</h2>
+<section id="exemple-dutilisation" class="level2">
+<h2 class="anchored" data-anchor-id="exemple-dutilisation">🧪 Exemple d’utilisation</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb79"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a>logging.debug(<span class="st">"Message DEBUG (non affiché en mode INFO)"</span>)</span>
 <span id="cb79-2"><a href="#cb79-2" aria-hidden="true" tabindex="-1"></a>logging.info(<span class="st">"Démarrage du mini-script"</span>)</span>
 <span id="cb79-3"><a href="#cb79-3" aria-hidden="true" tabindex="-1"></a>logging.warning(<span class="st">"Attention : données manquantes"</span>)</span>
@@ -2302,8 +2334,8 @@ pymongo</code></pre>
 <span id="cb79-5"><a href="#cb79-5" aria-hidden="true" tabindex="-1"></a>logging.critical(<span class="st">"CRITIQUE : le pipeline doit s'arrêter !"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
-<section id="écrire-les-logs-dans-un-fichier-cas-réel-data-engineering" class="level2" data-number="1.32">
-<h2 data-number="1.32" class="anchored" data-anchor-id="écrire-les-logs-dans-un-fichier-cas-réel-data-engineering"><span class="header-section-number">1.32</span> 📁 10.2 Écrire les logs dans un fichier (cas réel Data Engineering)</h2>
+<section id="écrire-les-logs-dans-un-fichier-cas-réel-data-engineering" class="level2">
+<h2 class="anchored" data-anchor-id="écrire-les-logs-dans-un-fichier-cas-réel-data-engineering">📁 10.2 Écrire les logs dans un fichier (cas réel Data Engineering)</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb80"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a>logging.basicConfig(</span>
 <span id="cb80-2"><a href="#cb80-2" aria-hidden="true" tabindex="-1"></a>    level<span class="op">=</span>logging.INFO,</span>
 <span id="cb80-3"><a href="#cb80-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">format</span><span class="op">=</span><span class="st">"</span><span class="sc">%(asctime)s</span><span class="st"> - </span><span class="sc">%(levelname)s</span><span class="st"> - </span><span class="sc">%(message)s</span><span class="st">"</span>,</span>
@@ -2313,8 +2345,8 @@ pymongo</code></pre>
 <p>➡️ Très utilisé dans : - scripts Airflow - traitements batch - pipelines de production</p>
 <hr>
 </section>
-<section id="exemple-typique-dans-une-fonction" class="level2" data-number="1.33">
-<h2 data-number="1.33" class="anchored" data-anchor-id="exemple-typique-dans-une-fonction"><span class="header-section-number">1.33</span> 🧰 10.3 Exemple typique dans une fonction</h2>
+<section id="exemple-typique-dans-une-fonction" class="level2">
+<h2 class="anchored" data-anchor-id="exemple-typique-dans-une-fonction">🧰 10.3 Exemple typique dans une fonction</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb81"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> charger_json(chemin: <span class="bu">str</span>) <span class="op">-&gt;</span> <span class="bu">dict</span> <span class="op">|</span> <span class="va">None</span>:</span>
 <span id="cb81-2"><a href="#cb81-2" aria-hidden="true" tabindex="-1"></a>    logging.info(<span class="ss">f"Chargement du fichier : </span><span class="sc">{</span>chemin<span class="sc">}</span><span class="ss">"</span>)</span>
 <span id="cb81-3"><a href="#cb81-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>:</span>
@@ -2327,8 +2359,8 @@ pymongo</code></pre>
 <span id="cb81-10"><a href="#cb81-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="va">None</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
-<section id="erreurs-fréquentes-comment-les-éviter-1" class="level2" data-number="1.34">
-<h2 data-number="1.34" class="anchored" data-anchor-id="erreurs-fréquentes-comment-les-éviter-1"><span class="header-section-number">1.34</span> ⚠️ Erreurs fréquentes &amp; comment les éviter</h2>
+<section id="erreurs-fréquentes-comment-les-éviter-1" class="level2">
+<h2 class="anchored" data-anchor-id="erreurs-fréquentes-comment-les-éviter-1">⚠️ Erreurs fréquentes &amp; comment les éviter</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 41%">
@@ -2372,8 +2404,8 @@ pymongo</code></pre>
 </table>
 <hr>
 </section>
-<section id="astuce-pro-logger-dans-la-console-et-dans-un-fichier" class="level2" data-number="1.35">
-<h2 data-number="1.35" class="anchored" data-anchor-id="astuce-pro-logger-dans-la-console-et-dans-un-fichier"><span class="header-section-number">1.35</span> ⭐ Astuce pro : Logger dans la console <strong>et</strong> dans un fichier</h2>
+<section id="astuce-pro-logger-dans-la-console-et-dans-un-fichier" class="level2">
+<h2 class="anchored" data-anchor-id="astuce-pro-logger-dans-la-console-et-dans-un-fichier">⭐ Astuce pro : Logger dans la console <strong>et</strong> dans un fichier</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb82"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a>logger <span class="op">=</span> logging.getLogger(<span class="st">"pipeline"</span>)</span>
 <span id="cb82-2"><a href="#cb82-2" aria-hidden="true" tabindex="-1"></a>logger.setLevel(logging.INFO)</span>
 <span id="cb82-3"><a href="#cb82-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -2397,8 +2429,8 @@ pymongo</code></pre>
 <span id="cb82-21"><a href="#cb82-21" aria-hidden="true" tabindex="-1"></a>logger.info(<span class="st">"Pipeline démarré"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
-<section id="à-retenir-1" class="level2" data-number="1.36">
-<h2 data-number="1.36" class="anchored" data-anchor-id="à-retenir-1"><span class="header-section-number">1.36</span> 🎓 À retenir</h2>
+<section id="à-retenir-1" class="level2">
+<h2 class="anchored" data-anchor-id="à-retenir-1">🎓 À retenir</h2>
 <ol type="1">
 <li><code>logging</code> = indispensable en Data Engineering<br>
 </li>
@@ -2411,11 +2443,11 @@ pymongo</code></pre>
 <li>Bien choisir le niveau (INFO, WARNING, ERROR…)</li>
 </ol>
 </section>
-<section id="exercices-pratiques" class="level2" data-number="1.37">
-<h2 data-number="1.37" class="anchored" data-anchor-id="exercices-pratiques"><span class="header-section-number">1.37</span> 11. Exercices pratiques 🧪</h2>
+<section id="exercices-pratiques" class="level2">
+<h2 class="anchored" data-anchor-id="exercices-pratiques">11. Exercices pratiques 🧪</h2>
 <p>Essaie de résoudre ces exercices <strong>avant</strong> d’afficher les corrections.</p>
-<section id="exercice-1-validation-dâge" class="level3" data-number="1.37.1">
-<h3 data-number="1.37.1" class="anchored" data-anchor-id="exercice-1-validation-dâge"><span class="header-section-number">1.37.1</span> Exercice 1 – Validation d’âge</h3>
+<section id="exercice-1-validation-dâge" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-1-validation-dâge">Exercice 1 – Validation d’âge</h3>
 <p>Écrire une fonction <code>est_majeur(age: int) -&gt; bool</code> qui : - retourne <code>True</code> si <code>age</code> est supérieur ou égal à 18 ; - sinon retourne <code>False</code>.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb83"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb83-1"><a href="#cb83-1" aria-hidden="true" tabindex="-1"></a><span class="co"># À toi de jouer</span></span>
 <span id="cb83-2"><a href="#cb83-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> est_majeur(age: <span class="bu">int</span>) <span class="op">-&gt;</span> <span class="bu">bool</span>:</span>
@@ -2435,8 +2467,8 @@ Afficher une solution possible
 <span id="cb84-5"><a href="#cb84-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(est_majeur(<span class="dv">18</span>))  <span class="co"># True</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </section>
-<section id="exercice-2-compter-les-posts-par-utilisateur" class="level3" data-number="1.37.2">
-<h3 data-number="1.37.2" class="anchored" data-anchor-id="exercice-2-compter-les-posts-par-utilisateur"><span class="header-section-number">1.37.2</span> Exercice 2 – Compter les posts par utilisateur</h3>
+<section id="exercice-2-compter-les-posts-par-utilisateur" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-2-compter-les-posts-par-utilisateur">Exercice 2 – Compter les posts par utilisateur</h3>
 <p>On dispose d’une liste de dictionnaires représentant des posts :</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb85"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb85-1"><a href="#cb85-1" aria-hidden="true" tabindex="-1"></a>posts <span class="op">=</span> [</span>
 <span id="cb85-2"><a href="#cb85-2" aria-hidden="true" tabindex="-1"></a>    {<span class="st">"user"</span>: <span class="st">"alice"</span>, <span class="st">"text"</span>: <span class="st">"Hello"</span>},</span>
@@ -2474,8 +2506,8 @@ Afficher une solution possible
 <span id="cb88-10"><a href="#cb88-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(compter_posts_par_utilisateur(posts))  <span class="co"># {'alice': 2, 'bob': 1}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </section>
-<section id="exercice-3-classe-post" class="level3" data-number="1.37.3">
-<h3 data-number="1.37.3" class="anchored" data-anchor-id="exercice-3-classe-post"><span class="header-section-number">1.37.3</span> Exercice 3 – Classe <code>Post</code></h3>
+<section id="exercice-3-classe-post" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-3-classe-post">Exercice 3 – Classe <code>Post</code></h3>
 <p>Créer une classe <code>Post</code> avec : - attributs : <code>auteur</code> (str), <code>texte</code> (str) ; - méthode <code>longueur()</code> qui retourne la longueur du texte.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb89"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb89-1"><a href="#cb89-1" aria-hidden="true" tabindex="-1"></a><span class="co"># À toi de jouer</span></span>
 <span id="cb89-2"><a href="#cb89-2" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Post:</span>
@@ -2507,12 +2539,12 @@ Afficher une solution possible
 <hr>
 </section>
 </section>
-<section id="quiz-final" class="level2" data-number="1.38">
-<h2 data-number="1.38" class="anchored" data-anchor-id="quiz-final"><span class="header-section-number">1.38</span> 12. Quiz final 🎯</h2>
+<section id="quiz-final" class="level2">
+<h2 class="anchored" data-anchor-id="quiz-final">12. Quiz final 🎯</h2>
 <p>Teste tes connaissances ! Réponds mentalement puis vérifie les réponses.</p>
 <hr>
-<section id="q1.-quel-type-correspond-à-une-chaîne-de-caractères" class="level3" data-number="1.38.1">
-<h3 data-number="1.38.1" class="anchored" data-anchor-id="q1.-quel-type-correspond-à-une-chaîne-de-caractères"><span class="header-section-number">1.38.1</span> ❓ Q1. Quel type correspond à une chaîne de caractères ?</h3>
+<section id="q1.-quel-type-correspond-à-une-chaîne-de-caractères" class="level3">
+<h3 class="anchored" data-anchor-id="q1.-quel-type-correspond-à-une-chaîne-de-caractères">❓ Q1. Quel type correspond à une chaîne de caractères ?</h3>
 <ol type="a">
 <li><code>str</code><br>
 </li>
@@ -2528,8 +2560,8 @@ Afficher une solution possible
 </details>
 <hr>
 </section>
-<section id="q2.-quelle-structure-est-la-plus-adaptée-pour-représenter-un-objet-json" class="level3" data-number="1.38.2">
-<h3 data-number="1.38.2" class="anchored" data-anchor-id="q2.-quelle-structure-est-la-plus-adaptée-pour-représenter-un-objet-json"><span class="header-section-number">1.38.2</span> ❓ Q2. Quelle structure est la plus adaptée pour représenter un objet JSON ?</h3>
+<section id="q2.-quelle-structure-est-la-plus-adaptée-pour-représenter-un-objet-json" class="level3">
+<h3 class="anchored" data-anchor-id="q2.-quelle-structure-est-la-plus-adaptée-pour-représenter-un-objet-json">❓ Q2. Quelle structure est la plus adaptée pour représenter un objet JSON ?</h3>
 <ol type="a">
 <li><code>list</code><br>
 </li>
@@ -2545,8 +2577,8 @@ Afficher une solution possible
 </details>
 <hr>
 </section>
-<section id="q3.-laquelle-de-ces-boucles-risque-le-plus-de-devenir-infinie" class="level3" data-number="1.38.3">
-<h3 data-number="1.38.3" class="anchored" data-anchor-id="q3.-laquelle-de-ces-boucles-risque-le-plus-de-devenir-infinie"><span class="header-section-number">1.38.3</span> ❓ Q3. Laquelle de ces boucles risque le plus de devenir infinie ?</h3>
+<section id="q3.-laquelle-de-ces-boucles-risque-le-plus-de-devenir-infinie" class="level3">
+<h3 class="anchored" data-anchor-id="q3.-laquelle-de-ces-boucles-risque-le-plus-de-devenir-infinie">❓ Q3. Laquelle de ces boucles risque le plus de devenir infinie ?</h3>
 <ol type="a">
 <li><code>for</code><br>
 </li>
@@ -2560,8 +2592,8 @@ Afficher une solution possible
 </details>
 <hr>
 </section>
-<section id="q4.-quel-mot-clé-permet-de-gérer-une-erreur" class="level3" data-number="1.38.4">
-<h3 data-number="1.38.4" class="anchored" data-anchor-id="q4.-quel-mot-clé-permet-de-gérer-une-erreur"><span class="header-section-number">1.38.4</span> ❓ Q4. Quel mot-clé permet de gérer une erreur ?</h3>
+<section id="q4.-quel-mot-clé-permet-de-gérer-une-erreur" class="level3">
+<h3 class="anchored" data-anchor-id="q4.-quel-mot-clé-permet-de-gérer-une-erreur">❓ Q4. Quel mot-clé permet de gérer une erreur ?</h3>
 <ol type="a">
 <li><code>error</code><br>
 </li>
@@ -2577,8 +2609,8 @@ Afficher une solution possible
 </details>
 <hr>
 </section>
-<section id="q5.-quel-module-est-utilisé-pour-le-logging" class="level3" data-number="1.38.5">
-<h3 data-number="1.38.5" class="anchored" data-anchor-id="q5.-quel-module-est-utilisé-pour-le-logging"><span class="header-section-number">1.38.5</span> ❓ Q5. Quel module est utilisé pour le logging ?</h3>
+<section id="q5.-quel-module-est-utilisé-pour-le-logging" class="level3">
+<h3 class="anchored" data-anchor-id="q5.-quel-module-est-utilisé-pour-le-logging">❓ Q5. Quel module est utilisé pour le logging ?</h3>
 <ol type="a">
 <li><code>logs</code><br>
 </li>
@@ -2594,8 +2626,8 @@ Afficher une solution possible
 </details>
 <hr>
 </section>
-<section id="q6.-comment-créer-un-environnement-virtuel-avec-venv" class="level3" data-number="1.38.6">
-<h3 data-number="1.38.6" class="anchored" data-anchor-id="q6.-comment-créer-un-environnement-virtuel-avec-venv"><span class="header-section-number">1.38.6</span> ❓ Q6. Comment créer un environnement virtuel avec venv ?</h3>
+<section id="q6.-comment-créer-un-environnement-virtuel-avec-venv" class="level3">
+<h3 class="anchored" data-anchor-id="q6.-comment-créer-un-environnement-virtuel-avec-venv">❓ Q6. Comment créer un environnement virtuel avec venv ?</h3>
 <ol type="a">
 <li><code>python -m venv mon_env</code><br>
 </li>
@@ -2611,8 +2643,8 @@ Afficher une solution possible
 </details>
 <hr>
 </section>
-<section id="q7.-quel-fichier-liste-les-dépendances-dun-projet-python" class="level3" data-number="1.38.7">
-<h3 data-number="1.38.7" class="anchored" data-anchor-id="q7.-quel-fichier-liste-les-dépendances-dun-projet-python"><span class="header-section-number">1.38.7</span> ❓ Q7. Quel fichier liste les dépendances d’un projet Python ?</h3>
+<section id="q7.-quel-fichier-liste-les-dépendances-dun-projet-python" class="level3">
+<h3 class="anchored" data-anchor-id="q7.-quel-fichier-liste-les-dépendances-dun-projet-python">❓ Q7. Quel fichier liste les dépendances d’un projet Python ?</h3>
 <ol type="a">
 <li><code>packages.txt</code><br>
 </li>
@@ -2629,25 +2661,25 @@ Afficher une solution possible
 <hr>
 </section>
 </section>
-<section id="ressources-pour-aller-plus-loin" class="level2" data-number="1.39">
-<h2 data-number="1.39" class="anchored" data-anchor-id="ressources-pour-aller-plus-loin"><span class="header-section-number">1.39</span> 📚 Ressources pour aller plus loin</h2>
-<section id="documentation-officielle" class="level3" data-number="1.39.1">
-<h3 data-number="1.39.1" class="anchored" data-anchor-id="documentation-officielle"><span class="header-section-number">1.39.1</span> 📖 Documentation officielle</h3>
+<section id="ressources-pour-aller-plus-loin" class="level2">
+<h2 class="anchored" data-anchor-id="ressources-pour-aller-plus-loin">📚 Ressources pour aller plus loin</h2>
+<section id="documentation-officielle" class="level3">
+<h3 class="anchored" data-anchor-id="documentation-officielle">📖 Documentation officielle</h3>
 <ul>
 <li><a href="https://docs.python.org/3/">Python.org Documentation</a> — Référence complète</li>
 <li><a href="https://docs.python.org/3/tutorial/">Python Tutorial</a> — Tutoriel officiel</li>
 </ul>
 </section>
-<section id="cours-et-tutoriels" class="level3" data-number="1.39.2">
-<h3 data-number="1.39.2" class="anchored" data-anchor-id="cours-et-tutoriels"><span class="header-section-number">1.39.2</span> 🎓 Cours et tutoriels</h3>
+<section id="cours-et-tutoriels" class="level3">
+<h3 class="anchored" data-anchor-id="cours-et-tutoriels">🎓 Cours et tutoriels</h3>
 <ul>
 <li><a href="https://realpython.com/">Real Python</a> — Tutoriels de qualité</li>
 <li><a href="https://www.datacamp.com/">Python for Data Engineering (DataCamp)</a> — Cours interactifs</li>
 <li><a href="https://automatetheboringstuff.com/">Automate the Boring Stuff</a> — Livre gratuit</li>
 </ul>
 </section>
-<section id="outils-recommandés" class="level3" data-number="1.39.3">
-<h3 data-number="1.39.3" class="anchored" data-anchor-id="outils-recommandés"><span class="header-section-number">1.39.3</span> 🛠️ Outils recommandés</h3>
+<section id="outils-recommandés" class="level3">
+<h3 class="anchored" data-anchor-id="outils-recommandés">🛠️ Outils recommandés</h3>
 <ul>
 <li><a href="https://pypi.org/">PyPI</a> — Repository de packages Python</li>
 <li><a href="https://github.com/astral-sh/ruff">Ruff</a> — Linter ultra-rapide</li>
@@ -2655,8 +2687,8 @@ Afficher une solution possible
 <li><a href="https://mypy.readthedocs.io/">mypy</a> — Vérification des types</li>
 </ul>
 </section>
-<section id="packages-data-engineering-essentiels" class="level3" data-number="1.39.4">
-<h3 data-number="1.39.4" class="anchored" data-anchor-id="packages-data-engineering-essentiels"><span class="header-section-number">1.39.4</span> 📊 Packages Data Engineering essentiels</h3>
+<section id="packages-data-engineering-essentiels" class="level3">
+<h3 class="anchored" data-anchor-id="packages-data-engineering-essentiels">📊 Packages Data Engineering essentiels</h3>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -2698,8 +2730,8 @@ Afficher une solution possible
 <hr>
 </section>
 </section>
-<section id="prochaine-étape" class="level2" data-number="1.40">
-<h2 data-number="1.40" class="anchored" data-anchor-id="prochaine-étape"><span class="header-section-number">1.40</span> ➡️ Prochaine étape</h2>
+<section id="prochaine-étape" class="level2">
+<h2 class="anchored" data-anchor-id="prochaine-étape">➡️ Prochaine étape</h2>
 <p>Maintenant que tu maîtrises les bases de Python, passons au <strong>traitement de données</strong> !</p>
 <p>👉 <strong>Module suivant : <code>05_python_data_processing_for_data_engineers.ipynb</code></strong> — Pandas, Matplotlib, Seaborn et ETL</p>
 <hr>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>⚡ PySpark for Data Engineering – Bootcamp Data Engineering</title>
+<title>⚡ PySpark for Data Engineering – Bootcamp Data Engineering – From Zero to Hero</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -110,6 +110,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <style>html{ scroll-behavior: smooth; }</style>
 
 
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -282,7 +283,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">Bootcamp Data Engineering</span>
+    <span class="navbar-title">Bootcamp Data Engineering – From Zero to Hero</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -293,11 +294,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/diakite-data/data-engineering-bootcamp"> <i class="bi bi-github" role="img">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="../../#"> <i class="bi bi-lightbulb" role="img" aria-label="Mode clair/sombre">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -313,7 +309,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">⚡ PySpark for Data Engineering</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notebooks/beginner/01_intro_data_engineering.html">Débutant</a></li><li class="breadcrumb-item"><a href="../../notebooks/beginner/11_pyspark_for_data_engineering.html">⚡ PySpark for Data Engineering</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -380,8 +376,44 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notebooks/beginner/06_intro_databases.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">🧠 Introduction aux bases de données pour Data Engineers</span></a>
+  <a href="../../notebooks/beginner/06_intro_relational_databases.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🗄️ Introduction aux Bases de Données Relationnelles</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/07_sql_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🐘 SQL for Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/08_intro_big_data_distributed.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🐘 Introduction au Big Data &amp; Traitement Distribué</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/09_mongodb_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🍃 MongoDB for Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/10_elasticsearch_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🔍 Elasticsearch for Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/11_pyspark_for_data_engineering.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">⚡ PySpark for Data Engineering</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/12_orchestration_pipelines.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">⏰ Orchestration de Pipelines Data</span></a>
   </div>
 </li>
       </ul>
@@ -396,102 +428,102 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#prérequis" id="toc-prérequis" class="nav-link active" data-scroll-target="#prérequis"><span class="header-section-number">0.1</span> 📋 Prérequis</a></li>
-  <li><a href="#objectifs-du-module" id="toc-objectifs-du-module" class="nav-link" data-scroll-target="#objectifs-du-module"><span class="header-section-number">0.2</span> 🎯 Objectifs du module</a></li>
-  <li><a href="#pyspark-dans-lécosystème-big-data" id="toc-pyspark-dans-lécosystème-big-data" class="nav-link" data-scroll-target="#pyspark-dans-lécosystème-big-data"><span class="header-section-number">0.3</span> 🎯 PySpark dans l’écosystème Big Data</a>
+  <li><a href="#prérequis" id="toc-prérequis" class="nav-link active" data-scroll-target="#prérequis">📋 Prérequis</a></li>
+  <li><a href="#objectifs-du-module" id="toc-objectifs-du-module" class="nav-link" data-scroll-target="#objectifs-du-module">🎯 Objectifs du module</a></li>
+  <li><a href="#pyspark-dans-lécosystème-big-data" id="toc-pyspark-dans-lécosystème-big-data" class="nav-link" data-scroll-target="#pyspark-dans-lécosystème-big-data">🎯 PySpark dans l’écosystème Big Data</a>
   <ul class="collapse">
-  <li><a href="#rappel-mapreduce-vs-spark" id="toc-rappel-mapreduce-vs-spark" class="nav-link" data-scroll-target="#rappel-mapreduce-vs-spark"><span class="header-section-number">0.3.1</span> Rappel : MapReduce vs Spark</a></li>
-  <li><a href="#rappel-les-5v-et-spark" id="toc-rappel-les-5v-et-spark" class="nav-link" data-scroll-target="#rappel-les-5v-et-spark"><span class="header-section-number">0.3.2</span> Rappel : Les 5V et Spark</a></li>
-  <li><a href="#position-dans-lécosystème" id="toc-position-dans-lécosystème" class="nav-link" data-scroll-target="#position-dans-lécosystème"><span class="header-section-number">0.3.3</span> Position dans l’écosystème</a></li>
+  <li><a href="#rappel-mapreduce-vs-spark" id="toc-rappel-mapreduce-vs-spark" class="nav-link" data-scroll-target="#rappel-mapreduce-vs-spark">Rappel : MapReduce vs Spark</a></li>
+  <li><a href="#rappel-les-5v-et-spark" id="toc-rappel-les-5v-et-spark" class="nav-link" data-scroll-target="#rappel-les-5v-et-spark">Rappel : Les 5V et Spark</a></li>
+  <li><a href="#position-dans-lécosystème" id="toc-position-dans-lécosystème" class="nav-link" data-scroll-target="#position-dans-lécosystème">Position dans l’écosystème</a></li>
   </ul></li>
-  <li><a href="#installation-et-setup" id="toc-installation-et-setup" class="nav-link" data-scroll-target="#installation-et-setup"><span class="header-section-number">0.4</span> 📦 Installation et Setup</a></li>
-  <li><a href="#introduction-à-spark" id="toc-introduction-à-spark" class="nav-link" data-scroll-target="#introduction-à-spark"><span class="header-section-number">1</span> 1️⃣ Introduction à Spark</a>
+  <li><a href="#installation-et-setup" id="toc-installation-et-setup" class="nav-link" data-scroll-target="#installation-et-setup">📦 Installation et Setup</a></li>
+  <li><a href="#introduction-à-spark" id="toc-introduction-à-spark" class="nav-link" data-scroll-target="#introduction-à-spark">1️⃣ Introduction à Spark</a>
   <ul class="collapse">
-  <li><a href="#quest-ce-que-spark" id="toc-quest-ce-que-spark" class="nav-link" data-scroll-target="#quest-ce-que-spark"><span class="header-section-number">1.1</span> Qu’est-ce que Spark ?</a>
+  <li><a href="#quest-ce-que-spark" id="toc-quest-ce-que-spark" class="nav-link" data-scroll-target="#quest-ce-que-spark">Qu’est-ce que Spark ?</a>
   <ul class="collapse">
-  <li><a href="#concepts-clés" id="toc-concepts-clés" class="nav-link" data-scroll-target="#concepts-clés"><span class="header-section-number">1.1.1</span> 🔑 Concepts clés</a></li>
-  <li><a href="#avantages-de-spark" id="toc-avantages-de-spark" class="nav-link" data-scroll-target="#avantages-de-spark"><span class="header-section-number">1.1.2</span> 🚀 Avantages de Spark</a></li>
+  <li><a href="#concepts-clés" id="toc-concepts-clés" class="nav-link" data-scroll-target="#concepts-clés">🔑 Concepts clés</a></li>
+  <li><a href="#avantages-de-spark" id="toc-avantages-de-spark" class="nav-link" data-scroll-target="#avantages-de-spark">🚀 Avantages de Spark</a></li>
   </ul></li>
-  <li><a href="#créer-une-sparksession" id="toc-créer-une-sparksession" class="nav-link" data-scroll-target="#créer-une-sparksession"><span class="header-section-number">1.2</span> 1.1 Créer une SparkSession</a></li>
-  <li><a href="#premiers-dataframes" id="toc-premiers-dataframes" class="nav-link" data-scroll-target="#premiers-dataframes"><span class="header-section-number">1.3</span> 1.2 Premiers DataFrames</a></li>
-  <li><a href="#explorer-un-dataframe" id="toc-explorer-un-dataframe" class="nav-link" data-scroll-target="#explorer-un-dataframe"><span class="header-section-number">1.4</span> 1.3 Explorer un DataFrame</a></li>
+  <li><a href="#créer-une-sparksession" id="toc-créer-une-sparksession" class="nav-link" data-scroll-target="#créer-une-sparksession">1.1 Créer une SparkSession</a></li>
+  <li><a href="#premiers-dataframes" id="toc-premiers-dataframes" class="nav-link" data-scroll-target="#premiers-dataframes">1.2 Premiers DataFrames</a></li>
+  <li><a href="#explorer-un-dataframe" id="toc-explorer-un-dataframe" class="nav-link" data-scroll-target="#explorer-un-dataframe">1.3 Explorer un DataFrame</a></li>
   </ul></li>
-  <li><a href="#transformations-de-base" id="toc-transformations-de-base" class="nav-link" data-scroll-target="#transformations-de-base"><span class="header-section-number">2</span> 2️⃣ Transformations de base</a>
+  <li><a href="#transformations-de-base" id="toc-transformations-de-base" class="nav-link" data-scroll-target="#transformations-de-base">2️⃣ Transformations de base</a>
   <ul class="collapse">
-  <li><a href="#sélection-de-colonnes" id="toc-sélection-de-colonnes" class="nav-link" data-scroll-target="#sélection-de-colonnes"><span class="header-section-number">2.1</span> 2.1 Sélection de colonnes</a></li>
-  <li><a href="#filtrage" id="toc-filtrage" class="nav-link" data-scroll-target="#filtrage"><span class="header-section-number">2.2</span> 2.2 Filtrage</a></li>
-  <li><a href="#ajouter-et-modifier-des-colonnes" id="toc-ajouter-et-modifier-des-colonnes" class="nav-link" data-scroll-target="#ajouter-et-modifier-des-colonnes"><span class="header-section-number">2.3</span> 2.3 Ajouter et modifier des colonnes</a></li>
-  <li><a href="#renommer-et-supprimer-des-colonnes" id="toc-renommer-et-supprimer-des-colonnes" class="nav-link" data-scroll-target="#renommer-et-supprimer-des-colonnes"><span class="header-section-number">2.4</span> 2.4 Renommer et supprimer des colonnes</a></li>
-  <li><a href="#tri" id="toc-tri" class="nav-link" data-scroll-target="#tri"><span class="header-section-number">2.5</span> 2.5 Tri</a></li>
+  <li><a href="#sélection-de-colonnes" id="toc-sélection-de-colonnes" class="nav-link" data-scroll-target="#sélection-de-colonnes">2.1 Sélection de colonnes</a></li>
+  <li><a href="#filtrage" id="toc-filtrage" class="nav-link" data-scroll-target="#filtrage">2.2 Filtrage</a></li>
+  <li><a href="#ajouter-et-modifier-des-colonnes" id="toc-ajouter-et-modifier-des-colonnes" class="nav-link" data-scroll-target="#ajouter-et-modifier-des-colonnes">2.3 Ajouter et modifier des colonnes</a></li>
+  <li><a href="#renommer-et-supprimer-des-colonnes" id="toc-renommer-et-supprimer-des-colonnes" class="nav-link" data-scroll-target="#renommer-et-supprimer-des-colonnes">2.4 Renommer et supprimer des colonnes</a></li>
+  <li><a href="#tri" id="toc-tri" class="nav-link" data-scroll-target="#tri">2.5 Tri</a></li>
   </ul></li>
-  <li><a href="#agrégations-et-groupby" id="toc-agrégations-et-groupby" class="nav-link" data-scroll-target="#agrégations-et-groupby"><span class="header-section-number">3</span> 3️⃣ Agrégations et GroupBy</a>
+  <li><a href="#agrégations-et-groupby" id="toc-agrégations-et-groupby" class="nav-link" data-scroll-target="#agrégations-et-groupby">3️⃣ Agrégations et GroupBy</a>
   <ul class="collapse">
-  <li><a href="#agrégations-simples" id="toc-agrégations-simples" class="nav-link" data-scroll-target="#agrégations-simples"><span class="header-section-number">3.1</span> 3.1 Agrégations simples</a></li>
-  <li><a href="#groupby" id="toc-groupby" class="nav-link" data-scroll-target="#groupby"><span class="header-section-number">3.2</span> 3.2 GroupBy</a></li>
-  <li><a href="#window-functions" id="toc-window-functions" class="nav-link" data-scroll-target="#window-functions"><span class="header-section-number">3.3</span> 3.3 Window Functions</a></li>
+  <li><a href="#agrégations-simples" id="toc-agrégations-simples" class="nav-link" data-scroll-target="#agrégations-simples">3.1 Agrégations simples</a></li>
+  <li><a href="#groupby" id="toc-groupby" class="nav-link" data-scroll-target="#groupby">3.2 GroupBy</a></li>
+  <li><a href="#window-functions" id="toc-window-functions" class="nav-link" data-scroll-target="#window-functions">3.3 Window Functions</a></li>
   </ul></li>
-  <li><a href="#jointures" id="toc-jointures" class="nav-link" data-scroll-target="#jointures"><span class="header-section-number">4</span> 4️⃣ Jointures</a>
+  <li><a href="#jointures" id="toc-jointures" class="nav-link" data-scroll-target="#jointures">4️⃣ Jointures</a>
   <ul class="collapse">
-  <li><a href="#créer-des-dataframes-pour-les-exemples" id="toc-créer-des-dataframes-pour-les-exemples" class="nav-link" data-scroll-target="#créer-des-dataframes-pour-les-exemples"><span class="header-section-number">4.1</span> 4.1 Créer des DataFrames pour les exemples</a></li>
-  <li><a href="#types-de-jointures" id="toc-types-de-jointures" class="nav-link" data-scroll-target="#types-de-jointures"><span class="header-section-number">4.2</span> 4.2 Types de jointures</a></li>
+  <li><a href="#créer-des-dataframes-pour-les-exemples" id="toc-créer-des-dataframes-pour-les-exemples" class="nav-link" data-scroll-target="#créer-des-dataframes-pour-les-exemples">4.1 Créer des DataFrames pour les exemples</a></li>
+  <li><a href="#types-de-jointures" id="toc-types-de-jointures" class="nav-link" data-scroll-target="#types-de-jointures">4.2 Types de jointures</a></li>
   </ul></li>
-  <li><a href="#lecture-et-écriture-de-fichiers" id="toc-lecture-et-écriture-de-fichiers" class="nav-link" data-scroll-target="#lecture-et-écriture-de-fichiers"><span class="header-section-number">5</span> 5️⃣ Lecture et écriture de fichiers</a>
+  <li><a href="#lecture-et-écriture-de-fichiers" id="toc-lecture-et-écriture-de-fichiers" class="nav-link" data-scroll-target="#lecture-et-écriture-de-fichiers">5️⃣ Lecture et écriture de fichiers</a>
   <ul class="collapse">
-  <li><a href="#csv" id="toc-csv" class="nav-link" data-scroll-target="#csv"><span class="header-section-number">5.1</span> 5.1 CSV</a></li>
-  <li><a href="#json" id="toc-json" class="nav-link" data-scroll-target="#json"><span class="header-section-number">5.2</span> 5.2 JSON</a></li>
-  <li><a href="#parquet-format-recommandé" id="toc-parquet-format-recommandé" class="nav-link" data-scroll-target="#parquet-format-recommandé"><span class="header-section-number">5.3</span> 5.3 Parquet (Format recommandé)</a></li>
-  <li><a href="#options-décriture" id="toc-options-décriture" class="nav-link" data-scroll-target="#options-décriture"><span class="header-section-number">5.4</span> 5.4 Options d’écriture</a></li>
+  <li><a href="#csv" id="toc-csv" class="nav-link" data-scroll-target="#csv">5.1 CSV</a></li>
+  <li><a href="#json" id="toc-json" class="nav-link" data-scroll-target="#json">5.2 JSON</a></li>
+  <li><a href="#parquet-format-recommandé" id="toc-parquet-format-recommandé" class="nav-link" data-scroll-target="#parquet-format-recommandé">5.3 Parquet (Format recommandé)</a></li>
+  <li><a href="#options-décriture" id="toc-options-décriture" class="nav-link" data-scroll-target="#options-décriture">5.4 Options d’écriture</a></li>
   </ul></li>
-  <li><a href="#spark-sql" id="toc-spark-sql" class="nav-link" data-scroll-target="#spark-sql"><span class="header-section-number">6</span> 6️⃣ Spark SQL</a>
+  <li><a href="#spark-sql" id="toc-spark-sql" class="nav-link" data-scroll-target="#spark-sql">6️⃣ Spark SQL</a>
   <ul class="collapse">
-  <li><a href="#créer-des-vues-temporaires" id="toc-créer-des-vues-temporaires" class="nav-link" data-scroll-target="#créer-des-vues-temporaires"><span class="header-section-number">6.1</span> 6.1 Créer des vues temporaires</a></li>
-  <li><a href="#requêtes-sql" id="toc-requêtes-sql" class="nav-link" data-scroll-target="#requêtes-sql"><span class="header-section-number">6.2</span> 6.2 Requêtes SQL</a></li>
+  <li><a href="#créer-des-vues-temporaires" id="toc-créer-des-vues-temporaires" class="nav-link" data-scroll-target="#créer-des-vues-temporaires">6.1 Créer des vues temporaires</a></li>
+  <li><a href="#requêtes-sql" id="toc-requêtes-sql" class="nav-link" data-scroll-target="#requêtes-sql">6.2 Requêtes SQL</a></li>
   </ul></li>
-  <li><a href="#gestion-des-données-manquantes" id="toc-gestion-des-données-manquantes" class="nav-link" data-scroll-target="#gestion-des-données-manquantes"><span class="header-section-number">7</span> 7️⃣ Gestion des données manquantes</a></li>
-  <li><a href="#udfs-user-defined-functions" id="toc-udfs-user-defined-functions" class="nav-link" data-scroll-target="#udfs-user-defined-functions"><span class="header-section-number">8</span> 8️⃣ UDFs (User Defined Functions)</a></li>
-  <li><a href="#optimisation-et-performance" id="toc-optimisation-et-performance" class="nav-link" data-scroll-target="#optimisation-et-performance"><span class="header-section-number">9</span> 9️⃣ Optimisation et Performance</a>
+  <li><a href="#gestion-des-données-manquantes" id="toc-gestion-des-données-manquantes" class="nav-link" data-scroll-target="#gestion-des-données-manquantes">7️⃣ Gestion des données manquantes</a></li>
+  <li><a href="#udfs-user-defined-functions" id="toc-udfs-user-defined-functions" class="nav-link" data-scroll-target="#udfs-user-defined-functions">8️⃣ UDFs (User Defined Functions)</a></li>
+  <li><a href="#optimisation-et-performance" id="toc-optimisation-et-performance" class="nav-link" data-scroll-target="#optimisation-et-performance">9️⃣ Optimisation et Performance</a>
   <ul class="collapse">
-  <li><a href="#partitionnement" id="toc-partitionnement" class="nav-link" data-scroll-target="#partitionnement"><span class="header-section-number">9.1</span> 9.1 Partitionnement</a></li>
-  <li><a href="#caching" id="toc-caching" class="nav-link" data-scroll-target="#caching"><span class="header-section-number">9.2</span> 9.2 Caching</a></li>
-  <li><a href="#broadcast-joins" id="toc-broadcast-joins" class="nav-link" data-scroll-target="#broadcast-joins"><span class="header-section-number">9.3</span> 9.3 Broadcast Joins</a></li>
-  <li><a href="#éviter-les-udfs-quand-possible" id="toc-éviter-les-udfs-quand-possible" class="nav-link" data-scroll-target="#éviter-les-udfs-quand-possible"><span class="header-section-number">9.4</span> 9.4 Éviter les UDFs quand possible</a></li>
-  <li><a href="#explain-plans" id="toc-explain-plans" class="nav-link" data-scroll-target="#explain-plans"><span class="header-section-number">9.5</span> 9.5 Explain Plans</a></li>
+  <li><a href="#partitionnement" id="toc-partitionnement" class="nav-link" data-scroll-target="#partitionnement">9.1 Partitionnement</a></li>
+  <li><a href="#caching" id="toc-caching" class="nav-link" data-scroll-target="#caching">9.2 Caching</a></li>
+  <li><a href="#broadcast-joins" id="toc-broadcast-joins" class="nav-link" data-scroll-target="#broadcast-joins">9.3 Broadcast Joins</a></li>
+  <li><a href="#éviter-les-udfs-quand-possible" id="toc-éviter-les-udfs-quand-possible" class="nav-link" data-scroll-target="#éviter-les-udfs-quand-possible">9.4 Éviter les UDFs quand possible</a></li>
+  <li><a href="#explain-plans" id="toc-explain-plans" class="nav-link" data-scroll-target="#explain-plans">9.5 Explain Plans</a></li>
   </ul></li>
-  <li><a href="#structured-streaming-bonus" id="toc-structured-streaming-bonus" class="nav-link" data-scroll-target="#structured-streaming-bonus"><span class="header-section-number">10</span> 🔟 Structured Streaming (Bonus)</a></li>
-  <li><a href="#pipeline-etl-complet-avec-pyspark" id="toc-pipeline-etl-complet-avec-pyspark" class="nav-link" data-scroll-target="#pipeline-etl-complet-avec-pyspark"><span class="header-section-number">11</span> 1️⃣1️⃣ Pipeline ETL Complet avec PySpark</a>
+  <li><a href="#structured-streaming-bonus" id="toc-structured-streaming-bonus" class="nav-link" data-scroll-target="#structured-streaming-bonus">🔟 Structured Streaming (Bonus)</a></li>
+  <li><a href="#pipeline-etl-complet-avec-pyspark" id="toc-pipeline-etl-complet-avec-pyspark" class="nav-link" data-scroll-target="#pipeline-etl-complet-avec-pyspark">1️⃣1️⃣ Pipeline ETL Complet avec PySpark</a>
   <ul class="collapse">
-  <li><a href="#extract" id="toc-extract" class="nav-link" data-scroll-target="#extract"><span class="header-section-number">11.1</span> 11.1 Extract</a></li>
-  <li><a href="#transform" id="toc-transform" class="nav-link" data-scroll-target="#transform"><span class="header-section-number">11.2</span> 11.2 Transform</a></li>
-  <li><a href="#aggregate" id="toc-aggregate" class="nav-link" data-scroll-target="#aggregate"><span class="header-section-number">11.3</span> 11.3 Aggregate</a></li>
-  <li><a href="#load" id="toc-load" class="nav-link" data-scroll-target="#load"><span class="header-section-number">11.4</span> 11.4 Load</a></li>
-  <li><a href="#pipeline-complet-orchestré" id="toc-pipeline-complet-orchestré" class="nav-link" data-scroll-target="#pipeline-complet-orchestré"><span class="header-section-number">11.5</span> 11.5 Pipeline complet orchestré</a></li>
+  <li><a href="#extract" id="toc-extract" class="nav-link" data-scroll-target="#extract">11.1 Extract</a></li>
+  <li><a href="#transform" id="toc-transform" class="nav-link" data-scroll-target="#transform">11.2 Transform</a></li>
+  <li><a href="#aggregate" id="toc-aggregate" class="nav-link" data-scroll-target="#aggregate">11.3 Aggregate</a></li>
+  <li><a href="#load" id="toc-load" class="nav-link" data-scroll-target="#load">11.4 Load</a></li>
+  <li><a href="#pipeline-complet-orchestré" id="toc-pipeline-complet-orchestré" class="nav-link" data-scroll-target="#pipeline-complet-orchestré">11.5 Pipeline complet orchestré</a></li>
   </ul></li>
-  <li><a href="#résumé-et-prochaines-étapes" id="toc-résumé-et-prochaines-étapes" class="nav-link" data-scroll-target="#résumé-et-prochaines-étapes"><span class="header-section-number">12</span> 🎓 Résumé et Prochaines Étapes</a>
+  <li><a href="#résumé-et-prochaines-étapes" id="toc-résumé-et-prochaines-étapes" class="nav-link" data-scroll-target="#résumé-et-prochaines-étapes">🎓 Résumé et Prochaines Étapes</a>
   <ul class="collapse">
-  <li><a href="#ce-que-vous-avez-appris" id="toc-ce-que-vous-avez-appris" class="nav-link" data-scroll-target="#ce-que-vous-avez-appris"><span class="header-section-number">12.1</span> Ce que vous avez appris ✅</a></li>
-  <li><a href="#différences-clés-pandas-vs-pyspark" id="toc-différences-clés-pandas-vs-pyspark" class="nav-link" data-scroll-target="#différences-clés-pandas-vs-pyspark"><span class="header-section-number">12.2</span> Différences clés Pandas vs PySpark 🔄</a></li>
-  <li><a href="#quand-utiliser-pyspark" id="toc-quand-utiliser-pyspark" class="nav-link" data-scroll-target="#quand-utiliser-pyspark"><span class="header-section-number">12.3</span> Quand utiliser PySpark ? 🤔</a></li>
-  <li><a href="#prochaines-étapes" id="toc-prochaines-étapes" class="nav-link" data-scroll-target="#prochaines-étapes"><span class="header-section-number">12.4</span> Prochaines étapes 🚀</a></li>
-  <li><a href="#ressources" id="toc-ressources" class="nav-link" data-scroll-target="#ressources"><span class="header-section-number">12.5</span> Ressources 📚</a></li>
+  <li><a href="#ce-que-vous-avez-appris" id="toc-ce-que-vous-avez-appris" class="nav-link" data-scroll-target="#ce-que-vous-avez-appris">Ce que vous avez appris ✅</a></li>
+  <li><a href="#différences-clés-pandas-vs-pyspark" id="toc-différences-clés-pandas-vs-pyspark" class="nav-link" data-scroll-target="#différences-clés-pandas-vs-pyspark">Différences clés Pandas vs PySpark 🔄</a></li>
+  <li><a href="#quand-utiliser-pyspark" id="toc-quand-utiliser-pyspark" class="nav-link" data-scroll-target="#quand-utiliser-pyspark">Quand utiliser PySpark ? 🤔</a></li>
+  <li><a href="#prochaines-étapes" id="toc-prochaines-étapes" class="nav-link" data-scroll-target="#prochaines-étapes">Prochaines étapes 🚀</a></li>
+  <li><a href="#ressources" id="toc-ressources" class="nav-link" data-scroll-target="#ressources">Ressources 📚</a></li>
   </ul></li>
-  <li><a href="#quiz-final" id="toc-quiz-final" class="nav-link" data-scroll-target="#quiz-final"><span class="header-section-number">13</span> 🧪 Quiz Final</a>
+  <li><a href="#quiz-final" id="toc-quiz-final" class="nav-link" data-scroll-target="#quiz-final">🧪 Quiz Final</a>
   <ul class="collapse">
-  <li><a href="#q1.-quelle-est-la-différence-principale-entre-une-transformation-et-une-action-dans-spark" id="toc-q1.-quelle-est-la-différence-principale-entre-une-transformation-et-une-action-dans-spark" class="nav-link" data-scroll-target="#q1.-quelle-est-la-différence-principale-entre-une-transformation-et-une-action-dans-spark"><span class="header-section-number">13.0.1</span> ❓ Q1. Quelle est la différence principale entre une <strong>transformation</strong> et une <strong>action</strong> dans Spark ?</a></li>
-  <li><a href="#q2.-quel-format-de-fichier-est-recommandé-pour-stocker-des-données-dans-un-data-lake-avec-spark" id="toc-q2.-quel-format-de-fichier-est-recommandé-pour-stocker-des-données-dans-un-data-lake-avec-spark" class="nav-link" data-scroll-target="#q2.-quel-format-de-fichier-est-recommandé-pour-stocker-des-données-dans-un-data-lake-avec-spark"><span class="header-section-number">13.0.2</span> ❓ Q2. Quel format de fichier est <strong>recommandé</strong> pour stocker des données dans un data lake avec Spark ?</a></li>
-  <li><a href="#q3.-comment-créer-une-nouvelle-colonne-avec-pyspark" id="toc-q3.-comment-créer-une-nouvelle-colonne-avec-pyspark" class="nav-link" data-scroll-target="#q3.-comment-créer-une-nouvelle-colonne-avec-pyspark"><span class="header-section-number">13.0.3</span> ❓ Q3. Comment créer une nouvelle colonne avec PySpark ?</a></li>
-  <li><a href="#q4.-quelle-commande-permet-de-voir-le-plan-dexécution-dune-requête" id="toc-q4.-quelle-commande-permet-de-voir-le-plan-dexécution-dune-requête" class="nav-link" data-scroll-target="#q4.-quelle-commande-permet-de-voir-le-plan-dexécution-dune-requête"><span class="header-section-number">13.0.4</span> ❓ Q4. Quelle commande permet de voir le <strong>plan d’exécution</strong> d’une requête ?</a></li>
-  <li><a href="#q5.-quest-ce-quun-broadcast-join" id="toc-q5.-quest-ce-quun-broadcast-join" class="nav-link" data-scroll-target="#q5.-quest-ce-quun-broadcast-join"><span class="header-section-number">13.0.5</span> ❓ Q5. Qu’est-ce qu’un <strong>broadcast join</strong> ?</a></li>
-  <li><a href="#q6.-pourquoi-utilise-t-on-cache-ou-persist" id="toc-q6.-pourquoi-utilise-t-on-cache-ou-persist" class="nav-link" data-scroll-target="#q6.-pourquoi-utilise-t-on-cache-ou-persist"><span class="header-section-number">13.0.6</span> ❓ Q6. Pourquoi utilise-t-on <code>cache()</code> ou <code>persist()</code> ?</a></li>
-  <li><a href="#q7.-quelle-est-la-différence-entre-repartition-et-coalesce" id="toc-q7.-quelle-est-la-différence-entre-repartition-et-coalesce" class="nav-link" data-scroll-target="#q7.-quelle-est-la-différence-entre-repartition-et-coalesce"><span class="header-section-number">13.0.7</span> ❓ Q7. Quelle est la différence entre <code>repartition()</code> et <code>coalesce()</code> ?</a></li>
-  <li><a href="#q8.-comment-exécuter-une-requête-sql-dans-pyspark" id="toc-q8.-comment-exécuter-une-requête-sql-dans-pyspark" class="nav-link" data-scroll-target="#q8.-comment-exécuter-une-requête-sql-dans-pyspark"><span class="header-section-number">13.0.8</span> ❓ Q8. Comment exécuter une requête SQL dans PySpark ?</a></li>
-  <li><a href="#q9.-quelle-est-la-meilleure-stratégie-pour-écrire-des-données-parquet-partitionnées" id="toc-q9.-quelle-est-la-meilleure-stratégie-pour-écrire-des-données-parquet-partitionnées" class="nav-link" data-scroll-target="#q9.-quelle-est-la-meilleure-stratégie-pour-écrire-des-données-parquet-partitionnées"><span class="header-section-number">13.0.9</span> ❓ Q9. Quelle est la meilleure stratégie pour écrire des données Parquet partitionnées ?</a></li>
-  <li><a href="#q10.-quand-devriez-vous-utiliser-pyspark-plutôt-que-pandas" id="toc-q10.-quand-devriez-vous-utiliser-pyspark-plutôt-que-pandas" class="nav-link" data-scroll-target="#q10.-quand-devriez-vous-utiliser-pyspark-plutôt-que-pandas"><span class="header-section-number">13.0.10</span> ❓ Q10. Quand devriez-vous utiliser PySpark plutôt que Pandas ?</a></li>
-  <li><a href="#votre-score" id="toc-votre-score" class="nav-link" data-scroll-target="#votre-score"><span class="header-section-number">13.1</span> 📊 Votre score</a></li>
-  <li><a href="#ressources-1" id="toc-ressources-1" class="nav-link" data-scroll-target="#ressources-1"><span class="header-section-number">13.2</span> 📚 Ressources</a>
+  <li><a href="#q1.-quelle-est-la-différence-principale-entre-une-transformation-et-une-action-dans-spark" id="toc-q1.-quelle-est-la-différence-principale-entre-une-transformation-et-une-action-dans-spark" class="nav-link" data-scroll-target="#q1.-quelle-est-la-différence-principale-entre-une-transformation-et-une-action-dans-spark">❓ Q1. Quelle est la différence principale entre une <strong>transformation</strong> et une <strong>action</strong> dans Spark ?</a></li>
+  <li><a href="#q2.-quel-format-de-fichier-est-recommandé-pour-stocker-des-données-dans-un-data-lake-avec-spark" id="toc-q2.-quel-format-de-fichier-est-recommandé-pour-stocker-des-données-dans-un-data-lake-avec-spark" class="nav-link" data-scroll-target="#q2.-quel-format-de-fichier-est-recommandé-pour-stocker-des-données-dans-un-data-lake-avec-spark">❓ Q2. Quel format de fichier est <strong>recommandé</strong> pour stocker des données dans un data lake avec Spark ?</a></li>
+  <li><a href="#q3.-comment-créer-une-nouvelle-colonne-avec-pyspark" id="toc-q3.-comment-créer-une-nouvelle-colonne-avec-pyspark" class="nav-link" data-scroll-target="#q3.-comment-créer-une-nouvelle-colonne-avec-pyspark">❓ Q3. Comment créer une nouvelle colonne avec PySpark ?</a></li>
+  <li><a href="#q4.-quelle-commande-permet-de-voir-le-plan-dexécution-dune-requête" id="toc-q4.-quelle-commande-permet-de-voir-le-plan-dexécution-dune-requête" class="nav-link" data-scroll-target="#q4.-quelle-commande-permet-de-voir-le-plan-dexécution-dune-requête">❓ Q4. Quelle commande permet de voir le <strong>plan d’exécution</strong> d’une requête ?</a></li>
+  <li><a href="#q5.-quest-ce-quun-broadcast-join" id="toc-q5.-quest-ce-quun-broadcast-join" class="nav-link" data-scroll-target="#q5.-quest-ce-quun-broadcast-join">❓ Q5. Qu’est-ce qu’un <strong>broadcast join</strong> ?</a></li>
+  <li><a href="#q6.-pourquoi-utilise-t-on-cache-ou-persist" id="toc-q6.-pourquoi-utilise-t-on-cache-ou-persist" class="nav-link" data-scroll-target="#q6.-pourquoi-utilise-t-on-cache-ou-persist">❓ Q6. Pourquoi utilise-t-on <code>cache()</code> ou <code>persist()</code> ?</a></li>
+  <li><a href="#q7.-quelle-est-la-différence-entre-repartition-et-coalesce" id="toc-q7.-quelle-est-la-différence-entre-repartition-et-coalesce" class="nav-link" data-scroll-target="#q7.-quelle-est-la-différence-entre-repartition-et-coalesce">❓ Q7. Quelle est la différence entre <code>repartition()</code> et <code>coalesce()</code> ?</a></li>
+  <li><a href="#q8.-comment-exécuter-une-requête-sql-dans-pyspark" id="toc-q8.-comment-exécuter-une-requête-sql-dans-pyspark" class="nav-link" data-scroll-target="#q8.-comment-exécuter-une-requête-sql-dans-pyspark">❓ Q8. Comment exécuter une requête SQL dans PySpark ?</a></li>
+  <li><a href="#q9.-quelle-est-la-meilleure-stratégie-pour-écrire-des-données-parquet-partitionnées" id="toc-q9.-quelle-est-la-meilleure-stratégie-pour-écrire-des-données-parquet-partitionnées" class="nav-link" data-scroll-target="#q9.-quelle-est-la-meilleure-stratégie-pour-écrire-des-données-parquet-partitionnées">❓ Q9. Quelle est la meilleure stratégie pour écrire des données Parquet partitionnées ?</a></li>
+  <li><a href="#q10.-quand-devriez-vous-utiliser-pyspark-plutôt-que-pandas" id="toc-q10.-quand-devriez-vous-utiliser-pyspark-plutôt-que-pandas" class="nav-link" data-scroll-target="#q10.-quand-devriez-vous-utiliser-pyspark-plutôt-que-pandas">❓ Q10. Quand devriez-vous utiliser PySpark plutôt que Pandas ?</a></li>
+  <li><a href="#votre-score" id="toc-votre-score" class="nav-link" data-scroll-target="#votre-score">📊 Votre score</a></li>
+  <li><a href="#ressources-1" id="toc-ressources-1" class="nav-link" data-scroll-target="#ressources-1">📚 Ressources</a>
   <ul class="collapse">
-  <li><a href="#plateformes-cloud" id="toc-plateformes-cloud" class="nav-link" data-scroll-target="#plateformes-cloud"><span class="header-section-number">13.2.1</span> 🏭 Plateformes Cloud</a></li>
+  <li><a href="#plateformes-cloud" id="toc-plateformes-cloud" class="nav-link" data-scroll-target="#plateformes-cloud">🏭 Plateformes Cloud</a></li>
   </ul></li>
-  <li><a href="#prochaine-étape" id="toc-prochaine-étape" class="nav-link" data-scroll-target="#prochaine-étape"><span class="header-section-number">13.3</span> ➡️ Prochaine étape</a></li>
+  <li><a href="#prochaine-étape" id="toc-prochaine-étape" class="nav-link" data-scroll-target="#prochaine-étape">➡️ Prochaine étape</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="git@github.com:diakite-data/data-engineering-bootcamp.git/blob/main/notebooks/beginner/11_pyspark_for_data_engineering.ipynb" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="git@github.com:diakite-data/data-engineering-bootcamp.git/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -500,7 +532,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notebooks/beginner/01_intro_data_engineering.html">Débutant</a></li><li class="breadcrumb-item"><a href="../../notebooks/beginner/11_pyspark_for_data_engineering.html">⚡ PySpark for Data Engineering</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">⚡ PySpark for Data Engineering</h1>
 </div>
@@ -521,8 +553,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>Ce module présente <strong>PySpark</strong>, l’API Python pour Apache Spark — le moteur de traitement distribué le plus utilisé en Big Data.</p>
 <hr>
-<section id="prérequis" class="level2" data-number="0.1">
-<h2 data-number="0.1" class="anchored" data-anchor-id="prérequis"><span class="header-section-number">0.1</span> 📋 Prérequis</h2>
+<section id="prérequis" class="level2">
+<h2 class="anchored" data-anchor-id="prérequis">📋 Prérequis</h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -554,16 +586,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 </section>
-<section id="objectifs-du-module" class="level2" data-number="0.2">
-<h2 data-number="0.2" class="anchored" data-anchor-id="objectifs-du-module"><span class="header-section-number">0.2</span> 🎯 Objectifs du module</h2>
+<section id="objectifs-du-module" class="level2">
+<h2 class="anchored" data-anchor-id="objectifs-du-module">🎯 Objectifs du module</h2>
 <p>À la fin de ce notebook, tu seras capable de : - ✅ Comprendre l’architecture Spark (Driver, Executors, Cluster Manager) - ✅ Créer et manipuler des DataFrames distribués - ✅ Écrire des transformations et actions - ✅ Utiliser Spark SQL - ✅ Optimiser les performances (partitioning, caching, broadcast) - ✅ Lire/écrire des fichiers (CSV, JSON, Parquet) - ✅ Découvrir le streaming temps réel</p>
 <hr>
 </section>
-<section id="pyspark-dans-lécosystème-big-data" class="level2" data-number="0.3">
-<h2 data-number="0.3" class="anchored" data-anchor-id="pyspark-dans-lécosystème-big-data"><span class="header-section-number">0.3</span> 🎯 PySpark dans l’écosystème Big Data</h2>
+<section id="pyspark-dans-lécosystème-big-data" class="level2">
+<h2 class="anchored" data-anchor-id="pyspark-dans-lécosystème-big-data">🎯 PySpark dans l’écosystème Big Data</h2>
 <p>Tu as vu dans le module 08 que <strong>Spark a remplacé MapReduce</strong> comme moteur de traitement Big Data. Voici pourquoi :</p>
-<section id="rappel-mapreduce-vs-spark" class="level3" data-number="0.3.1">
-<h3 data-number="0.3.1" class="anchored" data-anchor-id="rappel-mapreduce-vs-spark"><span class="header-section-number">0.3.1</span> Rappel : MapReduce vs Spark</h3>
+<section id="rappel-mapreduce-vs-spark" class="level3">
+<h3 class="anchored" data-anchor-id="rappel-mapreduce-vs-spark">Rappel : MapReduce vs Spark</h3>
 <pre><code>MapReduce :  DISQUE → Map → DISQUE → Shuffle → DISQUE → Reduce → DISQUE
                   ↑           ↑              ↑              ↑
                   └───────────┴──────────────┴──────────────┘
@@ -574,8 +606,8 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
                                           └────────────────┘
                                            RAPIDE ! (in-memory)</code></pre>
 </section>
-<section id="rappel-les-5v-et-spark" class="level3" data-number="0.3.2">
-<h3 data-number="0.3.2" class="anchored" data-anchor-id="rappel-les-5v-et-spark"><span class="header-section-number">0.3.2</span> Rappel : Les 5V et Spark</h3>
+<section id="rappel-les-5v-et-spark" class="level3">
+<h3 class="anchored" data-anchor-id="rappel-les-5v-et-spark">Rappel : Les 5V et Spark</h3>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -607,8 +639,8 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </tbody>
 </table>
 </section>
-<section id="position-dans-lécosystème" class="level3" data-number="0.3.3">
-<h3 data-number="0.3.3" class="anchored" data-anchor-id="position-dans-lécosystème"><span class="header-section-number">0.3.3</span> Position dans l’écosystème</h3>
+<section id="position-dans-lécosystème" class="level3">
+<h3 class="anchored" data-anchor-id="position-dans-lécosystème">Position dans l’écosystème</h3>
 <pre><code>┌─────────────────────────────────────────────────────────────────┐
 │                     ÉCOSYSTÈME BIG DATA                         │
 ├─────────────────────────────────────────────────────────────────┤
@@ -628,8 +660,8 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </blockquote>
 </section>
 </section>
-<section id="installation-et-setup" class="level2" data-number="0.4">
-<h2 data-number="0.4" class="anchored" data-anchor-id="installation-et-setup"><span class="header-section-number">0.4</span> 📦 Installation et Setup</h2>
+<section id="installation-et-setup" class="level2">
+<h2 class="anchored" data-anchor-id="installation-et-setup">📦 Installation et Setup</h2>
 <p>PySpark nécessite Java. Vérifions d’abord l’installation.</p>
 <div id="cell-3" class="cell">
 <details class="code-fold">
@@ -662,13 +694,13 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </div>
 <hr>
 </section>
-<section id="introduction-à-spark" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> 1️⃣ Introduction à Spark</h1>
-<section id="quest-ce-que-spark" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="quest-ce-que-spark"><span class="header-section-number">1.1</span> Qu’est-ce que Spark ?</h2>
+<section id="introduction-à-spark" class="level1">
+<h1>1️⃣ Introduction à Spark</h1>
+<section id="quest-ce-que-spark" class="level2">
+<h2 class="anchored" data-anchor-id="quest-ce-que-spark">Qu’est-ce que Spark ?</h2>
 <p>Apache Spark est un moteur de traitement distribué ultra-rapide pour le Big Data.</p>
-<section id="concepts-clés" class="level3" data-number="1.1.1">
-<h3 data-number="1.1.1" class="anchored" data-anchor-id="concepts-clés"><span class="header-section-number">1.1.1</span> 🔑 Concepts clés</h3>
+<section id="concepts-clés" class="level3">
+<h3 class="anchored" data-anchor-id="concepts-clés">🔑 Concepts clés</h3>
 <ul>
 <li><strong>SparkSession</strong> : Point d’entrée de toute application Spark</li>
 <li><strong>DataFrame</strong> : Collection distribuée de données organisées en colonnes</li>
@@ -677,8 +709,8 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <li><strong>Actions</strong> : Déclenchent l’exécution (count, collect, show, etc.)</li>
 </ul>
 </section>
-<section id="avantages-de-spark" class="level3" data-number="1.1.2">
-<h3 data-number="1.1.2" class="anchored" data-anchor-id="avantages-de-spark"><span class="header-section-number">1.1.2</span> 🚀 Avantages de Spark</h3>
+<section id="avantages-de-spark" class="level3">
+<h3 class="anchored" data-anchor-id="avantages-de-spark">🚀 Avantages de Spark</h3>
 <ul>
 <li><strong>Vitesse</strong> : 100x plus rapide que MapReduce</li>
 <li><strong>Scalabilité</strong> : De quelques MB à plusieurs PB</li>
@@ -687,8 +719,8 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </ul>
 </section>
 </section>
-<section id="créer-une-sparksession" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="créer-une-sparksession"><span class="header-section-number">1.2</span> 1.1 Créer une SparkSession</h2>
+<section id="créer-une-sparksession" class="level2">
+<h2 class="anchored" data-anchor-id="créer-une-sparksession">1.1 Créer une SparkSession</h2>
 <div id="cell-8" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -715,8 +747,8 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </details>
 </div>
 </section>
-<section id="premiers-dataframes" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="premiers-dataframes"><span class="header-section-number">1.3</span> 1.2 Premiers DataFrames</h2>
+<section id="premiers-dataframes" class="level2">
+<h2 class="anchored" data-anchor-id="premiers-dataframes">1.2 Premiers DataFrames</h2>
 <div id="cell-11" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -772,8 +804,8 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </details>
 </div>
 </section>
-<section id="explorer-un-dataframe" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="explorer-un-dataframe"><span class="header-section-number">1.4</span> 1.3 Explorer un DataFrame</h2>
+<section id="explorer-un-dataframe" class="level2">
+<h2 class="anchored" data-anchor-id="explorer-un-dataframe">1.3 Explorer un DataFrame</h2>
 <div id="cell-15" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -811,11 +843,11 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <hr>
 </section>
 </section>
-<section id="transformations-de-base" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> 2️⃣ Transformations de base</h1>
+<section id="transformations-de-base" class="level1">
+<h1>2️⃣ Transformations de base</h1>
 <p>Les transformations sont <strong>lazy</strong> : elles ne s’exécutent que lorsqu’une action est appelée.</p>
-<section id="sélection-de-colonnes" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="sélection-de-colonnes"><span class="header-section-number">2.1</span> 2.1 Sélection de colonnes</h2>
+<section id="sélection-de-colonnes" class="level2">
+<h2 class="anchored" data-anchor-id="sélection-de-colonnes">2.1 Sélection de colonnes</h2>
 <div id="cell-19" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -839,8 +871,8 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </details>
 </div>
 </section>
-<section id="filtrage" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="filtrage"><span class="header-section-number">2.2</span> 2.2 Filtrage</h2>
+<section id="filtrage" class="level2">
+<h2 class="anchored" data-anchor-id="filtrage">2.2 Filtrage</h2>
 <div id="cell-21" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -882,8 +914,8 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </details>
 </div>
 </section>
-<section id="ajouter-et-modifier-des-colonnes" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="ajouter-et-modifier-des-colonnes"><span class="header-section-number">2.3</span> 2.3 Ajouter et modifier des colonnes</h2>
+<section id="ajouter-et-modifier-des-colonnes" class="level2">
+<h2 class="anchored" data-anchor-id="ajouter-et-modifier-des-colonnes">2.3 Ajouter et modifier des colonnes</h2>
 <div id="cell-24" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -921,8 +953,8 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </details>
 </div>
 </section>
-<section id="renommer-et-supprimer-des-colonnes" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="renommer-et-supprimer-des-colonnes"><span class="header-section-number">2.4</span> 2.4 Renommer et supprimer des colonnes</h2>
+<section id="renommer-et-supprimer-des-colonnes" class="level2">
+<h2 class="anchored" data-anchor-id="renommer-et-supprimer-des-colonnes">2.4 Renommer et supprimer des colonnes</h2>
 <div id="cell-27" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -938,8 +970,8 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </details>
 </div>
 </section>
-<section id="tri" class="level2" data-number="2.5">
-<h2 data-number="2.5" class="anchored" data-anchor-id="tri"><span class="header-section-number">2.5</span> 2.5 Tri</h2>
+<section id="tri" class="level2">
+<h2 class="anchored" data-anchor-id="tri">2.5 Tri</h2>
 <div id="cell-29" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -959,11 +991,11 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <hr>
 </section>
 </section>
-<section id="agrégations-et-groupby" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> 3️⃣ Agrégations et GroupBy</h1>
+<section id="agrégations-et-groupby" class="level1">
+<h1>3️⃣ Agrégations et GroupBy</h1>
 <p>Les agrégations permettent de calculer des statistiques sur les données.</p>
-<section id="agrégations-simples" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="agrégations-simples"><span class="header-section-number">3.1</span> 3.1 Agrégations simples</h2>
+<section id="agrégations-simples" class="level2">
+<h2 class="anchored" data-anchor-id="agrégations-simples">3.1 Agrégations simples</h2>
 <div id="cell-32" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -994,8 +1026,8 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </details>
 </div>
 </section>
-<section id="groupby" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="groupby"><span class="header-section-number">3.2</span> 3.2 GroupBy</h2>
+<section id="groupby" class="level2">
+<h2 class="anchored" data-anchor-id="groupby">3.2 GroupBy</h2>
 <div id="cell-35" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1054,8 +1086,8 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </details>
 </div>
 </section>
-<section id="window-functions" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="window-functions"><span class="header-section-number">3.3</span> 3.3 Window Functions</h2>
+<section id="window-functions" class="level2">
+<h2 class="anchored" data-anchor-id="window-functions">3.3 Window Functions</h2>
 <div id="cell-40" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1106,11 +1138,11 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <hr>
 </section>
 </section>
-<section id="jointures" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> 4️⃣ Jointures</h1>
+<section id="jointures" class="level1">
+<h1>4️⃣ Jointures</h1>
 <p>Les jointures permettent de combiner plusieurs DataFrames.</p>
-<section id="créer-des-dataframes-pour-les-exemples" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="créer-des-dataframes-pour-les-exemples"><span class="header-section-number">4.1</span> 4.1 Créer des DataFrames pour les exemples</h2>
+<section id="créer-des-dataframes-pour-les-exemples" class="level2">
+<h2 class="anchored" data-anchor-id="créer-des-dataframes-pour-les-exemples">4.1 Créer des DataFrames pour les exemples</h2>
 <div id="cell-45" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1138,8 +1170,8 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </details>
 </div>
 </section>
-<section id="types-de-jointures" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="types-de-jointures"><span class="header-section-number">4.2</span> 4.2 Types de jointures</h2>
+<section id="types-de-jointures" class="level2">
+<h2 class="anchored" data-anchor-id="types-de-jointures">4.2 Types de jointures</h2>
 <div id="cell-47" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1200,11 +1232,11 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <hr>
 </section>
 </section>
-<section id="lecture-et-écriture-de-fichiers" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> 5️⃣ Lecture et écriture de fichiers</h1>
+<section id="lecture-et-écriture-de-fichiers" class="level1">
+<h1>5️⃣ Lecture et écriture de fichiers</h1>
 <p>Spark supporte de nombreux formats de fichiers.</p>
-<section id="csv" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="csv"><span class="header-section-number">5.1</span> 5.1 CSV</h2>
+<section id="csv" class="level2">
+<h2 class="anchored" data-anchor-id="csv">5.1 CSV</h2>
 <div id="cell-52" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1232,8 +1264,8 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </details>
 </div>
 </section>
-<section id="json" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="json"><span class="header-section-number">5.2</span> 5.2 JSON</h2>
+<section id="json" class="level2">
+<h2 class="anchored" data-anchor-id="json">5.2 JSON</h2>
 <div id="cell-54" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1253,8 +1285,8 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </details>
 </div>
 </section>
-<section id="parquet-format-recommandé" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="parquet-format-recommandé"><span class="header-section-number">5.3</span> 5.3 Parquet (Format recommandé)</h2>
+<section id="parquet-format-recommandé" class="level2">
+<h2 class="anchored" data-anchor-id="parquet-format-recommandé">5.3 Parquet (Format recommandé)</h2>
 <div id="cell-56" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1294,8 +1326,8 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </details>
 </div>
 </section>
-<section id="options-décriture" class="level2" data-number="5.4">
-<h2 data-number="5.4" class="anchored" data-anchor-id="options-décriture"><span class="header-section-number">5.4</span> 5.4 Options d’écriture</h2>
+<section id="options-décriture" class="level2">
+<h2 class="anchored" data-anchor-id="options-décriture">5.4 Options d’écriture</h2>
 <div id="cell-59" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1324,11 +1356,11 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <hr>
 </section>
 </section>
-<section id="spark-sql" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> 6️⃣ Spark SQL</h1>
+<section id="spark-sql" class="level1">
+<h1>6️⃣ Spark SQL</h1>
 <p>Spark permet d’exécuter des requêtes SQL sur les DataFrames.</p>
-<section id="créer-des-vues-temporaires" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="créer-des-vues-temporaires"><span class="header-section-number">6.1</span> 6.1 Créer des vues temporaires</h2>
+<section id="créer-des-vues-temporaires" class="level2">
+<h2 class="anchored" data-anchor-id="créer-des-vues-temporaires">6.1 Créer des vues temporaires</h2>
 <div id="cell-62" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1340,8 +1372,8 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </details>
 </div>
 </section>
-<section id="requêtes-sql" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="requêtes-sql"><span class="header-section-number">6.2</span> 6.2 Requêtes SQL</h2>
+<section id="requêtes-sql" class="level2">
+<h2 class="anchored" data-anchor-id="requêtes-sql">6.2 Requêtes SQL</h2>
 <div id="cell-64" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1426,8 +1458,8 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <hr>
 </section>
 </section>
-<section id="gestion-des-données-manquantes" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> 7️⃣ Gestion des données manquantes</h1>
+<section id="gestion-des-données-manquantes" class="level1">
+<h1>7️⃣ Gestion des données manquantes</h1>
 <p>PySpark offre plusieurs méthodes pour gérer les nulls.</p>
 <div id="cell-69" class="cell">
 <details class="code-fold">
@@ -1505,8 +1537,8 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </div>
 <hr>
 </section>
-<section id="udfs-user-defined-functions" class="level1" data-number="8">
-<h1 data-number="8"><span class="header-section-number">8</span> 8️⃣ UDFs (User Defined Functions)</h1>
+<section id="udfs-user-defined-functions" class="level1">
+<h1>8️⃣ UDFs (User Defined Functions)</h1>
 <p>Les UDFs permettent d’appliquer des fonctions Python personnalisées.</p>
 <div id="cell-74" class="cell">
 <details class="code-fold">
@@ -1580,11 +1612,11 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </div>
 <hr>
 </section>
-<section id="optimisation-et-performance" class="level1" data-number="9">
-<h1 data-number="9"><span class="header-section-number">9</span> 9️⃣ Optimisation et Performance</h1>
+<section id="optimisation-et-performance" class="level1">
+<h1>9️⃣ Optimisation et Performance</h1>
 <p>Quelques techniques pour optimiser vos jobs Spark.</p>
-<section id="partitionnement" class="level2" data-number="9.1">
-<h2 data-number="9.1" class="anchored" data-anchor-id="partitionnement"><span class="header-section-number">9.1</span> 9.1 Partitionnement</h2>
+<section id="partitionnement" class="level2">
+<h2 class="anchored" data-anchor-id="partitionnement">9.1 Partitionnement</h2>
 <div id="cell-79" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1611,8 +1643,8 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </details>
 </div>
 </section>
-<section id="caching" class="level2" data-number="9.2">
-<h2 data-number="9.2" class="anchored" data-anchor-id="caching"><span class="header-section-number">9.2</span> 9.2 Caching</h2>
+<section id="caching" class="level2">
+<h2 class="anchored" data-anchor-id="caching">9.2 Caching</h2>
 <div id="cell-82" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1651,8 +1683,8 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </details>
 </div>
 </section>
-<section id="broadcast-joins" class="level2" data-number="9.3">
-<h2 data-number="9.3" class="anchored" data-anchor-id="broadcast-joins"><span class="header-section-number">9.3</span> 9.3 Broadcast Joins</h2>
+<section id="broadcast-joins" class="level2">
+<h2 class="anchored" data-anchor-id="broadcast-joins">9.3 Broadcast Joins</h2>
 <div id="cell-85" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1673,8 +1705,8 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </details>
 </div>
 </section>
-<section id="éviter-les-udfs-quand-possible" class="level2" data-number="9.4">
-<h2 data-number="9.4" class="anchored" data-anchor-id="éviter-les-udfs-quand-possible"><span class="header-section-number">9.4</span> 9.4 Éviter les UDFs quand possible</h2>
+<section id="éviter-les-udfs-quand-possible" class="level2">
+<h2 class="anchored" data-anchor-id="éviter-les-udfs-quand-possible">9.4 Éviter les UDFs quand possible</h2>
 <div id="cell-87" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1692,8 +1724,8 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </details>
 </div>
 </section>
-<section id="explain-plans" class="level2" data-number="9.5">
-<h2 data-number="9.5" class="anchored" data-anchor-id="explain-plans"><span class="header-section-number">9.5</span> 9.5 Explain Plans</h2>
+<section id="explain-plans" class="level2">
+<h2 class="anchored" data-anchor-id="explain-plans">9.5 Explain Plans</h2>
 <div id="cell-89" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1709,8 +1741,8 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <hr>
 </section>
 </section>
-<section id="structured-streaming-bonus" class="level1" data-number="10">
-<h1 data-number="10"><span class="header-section-number">10</span> 🔟 Structured Streaming (Bonus)</h1>
+<section id="structured-streaming-bonus" class="level1">
+<h1>🔟 Structured Streaming (Bonus)</h1>
 <p>Traitement de données en temps réel avec Spark.</p>
 <div id="cell-91" class="cell">
 <details class="code-fold">
@@ -1765,8 +1797,8 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </div>
 <hr>
 </section>
-<section id="pipeline-etl-complet-avec-pyspark" class="level1" data-number="11">
-<h1 data-number="11"><span class="header-section-number">11</span> 1️⃣1️⃣ Pipeline ETL Complet avec PySpark</h1>
+<section id="pipeline-etl-complet-avec-pyspark" class="level1">
+<h1>1️⃣1️⃣ Pipeline ETL Complet avec PySpark</h1>
 <p>Construisons un pipeline ETL complet.</p>
 <div id="cell-95" class="cell">
 <details class="code-fold">
@@ -1783,8 +1815,8 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb60-10"><a href="#cb60-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"✅ Structure créée"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<section id="extract" class="level2" data-number="11.1">
-<h2 data-number="11.1" class="anchored" data-anchor-id="extract"><span class="header-section-number">11.1</span> 11.1 Extract</h2>
+<section id="extract" class="level2">
+<h2 class="anchored" data-anchor-id="extract">11.1 Extract</h2>
 <div id="cell-97" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1817,8 +1849,8 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </details>
 </div>
 </section>
-<section id="transform" class="level2" data-number="11.2">
-<h2 data-number="11.2" class="anchored" data-anchor-id="transform"><span class="header-section-number">11.2</span> 11.2 Transform</h2>
+<section id="transform" class="level2">
+<h2 class="anchored" data-anchor-id="transform">11.2 Transform</h2>
 <div id="cell-99" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1882,8 +1914,8 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </details>
 </div>
 </section>
-<section id="aggregate" class="level2" data-number="11.3">
-<h2 data-number="11.3" class="anchored" data-anchor-id="aggregate"><span class="header-section-number">11.3</span> 11.3 Aggregate</h2>
+<section id="aggregate" class="level2">
+<h2 class="anchored" data-anchor-id="aggregate">11.3 Aggregate</h2>
 <div id="cell-101" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1932,8 +1964,8 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </details>
 </div>
 </section>
-<section id="load" class="level2" data-number="11.4">
-<h2 data-number="11.4" class="anchored" data-anchor-id="load"><span class="header-section-number">11.4</span> 11.4 Load</h2>
+<section id="load" class="level2">
+<h2 class="anchored" data-anchor-id="load">11.4 Load</h2>
 <div id="cell-103" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1967,8 +1999,8 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </details>
 </div>
 </section>
-<section id="pipeline-complet-orchestré" class="level2" data-number="11.5">
-<h2 data-number="11.5" class="anchored" data-anchor-id="pipeline-complet-orchestré"><span class="header-section-number">11.5</span> 11.5 Pipeline complet orchestré</h2>
+<section id="pipeline-complet-orchestré" class="level2">
+<h2 class="anchored" data-anchor-id="pipeline-complet-orchestré">11.5 Pipeline complet orchestré</h2>
 <div id="cell-105" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -2031,10 +2063,10 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <hr>
 </section>
 </section>
-<section id="résumé-et-prochaines-étapes" class="level1" data-number="12">
-<h1 data-number="12"><span class="header-section-number">12</span> 🎓 Résumé et Prochaines Étapes</h1>
-<section id="ce-que-vous-avez-appris" class="level2" data-number="12.1">
-<h2 data-number="12.1" class="anchored" data-anchor-id="ce-que-vous-avez-appris"><span class="header-section-number">12.1</span> Ce que vous avez appris ✅</h2>
+<section id="résumé-et-prochaines-étapes" class="level1">
+<h1>🎓 Résumé et Prochaines Étapes</h1>
+<section id="ce-que-vous-avez-appris" class="level2">
+<h2 class="anchored" data-anchor-id="ce-que-vous-avez-appris">Ce que vous avez appris ✅</h2>
 <ol type="1">
 <li><strong>Fondamentaux Spark</strong> : Architecture, concepts, SparkSession</li>
 <li><strong>DataFrames</strong> : Création, transformations, actions</li>
@@ -2049,8 +2081,8 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <li><strong>Pipeline ETL</strong> : Architecture complète production-ready</li>
 </ol>
 </section>
-<section id="différences-clés-pandas-vs-pyspark" class="level2" data-number="12.2">
-<h2 data-number="12.2" class="anchored" data-anchor-id="différences-clés-pandas-vs-pyspark"><span class="header-section-number">12.2</span> Différences clés Pandas vs PySpark 🔄</h2>
+<section id="différences-clés-pandas-vs-pyspark" class="level2">
+<h2 class="anchored" data-anchor-id="différences-clés-pandas-vs-pyspark">Différences clés Pandas vs PySpark 🔄</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 30%">
@@ -2093,13 +2125,13 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </tbody>
 </table>
 </section>
-<section id="quand-utiliser-pyspark" class="level2" data-number="12.3">
-<h2 data-number="12.3" class="anchored" data-anchor-id="quand-utiliser-pyspark"><span class="header-section-number">12.3</span> Quand utiliser PySpark ? 🤔</h2>
+<section id="quand-utiliser-pyspark" class="level2">
+<h2 class="anchored" data-anchor-id="quand-utiliser-pyspark">Quand utiliser PySpark ? 🤔</h2>
 <p>✅ <strong>Utilisez PySpark si :</strong> - Données &gt; 100 GB - Besoin de parallélisation - Traitement distribué nécessaire - Streaming en temps réel</p>
 <p>❌ <strong>Utilisez Pandas si :</strong> - Données &lt; 10 GB - Prototypage rapide - Analyses exploratoires - Machine learning local</p>
 </section>
-<section id="prochaines-étapes" class="level2" data-number="12.4">
-<h2 data-number="12.4" class="anchored" data-anchor-id="prochaines-étapes"><span class="header-section-number">12.4</span> Prochaines étapes 🚀</h2>
+<section id="prochaines-étapes" class="level2">
+<h2 class="anchored" data-anchor-id="prochaines-étapes">Prochaines étapes 🚀</h2>
 <ol type="1">
 <li><strong>Pratiquer</strong> : Créer des pipelines avec vos propres données</li>
 <li><strong>Approfondir</strong> :
@@ -2123,8 +2155,8 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </ul></li>
 </ol>
 </section>
-<section id="ressources" class="level2" data-number="12.5">
-<h2 data-number="12.5" class="anchored" data-anchor-id="ressources"><span class="header-section-number">12.5</span> Ressources 📚</h2>
+<section id="ressources" class="level2">
+<h2 class="anchored" data-anchor-id="ressources">Ressources 📚</h2>
 <ul>
 <li><a href="https://spark.apache.org/docs/latest/api/python/">Documentation PySpark</a></li>
 <li><a href="https://sparkbyexamples.com/">Spark by Examples</a></li>
@@ -2136,11 +2168,11 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <hr>
 </section>
 </section>
-<section id="quiz-final" class="level1" data-number="13">
-<h1 data-number="13"><span class="header-section-number">13</span> 🧪 Quiz Final</h1>
+<section id="quiz-final" class="level1">
+<h1>🧪 Quiz Final</h1>
 <p>Testez vos connaissances PySpark !</p>
-<section id="q1.-quelle-est-la-différence-principale-entre-une-transformation-et-une-action-dans-spark" class="level3" data-number="13.0.1">
-<h3 data-number="13.0.1" class="anchored" data-anchor-id="q1.-quelle-est-la-différence-principale-entre-une-transformation-et-une-action-dans-spark"><span class="header-section-number">13.0.1</span> ❓ Q1. Quelle est la différence principale entre une <strong>transformation</strong> et une <strong>action</strong> dans Spark ?</h3>
+<section id="q1.-quelle-est-la-différence-principale-entre-une-transformation-et-une-action-dans-spark" class="level3">
+<h3 class="anchored" data-anchor-id="q1.-quelle-est-la-différence-principale-entre-une-transformation-et-une-action-dans-spark">❓ Q1. Quelle est la différence principale entre une <strong>transformation</strong> et une <strong>action</strong> dans Spark ?</h3>
 <ol type="a">
 <li>Les transformations sont plus rapides que les actions<br>
 </li>
@@ -2158,8 +2190,8 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </details>
 <hr>
 </section>
-<section id="q2.-quel-format-de-fichier-est-recommandé-pour-stocker-des-données-dans-un-data-lake-avec-spark" class="level3" data-number="13.0.2">
-<h3 data-number="13.0.2" class="anchored" data-anchor-id="q2.-quel-format-de-fichier-est-recommandé-pour-stocker-des-données-dans-un-data-lake-avec-spark"><span class="header-section-number">13.0.2</span> ❓ Q2. Quel format de fichier est <strong>recommandé</strong> pour stocker des données dans un data lake avec Spark ?</h3>
+<section id="q2.-quel-format-de-fichier-est-recommandé-pour-stocker-des-données-dans-un-data-lake-avec-spark" class="level3">
+<h3 class="anchored" data-anchor-id="q2.-quel-format-de-fichier-est-recommandé-pour-stocker-des-données-dans-un-data-lake-avec-spark">❓ Q2. Quel format de fichier est <strong>recommandé</strong> pour stocker des données dans un data lake avec Spark ?</h3>
 <ol type="a">
 <li>CSV<br>
 </li>
@@ -2177,8 +2209,8 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </details>
 <hr>
 </section>
-<section id="q3.-comment-créer-une-nouvelle-colonne-avec-pyspark" class="level3" data-number="13.0.3">
-<h3 data-number="13.0.3" class="anchored" data-anchor-id="q3.-comment-créer-une-nouvelle-colonne-avec-pyspark"><span class="header-section-number">13.0.3</span> ❓ Q3. Comment créer une nouvelle colonne avec PySpark ?</h3>
+<section id="q3.-comment-créer-une-nouvelle-colonne-avec-pyspark" class="level3">
+<h3 class="anchored" data-anchor-id="q3.-comment-créer-une-nouvelle-colonne-avec-pyspark">❓ Q3. Comment créer une nouvelle colonne avec PySpark ?</h3>
 <ol type="a">
 <li><code>df['new_col'] = df['old_col'] * 2</code><br>
 </li>
@@ -2196,8 +2228,8 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </details>
 <hr>
 </section>
-<section id="q4.-quelle-commande-permet-de-voir-le-plan-dexécution-dune-requête" class="level3" data-number="13.0.4">
-<h3 data-number="13.0.4" class="anchored" data-anchor-id="q4.-quelle-commande-permet-de-voir-le-plan-dexécution-dune-requête"><span class="header-section-number">13.0.4</span> ❓ Q4. Quelle commande permet de voir le <strong>plan d’exécution</strong> d’une requête ?</h3>
+<section id="q4.-quelle-commande-permet-de-voir-le-plan-dexécution-dune-requête" class="level3">
+<h3 class="anchored" data-anchor-id="q4.-quelle-commande-permet-de-voir-le-plan-dexécution-dune-requête">❓ Q4. Quelle commande permet de voir le <strong>plan d’exécution</strong> d’une requête ?</h3>
 <ol type="a">
 <li><code>df.show()</code><br>
 </li>
@@ -2215,8 +2247,8 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </details>
 <hr>
 </section>
-<section id="q5.-quest-ce-quun-broadcast-join" class="level3" data-number="13.0.5">
-<h3 data-number="13.0.5" class="anchored" data-anchor-id="q5.-quest-ce-quun-broadcast-join"><span class="header-section-number">13.0.5</span> ❓ Q5. Qu’est-ce qu’un <strong>broadcast join</strong> ?</h3>
+<section id="q5.-quest-ce-quun-broadcast-join" class="level3">
+<h3 class="anchored" data-anchor-id="q5.-quest-ce-quun-broadcast-join">❓ Q5. Qu’est-ce qu’un <strong>broadcast join</strong> ?</h3>
 <ol type="a">
 <li>Une jointure qui diffuse les résultats à tous les nœuds<br>
 </li>
@@ -2234,8 +2266,8 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </details>
 <hr>
 </section>
-<section id="q6.-pourquoi-utilise-t-on-cache-ou-persist" class="level3" data-number="13.0.6">
-<h3 data-number="13.0.6" class="anchored" data-anchor-id="q6.-pourquoi-utilise-t-on-cache-ou-persist"><span class="header-section-number">13.0.6</span> ❓ Q6. Pourquoi utilise-t-on <code>cache()</code> ou <code>persist()</code> ?</h3>
+<section id="q6.-pourquoi-utilise-t-on-cache-ou-persist" class="level3">
+<h3 class="anchored" data-anchor-id="q6.-pourquoi-utilise-t-on-cache-ou-persist">❓ Q6. Pourquoi utilise-t-on <code>cache()</code> ou <code>persist()</code> ?</h3>
 <ol type="a">
 <li>Pour sauvegarder les données sur disque<br>
 </li>
@@ -2253,8 +2285,8 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </details>
 <hr>
 </section>
-<section id="q7.-quelle-est-la-différence-entre-repartition-et-coalesce" class="level3" data-number="13.0.7">
-<h3 data-number="13.0.7" class="anchored" data-anchor-id="q7.-quelle-est-la-différence-entre-repartition-et-coalesce"><span class="header-section-number">13.0.7</span> ❓ Q7. Quelle est la différence entre <code>repartition()</code> et <code>coalesce()</code> ?</h3>
+<section id="q7.-quelle-est-la-différence-entre-repartition-et-coalesce" class="level3">
+<h3 class="anchored" data-anchor-id="q7.-quelle-est-la-différence-entre-repartition-et-coalesce">❓ Q7. Quelle est la différence entre <code>repartition()</code> et <code>coalesce()</code> ?</h3>
 <ol type="a">
 <li>Aucune différence<br>
 </li>
@@ -2272,8 +2304,8 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </details>
 <hr>
 </section>
-<section id="q8.-comment-exécuter-une-requête-sql-dans-pyspark" class="level3" data-number="13.0.8">
-<h3 data-number="13.0.8" class="anchored" data-anchor-id="q8.-comment-exécuter-une-requête-sql-dans-pyspark"><span class="header-section-number">13.0.8</span> ❓ Q8. Comment exécuter une requête SQL dans PySpark ?</h3>
+<section id="q8.-comment-exécuter-une-requête-sql-dans-pyspark" class="level3">
+<h3 class="anchored" data-anchor-id="q8.-comment-exécuter-une-requête-sql-dans-pyspark">❓ Q8. Comment exécuter une requête SQL dans PySpark ?</h3>
 <ol type="a">
 <li><code>df.sql('SELECT * FROM table')</code><br>
 </li>
@@ -2291,8 +2323,8 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </details>
 <hr>
 </section>
-<section id="q9.-quelle-est-la-meilleure-stratégie-pour-écrire-des-données-parquet-partitionnées" class="level3" data-number="13.0.9">
-<h3 data-number="13.0.9" class="anchored" data-anchor-id="q9.-quelle-est-la-meilleure-stratégie-pour-écrire-des-données-parquet-partitionnées"><span class="header-section-number">13.0.9</span> ❓ Q9. Quelle est la meilleure stratégie pour écrire des données Parquet partitionnées ?</h3>
+<section id="q9.-quelle-est-la-meilleure-stratégie-pour-écrire-des-données-parquet-partitionnées" class="level3">
+<h3 class="anchored" data-anchor-id="q9.-quelle-est-la-meilleure-stratégie-pour-écrire-des-données-parquet-partitionnées">❓ Q9. Quelle est la meilleure stratégie pour écrire des données Parquet partitionnées ?</h3>
 <ol type="a">
 <li><code>df.write.parquet('path')</code><br>
 </li>
@@ -2310,8 +2342,8 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </details>
 <hr>
 </section>
-<section id="q10.-quand-devriez-vous-utiliser-pyspark-plutôt-que-pandas" class="level3" data-number="13.0.10">
-<h3 data-number="13.0.10" class="anchored" data-anchor-id="q10.-quand-devriez-vous-utiliser-pyspark-plutôt-que-pandas"><span class="header-section-number">13.0.10</span> ❓ Q10. Quand devriez-vous utiliser PySpark plutôt que Pandas ?</h3>
+<section id="q10.-quand-devriez-vous-utiliser-pyspark-plutôt-que-pandas" class="level3">
+<h3 class="anchored" data-anchor-id="q10.-quand-devriez-vous-utiliser-pyspark-plutôt-que-pandas">❓ Q10. Quand devriez-vous utiliser PySpark plutôt que Pandas ?</h3>
 <ol type="a">
 <li>Toujours, PySpark est toujours meilleur<br>
 </li>
@@ -2329,8 +2361,8 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </details>
 <hr>
 </section>
-<section id="votre-score" class="level2" data-number="13.1">
-<h2 data-number="13.1" class="anchored" data-anchor-id="votre-score"><span class="header-section-number">13.1</span> 📊 Votre score</h2>
+<section id="votre-score" class="level2">
+<h2 class="anchored" data-anchor-id="votre-score">📊 Votre score</h2>
 <ul>
 <li><strong>10/10</strong> : 🏆 Expert PySpark ! Prêt pour la production</li>
 <li><strong>8-9/10</strong> : 🌟 Excellent ! Pratiquez les concepts avancés</li>
@@ -2340,16 +2372,16 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <hr>
 <hr>
 </section>
-<section id="ressources-1" class="level2" data-number="13.2">
-<h2 data-number="13.2" class="anchored" data-anchor-id="ressources-1"><span class="header-section-number">13.2</span> 📚 Ressources</h2>
+<section id="ressources-1" class="level2">
+<h2 class="anchored" data-anchor-id="ressources-1">📚 Ressources</h2>
 <ul>
 <li><a href="https://spark.apache.org/docs/latest/api/python/">Documentation PySpark</a></li>
 <li><a href="https://sparkbyexamples.com/">Spark by Examples</a></li>
 <li><a href="https://www.oreilly.com/library/view/learning-spark-2nd/9781492050032/">Learning Spark (O’Reilly)</a></li>
 <li><a href="https://www.databricks.com/learn/training">Databricks Academy</a> — Cours gratuits</li>
 </ul>
-<section id="plateformes-cloud" class="level3" data-number="13.2.1">
-<h3 data-number="13.2.1" class="anchored" data-anchor-id="plateformes-cloud"><span class="header-section-number">13.2.1</span> 🏭 Plateformes Cloud</h3>
+<section id="plateformes-cloud" class="level3">
+<h3 class="anchored" data-anchor-id="plateformes-cloud">🏭 Plateformes Cloud</h3>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -2379,8 +2411,8 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <hr>
 </section>
 </section>
-<section id="prochaine-étape" class="level2" data-number="13.3">
-<h2 data-number="13.3" class="anchored" data-anchor-id="prochaine-étape"><span class="header-section-number">13.3</span> ➡️ Prochaine étape</h2>
+<section id="prochaine-étape" class="level2">
+<h2 class="anchored" data-anchor-id="prochaine-étape">➡️ Prochaine étape</h2>
 <p>Tu maîtrises maintenant le traitement Big Data avec PySpark !</p>
 <p>Pour continuer ton parcours Data Engineering, explore : - 🔄 <strong>Apache Airflow</strong> — Orchestration de pipelines - 🌊 <strong>Kafka</strong> — Streaming de données - 🏠 <strong>Delta Lake</strong> — Stockage ACID sur data lake - ☁️ <strong>Cloud Data Engineering</strong> — AWS/GCP/Azure</p>
 <hr>

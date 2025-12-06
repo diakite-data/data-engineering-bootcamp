@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>🐘 SQL for Data Engineers – Bootcamp Data Engineering</title>
+<title>🐘 SQL for Data Engineers – Bootcamp Data Engineering – From Zero to Hero</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -110,6 +110,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <style>html{ scroll-behavior: smooth; }</style>
 
 
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -282,7 +283,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">Bootcamp Data Engineering</span>
+    <span class="navbar-title">Bootcamp Data Engineering – From Zero to Hero</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -293,11 +294,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/diakite-data/data-engineering-bootcamp"> <i class="bi bi-github" role="img">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="../../#"> <i class="bi bi-lightbulb" role="img" aria-label="Mode clair/sombre">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -313,7 +309,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">🐘 SQL for Data Engineers</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notebooks/beginner/01_intro_data_engineering.html">Débutant</a></li><li class="breadcrumb-item"><a href="../../notebooks/beginner/07_sql_for_data_engineers.html">🐘 SQL for Data Engineers</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -380,8 +376,44 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notebooks/beginner/06_intro_databases.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">🧠 Introduction aux bases de données pour Data Engineers</span></a>
+  <a href="../../notebooks/beginner/06_intro_relational_databases.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🗄️ Introduction aux Bases de Données Relationnelles</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/07_sql_for_data_engineers.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">🐘 SQL for Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/08_intro_big_data_distributed.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🐘 Introduction au Big Data &amp; Traitement Distribué</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/09_mongodb_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🍃 MongoDB for Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/10_elasticsearch_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🔍 Elasticsearch for Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/11_pyspark_for_data_engineering.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">⚡ PySpark for Data Engineering</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/12_orchestration_pipelines.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">⏰ Orchestration de Pipelines Data</span></a>
   </div>
 </li>
       </ul>
@@ -396,52 +428,52 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#prérequis" id="toc-prérequis" class="nav-link active" data-scroll-target="#prérequis"><span class="header-section-number">1</span> 📋 Prérequis</a></li>
-  <li><a href="#objectifs-du-module" id="toc-objectifs-du-module" class="nav-link" data-scroll-target="#objectifs-du-module"><span class="header-section-number">2</span> 🎯 Objectifs du module</a></li>
-  <li><a href="#cest-quoi-sql" id="toc-cest-quoi-sql" class="nav-link" data-scroll-target="#cest-quoi-sql"><span class="header-section-number">3</span> 🧠 C’est quoi SQL ?</a></li>
-  <li><a href="#pourquoi-cest-essentiel-pour-un-data-engineer" id="toc-pourquoi-cest-essentiel-pour-un-data-engineer" class="nav-link" data-scroll-target="#pourquoi-cest-essentiel-pour-un-data-engineer"><span class="header-section-number">4</span> 🧰 Pourquoi c’est essentiel pour un Data Engineer ?</a></li>
-  <li><a href="#python-duckdb-sql-dans-ton-notebook" id="toc-python-duckdb-sql-dans-ton-notebook" class="nav-link" data-scroll-target="#python-duckdb-sql-dans-ton-notebook"><span class="header-section-number">5</span> 🦆 Python + DuckDB — SQL dans ton notebook !</a>
+  <li><a href="#prérequis" id="toc-prérequis" class="nav-link active" data-scroll-target="#prérequis">📋 Prérequis</a></li>
+  <li><a href="#objectifs-du-module" id="toc-objectifs-du-module" class="nav-link" data-scroll-target="#objectifs-du-module">🎯 Objectifs du module</a></li>
+  <li><a href="#cest-quoi-sql" id="toc-cest-quoi-sql" class="nav-link" data-scroll-target="#cest-quoi-sql">🧠 C’est quoi SQL ?</a></li>
+  <li><a href="#pourquoi-cest-essentiel-pour-un-data-engineer" id="toc-pourquoi-cest-essentiel-pour-un-data-engineer" class="nav-link" data-scroll-target="#pourquoi-cest-essentiel-pour-un-data-engineer">🧰 Pourquoi c’est essentiel pour un Data Engineer ?</a></li>
+  <li><a href="#python-duckdb-sql-dans-ton-notebook" id="toc-python-duckdb-sql-dans-ton-notebook" class="nav-link" data-scroll-target="#python-duckdb-sql-dans-ton-notebook">🦆 Python + DuckDB — SQL dans ton notebook !</a>
   <ul class="collapse">
-  <li><a href="#quest-ce-que-duckdb" id="toc-quest-ce-que-duckdb" class="nav-link" data-scroll-target="#quest-ce-que-duckdb"><span class="header-section-number">5.1</span> Qu’est-ce que DuckDB ?</a></li>
-  <li><a href="#duckdb-vs-autres-bases" id="toc-duckdb-vs-autres-bases" class="nav-link" data-scroll-target="#duckdb-vs-autres-bases"><span class="header-section-number">5.2</span> 📊 DuckDB vs autres bases</a></li>
+  <li><a href="#quest-ce-que-duckdb" id="toc-quest-ce-que-duckdb" class="nav-link" data-scroll-target="#quest-ce-que-duckdb">Qu’est-ce que DuckDB ?</a></li>
+  <li><a href="#duckdb-vs-autres-bases" id="toc-duckdb-vs-autres-bases" class="nav-link" data-scroll-target="#duckdb-vs-autres-bases">📊 DuckDB vs autres bases</a></li>
   </ul></li>
-  <li><a href="#cheatsheet-sql-commandes-essentielles" id="toc-cheatsheet-sql-commandes-essentielles" class="nav-link" data-scroll-target="#cheatsheet-sql-commandes-essentielles"><span class="header-section-number">6</span> 📋 Cheatsheet SQL — Commandes essentielles</a></li>
-  <li><a href="#select-sélectionner-des-données" id="toc-select-sélectionner-des-données" class="nav-link" data-scroll-target="#select-sélectionner-des-données"><span class="header-section-number">7</span> 🔍 1. SELECT — Sélectionner des données</a>
+  <li><a href="#cheatsheet-sql-commandes-essentielles" id="toc-cheatsheet-sql-commandes-essentielles" class="nav-link" data-scroll-target="#cheatsheet-sql-commandes-essentielles">📋 Cheatsheet SQL — Commandes essentielles</a></li>
+  <li><a href="#select-sélectionner-des-données" id="toc-select-sélectionner-des-données" class="nav-link" data-scroll-target="#select-sélectionner-des-données">🔍 1. SELECT — Sélectionner des données</a>
   <ul class="collapse">
-  <li><a href="#syntaxe-de-base" id="toc-syntaxe-de-base" class="nav-link" data-scroll-target="#syntaxe-de-base"><span class="header-section-number">7.1</span> Syntaxe de base</a></li>
+  <li><a href="#syntaxe-de-base" id="toc-syntaxe-de-base" class="nav-link" data-scroll-target="#syntaxe-de-base">Syntaxe de base</a></li>
   </ul></li>
-  <li><a href="#agrégations-count-sum-avg-min-max" id="toc-agrégations-count-sum-avg-min-max" class="nav-link" data-scroll-target="#agrégations-count-sum-avg-min-max"><span class="header-section-number">8</span> 📊 2. Agrégations — COUNT, SUM, AVG, MIN, MAX</a></li>
-  <li><a href="#group-by-regrouper-les-données" id="toc-group-by-regrouper-les-données" class="nav-link" data-scroll-target="#group-by-regrouper-les-données"><span class="header-section-number">9</span> 📦 3. GROUP BY — Regrouper les données</a></li>
-  <li><a href="#join-combiner-les-tables" id="toc-join-combiner-les-tables" class="nav-link" data-scroll-target="#join-combiner-les-tables"><span class="header-section-number">10</span> 🔗 4. JOIN — Combiner les tables</a></li>
-  <li><a href="#fonctions-de-date" id="toc-fonctions-de-date" class="nav-link" data-scroll-target="#fonctions-de-date"><span class="header-section-number">11</span> 📅 5. Fonctions de date</a></li>
-  <li><a href="#case-conditions-dans-les-requêtes" id="toc-case-conditions-dans-les-requêtes" class="nav-link" data-scroll-target="#case-conditions-dans-les-requêtes"><span class="header-section-number">12</span> 🔀 6. CASE — Conditions dans les requêtes</a></li>
-  <li><a href="#cte-common-table-expression-requêtes-lisibles" id="toc-cte-common-table-expression-requêtes-lisibles" class="nav-link" data-scroll-target="#cte-common-table-expression-requêtes-lisibles"><span class="header-section-number">13</span> 📦 7. CTE (Common Table Expression) — Requêtes lisibles</a></li>
-  <li><a href="#window-functions-calculs-avancés" id="toc-window-functions-calculs-avancés" class="nav-link" data-scroll-target="#window-functions-calculs-avancés"><span class="header-section-number">14</span> 🪟 8. Window Functions — Calculs avancés</a></li>
-  <li><a href="#intégration-avec-pandas" id="toc-intégration-avec-pandas" class="nav-link" data-scroll-target="#intégration-avec-pandas"><span class="header-section-number">15</span> 🐼 9. Intégration avec Pandas</a></li>
-  <li><a href="#exercices-pratiques" id="toc-exercices-pratiques" class="nav-link" data-scroll-target="#exercices-pratiques"><span class="header-section-number">16</span> 🎯 10. Exercices pratiques</a>
+  <li><a href="#agrégations-count-sum-avg-min-max" id="toc-agrégations-count-sum-avg-min-max" class="nav-link" data-scroll-target="#agrégations-count-sum-avg-min-max">📊 2. Agrégations — COUNT, SUM, AVG, MIN, MAX</a></li>
+  <li><a href="#group-by-regrouper-les-données" id="toc-group-by-regrouper-les-données" class="nav-link" data-scroll-target="#group-by-regrouper-les-données">📦 3. GROUP BY — Regrouper les données</a></li>
+  <li><a href="#join-combiner-les-tables" id="toc-join-combiner-les-tables" class="nav-link" data-scroll-target="#join-combiner-les-tables">🔗 4. JOIN — Combiner les tables</a></li>
+  <li><a href="#fonctions-de-date" id="toc-fonctions-de-date" class="nav-link" data-scroll-target="#fonctions-de-date">📅 5. Fonctions de date</a></li>
+  <li><a href="#case-conditions-dans-les-requêtes" id="toc-case-conditions-dans-les-requêtes" class="nav-link" data-scroll-target="#case-conditions-dans-les-requêtes">🔀 6. CASE — Conditions dans les requêtes</a></li>
+  <li><a href="#cte-common-table-expression-requêtes-lisibles" id="toc-cte-common-table-expression-requêtes-lisibles" class="nav-link" data-scroll-target="#cte-common-table-expression-requêtes-lisibles">📦 7. CTE (Common Table Expression) — Requêtes lisibles</a></li>
+  <li><a href="#window-functions-calculs-avancés" id="toc-window-functions-calculs-avancés" class="nav-link" data-scroll-target="#window-functions-calculs-avancés">🪟 8. Window Functions — Calculs avancés</a></li>
+  <li><a href="#intégration-avec-pandas" id="toc-intégration-avec-pandas" class="nav-link" data-scroll-target="#intégration-avec-pandas">🐼 9. Intégration avec Pandas</a></li>
+  <li><a href="#exercices-pratiques" id="toc-exercices-pratiques" class="nav-link" data-scroll-target="#exercices-pratiques">🎯 10. Exercices pratiques</a>
   <ul class="collapse">
-  <li><a href="#exercice-1-facile" id="toc-exercice-1-facile" class="nav-link" data-scroll-target="#exercice-1-facile"><span class="header-section-number">16.1</span> 🏋️ Exercice 1 — Facile</a></li>
-  <li><a href="#exercice-2-facile" id="toc-exercice-2-facile" class="nav-link" data-scroll-target="#exercice-2-facile"><span class="header-section-number">16.2</span> 🏋️ Exercice 2 — Facile</a></li>
-  <li><a href="#exercice-3-intermédiaire" id="toc-exercice-3-intermédiaire" class="nav-link" data-scroll-target="#exercice-3-intermédiaire"><span class="header-section-number">16.3</span> 🏋️ Exercice 3 — Intermédiaire</a></li>
-  <li><a href="#exercice-4-intermédiaire" id="toc-exercice-4-intermédiaire" class="nav-link" data-scroll-target="#exercice-4-intermédiaire"><span class="header-section-number">16.4</span> 🏋️ Exercice 4 — Intermédiaire</a></li>
-  <li><a href="#exercice-5-avancé" id="toc-exercice-5-avancé" class="nav-link" data-scroll-target="#exercice-5-avancé"><span class="header-section-number">16.5</span> 🏋️ Exercice 5 — Avancé</a></li>
+  <li><a href="#exercice-1-facile" id="toc-exercice-1-facile" class="nav-link" data-scroll-target="#exercice-1-facile">🏋️ Exercice 1 — Facile</a></li>
+  <li><a href="#exercice-2-facile" id="toc-exercice-2-facile" class="nav-link" data-scroll-target="#exercice-2-facile">🏋️ Exercice 2 — Facile</a></li>
+  <li><a href="#exercice-3-intermédiaire" id="toc-exercice-3-intermédiaire" class="nav-link" data-scroll-target="#exercice-3-intermédiaire">🏋️ Exercice 3 — Intermédiaire</a></li>
+  <li><a href="#exercice-4-intermédiaire" id="toc-exercice-4-intermédiaire" class="nav-link" data-scroll-target="#exercice-4-intermédiaire">🏋️ Exercice 4 — Intermédiaire</a></li>
+  <li><a href="#exercice-5-avancé" id="toc-exercice-5-avancé" class="nav-link" data-scroll-target="#exercice-5-avancé">🏋️ Exercice 5 — Avancé</a></li>
   </ul></li>
-  <li><a href="#quiz" id="toc-quiz" class="nav-link" data-scroll-target="#quiz"><span class="header-section-number">17</span> 🧠 Quiz</a>
+  <li><a href="#quiz" id="toc-quiz" class="nav-link" data-scroll-target="#quiz">🧠 Quiz</a>
   <ul class="collapse">
-  <li><a href="#q1.-quelle-commande-affiche-toutes-les-colonnes-dune-table-clients" id="toc-q1.-quelle-commande-affiche-toutes-les-colonnes-dune-table-clients" class="nav-link" data-scroll-target="#q1.-quelle-commande-affiche-toutes-les-colonnes-dune-table-clients"><span class="header-section-number">17.1</span> ❓ Q1. Quelle commande affiche toutes les colonnes d’une table <code>clients</code> ?</a></li>
-  <li><a href="#q2.-quelle-est-la-différence-entre-where-et-having" id="toc-q2.-quelle-est-la-différence-entre-where-et-having" class="nav-link" data-scroll-target="#q2.-quelle-est-la-différence-entre-where-et-having"><span class="header-section-number">17.2</span> ❓ Q2. Quelle est la différence entre <code>WHERE</code> et <code>HAVING</code> ?</a></li>
-  <li><a href="#q3.-quel-join-retourne-uniquement-les-lignes-qui-ont-une-correspondance" id="toc-q3.-quel-join-retourne-uniquement-les-lignes-qui-ont-une-correspondance" class="nav-link" data-scroll-target="#q3.-quel-join-retourne-uniquement-les-lignes-qui-ont-une-correspondance"><span class="header-section-number">17.3</span> ❓ Q3. Quel JOIN retourne UNIQUEMENT les lignes qui ont une correspondance ?</a></li>
-  <li><a href="#q4.-à-quoi-sert-une-cte-with" id="toc-q4.-à-quoi-sert-une-cte-with" class="nav-link" data-scroll-target="#q4.-à-quoi-sert-une-cte-with"><span class="header-section-number">17.4</span> ❓ Q4. À quoi sert une CTE (<code>WITH</code>) ?</a></li>
-  <li><a href="#q5.-quelle-window-function-permet-de-classer-les-lignes" id="toc-q5.-quelle-window-function-permet-de-classer-les-lignes" class="nav-link" data-scroll-target="#q5.-quelle-window-function-permet-de-classer-les-lignes"><span class="header-section-number">17.5</span> ❓ Q5. Quelle Window Function permet de classer les lignes ?</a></li>
-  <li><a href="#q6.-quel-avantage-de-duckdb-pour-un-data-engineer" id="toc-q6.-quel-avantage-de-duckdb-pour-un-data-engineer" class="nav-link" data-scroll-target="#q6.-quel-avantage-de-duckdb-pour-un-data-engineer"><span class="header-section-number">17.6</span> ❓ Q6. Quel avantage de DuckDB pour un Data Engineer ?</a></li>
+  <li><a href="#q1.-quelle-commande-affiche-toutes-les-colonnes-dune-table-clients" id="toc-q1.-quelle-commande-affiche-toutes-les-colonnes-dune-table-clients" class="nav-link" data-scroll-target="#q1.-quelle-commande-affiche-toutes-les-colonnes-dune-table-clients">❓ Q1. Quelle commande affiche toutes les colonnes d’une table <code>clients</code> ?</a></li>
+  <li><a href="#q2.-quelle-est-la-différence-entre-where-et-having" id="toc-q2.-quelle-est-la-différence-entre-where-et-having" class="nav-link" data-scroll-target="#q2.-quelle-est-la-différence-entre-where-et-having">❓ Q2. Quelle est la différence entre <code>WHERE</code> et <code>HAVING</code> ?</a></li>
+  <li><a href="#q3.-quel-join-retourne-uniquement-les-lignes-qui-ont-une-correspondance" id="toc-q3.-quel-join-retourne-uniquement-les-lignes-qui-ont-une-correspondance" class="nav-link" data-scroll-target="#q3.-quel-join-retourne-uniquement-les-lignes-qui-ont-une-correspondance">❓ Q3. Quel JOIN retourne UNIQUEMENT les lignes qui ont une correspondance ?</a></li>
+  <li><a href="#q4.-à-quoi-sert-une-cte-with" id="toc-q4.-à-quoi-sert-une-cte-with" class="nav-link" data-scroll-target="#q4.-à-quoi-sert-une-cte-with">❓ Q4. À quoi sert une CTE (<code>WITH</code>) ?</a></li>
+  <li><a href="#q5.-quelle-window-function-permet-de-classer-les-lignes" id="toc-q5.-quelle-window-function-permet-de-classer-les-lignes" class="nav-link" data-scroll-target="#q5.-quelle-window-function-permet-de-classer-les-lignes">❓ Q5. Quelle Window Function permet de classer les lignes ?</a></li>
+  <li><a href="#q6.-quel-avantage-de-duckdb-pour-un-data-engineer" id="toc-q6.-quel-avantage-de-duckdb-pour-un-data-engineer" class="nav-link" data-scroll-target="#q6.-quel-avantage-de-duckdb-pour-un-data-engineer">❓ Q6. Quel avantage de DuckDB pour un Data Engineer ?</a></li>
   </ul></li>
-  <li><a href="#ressources" id="toc-ressources" class="nav-link" data-scroll-target="#ressources"><span class="header-section-number">18</span> 📚 Ressources</a>
+  <li><a href="#ressources" id="toc-ressources" class="nav-link" data-scroll-target="#ressources">📚 Ressources</a>
   <ul class="collapse">
-  <li><a href="#pratiquer-sql-en-ligne" id="toc-pratiquer-sql-en-ligne" class="nav-link" data-scroll-target="#pratiquer-sql-en-ligne"><span class="header-section-number">18.1</span> 🎮 Pratiquer SQL en ligne</a></li>
-  <li><a href="#duckdb" id="toc-duckdb" class="nav-link" data-scroll-target="#duckdb"><span class="header-section-number">18.2</span> 🦆 DuckDB</a></li>
-  <li><a href="#documentation-sql" id="toc-documentation-sql" class="nav-link" data-scroll-target="#documentation-sql"><span class="header-section-number">18.3</span> 📖 Documentation SQL</a></li>
+  <li><a href="#pratiquer-sql-en-ligne" id="toc-pratiquer-sql-en-ligne" class="nav-link" data-scroll-target="#pratiquer-sql-en-ligne">🎮 Pratiquer SQL en ligne</a></li>
+  <li><a href="#duckdb" id="toc-duckdb" class="nav-link" data-scroll-target="#duckdb">🦆 DuckDB</a></li>
+  <li><a href="#documentation-sql" id="toc-documentation-sql" class="nav-link" data-scroll-target="#documentation-sql">📖 Documentation SQL</a></li>
   </ul></li>
-  <li><a href="#prochaine-étape" id="toc-prochaine-étape" class="nav-link" data-scroll-target="#prochaine-étape"><span class="header-section-number">19</span> ➡️ Prochaine étape</a></li>
+  <li><a href="#prochaine-étape" id="toc-prochaine-étape" class="nav-link" data-scroll-target="#prochaine-étape">➡️ Prochaine étape</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="git@github.com:diakite-data/data-engineering-bootcamp.git/blob/main/notebooks/beginner/07_sql_for_data_engineers.ipynb" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="git@github.com:diakite-data/data-engineering-bootcamp.git/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -449,7 +481,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notebooks/beginner/01_intro_data_engineering.html">Débutant</a></li><li class="breadcrumb-item"><a href="../../notebooks/beginner/07_sql_for_data_engineers.html">🐘 SQL for Data Engineers</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">🐘 SQL for Data Engineers</h1>
 </div>
@@ -470,8 +502,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>Ce module couvre les <strong>fondamentaux et concepts avancés de SQL</strong>, avec une pratique directe via <strong>Python + DuckDB</strong>.</p>
 <hr>
-<section id="prérequis" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="prérequis"><span class="header-section-number">1</span> 📋 Prérequis</h2>
+<section id="prérequis" class="level2">
+<h2 class="anchored" data-anchor-id="prérequis">📋 Prérequis</h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -495,8 +527,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 </section>
-<section id="objectifs-du-module" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="objectifs-du-module"><span class="header-section-number">2</span> 🎯 Objectifs du module</h2>
+<section id="objectifs-du-module" class="level2">
+<h2 class="anchored" data-anchor-id="objectifs-du-module">🎯 Objectifs du module</h2>
 <p>À la fin de ce notebook, tu seras capable de : - ✅ Écrire des requêtes <code>SELECT</code>, <code>WHERE</code>, <code>ORDER BY</code> - ✅ Utiliser les fonctions d’agrégation (<code>COUNT</code>, <code>SUM</code>, <code>AVG</code>) - ✅ Maîtriser <code>GROUP BY</code> et <code>HAVING</code> - ✅ Faire des jointures (<code>JOIN</code>, <code>LEFT JOIN</code>) - ✅ Utiliser les fonctions de date (<code>DATE_TRUNC</code>, <code>EXTRACT</code>) - ✅ Utiliser <code>CASE</code>, les CTEs et les Window Functions - ✅ <strong>Exécuter du SQL depuis Python avec DuckDB</strong></p>
 <hr>
 <blockquote class="blockquote">
@@ -504,8 +536,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </blockquote>
 <hr>
 </section>
-<section id="cest-quoi-sql" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="cest-quoi-sql"><span class="header-section-number">3</span> 🧠 C’est quoi SQL ?</h2>
+<section id="cest-quoi-sql" class="level2">
+<h2 class="anchored" data-anchor-id="cest-quoi-sql">🧠 C’est quoi SQL ?</h2>
 <p><strong>SQL</strong> (Structured Query Language) est un <strong>langage de requêtes</strong> pour interagir avec des bases de données relationnelles.</p>
 <table class="caption-top table">
 <thead>
@@ -543,8 +575,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 <hr>
 </section>
-<section id="pourquoi-cest-essentiel-pour-un-data-engineer" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="pourquoi-cest-essentiel-pour-un-data-engineer"><span class="header-section-number">4</span> 🧰 Pourquoi c’est essentiel pour un Data Engineer ?</h2>
+<section id="pourquoi-cest-essentiel-pour-un-data-engineer" class="level2">
+<h2 class="anchored" data-anchor-id="pourquoi-cest-essentiel-pour-un-data-engineer">🧰 Pourquoi c’est essentiel pour un Data Engineer ?</h2>
 <ul>
 <li>Interroger les <strong>data warehouses</strong> (BigQuery, Snowflake, Redshift…)</li>
 <li>Extraire / filtrer les données pour les pipelines</li>
@@ -553,10 +585,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <hr>
 </section>
-<section id="python-duckdb-sql-dans-ton-notebook" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="python-duckdb-sql-dans-ton-notebook"><span class="header-section-number">5</span> 🦆 Python + DuckDB — SQL dans ton notebook !</h2>
-<section id="quest-ce-que-duckdb" class="level3" data-number="5.1">
-<h3 data-number="5.1" class="anchored" data-anchor-id="quest-ce-que-duckdb"><span class="header-section-number">5.1</span> Qu’est-ce que DuckDB ?</h3>
+<section id="python-duckdb-sql-dans-ton-notebook" class="level2">
+<h2 class="anchored" data-anchor-id="python-duckdb-sql-dans-ton-notebook">🦆 Python + DuckDB — SQL dans ton notebook !</h2>
+<section id="quest-ce-que-duckdb" class="level3">
+<h3 class="anchored" data-anchor-id="quest-ce-que-duckdb">Qu’est-ce que DuckDB ?</h3>
 <p><strong>DuckDB</strong> est une base de données analytique <strong>embarquée</strong> (comme SQLite, mais optimisée pour l’analytics).</p>
 <pre><code>┌─────────────────────────────────────────────────────────────┐
 │                    POURQUOI DUCKDB ?                        │
@@ -571,8 +603,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 │                                                             │
 └─────────────────────────────────────────────────────────────┘</code></pre>
 </section>
-<section id="duckdb-vs-autres-bases" class="level3" data-number="5.2">
-<h3 data-number="5.2" class="anchored" data-anchor-id="duckdb-vs-autres-bases"><span class="header-section-number">5.2</span> 📊 DuckDB vs autres bases</h3>
+<section id="duckdb-vs-autres-bases" class="level3">
+<h3 class="anchored" data-anchor-id="duckdb-vs-autres-bases">📊 DuckDB vs autres bases</h3>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 24%">
@@ -708,8 +740,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 </section>
-<section id="cheatsheet-sql-commandes-essentielles" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="cheatsheet-sql-commandes-essentielles"><span class="header-section-number">6</span> 📋 Cheatsheet SQL — Commandes essentielles</h2>
+<section id="cheatsheet-sql-commandes-essentielles" class="level2">
+<h2 class="anchored" data-anchor-id="cheatsheet-sql-commandes-essentielles">📋 Cheatsheet SQL — Commandes essentielles</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 26%">
@@ -844,10 +876,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 <hr>
 </section>
-<section id="select-sélectionner-des-données" class="level2" data-number="7">
-<h2 data-number="7" class="anchored" data-anchor-id="select-sélectionner-des-données"><span class="header-section-number">7</span> 🔍 1. SELECT — Sélectionner des données</h2>
-<section id="syntaxe-de-base" class="level3" data-number="7.1">
-<h3 data-number="7.1" class="anchored" data-anchor-id="syntaxe-de-base"><span class="header-section-number">7.1</span> Syntaxe de base</h3>
+<section id="select-sélectionner-des-données" class="level2">
+<h2 class="anchored" data-anchor-id="select-sélectionner-des-données">🔍 1. SELECT — Sélectionner des données</h2>
+<section id="syntaxe-de-base" class="level3">
+<h3 class="anchored" data-anchor-id="syntaxe-de-base">Syntaxe de base</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> colonne1, colonne2</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> <span class="kw">table</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> condition</span>
@@ -898,8 +930,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 </section>
-<section id="agrégations-count-sum-avg-min-max" class="level2" data-number="8">
-<h2 data-number="8" class="anchored" data-anchor-id="agrégations-count-sum-avg-min-max"><span class="header-section-number">8</span> 📊 2. Agrégations — COUNT, SUM, AVG, MIN, MAX</h2>
+<section id="agrégations-count-sum-avg-min-max" class="level2">
+<h2 class="anchored" data-anchor-id="agrégations-count-sum-avg-min-max">📊 2. Agrégations — COUNT, SUM, AVG, MIN, MAX</h2>
 <div id="cell-15" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -926,8 +958,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <hr>
 </section>
-<section id="group-by-regrouper-les-données" class="level2" data-number="9">
-<h2 data-number="9" class="anchored" data-anchor-id="group-by-regrouper-les-données"><span class="header-section-number">9</span> 📦 3. GROUP BY — Regrouper les données</h2>
+<section id="group-by-regrouper-les-données" class="level2">
+<h2 class="anchored" data-anchor-id="group-by-regrouper-les-données">📦 3. GROUP BY — Regrouper les données</h2>
 <div id="cell-18" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -974,8 +1006,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <hr>
 </section>
-<section id="join-combiner-les-tables" class="level2" data-number="10">
-<h2 data-number="10" class="anchored" data-anchor-id="join-combiner-les-tables"><span class="header-section-number">10</span> 🔗 4. JOIN — Combiner les tables</h2>
+<section id="join-combiner-les-tables" class="level2">
+<h2 class="anchored" data-anchor-id="join-combiner-les-tables">🔗 4. JOIN — Combiner les tables</h2>
 <pre><code>┌──────────────────────────────────────────────────────────────────┐
 │ INNER JOIN (JOIN)         │ Seulement les correspondances      │
 │ A ∩ B                      │                                    │
@@ -1032,8 +1064,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <hr>
 </section>
-<section id="fonctions-de-date" class="level2" data-number="11">
-<h2 data-number="11" class="anchored" data-anchor-id="fonctions-de-date"><span class="header-section-number">11</span> 📅 5. Fonctions de date</h2>
+<section id="fonctions-de-date" class="level2">
+<h2 class="anchored" data-anchor-id="fonctions-de-date">📅 5. Fonctions de date</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 32%">
@@ -1113,8 +1145,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <hr>
 </section>
-<section id="case-conditions-dans-les-requêtes" class="level2" data-number="12">
-<h2 data-number="12" class="anchored" data-anchor-id="case-conditions-dans-les-requêtes"><span class="header-section-number">12</span> 🔀 6. CASE — Conditions dans les requêtes</h2>
+<section id="case-conditions-dans-les-requêtes" class="level2">
+<h2 class="anchored" data-anchor-id="case-conditions-dans-les-requêtes">🔀 6. CASE — Conditions dans les requêtes</h2>
 <div id="cell-29" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1138,8 +1170,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <hr>
 </section>
-<section id="cte-common-table-expression-requêtes-lisibles" class="level2" data-number="13">
-<h2 data-number="13" class="anchored" data-anchor-id="cte-common-table-expression-requêtes-lisibles"><span class="header-section-number">13</span> 📦 7. CTE (Common Table Expression) — Requêtes lisibles</h2>
+<section id="cte-common-table-expression-requêtes-lisibles" class="level2">
+<h2 class="anchored" data-anchor-id="cte-common-table-expression-requêtes-lisibles">📦 7. CTE (Common Table Expression) — Requêtes lisibles</h2>
 <p>Les <strong>CTEs</strong> permettent de créer des “tables temporaires” pour clarifier les requêtes complexes.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="kw">WITH</span> nom_cte <span class="kw">AS</span> (</span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">SELECT</span> <span class="op">..</span>.</span>
@@ -1173,8 +1205,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <hr>
 </section>
-<section id="window-functions-calculs-avancés" class="level2" data-number="14">
-<h2 data-number="14" class="anchored" data-anchor-id="window-functions-calculs-avancés"><span class="header-section-number">14</span> 🪟 8. Window Functions — Calculs avancés</h2>
+<section id="window-functions-calculs-avancés" class="level2">
+<h2 class="anchored" data-anchor-id="window-functions-calculs-avancés">🪟 8. Window Functions — Calculs avancés</h2>
 <p>Les <strong>Window Functions</strong> permettent de faire des calculs sur un groupe de lignes <strong>sans les regrouper</strong>.</p>
 <table class="caption-top table">
 <thead>
@@ -1268,8 +1300,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <hr>
 </section>
-<section id="intégration-avec-pandas" class="level2" data-number="15">
-<h2 data-number="15" class="anchored" data-anchor-id="intégration-avec-pandas"><span class="header-section-number">15</span> 🐼 9. Intégration avec Pandas</h2>
+<section id="intégration-avec-pandas" class="level2">
+<h2 class="anchored" data-anchor-id="intégration-avec-pandas">🐼 9. Intégration avec Pandas</h2>
 <p>DuckDB s’intègre parfaitement avec Pandas !</p>
 <div id="cell-37" class="cell">
 <details class="code-fold">
@@ -1327,12 +1359,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <hr>
 </section>
-<section id="exercices-pratiques" class="level2" data-number="16">
-<h2 data-number="16" class="anchored" data-anchor-id="exercices-pratiques"><span class="header-section-number">16</span> 🎯 10. Exercices pratiques</h2>
+<section id="exercices-pratiques" class="level2">
+<h2 class="anchored" data-anchor-id="exercices-pratiques">🎯 10. Exercices pratiques</h2>
 <p>Essaie de résoudre ces exercices dans les cellules de code ci-dessous !</p>
 <hr>
-<section id="exercice-1-facile" class="level3" data-number="16.1">
-<h3 data-number="16.1" class="anchored" data-anchor-id="exercice-1-facile"><span class="header-section-number">16.1</span> 🏋️ Exercice 1 — Facile</h3>
+<section id="exercice-1-facile" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-1-facile">🏋️ Exercice 1 — Facile</h3>
 <p>Afficher tous les clients de France, triés par nom.</p>
 <details>
 <summary>
@@ -1342,8 +1374,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 <hr>
 </section>
-<section id="exercice-2-facile" class="level3" data-number="16.2">
-<h3 data-number="16.2" class="anchored" data-anchor-id="exercice-2-facile"><span class="header-section-number">16.2</span> 🏋️ Exercice 2 — Facile</h3>
+<section id="exercice-2-facile" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-2-facile">🏋️ Exercice 2 — Facile</h3>
 <p>Calculer le montant moyen des commandes.</p>
 <details>
 <summary>
@@ -1353,8 +1385,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 <hr>
 </section>
-<section id="exercice-3-intermédiaire" class="level3" data-number="16.3">
-<h3 data-number="16.3" class="anchored" data-anchor-id="exercice-3-intermédiaire"><span class="header-section-number">16.3</span> 🏋️ Exercice 3 — Intermédiaire</h3>
+<section id="exercice-3-intermédiaire" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-3-intermédiaire">🏋️ Exercice 3 — Intermédiaire</h3>
 <p>Afficher le total des achats par client, y compris ceux sans commande (afficher 0).</p>
 <details>
 <summary>
@@ -1368,8 +1400,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 <hr>
 </section>
-<section id="exercice-4-intermédiaire" class="level3" data-number="16.4">
-<h3 data-number="16.4" class="anchored" data-anchor-id="exercice-4-intermédiaire"><span class="header-section-number">16.4</span> 🏋️ Exercice 4 — Intermédiaire</h3>
+<section id="exercice-4-intermédiaire" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-4-intermédiaire">🏋️ Exercice 4 — Intermédiaire</h3>
 <p>Calculer les ventes par mois avec <code>DATE_TRUNC</code>.</p>
 <details>
 <summary>
@@ -1382,8 +1414,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 <hr>
 </section>
-<section id="exercice-5-avancé" class="level3" data-number="16.5">
-<h3 data-number="16.5" class="anchored" data-anchor-id="exercice-5-avancé"><span class="header-section-number">16.5</span> 🏋️ Exercice 5 — Avancé</h3>
+<section id="exercice-5-avancé" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-5-avancé">🏋️ Exercice 5 — Avancé</h3>
 <p>Pour chaque client, afficher sa dernière commande (produit et date). <em>Indice : ROW_NUMBER()</em></p>
 <details>
 <summary>
@@ -1411,11 +1443,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 </section>
-<section id="quiz" class="level2" data-number="17">
-<h2 data-number="17" class="anchored" data-anchor-id="quiz"><span class="header-section-number">17</span> 🧠 Quiz</h2>
+<section id="quiz" class="level2">
+<h2 class="anchored" data-anchor-id="quiz">🧠 Quiz</h2>
 <hr>
-<section id="q1.-quelle-commande-affiche-toutes-les-colonnes-dune-table-clients" class="level3" data-number="17.1">
-<h3 data-number="17.1" class="anchored" data-anchor-id="q1.-quelle-commande-affiche-toutes-les-colonnes-dune-table-clients"><span class="header-section-number">17.1</span> ❓ Q1. Quelle commande affiche toutes les colonnes d’une table <code>clients</code> ?</h3>
+<section id="q1.-quelle-commande-affiche-toutes-les-colonnes-dune-table-clients" class="level3">
+<h3 class="anchored" data-anchor-id="q1.-quelle-commande-affiche-toutes-les-colonnes-dune-table-clients">❓ Q1. Quelle commande affiche toutes les colonnes d’une table <code>clients</code> ?</h3>
 <ol type="a">
 <li><code>SHOW * FROM clients;</code><br>
 </li>
@@ -1433,8 +1465,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 <hr>
 </section>
-<section id="q2.-quelle-est-la-différence-entre-where-et-having" class="level3" data-number="17.2">
-<h3 data-number="17.2" class="anchored" data-anchor-id="q2.-quelle-est-la-différence-entre-where-et-having"><span class="header-section-number">17.2</span> ❓ Q2. Quelle est la différence entre <code>WHERE</code> et <code>HAVING</code> ?</h3>
+<section id="q2.-quelle-est-la-différence-entre-where-et-having" class="level3">
+<h3 class="anchored" data-anchor-id="q2.-quelle-est-la-différence-entre-where-et-having">❓ Q2. Quelle est la différence entre <code>WHERE</code> et <code>HAVING</code> ?</h3>
 <ol type="a">
 <li>Aucune différence<br>
 </li>
@@ -1452,8 +1484,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 <hr>
 </section>
-<section id="q3.-quel-join-retourne-uniquement-les-lignes-qui-ont-une-correspondance" class="level3" data-number="17.3">
-<h3 data-number="17.3" class="anchored" data-anchor-id="q3.-quel-join-retourne-uniquement-les-lignes-qui-ont-une-correspondance"><span class="header-section-number">17.3</span> ❓ Q3. Quel JOIN retourne UNIQUEMENT les lignes qui ont une correspondance ?</h3>
+<section id="q3.-quel-join-retourne-uniquement-les-lignes-qui-ont-une-correspondance" class="level3">
+<h3 class="anchored" data-anchor-id="q3.-quel-join-retourne-uniquement-les-lignes-qui-ont-une-correspondance">❓ Q3. Quel JOIN retourne UNIQUEMENT les lignes qui ont une correspondance ?</h3>
 <ol type="a">
 <li><code>LEFT JOIN</code><br>
 </li>
@@ -1471,8 +1503,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 <hr>
 </section>
-<section id="q4.-à-quoi-sert-une-cte-with" class="level3" data-number="17.4">
-<h3 data-number="17.4" class="anchored" data-anchor-id="q4.-à-quoi-sert-une-cte-with"><span class="header-section-number">17.4</span> ❓ Q4. À quoi sert une CTE (<code>WITH</code>) ?</h3>
+<section id="q4.-à-quoi-sert-une-cte-with" class="level3">
+<h3 class="anchored" data-anchor-id="q4.-à-quoi-sert-une-cte-with">❓ Q4. À quoi sert une CTE (<code>WITH</code>) ?</h3>
 <ol type="a">
 <li>Créer une table permanente<br>
 </li>
@@ -1490,8 +1522,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 <hr>
 </section>
-<section id="q5.-quelle-window-function-permet-de-classer-les-lignes" class="level3" data-number="17.5">
-<h3 data-number="17.5" class="anchored" data-anchor-id="q5.-quelle-window-function-permet-de-classer-les-lignes"><span class="header-section-number">17.5</span> ❓ Q5. Quelle Window Function permet de classer les lignes ?</h3>
+<section id="q5.-quelle-window-function-permet-de-classer-les-lignes" class="level3">
+<h3 class="anchored" data-anchor-id="q5.-quelle-window-function-permet-de-classer-les-lignes">❓ Q5. Quelle Window Function permet de classer les lignes ?</h3>
 <ol type="a">
 <li><code>COUNT()</code><br>
 </li>
@@ -1509,8 +1541,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 <hr>
 </section>
-<section id="q6.-quel-avantage-de-duckdb-pour-un-data-engineer" class="level3" data-number="17.6">
-<h3 data-number="17.6" class="anchored" data-anchor-id="q6.-quel-avantage-de-duckdb-pour-un-data-engineer"><span class="header-section-number">17.6</span> ❓ Q6. Quel avantage de DuckDB pour un Data Engineer ?</h3>
+<section id="q6.-quel-avantage-de-duckdb-pour-un-data-engineer" class="level3">
+<h3 class="anchored" data-anchor-id="q6.-quel-avantage-de-duckdb-pour-un-data-engineer">❓ Q6. Quel avantage de DuckDB pour un Data Engineer ?</h3>
 <ol type="a">
 <li>Il nécessite un serveur<br>
 </li>
@@ -1529,10 +1561,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 </section>
-<section id="ressources" class="level2" data-number="18">
-<h2 data-number="18" class="anchored" data-anchor-id="ressources"><span class="header-section-number">18</span> 📚 Ressources</h2>
-<section id="pratiquer-sql-en-ligne" class="level3" data-number="18.1">
-<h3 data-number="18.1" class="anchored" data-anchor-id="pratiquer-sql-en-ligne"><span class="header-section-number">18.1</span> 🎮 Pratiquer SQL en ligne</h3>
+<section id="ressources" class="level2">
+<h2 class="anchored" data-anchor-id="ressources">📚 Ressources</h2>
+<section id="pratiquer-sql-en-ligne" class="level3">
+<h3 class="anchored" data-anchor-id="pratiquer-sql-en-ligne">🎮 Pratiquer SQL en ligne</h3>
 <ul>
 <li><a href="https://sqlbolt.com/">SQLBolt</a> — Tutoriel interactif</li>
 <li><a href="https://mode.com/sql-tutorial/">Mode SQL Tutorial</a> — Cas business réels</li>
@@ -1540,15 +1572,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><a href="https://www.hackerrank.com/domains/sql">HackerRank SQL</a> — Exercices variés</li>
 </ul>
 </section>
-<section id="duckdb" class="level3" data-number="18.2">
-<h3 data-number="18.2" class="anchored" data-anchor-id="duckdb"><span class="header-section-number">18.2</span> 🦆 DuckDB</h3>
+<section id="duckdb" class="level3">
+<h3 class="anchored" data-anchor-id="duckdb">🦆 DuckDB</h3>
 <ul>
 <li><a href="https://duckdb.org/docs/">DuckDB Documentation</a></li>
 <li><a href="https://duckdb.org/docs/sql/introduction">DuckDB SQL Reference</a></li>
 </ul>
 </section>
-<section id="documentation-sql" class="level3" data-number="18.3">
-<h3 data-number="18.3" class="anchored" data-anchor-id="documentation-sql"><span class="header-section-number">18.3</span> 📖 Documentation SQL</h3>
+<section id="documentation-sql" class="level3">
+<h3 class="anchored" data-anchor-id="documentation-sql">📖 Documentation SQL</h3>
 <ul>
 <li><a href="https://www.postgresql.org/docs/current/sql.html">PostgreSQL Documentation</a></li>
 <li><a href="https://www.w3schools.com/sql/">W3Schools SQL</a></li>
@@ -1556,8 +1588,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 </section>
-<section id="prochaine-étape" class="level2" data-number="19">
-<h2 data-number="19" class="anchored" data-anchor-id="prochaine-étape"><span class="header-section-number">19</span> ➡️ Prochaine étape</h2>
+<section id="prochaine-étape" class="level2">
+<h2 class="anchored" data-anchor-id="prochaine-étape">➡️ Prochaine étape</h2>
 <p>Tu maîtrises maintenant SQL et sais l’exécuter depuis Python ! Découvrons les concepts du <strong>Big Data</strong> et les bases <strong>NoSQL</strong>.</p>
 <p>👉 <strong>Module suivant : <code>08_intro_big_data_nosql.ipynb</code></strong> — Big Data, traitement distribué et NoSQL</p>
 <hr>

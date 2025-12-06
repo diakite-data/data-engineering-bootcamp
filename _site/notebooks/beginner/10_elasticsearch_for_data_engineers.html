@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>🔍 Elasticsearch for Data Engineers – Bootcamp Data Engineering</title>
+<title>🔍 Elasticsearch for Data Engineers – Bootcamp Data Engineering – From Zero to Hero</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -110,6 +110,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <style>html{ scroll-behavior: smooth; }</style>
 
 
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -282,7 +283,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">Bootcamp Data Engineering</span>
+    <span class="navbar-title">Bootcamp Data Engineering – From Zero to Hero</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -293,11 +294,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/diakite-data/data-engineering-bootcamp"> <i class="bi bi-github" role="img">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="../../#"> <i class="bi bi-lightbulb" role="img" aria-label="Mode clair/sombre">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -313,7 +309,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">🔍 Elasticsearch for Data Engineers</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notebooks/beginner/01_intro_data_engineering.html">Débutant</a></li><li class="breadcrumb-item"><a href="../../notebooks/beginner/10_elasticsearch_for_data_engineers.html">🔍 Elasticsearch for Data Engineers</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -380,8 +376,44 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notebooks/beginner/06_intro_databases.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">🧠 Introduction aux bases de données pour Data Engineers</span></a>
+  <a href="../../notebooks/beginner/06_intro_relational_databases.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🗄️ Introduction aux Bases de Données Relationnelles</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/07_sql_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🐘 SQL for Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/08_intro_big_data_distributed.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🐘 Introduction au Big Data &amp; Traitement Distribué</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/09_mongodb_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🍃 MongoDB for Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/10_elasticsearch_for_data_engineers.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">🔍 Elasticsearch for Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/11_pyspark_for_data_engineering.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">⚡ PySpark for Data Engineering</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/12_orchestration_pipelines.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">⏰ Orchestration de Pipelines Data</span></a>
   </div>
 </li>
       </ul>
@@ -396,101 +428,101 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#prérequis" id="toc-prérequis" class="nav-link active" data-scroll-target="#prérequis"><span class="header-section-number">1</span> 📋 Prérequis</a></li>
-  <li><a href="#objectifs-du-module" id="toc-objectifs-du-module" class="nav-link" data-scroll-target="#objectifs-du-module"><span class="header-section-number">2</span> 🎯 Objectifs du module</a></li>
-  <li><a href="#version-elasticsearch" id="toc-version-elasticsearch" class="nav-link" data-scroll-target="#version-elasticsearch"><span class="header-section-number">3</span> ⚠️ Version Elasticsearch</a></li>
-  <li><a href="#elasticsearch-dans-lécosystème-big-data" id="toc-elasticsearch-dans-lécosystème-big-data" class="nav-link" data-scroll-target="#elasticsearch-dans-lécosystème-big-data"><span class="header-section-number">4</span> 🎯 Elasticsearch dans l’écosystème Big Data</a>
+  <li><a href="#prérequis" id="toc-prérequis" class="nav-link active" data-scroll-target="#prérequis">📋 Prérequis</a></li>
+  <li><a href="#objectifs-du-module" id="toc-objectifs-du-module" class="nav-link" data-scroll-target="#objectifs-du-module">🎯 Objectifs du module</a></li>
+  <li><a href="#version-elasticsearch" id="toc-version-elasticsearch" class="nav-link" data-scroll-target="#version-elasticsearch">⚠️ Version Elasticsearch</a></li>
+  <li><a href="#elasticsearch-dans-lécosystème-big-data" id="toc-elasticsearch-dans-lécosystème-big-data" class="nav-link" data-scroll-target="#elasticsearch-dans-lécosystème-big-data">🎯 Elasticsearch dans l’écosystème Big Data</a>
   <ul class="collapse">
-  <li><a href="#position-dans-les-types-nosql" id="toc-position-dans-les-types-nosql" class="nav-link" data-scroll-target="#position-dans-les-types-nosql"><span class="header-section-number">4.1</span> Position dans les types NoSQL</a></li>
-  <li><a href="#rappel-les-5v" id="toc-rappel-les-5v" class="nav-link" data-scroll-target="#rappel-les-5v"><span class="header-section-number">4.2</span> Rappel : Les 5V</a></li>
-  <li><a href="#rappel-cap-base" id="toc-rappel-cap-base" class="nav-link" data-scroll-target="#rappel-cap-base"><span class="header-section-number">4.3</span> Rappel : CAP &amp; BASE</a></li>
+  <li><a href="#position-dans-les-types-nosql" id="toc-position-dans-les-types-nosql" class="nav-link" data-scroll-target="#position-dans-les-types-nosql">Position dans les types NoSQL</a></li>
+  <li><a href="#rappel-les-5v" id="toc-rappel-les-5v" class="nav-link" data-scroll-target="#rappel-les-5v">Rappel : Les 5V</a></li>
+  <li><a href="#rappel-cap-base" id="toc-rappel-cap-base" class="nav-link" data-scroll-target="#rappel-cap-base">Rappel : CAP &amp; BASE</a></li>
   </ul></li>
-  <li><a href="#pourquoi-elasticsearch-en-data-engineering" id="toc-pourquoi-elasticsearch-en-data-engineering" class="nav-link" data-scroll-target="#pourquoi-elasticsearch-en-data-engineering"><span class="header-section-number">5</span> 🎯 Pourquoi Elasticsearch en Data Engineering ?</a></li>
-  <li><a href="#concepts-fondamentaux" id="toc-concepts-fondamentaux" class="nav-link" data-scroll-target="#concepts-fondamentaux"><span class="header-section-number">6</span> 📚 1. Concepts fondamentaux</a>
+  <li><a href="#pourquoi-elasticsearch-en-data-engineering" id="toc-pourquoi-elasticsearch-en-data-engineering" class="nav-link" data-scroll-target="#pourquoi-elasticsearch-en-data-engineering">🎯 Pourquoi Elasticsearch en Data Engineering ?</a></li>
+  <li><a href="#concepts-fondamentaux" id="toc-concepts-fondamentaux" class="nav-link" data-scroll-target="#concepts-fondamentaux">📚 1. Concepts fondamentaux</a>
   <ul class="collapse">
-  <li><a href="#vocabulaire" id="toc-vocabulaire" class="nav-link" data-scroll-target="#vocabulaire"><span class="header-section-number">6.1</span> 📖 Vocabulaire</a></li>
-  <li><a href="#shards-replicas" id="toc-shards-replicas" class="nav-link" data-scroll-target="#shards-replicas"><span class="header-section-number">6.2</span> 🧱 Shards &amp; Replicas</a></li>
-  <li><a href="#état-du-cluster" id="toc-état-du-cluster" class="nav-link" data-scroll-target="#état-du-cluster"><span class="header-section-number">6.3</span> 📊 État du cluster</a></li>
+  <li><a href="#vocabulaire" id="toc-vocabulaire" class="nav-link" data-scroll-target="#vocabulaire">📖 Vocabulaire</a></li>
+  <li><a href="#shards-replicas" id="toc-shards-replicas" class="nav-link" data-scroll-target="#shards-replicas">🧱 Shards &amp; Replicas</a></li>
+  <li><a href="#état-du-cluster" id="toc-état-du-cluster" class="nav-link" data-scroll-target="#état-du-cluster">📊 État du cluster</a></li>
   </ul></li>
-  <li><a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation"><span class="header-section-number">7</span> ⚙️ 2. Installation</a>
+  <li><a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation">⚙️ 2. Installation</a>
   <ul class="collapse">
-  <li><a href="#étape-1-télécharger-elasticsearch" id="toc-étape-1-télécharger-elasticsearch" class="nav-link" data-scroll-target="#étape-1-télécharger-elasticsearch"><span class="header-section-number">7.1</span> 📦 Étape 1 : Télécharger Elasticsearch</a></li>
-  <li><a href="#étape-2-installer-elasticvue" id="toc-étape-2-installer-elasticvue" class="nav-link" data-scroll-target="#étape-2-installer-elasticvue"><span class="header-section-number">7.2</span> 🧭 Étape 2 : Installer Elasticvue</a></li>
+  <li><a href="#étape-1-télécharger-elasticsearch" id="toc-étape-1-télécharger-elasticsearch" class="nav-link" data-scroll-target="#étape-1-télécharger-elasticsearch">📦 Étape 1 : Télécharger Elasticsearch</a></li>
+  <li><a href="#étape-2-installer-elasticvue" id="toc-étape-2-installer-elasticvue" class="nav-link" data-scroll-target="#étape-2-installer-elasticvue">🧭 Étape 2 : Installer Elasticvue</a></li>
   </ul></li>
-  <li><a href="#guide-elasticvue-prise-en-main" id="toc-guide-elasticvue-prise-en-main" class="nav-link" data-scroll-target="#guide-elasticvue-prise-en-main"><span class="header-section-number">8</span> 🧭 3. Guide Elasticvue — Prise en main</a>
+  <li><a href="#guide-elasticvue-prise-en-main" id="toc-guide-elasticvue-prise-en-main" class="nav-link" data-scroll-target="#guide-elasticvue-prise-en-main">🧭 3. Guide Elasticvue — Prise en main</a>
   <ul class="collapse">
-  <li><a href="#connexion-au-cluster" id="toc-connexion-au-cluster" class="nav-link" data-scroll-target="#connexion-au-cluster"><span class="header-section-number">8.1</span> 🔌 3.1 Connexion au cluster</a></li>
-  <li><a href="#interface-principale" id="toc-interface-principale" class="nav-link" data-scroll-target="#interface-principale"><span class="header-section-number">8.2</span> 🗂️ 3.2 Interface principale</a></li>
-  <li><a href="#onglets-importants" id="toc-onglets-importants" class="nav-link" data-scroll-target="#onglets-importants"><span class="header-section-number">8.3</span> 📍 Onglets importants :</a></li>
-  <li><a href="#utiliser-la-console-rest" id="toc-utiliser-la-console-rest" class="nav-link" data-scroll-target="#utiliser-la-console-rest"><span class="header-section-number">8.4</span> 📝 3.3 Utiliser la console REST</a></li>
+  <li><a href="#connexion-au-cluster" id="toc-connexion-au-cluster" class="nav-link" data-scroll-target="#connexion-au-cluster">🔌 3.1 Connexion au cluster</a></li>
+  <li><a href="#interface-principale" id="toc-interface-principale" class="nav-link" data-scroll-target="#interface-principale">🗂️ 3.2 Interface principale</a></li>
+  <li><a href="#onglets-importants" id="toc-onglets-importants" class="nav-link" data-scroll-target="#onglets-importants">📍 Onglets importants :</a></li>
+  <li><a href="#utiliser-la-console-rest" id="toc-utiliser-la-console-rest" class="nav-link" data-scroll-target="#utiliser-la-console-rest">📝 3.3 Utiliser la console REST</a></li>
   </ul></li>
-  <li><a href="#créer-un-index-et-insérer-des-données" id="toc-créer-un-index-et-insérer-des-données" class="nav-link" data-scroll-target="#créer-un-index-et-insérer-des-données"><span class="header-section-number">9</span> 🛠️ 4. Créer un index et insérer des données</a>
+  <li><a href="#créer-un-index-et-insérer-des-données" id="toc-créer-un-index-et-insérer-des-données" class="nav-link" data-scroll-target="#créer-un-index-et-insérer-des-données">🛠️ 4. Créer un index et insérer des données</a>
   <ul class="collapse">
-  <li><a href="#créer-lindex-clients" id="toc-créer-lindex-clients" class="nav-link" data-scroll-target="#créer-lindex-clients"><span class="header-section-number">9.1</span> 📌 4.1 Créer l’index <code>clients</code></a></li>
-  <li><a href="#comprendre-le-mapping" id="toc-comprendre-le-mapping" class="nav-link" data-scroll-target="#comprendre-le-mapping"><span class="header-section-number">9.2</span> 📐 4.2 Comprendre le mapping</a></li>
+  <li><a href="#créer-lindex-clients" id="toc-créer-lindex-clients" class="nav-link" data-scroll-target="#créer-lindex-clients">📌 4.1 Créer l’index <code>clients</code></a></li>
+  <li><a href="#comprendre-le-mapping" id="toc-comprendre-le-mapping" class="nav-link" data-scroll-target="#comprendre-le-mapping">📐 4.2 Comprendre le mapping</a></li>
   </ul></li>
-  <li><a href="#index-templates-automatiser-les-mappings" id="toc-index-templates-automatiser-les-mappings" class="nav-link" data-scroll-target="#index-templates-automatiser-les-mappings"><span class="header-section-number">10</span> 📋 Index Templates — Automatiser les mappings</a>
+  <li><a href="#index-templates-automatiser-les-mappings" id="toc-index-templates-automatiser-les-mappings" class="nav-link" data-scroll-target="#index-templates-automatiser-les-mappings">📋 Index Templates — Automatiser les mappings</a>
   <ul class="collapse">
-  <li><a href="#pourquoi-utiliser-des-templates" id="toc-pourquoi-utiliser-des-templates" class="nav-link" data-scroll-target="#pourquoi-utiliser-des-templates"><span class="header-section-number">10.1</span> 🤔 Pourquoi utiliser des templates ?</a></li>
-  <li><a href="#créer-un-index-template" id="toc-créer-un-index-template" class="nav-link" data-scroll-target="#créer-un-index-template"><span class="header-section-number">10.2</span> 📌 Créer un Index Template</a></li>
-  <li><a href="#tester-le-template" id="toc-tester-le-template" class="nav-link" data-scroll-target="#tester-le-template"><span class="header-section-number">10.3</span> 🧪 Tester le template</a></li>
-  <li><a href="#lister-les-templates-existants" id="toc-lister-les-templates-existants" class="nav-link" data-scroll-target="#lister-les-templates-existants"><span class="header-section-number">10.4</span> 📋 Lister les templates existants</a></li>
-  <li><a href="#supprimer-un-template" id="toc-supprimer-un-template" class="nav-link" data-scroll-target="#supprimer-un-template"><span class="header-section-number">10.5</span> 🗑️ Supprimer un template</a></li>
-  <li><a href="#bonnes-pratiques-index-templates" id="toc-bonnes-pratiques-index-templates" class="nav-link" data-scroll-target="#bonnes-pratiques-index-templates"><span class="header-section-number">10.6</span> 💡 Bonnes pratiques Index Templates</a></li>
-  <li><a href="#insérer-un-document" id="toc-insérer-un-document" class="nav-link" data-scroll-target="#insérer-un-document"><span class="header-section-number">10.7</span> 📝 4.3 Insérer un document</a></li>
-  <li><a href="#insérer-plusieurs-documents-bulk" id="toc-insérer-plusieurs-documents-bulk" class="nav-link" data-scroll-target="#insérer-plusieurs-documents-bulk"><span class="header-section-number">10.8</span> 📝 4.4 Insérer plusieurs documents (Bulk)</a></li>
+  <li><a href="#pourquoi-utiliser-des-templates" id="toc-pourquoi-utiliser-des-templates" class="nav-link" data-scroll-target="#pourquoi-utiliser-des-templates">🤔 Pourquoi utiliser des templates ?</a></li>
+  <li><a href="#créer-un-index-template" id="toc-créer-un-index-template" class="nav-link" data-scroll-target="#créer-un-index-template">📌 Créer un Index Template</a></li>
+  <li><a href="#tester-le-template" id="toc-tester-le-template" class="nav-link" data-scroll-target="#tester-le-template">🧪 Tester le template</a></li>
+  <li><a href="#lister-les-templates-existants" id="toc-lister-les-templates-existants" class="nav-link" data-scroll-target="#lister-les-templates-existants">📋 Lister les templates existants</a></li>
+  <li><a href="#supprimer-un-template" id="toc-supprimer-un-template" class="nav-link" data-scroll-target="#supprimer-un-template">🗑️ Supprimer un template</a></li>
+  <li><a href="#bonnes-pratiques-index-templates" id="toc-bonnes-pratiques-index-templates" class="nav-link" data-scroll-target="#bonnes-pratiques-index-templates">💡 Bonnes pratiques Index Templates</a></li>
+  <li><a href="#insérer-un-document" id="toc-insérer-un-document" class="nav-link" data-scroll-target="#insérer-un-document">📝 4.3 Insérer un document</a></li>
+  <li><a href="#insérer-plusieurs-documents-bulk" id="toc-insérer-plusieurs-documents-bulk" class="nav-link" data-scroll-target="#insérer-plusieurs-documents-bulk">📝 4.4 Insérer plusieurs documents (Bulk)</a></li>
   </ul></li>
-  <li><a href="#requêtes-de-recherche" id="toc-requêtes-de-recherche" class="nav-link" data-scroll-target="#requêtes-de-recherche"><span class="header-section-number">11</span> 🔍 5. Requêtes de recherche</a>
+  <li><a href="#requêtes-de-recherche" id="toc-requêtes-de-recherche" class="nav-link" data-scroll-target="#requêtes-de-recherche">🔍 5. Requêtes de recherche</a>
   <ul class="collapse">
-  <li><a href="#afficher-tous-les-documents" id="toc-afficher-tous-les-documents" class="nav-link" data-scroll-target="#afficher-tous-les-documents"><span class="header-section-number">11.1</span> 📌 5.1 Afficher tous les documents</a></li>
-  <li><a href="#filtrer-avec-match-full-text" id="toc-filtrer-avec-match-full-text" class="nav-link" data-scroll-target="#filtrer-avec-match-full-text"><span class="header-section-number">11.2</span> 📌 5.2 Filtrer avec <code>match</code> (full-text)</a></li>
-  <li><a href="#filtrer-avec-term-exact-match" id="toc-filtrer-avec-term-exact-match" class="nav-link" data-scroll-target="#filtrer-avec-term-exact-match"><span class="header-section-number">11.3</span> 📌 5.3 Filtrer avec <code>term</code> (exact match)</a></li>
-  <li><a href="#filtrer-par-plage-de-valeurs-range" id="toc-filtrer-par-plage-de-valeurs-range" class="nav-link" data-scroll-target="#filtrer-par-plage-de-valeurs-range"><span class="header-section-number">11.4</span> 📌 5.4 Filtrer par plage de valeurs (<code>range</code>)</a></li>
-  <li><a href="#conditions-multiples-bool" id="toc-conditions-multiples-bool" class="nav-link" data-scroll-target="#conditions-multiples-bool"><span class="header-section-number">11.5</span> 📌 5.5 Conditions multiples (<code>bool</code>)</a></li>
-  <li><a href="#recherche-floue-fuzzy" id="toc-recherche-floue-fuzzy" class="nav-link" data-scroll-target="#recherche-floue-fuzzy"><span class="header-section-number">11.6</span> 📌 5.6 Recherche floue (<code>fuzzy</code>)</a></li>
-  <li><a href="#trier-et-limiter-les-résultats" id="toc-trier-et-limiter-les-résultats" class="nav-link" data-scroll-target="#trier-et-limiter-les-résultats"><span class="header-section-number">11.7</span> 📌 5.7 Trier et limiter les résultats</a></li>
+  <li><a href="#afficher-tous-les-documents" id="toc-afficher-tous-les-documents" class="nav-link" data-scroll-target="#afficher-tous-les-documents">📌 5.1 Afficher tous les documents</a></li>
+  <li><a href="#filtrer-avec-match-full-text" id="toc-filtrer-avec-match-full-text" class="nav-link" data-scroll-target="#filtrer-avec-match-full-text">📌 5.2 Filtrer avec <code>match</code> (full-text)</a></li>
+  <li><a href="#filtrer-avec-term-exact-match" id="toc-filtrer-avec-term-exact-match" class="nav-link" data-scroll-target="#filtrer-avec-term-exact-match">📌 5.3 Filtrer avec <code>term</code> (exact match)</a></li>
+  <li><a href="#filtrer-par-plage-de-valeurs-range" id="toc-filtrer-par-plage-de-valeurs-range" class="nav-link" data-scroll-target="#filtrer-par-plage-de-valeurs-range">📌 5.4 Filtrer par plage de valeurs (<code>range</code>)</a></li>
+  <li><a href="#conditions-multiples-bool" id="toc-conditions-multiples-bool" class="nav-link" data-scroll-target="#conditions-multiples-bool">📌 5.5 Conditions multiples (<code>bool</code>)</a></li>
+  <li><a href="#recherche-floue-fuzzy" id="toc-recherche-floue-fuzzy" class="nav-link" data-scroll-target="#recherche-floue-fuzzy">📌 5.6 Recherche floue (<code>fuzzy</code>)</a></li>
+  <li><a href="#trier-et-limiter-les-résultats" id="toc-trier-et-limiter-les-résultats" class="nav-link" data-scroll-target="#trier-et-limiter-les-résultats">📌 5.7 Trier et limiter les résultats</a></li>
   </ul></li>
-  <li><a href="#agrégations-group-by" id="toc-agrégations-group-by" class="nav-link" data-scroll-target="#agrégations-group-by"><span class="header-section-number">12</span> 📊 6. Agrégations (GROUP BY)</a>
+  <li><a href="#agrégations-group-by" id="toc-agrégations-group-by" class="nav-link" data-scroll-target="#agrégations-group-by">📊 6. Agrégations (GROUP BY)</a>
   <ul class="collapse">
-  <li><a href="#compter-par-catégorie-terms" id="toc-compter-par-catégorie-terms" class="nav-link" data-scroll-target="#compter-par-catégorie-terms"><span class="header-section-number">12.1</span> 📌 6.1 Compter par catégorie (<code>terms</code>)</a></li>
-  <li><a href="#métriques-sum-avg-min-max" id="toc-métriques-sum-avg-min-max" class="nav-link" data-scroll-target="#métriques-sum-avg-min-max"><span class="header-section-number">12.2</span> 📌 6.2 Métriques (sum, avg, min, max)</a></li>
-  <li><a href="#stats-complètes-en-une-requête" id="toc-stats-complètes-en-une-requête" class="nav-link" data-scroll-target="#stats-complètes-en-une-requête"><span class="header-section-number">12.3</span> 📌 6.3 Stats complètes en une requête</a></li>
-  <li><a href="#agrégations-imbriquées-group-by-métriques" id="toc-agrégations-imbriquées-group-by-métriques" class="nav-link" data-scroll-target="#agrégations-imbriquées-group-by-métriques"><span class="header-section-number">12.4</span> 📌 6.4 Agrégations imbriquées (GROUP BY + métriques)</a></li>
-  <li><a href="#filtrer-avant-dagréger" id="toc-filtrer-avant-dagréger" class="nav-link" data-scroll-target="#filtrer-avant-dagréger"><span class="header-section-number">12.5</span> 📌 6.5 Filtrer avant d’agréger</a></li>
+  <li><a href="#compter-par-catégorie-terms" id="toc-compter-par-catégorie-terms" class="nav-link" data-scroll-target="#compter-par-catégorie-terms">📌 6.1 Compter par catégorie (<code>terms</code>)</a></li>
+  <li><a href="#métriques-sum-avg-min-max" id="toc-métriques-sum-avg-min-max" class="nav-link" data-scroll-target="#métriques-sum-avg-min-max">📌 6.2 Métriques (sum, avg, min, max)</a></li>
+  <li><a href="#stats-complètes-en-une-requête" id="toc-stats-complètes-en-une-requête" class="nav-link" data-scroll-target="#stats-complètes-en-une-requête">📌 6.3 Stats complètes en une requête</a></li>
+  <li><a href="#agrégations-imbriquées-group-by-métriques" id="toc-agrégations-imbriquées-group-by-métriques" class="nav-link" data-scroll-target="#agrégations-imbriquées-group-by-métriques">📌 6.4 Agrégations imbriquées (GROUP BY + métriques)</a></li>
+  <li><a href="#filtrer-avant-dagréger" id="toc-filtrer-avant-dagréger" class="nav-link" data-scroll-target="#filtrer-avant-dagréger">📌 6.5 Filtrer avant d’agréger</a></li>
   </ul></li>
-  <li><a href="#modifier-et-supprimer" id="toc-modifier-et-supprimer" class="nav-link" data-scroll-target="#modifier-et-supprimer"><span class="header-section-number">13</span> ✏️ 7. Modifier et supprimer</a>
+  <li><a href="#modifier-et-supprimer" id="toc-modifier-et-supprimer" class="nav-link" data-scroll-target="#modifier-et-supprimer">✏️ 7. Modifier et supprimer</a>
   <ul class="collapse">
-  <li><a href="#mettre-à-jour-un-document-par-id" id="toc-mettre-à-jour-un-document-par-id" class="nav-link" data-scroll-target="#mettre-à-jour-un-document-par-id"><span class="header-section-number">13.1</span> 📌 7.1 Mettre à jour un document (par ID)</a></li>
-  <li><a href="#mettre-à-jour-par-requête" id="toc-mettre-à-jour-par-requête" class="nav-link" data-scroll-target="#mettre-à-jour-par-requête"><span class="header-section-number">13.2</span> 📌 7.2 Mettre à jour par requête</a></li>
-  <li><a href="#supprimer-un-document-par-id" id="toc-supprimer-un-document-par-id" class="nav-link" data-scroll-target="#supprimer-un-document-par-id"><span class="header-section-number">13.3</span> 📌 7.3 Supprimer un document (par ID)</a></li>
-  <li><a href="#supprimer-par-requête" id="toc-supprimer-par-requête" class="nav-link" data-scroll-target="#supprimer-par-requête"><span class="header-section-number">13.4</span> 📌 7.4 Supprimer par requête</a></li>
-  <li><a href="#supprimer-un-index-entier" id="toc-supprimer-un-index-entier" class="nav-link" data-scroll-target="#supprimer-un-index-entier"><span class="header-section-number">13.5</span> 📌 7.5 Supprimer un index entier</a></li>
+  <li><a href="#mettre-à-jour-un-document-par-id" id="toc-mettre-à-jour-un-document-par-id" class="nav-link" data-scroll-target="#mettre-à-jour-un-document-par-id">📌 7.1 Mettre à jour un document (par ID)</a></li>
+  <li><a href="#mettre-à-jour-par-requête" id="toc-mettre-à-jour-par-requête" class="nav-link" data-scroll-target="#mettre-à-jour-par-requête">📌 7.2 Mettre à jour par requête</a></li>
+  <li><a href="#supprimer-un-document-par-id" id="toc-supprimer-un-document-par-id" class="nav-link" data-scroll-target="#supprimer-un-document-par-id">📌 7.3 Supprimer un document (par ID)</a></li>
+  <li><a href="#supprimer-par-requête" id="toc-supprimer-par-requête" class="nav-link" data-scroll-target="#supprimer-par-requête">📌 7.4 Supprimer par requête</a></li>
+  <li><a href="#supprimer-un-index-entier" id="toc-supprimer-un-index-entier" class="nav-link" data-scroll-target="#supprimer-un-index-entier">📌 7.5 Supprimer un index entier</a></li>
   </ul></li>
-  <li><a href="#cheatsheet-elasticsearch" id="toc-cheatsheet-elasticsearch" class="nav-link" data-scroll-target="#cheatsheet-elasticsearch"><span class="header-section-number">14</span> 📋 Cheatsheet Elasticsearch</a>
+  <li><a href="#cheatsheet-elasticsearch" id="toc-cheatsheet-elasticsearch" class="nav-link" data-scroll-target="#cheatsheet-elasticsearch">📋 Cheatsheet Elasticsearch</a>
   <ul class="collapse">
-  <li><a href="#gestion-des-index" id="toc-gestion-des-index" class="nav-link" data-scroll-target="#gestion-des-index"><span class="header-section-number">14.1</span> 🔧 Gestion des index</a></li>
-  <li><a href="#crud-documents" id="toc-crud-documents" class="nav-link" data-scroll-target="#crud-documents"><span class="header-section-number">14.2</span> 📝 CRUD Documents</a></li>
-  <li><a href="#types-de-requêtes" id="toc-types-de-requêtes" class="nav-link" data-scroll-target="#types-de-requêtes"><span class="header-section-number">14.3</span> 🔍 Types de requêtes</a></li>
-  <li><a href="#agrégations" id="toc-agrégations" class="nav-link" data-scroll-target="#agrégations"><span class="header-section-number">14.4</span> 📊 Agrégations</a></li>
+  <li><a href="#gestion-des-index" id="toc-gestion-des-index" class="nav-link" data-scroll-target="#gestion-des-index">🔧 Gestion des index</a></li>
+  <li><a href="#crud-documents" id="toc-crud-documents" class="nav-link" data-scroll-target="#crud-documents">📝 CRUD Documents</a></li>
+  <li><a href="#types-de-requêtes" id="toc-types-de-requêtes" class="nav-link" data-scroll-target="#types-de-requêtes">🔍 Types de requêtes</a></li>
+  <li><a href="#agrégations" id="toc-agrégations" class="nav-link" data-scroll-target="#agrégations">📊 Agrégations</a></li>
   </ul></li>
-  <li><a href="#exercices-pratiques" id="toc-exercices-pratiques" class="nav-link" data-scroll-target="#exercices-pratiques"><span class="header-section-number">15</span> 🎯 Exercices pratiques</a>
+  <li><a href="#exercices-pratiques" id="toc-exercices-pratiques" class="nav-link" data-scroll-target="#exercices-pratiques">🎯 Exercices pratiques</a>
   <ul class="collapse">
-  <li><a href="#exercice-1-facile" id="toc-exercice-1-facile" class="nav-link" data-scroll-target="#exercice-1-facile"><span class="header-section-number">15.1</span> 🏋️ Exercice 1 — Facile</a></li>
-  <li><a href="#exercice-2-facile" id="toc-exercice-2-facile" class="nav-link" data-scroll-target="#exercice-2-facile"><span class="header-section-number">15.2</span> 🏋️ Exercice 2 — Facile</a></li>
-  <li><a href="#exercice-3-intermédiaire" id="toc-exercice-3-intermédiaire" class="nav-link" data-scroll-target="#exercice-3-intermédiaire"><span class="header-section-number">15.3</span> 🏋️ Exercice 3 — Intermédiaire</a></li>
-  <li><a href="#exercice-4-intermédiaire" id="toc-exercice-4-intermédiaire" class="nav-link" data-scroll-target="#exercice-4-intermédiaire"><span class="header-section-number">15.4</span> 🏋️ Exercice 4 — Intermédiaire</a></li>
-  <li><a href="#exercice-5-avancé" id="toc-exercice-5-avancé" class="nav-link" data-scroll-target="#exercice-5-avancé"><span class="header-section-number">15.5</span> 🏋️ Exercice 5 — Avancé</a></li>
+  <li><a href="#exercice-1-facile" id="toc-exercice-1-facile" class="nav-link" data-scroll-target="#exercice-1-facile">🏋️ Exercice 1 — Facile</a></li>
+  <li><a href="#exercice-2-facile" id="toc-exercice-2-facile" class="nav-link" data-scroll-target="#exercice-2-facile">🏋️ Exercice 2 — Facile</a></li>
+  <li><a href="#exercice-3-intermédiaire" id="toc-exercice-3-intermédiaire" class="nav-link" data-scroll-target="#exercice-3-intermédiaire">🏋️ Exercice 3 — Intermédiaire</a></li>
+  <li><a href="#exercice-4-intermédiaire" id="toc-exercice-4-intermédiaire" class="nav-link" data-scroll-target="#exercice-4-intermédiaire">🏋️ Exercice 4 — Intermédiaire</a></li>
+  <li><a href="#exercice-5-avancé" id="toc-exercice-5-avancé" class="nav-link" data-scroll-target="#exercice-5-avancé">🏋️ Exercice 5 — Avancé</a></li>
   </ul></li>
-  <li><a href="#quiz" id="toc-quiz" class="nav-link" data-scroll-target="#quiz"><span class="header-section-number">16</span> 🧠 Quiz</a>
+  <li><a href="#quiz" id="toc-quiz" class="nav-link" data-scroll-target="#quiz">🧠 Quiz</a>
   <ul class="collapse">
-  <li><a href="#q1.-quelle-requête-crée-un-index" id="toc-q1.-quelle-requête-crée-un-index" class="nav-link" data-scroll-target="#q1.-quelle-requête-crée-un-index"><span class="header-section-number">16.1</span> ❓ Q1. Quelle requête crée un index ?</a></li>
-  <li><a href="#q2.-quelle-est-la-différence-entre-text-et-keyword" id="toc-q2.-quelle-est-la-différence-entre-text-et-keyword" class="nav-link" data-scroll-target="#q2.-quelle-est-la-différence-entre-text-et-keyword"><span class="header-section-number">16.2</span> ❓ Q2. Quelle est la différence entre <code>text</code> et <code>keyword</code> ?</a></li>
-  <li><a href="#q3.-quelle-requête-utiliser-pour-un-group-by" id="toc-q3.-quelle-requête-utiliser-pour-un-group-by" class="nav-link" data-scroll-target="#q3.-quelle-requête-utiliser-pour-un-group-by"><span class="header-section-number">16.3</span> ❓ Q3. Quelle requête utiliser pour un GROUP BY ?</a></li>
-  <li><a href="#q4.-que-fait-size-0-dans-une-requête-dagrégation" id="toc-q4.-que-fait-size-0-dans-une-requête-dagrégation" class="nav-link" data-scroll-target="#q4.-que-fait-size-0-dans-une-requête-dagrégation"><span class="header-section-number">16.4</span> ❓ Q4. Que fait <code>size: 0</code> dans une requête d’agrégation ?</a></li>
-  <li><a href="#q5.-quelle-requête-permet-de-chercher-alice-même-si-on-tape-alise" id="toc-q5.-quelle-requête-permet-de-chercher-alice-même-si-on-tape-alise" class="nav-link" data-scroll-target="#q5.-quelle-requête-permet-de-chercher-alice-même-si-on-tape-alise"><span class="header-section-number">16.5</span> ❓ Q5. Quelle requête permet de chercher “Alice” même si on tape “Alise” ?</a></li>
+  <li><a href="#q1.-quelle-requête-crée-un-index" id="toc-q1.-quelle-requête-crée-un-index" class="nav-link" data-scroll-target="#q1.-quelle-requête-crée-un-index">❓ Q1. Quelle requête crée un index ?</a></li>
+  <li><a href="#q2.-quelle-est-la-différence-entre-text-et-keyword" id="toc-q2.-quelle-est-la-différence-entre-text-et-keyword" class="nav-link" data-scroll-target="#q2.-quelle-est-la-différence-entre-text-et-keyword">❓ Q2. Quelle est la différence entre <code>text</code> et <code>keyword</code> ?</a></li>
+  <li><a href="#q3.-quelle-requête-utiliser-pour-un-group-by" id="toc-q3.-quelle-requête-utiliser-pour-un-group-by" class="nav-link" data-scroll-target="#q3.-quelle-requête-utiliser-pour-un-group-by">❓ Q3. Quelle requête utiliser pour un GROUP BY ?</a></li>
+  <li><a href="#q4.-que-fait-size-0-dans-une-requête-dagrégation" id="toc-q4.-que-fait-size-0-dans-une-requête-dagrégation" class="nav-link" data-scroll-target="#q4.-que-fait-size-0-dans-une-requête-dagrégation">❓ Q4. Que fait <code>size: 0</code> dans une requête d’agrégation ?</a></li>
+  <li><a href="#q5.-quelle-requête-permet-de-chercher-alice-même-si-on-tape-alise" id="toc-q5.-quelle-requête-permet-de-chercher-alice-même-si-on-tape-alise" class="nav-link" data-scroll-target="#q5.-quelle-requête-permet-de-chercher-alice-même-si-on-tape-alise">❓ Q5. Quelle requête permet de chercher “Alice” même si on tape “Alise” ?</a></li>
   </ul></li>
-  <li><a href="#ressources" id="toc-ressources" class="nav-link" data-scroll-target="#ressources"><span class="header-section-number">17</span> 📚 Ressources</a></li>
-  <li><a href="#prochaine-étape" id="toc-prochaine-étape" class="nav-link" data-scroll-target="#prochaine-étape"><span class="header-section-number">18</span> ➡️ Prochaine étape</a></li>
+  <li><a href="#ressources" id="toc-ressources" class="nav-link" data-scroll-target="#ressources">📚 Ressources</a></li>
+  <li><a href="#prochaine-étape" id="toc-prochaine-étape" class="nav-link" data-scroll-target="#prochaine-étape">➡️ Prochaine étape</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="git@github.com:diakite-data/data-engineering-bootcamp.git/blob/main/notebooks/beginner/10_elasticsearch_for_data_engineers.ipynb" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="git@github.com:diakite-data/data-engineering-bootcamp.git/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -498,7 +530,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notebooks/beginner/01_intro_data_engineering.html">Débutant</a></li><li class="breadcrumb-item"><a href="../../notebooks/beginner/10_elasticsearch_for_data_engineers.html">🔍 Elasticsearch for Data Engineers</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">🔍 Elasticsearch for Data Engineers</h1>
 </div>
@@ -519,8 +551,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>Ce module présente <strong>Elasticsearch</strong>, le moteur de recherche et d’analytics distribué.</p>
 <hr>
-<section id="prérequis" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="prérequis"><span class="header-section-number">1</span> 📋 Prérequis</h2>
+<section id="prérequis" class="level2">
+<h2 class="anchored" data-anchor-id="prérequis">📋 Prérequis</h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -552,13 +584,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 </section>
-<section id="objectifs-du-module" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="objectifs-du-module"><span class="header-section-number">2</span> 🎯 Objectifs du module</h2>
+<section id="objectifs-du-module" class="level2">
+<h2 class="anchored" data-anchor-id="objectifs-du-module">🎯 Objectifs du module</h2>
 <p>À la fin de ce notebook, tu seras capable de : - ✅ Comprendre l’architecture Elasticsearch (index, shards, replicas) - ✅ Utiliser Elasticvue pour interagir avec le cluster - ✅ Créer des index avec mapping approprié - ✅ Créer des <strong>Index Templates</strong> pour automatiser les mappings - ✅ Indexer, rechercher, modifier et supprimer des documents - ✅ Écrire des requêtes de recherche (match, bool, fuzzy, range) - ✅ Réaliser des agrégations analytiques</p>
 <hr>
 </section>
-<section id="version-elasticsearch" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="version-elasticsearch"><span class="header-section-number">3</span> ⚠️ Version Elasticsearch</h2>
+<section id="version-elasticsearch" class="level2">
+<h2 class="anchored" data-anchor-id="version-elasticsearch">⚠️ Version Elasticsearch</h2>
 <p>Ce cours utilise <strong>Elasticsearch 8.x</strong> (version recommandée : <strong>8.12+</strong>).</p>
 <table class="caption-top table">
 <colgroup>
@@ -591,11 +623,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </blockquote>
 <hr>
 </section>
-<section id="elasticsearch-dans-lécosystème-big-data" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="elasticsearch-dans-lécosystème-big-data"><span class="header-section-number">4</span> 🎯 Elasticsearch dans l’écosystème Big Data</h2>
+<section id="elasticsearch-dans-lécosystème-big-data" class="level2">
+<h2 class="anchored" data-anchor-id="elasticsearch-dans-lécosystème-big-data">🎯 Elasticsearch dans l’écosystème Big Data</h2>
 <p>Tu as vu dans le module 08 les différents types de bases NoSQL. <strong>Elasticsearch</strong> est un <strong>moteur de recherche</strong> (Search Engine), parfois classé à part des bases NoSQL traditionnelles.</p>
-<section id="position-dans-les-types-nosql" class="level3" data-number="4.1">
-<h3 data-number="4.1" class="anchored" data-anchor-id="position-dans-les-types-nosql"><span class="header-section-number">4.1</span> Position dans les types NoSQL</h3>
+<section id="position-dans-les-types-nosql" class="level3">
+<h3 class="anchored" data-anchor-id="position-dans-les-types-nosql">Position dans les types NoSQL</h3>
 <pre><code>┌─────────────────────────────────────────────────────────────────┐
 │                      BASES NoSQL                                │
 ├───────────┬───────────┬───────────┬───────────┬────────────────┤
@@ -605,8 +637,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 │           │           │           │           │     ◄───       │
 └───────────┴───────────┴───────────┴───────────┴────────────────┘</code></pre>
 </section>
-<section id="rappel-les-5v" class="level3" data-number="4.2">
-<h3 data-number="4.2" class="anchored" data-anchor-id="rappel-les-5v"><span class="header-section-number">4.2</span> Rappel : Les 5V</h3>
+<section id="rappel-les-5v" class="level3">
+<h3 class="anchored" data-anchor-id="rappel-les-5v">Rappel : Les 5V</h3>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 9%">
@@ -642,8 +674,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 </section>
-<section id="rappel-cap-base" class="level3" data-number="4.3">
-<h3 data-number="4.3" class="anchored" data-anchor-id="rappel-cap-base"><span class="header-section-number">4.3</span> Rappel : CAP &amp; BASE</h3>
+<section id="rappel-cap-base" class="level3">
+<h3 class="anchored" data-anchor-id="rappel-cap-base">Rappel : CAP &amp; BASE</h3>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -665,8 +697,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 </section>
-<section id="pourquoi-elasticsearch-en-data-engineering" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="pourquoi-elasticsearch-en-data-engineering"><span class="header-section-number">5</span> 🎯 Pourquoi Elasticsearch en Data Engineering ?</h2>
+<section id="pourquoi-elasticsearch-en-data-engineering" class="level2">
+<h2 class="anchored" data-anchor-id="pourquoi-elasticsearch-en-data-engineering">🎯 Pourquoi Elasticsearch en Data Engineering ?</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -702,10 +734,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </blockquote>
 <hr>
 </section>
-<section id="concepts-fondamentaux" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="concepts-fondamentaux"><span class="header-section-number">6</span> 📚 1. Concepts fondamentaux</h2>
-<section id="vocabulaire" class="level3" data-number="6.1">
-<h3 data-number="6.1" class="anchored" data-anchor-id="vocabulaire"><span class="header-section-number">6.1</span> 📖 Vocabulaire</h3>
+<section id="concepts-fondamentaux" class="level2">
+<h2 class="anchored" data-anchor-id="concepts-fondamentaux">📚 1. Concepts fondamentaux</h2>
+<section id="vocabulaire" class="level3">
+<h3 class="anchored" data-anchor-id="vocabulaire">📖 Vocabulaire</h3>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -743,8 +775,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 </section>
-<section id="shards-replicas" class="level3" data-number="6.2">
-<h3 data-number="6.2" class="anchored" data-anchor-id="shards-replicas"><span class="header-section-number">6.2</span> 🧱 Shards &amp; Replicas</h3>
+<section id="shards-replicas" class="level3">
+<h3 class="anchored" data-anchor-id="shards-replicas">🧱 Shards &amp; Replicas</h3>
 <pre><code>Index "clients"
 ├── Primary Shard 0  ──────►  Replica Shard 0
 ├── Primary Shard 1  ──────►  Replica Shard 1
@@ -768,8 +800,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 </section>
-<section id="état-du-cluster" class="level3" data-number="6.3">
-<h3 data-number="6.3" class="anchored" data-anchor-id="état-du-cluster"><span class="header-section-number">6.3</span> 📊 État du cluster</h3>
+<section id="état-du-cluster" class="level3">
+<h3 class="anchored" data-anchor-id="état-du-cluster">📊 État du cluster</h3>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -795,10 +827,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 </section>
-<section id="installation" class="level2" data-number="7">
-<h2 data-number="7" class="anchored" data-anchor-id="installation"><span class="header-section-number">7</span> ⚙️ 2. Installation</h2>
-<section id="étape-1-télécharger-elasticsearch" class="level3" data-number="7.1">
-<h3 data-number="7.1" class="anchored" data-anchor-id="étape-1-télécharger-elasticsearch"><span class="header-section-number">7.1</span> 📦 Étape 1 : Télécharger Elasticsearch</h3>
+<section id="installation" class="level2">
+<h2 class="anchored" data-anchor-id="installation">⚙️ 2. Installation</h2>
+<section id="étape-1-télécharger-elasticsearch" class="level3">
+<h3 class="anchored" data-anchor-id="étape-1-télécharger-elasticsearch">📦 Étape 1 : Télécharger Elasticsearch</h3>
 <p>👉 <a href="https://www.elastic.co/downloads/elasticsearch">https://www.elastic.co/downloads/elasticsearch</a></p>
 <ol type="1">
 <li>Télécharger le ZIP pour ton OS</li>
@@ -820,8 +852,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 <hr>
 </section>
-<section id="étape-2-installer-elasticvue" class="level3" data-number="7.2">
-<h3 data-number="7.2" class="anchored" data-anchor-id="étape-2-installer-elasticvue"><span class="header-section-number">7.2</span> 🧭 Étape 2 : Installer Elasticvue</h3>
+<section id="étape-2-installer-elasticvue" class="level3">
+<h3 class="anchored" data-anchor-id="étape-2-installer-elasticvue">🧭 Étape 2 : Installer Elasticvue</h3>
 <p><strong>Elasticvue</strong> est une interface graphique pour Elasticsearch — beaucoup plus simple que les commandes curl !</p>
 <p><strong>Options d’installation :</strong></p>
 <table class="caption-top table">
@@ -853,10 +885,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 </section>
-<section id="guide-elasticvue-prise-en-main" class="level2" data-number="8">
-<h2 data-number="8" class="anchored" data-anchor-id="guide-elasticvue-prise-en-main"><span class="header-section-number">8</span> 🧭 3. Guide Elasticvue — Prise en main</h2>
-<section id="connexion-au-cluster" class="level3" data-number="8.1">
-<h3 data-number="8.1" class="anchored" data-anchor-id="connexion-au-cluster"><span class="header-section-number">8.1</span> 🔌 3.1 Connexion au cluster</h3>
+<section id="guide-elasticvue-prise-en-main" class="level2">
+<h2 class="anchored" data-anchor-id="guide-elasticvue-prise-en-main">🧭 3. Guide Elasticvue — Prise en main</h2>
+<section id="connexion-au-cluster" class="level3">
+<h3 class="anchored" data-anchor-id="connexion-au-cluster">🔌 3.1 Connexion au cluster</h3>
 <ol type="1">
 <li>Ouvrir Elasticvue</li>
 <li>Cliquer sur <strong>“Add Cluster”</strong></li>
@@ -870,8 +902,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>✅ Tu devrais voir le statut du cluster (🟢 Green ou 🟡 Yellow)</p>
 <hr>
 </section>
-<section id="interface-principale" class="level3" data-number="8.2">
-<h3 data-number="8.2" class="anchored" data-anchor-id="interface-principale"><span class="header-section-number">8.2</span> 🗂️ 3.2 Interface principale</h3>
+<section id="interface-principale" class="level3">
+<h3 class="anchored" data-anchor-id="interface-principale">🗂️ 3.2 Interface principale</h3>
 <pre><code>┌─────────────────────────────────────────────────────────────┐
 │  Elasticvue                                    [Cluster: Local] │
 ├─────────────┬───────────────────────────────────────────────┤
@@ -888,8 +920,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 │             │                                               │
 └─────────────┴───────────────────────────────────────────────┘</code></pre>
 </section>
-<section id="onglets-importants" class="level3" data-number="8.3">
-<h3 data-number="8.3" class="anchored" data-anchor-id="onglets-importants"><span class="header-section-number">8.3</span> 📍 Onglets importants :</h3>
+<section id="onglets-importants" class="level3">
+<h3 class="anchored" data-anchor-id="onglets-importants">📍 Onglets importants :</h3>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -914,18 +946,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 <hr>
 </section>
-<section id="utiliser-la-console-rest" class="level3" data-number="8.4">
-<h3 data-number="8.4" class="anchored" data-anchor-id="utiliser-la-console-rest"><span class="header-section-number">8.4</span> 📝 3.3 Utiliser la console REST</h3>
+<section id="utiliser-la-console-rest" class="level3">
+<h3 class="anchored" data-anchor-id="utiliser-la-console-rest">📝 3.3 Utiliser la console REST</h3>
 <p>L’onglet <strong>REST</strong> permet d’exécuter des requêtes Elasticsearch avec une syntaxe simple.</p>
-<section id="format-des-requêtes" class="level4" data-number="8.4.1">
-<h4 data-number="8.4.1" class="anchored" data-anchor-id="format-des-requêtes"><span class="header-section-number">8.4.1</span> 📌 Format des requêtes</h4>
+<section id="format-des-requêtes" class="level4">
+<h4 class="anchored" data-anchor-id="format-des-requêtes">📌 Format des requêtes</h4>
 <pre><code>MÉTHODE /chemin
 {
   "corps": "de la requête en JSON"
 }</code></pre>
 </section>
-<section id="exemple-pas-à-pas" class="level4" data-number="8.4.2">
-<h4 data-number="8.4.2" class="anchored" data-anchor-id="exemple-pas-à-pas"><span class="header-section-number">8.4.2</span> 🎯 Exemple pas à pas</h4>
+<section id="exemple-pas-à-pas" class="level4">
+<h4 class="anchored" data-anchor-id="exemple-pas-à-pas">🎯 Exemple pas à pas</h4>
 <pre><code>┌──────────────────────────────────────────────────────────────┐
 │  REST Query                                        [▶ Run]  │
 ├──────────────────────────────────────────────────────────────┤
@@ -947,8 +979,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 │  }                                                           │
 └──────────────────────────────────────────────────────────────┘</code></pre>
 </section>
-<section id="raccourcis-utiles" class="level4" data-number="8.4.3">
-<h4 data-number="8.4.3" class="anchored" data-anchor-id="raccourcis-utiles"><span class="header-section-number">8.4.3</span> ⌨️ Raccourcis utiles</h4>
+<section id="raccourcis-utiles" class="level4">
+<h4 class="anchored" data-anchor-id="raccourcis-utiles">⌨️ Raccourcis utiles</h4>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -975,10 +1007,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 </section>
 </section>
-<section id="créer-un-index-et-insérer-des-données" class="level2" data-number="9">
-<h2 data-number="9" class="anchored" data-anchor-id="créer-un-index-et-insérer-des-données"><span class="header-section-number">9</span> 🛠️ 4. Créer un index et insérer des données</h2>
-<section id="créer-lindex-clients" class="level3" data-number="9.1">
-<h3 data-number="9.1" class="anchored" data-anchor-id="créer-lindex-clients"><span class="header-section-number">9.1</span> 📌 4.1 Créer l’index <code>clients</code></h3>
+<section id="créer-un-index-et-insérer-des-données" class="level2">
+<h2 class="anchored" data-anchor-id="créer-un-index-et-insérer-des-données">🛠️ 4. Créer un index et insérer des données</h2>
+<section id="créer-lindex-clients" class="level3">
+<h3 class="anchored" data-anchor-id="créer-lindex-clients">📌 4.1 Créer l’index <code>clients</code></h3>
 <p>Dans l’onglet <strong>REST</strong>, copier-coller :</p>
 <pre><code>PUT /clients
 {
@@ -999,8 +1031,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>✅ Réponse attendue : <code>{ "acknowledged": true }</code></p>
 <hr>
 </section>
-<section id="comprendre-le-mapping" class="level3" data-number="9.2">
-<h3 data-number="9.2" class="anchored" data-anchor-id="comprendre-le-mapping"><span class="header-section-number">9.2</span> 📐 4.2 Comprendre le mapping</h3>
+<section id="comprendre-le-mapping" class="level3">
+<h3 class="anchored" data-anchor-id="comprendre-le-mapping">📐 4.2 Comprendre le mapping</h3>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -1049,10 +1081,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 </section>
-<section id="index-templates-automatiser-les-mappings" class="level2" data-number="10">
-<h2 data-number="10" class="anchored" data-anchor-id="index-templates-automatiser-les-mappings"><span class="header-section-number">10</span> 📋 Index Templates — Automatiser les mappings</h2>
-<section id="pourquoi-utiliser-des-templates" class="level3" data-number="10.1">
-<h3 data-number="10.1" class="anchored" data-anchor-id="pourquoi-utiliser-des-templates"><span class="header-section-number">10.1</span> 🤔 Pourquoi utiliser des templates ?</h3>
+<section id="index-templates-automatiser-les-mappings" class="level2">
+<h2 class="anchored" data-anchor-id="index-templates-automatiser-les-mappings">📋 Index Templates — Automatiser les mappings</h2>
+<section id="pourquoi-utiliser-des-templates" class="level3">
+<h3 class="anchored" data-anchor-id="pourquoi-utiliser-des-templates">🤔 Pourquoi utiliser des templates ?</h3>
 <p>Quand tu gères des <strong>logs</strong> ou des <strong>données temporelles</strong>, tu crées souvent des index par jour ou par mois :</p>
 <pre><code>logs-2024-01-01
 logs-2024-01-02
@@ -1062,8 +1094,8 @@ logs-2024-01-03
 <p><strong>Solution</strong> : Créer un <strong>Index Template</strong> qui s’applique automatiquement à tous les index correspondant à un pattern.</p>
 <hr>
 </section>
-<section id="créer-un-index-template" class="level3" data-number="10.2">
-<h3 data-number="10.2" class="anchored" data-anchor-id="créer-un-index-template"><span class="header-section-number">10.2</span> 📌 Créer un Index Template</h3>
+<section id="créer-un-index-template" class="level3">
+<h3 class="anchored" data-anchor-id="créer-un-index-template">📌 Créer un Index Template</h3>
 <pre><code>PUT /_index_template/logs_template
 {
   "index_patterns": ["logs-*"],
@@ -1088,8 +1120,8 @@ logs-2024-01-03
 <p>✅ <strong>Maintenant</strong>, tout index créé avec le pattern <code>logs-*</code> aura automatiquement ce mapping !</p>
 <hr>
 </section>
-<section id="tester-le-template" class="level3" data-number="10.3">
-<h3 data-number="10.3" class="anchored" data-anchor-id="tester-le-template"><span class="header-section-number">10.3</span> 🧪 Tester le template</h3>
+<section id="tester-le-template" class="level3">
+<h3 class="anchored" data-anchor-id="tester-le-template">🧪 Tester le template</h3>
 <pre><code># Créer un index qui match le pattern
 POST /logs-2024-01-15/_doc
 {
@@ -1104,17 +1136,17 @@ POST /logs-2024-01-15/_doc
 GET /logs-2024-01-15/_mapping</code></pre>
 <hr>
 </section>
-<section id="lister-les-templates-existants" class="level3" data-number="10.4">
-<h3 data-number="10.4" class="anchored" data-anchor-id="lister-les-templates-existants"><span class="header-section-number">10.4</span> 📋 Lister les templates existants</h3>
+<section id="lister-les-templates-existants" class="level3">
+<h3 class="anchored" data-anchor-id="lister-les-templates-existants">📋 Lister les templates existants</h3>
 <pre><code>GET /_index_template</code></pre>
 </section>
-<section id="supprimer-un-template" class="level3" data-number="10.5">
-<h3 data-number="10.5" class="anchored" data-anchor-id="supprimer-un-template"><span class="header-section-number">10.5</span> 🗑️ Supprimer un template</h3>
+<section id="supprimer-un-template" class="level3">
+<h3 class="anchored" data-anchor-id="supprimer-un-template">🗑️ Supprimer un template</h3>
 <pre><code>DELETE /_index_template/logs_template</code></pre>
 <hr>
 </section>
-<section id="bonnes-pratiques-index-templates" class="level3" data-number="10.6">
-<h3 data-number="10.6" class="anchored" data-anchor-id="bonnes-pratiques-index-templates"><span class="header-section-number">10.6</span> 💡 Bonnes pratiques Index Templates</h3>
+<section id="bonnes-pratiques-index-templates" class="level3">
+<h3 class="anchored" data-anchor-id="bonnes-pratiques-index-templates">💡 Bonnes pratiques Index Templates</h3>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 43%">
@@ -1155,8 +1187,8 @@ GET /logs-2024-01-15/_mapping</code></pre>
 </table>
 <hr>
 </section>
-<section id="insérer-un-document" class="level3" data-number="10.7">
-<h3 data-number="10.7" class="anchored" data-anchor-id="insérer-un-document"><span class="header-section-number">10.7</span> 📝 4.3 Insérer un document</h3>
+<section id="insérer-un-document" class="level3">
+<h3 class="anchored" data-anchor-id="insérer-un-document">📝 4.3 Insérer un document</h3>
 <pre><code>POST /clients/_doc
 {
   "nom": "Alice Dupont",
@@ -1167,8 +1199,8 @@ GET /logs-2024-01-15/_mapping</code></pre>
 }</code></pre>
 <hr>
 </section>
-<section id="insérer-plusieurs-documents-bulk" class="level3" data-number="10.8">
-<h3 data-number="10.8" class="anchored" data-anchor-id="insérer-plusieurs-documents-bulk"><span class="header-section-number">10.8</span> 📝 4.4 Insérer plusieurs documents (Bulk)</h3>
+<section id="insérer-plusieurs-documents-bulk" class="level3">
+<h3 class="anchored" data-anchor-id="insérer-plusieurs-documents-bulk">📝 4.4 Insérer plusieurs documents (Bulk)</h3>
 <pre><code>POST /_bulk
 { "index": { "_index": "clients" } }
 { "nom": "Bob Martin", "email": "bob@email.com", "pays": "France", "age": 25, "salaire": 48000 }
@@ -1184,16 +1216,16 @@ GET /logs-2024-01-15/_mapping</code></pre>
 <hr>
 </section>
 </section>
-<section id="requêtes-de-recherche" class="level2" data-number="11">
-<h2 data-number="11" class="anchored" data-anchor-id="requêtes-de-recherche"><span class="header-section-number">11</span> 🔍 5. Requêtes de recherche</h2>
-<section id="afficher-tous-les-documents" class="level3" data-number="11.1">
-<h3 data-number="11.1" class="anchored" data-anchor-id="afficher-tous-les-documents"><span class="header-section-number">11.1</span> 📌 5.1 Afficher tous les documents</h3>
+<section id="requêtes-de-recherche" class="level2">
+<h2 class="anchored" data-anchor-id="requêtes-de-recherche">🔍 5. Requêtes de recherche</h2>
+<section id="afficher-tous-les-documents" class="level3">
+<h3 class="anchored" data-anchor-id="afficher-tous-les-documents">📌 5.1 Afficher tous les documents</h3>
 <pre><code>GET /clients/_search</code></pre>
 <p>✅ <strong>SQL équivalent</strong> : <code>SELECT * FROM clients</code></p>
 <hr>
 </section>
-<section id="filtrer-avec-match-full-text" class="level3" data-number="11.2">
-<h3 data-number="11.2" class="anchored" data-anchor-id="filtrer-avec-match-full-text"><span class="header-section-number">11.2</span> 📌 5.2 Filtrer avec <code>match</code> (full-text)</h3>
+<section id="filtrer-avec-match-full-text" class="level3">
+<h3 class="anchored" data-anchor-id="filtrer-avec-match-full-text">📌 5.2 Filtrer avec <code>match</code> (full-text)</h3>
 <pre><code>GET /clients/_search
 {
   "query": {
@@ -1203,8 +1235,8 @@ GET /logs-2024-01-15/_mapping</code></pre>
 <p>✅ <strong>SQL équivalent</strong> : <code>SELECT * FROM clients WHERE nom LIKE '%Alice%'</code></p>
 <hr>
 </section>
-<section id="filtrer-avec-term-exact-match" class="level3" data-number="11.3">
-<h3 data-number="11.3" class="anchored" data-anchor-id="filtrer-avec-term-exact-match"><span class="header-section-number">11.3</span> 📌 5.3 Filtrer avec <code>term</code> (exact match)</h3>
+<section id="filtrer-avec-term-exact-match" class="level3">
+<h3 class="anchored" data-anchor-id="filtrer-avec-term-exact-match">📌 5.3 Filtrer avec <code>term</code> (exact match)</h3>
 <pre><code>GET /clients/_search
 {
   "query": {
@@ -1217,8 +1249,8 @@ GET /logs-2024-01-15/_mapping</code></pre>
 </blockquote>
 <hr>
 </section>
-<section id="filtrer-par-plage-de-valeurs-range" class="level3" data-number="11.4">
-<h3 data-number="11.4" class="anchored" data-anchor-id="filtrer-par-plage-de-valeurs-range"><span class="header-section-number">11.4</span> 📌 5.4 Filtrer par plage de valeurs (<code>range</code>)</h3>
+<section id="filtrer-par-plage-de-valeurs-range" class="level3">
+<h3 class="anchored" data-anchor-id="filtrer-par-plage-de-valeurs-range">📌 5.4 Filtrer par plage de valeurs (<code>range</code>)</h3>
 <pre><code>GET /clients/_search
 {
   "query": {
@@ -1259,8 +1291,8 @@ GET /logs-2024-01-15/_mapping</code></pre>
 </table>
 <hr>
 </section>
-<section id="conditions-multiples-bool" class="level3" data-number="11.5">
-<h3 data-number="11.5" class="anchored" data-anchor-id="conditions-multiples-bool"><span class="header-section-number">11.5</span> 📌 5.5 Conditions multiples (<code>bool</code>)</h3>
+<section id="conditions-multiples-bool" class="level3">
+<h3 class="anchored" data-anchor-id="conditions-multiples-bool">📌 5.5 Conditions multiples (<code>bool</code>)</h3>
 <p>La requête <code>bool</code> combine plusieurs conditions :</p>
 <table class="caption-top table">
 <thead>
@@ -1293,8 +1325,8 @@ GET /logs-2024-01-15/_mapping</code></pre>
 </tr>
 </tbody>
 </table>
-<section id="exemple-clients-français-de-plus-de-25-ans" class="level4" data-number="11.5.1">
-<h4 data-number="11.5.1" class="anchored" data-anchor-id="exemple-clients-français-de-plus-de-25-ans"><span class="header-section-number">11.5.1</span> Exemple : Clients français de plus de 25 ans</h4>
+<section id="exemple-clients-français-de-plus-de-25-ans" class="level4">
+<h4 class="anchored" data-anchor-id="exemple-clients-français-de-plus-de-25-ans">Exemple : Clients français de plus de 25 ans</h4>
 <pre><code>GET /clients/_search
 {
   "query": {
@@ -1309,8 +1341,8 @@ GET /logs-2024-01-15/_mapping</code></pre>
 <p>✅ <strong>SQL équivalent</strong> : <code>SELECT * FROM clients WHERE pays = 'France' AND age &gt; 25</code></p>
 <hr>
 </section>
-<section id="exemple-clients-français-ou-ivoiriens-mais-pas-bob" class="level4" data-number="11.5.2">
-<h4 data-number="11.5.2" class="anchored" data-anchor-id="exemple-clients-français-ou-ivoiriens-mais-pas-bob"><span class="header-section-number">11.5.2</span> Exemple : Clients français OU ivoiriens, mais PAS Bob</h4>
+<section id="exemple-clients-français-ou-ivoiriens-mais-pas-bob" class="level4">
+<h4 class="anchored" data-anchor-id="exemple-clients-français-ou-ivoiriens-mais-pas-bob">Exemple : Clients français OU ivoiriens, mais PAS Bob</h4>
 <pre><code>GET /clients/_search
 {
   "query": {
@@ -1330,8 +1362,8 @@ GET /logs-2024-01-15/_mapping</code></pre>
 <hr>
 </section>
 </section>
-<section id="recherche-floue-fuzzy" class="level3" data-number="11.6">
-<h3 data-number="11.6" class="anchored" data-anchor-id="recherche-floue-fuzzy"><span class="header-section-number">11.6</span> 📌 5.6 Recherche floue (<code>fuzzy</code>)</h3>
+<section id="recherche-floue-fuzzy" class="level3">
+<h3 class="anchored" data-anchor-id="recherche-floue-fuzzy">📌 5.6 Recherche floue (<code>fuzzy</code>)</h3>
 <p>Trouve des résultats même avec des fautes de frappe :</p>
 <pre><code>GET /clients/_search
 {
@@ -1350,8 +1382,8 @@ GET /logs-2024-01-15/_mapping</code></pre>
 </blockquote>
 <hr>
 </section>
-<section id="trier-et-limiter-les-résultats" class="level3" data-number="11.7">
-<h3 data-number="11.7" class="anchored" data-anchor-id="trier-et-limiter-les-résultats"><span class="header-section-number">11.7</span> 📌 5.7 Trier et limiter les résultats</h3>
+<section id="trier-et-limiter-les-résultats" class="level3">
+<h3 class="anchored" data-anchor-id="trier-et-limiter-les-résultats">📌 5.7 Trier et limiter les résultats</h3>
 <pre><code>GET /clients/_search
 {
   "query": { "match_all": {} },
@@ -1364,10 +1396,10 @@ GET /logs-2024-01-15/_mapping</code></pre>
 <hr>
 </section>
 </section>
-<section id="agrégations-group-by" class="level2" data-number="12">
-<h2 data-number="12" class="anchored" data-anchor-id="agrégations-group-by"><span class="header-section-number">12</span> 📊 6. Agrégations (GROUP BY)</h2>
-<section id="compter-par-catégorie-terms" class="level3" data-number="12.1">
-<h3 data-number="12.1" class="anchored" data-anchor-id="compter-par-catégorie-terms"><span class="header-section-number">12.1</span> 📌 6.1 Compter par catégorie (<code>terms</code>)</h3>
+<section id="agrégations-group-by" class="level2">
+<h2 class="anchored" data-anchor-id="agrégations-group-by">📊 6. Agrégations (GROUP BY)</h2>
+<section id="compter-par-catégorie-terms" class="level3">
+<h3 class="anchored" data-anchor-id="compter-par-catégorie-terms">📌 6.1 Compter par catégorie (<code>terms</code>)</h3>
 <pre><code>GET /clients/_search
 {
   "size": 0,
@@ -1383,8 +1415,8 @@ GET /logs-2024-01-15/_mapping</code></pre>
 </blockquote>
 <hr>
 </section>
-<section id="métriques-sum-avg-min-max" class="level3" data-number="12.2">
-<h3 data-number="12.2" class="anchored" data-anchor-id="métriques-sum-avg-min-max"><span class="header-section-number">12.2</span> 📌 6.2 Métriques (sum, avg, min, max)</h3>
+<section id="métriques-sum-avg-min-max" class="level3">
+<h3 class="anchored" data-anchor-id="métriques-sum-avg-min-max">📌 6.2 Métriques (sum, avg, min, max)</h3>
 <pre><code>GET /clients/_search
 {
   "size": 0,
@@ -1398,8 +1430,8 @@ GET /logs-2024-01-15/_mapping</code></pre>
 <p>✅ <strong>SQL équivalent</strong> : <code>SELECT AVG(salaire), MAX(salaire), MIN(salaire), SUM(salaire) FROM clients</code></p>
 <hr>
 </section>
-<section id="stats-complètes-en-une-requête" class="level3" data-number="12.3">
-<h3 data-number="12.3" class="anchored" data-anchor-id="stats-complètes-en-une-requête"><span class="header-section-number">12.3</span> 📌 6.3 Stats complètes en une requête</h3>
+<section id="stats-complètes-en-une-requête" class="level3">
+<h3 class="anchored" data-anchor-id="stats-complètes-en-une-requête">📌 6.3 Stats complètes en une requête</h3>
 <pre><code>GET /clients/_search
 {
   "size": 0,
@@ -1412,8 +1444,8 @@ GET /logs-2024-01-15/_mapping</code></pre>
 <p><strong>Résultat</strong> : count, min, max, avg, sum en une seule requête !</p>
 <hr>
 </section>
-<section id="agrégations-imbriquées-group-by-métriques" class="level3" data-number="12.4">
-<h3 data-number="12.4" class="anchored" data-anchor-id="agrégations-imbriquées-group-by-métriques"><span class="header-section-number">12.4</span> 📌 6.4 Agrégations imbriquées (GROUP BY + métriques)</h3>
+<section id="agrégations-imbriquées-group-by-métriques" class="level3">
+<h3 class="anchored" data-anchor-id="agrégations-imbriquées-group-by-métriques">📌 6.4 Agrégations imbriquées (GROUP BY + métriques)</h3>
 <pre><code>GET /clients/_search
 {
   "size": 0,
@@ -1433,8 +1465,8 @@ GET /logs-2024-01-15/_mapping</code></pre>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> pays;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
-<section id="filtrer-avant-dagréger" class="level3" data-number="12.5">
-<h3 data-number="12.5" class="anchored" data-anchor-id="filtrer-avant-dagréger"><span class="header-section-number">12.5</span> 📌 6.5 Filtrer avant d’agréger</h3>
+<section id="filtrer-avant-dagréger" class="level3">
+<h3 class="anchored" data-anchor-id="filtrer-avant-dagréger">📌 6.5 Filtrer avant d’agréger</h3>
 <pre><code>GET /clients/_search
 {
   "size": 0,
@@ -1455,10 +1487,10 @@ GET /logs-2024-01-15/_mapping</code></pre>
 <hr>
 </section>
 </section>
-<section id="modifier-et-supprimer" class="level2" data-number="13">
-<h2 data-number="13" class="anchored" data-anchor-id="modifier-et-supprimer"><span class="header-section-number">13</span> ✏️ 7. Modifier et supprimer</h2>
-<section id="mettre-à-jour-un-document-par-id" class="level3" data-number="13.1">
-<h3 data-number="13.1" class="anchored" data-anchor-id="mettre-à-jour-un-document-par-id"><span class="header-section-number">13.1</span> 📌 7.1 Mettre à jour un document (par ID)</h3>
+<section id="modifier-et-supprimer" class="level2">
+<h2 class="anchored" data-anchor-id="modifier-et-supprimer">✏️ 7. Modifier et supprimer</h2>
+<section id="mettre-à-jour-un-document-par-id" class="level3">
+<h3 class="anchored" data-anchor-id="mettre-à-jour-un-document-par-id">📌 7.1 Mettre à jour un document (par ID)</h3>
 <pre><code>POST /clients/_update/1
 {
   "doc": {
@@ -1467,8 +1499,8 @@ GET /logs-2024-01-15/_mapping</code></pre>
 }</code></pre>
 <hr>
 </section>
-<section id="mettre-à-jour-par-requête" class="level3" data-number="13.2">
-<h3 data-number="13.2" class="anchored" data-anchor-id="mettre-à-jour-par-requête"><span class="header-section-number">13.2</span> 📌 7.2 Mettre à jour par requête</h3>
+<section id="mettre-à-jour-par-requête" class="level3">
+<h3 class="anchored" data-anchor-id="mettre-à-jour-par-requête">📌 7.2 Mettre à jour par requête</h3>
 <pre><code>POST /clients/_update_by_query
 {
   "query": {
@@ -1481,13 +1513,13 @@ GET /logs-2024-01-15/_mapping</code></pre>
 <p>✅ <strong>SQL équivalent</strong> : <code>UPDATE clients SET salaire = salaire + 1000 WHERE pays = 'France'</code></p>
 <hr>
 </section>
-<section id="supprimer-un-document-par-id" class="level3" data-number="13.3">
-<h3 data-number="13.3" class="anchored" data-anchor-id="supprimer-un-document-par-id"><span class="header-section-number">13.3</span> 📌 7.3 Supprimer un document (par ID)</h3>
+<section id="supprimer-un-document-par-id" class="level3">
+<h3 class="anchored" data-anchor-id="supprimer-un-document-par-id">📌 7.3 Supprimer un document (par ID)</h3>
 <pre><code>DELETE /clients/_doc/1</code></pre>
 <hr>
 </section>
-<section id="supprimer-par-requête" class="level3" data-number="13.4">
-<h3 data-number="13.4" class="anchored" data-anchor-id="supprimer-par-requête"><span class="header-section-number">13.4</span> 📌 7.4 Supprimer par requête</h3>
+<section id="supprimer-par-requête" class="level3">
+<h3 class="anchored" data-anchor-id="supprimer-par-requête">📌 7.4 Supprimer par requête</h3>
 <pre><code>POST /clients/_delete_by_query
 {
   "query": {
@@ -1497,8 +1529,8 @@ GET /logs-2024-01-15/_mapping</code></pre>
 <p>✅ <strong>SQL équivalent</strong> : <code>DELETE FROM clients WHERE age &lt; 18</code></p>
 <hr>
 </section>
-<section id="supprimer-un-index-entier" class="level3" data-number="13.5">
-<h3 data-number="13.5" class="anchored" data-anchor-id="supprimer-un-index-entier"><span class="header-section-number">13.5</span> 📌 7.5 Supprimer un index entier</h3>
+<section id="supprimer-un-index-entier" class="level3">
+<h3 class="anchored" data-anchor-id="supprimer-un-index-entier">📌 7.5 Supprimer un index entier</h3>
 <pre><code>DELETE /clients</code></pre>
 <blockquote class="blockquote">
 <p>⚠️ <strong>Attention</strong> : Irréversible !</p>
@@ -1506,10 +1538,10 @@ GET /logs-2024-01-15/_mapping</code></pre>
 <hr>
 </section>
 </section>
-<section id="cheatsheet-elasticsearch" class="level2" data-number="14">
-<h2 data-number="14" class="anchored" data-anchor-id="cheatsheet-elasticsearch"><span class="header-section-number">14</span> 📋 Cheatsheet Elasticsearch</h2>
-<section id="gestion-des-index" class="level3" data-number="14.1">
-<h3 data-number="14.1" class="anchored" data-anchor-id="gestion-des-index"><span class="header-section-number">14.1</span> 🔧 Gestion des index</h3>
+<section id="cheatsheet-elasticsearch" class="level2">
+<h2 class="anchored" data-anchor-id="cheatsheet-elasticsearch">📋 Cheatsheet Elasticsearch</h2>
+<section id="gestion-des-index" class="level3">
+<h3 class="anchored" data-anchor-id="gestion-des-index">🔧 Gestion des index</h3>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -1541,8 +1573,8 @@ GET /logs-2024-01-15/_mapping</code></pre>
 </tbody>
 </table>
 </section>
-<section id="crud-documents" class="level3" data-number="14.2">
-<h3 data-number="14.2" class="anchored" data-anchor-id="crud-documents"><span class="header-section-number">14.2</span> 📝 CRUD Documents</h3>
+<section id="crud-documents" class="level3">
+<h3 class="anchored" data-anchor-id="crud-documents">📝 CRUD Documents</h3>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -1574,8 +1606,8 @@ GET /logs-2024-01-15/_mapping</code></pre>
 </tbody>
 </table>
 </section>
-<section id="types-de-requêtes" class="level3" data-number="14.3">
-<h3 data-number="14.3" class="anchored" data-anchor-id="types-de-requêtes"><span class="header-section-number">14.3</span> 🔍 Types de requêtes</h3>
+<section id="types-de-requêtes" class="level3">
+<h3 class="anchored" data-anchor-id="types-de-requêtes">🔍 Types de requêtes</h3>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -1607,8 +1639,8 @@ GET /logs-2024-01-15/_mapping</code></pre>
 </tbody>
 </table>
 </section>
-<section id="agrégations" class="level3" data-number="14.4">
-<h3 data-number="14.4" class="anchored" data-anchor-id="agrégations"><span class="header-section-number">14.4</span> 📊 Agrégations</h3>
+<section id="agrégations" class="level3">
+<h3 class="anchored" data-anchor-id="agrégations">📊 Agrégations</h3>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -1638,12 +1670,12 @@ GET /logs-2024-01-15/_mapping</code></pre>
 <hr>
 </section>
 </section>
-<section id="exercices-pratiques" class="level2" data-number="15">
-<h2 data-number="15" class="anchored" data-anchor-id="exercices-pratiques"><span class="header-section-number">15</span> 🎯 Exercices pratiques</h2>
+<section id="exercices-pratiques" class="level2">
+<h2 class="anchored" data-anchor-id="exercices-pratiques">🎯 Exercices pratiques</h2>
 <p>Utilise l’onglet <strong>REST</strong> d’Elasticvue pour résoudre ces exercices.</p>
 <hr>
-<section id="exercice-1-facile" class="level3" data-number="15.1">
-<h3 data-number="15.1" class="anchored" data-anchor-id="exercice-1-facile"><span class="header-section-number">15.1</span> 🏋️ Exercice 1 — Facile</h3>
+<section id="exercice-1-facile" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-1-facile">🏋️ Exercice 1 — Facile</h3>
 <p>Afficher tous les clients.</p>
 <details>
 <summary>
@@ -1653,8 +1685,8 @@ GET /logs-2024-01-15/_mapping</code></pre>
 </details>
 <hr>
 </section>
-<section id="exercice-2-facile" class="level3" data-number="15.2">
-<h3 data-number="15.2" class="anchored" data-anchor-id="exercice-2-facile"><span class="header-section-number">15.2</span> 🏋️ Exercice 2 — Facile</h3>
+<section id="exercice-2-facile" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-2-facile">🏋️ Exercice 2 — Facile</h3>
 <p>Trouver les clients de Côte d’Ivoire.</p>
 <details>
 <summary>
@@ -1669,8 +1701,8 @@ GET /logs-2024-01-15/_mapping</code></pre>
 </details>
 <hr>
 </section>
-<section id="exercice-3-intermédiaire" class="level3" data-number="15.3">
-<h3 data-number="15.3" class="anchored" data-anchor-id="exercice-3-intermédiaire"><span class="header-section-number">15.3</span> 🏋️ Exercice 3 — Intermédiaire</h3>
+<section id="exercice-3-intermédiaire" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-3-intermédiaire">🏋️ Exercice 3 — Intermédiaire</h3>
 <p>Trouver les clients avec un salaire entre 50000 et 60000, triés par âge décroissant.</p>
 <details>
 <summary>
@@ -1688,8 +1720,8 @@ GET /logs-2024-01-15/_mapping</code></pre>
 </details>
 <hr>
 </section>
-<section id="exercice-4-intermédiaire" class="level3" data-number="15.4">
-<h3 data-number="15.4" class="anchored" data-anchor-id="exercice-4-intermédiaire"><span class="header-section-number">15.4</span> 🏋️ Exercice 4 — Intermédiaire</h3>
+<section id="exercice-4-intermédiaire" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-4-intermédiaire">🏋️ Exercice 4 — Intermédiaire</h3>
 <p>Calculer le nombre de clients par pays.</p>
 <details>
 <summary>
@@ -1707,8 +1739,8 @@ GET /logs-2024-01-15/_mapping</code></pre>
 </details>
 <hr>
 </section>
-<section id="exercice-5-avancé" class="level3" data-number="15.5">
-<h3 data-number="15.5" class="anchored" data-anchor-id="exercice-5-avancé"><span class="header-section-number">15.5</span> 🏋️ Exercice 5 — Avancé</h3>
+<section id="exercice-5-avancé" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-5-avancé">🏋️ Exercice 5 — Avancé</h3>
 <p>Calculer le salaire moyen par pays, seulement pour les clients de plus de 25 ans.</p>
 <details>
 <summary>
@@ -1733,11 +1765,11 @@ GET /logs-2024-01-15/_mapping</code></pre>
 <hr>
 </section>
 </section>
-<section id="quiz" class="level2" data-number="16">
-<h2 data-number="16" class="anchored" data-anchor-id="quiz"><span class="header-section-number">16</span> 🧠 Quiz</h2>
+<section id="quiz" class="level2">
+<h2 class="anchored" data-anchor-id="quiz">🧠 Quiz</h2>
 <hr>
-<section id="q1.-quelle-requête-crée-un-index" class="level3" data-number="16.1">
-<h3 data-number="16.1" class="anchored" data-anchor-id="q1.-quelle-requête-crée-un-index"><span class="header-section-number">16.1</span> ❓ Q1. Quelle requête crée un index ?</h3>
+<section id="q1.-quelle-requête-crée-un-index" class="level3">
+<h3 class="anchored" data-anchor-id="q1.-quelle-requête-crée-un-index">❓ Q1. Quelle requête crée un index ?</h3>
 <ol type="a">
 <li><code>POST /clients</code><br>
 </li>
@@ -1755,8 +1787,8 @@ GET /logs-2024-01-15/_mapping</code></pre>
 </details>
 <hr>
 </section>
-<section id="q2.-quelle-est-la-différence-entre-text-et-keyword" class="level3" data-number="16.2">
-<h3 data-number="16.2" class="anchored" data-anchor-id="q2.-quelle-est-la-différence-entre-text-et-keyword"><span class="header-section-number">16.2</span> ❓ Q2. Quelle est la différence entre <code>text</code> et <code>keyword</code> ?</h3>
+<section id="q2.-quelle-est-la-différence-entre-text-et-keyword" class="level3">
+<h3 class="anchored" data-anchor-id="q2.-quelle-est-la-différence-entre-text-et-keyword">❓ Q2. Quelle est la différence entre <code>text</code> et <code>keyword</code> ?</h3>
 <ol type="a">
 <li>Aucune différence<br>
 </li>
@@ -1774,8 +1806,8 @@ GET /logs-2024-01-15/_mapping</code></pre>
 </details>
 <hr>
 </section>
-<section id="q3.-quelle-requête-utiliser-pour-un-group-by" class="level3" data-number="16.3">
-<h3 data-number="16.3" class="anchored" data-anchor-id="q3.-quelle-requête-utiliser-pour-un-group-by"><span class="header-section-number">16.3</span> ❓ Q3. Quelle requête utiliser pour un GROUP BY ?</h3>
+<section id="q3.-quelle-requête-utiliser-pour-un-group-by" class="level3">
+<h3 class="anchored" data-anchor-id="q3.-quelle-requête-utiliser-pour-un-group-by">❓ Q3. Quelle requête utiliser pour un GROUP BY ?</h3>
 <ol type="a">
 <li><code>match</code><br>
 </li>
@@ -1793,8 +1825,8 @@ GET /logs-2024-01-15/_mapping</code></pre>
 </details>
 <hr>
 </section>
-<section id="q4.-que-fait-size-0-dans-une-requête-dagrégation" class="level3" data-number="16.4">
-<h3 data-number="16.4" class="anchored" data-anchor-id="q4.-que-fait-size-0-dans-une-requête-dagrégation"><span class="header-section-number">16.4</span> ❓ Q4. Que fait <code>size: 0</code> dans une requête d’agrégation ?</h3>
+<section id="q4.-que-fait-size-0-dans-une-requête-dagrégation" class="level3">
+<h3 class="anchored" data-anchor-id="q4.-que-fait-size-0-dans-une-requête-dagrégation">❓ Q4. Que fait <code>size: 0</code> dans une requête d’agrégation ?</h3>
 <ol type="a">
 <li>Supprime les données<br>
 </li>
@@ -1812,8 +1844,8 @@ GET /logs-2024-01-15/_mapping</code></pre>
 </details>
 <hr>
 </section>
-<section id="q5.-quelle-requête-permet-de-chercher-alice-même-si-on-tape-alise" class="level3" data-number="16.5">
-<h3 data-number="16.5" class="anchored" data-anchor-id="q5.-quelle-requête-permet-de-chercher-alice-même-si-on-tape-alise"><span class="header-section-number">16.5</span> ❓ Q5. Quelle requête permet de chercher “Alice” même si on tape “Alise” ?</h3>
+<section id="q5.-quelle-requête-permet-de-chercher-alice-même-si-on-tape-alise" class="level3">
+<h3 class="anchored" data-anchor-id="q5.-quelle-requête-permet-de-chercher-alice-même-si-on-tape-alise">❓ Q5. Quelle requête permet de chercher “Alice” même si on tape “Alise” ?</h3>
 <ol type="a">
 <li><code>match</code><br>
 </li>
@@ -1832,8 +1864,8 @@ GET /logs-2024-01-15/_mapping</code></pre>
 <hr>
 </section>
 </section>
-<section id="ressources" class="level2" data-number="17">
-<h2 data-number="17" class="anchored" data-anchor-id="ressources"><span class="header-section-number">17</span> 📚 Ressources</h2>
+<section id="ressources" class="level2">
+<h2 class="anchored" data-anchor-id="ressources">📚 Ressources</h2>
 <ul>
 <li><a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html">Elasticsearch Documentation</a></li>
 <li><a href="https://elasticvue.com/">Elasticvue</a> — Interface graphique utilisée dans ce cours</li>
@@ -1842,8 +1874,8 @@ GET /logs-2024-01-15/_mapping</code></pre>
 </ul>
 <hr>
 </section>
-<section id="prochaine-étape" class="level2" data-number="18">
-<h2 data-number="18" class="anchored" data-anchor-id="prochaine-étape"><span class="header-section-number">18</span> ➡️ Prochaine étape</h2>
+<section id="prochaine-étape" class="level2">
+<h2 class="anchored" data-anchor-id="prochaine-étape">➡️ Prochaine étape</h2>
 <p>Tu maîtrises maintenant les bases NoSQL (MongoDB et Elasticsearch) ! Passons au <strong>traitement distribué</strong> avec PySpark.</p>
 <p>👉 <strong>Module suivant : <code>11_pyspark_for_data_engineering.ipynb</code></strong> — PySpark pour le traitement Big Data</p>
 <hr>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>🧰 Bash pour Data Engineers – Bootcamp Data Engineering</title>
+<title>🧰 Bash pour Data Engineers – Bootcamp Data Engineering – From Zero to Hero</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -110,6 +110,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <style>html{ scroll-behavior: smooth; }</style>
 
 
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -282,7 +283,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">Bootcamp Data Engineering</span>
+    <span class="navbar-title">Bootcamp Data Engineering – From Zero to Hero</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -293,11 +294,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/diakite-data/data-engineering-bootcamp"> <i class="bi bi-github" role="img">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="../../#"> <i class="bi bi-lightbulb" role="img" aria-label="Mode clair/sombre">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -380,8 +376,44 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notebooks/beginner/06_intro_databases.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">🧠 Introduction aux bases de données pour Data Engineers</span></a>
+  <a href="../../notebooks/beginner/06_intro_relational_databases.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🗄️ Introduction aux Bases de Données Relationnelles</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/07_sql_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🐘 SQL for Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/08_intro_big_data_distributed.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🐘 Introduction au Big Data &amp; Traitement Distribué</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/09_mongodb_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🍃 MongoDB for Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/10_elasticsearch_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🔍 Elasticsearch for Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/11_pyspark_for_data_engineering.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">⚡ PySpark for Data Engineering</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/12_orchestration_pipelines.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">⏰ Orchestration de Pipelines Data</span></a>
   </div>
 </li>
       </ul>
@@ -396,74 +428,74 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#prérequis" id="toc-prérequis" class="nav-link active" data-scroll-target="#prérequis"><span class="header-section-number">1</span> 📋 Prérequis</a></li>
-  <li><a href="#objectifs-du-module" id="toc-objectifs-du-module" class="nav-link" data-scroll-target="#objectifs-du-module"><span class="header-section-number">2</span> 🎯 Objectifs du module</a></li>
-  <li><a href="#cest-quoi-le-langage-bash" id="toc-cest-quoi-le-langage-bash" class="nav-link" data-scroll-target="#cest-quoi-le-langage-bash"><span class="header-section-number">3</span> 🧠 C’est quoi le langage Bash ?</a>
+  <li><a href="#prérequis" id="toc-prérequis" class="nav-link active" data-scroll-target="#prérequis">📋 Prérequis</a></li>
+  <li><a href="#objectifs-du-module" id="toc-objectifs-du-module" class="nav-link" data-scroll-target="#objectifs-du-module">🎯 Objectifs du module</a></li>
+  <li><a href="#cest-quoi-le-langage-bash" id="toc-cest-quoi-le-langage-bash" class="nav-link" data-scroll-target="#cest-quoi-le-langage-bash">🧠 C’est quoi le langage Bash ?</a>
   <ul class="collapse">
-  <li><a href="#pourquoi-cest-utile-pour-un-data-engineer" id="toc-pourquoi-cest-utile-pour-un-data-engineer" class="nav-link" data-scroll-target="#pourquoi-cest-utile-pour-un-data-engineer"><span class="header-section-number">3.1</span> 🧰 Pourquoi c’est utile pour un Data Engineer ?</a></li>
+  <li><a href="#pourquoi-cest-utile-pour-un-data-engineer" id="toc-pourquoi-cest-utile-pour-un-data-engineer" class="nav-link" data-scroll-target="#pourquoi-cest-utile-pour-un-data-engineer">🧰 Pourquoi c’est utile pour un Data Engineer ?</a></li>
   </ul></li>
-  <li><a href="#comment-accéder-à-bash" id="toc-comment-accéder-à-bash" class="nav-link" data-scroll-target="#comment-accéder-à-bash"><span class="header-section-number">4</span> 💻 Comment accéder à Bash ?</a>
+  <li><a href="#comment-accéder-à-bash" id="toc-comment-accéder-à-bash" class="nav-link" data-scroll-target="#comment-accéder-à-bash">💻 Comment accéder à Bash ?</a>
   <ul class="collapse">
-  <li><a href="#installation-de-wsl-sur-windows" id="toc-installation-de-wsl-sur-windows" class="nav-link" data-scroll-target="#installation-de-wsl-sur-windows"><span class="header-section-number">4.1</span> Installation de WSL sur Windows</a></li>
-  <li><a href="#vérifier-ta-version-de-bash" id="toc-vérifier-ta-version-de-bash" class="nav-link" data-scroll-target="#vérifier-ta-version-de-bash"><span class="header-section-number">4.2</span> Vérifier ta version de Bash</a></li>
+  <li><a href="#installation-de-wsl-sur-windows" id="toc-installation-de-wsl-sur-windows" class="nav-link" data-scroll-target="#installation-de-wsl-sur-windows">Installation de WSL sur Windows</a></li>
+  <li><a href="#vérifier-ta-version-de-bash" id="toc-vérifier-ta-version-de-bash" class="nav-link" data-scroll-target="#vérifier-ta-version-de-bash">Vérifier ta version de Bash</a></li>
   </ul></li>
-  <li><a href="#navigation-exploration" id="toc-navigation-exploration" class="nav-link" data-scroll-target="#navigation-exploration"><span class="header-section-number">5</span> 📁 1. Navigation &amp; exploration</a>
+  <li><a href="#navigation-exploration" id="toc-navigation-exploration" class="nav-link" data-scroll-target="#navigation-exploration">📁 1. Navigation &amp; exploration</a>
   <ul class="collapse">
-  <li><a href="#raccourcis-de-navigation-essentiels" id="toc-raccourcis-de-navigation-essentiels" class="nav-link" data-scroll-target="#raccourcis-de-navigation-essentiels"><span class="header-section-number">5.1</span> 🔑 Raccourcis de navigation essentiels</a></li>
+  <li><a href="#raccourcis-de-navigation-essentiels" id="toc-raccourcis-de-navigation-essentiels" class="nav-link" data-scroll-target="#raccourcis-de-navigation-essentiels">🔑 Raccourcis de navigation essentiels</a></li>
   </ul></li>
-  <li><a href="#création-et-manipulation-de-fichiers" id="toc-création-et-manipulation-de-fichiers" class="nav-link" data-scroll-target="#création-et-manipulation-de-fichiers"><span class="header-section-number">6</span> 📂 2. Création et manipulation de fichiers</a></li>
-  <li><a href="#lecture-de-contenu" id="toc-lecture-de-contenu" class="nav-link" data-scroll-target="#lecture-de-contenu"><span class="header-section-number">7</span> 📄 3. Lecture de contenu</a>
+  <li><a href="#création-et-manipulation-de-fichiers" id="toc-création-et-manipulation-de-fichiers" class="nav-link" data-scroll-target="#création-et-manipulation-de-fichiers">📂 2. Création et manipulation de fichiers</a></li>
+  <li><a href="#lecture-de-contenu" id="toc-lecture-de-contenu" class="nav-link" data-scroll-target="#lecture-de-contenu">📄 3. Lecture de contenu</a>
   <ul class="collapse">
-  <li><a href="#lire-des-gros-fichiers-avec-less" id="toc-lire-des-gros-fichiers-avec-less" class="nav-link" data-scroll-target="#lire-des-gros-fichiers-avec-less"><span class="header-section-number">7.1</span> 📖 Lire des gros fichiers avec <code>less</code></a></li>
+  <li><a href="#lire-des-gros-fichiers-avec-less" id="toc-lire-des-gros-fichiers-avec-less" class="nav-link" data-scroll-target="#lire-des-gros-fichiers-avec-less">📖 Lire des gros fichiers avec <code>less</code></a></li>
   </ul></li>
-  <li><a href="#recherche-filtrage" id="toc-recherche-filtrage" class="nav-link" data-scroll-target="#recherche-filtrage"><span class="header-section-number">8</span> 🔍 4. Recherche &amp; filtrage</a></li>
-  <li><a href="#pipes-redirections" id="toc-pipes-redirections" class="nav-link" data-scroll-target="#pipes-redirections"><span class="header-section-number">9</span> 🔗 5. Pipes &amp; redirections</a>
+  <li><a href="#recherche-filtrage" id="toc-recherche-filtrage" class="nav-link" data-scroll-target="#recherche-filtrage">🔍 4. Recherche &amp; filtrage</a></li>
+  <li><a href="#pipes-redirections" id="toc-pipes-redirections" class="nav-link" data-scroll-target="#pipes-redirections">🔗 5. Pipes &amp; redirections</a>
   <ul class="collapse">
-  <li><a href="#récapitulatif-des-redirections" id="toc-récapitulatif-des-redirections" class="nav-link" data-scroll-target="#récapitulatif-des-redirections"><span class="header-section-number">9.1</span> 📋 Récapitulatif des redirections</a></li>
+  <li><a href="#récapitulatif-des-redirections" id="toc-récapitulatif-des-redirections" class="nav-link" data-scroll-target="#récapitulatif-des-redirections">📋 Récapitulatif des redirections</a></li>
   </ul></li>
-  <li><a href="#variables-et-boucles" id="toc-variables-et-boucles" class="nav-link" data-scroll-target="#variables-et-boucles"><span class="header-section-number">10</span> 🔁 6. Variables et boucles</a></li>
-  <li><a href="#conditions-ifelse" id="toc-conditions-ifelse" class="nav-link" data-scroll-target="#conditions-ifelse"><span class="header-section-number">11</span> 🔀 7. Conditions (if/else)</a>
+  <li><a href="#variables-et-boucles" id="toc-variables-et-boucles" class="nav-link" data-scroll-target="#variables-et-boucles">🔁 6. Variables et boucles</a></li>
+  <li><a href="#conditions-ifelse" id="toc-conditions-ifelse" class="nav-link" data-scroll-target="#conditions-ifelse">🔀 7. Conditions (if/else)</a>
   <ul class="collapse">
-  <li><a href="#opérateurs-de-test" id="toc-opérateurs-de-test" class="nav-link" data-scroll-target="#opérateurs-de-test"><span class="header-section-number">11.1</span> 📋 Opérateurs de test</a></li>
+  <li><a href="#opérateurs-de-test" id="toc-opérateurs-de-test" class="nav-link" data-scroll-target="#opérateurs-de-test">📋 Opérateurs de test</a></li>
   </ul></li>
-  <li><a href="#créer-et-exécuter-un-script-bash" id="toc-créer-et-exécuter-un-script-bash" class="nav-link" data-scroll-target="#créer-et-exécuter-un-script-bash"><span class="header-section-number">12</span> ⚙️ 8. Créer et exécuter un script Bash</a></li>
-  <li><a href="#automatisation-avec-cron" id="toc-automatisation-avec-cron" class="nav-link" data-scroll-target="#automatisation-avec-cron"><span class="header-section-number">13</span> ⏰ 9. Automatisation avec Cron</a>
+  <li><a href="#créer-et-exécuter-un-script-bash" id="toc-créer-et-exécuter-un-script-bash" class="nav-link" data-scroll-target="#créer-et-exécuter-un-script-bash">⚙️ 8. Créer et exécuter un script Bash</a></li>
+  <li><a href="#automatisation-avec-cron" id="toc-automatisation-avec-cron" class="nav-link" data-scroll-target="#automatisation-avec-cron">⏰ 9. Automatisation avec Cron</a>
   <ul class="collapse">
-  <li><a href="#format-dune-ligne-crontab" id="toc-format-dune-ligne-crontab" class="nav-link" data-scroll-target="#format-dune-ligne-crontab"><span class="header-section-number">13.1</span> 📅 Format d’une ligne crontab</a></li>
-  <li><a href="#exemples-courants-pour-data-engineers" id="toc-exemples-courants-pour-data-engineers" class="nav-link" data-scroll-target="#exemples-courants-pour-data-engineers"><span class="header-section-number">13.2</span> 🔧 Exemples courants pour Data Engineers</a></li>
-  <li><a href="#commandes-cron" id="toc-commandes-cron" class="nav-link" data-scroll-target="#commandes-cron"><span class="header-section-number">13.3</span> 💻 Commandes cron</a></li>
-  <li><a href="#exemple-de-crontab-pour-data-engineer" id="toc-exemple-de-crontab-pour-data-engineer" class="nav-link" data-scroll-target="#exemple-de-crontab-pour-data-engineer"><span class="header-section-number">13.4</span> 📝 Exemple de crontab pour Data Engineer</a></li>
+  <li><a href="#format-dune-ligne-crontab" id="toc-format-dune-ligne-crontab" class="nav-link" data-scroll-target="#format-dune-ligne-crontab">📅 Format d’une ligne crontab</a></li>
+  <li><a href="#exemples-courants-pour-data-engineers" id="toc-exemples-courants-pour-data-engineers" class="nav-link" data-scroll-target="#exemples-courants-pour-data-engineers">🔧 Exemples courants pour Data Engineers</a></li>
+  <li><a href="#commandes-cron" id="toc-commandes-cron" class="nav-link" data-scroll-target="#commandes-cron">💻 Commandes cron</a></li>
+  <li><a href="#exemple-de-crontab-pour-data-engineer" id="toc-exemple-de-crontab-pour-data-engineer" class="nav-link" data-scroll-target="#exemple-de-crontab-pour-data-engineer">📝 Exemple de crontab pour Data Engineer</a></li>
   </ul></li>
-  <li><a href="#exercice-pratique" id="toc-exercice-pratique" class="nav-link" data-scroll-target="#exercice-pratique"><span class="header-section-number">14</span> ✅ Exercice pratique</a>
+  <li><a href="#exercice-pratique" id="toc-exercice-pratique" class="nav-link" data-scroll-target="#exercice-pratique">✅ Exercice pratique</a>
   <ul class="collapse">
-  <li><a href="#instructions" id="toc-instructions" class="nav-link" data-scroll-target="#instructions"><span class="header-section-number">14.1</span> 🧠 Instructions</a></li>
-  <li><a href="#correction" id="toc-correction" class="nav-link" data-scroll-target="#correction"><span class="header-section-number">14.2</span> ✅ Correction</a></li>
+  <li><a href="#instructions" id="toc-instructions" class="nav-link" data-scroll-target="#instructions">🧠 Instructions</a></li>
+  <li><a href="#correction" id="toc-correction" class="nav-link" data-scroll-target="#correction">✅ Correction</a></li>
   </ul></li>
-  <li><a href="#cheatsheet-bash-commandes-essentielles" id="toc-cheatsheet-bash-commandes-essentielles" class="nav-link" data-scroll-target="#cheatsheet-bash-commandes-essentielles"><span class="header-section-number">15</span> 📄 Cheatsheet Bash – Commandes essentielles</a></li>
-  <li><a href="#erreurs-classiques-à-éviter" id="toc-erreurs-classiques-à-éviter" class="nav-link" data-scroll-target="#erreurs-classiques-à-éviter"><span class="header-section-number">16</span> ⚠️ Erreurs classiques à éviter</a></li>
-  <li><a href="#quiz-de-fin-de-module" id="toc-quiz-de-fin-de-module" class="nav-link" data-scroll-target="#quiz-de-fin-de-module"><span class="header-section-number">17</span> 🧪 Quiz de fin de module</a>
+  <li><a href="#cheatsheet-bash-commandes-essentielles" id="toc-cheatsheet-bash-commandes-essentielles" class="nav-link" data-scroll-target="#cheatsheet-bash-commandes-essentielles">📄 Cheatsheet Bash – Commandes essentielles</a></li>
+  <li><a href="#erreurs-classiques-à-éviter" id="toc-erreurs-classiques-à-éviter" class="nav-link" data-scroll-target="#erreurs-classiques-à-éviter">⚠️ Erreurs classiques à éviter</a></li>
+  <li><a href="#quiz-de-fin-de-module" id="toc-quiz-de-fin-de-module" class="nav-link" data-scroll-target="#quiz-de-fin-de-module">🧪 Quiz de fin de module</a>
   <ul class="collapse">
-  <li><a href="#q1.-quelle-commande-affiche-le-chemin-du-dossier-courant" id="toc-q1.-quelle-commande-affiche-le-chemin-du-dossier-courant" class="nav-link" data-scroll-target="#q1.-quelle-commande-affiche-le-chemin-du-dossier-courant"><span class="header-section-number">17.1</span> ❓ Q1. Quelle commande affiche le chemin du dossier courant ?</a></li>
-  <li><a href="#q2.-que-fait-la-commande-rm--rf-mon_dossier" id="toc-q2.-que-fait-la-commande-rm--rf-mon_dossier" class="nav-link" data-scroll-target="#q2.-que-fait-la-commande-rm--rf-mon_dossier"><span class="header-section-number">17.2</span> ❓ Q2. Que fait la commande <code>rm -rf mon_dossier/</code> ?</a></li>
-  <li><a href="#q3.-quelle-commande-affiche-les-10-premières-lignes-dun-fichier" id="toc-q3.-quelle-commande-affiche-les-10-premières-lignes-dun-fichier" class="nav-link" data-scroll-target="#q3.-quelle-commande-affiche-les-10-premières-lignes-dun-fichier"><span class="header-section-number">17.3</span> ❓ Q3. Quelle commande affiche les 10 premières lignes d’un fichier ?</a></li>
-  <li><a href="#q4.-pourquoi-écrire-fichier-au-lieu-de-fichier" id="toc-q4.-pourquoi-écrire-fichier-au-lieu-de-fichier" class="nav-link" data-scroll-target="#q4.-pourquoi-écrire-fichier-au-lieu-de-fichier"><span class="header-section-number">17.4</span> ❓ Q4. Pourquoi écrire <code>"$fichier"</code> au lieu de <code>$fichier</code> ?</a></li>
-  <li><a href="#q5.-que-signifie-le-pipe-en-bash" id="toc-q5.-que-signifie-le-pipe-en-bash" class="nav-link" data-scroll-target="#q5.-que-signifie-le-pipe-en-bash"><span class="header-section-number">17.5</span> ❓ Q5. Que signifie le <code>|</code> (pipe) en Bash ?</a></li>
-  <li><a href="#q6.-quelle-expression-cron-exécute-un-script-tous-les-jours-à-2h-du-matin" id="toc-q6.-quelle-expression-cron-exécute-un-script-tous-les-jours-à-2h-du-matin" class="nav-link" data-scroll-target="#q6.-quelle-expression-cron-exécute-un-script-tous-les-jours-à-2h-du-matin"><span class="header-section-number">17.6</span> ❓ Q6. Quelle expression cron exécute un script tous les jours à 2h du matin ?</a></li>
+  <li><a href="#q1.-quelle-commande-affiche-le-chemin-du-dossier-courant" id="toc-q1.-quelle-commande-affiche-le-chemin-du-dossier-courant" class="nav-link" data-scroll-target="#q1.-quelle-commande-affiche-le-chemin-du-dossier-courant">❓ Q1. Quelle commande affiche le chemin du dossier courant ?</a></li>
+  <li><a href="#q2.-que-fait-la-commande-rm--rf-mon_dossier" id="toc-q2.-que-fait-la-commande-rm--rf-mon_dossier" class="nav-link" data-scroll-target="#q2.-que-fait-la-commande-rm--rf-mon_dossier">❓ Q2. Que fait la commande <code>rm -rf mon_dossier/</code> ?</a></li>
+  <li><a href="#q3.-quelle-commande-affiche-les-10-premières-lignes-dun-fichier" id="toc-q3.-quelle-commande-affiche-les-10-premières-lignes-dun-fichier" class="nav-link" data-scroll-target="#q3.-quelle-commande-affiche-les-10-premières-lignes-dun-fichier">❓ Q3. Quelle commande affiche les 10 premières lignes d’un fichier ?</a></li>
+  <li><a href="#q4.-pourquoi-écrire-fichier-au-lieu-de-fichier" id="toc-q4.-pourquoi-écrire-fichier-au-lieu-de-fichier" class="nav-link" data-scroll-target="#q4.-pourquoi-écrire-fichier-au-lieu-de-fichier">❓ Q4. Pourquoi écrire <code>"$fichier"</code> au lieu de <code>$fichier</code> ?</a></li>
+  <li><a href="#q5.-que-signifie-le-pipe-en-bash" id="toc-q5.-que-signifie-le-pipe-en-bash" class="nav-link" data-scroll-target="#q5.-que-signifie-le-pipe-en-bash">❓ Q5. Que signifie le <code>|</code> (pipe) en Bash ?</a></li>
+  <li><a href="#q6.-quelle-expression-cron-exécute-un-script-tous-les-jours-à-2h-du-matin" id="toc-q6.-quelle-expression-cron-exécute-un-script-tous-les-jours-à-2h-du-matin" class="nav-link" data-scroll-target="#q6.-quelle-expression-cron-exécute-un-script-tous-les-jours-à-2h-du-matin">❓ Q6. Quelle expression cron exécute un script tous les jours à 2h du matin ?</a></li>
   </ul></li>
-  <li><a href="#mini-projet-archiver-intelligemment-des-fichiers-csv" id="toc-mini-projet-archiver-intelligemment-des-fichiers-csv" class="nav-link" data-scroll-target="#mini-projet-archiver-intelligemment-des-fichiers-csv"><span class="header-section-number">18</span> 🚀 Mini-projet : Archiver intelligemment des fichiers CSV</a>
+  <li><a href="#mini-projet-archiver-intelligemment-des-fichiers-csv" id="toc-mini-projet-archiver-intelligemment-des-fichiers-csv" class="nav-link" data-scroll-target="#mini-projet-archiver-intelligemment-des-fichiers-csv">🚀 Mini-projet : Archiver intelligemment des fichiers CSV</a>
   <ul class="collapse">
-  <li><a href="#objectif" id="toc-objectif" class="nav-link" data-scroll-target="#objectif"><span class="header-section-number">18.1</span> 🎯 Objectif</a></li>
-  <li><a href="#contexte" id="toc-contexte" class="nav-link" data-scroll-target="#contexte"><span class="header-section-number">18.2</span> 🔧 Contexte</a></li>
-  <li><a href="#contraintes" id="toc-contraintes" class="nav-link" data-scroll-target="#contraintes"><span class="header-section-number">18.3</span> 🧠 Contraintes</a></li>
-  <li><a href="#solution-du-mini-projet" id="toc-solution-du-mini-projet" class="nav-link" data-scroll-target="#solution-du-mini-projet"><span class="header-section-number">18.4</span> ✅ Solution du mini-projet</a></li>
+  <li><a href="#objectif" id="toc-objectif" class="nav-link" data-scroll-target="#objectif">🎯 Objectif</a></li>
+  <li><a href="#contexte" id="toc-contexte" class="nav-link" data-scroll-target="#contexte">🔧 Contexte</a></li>
+  <li><a href="#contraintes" id="toc-contraintes" class="nav-link" data-scroll-target="#contraintes">🧠 Contraintes</a></li>
+  <li><a href="#solution-du-mini-projet" id="toc-solution-du-mini-projet" class="nav-link" data-scroll-target="#solution-du-mini-projet">✅ Solution du mini-projet</a></li>
   </ul></li>
-  <li><a href="#ressources-pour-aller-plus-loin" id="toc-ressources-pour-aller-plus-loin" class="nav-link" data-scroll-target="#ressources-pour-aller-plus-loin"><span class="header-section-number">19</span> 📚 Ressources pour aller plus loin</a>
+  <li><a href="#ressources-pour-aller-plus-loin" id="toc-ressources-pour-aller-plus-loin" class="nav-link" data-scroll-target="#ressources-pour-aller-plus-loin">📚 Ressources pour aller plus loin</a>
   <ul class="collapse">
-  <li><a href="#sites-outils" id="toc-sites-outils" class="nav-link" data-scroll-target="#sites-outils"><span class="header-section-number">19.1</span> 🌐 Sites &amp; outils</a></li>
-  <li><a href="#documentation" id="toc-documentation" class="nav-link" data-scroll-target="#documentation"><span class="header-section-number">19.2</span> 📖 Documentation</a></li>
-  <li><a href="#pratique" id="toc-pratique" class="nav-link" data-scroll-target="#pratique"><span class="header-section-number">19.3</span> 🎮 Pratique</a></li>
+  <li><a href="#sites-outils" id="toc-sites-outils" class="nav-link" data-scroll-target="#sites-outils">🌐 Sites &amp; outils</a></li>
+  <li><a href="#documentation" id="toc-documentation" class="nav-link" data-scroll-target="#documentation">📖 Documentation</a></li>
+  <li><a href="#pratique" id="toc-pratique" class="nav-link" data-scroll-target="#pratique">🎮 Pratique</a></li>
   </ul></li>
-  <li><a href="#prochaine-étape" id="toc-prochaine-étape" class="nav-link" data-scroll-target="#prochaine-étape"><span class="header-section-number">20</span> ➡️ Prochaine étape</a></li>
+  <li><a href="#prochaine-étape" id="toc-prochaine-étape" class="nav-link" data-scroll-target="#prochaine-étape">➡️ Prochaine étape</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="git@github.com:diakite-data/data-engineering-bootcamp.git/blob/main/notebooks/beginner/02_bash_for_data_engineers.ipynb" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="git@github.com:diakite-data/data-engineering-bootcamp.git/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -492,8 +524,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>Bienvenue dans ce module où tu vas apprendre les <strong>commandes Bash essentielles</strong> pour manipuler des fichiers, automatiser des tâches, et interagir avec ton environnement système — des compétences indispensables pour un Data Engineer !</p>
 <hr>
-<section id="prérequis" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="prérequis"><span class="header-section-number">1</span> 📋 Prérequis</h2>
+<section id="prérequis" class="level2">
+<h2 class="anchored" data-anchor-id="prérequis">📋 Prérequis</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 40%">
@@ -517,12 +549,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 </section>
-<section id="objectifs-du-module" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="objectifs-du-module"><span class="header-section-number">2</span> 🎯 Objectifs du module</h2>
+<section id="objectifs-du-module" class="level2">
+<h2 class="anchored" data-anchor-id="objectifs-du-module">🎯 Objectifs du module</h2>
 <p>À la fin de ce module, tu seras capable de : - Naviguer dans l’arborescence de fichiers - Manipuler des fichiers et dossiers - Filtrer et rechercher dans des données - Écrire des scripts Bash pour automatiser des tâches - Planifier des jobs avec cron</p>
 </section>
-<section id="cest-quoi-le-langage-bash" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="cest-quoi-le-langage-bash"><span class="header-section-number">3</span> 🧠 C’est quoi le langage Bash ?</h2>
+<section id="cest-quoi-le-langage-bash" class="level2">
+<h2 class="anchored" data-anchor-id="cest-quoi-le-langage-bash">🧠 C’est quoi le langage Bash ?</h2>
 <p><strong>Bash</strong> (abréviation de <strong>Bourne Again SHell</strong>) est un <strong>langage de commande et de script</strong> utilisé dans la majorité des systèmes Unix/Linux (et même sous Windows via WSL ou Git Bash).</p>
 <p>Il te permet de :</p>
 <ul>
@@ -535,8 +567,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>🔄 Écrire des <strong>scripts shell</strong> pour lancer des traitements de données</li>
 </ul>
 <hr>
-<section id="pourquoi-cest-utile-pour-un-data-engineer" class="level3" data-number="3.1">
-<h3 data-number="3.1" class="anchored" data-anchor-id="pourquoi-cest-utile-pour-un-data-engineer"><span class="header-section-number">3.1</span> 🧰 Pourquoi c’est utile pour un Data Engineer ?</h3>
+<section id="pourquoi-cest-utile-pour-un-data-engineer" class="level3">
+<h3 class="anchored" data-anchor-id="pourquoi-cest-utile-pour-un-data-engineer">🧰 Pourquoi c’est utile pour un Data Engineer ?</h3>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 44%">
@@ -586,8 +618,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </blockquote>
 </section>
 </section>
-<section id="comment-accéder-à-bash" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="comment-accéder-à-bash"><span class="header-section-number">4</span> 💻 Comment accéder à Bash ?</h2>
+<section id="comment-accéder-à-bash" class="level2">
+<h2 class="anchored" data-anchor-id="comment-accéder-à-bash">💻 Comment accéder à Bash ?</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -614,20 +646,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<section id="installation-de-wsl-sur-windows" class="level3" data-number="4.1">
-<h3 data-number="4.1" class="anchored" data-anchor-id="installation-de-wsl-sur-windows"><span class="header-section-number">4.1</span> Installation de WSL sur Windows</h3>
+<section id="installation-de-wsl-sur-windows" class="level3">
+<h3 class="anchored" data-anchor-id="installation-de-wsl-sur-windows">Installation de WSL sur Windows</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Dans PowerShell en administrateur</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>wsl <span class="op">--</span>install</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Après redémarrage, tu auras accès à un terminal Linux complet !</p>
 </section>
-<section id="vérifier-ta-version-de-bash" class="level3" data-number="4.2">
-<h3 data-number="4.2" class="anchored" data-anchor-id="vérifier-ta-version-de-bash"><span class="header-section-number">4.2</span> Vérifier ta version de Bash</h3>
+<section id="vérifier-ta-version-de-bash" class="level3">
+<h3 class="anchored" data-anchor-id="vérifier-ta-version-de-bash">Vérifier ta version de Bash</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bash</span> <span class="at">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 </section>
-<section id="navigation-exploration" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="navigation-exploration"><span class="header-section-number">5</span> 📁 1. Navigation &amp; exploration</h2>
+<section id="navigation-exploration" class="level2">
+<h2 class="anchored" data-anchor-id="navigation-exploration">📁 1. Navigation &amp; exploration</h2>
 <p>Les commandes de base pour se déplacer dans l’arborescence :</p>
 <div id="cef904bf" class="cell">
 <details class="code-fold">
@@ -659,8 +691,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<section id="raccourcis-de-navigation-essentiels" class="level3" data-number="5.1">
-<h3 data-number="5.1" class="anchored" data-anchor-id="raccourcis-de-navigation-essentiels"><span class="header-section-number">5.1</span> 🔑 Raccourcis de navigation essentiels</h3>
+<section id="raccourcis-de-navigation-essentiels" class="level3">
+<h3 class="anchored" data-anchor-id="raccourcis-de-navigation-essentiels">🔑 Raccourcis de navigation essentiels</h3>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -700,8 +732,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 </section>
-<section id="création-et-manipulation-de-fichiers" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="création-et-manipulation-de-fichiers"><span class="header-section-number">6</span> 📂 2. Création et manipulation de fichiers</h2>
+<section id="création-et-manipulation-de-fichiers" class="level2">
+<h2 class="anchored" data-anchor-id="création-et-manipulation-de-fichiers">📂 2. Création et manipulation de fichiers</h2>
 <p>Créer, copier, déplacer, supprimer :</p>
 <div id="66ca12a5" class="cell">
 <details class="code-fold">
@@ -740,8 +772,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <hr>
 </section>
-<section id="lecture-de-contenu" class="level2" data-number="7">
-<h2 data-number="7" class="anchored" data-anchor-id="lecture-de-contenu"><span class="header-section-number">7</span> 📄 3. Lecture de contenu</h2>
+<section id="lecture-de-contenu" class="level2">
+<h2 class="anchored" data-anchor-id="lecture-de-contenu">📄 3. Lecture de contenu</h2>
 <p>Lire, afficher, compter les lignes :</p>
 <div id="create_sample" class="cell">
 <details class="code-fold">
@@ -785,8 +817,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="fu">wc</span> <span class="at">-c</span> ventes.csv    <span class="co"># Nombre de caractères</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<section id="lire-des-gros-fichiers-avec-less" class="level3" data-number="7.1">
-<h3 data-number="7.1" class="anchored" data-anchor-id="lire-des-gros-fichiers-avec-less"><span class="header-section-number">7.1</span> 📖 Lire des gros fichiers avec <code>less</code></h3>
+<section id="lire-des-gros-fichiers-avec-less" class="level3">
+<h3 class="anchored" data-anchor-id="lire-des-gros-fichiers-avec-less">📖 Lire des gros fichiers avec <code>less</code></h3>
 <p>Pour les fichiers volumineux, utilise <code>less</code> qui permet de naviguer :</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">less</span> gros_fichier.csv</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <table class="caption-top table">
@@ -830,8 +862,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 </section>
-<section id="recherche-filtrage" class="level2" data-number="8">
-<h2 data-number="8" class="anchored" data-anchor-id="recherche-filtrage"><span class="header-section-number">8</span> 🔍 4. Recherche &amp; filtrage</h2>
+<section id="recherche-filtrage" class="level2">
+<h2 class="anchored" data-anchor-id="recherche-filtrage">🔍 4. Recherche &amp; filtrage</h2>
 <p>Extraire des informations précises — <strong>essentiel pour un Data Engineer</strong> !</p>
 <div id="f7202b4d" class="cell">
 <details class="code-fold">
@@ -923,8 +955,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <hr>
 </section>
-<section id="pipes-redirections" class="level2" data-number="9">
-<h2 data-number="9" class="anchored" data-anchor-id="pipes-redirections"><span class="header-section-number">9</span> 🔗 5. Pipes &amp; redirections</h2>
+<section id="pipes-redirections" class="level2">
+<h2 class="anchored" data-anchor-id="pipes-redirections">🔗 5. Pipes &amp; redirections</h2>
 <p>Le <strong>pipe</strong> (<code>|</code>) est l’outil le plus puissant de Bash : il permet de <strong>chaîner des commandes</strong> en envoyant la sortie d’une commande vers l’entrée de la suivante.</p>
 <div id="1820350e" class="cell">
 <details class="code-fold">
@@ -974,8 +1006,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-f</span> laptops.txt erreurs.log</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<section id="récapitulatif-des-redirections" class="level3" data-number="9.1">
-<h3 data-number="9.1" class="anchored" data-anchor-id="récapitulatif-des-redirections"><span class="header-section-number">9.1</span> 📋 Récapitulatif des redirections</h3>
+<section id="récapitulatif-des-redirections" class="level3">
+<h3 class="anchored" data-anchor-id="récapitulatif-des-redirections">📋 Récapitulatif des redirections</h3>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 30%">
@@ -1025,8 +1057,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 </section>
-<section id="variables-et-boucles" class="level2" data-number="10">
-<h2 data-number="10" class="anchored" data-anchor-id="variables-et-boucles"><span class="header-section-number">10</span> 🔁 6. Variables et boucles</h2>
+<section id="variables-et-boucles" class="level2">
+<h2 class="anchored" data-anchor-id="variables-et-boucles">🔁 6. Variables et boucles</h2>
 <p>Automatiser avec des scripts bash :</p>
 <div id="variables" class="cell">
 <details class="code-fold">
@@ -1090,8 +1122,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <hr>
 </section>
-<section id="conditions-ifelse" class="level2" data-number="11">
-<h2 data-number="11" class="anchored" data-anchor-id="conditions-ifelse"><span class="header-section-number">11</span> 🔀 7. Conditions (if/else)</h2>
+<section id="conditions-ifelse" class="level2">
+<h2 class="anchored" data-anchor-id="conditions-ifelse">🔀 7. Conditions (if/else)</h2>
 <p>Prendre des décisions dans tes scripts :</p>
 <div id="conditions_code" class="cell">
 <details class="code-fold">
@@ -1124,8 +1156,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a><span class="cf">fi</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<section id="opérateurs-de-test" class="level3" data-number="11.1">
-<h3 data-number="11.1" class="anchored" data-anchor-id="opérateurs-de-test"><span class="header-section-number">11.1</span> 📋 Opérateurs de test</h3>
+<section id="opérateurs-de-test" class="level3">
+<h3 class="anchored" data-anchor-id="opérateurs-de-test">📋 Opérateurs de test</h3>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -1219,8 +1251,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 </section>
-<section id="créer-et-exécuter-un-script-bash" class="level2" data-number="12">
-<h2 data-number="12" class="anchored" data-anchor-id="créer-et-exécuter-un-script-bash"><span class="header-section-number">12</span> ⚙️ 8. Créer et exécuter un script Bash</h2>
+<section id="créer-et-exécuter-un-script-bash" class="level2">
+<h2 class="anchored" data-anchor-id="créer-et-exécuter-un-script-bash">⚙️ 8. Créer et exécuter un script Bash</h2>
 <p>Un script Bash est simplement un fichier texte contenant des commandes :</p>
 <div id="14b4eee3" class="cell">
 <details class="code-fold">
@@ -1265,11 +1297,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <hr>
 </section>
-<section id="automatisation-avec-cron" class="level2" data-number="13">
-<h2 data-number="13" class="anchored" data-anchor-id="automatisation-avec-cron"><span class="header-section-number">13</span> ⏰ 9. Automatisation avec Cron</h2>
+<section id="automatisation-avec-cron" class="level2">
+<h2 class="anchored" data-anchor-id="automatisation-avec-cron">⏰ 9. Automatisation avec Cron</h2>
 <p><strong>Cron</strong> permet de planifier l’exécution automatique de scripts — <strong>indispensable pour les pipelines ETL</strong> !</p>
-<section id="format-dune-ligne-crontab" class="level3" data-number="13.1">
-<h3 data-number="13.1" class="anchored" data-anchor-id="format-dune-ligne-crontab"><span class="header-section-number">13.1</span> 📅 Format d’une ligne crontab</h3>
+<section id="format-dune-ligne-crontab" class="level3">
+<h3 class="anchored" data-anchor-id="format-dune-ligne-crontab">📅 Format d’une ligne crontab</h3>
 <pre><code>┌───────────── minute (0 - 59)
 │ ┌───────────── heure (0 - 23)
 │ │ ┌───────────── jour du mois (1 - 31)
@@ -1278,8 +1310,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 │ │ │ │ │
 * * * * * commande à exécuter</code></pre>
 </section>
-<section id="exemples-courants-pour-data-engineers" class="level3" data-number="13.2">
-<h3 data-number="13.2" class="anchored" data-anchor-id="exemples-courants-pour-data-engineers"><span class="header-section-number">13.2</span> 🔧 Exemples courants pour Data Engineers</h3>
+<section id="exemples-courants-pour-data-engineers" class="level3">
+<h3 class="anchored" data-anchor-id="exemples-courants-pour-data-engineers">🔧 Exemples courants pour Data Engineers</h3>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -1317,8 +1349,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 </section>
-<section id="commandes-cron" class="level3" data-number="13.3">
-<h3 data-number="13.3" class="anchored" data-anchor-id="commandes-cron"><span class="header-section-number">13.3</span> 💻 Commandes cron</h3>
+<section id="commandes-cron" class="level3">
+<h3 class="anchored" data-anchor-id="commandes-cron">💻 Commandes cron</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Éditer la crontab</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">crontab</span> <span class="at">-e</span></span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1328,8 +1360,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Supprimer tous les jobs</span></span>
 <span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="fu">crontab</span> <span class="at">-r</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="exemple-de-crontab-pour-data-engineer" class="level3" data-number="13.4">
-<h3 data-number="13.4" class="anchored" data-anchor-id="exemple-de-crontab-pour-data-engineer"><span class="header-section-number">13.4</span> 📝 Exemple de crontab pour Data Engineer</h3>
+<section id="exemple-de-crontab-pour-data-engineer" class="level3">
+<h3 class="anchored" data-anchor-id="exemple-de-crontab-pour-data-engineer">📝 Exemple de crontab pour Data Engineer</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ETL quotidien à 2h du matin</span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="ex">0</span> 2 <span class="pp">*</span> <span class="pp">*</span> <span class="pp">*</span> /home/user/scripts/etl_pipeline.sh <span class="op">&gt;&gt;</span> /var/log/etl.log <span class="dv">2</span><span class="op">&gt;&amp;</span><span class="dv">1</span></span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1344,10 +1376,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 </section>
-<section id="exercice-pratique" class="level2" data-number="14">
-<h2 data-number="14" class="anchored" data-anchor-id="exercice-pratique"><span class="header-section-number">14</span> ✅ Exercice pratique</h2>
-<section id="instructions" class="level3" data-number="14.1">
-<h3 data-number="14.1" class="anchored" data-anchor-id="instructions"><span class="header-section-number">14.1</span> 🧠 Instructions</h3>
+<section id="exercice-pratique" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-pratique">✅ Exercice pratique</h2>
+<section id="instructions" class="level3">
+<h3 class="anchored" data-anchor-id="instructions">🧠 Instructions</h3>
 <ol type="1">
 <li><p><strong>Crée un dossier de travail</strong> nommé <code>mon_premier_script</code></p></li>
 <li><p><strong>Entre dans ce dossier</strong></p></li>
@@ -1369,8 +1401,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 <p>📌 <em>Quelle structure utiliser ? (indice : boucle <code>for</code>)</em></p>
 </section>
-<section id="correction" class="level3" data-number="14.2">
-<h3 data-number="14.2" class="anchored" data-anchor-id="correction"><span class="header-section-number">14.2</span> ✅ Correction</h3>
+<section id="correction" class="level3">
+<h3 class="anchored" data-anchor-id="correction">✅ Correction</h3>
 <details>
 <summary>
 📥 Afficher la correction complète
@@ -1409,8 +1441,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 </section>
-<section id="cheatsheet-bash-commandes-essentielles" class="level2" data-number="15">
-<h2 data-number="15" class="anchored" data-anchor-id="cheatsheet-bash-commandes-essentielles"><span class="header-section-number">15</span> 📄 Cheatsheet Bash – Commandes essentielles</h2>
+<section id="cheatsheet-bash-commandes-essentielles" class="level2">
+<h2 class="anchored" data-anchor-id="cheatsheet-bash-commandes-essentielles">📄 Cheatsheet Bash – Commandes essentielles</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 32%">
@@ -1555,8 +1587,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>📥 <a href="https://hal.science/hal-04118265v1/file/2022-11-21_nojhan__UNIX-Shell_Cheatsheet__poster.pdf">Télécharger le Bash Cheatsheet PDF (fr)</a></p>
 <hr>
 </section>
-<section id="erreurs-classiques-à-éviter" class="level2" data-number="16">
-<h2 data-number="16" class="anchored" data-anchor-id="erreurs-classiques-à-éviter"><span class="header-section-number">16</span> ⚠️ Erreurs classiques à éviter</h2>
+<section id="erreurs-classiques-à-éviter" class="level2">
+<h2 class="anchored" data-anchor-id="erreurs-classiques-à-éviter">⚠️ Erreurs classiques à éviter</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 23%">
@@ -1613,12 +1645,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </blockquote>
 <hr>
 </section>
-<section id="quiz-de-fin-de-module" class="level2" data-number="17">
-<h2 data-number="17" class="anchored" data-anchor-id="quiz-de-fin-de-module"><span class="header-section-number">17</span> 🧪 Quiz de fin de module</h2>
+<section id="quiz-de-fin-de-module" class="level2">
+<h2 class="anchored" data-anchor-id="quiz-de-fin-de-module">🧪 Quiz de fin de module</h2>
 <p>Réponds aux questions suivantes pour vérifier tes acquis.</p>
 <hr>
-<section id="q1.-quelle-commande-affiche-le-chemin-du-dossier-courant" class="level3" data-number="17.1">
-<h3 data-number="17.1" class="anchored" data-anchor-id="q1.-quelle-commande-affiche-le-chemin-du-dossier-courant"><span class="header-section-number">17.1</span> ❓ Q1. Quelle commande affiche le chemin du dossier courant ?</h3>
+<section id="q1.-quelle-commande-affiche-le-chemin-du-dossier-courant" class="level3">
+<h3 class="anchored" data-anchor-id="q1.-quelle-commande-affiche-le-chemin-du-dossier-courant">❓ Q1. Quelle commande affiche le chemin du dossier courant ?</h3>
 <ol type="a">
 <li><code>cd</code><br>
 </li>
@@ -1636,8 +1668,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 <hr>
 </section>
-<section id="q2.-que-fait-la-commande-rm--rf-mon_dossier" class="level3" data-number="17.2">
-<h3 data-number="17.2" class="anchored" data-anchor-id="q2.-que-fait-la-commande-rm--rf-mon_dossier"><span class="header-section-number">17.2</span> ❓ Q2. Que fait la commande <code>rm -rf mon_dossier/</code> ?</h3>
+<section id="q2.-que-fait-la-commande-rm--rf-mon_dossier" class="level3">
+<h3 class="anchored" data-anchor-id="q2.-que-fait-la-commande-rm--rf-mon_dossier">❓ Q2. Que fait la commande <code>rm -rf mon_dossier/</code> ?</h3>
 <ol type="a">
 <li>Redémarre l’ordinateur<br>
 </li>
@@ -1655,8 +1687,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 <hr>
 </section>
-<section id="q3.-quelle-commande-affiche-les-10-premières-lignes-dun-fichier" class="level3" data-number="17.3">
-<h3 data-number="17.3" class="anchored" data-anchor-id="q3.-quelle-commande-affiche-les-10-premières-lignes-dun-fichier"><span class="header-section-number">17.3</span> ❓ Q3. Quelle commande affiche les 10 premières lignes d’un fichier ?</h3>
+<section id="q3.-quelle-commande-affiche-les-10-premières-lignes-dun-fichier" class="level3">
+<h3 class="anchored" data-anchor-id="q3.-quelle-commande-affiche-les-10-premières-lignes-dun-fichier">❓ Q3. Quelle commande affiche les 10 premières lignes d’un fichier ?</h3>
 <ol type="a">
 <li><code>head -n 10</code><br>
 </li>
@@ -1674,8 +1706,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 <hr>
 </section>
-<section id="q4.-pourquoi-écrire-fichier-au-lieu-de-fichier" class="level3" data-number="17.4">
-<h3 data-number="17.4" class="anchored" data-anchor-id="q4.-pourquoi-écrire-fichier-au-lieu-de-fichier"><span class="header-section-number">17.4</span> ❓ Q4. Pourquoi écrire <code>"$fichier"</code> au lieu de <code>$fichier</code> ?</h3>
+<section id="q4.-pourquoi-écrire-fichier-au-lieu-de-fichier" class="level3">
+<h3 class="anchored" data-anchor-id="q4.-pourquoi-écrire-fichier-au-lieu-de-fichier">❓ Q4. Pourquoi écrire <code>"$fichier"</code> au lieu de <code>$fichier</code> ?</h3>
 <ol type="a">
 <li>Pour que Bash reconnaisse les fichiers CSV<br>
 </li>
@@ -1693,8 +1725,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 <hr>
 </section>
-<section id="q5.-que-signifie-le-pipe-en-bash" class="level3" data-number="17.5">
-<h3 data-number="17.5" class="anchored" data-anchor-id="q5.-que-signifie-le-pipe-en-bash"><span class="header-section-number">17.5</span> ❓ Q5. Que signifie le <code>|</code> (pipe) en Bash ?</h3>
+<section id="q5.-que-signifie-le-pipe-en-bash" class="level3">
+<h3 class="anchored" data-anchor-id="q5.-que-signifie-le-pipe-en-bash">❓ Q5. Que signifie le <code>|</code> (pipe) en Bash ?</h3>
 <ol type="a">
 <li>Interrompre une commande<br>
 </li>
@@ -1712,8 +1744,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 <hr>
 </section>
-<section id="q6.-quelle-expression-cron-exécute-un-script-tous-les-jours-à-2h-du-matin" class="level3" data-number="17.6">
-<h3 data-number="17.6" class="anchored" data-anchor-id="q6.-quelle-expression-cron-exécute-un-script-tous-les-jours-à-2h-du-matin"><span class="header-section-number">17.6</span> ❓ Q6. Quelle expression cron exécute un script tous les jours à 2h du matin ?</h3>
+<section id="q6.-quelle-expression-cron-exécute-un-script-tous-les-jours-à-2h-du-matin" class="level3">
+<h3 class="anchored" data-anchor-id="q6.-quelle-expression-cron-exécute-un-script-tous-les-jours-à-2h-du-matin">❓ Q6. Quelle expression cron exécute un script tous les jours à 2h du matin ?</h3>
 <ol type="a">
 <li><code>2 0 * * *</code><br>
 </li>
@@ -1732,14 +1764,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 </section>
-<section id="mini-projet-archiver-intelligemment-des-fichiers-csv" class="level2" data-number="18">
-<h2 data-number="18" class="anchored" data-anchor-id="mini-projet-archiver-intelligemment-des-fichiers-csv"><span class="header-section-number">18</span> 🚀 Mini-projet : Archiver intelligemment des fichiers CSV</h2>
-<section id="objectif" class="level3" data-number="18.1">
-<h3 data-number="18.1" class="anchored" data-anchor-id="objectif"><span class="header-section-number">18.1</span> 🎯 Objectif</h3>
+<section id="mini-projet-archiver-intelligemment-des-fichiers-csv" class="level2">
+<h2 class="anchored" data-anchor-id="mini-projet-archiver-intelligemment-des-fichiers-csv">🚀 Mini-projet : Archiver intelligemment des fichiers CSV</h2>
+<section id="objectif" class="level3">
+<h3 class="anchored" data-anchor-id="objectif">🎯 Objectif</h3>
 <p>Créer un script Bash <strong>réaliste</strong> qui automatise l’archivage de fichiers <code>.csv</code> selon leur ancienneté.</p>
 </section>
-<section id="contexte" class="level3" data-number="18.2">
-<h3 data-number="18.2" class="anchored" data-anchor-id="contexte"><span class="header-section-number">18.2</span> 🔧 Contexte</h3>
+<section id="contexte" class="level3">
+<h3 class="anchored" data-anchor-id="contexte">🔧 Contexte</h3>
 <p>Tu travailles dans une équipe data. Chaque jour, des fichiers <code>.csv</code> sont déposés dans un dossier <code>data/</code>.<br>
 Tu dois créer un script qui :</p>
 <ol type="1">
@@ -1748,8 +1780,8 @@ Tu dois créer un script qui :</p>
 <li>🧹 Déplace ces fichiers dans un dossier <code>archive/</code></li>
 </ol>
 </section>
-<section id="contraintes" class="level3" data-number="18.3">
-<h3 data-number="18.3" class="anchored" data-anchor-id="contraintes"><span class="header-section-number">18.3</span> 🧠 Contraintes</h3>
+<section id="contraintes" class="level3">
+<h3 class="anchored" data-anchor-id="contraintes">🧠 Contraintes</h3>
 <ul>
 <li>Le script doit fonctionner même si aucun fichier n’est éligible</li>
 <li>L’archive doit être horodatée automatiquement</li>
@@ -1757,8 +1789,8 @@ Tu dois créer un script qui :</p>
 <li>Ajouter du logging pour tracer les actions</li>
 </ul>
 </section>
-<section id="solution-du-mini-projet" class="level3" data-number="18.4">
-<h3 data-number="18.4" class="anchored" data-anchor-id="solution-du-mini-projet"><span class="header-section-number">18.4</span> ✅ Solution du mini-projet</h3>
+<section id="solution-du-mini-projet" class="level3">
+<h3 class="anchored" data-anchor-id="solution-du-mini-projet">✅ Solution du mini-projet</h3>
 <details>
 <summary>
 📥 Afficher la solution complète
@@ -1835,10 +1867,10 @@ Tu dois créer un script qui :</p>
 <hr>
 </section>
 </section>
-<section id="ressources-pour-aller-plus-loin" class="level2" data-number="19">
-<h2 data-number="19" class="anchored" data-anchor-id="ressources-pour-aller-plus-loin"><span class="header-section-number">19</span> 📚 Ressources pour aller plus loin</h2>
-<section id="sites-outils" class="level3" data-number="19.1">
-<h3 data-number="19.1" class="anchored" data-anchor-id="sites-outils"><span class="header-section-number">19.1</span> 🌐 Sites &amp; outils</h3>
+<section id="ressources-pour-aller-plus-loin" class="level2">
+<h2 class="anchored" data-anchor-id="ressources-pour-aller-plus-loin">📚 Ressources pour aller plus loin</h2>
+<section id="sites-outils" class="level3">
+<h3 class="anchored" data-anchor-id="sites-outils">🌐 Sites &amp; outils</h3>
 <ul>
 <li><a href="https://explainshell.com/">ExplainShell</a> — Explique n’importe quelle commande Bash</li>
 <li><a href="https://www.shellcheck.net/">ShellCheck</a> — Vérifie la syntaxe de tes scripts</li>
@@ -1846,15 +1878,15 @@ Tu dois créer un script qui :</p>
 <li><a href="https://linuxcommand.org/">Linux Command</a> — Tutoriel complet</li>
 </ul>
 </section>
-<section id="documentation" class="level3" data-number="19.2">
-<h3 data-number="19.2" class="anchored" data-anchor-id="documentation"><span class="header-section-number">19.2</span> 📖 Documentation</h3>
+<section id="documentation" class="level3">
+<h3 class="anchored" data-anchor-id="documentation">📖 Documentation</h3>
 <ul>
 <li><a href="https://www.gnu.org/software/bash/manual/">GNU Bash Manual</a></li>
 <li><a href="https://tldp.org/LDP/abs/html/">Advanced Bash-Scripting Guide</a></li>
 </ul>
 </section>
-<section id="pratique" class="level3" data-number="19.3">
-<h3 data-number="19.3" class="anchored" data-anchor-id="pratique"><span class="header-section-number">19.3</span> 🎮 Pratique</h3>
+<section id="pratique" class="level3">
+<h3 class="anchored" data-anchor-id="pratique">🎮 Pratique</h3>
 <ul>
 <li><a href="https://overthewire.org/wargames/bandit/">OverTheWire - Bandit</a> — Jeu pour apprendre Bash</li>
 <li><a href="https://cmdchallenge.com/">Cmdchallenge</a> — Défis en ligne de commande</li>
@@ -1862,8 +1894,8 @@ Tu dois créer un script qui :</p>
 <hr>
 </section>
 </section>
-<section id="prochaine-étape" class="level2" data-number="20">
-<h2 data-number="20" class="anchored" data-anchor-id="prochaine-étape"><span class="header-section-number">20</span> ➡️ Prochaine étape</h2>
+<section id="prochaine-étape" class="level2">
+<h2 class="anchored" data-anchor-id="prochaine-étape">➡️ Prochaine étape</h2>
 <p>Maintenant que tu maîtrises Bash, passons à un autre outil essentiel : <strong>Git</strong> !</p>
 <p>👉 <strong>Module suivant : <code>03_git_for_data_engineers.ipynb</code></strong> — Versionner ton code et collaborer</p>
 <hr>

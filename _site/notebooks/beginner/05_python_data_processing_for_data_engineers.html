@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>📊 Python for Data Processing - Complete Guide – Bootcamp Data Engineering</title>
+<title>📊 Python for Data Processing - Complete Guide – Bootcamp Data Engineering – From Zero to Hero</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -110,6 +110,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <style>html{ scroll-behavior: smooth; }</style>
 
 
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -282,7 +283,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">Bootcamp Data Engineering</span>
+    <span class="navbar-title">Bootcamp Data Engineering – From Zero to Hero</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -293,11 +294,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/diakite-data/data-engineering-bootcamp"> <i class="bi bi-github" role="img">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="../../#"> <i class="bi bi-lightbulb" role="img" aria-label="Mode clair/sombre">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -380,8 +376,44 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notebooks/beginner/06_intro_databases.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">🧠 Introduction aux bases de données pour Data Engineers</span></a>
+  <a href="../../notebooks/beginner/06_intro_relational_databases.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🗄️ Introduction aux Bases de Données Relationnelles</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/07_sql_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🐘 SQL for Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/08_intro_big_data_distributed.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🐘 Introduction au Big Data &amp; Traitement Distribué</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/09_mongodb_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🍃 MongoDB for Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/10_elasticsearch_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🔍 Elasticsearch for Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/11_pyspark_for_data_engineering.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">⚡ PySpark for Data Engineering</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/12_orchestration_pipelines.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">⏰ Orchestration de Pipelines Data</span></a>
   </div>
 </li>
       </ul>
@@ -396,110 +428,110 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#prérequis" id="toc-prérequis" class="nav-link active" data-scroll-target="#prérequis"><span class="header-section-number">0.1</span> 📋 Prérequis</a></li>
-  <li><a href="#objectifs-du-module" id="toc-objectifs-du-module" class="nav-link" data-scroll-target="#objectifs-du-module"><span class="header-section-number">0.2</span> 🎯 Objectifs du module</a></li>
-  <li><a href="#installation-des-dépendances" id="toc-installation-des-dépendances" class="nav-link" data-scroll-target="#installation-des-dépendances"><span class="header-section-number">0.3</span> 📦 Installation des dépendances</a></li>
-  <li><a href="#pandas-le-cœur-du-data-processing" id="toc-pandas-le-cœur-du-data-processing" class="nav-link" data-scroll-target="#pandas-le-cœur-du-data-processing"><span class="header-section-number">1</span> 1️⃣ Pandas — Le cœur du Data Processing</a>
+  <li><a href="#prérequis" id="toc-prérequis" class="nav-link active" data-scroll-target="#prérequis">📋 Prérequis</a></li>
+  <li><a href="#objectifs-du-module" id="toc-objectifs-du-module" class="nav-link" data-scroll-target="#objectifs-du-module">🎯 Objectifs du module</a></li>
+  <li><a href="#installation-des-dépendances" id="toc-installation-des-dépendances" class="nav-link" data-scroll-target="#installation-des-dépendances">📦 Installation des dépendances</a></li>
+  <li><a href="#pandas-le-cœur-du-data-processing" id="toc-pandas-le-cœur-du-data-processing" class="nav-link" data-scroll-target="#pandas-le-cœur-du-data-processing">1️⃣ Pandas — Le cœur du Data Processing</a>
   <ul class="collapse">
-  <li><a href="#créer-et-lire-des-données" id="toc-créer-et-lire-des-données" class="nav-link" data-scroll-target="#créer-et-lire-des-données"><span class="header-section-number">1.1</span> 1.1 Créer et lire des données</a></li>
-  <li><a href="#exploration-des-données" id="toc-exploration-des-données" class="nav-link" data-scroll-target="#exploration-des-données"><span class="header-section-number">1.2</span> 1.2 Exploration des données</a></li>
-  <li><a href="#nettoyage-des-données" id="toc-nettoyage-des-données" class="nav-link" data-scroll-target="#nettoyage-des-données"><span class="header-section-number">1.3</span> 1.3 Nettoyage des données</a></li>
-  <li><a href="#sélection-et-filtrage" id="toc-sélection-et-filtrage" class="nav-link" data-scroll-target="#sélection-et-filtrage"><span class="header-section-number">1.4</span> 1.4 Sélection et filtrage</a></li>
-  <li><a href="#groupby-et-agrégations" id="toc-groupby-et-agrégations" class="nav-link" data-scroll-target="#groupby-et-agrégations"><span class="header-section-number">1.5</span> 1.5 GroupBy et agrégations</a></li>
-  <li><a href="#apply-vs-vectorisation" id="toc-apply-vs-vectorisation" class="nav-link" data-scroll-target="#apply-vs-vectorisation"><span class="header-section-number">1.6</span> 1.6 Apply vs Vectorisation</a></li>
-  <li><a href="#gestion-de-la-mémoire" id="toc-gestion-de-la-mémoire" class="nav-link" data-scroll-target="#gestion-de-la-mémoire"><span class="header-section-number">1.7</span> 1.7 Gestion de la mémoire</a></li>
-  <li><a href="#manipulation-de-dates" id="toc-manipulation-de-dates" class="nav-link" data-scroll-target="#manipulation-de-dates"><span class="header-section-number">1.8</span> 1.8 Manipulation de dates</a></li>
-  <li><a href="#export-de-données" id="toc-export-de-données" class="nav-link" data-scroll-target="#export-de-données"><span class="header-section-number">1.9</span> 1.9 Export de données</a></li>
-  <li><a href="#exercice-pratique-1-pandas" id="toc-exercice-pratique-1-pandas" class="nav-link" data-scroll-target="#exercice-pratique-1-pandas"><span class="header-section-number">1.10</span> 🎯 Exercice Pratique 1 : Pandas</a></li>
+  <li><a href="#créer-et-lire-des-données" id="toc-créer-et-lire-des-données" class="nav-link" data-scroll-target="#créer-et-lire-des-données">1.1 Créer et lire des données</a></li>
+  <li><a href="#exploration-des-données" id="toc-exploration-des-données" class="nav-link" data-scroll-target="#exploration-des-données">1.2 Exploration des données</a></li>
+  <li><a href="#nettoyage-des-données" id="toc-nettoyage-des-données" class="nav-link" data-scroll-target="#nettoyage-des-données">1.3 Nettoyage des données</a></li>
+  <li><a href="#sélection-et-filtrage" id="toc-sélection-et-filtrage" class="nav-link" data-scroll-target="#sélection-et-filtrage">1.4 Sélection et filtrage</a></li>
+  <li><a href="#groupby-et-agrégations" id="toc-groupby-et-agrégations" class="nav-link" data-scroll-target="#groupby-et-agrégations">1.5 GroupBy et agrégations</a></li>
+  <li><a href="#apply-vs-vectorisation" id="toc-apply-vs-vectorisation" class="nav-link" data-scroll-target="#apply-vs-vectorisation">1.6 Apply vs Vectorisation</a></li>
+  <li><a href="#gestion-de-la-mémoire" id="toc-gestion-de-la-mémoire" class="nav-link" data-scroll-target="#gestion-de-la-mémoire">1.7 Gestion de la mémoire</a></li>
+  <li><a href="#manipulation-de-dates" id="toc-manipulation-de-dates" class="nav-link" data-scroll-target="#manipulation-de-dates">1.8 Manipulation de dates</a></li>
+  <li><a href="#export-de-données" id="toc-export-de-données" class="nav-link" data-scroll-target="#export-de-données">1.9 Export de données</a></li>
+  <li><a href="#exercice-pratique-1-pandas" id="toc-exercice-pratique-1-pandas" class="nav-link" data-scroll-target="#exercice-pratique-1-pandas">🎯 Exercice Pratique 1 : Pandas</a></li>
   </ul></li>
-  <li><a href="#matplotlib-visualisation-de-données" id="toc-matplotlib-visualisation-de-données" class="nav-link" data-scroll-target="#matplotlib-visualisation-de-données"><span class="header-section-number">2</span> 📈 Matplotlib — Visualisation de données</a>
+  <li><a href="#matplotlib-visualisation-de-données" id="toc-matplotlib-visualisation-de-données" class="nav-link" data-scroll-target="#matplotlib-visualisation-de-données">📈 Matplotlib — Visualisation de données</a>
   <ul class="collapse">
-  <li><a href="#graphiques-linéaires-line-plots" id="toc-graphiques-linéaires-line-plots" class="nav-link" data-scroll-target="#graphiques-linéaires-line-plots"><span class="header-section-number">2.1</span> 📊 Graphiques linéaires (Line Plots)</a></li>
-  <li><a href="#graphiques-à-barres-bar-plots" id="toc-graphiques-à-barres-bar-plots" class="nav-link" data-scroll-target="#graphiques-à-barres-bar-plots"><span class="header-section-number">2.2</span> 📊 Graphiques à barres (Bar Plots)</a></li>
-  <li><a href="#nuages-de-points-scatter-plots" id="toc-nuages-de-points-scatter-plots" class="nav-link" data-scroll-target="#nuages-de-points-scatter-plots"><span class="header-section-number">2.3</span> 📊 Nuages de points (Scatter Plots)</a></li>
-  <li><a href="#histogrammes" id="toc-histogrammes" class="nav-link" data-scroll-target="#histogrammes"><span class="header-section-number">2.4</span> 📊 Histogrammes</a></li>
-  <li><a href="#graphiques-circulaires-pie-charts" id="toc-graphiques-circulaires-pie-charts" class="nav-link" data-scroll-target="#graphiques-circulaires-pie-charts"><span class="header-section-number">2.5</span> 📊 Graphiques circulaires (Pie Charts)</a></li>
-  <li><a href="#sous-graphiques-subplots" id="toc-sous-graphiques-subplots" class="nav-link" data-scroll-target="#sous-graphiques-subplots"><span class="header-section-number">2.6</span> 📊 Sous-graphiques (Subplots)</a></li>
-  <li><a href="#sauvegarder-des-graphiques" id="toc-sauvegarder-des-graphiques" class="nav-link" data-scroll-target="#sauvegarder-des-graphiques"><span class="header-section-number">2.7</span> 💾 Sauvegarder des graphiques</a></li>
-  <li><a href="#exercice-pratique-matplotlib" id="toc-exercice-pratique-matplotlib" class="nav-link" data-scroll-target="#exercice-pratique-matplotlib"><span class="header-section-number">2.8</span> 🎯 Exercice Pratique : Matplotlib</a></li>
+  <li><a href="#graphiques-linéaires-line-plots" id="toc-graphiques-linéaires-line-plots" class="nav-link" data-scroll-target="#graphiques-linéaires-line-plots">📊 Graphiques linéaires (Line Plots)</a></li>
+  <li><a href="#graphiques-à-barres-bar-plots" id="toc-graphiques-à-barres-bar-plots" class="nav-link" data-scroll-target="#graphiques-à-barres-bar-plots">📊 Graphiques à barres (Bar Plots)</a></li>
+  <li><a href="#nuages-de-points-scatter-plots" id="toc-nuages-de-points-scatter-plots" class="nav-link" data-scroll-target="#nuages-de-points-scatter-plots">📊 Nuages de points (Scatter Plots)</a></li>
+  <li><a href="#histogrammes" id="toc-histogrammes" class="nav-link" data-scroll-target="#histogrammes">📊 Histogrammes</a></li>
+  <li><a href="#graphiques-circulaires-pie-charts" id="toc-graphiques-circulaires-pie-charts" class="nav-link" data-scroll-target="#graphiques-circulaires-pie-charts">📊 Graphiques circulaires (Pie Charts)</a></li>
+  <li><a href="#sous-graphiques-subplots" id="toc-sous-graphiques-subplots" class="nav-link" data-scroll-target="#sous-graphiques-subplots">📊 Sous-graphiques (Subplots)</a></li>
+  <li><a href="#sauvegarder-des-graphiques" id="toc-sauvegarder-des-graphiques" class="nav-link" data-scroll-target="#sauvegarder-des-graphiques">💾 Sauvegarder des graphiques</a></li>
+  <li><a href="#exercice-pratique-matplotlib" id="toc-exercice-pratique-matplotlib" class="nav-link" data-scroll-target="#exercice-pratique-matplotlib">🎯 Exercice Pratique : Matplotlib</a></li>
   </ul></li>
-  <li><a href="#seaborn-visualisation-statistique-avancée" id="toc-seaborn-visualisation-statistique-avancée" class="nav-link" data-scroll-target="#seaborn-visualisation-statistique-avancée"><span class="header-section-number">3</span> 🎨 Seaborn — Visualisation statistique avancée</a>
+  <li><a href="#seaborn-visualisation-statistique-avancée" id="toc-seaborn-visualisation-statistique-avancée" class="nav-link" data-scroll-target="#seaborn-visualisation-statistique-avancée">🎨 Seaborn — Visualisation statistique avancée</a>
   <ul class="collapse">
-  <li><a href="#charger-des-jeux-de-données-intégrés" id="toc-charger-des-jeux-de-données-intégrés" class="nav-link" data-scroll-target="#charger-des-jeux-de-données-intégrés"><span class="header-section-number">3.1</span> 📦 Charger des jeux de données intégrés</a></li>
-  <li><a href="#visualisation-des-distributions" id="toc-visualisation-des-distributions" class="nav-link" data-scroll-target="#visualisation-des-distributions"><span class="header-section-number">3.2</span> 📊 Visualisation des distributions</a></li>
-  <li><a href="#visualisation-des-données-catégorielles" id="toc-visualisation-des-données-catégorielles" class="nav-link" data-scroll-target="#visualisation-des-données-catégorielles"><span class="header-section-number">3.3</span> 📊 Visualisation des données catégorielles</a></li>
-  <li><a href="#visualisation-des-relations-entre-variables" id="toc-visualisation-des-relations-entre-variables" class="nav-link" data-scroll-target="#visualisation-des-relations-entre-variables"><span class="header-section-number">3.4</span> 📊 Visualisation des relations entre variables</a></li>
-  <li><a href="#heatmaps-et-matrices-de-corrélation" id="toc-heatmaps-et-matrices-de-corrélation" class="nav-link" data-scroll-target="#heatmaps-et-matrices-de-corrélation"><span class="header-section-number">3.5</span> 📊 Heatmaps et matrices de corrélation</a></li>
-  <li><a href="#pair-plots-visualisation-multivariée" id="toc-pair-plots-visualisation-multivariée" class="nav-link" data-scroll-target="#pair-plots-visualisation-multivariée"><span class="header-section-number">3.6</span> 📊 Pair plots (visualisation multivariée)</a></li>
-  <li><a href="#facetgrid---graphiques-multi-facettes" id="toc-facetgrid---graphiques-multi-facettes" class="nav-link" data-scroll-target="#facetgrid---graphiques-multi-facettes"><span class="header-section-number">3.7</span> 📊 FacetGrid - Graphiques multi-facettes</a></li>
-  <li><a href="#joint-plots---distributions-jointes" id="toc-joint-plots---distributions-jointes" class="nav-link" data-scroll-target="#joint-plots---distributions-jointes"><span class="header-section-number">3.8</span> 📊 Joint plots - Distributions jointes</a></li>
-  <li><a href="#personnalisation-des-styles" id="toc-personnalisation-des-styles" class="nav-link" data-scroll-target="#personnalisation-des-styles"><span class="header-section-number">3.9</span> 🎨 Personnalisation des styles</a></li>
-  <li><a href="#exemple-tableau-de-bord-complet" id="toc-exemple-tableau-de-bord-complet" class="nav-link" data-scroll-target="#exemple-tableau-de-bord-complet"><span class="header-section-number">3.10</span> 📊 Exemple : Tableau de bord complet</a></li>
-  <li><a href="#exercice-pratique-seaborn" id="toc-exercice-pratique-seaborn" class="nav-link" data-scroll-target="#exercice-pratique-seaborn"><span class="header-section-number">3.11</span> 🎯 Exercice Pratique : Seaborn</a></li>
+  <li><a href="#charger-des-jeux-de-données-intégrés" id="toc-charger-des-jeux-de-données-intégrés" class="nav-link" data-scroll-target="#charger-des-jeux-de-données-intégrés">📦 Charger des jeux de données intégrés</a></li>
+  <li><a href="#visualisation-des-distributions" id="toc-visualisation-des-distributions" class="nav-link" data-scroll-target="#visualisation-des-distributions">📊 Visualisation des distributions</a></li>
+  <li><a href="#visualisation-des-données-catégorielles" id="toc-visualisation-des-données-catégorielles" class="nav-link" data-scroll-target="#visualisation-des-données-catégorielles">📊 Visualisation des données catégorielles</a></li>
+  <li><a href="#visualisation-des-relations-entre-variables" id="toc-visualisation-des-relations-entre-variables" class="nav-link" data-scroll-target="#visualisation-des-relations-entre-variables">📊 Visualisation des relations entre variables</a></li>
+  <li><a href="#heatmaps-et-matrices-de-corrélation" id="toc-heatmaps-et-matrices-de-corrélation" class="nav-link" data-scroll-target="#heatmaps-et-matrices-de-corrélation">📊 Heatmaps et matrices de corrélation</a></li>
+  <li><a href="#pair-plots-visualisation-multivariée" id="toc-pair-plots-visualisation-multivariée" class="nav-link" data-scroll-target="#pair-plots-visualisation-multivariée">📊 Pair plots (visualisation multivariée)</a></li>
+  <li><a href="#facetgrid---graphiques-multi-facettes" id="toc-facetgrid---graphiques-multi-facettes" class="nav-link" data-scroll-target="#facetgrid---graphiques-multi-facettes">📊 FacetGrid - Graphiques multi-facettes</a></li>
+  <li><a href="#joint-plots---distributions-jointes" id="toc-joint-plots---distributions-jointes" class="nav-link" data-scroll-target="#joint-plots---distributions-jointes">📊 Joint plots - Distributions jointes</a></li>
+  <li><a href="#personnalisation-des-styles" id="toc-personnalisation-des-styles" class="nav-link" data-scroll-target="#personnalisation-des-styles">🎨 Personnalisation des styles</a></li>
+  <li><a href="#exemple-tableau-de-bord-complet" id="toc-exemple-tableau-de-bord-complet" class="nav-link" data-scroll-target="#exemple-tableau-de-bord-complet">📊 Exemple : Tableau de bord complet</a></li>
+  <li><a href="#exercice-pratique-seaborn" id="toc-exercice-pratique-seaborn" class="nav-link" data-scroll-target="#exercice-pratique-seaborn">🎯 Exercice Pratique : Seaborn</a></li>
   </ul></li>
-  <li><a href="#matplotlib-visualisation-de-données-1" id="toc-matplotlib-visualisation-de-données-1" class="nav-link" data-scroll-target="#matplotlib-visualisation-de-données-1"><span class="header-section-number">4</span> 📈 Matplotlib — Visualisation de données</a>
+  <li><a href="#matplotlib-visualisation-de-données-1" id="toc-matplotlib-visualisation-de-données-1" class="nav-link" data-scroll-target="#matplotlib-visualisation-de-données-1">📈 Matplotlib — Visualisation de données</a>
   <ul class="collapse">
-  <li><a href="#graphiques-de-base-avec-matplotlib" id="toc-graphiques-de-base-avec-matplotlib" class="nav-link" data-scroll-target="#graphiques-de-base-avec-matplotlib"><span class="header-section-number">4.1</span> 📊 Graphiques de base avec Matplotlib</a></li>
-  <li><a href="#histogrammes-et-distributions" id="toc-histogrammes-et-distributions" class="nav-link" data-scroll-target="#histogrammes-et-distributions"><span class="header-section-number">4.2</span> 📊 Histogrammes et distributions</a></li>
+  <li><a href="#graphiques-de-base-avec-matplotlib" id="toc-graphiques-de-base-avec-matplotlib" class="nav-link" data-scroll-target="#graphiques-de-base-avec-matplotlib">📊 Graphiques de base avec Matplotlib</a></li>
+  <li><a href="#histogrammes-et-distributions" id="toc-histogrammes-et-distributions" class="nav-link" data-scroll-target="#histogrammes-et-distributions">📊 Histogrammes et distributions</a></li>
   </ul></li>
-  <li><a href="#seaborn-visualisation-statistique-avancée-1" id="toc-seaborn-visualisation-statistique-avancée-1" class="nav-link" data-scroll-target="#seaborn-visualisation-statistique-avancée-1"><span class="header-section-number">5</span> 🎨 Seaborn — Visualisation statistique avancée</a>
+  <li><a href="#seaborn-visualisation-statistique-avancée-1" id="toc-seaborn-visualisation-statistique-avancée-1" class="nav-link" data-scroll-target="#seaborn-visualisation-statistique-avancée-1">🎨 Seaborn — Visualisation statistique avancée</a>
   <ul class="collapse">
-  <li><a href="#visualisations-avec-seaborn" id="toc-visualisations-avec-seaborn" class="nav-link" data-scroll-target="#visualisations-avec-seaborn"><span class="header-section-number">5.1</span> 📊 Visualisations avec Seaborn</a></li>
-  <li><a href="#exercice-visualisation" id="toc-exercice-visualisation" class="nav-link" data-scroll-target="#exercice-visualisation"><span class="header-section-number">5.2</span> 🎯 Exercice : Visualisation</a></li>
+  <li><a href="#visualisations-avec-seaborn" id="toc-visualisations-avec-seaborn" class="nav-link" data-scroll-target="#visualisations-avec-seaborn">📊 Visualisations avec Seaborn</a></li>
+  <li><a href="#exercice-visualisation" id="toc-exercice-visualisation" class="nav-link" data-scroll-target="#exercice-visualisation">🎯 Exercice : Visualisation</a></li>
   </ul></li>
-  <li><a href="#manipulation-de-données-textuelles" id="toc-manipulation-de-données-textuelles" class="nav-link" data-scroll-target="#manipulation-de-données-textuelles"><span class="header-section-number">6</span> 2️⃣ Manipulation de données textuelles</a>
+  <li><a href="#manipulation-de-données-textuelles" id="toc-manipulation-de-données-textuelles" class="nav-link" data-scroll-target="#manipulation-de-données-textuelles">2️⃣ Manipulation de données textuelles</a>
   <ul class="collapse">
-  <li><a href="#nettoyage-de-base" id="toc-nettoyage-de-base" class="nav-link" data-scroll-target="#nettoyage-de-base"><span class="header-section-number">6.1</span> 2.1 Nettoyage de base</a></li>
-  <li><a href="#méthodes-pandas-string-.str-accessor" id="toc-méthodes-pandas-string-.str-accessor" class="nav-link" data-scroll-target="#méthodes-pandas-string-.str-accessor"><span class="header-section-number">6.2</span> 2.2 Méthodes Pandas string (<code>.str</code> accessor)</a></li>
-  <li><a href="#expressions-régulières-regex" id="toc-expressions-régulières-regex" class="nav-link" data-scroll-target="#expressions-régulières-regex"><span class="header-section-number">6.3</span> 2.3 Expressions régulières (Regex)</a></li>
-  <li><a href="#cas-dusage-réels-parsing-de-logs" id="toc-cas-dusage-réels-parsing-de-logs" class="nav-link" data-scroll-target="#cas-dusage-réels-parsing-de-logs"><span class="header-section-number">6.4</span> 2.4 Cas d’usage réels : Parsing de logs</a></li>
-  <li><a href="#gestion-de-lencodage" id="toc-gestion-de-lencodage" class="nav-link" data-scroll-target="#gestion-de-lencodage"><span class="header-section-number">6.5</span> 2.5 Gestion de l’encodage</a></li>
-  <li><a href="#exercice-pratique-2-texte-et-regex" id="toc-exercice-pratique-2-texte-et-regex" class="nav-link" data-scroll-target="#exercice-pratique-2-texte-et-regex"><span class="header-section-number">6.6</span> 🎯 Exercice Pratique 2 : Texte et Regex</a></li>
+  <li><a href="#nettoyage-de-base" id="toc-nettoyage-de-base" class="nav-link" data-scroll-target="#nettoyage-de-base">2.1 Nettoyage de base</a></li>
+  <li><a href="#méthodes-pandas-string-.str-accessor" id="toc-méthodes-pandas-string-.str-accessor" class="nav-link" data-scroll-target="#méthodes-pandas-string-.str-accessor">2.2 Méthodes Pandas string (<code>.str</code> accessor)</a></li>
+  <li><a href="#expressions-régulières-regex" id="toc-expressions-régulières-regex" class="nav-link" data-scroll-target="#expressions-régulières-regex">2.3 Expressions régulières (Regex)</a></li>
+  <li><a href="#cas-dusage-réels-parsing-de-logs" id="toc-cas-dusage-réels-parsing-de-logs" class="nav-link" data-scroll-target="#cas-dusage-réels-parsing-de-logs">2.4 Cas d’usage réels : Parsing de logs</a></li>
+  <li><a href="#gestion-de-lencodage" id="toc-gestion-de-lencodage" class="nav-link" data-scroll-target="#gestion-de-lencodage">2.5 Gestion de l’encodage</a></li>
+  <li><a href="#exercice-pratique-2-texte-et-regex" id="toc-exercice-pratique-2-texte-et-regex" class="nav-link" data-scroll-target="#exercice-pratique-2-texte-et-regex">🎯 Exercice Pratique 2 : Texte et Regex</a></li>
   </ul></li>
-  <li><a href="#json-et-apis-rest" id="toc-json-et-apis-rest" class="nav-link" data-scroll-target="#json-et-apis-rest"><span class="header-section-number">7</span> 3️⃣ JSON et APIs REST</a>
+  <li><a href="#json-et-apis-rest" id="toc-json-et-apis-rest" class="nav-link" data-scroll-target="#json-et-apis-rest">3️⃣ JSON et APIs REST</a>
   <ul class="collapse">
-  <li><a href="#manipulation-de-json" id="toc-manipulation-de-json" class="nav-link" data-scroll-target="#manipulation-de-json"><span class="header-section-number">7.1</span> 3.1 Manipulation de JSON</a></li>
-  <li><a href="#appels-api-avec-requests" id="toc-appels-api-avec-requests" class="nav-link" data-scroll-target="#appels-api-avec-requests"><span class="header-section-number">7.2</span> 3.2 Appels API avec <code>requests</code></a></li>
-  <li><a href="#gestion-des-erreurs-http" id="toc-gestion-des-erreurs-http" class="nav-link" data-scroll-target="#gestion-des-erreurs-http"><span class="header-section-number">7.3</span> 3.3 Gestion des erreurs HTTP</a></li>
-  <li><a href="#authentification-api" id="toc-authentification-api" class="nav-link" data-scroll-target="#authentification-api"><span class="header-section-number">7.4</span> 3.4 Authentification API</a></li>
-  <li><a href="#pagination-dapis" id="toc-pagination-dapis" class="nav-link" data-scroll-target="#pagination-dapis"><span class="header-section-number">7.5</span> 3.5 Pagination d’APIs</a></li>
-  <li><a href="#rate-limiting-et-retry-logic" id="toc-rate-limiting-et-retry-logic" class="nav-link" data-scroll-target="#rate-limiting-et-retry-logic"><span class="header-section-number">7.6</span> 3.6 Rate Limiting et Retry Logic</a></li>
-  <li><a href="#json-imbriqué-complexe" id="toc-json-imbriqué-complexe" class="nav-link" data-scroll-target="#json-imbriqué-complexe"><span class="header-section-number">7.7</span> 3.7 JSON imbriqué complexe</a></li>
-  <li><a href="#exercice-pratique-3-apis" id="toc-exercice-pratique-3-apis" class="nav-link" data-scroll-target="#exercice-pratique-3-apis"><span class="header-section-number">7.8</span> 🎯 Exercice Pratique 3 : APIs</a></li>
+  <li><a href="#manipulation-de-json" id="toc-manipulation-de-json" class="nav-link" data-scroll-target="#manipulation-de-json">3.1 Manipulation de JSON</a></li>
+  <li><a href="#appels-api-avec-requests" id="toc-appels-api-avec-requests" class="nav-link" data-scroll-target="#appels-api-avec-requests">3.2 Appels API avec <code>requests</code></a></li>
+  <li><a href="#gestion-des-erreurs-http" id="toc-gestion-des-erreurs-http" class="nav-link" data-scroll-target="#gestion-des-erreurs-http">3.3 Gestion des erreurs HTTP</a></li>
+  <li><a href="#authentification-api" id="toc-authentification-api" class="nav-link" data-scroll-target="#authentification-api">3.4 Authentification API</a></li>
+  <li><a href="#pagination-dapis" id="toc-pagination-dapis" class="nav-link" data-scroll-target="#pagination-dapis">3.5 Pagination d’APIs</a></li>
+  <li><a href="#rate-limiting-et-retry-logic" id="toc-rate-limiting-et-retry-logic" class="nav-link" data-scroll-target="#rate-limiting-et-retry-logic">3.6 Rate Limiting et Retry Logic</a></li>
+  <li><a href="#json-imbriqué-complexe" id="toc-json-imbriqué-complexe" class="nav-link" data-scroll-target="#json-imbriqué-complexe">3.7 JSON imbriqué complexe</a></li>
+  <li><a href="#exercice-pratique-3-apis" id="toc-exercice-pratique-3-apis" class="nav-link" data-scroll-target="#exercice-pratique-3-apis">🎯 Exercice Pratique 3 : APIs</a></li>
   </ul></li>
-  <li><a href="#data-validation" id="toc-data-validation" class="nav-link" data-scroll-target="#data-validation"><span class="header-section-number">8</span> 4️⃣ Data Validation</a>
+  <li><a href="#data-validation" id="toc-data-validation" class="nav-link" data-scroll-target="#data-validation">4️⃣ Data Validation</a>
   <ul class="collapse">
-  <li><a href="#vérifications-basiques" id="toc-vérifications-basiques" class="nav-link" data-scroll-target="#vérifications-basiques"><span class="header-section-number">8.1</span> 4.1 Vérifications basiques</a></li>
-  <li><a href="#classe-de-validation-complète" id="toc-classe-de-validation-complète" class="nav-link" data-scroll-target="#classe-de-validation-complète"><span class="header-section-number">8.2</span> 4.2 Classe de validation complète</a></li>
-  <li><a href="#validation-avec-schéma" id="toc-validation-avec-schéma" class="nav-link" data-scroll-target="#validation-avec-schéma"><span class="header-section-number">8.3</span> 4.3 Validation avec schéma</a></li>
-  <li><a href="#exercice-pratique-4-validation" id="toc-exercice-pratique-4-validation" class="nav-link" data-scroll-target="#exercice-pratique-4-validation"><span class="header-section-number">8.4</span> 🎯 Exercice Pratique 4 : Validation</a></li>
+  <li><a href="#vérifications-basiques" id="toc-vérifications-basiques" class="nav-link" data-scroll-target="#vérifications-basiques">4.1 Vérifications basiques</a></li>
+  <li><a href="#classe-de-validation-complète" id="toc-classe-de-validation-complète" class="nav-link" data-scroll-target="#classe-de-validation-complète">4.2 Classe de validation complète</a></li>
+  <li><a href="#validation-avec-schéma" id="toc-validation-avec-schéma" class="nav-link" data-scroll-target="#validation-avec-schéma">4.3 Validation avec schéma</a></li>
+  <li><a href="#exercice-pratique-4-validation" id="toc-exercice-pratique-4-validation" class="nav-link" data-scroll-target="#exercice-pratique-4-validation">🎯 Exercice Pratique 4 : Validation</a></li>
   </ul></li>
-  <li><a href="#mini-pipeline-complet" id="toc-mini-pipeline-complet" class="nav-link" data-scroll-target="#mini-pipeline-complet"><span class="header-section-number">9</span> 5️⃣ Mini-Pipeline Complet</a>
+  <li><a href="#mini-pipeline-complet" id="toc-mini-pipeline-complet" class="nav-link" data-scroll-target="#mini-pipeline-complet">5️⃣ Mini-Pipeline Complet</a>
   <ul class="collapse">
-  <li><a href="#architecture-du-pipeline" id="toc-architecture-du-pipeline" class="nav-link" data-scroll-target="#architecture-du-pipeline"><span class="header-section-number">9.1</span> 5.1 Architecture du pipeline</a></li>
-  <li><a href="#configuration-et-logging" id="toc-configuration-et-logging" class="nav-link" data-scroll-target="#configuration-et-logging"><span class="header-section-number">9.2</span> 5.2 Configuration et Logging</a></li>
-  <li><a href="#étape-1-extract" id="toc-étape-1-extract" class="nav-link" data-scroll-target="#étape-1-extract"><span class="header-section-number">9.3</span> 5.3 Étape 1 : Extract</a></li>
-  <li><a href="#étape-2-transform" id="toc-étape-2-transform" class="nav-link" data-scroll-target="#étape-2-transform"><span class="header-section-number">9.4</span> 5.4 Étape 2 : Transform</a></li>
-  <li><a href="#étape-3-validate" id="toc-étape-3-validate" class="nav-link" data-scroll-target="#étape-3-validate"><span class="header-section-number">9.5</span> 5.5 Étape 3 : Validate</a></li>
-  <li><a href="#étape-4-load" id="toc-étape-4-load" class="nav-link" data-scroll-target="#étape-4-load"><span class="header-section-number">9.6</span> 5.6 Étape 4 : Load</a></li>
-  <li><a href="#pipeline-complet" id="toc-pipeline-complet" class="nav-link" data-scroll-target="#pipeline-complet"><span class="header-section-number">9.7</span> 5.7 Pipeline complet</a></li>
-  <li><a href="#exercice-final-pipeline-complet" id="toc-exercice-final-pipeline-complet" class="nav-link" data-scroll-target="#exercice-final-pipeline-complet"><span class="header-section-number">9.8</span> 🎯 Exercice Final : Pipeline Complet</a></li>
+  <li><a href="#architecture-du-pipeline" id="toc-architecture-du-pipeline" class="nav-link" data-scroll-target="#architecture-du-pipeline">5.1 Architecture du pipeline</a></li>
+  <li><a href="#configuration-et-logging" id="toc-configuration-et-logging" class="nav-link" data-scroll-target="#configuration-et-logging">5.2 Configuration et Logging</a></li>
+  <li><a href="#étape-1-extract" id="toc-étape-1-extract" class="nav-link" data-scroll-target="#étape-1-extract">5.3 Étape 1 : Extract</a></li>
+  <li><a href="#étape-2-transform" id="toc-étape-2-transform" class="nav-link" data-scroll-target="#étape-2-transform">5.4 Étape 2 : Transform</a></li>
+  <li><a href="#étape-3-validate" id="toc-étape-3-validate" class="nav-link" data-scroll-target="#étape-3-validate">5.5 Étape 3 : Validate</a></li>
+  <li><a href="#étape-4-load" id="toc-étape-4-load" class="nav-link" data-scroll-target="#étape-4-load">5.6 Étape 4 : Load</a></li>
+  <li><a href="#pipeline-complet" id="toc-pipeline-complet" class="nav-link" data-scroll-target="#pipeline-complet">5.7 Pipeline complet</a></li>
+  <li><a href="#exercice-final-pipeline-complet" id="toc-exercice-final-pipeline-complet" class="nav-link" data-scroll-target="#exercice-final-pipeline-complet">🎯 Exercice Final : Pipeline Complet</a></li>
   </ul></li>
-  <li><a href="#bonus-configuration-et-tests" id="toc-bonus-configuration-et-tests" class="nav-link" data-scroll-target="#bonus-configuration-et-tests"><span class="header-section-number">10</span> 🎯 BONUS : Configuration et Tests</a>
+  <li><a href="#bonus-configuration-et-tests" id="toc-bonus-configuration-et-tests" class="nav-link" data-scroll-target="#bonus-configuration-et-tests">🎯 BONUS : Configuration et Tests</a>
   <ul class="collapse">
-  <li><a href="#gestion-des-configurations" id="toc-gestion-des-configurations" class="nav-link" data-scroll-target="#gestion-des-configurations"><span class="header-section-number">10.1</span> 6️⃣ Gestion des configurations</a></li>
-  <li><a href="#tests-unitaires-basiques" id="toc-tests-unitaires-basiques" class="nav-link" data-scroll-target="#tests-unitaires-basiques"><span class="header-section-number">10.2</span> 7️⃣ Tests unitaires basiques</a></li>
+  <li><a href="#gestion-des-configurations" id="toc-gestion-des-configurations" class="nav-link" data-scroll-target="#gestion-des-configurations">6️⃣ Gestion des configurations</a></li>
+  <li><a href="#tests-unitaires-basiques" id="toc-tests-unitaires-basiques" class="nav-link" data-scroll-target="#tests-unitaires-basiques">7️⃣ Tests unitaires basiques</a></li>
   </ul></li>
-  <li><a href="#résumé-et-prochaines-étapes" id="toc-résumé-et-prochaines-étapes" class="nav-link" data-scroll-target="#résumé-et-prochaines-étapes"><span class="header-section-number">11</span> 🎓 Résumé et Prochaines Étapes</a>
+  <li><a href="#résumé-et-prochaines-étapes" id="toc-résumé-et-prochaines-étapes" class="nav-link" data-scroll-target="#résumé-et-prochaines-étapes">🎓 Résumé et Prochaines Étapes</a>
   <ul class="collapse">
-  <li><a href="#ce-que-tu-as-appris" id="toc-ce-que-tu-as-appris" class="nav-link" data-scroll-target="#ce-que-tu-as-appris"><span class="header-section-number">11.1</span> Ce que tu as appris ✅</a></li>
-  <li><a href="#ressources-pour-aller-plus-loin" id="toc-ressources-pour-aller-plus-loin" class="nav-link" data-scroll-target="#ressources-pour-aller-plus-loin"><span class="header-section-number">11.2</span> 📚 Ressources pour aller plus loin</a>
+  <li><a href="#ce-que-tu-as-appris" id="toc-ce-que-tu-as-appris" class="nav-link" data-scroll-target="#ce-que-tu-as-appris">Ce que tu as appris ✅</a></li>
+  <li><a href="#ressources-pour-aller-plus-loin" id="toc-ressources-pour-aller-plus-loin" class="nav-link" data-scroll-target="#ressources-pour-aller-plus-loin">📚 Ressources pour aller plus loin</a>
   <ul class="collapse">
-  <li><a href="#documentation-officielle" id="toc-documentation-officielle" class="nav-link" data-scroll-target="#documentation-officielle"><span class="header-section-number">11.2.1</span> Documentation officielle</a></li>
-  <li><a href="#tutoriels-et-cours" id="toc-tutoriels-et-cours" class="nav-link" data-scroll-target="#tutoriels-et-cours"><span class="header-section-number">11.2.2</span> Tutoriels et cours</a></li>
-  <li><a href="#outils-avancés-à-explorer" id="toc-outils-avancés-à-explorer" class="nav-link" data-scroll-target="#outils-avancés-à-explorer"><span class="header-section-number">11.2.3</span> Outils avancés à explorer</a></li>
+  <li><a href="#documentation-officielle" id="toc-documentation-officielle" class="nav-link" data-scroll-target="#documentation-officielle">Documentation officielle</a></li>
+  <li><a href="#tutoriels-et-cours" id="toc-tutoriels-et-cours" class="nav-link" data-scroll-target="#tutoriels-et-cours">Tutoriels et cours</a></li>
+  <li><a href="#outils-avancés-à-explorer" id="toc-outils-avancés-à-explorer" class="nav-link" data-scroll-target="#outils-avancés-à-explorer">Outils avancés à explorer</a></li>
   </ul></li>
-  <li><a href="#prochaine-étape" id="toc-prochaine-étape" class="nav-link" data-scroll-target="#prochaine-étape"><span class="header-section-number">11.3</span> ➡️ Prochaine étape</a></li>
+  <li><a href="#prochaine-étape" id="toc-prochaine-étape" class="nav-link" data-scroll-target="#prochaine-étape">➡️ Prochaine étape</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="git@github.com:diakite-data/data-engineering-bootcamp.git/blob/main/notebooks/beginner/05_python_data_processing_for_data_engineers.ipynb" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="git@github.com:diakite-data/data-engineering-bootcamp.git/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -529,8 +561,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>Ce module couvre le <strong>traitement de données avancé</strong> avec Python : Pandas, visualisation, APIs, et pipelines ETL.</p>
 <hr>
-<section id="prérequis" class="level2" data-number="0.1">
-<h2 data-number="0.1" class="anchored" data-anchor-id="prérequis"><span class="header-section-number">0.1</span> 📋 Prérequis</h2>
+<section id="prérequis" class="level2">
+<h2 class="anchored" data-anchor-id="prérequis">📋 Prérequis</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 40%">
@@ -558,13 +590,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 </section>
-<section id="objectifs-du-module" class="level2" data-number="0.2">
-<h2 data-number="0.2" class="anchored" data-anchor-id="objectifs-du-module"><span class="header-section-number">0.2</span> 🎯 Objectifs du module</h2>
+<section id="objectifs-du-module" class="level2">
+<h2 class="anchored" data-anchor-id="objectifs-du-module">🎯 Objectifs du module</h2>
 <p>À la fin de ce notebook, tu seras capable de : - ✅ Manipuler des données avec <strong>Pandas</strong> (DataFrames, nettoyage, agrégations) - ✅ Visualiser des données avec <strong>Matplotlib</strong> - ✅ Créer des graphiques statistiques avec <strong>Seaborn</strong> - ✅ Traiter du texte et utiliser les <strong>regex</strong> - ✅ Consommer des <strong>APIs REST</strong> - ✅ Valider la qualité des données - ✅ Construire un <strong>pipeline ETL</strong> complet - ✅ Gérer les configurations et secrets</p>
 <hr>
 </section>
-<section id="installation-des-dépendances" class="level2" data-number="0.3">
-<h2 data-number="0.3" class="anchored" data-anchor-id="installation-des-dépendances"><span class="header-section-number">0.3</span> 📦 Installation des dépendances</h2>
+<section id="installation-des-dépendances" class="level2">
+<h2 class="anchored" data-anchor-id="installation-des-dépendances">📦 Installation des dépendances</h2>
 <p>Avant de commencer, assurons-nous d’avoir toutes les librairies nécessaires.</p>
 <div id="cell-3" class="cell">
 <details class="code-fold">
@@ -599,11 +631,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <hr>
 </section>
-<section id="pandas-le-cœur-du-data-processing" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> 1️⃣ Pandas — Le cœur du Data Processing</h1>
+<section id="pandas-le-cœur-du-data-processing" class="level1">
+<h1>1️⃣ Pandas — Le cœur du Data Processing</h1>
 <p>Pandas est LA librairie incontournable pour manipuler des données tabulaires en Python.</p>
-<section id="créer-et-lire-des-données" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="créer-et-lire-des-données"><span class="header-section-number">1.1</span> 1.1 Créer et lire des données</h2>
+<section id="créer-et-lire-des-données" class="level2">
+<h2 class="anchored" data-anchor-id="créer-et-lire-des-données">1.1 Créer et lire des données</h2>
 <div id="cell-7" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -634,8 +666,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="exploration-des-données" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="exploration-des-données"><span class="header-section-number">1.2</span> 1.2 Exploration des données</h2>
+<section id="exploration-des-données" class="level2">
+<h2 class="anchored" data-anchor-id="exploration-des-données">1.2 Exploration des données</h2>
 <div id="cell-10" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -658,8 +690,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="nettoyage-des-données" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="nettoyage-des-données"><span class="header-section-number">1.3</span> 1.3 Nettoyage des données</h2>
+<section id="nettoyage-des-données" class="level2">
+<h2 class="anchored" data-anchor-id="nettoyage-des-données">1.3 Nettoyage des données</h2>
 <div id="cell-12" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -715,8 +747,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="sélection-et-filtrage" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="sélection-et-filtrage"><span class="header-section-number">1.4</span> 1.4 Sélection et filtrage</h2>
+<section id="sélection-et-filtrage" class="level2">
+<h2 class="anchored" data-anchor-id="sélection-et-filtrage">1.4 Sélection et filtrage</h2>
 <div id="cell-16" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -759,8 +791,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="groupby-et-agrégations" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="groupby-et-agrégations"><span class="header-section-number">1.5</span> 1.5 GroupBy et agrégations</h2>
+<section id="groupby-et-agrégations" class="level2">
+<h2 class="anchored" data-anchor-id="groupby-et-agrégations">1.5 GroupBy et agrégations</h2>
 <div id="cell-19" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -780,8 +812,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="apply-vs-vectorisation" class="level2" data-number="1.6">
-<h2 data-number="1.6" class="anchored" data-anchor-id="apply-vs-vectorisation"><span class="header-section-number">1.6</span> 1.6 Apply vs Vectorisation</h2>
+<section id="apply-vs-vectorisation" class="level2">
+<h2 class="anchored" data-anchor-id="apply-vs-vectorisation">1.6 Apply vs Vectorisation</h2>
 <div id="cell-21" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -836,8 +868,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="gestion-de-la-mémoire" class="level2" data-number="1.7">
-<h2 data-number="1.7" class="anchored" data-anchor-id="gestion-de-la-mémoire"><span class="header-section-number">1.7</span> 1.7 Gestion de la mémoire</h2>
+<section id="gestion-de-la-mémoire" class="level2">
+<h2 class="anchored" data-anchor-id="gestion-de-la-mémoire">1.7 Gestion de la mémoire</h2>
 <div id="cell-24" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -869,8 +901,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="manipulation-de-dates" class="level2" data-number="1.8">
-<h2 data-number="1.8" class="anchored" data-anchor-id="manipulation-de-dates"><span class="header-section-number">1.8</span> 1.8 Manipulation de dates</h2>
+<section id="manipulation-de-dates" class="level2">
+<h2 class="anchored" data-anchor-id="manipulation-de-dates">1.8 Manipulation de dates</h2>
 <div id="cell-27" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -909,8 +941,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="export-de-données" class="level2" data-number="1.9">
-<h2 data-number="1.9" class="anchored" data-anchor-id="export-de-données"><span class="header-section-number">1.9</span> 1.9 Export de données</h2>
+<section id="export-de-données" class="level2">
+<h2 class="anchored" data-anchor-id="export-de-données">1.9 Export de données</h2>
 <div id="cell-30" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -932,8 +964,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="exercice-pratique-1-pandas" class="level2" data-number="1.10">
-<h2 data-number="1.10" class="anchored" data-anchor-id="exercice-pratique-1-pandas"><span class="header-section-number">1.10</span> 🎯 Exercice Pratique 1 : Pandas</h2>
+<section id="exercice-pratique-1-pandas" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-pratique-1-pandas">🎯 Exercice Pratique 1 : Pandas</h2>
 <p><strong>Objectif</strong> : Analyser un fichier de ventes</p>
 <ol type="1">
 <li>Créer un DataFrame avec des données de ventes (produit, quantité, prix, date)</li>
@@ -952,8 +984,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 </section>
-<section id="matplotlib-visualisation-de-données" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> 📈 Matplotlib — Visualisation de données</h1>
+<section id="matplotlib-visualisation-de-données" class="level1">
+<h1>📈 Matplotlib — Visualisation de données</h1>
 <p>Matplotlib est la bibliothèque de visualisation de base en Python. Elle permet de créer des graphiques de haute qualité et est la fondation de nombreuses autres bibliothèques de visualisation.</p>
 <div id="cell-34" class="cell">
 <details class="code-fold">
@@ -978,8 +1010,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb20-18"><a href="#cb20-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Version Matplotlib : </span><span class="sc">{</span>plt<span class="sc">.</span>matplotlib<span class="sc">.</span>__version__<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<section id="graphiques-linéaires-line-plots" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="graphiques-linéaires-line-plots"><span class="header-section-number">2.1</span> 📊 Graphiques linéaires (Line Plots)</h2>
+<section id="graphiques-linéaires-line-plots" class="level2">
+<h2 class="anchored" data-anchor-id="graphiques-linéaires-line-plots">📊 Graphiques linéaires (Line Plots)</h2>
 <div id="cell-36" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1005,8 +1037,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="graphiques-à-barres-bar-plots" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="graphiques-à-barres-bar-plots"><span class="header-section-number">2.2</span> 📊 Graphiques à barres (Bar Plots)</h2>
+<section id="graphiques-à-barres-bar-plots" class="level2">
+<h2 class="anchored" data-anchor-id="graphiques-à-barres-bar-plots">📊 Graphiques à barres (Bar Plots)</h2>
 <div id="cell-38" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1043,8 +1075,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="nuages-de-points-scatter-plots" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="nuages-de-points-scatter-plots"><span class="header-section-number">2.3</span> 📊 Nuages de points (Scatter Plots)</h2>
+<section id="nuages-de-points-scatter-plots" class="level2">
+<h2 class="anchored" data-anchor-id="nuages-de-points-scatter-plots">📊 Nuages de points (Scatter Plots)</h2>
 <div id="cell-40" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1076,8 +1108,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="histogrammes" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="histogrammes"><span class="header-section-number">2.4</span> 📊 Histogrammes</h2>
+<section id="histogrammes" class="level2">
+<h2 class="anchored" data-anchor-id="histogrammes">📊 Histogrammes</h2>
 <div id="cell-42" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1109,8 +1141,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="graphiques-circulaires-pie-charts" class="level2" data-number="2.5">
-<h2 data-number="2.5" class="anchored" data-anchor-id="graphiques-circulaires-pie-charts"><span class="header-section-number">2.5</span> 📊 Graphiques circulaires (Pie Charts)</h2>
+<section id="graphiques-circulaires-pie-charts" class="level2">
+<h2 class="anchored" data-anchor-id="graphiques-circulaires-pie-charts">📊 Graphiques circulaires (Pie Charts)</h2>
 <div id="cell-44" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1137,8 +1169,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="sous-graphiques-subplots" class="level2" data-number="2.6">
-<h2 data-number="2.6" class="anchored" data-anchor-id="sous-graphiques-subplots"><span class="header-section-number">2.6</span> 📊 Sous-graphiques (Subplots)</h2>
+<section id="sous-graphiques-subplots" class="level2">
+<h2 class="anchored" data-anchor-id="sous-graphiques-subplots">📊 Sous-graphiques (Subplots)</h2>
 <div id="cell-46" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1178,8 +1210,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="sauvegarder-des-graphiques" class="level2" data-number="2.7">
-<h2 data-number="2.7" class="anchored" data-anchor-id="sauvegarder-des-graphiques"><span class="header-section-number">2.7</span> 💾 Sauvegarder des graphiques</h2>
+<section id="sauvegarder-des-graphiques" class="level2">
+<h2 class="anchored" data-anchor-id="sauvegarder-des-graphiques">💾 Sauvegarder des graphiques</h2>
 <div id="cell-48" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1201,8 +1233,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="exercice-pratique-matplotlib" class="level2" data-number="2.8">
-<h2 data-number="2.8" class="anchored" data-anchor-id="exercice-pratique-matplotlib"><span class="header-section-number">2.8</span> 🎯 Exercice Pratique : Matplotlib</h2>
+<section id="exercice-pratique-matplotlib" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-pratique-matplotlib">🎯 Exercice Pratique : Matplotlib</h2>
 <p><strong>Objectif</strong> : Créer un tableau de bord de visualisation</p>
 <ol type="1">
 <li>Créer un DataFrame avec des données de ventes (produit, mois, ventes, profit)</li>
@@ -1226,8 +1258,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 </section>
-<section id="seaborn-visualisation-statistique-avancée" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> 🎨 Seaborn — Visualisation statistique avancée</h1>
+<section id="seaborn-visualisation-statistique-avancée" class="level1">
+<h1>🎨 Seaborn — Visualisation statistique avancée</h1>
 <p>Seaborn est une bibliothèque de visualisation basée sur Matplotlib qui offre une interface de haut niveau pour créer des graphiques statistiques attrayants. Elle est particulièrement utile pour l’exploration de données.</p>
 <div id="cell-52" class="cell">
 <details class="code-fold">
@@ -1249,8 +1281,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb29-15"><a href="#cb29-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Version Seaborn : </span><span class="sc">{</span>sns<span class="sc">.</span>__version__<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<section id="charger-des-jeux-de-données-intégrés" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="charger-des-jeux-de-données-intégrés"><span class="header-section-number">3.1</span> 📦 Charger des jeux de données intégrés</h2>
+<section id="charger-des-jeux-de-données-intégrés" class="level2">
+<h2 class="anchored" data-anchor-id="charger-des-jeux-de-données-intégrés">📦 Charger des jeux de données intégrés</h2>
 <div id="cell-54" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1263,8 +1295,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="visualisation-des-distributions" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="visualisation-des-distributions"><span class="header-section-number">3.2</span> 📊 Visualisation des distributions</h2>
+<section id="visualisation-des-distributions" class="level2">
+<h2 class="anchored" data-anchor-id="visualisation-des-distributions">📊 Visualisation des distributions</h2>
 <div id="cell-56" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1294,8 +1326,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="visualisation-des-données-catégorielles" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="visualisation-des-données-catégorielles"><span class="header-section-number">3.3</span> 📊 Visualisation des données catégorielles</h2>
+<section id="visualisation-des-données-catégorielles" class="level2">
+<h2 class="anchored" data-anchor-id="visualisation-des-données-catégorielles">📊 Visualisation des données catégorielles</h2>
 <div id="cell-59" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1343,8 +1375,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="visualisation-des-relations-entre-variables" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="visualisation-des-relations-entre-variables"><span class="header-section-number">3.4</span> 📊 Visualisation des relations entre variables</h2>
+<section id="visualisation-des-relations-entre-variables" class="level2">
+<h2 class="anchored" data-anchor-id="visualisation-des-relations-entre-variables">📊 Visualisation des relations entre variables</h2>
 <div id="cell-63" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1375,8 +1407,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="heatmaps-et-matrices-de-corrélation" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="heatmaps-et-matrices-de-corrélation"><span class="header-section-number">3.5</span> 📊 Heatmaps et matrices de corrélation</h2>
+<section id="heatmaps-et-matrices-de-corrélation" class="level2">
+<h2 class="anchored" data-anchor-id="heatmaps-et-matrices-de-corrélation">📊 Heatmaps et matrices de corrélation</h2>
 <div id="cell-66" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1406,8 +1438,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="pair-plots-visualisation-multivariée" class="level2" data-number="3.6">
-<h2 data-number="3.6" class="anchored" data-anchor-id="pair-plots-visualisation-multivariée"><span class="header-section-number">3.6</span> 📊 Pair plots (visualisation multivariée)</h2>
+<section id="pair-plots-visualisation-multivariée" class="level2">
+<h2 class="anchored" data-anchor-id="pair-plots-visualisation-multivariée">📊 Pair plots (visualisation multivariée)</h2>
 <div id="cell-69" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1419,8 +1451,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="facetgrid---graphiques-multi-facettes" class="level2" data-number="3.7">
-<h2 data-number="3.7" class="anchored" data-anchor-id="facetgrid---graphiques-multi-facettes"><span class="header-section-number">3.7</span> 📊 FacetGrid - Graphiques multi-facettes</h2>
+<section id="facetgrid---graphiques-multi-facettes" class="level2">
+<h2 class="anchored" data-anchor-id="facetgrid---graphiques-multi-facettes">📊 FacetGrid - Graphiques multi-facettes</h2>
 <div id="cell-71" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1434,8 +1466,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="joint-plots---distributions-jointes" class="level2" data-number="3.8">
-<h2 data-number="3.8" class="anchored" data-anchor-id="joint-plots---distributions-jointes"><span class="header-section-number">3.8</span> 📊 Joint plots - Distributions jointes</h2>
+<section id="joint-plots---distributions-jointes" class="level2">
+<h2 class="anchored" data-anchor-id="joint-plots---distributions-jointes">📊 Joint plots - Distributions jointes</h2>
 <div id="cell-73" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1457,8 +1489,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="personnalisation-des-styles" class="level2" data-number="3.9">
-<h2 data-number="3.9" class="anchored" data-anchor-id="personnalisation-des-styles"><span class="header-section-number">3.9</span> 🎨 Personnalisation des styles</h2>
+<section id="personnalisation-des-styles" class="level2">
+<h2 class="anchored" data-anchor-id="personnalisation-des-styles">🎨 Personnalisation des styles</h2>
 <div id="cell-76" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1494,8 +1526,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="exemple-tableau-de-bord-complet" class="level2" data-number="3.10">
-<h2 data-number="3.10" class="anchored" data-anchor-id="exemple-tableau-de-bord-complet"><span class="header-section-number">3.10</span> 📊 Exemple : Tableau de bord complet</h2>
+<section id="exemple-tableau-de-bord-complet" class="level2">
+<h2 class="anchored" data-anchor-id="exemple-tableau-de-bord-complet">📊 Exemple : Tableau de bord complet</h2>
 <div id="cell-79" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1551,8 +1583,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="exercice-pratique-seaborn" class="level2" data-number="3.11">
-<h2 data-number="3.11" class="anchored" data-anchor-id="exercice-pratique-seaborn"><span class="header-section-number">3.11</span> 🎯 Exercice Pratique : Seaborn</h2>
+<section id="exercice-pratique-seaborn" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-pratique-seaborn">🎯 Exercice Pratique : Seaborn</h2>
 <p><strong>Objectif</strong> : Analyser le dataset ‘titanic’ de Seaborn</p>
 <ol type="1">
 <li>Charger le dataset avec <code>sns.load_dataset('titanic')</code></li>
@@ -1581,8 +1613,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 </section>
-<section id="matplotlib-visualisation-de-données-1" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> 📈 Matplotlib — Visualisation de données</h1>
+<section id="matplotlib-visualisation-de-données-1" class="level1">
+<h1>📈 Matplotlib — Visualisation de données</h1>
 <p>Matplotlib est la bibliothèque de visualisation de base en Python. Elle permet de créer des graphiques de haute qualité.</p>
 <div id="cell-83" class="cell">
 <details class="code-fold">
@@ -1602,8 +1634,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb48-13"><a href="#cb48-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"✅ Matplotlib importé avec succès !"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<section id="graphiques-de-base-avec-matplotlib" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="graphiques-de-base-avec-matplotlib"><span class="header-section-number">4.1</span> 📊 Graphiques de base avec Matplotlib</h2>
+<section id="graphiques-de-base-avec-matplotlib" class="level2">
+<h2 class="anchored" data-anchor-id="graphiques-de-base-avec-matplotlib">📊 Graphiques de base avec Matplotlib</h2>
 <div id="cell-85" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1649,8 +1681,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="histogrammes-et-distributions" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="histogrammes-et-distributions"><span class="header-section-number">4.2</span> 📊 Histogrammes et distributions</h2>
+<section id="histogrammes-et-distributions" class="level2">
+<h2 class="anchored" data-anchor-id="histogrammes-et-distributions">📊 Histogrammes et distributions</h2>
 <div id="cell-87" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1684,8 +1716,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 </section>
-<section id="seaborn-visualisation-statistique-avancée-1" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> 🎨 Seaborn — Visualisation statistique avancée</h1>
+<section id="seaborn-visualisation-statistique-avancée-1" class="level1">
+<h1>🎨 Seaborn — Visualisation statistique avancée</h1>
 <p>Seaborn offre une interface de haut niveau pour créer des graphiques statistiques attrayants, basée sur Matplotlib.</p>
 <div id="cell-89" class="cell">
 <details class="code-fold">
@@ -1702,8 +1734,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb51-10"><a href="#cb51-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">Dimensions : </span><span class="sc">{</span>tips<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<section id="visualisations-avec-seaborn" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="visualisations-avec-seaborn"><span class="header-section-number">5.1</span> 📊 Visualisations avec Seaborn</h2>
+<section id="visualisations-avec-seaborn" class="level2">
+<h2 class="anchored" data-anchor-id="visualisations-avec-seaborn">📊 Visualisations avec Seaborn</h2>
 <div id="cell-91" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1746,8 +1778,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="exercice-visualisation" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="exercice-visualisation"><span class="header-section-number">5.2</span> 🎯 Exercice : Visualisation</h2>
+<section id="exercice-visualisation" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-visualisation">🎯 Exercice : Visualisation</h2>
 <p>Créer un tableau de bord de visualisation avec les données <code>df_clean</code> (employés) : 1. Distribution des salaires (histogramme) 2. Salaire moyen par ville (bar plot) 3. Relation âge/salaire (scatter plot) 4. Répartition par ville (pie chart)</p>
 <div id="cell-94" class="cell">
 <details class="code-fold">
@@ -1759,11 +1791,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 </section>
-<section id="manipulation-de-données-textuelles" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> 2️⃣ Manipulation de données textuelles</h1>
+<section id="manipulation-de-données-textuelles" class="level1">
+<h1>2️⃣ Manipulation de données textuelles</h1>
 <p>Le traitement de texte est essentiel en Data Engineering (logs, parsing, normalisation).</p>
-<section id="nettoyage-de-base" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="nettoyage-de-base"><span class="header-section-number">6.1</span> 2.1 Nettoyage de base</h2>
+<section id="nettoyage-de-base" class="level2">
+<h2 class="anchored" data-anchor-id="nettoyage-de-base">2.1 Nettoyage de base</h2>
 <div id="cell-97" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1788,8 +1820,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="méthodes-pandas-string-.str-accessor" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="méthodes-pandas-string-.str-accessor"><span class="header-section-number">6.2</span> 2.2 Méthodes Pandas string (<code>.str</code> accessor)</h2>
+<section id="méthodes-pandas-string-.str-accessor" class="level2">
+<h2 class="anchored" data-anchor-id="méthodes-pandas-string-.str-accessor">2.2 Méthodes Pandas string (<code>.str</code> accessor)</h2>
 <div id="cell-99" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1820,8 +1852,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="expressions-régulières-regex" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="expressions-régulières-regex"><span class="header-section-number">6.3</span> 2.3 Expressions régulières (Regex)</h2>
+<section id="expressions-régulières-regex" class="level2">
+<h2 class="anchored" data-anchor-id="expressions-régulières-regex">2.3 Expressions régulières (Regex)</h2>
 <div id="cell-101" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1872,8 +1904,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="cas-dusage-réels-parsing-de-logs" class="level2" data-number="6.4">
-<h2 data-number="6.4" class="anchored" data-anchor-id="cas-dusage-réels-parsing-de-logs"><span class="header-section-number">6.4</span> 2.4 Cas d’usage réels : Parsing de logs</h2>
+<section id="cas-dusage-réels-parsing-de-logs" class="level2">
+<h2 class="anchored" data-anchor-id="cas-dusage-réels-parsing-de-logs">2.4 Cas d’usage réels : Parsing de logs</h2>
 <div id="cell-104" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1904,8 +1936,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="gestion-de-lencodage" class="level2" data-number="6.5">
-<h2 data-number="6.5" class="anchored" data-anchor-id="gestion-de-lencodage"><span class="header-section-number">6.5</span> 2.5 Gestion de l’encodage</h2>
+<section id="gestion-de-lencodage" class="level2">
+<h2 class="anchored" data-anchor-id="gestion-de-lencodage">2.5 Gestion de l’encodage</h2>
 <div id="cell-106" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1945,8 +1977,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="exercice-pratique-2-texte-et-regex" class="level2" data-number="6.6">
-<h2 data-number="6.6" class="anchored" data-anchor-id="exercice-pratique-2-texte-et-regex"><span class="header-section-number">6.6</span> 🎯 Exercice Pratique 2 : Texte et Regex</h2>
+<section id="exercice-pratique-2-texte-et-regex" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-pratique-2-texte-et-regex">🎯 Exercice Pratique 2 : Texte et Regex</h2>
 <p><strong>Objectif</strong> : Nettoyer et valider des données clients</p>
 <ol type="1">
 <li>Créer un DataFrame avec nom, email, téléphone</li>
@@ -1965,11 +1997,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 </section>
-<section id="json-et-apis-rest" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> 3️⃣ JSON et APIs REST</h1>
+<section id="json-et-apis-rest" class="level1">
+<h1>3️⃣ JSON et APIs REST</h1>
 <p>Les APIs sont une source de données majeure en Data Engineering.</p>
-<section id="manipulation-de-json" class="level2" data-number="7.1">
-<h2 data-number="7.1" class="anchored" data-anchor-id="manipulation-de-json"><span class="header-section-number">7.1</span> 3.1 Manipulation de JSON</h2>
+<section id="manipulation-de-json" class="level2">
+<h2 class="anchored" data-anchor-id="manipulation-de-json">3.1 Manipulation de JSON</h2>
 <div id="cell-112" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -2012,8 +2044,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="appels-api-avec-requests" class="level2" data-number="7.2">
-<h2 data-number="7.2" class="anchored" data-anchor-id="appels-api-avec-requests"><span class="header-section-number">7.2</span> 3.2 Appels API avec <code>requests</code></h2>
+<section id="appels-api-avec-requests" class="level2">
+<h2 class="anchored" data-anchor-id="appels-api-avec-requests">3.2 Appels API avec <code>requests</code></h2>
 <div id="cell-115" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -2048,8 +2080,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="gestion-des-erreurs-http" class="level2" data-number="7.3">
-<h2 data-number="7.3" class="anchored" data-anchor-id="gestion-des-erreurs-http"><span class="header-section-number">7.3</span> 3.3 Gestion des erreurs HTTP</h2>
+<section id="gestion-des-erreurs-http" class="level2">
+<h2 class="anchored" data-anchor-id="gestion-des-erreurs-http">3.3 Gestion des erreurs HTTP</h2>
 <div id="cell-118" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -2080,8 +2112,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="authentification-api" class="level2" data-number="7.4">
-<h2 data-number="7.4" class="anchored" data-anchor-id="authentification-api"><span class="header-section-number">7.4</span> 3.4 Authentification API</h2>
+<section id="authentification-api" class="level2">
+<h2 class="anchored" data-anchor-id="authentification-api">3.4 Authentification API</h2>
 <div id="cell-120" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -2110,8 +2142,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="pagination-dapis" class="level2" data-number="7.5">
-<h2 data-number="7.5" class="anchored" data-anchor-id="pagination-dapis"><span class="header-section-number">7.5</span> 3.5 Pagination d’APIs</h2>
+<section id="pagination-dapis" class="level2">
+<h2 class="anchored" data-anchor-id="pagination-dapis">3.5 Pagination d’APIs</h2>
 <div id="cell-122" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -2141,8 +2173,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="rate-limiting-et-retry-logic" class="level2" data-number="7.6">
-<h2 data-number="7.6" class="anchored" data-anchor-id="rate-limiting-et-retry-logic"><span class="header-section-number">7.6</span> 3.6 Rate Limiting et Retry Logic</h2>
+<section id="rate-limiting-et-retry-logic" class="level2">
+<h2 class="anchored" data-anchor-id="rate-limiting-et-retry-logic">3.6 Rate Limiting et Retry Logic</h2>
 <div id="cell-124" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -2212,8 +2244,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="json-imbriqué-complexe" class="level2" data-number="7.7">
-<h2 data-number="7.7" class="anchored" data-anchor-id="json-imbriqué-complexe"><span class="header-section-number">7.7</span> 3.7 JSON imbriqué complexe</h2>
+<section id="json-imbriqué-complexe" class="level2">
+<h2 class="anchored" data-anchor-id="json-imbriqué-complexe">3.7 JSON imbriqué complexe</h2>
 <div id="cell-127" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -2250,8 +2282,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="exercice-pratique-3-apis" class="level2" data-number="7.8">
-<h2 data-number="7.8" class="anchored" data-anchor-id="exercice-pratique-3-apis"><span class="header-section-number">7.8</span> 🎯 Exercice Pratique 3 : APIs</h2>
+<section id="exercice-pratique-3-apis" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-pratique-3-apis">🎯 Exercice Pratique 3 : APIs</h2>
 <p><strong>Objectif</strong> : Récupérer et analyser des données d’une API publique</p>
 <ol type="1">
 <li>Utiliser l’API JSONPlaceholder pour récupérer les posts</li>
@@ -2270,11 +2302,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 </section>
-<section id="data-validation" class="level1" data-number="8">
-<h1 data-number="8"><span class="header-section-number">8</span> 4️⃣ Data Validation</h1>
+<section id="data-validation" class="level1">
+<h1>4️⃣ Data Validation</h1>
 <p>La validation des données est cruciale pour garantir leur qualité.</p>
-<section id="vérifications-basiques" class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="vérifications-basiques"><span class="header-section-number">8.1</span> 4.1 Vérifications basiques</h2>
+<section id="vérifications-basiques" class="level2">
+<h2 class="anchored" data-anchor-id="vérifications-basiques">4.1 Vérifications basiques</h2>
 <div id="cell-132" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -2298,8 +2330,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="classe-de-validation-complète" class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="classe-de-validation-complète"><span class="header-section-number">8.2</span> 4.2 Classe de validation complète</h2>
+<section id="classe-de-validation-complète" class="level2">
+<h2 class="anchored" data-anchor-id="classe-de-validation-complète">4.2 Classe de validation complète</h2>
 <div id="cell-134" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -2377,8 +2409,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="validation-avec-schéma" class="level2" data-number="8.3">
-<h2 data-number="8.3" class="anchored" data-anchor-id="validation-avec-schéma"><span class="header-section-number">8.3</span> 4.3 Validation avec schéma</h2>
+<section id="validation-avec-schéma" class="level2">
+<h2 class="anchored" data-anchor-id="validation-avec-schéma">4.3 Validation avec schéma</h2>
 <div id="cell-136" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -2438,8 +2470,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="exercice-pratique-4-validation" class="level2" data-number="8.4">
-<h2 data-number="8.4" class="anchored" data-anchor-id="exercice-pratique-4-validation"><span class="header-section-number">8.4</span> 🎯 Exercice Pratique 4 : Validation</h2>
+<section id="exercice-pratique-4-validation" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-pratique-4-validation">🎯 Exercice Pratique 4 : Validation</h2>
 <p><strong>Objectif</strong> : Créer un validateur pour des transactions</p>
 <ol type="1">
 <li>Créer un DataFrame de transactions (id, date, montant, type)</li>
@@ -2458,11 +2490,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 </section>
-<section id="mini-pipeline-complet" class="level1" data-number="9">
-<h1 data-number="9"><span class="header-section-number">9</span> 5️⃣ Mini-Pipeline Complet</h1>
+<section id="mini-pipeline-complet" class="level1">
+<h1>5️⃣ Mini-Pipeline Complet</h1>
 <p>Construisons un pipeline ETL complet en intégrant tous les concepts.</p>
-<section id="architecture-du-pipeline" class="level2" data-number="9.1">
-<h2 data-number="9.1" class="anchored" data-anchor-id="architecture-du-pipeline"><span class="header-section-number">9.1</span> 5.1 Architecture du pipeline</h2>
+<section id="architecture-du-pipeline" class="level2">
+<h2 class="anchored" data-anchor-id="architecture-du-pipeline">5.1 Architecture du pipeline</h2>
 <div id="cell-141" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -2486,8 +2518,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="configuration-et-logging" class="level2" data-number="9.2">
-<h2 data-number="9.2" class="anchored" data-anchor-id="configuration-et-logging"><span class="header-section-number">9.2</span> 5.2 Configuration et Logging</h2>
+<section id="configuration-et-logging" class="level2">
+<h2 class="anchored" data-anchor-id="configuration-et-logging">5.2 Configuration et Logging</h2>
 <div id="cell-143" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -2537,8 +2569,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="étape-1-extract" class="level2" data-number="9.3">
-<h2 data-number="9.3" class="anchored" data-anchor-id="étape-1-extract"><span class="header-section-number">9.3</span> 5.3 Étape 1 : Extract</h2>
+<section id="étape-1-extract" class="level2">
+<h2 class="anchored" data-anchor-id="étape-1-extract">5.3 Étape 1 : Extract</h2>
 <div id="cell-146" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -2571,8 +2603,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="étape-2-transform" class="level2" data-number="9.4">
-<h2 data-number="9.4" class="anchored" data-anchor-id="étape-2-transform"><span class="header-section-number">9.4</span> 5.4 Étape 2 : Transform</h2>
+<section id="étape-2-transform" class="level2">
+<h2 class="anchored" data-anchor-id="étape-2-transform">5.4 Étape 2 : Transform</h2>
 <div id="cell-148" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -2619,8 +2651,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="étape-3-validate" class="level2" data-number="9.5">
-<h2 data-number="9.5" class="anchored" data-anchor-id="étape-3-validate"><span class="header-section-number">9.5</span> 5.5 Étape 3 : Validate</h2>
+<section id="étape-3-validate" class="level2">
+<h2 class="anchored" data-anchor-id="étape-3-validate">5.5 Étape 3 : Validate</h2>
 <div id="cell-150" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -2655,8 +2687,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="étape-4-load" class="level2" data-number="9.6">
-<h2 data-number="9.6" class="anchored" data-anchor-id="étape-4-load"><span class="header-section-number">9.6</span> 5.6 Étape 4 : Load</h2>
+<section id="étape-4-load" class="level2">
+<h2 class="anchored" data-anchor-id="étape-4-load">5.6 Étape 4 : Load</h2>
 <div id="cell-152" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -2694,8 +2726,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="pipeline-complet" class="level2" data-number="9.7">
-<h2 data-number="9.7" class="anchored" data-anchor-id="pipeline-complet"><span class="header-section-number">9.7</span> 5.7 Pipeline complet</h2>
+<section id="pipeline-complet" class="level2">
+<h2 class="anchored" data-anchor-id="pipeline-complet">5.7 Pipeline complet</h2>
 <div id="cell-154" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -2755,8 +2787,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="exercice-final-pipeline-complet" class="level2" data-number="9.8">
-<h2 data-number="9.8" class="anchored" data-anchor-id="exercice-final-pipeline-complet"><span class="header-section-number">9.8</span> 🎯 Exercice Final : Pipeline Complet</h2>
+<section id="exercice-final-pipeline-complet" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-final-pipeline-complet">🎯 Exercice Final : Pipeline Complet</h2>
 <p><strong>Objectif</strong> : Créer votre propre pipeline ETL</p>
 <ol type="1">
 <li>Extraire des données de posts depuis JSONPlaceholder</li>
@@ -2776,11 +2808,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 </section>
-<section id="bonus-configuration-et-tests" class="level1" data-number="10">
-<h1 data-number="10"><span class="header-section-number">10</span> 🎯 BONUS : Configuration et Tests</h1>
+<section id="bonus-configuration-et-tests" class="level1">
+<h1>🎯 BONUS : Configuration et Tests</h1>
 <p>Pour aller plus loin dans la professionnalisation de votre code.</p>
-<section id="gestion-des-configurations" class="level2" data-number="10.1">
-<h2 data-number="10.1" class="anchored" data-anchor-id="gestion-des-configurations"><span class="header-section-number">10.1</span> 6️⃣ Gestion des configurations</h2>
+<section id="gestion-des-configurations" class="level2">
+<h2 class="anchored" data-anchor-id="gestion-des-configurations">6️⃣ Gestion des configurations</h2>
 <div id="cell-159" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -2821,8 +2853,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="tests-unitaires-basiques" class="level2" data-number="10.2">
-<h2 data-number="10.2" class="anchored" data-anchor-id="tests-unitaires-basiques"><span class="header-section-number">10.2</span> 7️⃣ Tests unitaires basiques</h2>
+<section id="tests-unitaires-basiques" class="level2">
+<h2 class="anchored" data-anchor-id="tests-unitaires-basiques">7️⃣ Tests unitaires basiques</h2>
 <div id="cell-162" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -2862,10 +2894,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 </section>
-<section id="résumé-et-prochaines-étapes" class="level1" data-number="11">
-<h1 data-number="11"><span class="header-section-number">11</span> 🎓 Résumé et Prochaines Étapes</h1>
-<section id="ce-que-tu-as-appris" class="level2" data-number="11.1">
-<h2 data-number="11.1" class="anchored" data-anchor-id="ce-que-tu-as-appris"><span class="header-section-number">11.1</span> Ce que tu as appris ✅</h2>
+<section id="résumé-et-prochaines-étapes" class="level1">
+<h1>🎓 Résumé et Prochaines Étapes</h1>
+<section id="ce-que-tu-as-appris" class="level2">
+<h2 class="anchored" data-anchor-id="ce-que-tu-as-appris">Ce que tu as appris ✅</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 30%">
@@ -2913,10 +2945,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 </section>
-<section id="ressources-pour-aller-plus-loin" class="level2" data-number="11.2">
-<h2 data-number="11.2" class="anchored" data-anchor-id="ressources-pour-aller-plus-loin"><span class="header-section-number">11.2</span> 📚 Ressources pour aller plus loin</h2>
-<section id="documentation-officielle" class="level3" data-number="11.2.1">
-<h3 data-number="11.2.1" class="anchored" data-anchor-id="documentation-officielle"><span class="header-section-number">11.2.1</span> Documentation officielle</h3>
+<section id="ressources-pour-aller-plus-loin" class="level2">
+<h2 class="anchored" data-anchor-id="ressources-pour-aller-plus-loin">📚 Ressources pour aller plus loin</h2>
+<section id="documentation-officielle" class="level3">
+<h3 class="anchored" data-anchor-id="documentation-officielle">Documentation officielle</h3>
 <ul>
 <li><a href="https://pandas.pydata.org/docs/">Pandas Documentation</a></li>
 <li><a href="https://matplotlib.org/stable/contents.html">Matplotlib Documentation</a></li>
@@ -2924,16 +2956,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><a href="https://requests.readthedocs.io/">Requests Documentation</a></li>
 </ul>
 </section>
-<section id="tutoriels-et-cours" class="level3" data-number="11.2.2">
-<h3 data-number="11.2.2" class="anchored" data-anchor-id="tutoriels-et-cours"><span class="header-section-number">11.2.2</span> Tutoriels et cours</h3>
+<section id="tutoriels-et-cours" class="level3">
+<h3 class="anchored" data-anchor-id="tutoriels-et-cours">Tutoriels et cours</h3>
 <ul>
 <li><a href="https://realpython.com/pandas-python-explore-dataset/">Real Python - Pandas</a></li>
 <li><a href="https://www.kaggle.com/learn">Kaggle Learn</a></li>
 <li><a href="https://www.datacamp.com/">DataCamp</a></li>
 </ul>
 </section>
-<section id="outils-avancés-à-explorer" class="level3" data-number="11.2.3">
-<h3 data-number="11.2.3" class="anchored" data-anchor-id="outils-avancés-à-explorer"><span class="header-section-number">11.2.3</span> Outils avancés à explorer</h3>
+<section id="outils-avancés-à-explorer" class="level3">
+<h3 class="anchored" data-anchor-id="outils-avancés-à-explorer">Outils avancés à explorer</h3>
 <ul>
 <li><strong>Polars</strong> — Alternative plus rapide à Pandas</li>
 <li><strong>Great Expectations</strong> — Validation de données avancée</li>
@@ -2942,8 +2974,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 </section>
-<section id="prochaine-étape" class="level2" data-number="11.3">
-<h2 data-number="11.3" class="anchored" data-anchor-id="prochaine-étape"><span class="header-section-number">11.3</span> ➡️ Prochaine étape</h2>
+<section id="prochaine-étape" class="level2">
+<h2 class="anchored" data-anchor-id="prochaine-étape">➡️ Prochaine étape</h2>
 <p>Maintenant que tu maîtrises le traitement de données, passons aux <strong>bases de données</strong> !</p>
 <p>👉 <strong>Module suivant : <code>06_intro_databases.ipynb</code></strong> — Introduction aux bases de données</p>
 <hr>

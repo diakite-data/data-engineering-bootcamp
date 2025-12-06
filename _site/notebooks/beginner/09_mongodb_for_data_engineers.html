@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>🍃 MongoDB for Data Engineers – Bootcamp Data Engineering</title>
+<title>🍃 MongoDB for Data Engineers – Bootcamp Data Engineering – From Zero to Hero</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -110,6 +110,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <style>html{ scroll-behavior: smooth; }</style>
 
 
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -282,7 +283,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">Bootcamp Data Engineering</span>
+    <span class="navbar-title">Bootcamp Data Engineering – From Zero to Hero</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -293,11 +294,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/diakite-data/data-engineering-bootcamp"> <i class="bi bi-github" role="img">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="../../#"> <i class="bi bi-lightbulb" role="img" aria-label="Mode clair/sombre">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -313,7 +309,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">🍃 MongoDB for Data Engineers</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notebooks/beginner/01_intro_data_engineering.html">Débutant</a></li><li class="breadcrumb-item"><a href="../../notebooks/beginner/09_mongodb_for_data_engineers.html">🍃 MongoDB for Data Engineers</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -380,8 +376,44 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notebooks/beginner/06_intro_databases.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">🧠 Introduction aux bases de données pour Data Engineers</span></a>
+  <a href="../../notebooks/beginner/06_intro_relational_databases.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🗄️ Introduction aux Bases de Données Relationnelles</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/07_sql_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🐘 SQL for Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/08_intro_big_data_distributed.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🐘 Introduction au Big Data &amp; Traitement Distribué</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/09_mongodb_for_data_engineers.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">🍃 MongoDB for Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/10_elasticsearch_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🔍 Elasticsearch for Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/11_pyspark_for_data_engineering.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">⚡ PySpark for Data Engineering</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/12_orchestration_pipelines.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">⏰ Orchestration de Pipelines Data</span></a>
   </div>
 </li>
       </ul>
@@ -396,180 +428,180 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#prérequis" id="toc-prérequis" class="nav-link active" data-scroll-target="#prérequis"><span class="header-section-number">0.1</span> 📋 Prérequis</a></li>
-  <li><a href="#objectifs-du-module" id="toc-objectifs-du-module" class="nav-link" data-scroll-target="#objectifs-du-module"><span class="header-section-number">0.2</span> 🎯 Objectifs du module</a></li>
-  <li><a href="#mongodb-dans-lécosystème-big-data" id="toc-mongodb-dans-lécosystème-big-data" class="nav-link" data-scroll-target="#mongodb-dans-lécosystème-big-data"><span class="header-section-number">0.3</span> 🎯 MongoDB dans l’écosystème Big Data</a>
+  <li><a href="#prérequis" id="toc-prérequis" class="nav-link active" data-scroll-target="#prérequis">📋 Prérequis</a></li>
+  <li><a href="#objectifs-du-module" id="toc-objectifs-du-module" class="nav-link" data-scroll-target="#objectifs-du-module">🎯 Objectifs du module</a></li>
+  <li><a href="#mongodb-dans-lécosystème-big-data" id="toc-mongodb-dans-lécosystème-big-data" class="nav-link" data-scroll-target="#mongodb-dans-lécosystème-big-data">🎯 MongoDB dans l’écosystème Big Data</a>
   <ul class="collapse">
-  <li><a href="#rappel-les-5v" id="toc-rappel-les-5v" class="nav-link" data-scroll-target="#rappel-les-5v"><span class="header-section-number">0.3.1</span> Rappel : Les 5V</a></li>
-  <li><a href="#rappel-cap-base" id="toc-rappel-cap-base" class="nav-link" data-scroll-target="#rappel-cap-base"><span class="header-section-number">0.3.2</span> Rappel : CAP &amp; BASE</a></li>
+  <li><a href="#rappel-les-5v" id="toc-rappel-les-5v" class="nav-link" data-scroll-target="#rappel-les-5v">Rappel : Les 5V</a></li>
+  <li><a href="#rappel-cap-base" id="toc-rappel-cap-base" class="nav-link" data-scroll-target="#rappel-cap-base">Rappel : CAP &amp; BASE</a></li>
   </ul></li>
-  <li><a href="#partie-1-cest-quoi-mongodb" id="toc-partie-1-cest-quoi-mongodb" class="nav-link" data-scroll-target="#partie-1-cest-quoi-mongodb"><span class="header-section-number">1</span> 📚 Partie 1 : C’est quoi MongoDB ?</a>
+  <li><a href="#partie-1-cest-quoi-mongodb" id="toc-partie-1-cest-quoi-mongodb" class="nav-link" data-scroll-target="#partie-1-cest-quoi-mongodb">📚 Partie 1 : C’est quoi MongoDB ?</a>
   <ul class="collapse">
-  <li><a href="#explication-simple" id="toc-explication-simple" class="nav-link" data-scroll-target="#explication-simple"><span class="header-section-number">1.1</span> 1.1 Explication simple</a>
+  <li><a href="#explication-simple" id="toc-explication-simple" class="nav-link" data-scroll-target="#explication-simple">1.1 Explication simple</a>
   <ul class="collapse">
-  <li><a href="#comparaison-sql-vs-mongodb" id="toc-comparaison-sql-vs-mongodb" class="nav-link" data-scroll-target="#comparaison-sql-vs-mongodb"><span class="header-section-number">1.1.1</span> Comparaison : SQL vs MongoDB</a></li>
-  <li><a href="#différences-principales" id="toc-différences-principales" class="nav-link" data-scroll-target="#différences-principales"><span class="header-section-number">1.1.2</span> 🔑 Différences principales :</a></li>
+  <li><a href="#comparaison-sql-vs-mongodb" id="toc-comparaison-sql-vs-mongodb" class="nav-link" data-scroll-target="#comparaison-sql-vs-mongodb">Comparaison : SQL vs MongoDB</a></li>
+  <li><a href="#différences-principales" id="toc-différences-principales" class="nav-link" data-scroll-target="#différences-principales">🔑 Différences principales :</a></li>
   </ul></li>
-  <li><a href="#vocabulaire-de-base" id="toc-vocabulaire-de-base" class="nav-link" data-scroll-target="#vocabulaire-de-base"><span class="header-section-number">1.2</span> 1.2 Vocabulaire de base</a>
+  <li><a href="#vocabulaire-de-base" id="toc-vocabulaire-de-base" class="nav-link" data-scroll-target="#vocabulaire-de-base">1.2 Vocabulaire de base</a>
   <ul class="collapse">
-  <li><a href="#structure-visuelle" id="toc-structure-visuelle" class="nav-link" data-scroll-target="#structure-visuelle"><span class="header-section-number">1.2.1</span> Structure visuelle :</a></li>
+  <li><a href="#structure-visuelle" id="toc-structure-visuelle" class="nav-link" data-scroll-target="#structure-visuelle">Structure visuelle :</a></li>
   </ul></li>
-  <li><a href="#format-des-documents" id="toc-format-des-documents" class="nav-link" data-scroll-target="#format-des-documents"><span class="header-section-number">1.3</span> 1.3 Format des documents</a>
+  <li><a href="#format-des-documents" id="toc-format-des-documents" class="nav-link" data-scroll-target="#format-des-documents">1.3 Format des documents</a>
   <ul class="collapse">
-  <li><a href="#exemple-de-document-complet" id="toc-exemple-de-document-complet" class="nav-link" data-scroll-target="#exemple-de-document-complet"><span class="header-section-number">1.3.1</span> Exemple de document complet :</a></li>
-  <li><a href="#points-importants" id="toc-points-importants" class="nav-link" data-scroll-target="#points-importants"><span class="header-section-number">1.3.2</span> Points importants :</a></li>
+  <li><a href="#exemple-de-document-complet" id="toc-exemple-de-document-complet" class="nav-link" data-scroll-target="#exemple-de-document-complet">Exemple de document complet :</a></li>
+  <li><a href="#points-importants" id="toc-points-importants" class="nav-link" data-scroll-target="#points-importants">Points importants :</a></li>
   </ul></li>
-  <li><a href="#pourquoi-utiliser-mongodb-en-data-engineering" id="toc-pourquoi-utiliser-mongodb-en-data-engineering" class="nav-link" data-scroll-target="#pourquoi-utiliser-mongodb-en-data-engineering"><span class="header-section-number">1.4</span> 1.4 Pourquoi utiliser MongoDB en Data Engineering ?</a>
+  <li><a href="#pourquoi-utiliser-mongodb-en-data-engineering" id="toc-pourquoi-utiliser-mongodb-en-data-engineering" class="nav-link" data-scroll-target="#pourquoi-utiliser-mongodb-en-data-engineering">1.4 Pourquoi utiliser MongoDB en Data Engineering ?</a>
   <ul class="collapse">
-  <li><a href="#avantages" id="toc-avantages" class="nav-link" data-scroll-target="#avantages"><span class="header-section-number">1.4.1</span> ✅ Avantages :</a></li>
+  <li><a href="#avantages" id="toc-avantages" class="nav-link" data-scroll-target="#avantages">✅ Avantages :</a></li>
   </ul></li>
-  <li><a href="#quand-utiliser-mongodb" id="toc-quand-utiliser-mongodb" class="nav-link" data-scroll-target="#quand-utiliser-mongodb"><span class="header-section-number">1.5</span> 1.5 Quand utiliser MongoDB ?</a>
+  <li><a href="#quand-utiliser-mongodb" id="toc-quand-utiliser-mongodb" class="nav-link" data-scroll-target="#quand-utiliser-mongodb">1.5 Quand utiliser MongoDB ?</a>
   <ul class="collapse">
-  <li><a href="#utilisez-mongodb-pour" id="toc-utilisez-mongodb-pour" class="nav-link" data-scroll-target="#utilisez-mongodb-pour"><span class="header-section-number">1.5.1</span> ✅ Utilisez MongoDB pour :</a></li>
-  <li><a href="#nutilisez-pas-mongodb-pour" id="toc-nutilisez-pas-mongodb-pour" class="nav-link" data-scroll-target="#nutilisez-pas-mongodb-pour"><span class="header-section-number">1.5.2</span> ❌ N’utilisez PAS MongoDB pour :</a></li>
-  <li><a href="#règle-simple" id="toc-règle-simple" class="nav-link" data-scroll-target="#règle-simple"><span class="header-section-number">1.5.3</span> 💡 Règle simple :</a></li>
-  </ul></li>
-  </ul></li>
-  <li><a href="#partie-2-setup-mongodb-atlas" id="toc-partie-2-setup-mongodb-atlas" class="nav-link" data-scroll-target="#partie-2-setup-mongodb-atlas"><span class="header-section-number">2</span> 📦 Partie 2 : Setup MongoDB Atlas</a>
-  <ul class="collapse">
-  <li><a href="#pourquoi-mongodb-atlas" id="toc-pourquoi-mongodb-atlas" class="nav-link" data-scroll-target="#pourquoi-mongodb-atlas"><span class="header-section-number">2.1</span> 2.1 Pourquoi MongoDB Atlas ?</a>
-  <ul class="collapse">
-  <li><a href="#avantages-1" id="toc-avantages-1" class="nav-link" data-scroll-target="#avantages-1"><span class="header-section-number">2.1.1</span> Avantages :</a></li>
-  </ul></li>
-  <li><a href="#créer-votre-compte-5-minutes" id="toc-créer-votre-compte-5-minutes" class="nav-link" data-scroll-target="#créer-votre-compte-5-minutes"><span class="header-section-number">2.2</span> 2.2 Créer votre compte (5 minutes)</a>
-  <ul class="collapse">
-  <li><a href="#étape-1-inscription" id="toc-étape-1-inscription" class="nav-link" data-scroll-target="#étape-1-inscription"><span class="header-section-number">2.2.1</span> ▶️ Étape 1 : Inscription</a></li>
-  <li><a href="#étape-2-créer-un-cluster-gratuit" id="toc-étape-2-créer-un-cluster-gratuit" class="nav-link" data-scroll-target="#étape-2-créer-un-cluster-gratuit"><span class="header-section-number">2.2.2</span> ▶️ Étape 2 : Créer un cluster gratuit</a></li>
-  <li><a href="#étape-3-créer-un-utilisateur" id="toc-étape-3-créer-un-utilisateur" class="nav-link" data-scroll-target="#étape-3-créer-un-utilisateur"><span class="header-section-number">2.2.3</span> ▶️ Étape 3 : Créer un utilisateur</a></li>
-  <li><a href="#étape-4-autoriser-laccès" id="toc-étape-4-autoriser-laccès" class="nav-link" data-scroll-target="#étape-4-autoriser-laccès"><span class="header-section-number">2.2.4</span> ▶️ Étape 4 : Autoriser l’accès</a></li>
-  </ul></li>
-  <li><a href="#accéder-à-mongodb-shell" id="toc-accéder-à-mongodb-shell" class="nav-link" data-scroll-target="#accéder-à-mongodb-shell"><span class="header-section-number">2.3</span> 2.3 Accéder à MongoDB Shell</a>
-  <ul class="collapse">
-  <li><a href="#méthode-1-mongodb-shell-web-le-plus-simple" id="toc-méthode-1-mongodb-shell-web-le-plus-simple" class="nav-link" data-scroll-target="#méthode-1-mongodb-shell-web-le-plus-simple"><span class="header-section-number">2.3.1</span> Méthode 1 : MongoDB Shell Web (le plus simple)</a></li>
-  <li><a href="#méthode-2-data-explorer-interface-graphique" id="toc-méthode-2-data-explorer-interface-graphique" class="nav-link" data-scroll-target="#méthode-2-data-explorer-interface-graphique"><span class="header-section-number">2.3.2</span> Méthode 2 : Data Explorer (interface graphique)</a></li>
-  <li><a href="#dans-ce-tutoriel" id="toc-dans-ce-tutoriel" class="nav-link" data-scroll-target="#dans-ce-tutoriel"><span class="header-section-number">2.3.3</span> 💡 Dans ce tutoriel</a></li>
+  <li><a href="#utilisez-mongodb-pour" id="toc-utilisez-mongodb-pour" class="nav-link" data-scroll-target="#utilisez-mongodb-pour">✅ Utilisez MongoDB pour :</a></li>
+  <li><a href="#nutilisez-pas-mongodb-pour" id="toc-nutilisez-pas-mongodb-pour" class="nav-link" data-scroll-target="#nutilisez-pas-mongodb-pour">❌ N’utilisez PAS MongoDB pour :</a></li>
+  <li><a href="#règle-simple" id="toc-règle-simple" class="nav-link" data-scroll-target="#règle-simple">💡 Règle simple :</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#partie-3-commandes-mongodb-de-base" id="toc-partie-3-commandes-mongodb-de-base" class="nav-link" data-scroll-target="#partie-3-commandes-mongodb-de-base"><span class="header-section-number">3</span> 3️⃣ Partie 3 : Commandes MongoDB de base</a>
+  <li><a href="#partie-2-setup-mongodb-atlas" id="toc-partie-2-setup-mongodb-atlas" class="nav-link" data-scroll-target="#partie-2-setup-mongodb-atlas">📦 Partie 2 : Setup MongoDB Atlas</a>
   <ul class="collapse">
-  <li><a href="#créer-une-base-de-données-et-une-collection" id="toc-créer-une-base-de-données-et-une-collection" class="nav-link" data-scroll-target="#créer-une-base-de-données-et-une-collection"><span class="header-section-number">3.1</span> 3.1 Créer une base de données et une collection</a>
+  <li><a href="#pourquoi-mongodb-atlas" id="toc-pourquoi-mongodb-atlas" class="nav-link" data-scroll-target="#pourquoi-mongodb-atlas">2.1 Pourquoi MongoDB Atlas ?</a>
   <ul class="collapse">
-  <li><a href="#créersélectionner-une-base-de-données" id="toc-créersélectionner-une-base-de-données" class="nav-link" data-scroll-target="#créersélectionner-une-base-de-données"><span class="header-section-number">3.1.1</span> Créer/Sélectionner une base de données</a></li>
-  <li><a href="#voir-la-base-de-données-actuelle" id="toc-voir-la-base-de-données-actuelle" class="nav-link" data-scroll-target="#voir-la-base-de-données-actuelle"><span class="header-section-number">3.1.2</span> Voir la base de données actuelle</a></li>
-  <li><a href="#lister-toutes-les-bases-de-données" id="toc-lister-toutes-les-bases-de-données" class="nav-link" data-scroll-target="#lister-toutes-les-bases-de-données"><span class="header-section-number">3.1.3</span> Lister toutes les bases de données</a></li>
-  <li><a href="#lister-les-collections" id="toc-lister-les-collections" class="nav-link" data-scroll-target="#lister-les-collections"><span class="header-section-number">3.1.4</span> Lister les collections</a></li>
+  <li><a href="#avantages-1" id="toc-avantages-1" class="nav-link" data-scroll-target="#avantages-1">Avantages :</a></li>
   </ul></li>
-  <li><a href="#create---insérer-des-documents" id="toc-create---insérer-des-documents" class="nav-link" data-scroll-target="#create---insérer-des-documents"><span class="header-section-number">3.2</span> 3.2 CREATE - Insérer des documents</a>
+  <li><a href="#créer-votre-compte-5-minutes" id="toc-créer-votre-compte-5-minutes" class="nav-link" data-scroll-target="#créer-votre-compte-5-minutes">2.2 Créer votre compte (5 minutes)</a>
   <ul class="collapse">
-  <li><a href="#insérer-un-document" id="toc-insérer-un-document" class="nav-link" data-scroll-target="#insérer-un-document"><span class="header-section-number">3.2.1</span> Insérer UN document</a></li>
-  <li><a href="#insérer-plusieurs-documents" id="toc-insérer-plusieurs-documents" class="nav-link" data-scroll-target="#insérer-plusieurs-documents"><span class="header-section-number">3.2.2</span> Insérer PLUSIEURS documents</a></li>
+  <li><a href="#étape-1-inscription" id="toc-étape-1-inscription" class="nav-link" data-scroll-target="#étape-1-inscription">▶️ Étape 1 : Inscription</a></li>
+  <li><a href="#étape-2-créer-un-cluster-gratuit" id="toc-étape-2-créer-un-cluster-gratuit" class="nav-link" data-scroll-target="#étape-2-créer-un-cluster-gratuit">▶️ Étape 2 : Créer un cluster gratuit</a></li>
+  <li><a href="#étape-3-créer-un-utilisateur" id="toc-étape-3-créer-un-utilisateur" class="nav-link" data-scroll-target="#étape-3-créer-un-utilisateur">▶️ Étape 3 : Créer un utilisateur</a></li>
+  <li><a href="#étape-4-autoriser-laccès" id="toc-étape-4-autoriser-laccès" class="nav-link" data-scroll-target="#étape-4-autoriser-laccès">▶️ Étape 4 : Autoriser l’accès</a></li>
   </ul></li>
-  <li><a href="#read---lire-des-documents" id="toc-read---lire-des-documents" class="nav-link" data-scroll-target="#read---lire-des-documents"><span class="header-section-number">3.3</span> 3.3 READ - Lire des documents</a>
+  <li><a href="#accéder-à-mongodb-shell" id="toc-accéder-à-mongodb-shell" class="nav-link" data-scroll-target="#accéder-à-mongodb-shell">2.3 Accéder à MongoDB Shell</a>
   <ul class="collapse">
-  <li><a href="#lire-tous-les-documents" id="toc-lire-tous-les-documents" class="nav-link" data-scroll-target="#lire-tous-les-documents"><span class="header-section-number">3.3.1</span> Lire TOUS les documents</a></li>
-  <li><a href="#lire-avec-un-affichage-formaté-pretty" id="toc-lire-avec-un-affichage-formaté-pretty" class="nav-link" data-scroll-target="#lire-avec-un-affichage-formaté-pretty"><span class="header-section-number">3.3.2</span> Lire avec un affichage formaté (pretty)</a></li>
-  <li><a href="#lire-un-seul-document" id="toc-lire-un-seul-document" class="nav-link" data-scroll-target="#lire-un-seul-document"><span class="header-section-number">3.3.3</span> Lire UN seul document</a></li>
-  <li><a href="#filtrer-employés-à-paris" id="toc-filtrer-employés-à-paris" class="nav-link" data-scroll-target="#filtrer-employés-à-paris"><span class="header-section-number">3.3.4</span> Filtrer : employés à Paris</a></li>
-  <li><a href="#filtrer-salaire-supérieur-à-50000" id="toc-filtrer-salaire-supérieur-à-50000" class="nav-link" data-scroll-target="#filtrer-salaire-supérieur-à-50000"><span class="header-section-number">3.3.5</span> Filtrer : salaire supérieur à 50000</a></li>
-  <li><a href="#filtrer-avec-plusieurs-conditions-and" id="toc-filtrer-avec-plusieurs-conditions-and" class="nav-link" data-scroll-target="#filtrer-avec-plusieurs-conditions-and"><span class="header-section-number">3.3.6</span> Filtrer avec plusieurs conditions (AND)</a></li>
-  <li><a href="#filtrer-avec-or" id="toc-filtrer-avec-or" class="nav-link" data-scroll-target="#filtrer-avec-or"><span class="header-section-number">3.3.7</span> Filtrer avec OR</a></li>
-  <li><a href="#sélectionner-certains-champs-seulement-projection" id="toc-sélectionner-certains-champs-seulement-projection" class="nav-link" data-scroll-target="#sélectionner-certains-champs-seulement-projection"><span class="header-section-number">3.3.8</span> Sélectionner certains champs seulement (projection)</a></li>
-  </ul></li>
-  <li><a href="#trier-limiter-compter" id="toc-trier-limiter-compter" class="nav-link" data-scroll-target="#trier-limiter-compter"><span class="header-section-number">3.4</span> 3.4 Trier, limiter, compter</a>
-  <ul class="collapse">
-  <li><a href="#trier-par-salaire-croissant" id="toc-trier-par-salaire-croissant" class="nav-link" data-scroll-target="#trier-par-salaire-croissant"><span class="header-section-number">3.4.1</span> Trier par salaire (croissant)</a></li>
-  <li><a href="#trier-par-salaire-décroissant" id="toc-trier-par-salaire-décroissant" class="nav-link" data-scroll-target="#trier-par-salaire-décroissant"><span class="header-section-number">3.4.2</span> Trier par salaire (décroissant)</a></li>
-  <li><a href="#limiter-les-résultats-top-3" id="toc-limiter-les-résultats-top-3" class="nav-link" data-scroll-target="#limiter-les-résultats-top-3"><span class="header-section-number">3.4.3</span> Limiter les résultats (top 3)</a></li>
-  <li><a href="#sauter-des-résultats-pagination" id="toc-sauter-des-résultats-pagination" class="nav-link" data-scroll-target="#sauter-des-résultats-pagination"><span class="header-section-number">3.4.4</span> Sauter des résultats (pagination)</a></li>
-  <li><a href="#compter-les-documents" id="toc-compter-les-documents" class="nav-link" data-scroll-target="#compter-les-documents"><span class="header-section-number">3.4.5</span> Compter les documents</a></li>
-  </ul></li>
-  <li><a href="#update---modifier-des-documents" id="toc-update---modifier-des-documents" class="nav-link" data-scroll-target="#update---modifier-des-documents"><span class="header-section-number">3.5</span> 3.5 UPDATE - Modifier des documents</a>
-  <ul class="collapse">
-  <li><a href="#modifier-un-document" id="toc-modifier-un-document" class="nav-link" data-scroll-target="#modifier-un-document"><span class="header-section-number">3.5.1</span> Modifier UN document</a></li>
-  <li><a href="#modifier-plusieurs-documents" id="toc-modifier-plusieurs-documents" class="nav-link" data-scroll-target="#modifier-plusieurs-documents"><span class="header-section-number">3.5.2</span> Modifier PLUSIEURS documents</a></li>
-  <li><a href="#opérateurs-de-modification" id="toc-opérateurs-de-modification" class="nav-link" data-scroll-target="#opérateurs-de-modification"><span class="header-section-number">3.5.3</span> Opérateurs de modification</a></li>
-  <li><a href="#ajouter-un-champ-à-tous-les-documents" id="toc-ajouter-un-champ-à-tous-les-documents" class="nav-link" data-scroll-target="#ajouter-un-champ-à-tous-les-documents"><span class="header-section-number">3.5.4</span> Ajouter un champ à tous les documents</a></li>
-  </ul></li>
-  <li><a href="#delete---supprimer-des-documents" id="toc-delete---supprimer-des-documents" class="nav-link" data-scroll-target="#delete---supprimer-des-documents"><span class="header-section-number">3.6</span> 3.6 DELETE - Supprimer des documents</a>
-  <ul class="collapse">
-  <li><a href="#supprimer-un-document" id="toc-supprimer-un-document" class="nav-link" data-scroll-target="#supprimer-un-document"><span class="header-section-number">3.6.1</span> Supprimer UN document</a></li>
-  <li><a href="#supprimer-plusieurs-documents" id="toc-supprimer-plusieurs-documents" class="nav-link" data-scroll-target="#supprimer-plusieurs-documents"><span class="header-section-number">3.6.2</span> Supprimer PLUSIEURS documents</a></li>
-  <li><a href="#supprimer-tous-les-documents" id="toc-supprimer-tous-les-documents" class="nav-link" data-scroll-target="#supprimer-tous-les-documents"><span class="header-section-number">3.6.3</span> ⚠️ Supprimer TOUS les documents</a></li>
-  <li><a href="#supprimer-une-collection-entière" id="toc-supprimer-une-collection-entière" class="nav-link" data-scroll-target="#supprimer-une-collection-entière"><span class="header-section-number">3.6.4</span> Supprimer une collection entière</a></li>
-  <li><a href="#supprimer-une-base-de-données" id="toc-supprimer-une-base-de-données" class="nav-link" data-scroll-target="#supprimer-une-base-de-données"><span class="header-section-number">3.6.5</span> Supprimer une base de données</a></li>
+  <li><a href="#méthode-1-mongodb-shell-web-le-plus-simple" id="toc-méthode-1-mongodb-shell-web-le-plus-simple" class="nav-link" data-scroll-target="#méthode-1-mongodb-shell-web-le-plus-simple">Méthode 1 : MongoDB Shell Web (le plus simple)</a></li>
+  <li><a href="#méthode-2-data-explorer-interface-graphique" id="toc-méthode-2-data-explorer-interface-graphique" class="nav-link" data-scroll-target="#méthode-2-data-explorer-interface-graphique">Méthode 2 : Data Explorer (interface graphique)</a></li>
+  <li><a href="#dans-ce-tutoriel" id="toc-dans-ce-tutoriel" class="nav-link" data-scroll-target="#dans-ce-tutoriel">💡 Dans ce tutoriel</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#partie-4-agrégations-simples" id="toc-partie-4-agrégations-simples" class="nav-link" data-scroll-target="#partie-4-agrégations-simples"><span class="header-section-number">4</span> 4️⃣ Partie 4 : Agrégations simples</a>
+  <li><a href="#partie-3-commandes-mongodb-de-base" id="toc-partie-3-commandes-mongodb-de-base" class="nav-link" data-scroll-target="#partie-3-commandes-mongodb-de-base">3️⃣ Partie 3 : Commandes MongoDB de base</a>
   <ul class="collapse">
-  <li><a href="#grouper-et-compter" id="toc-grouper-et-compter" class="nav-link" data-scroll-target="#grouper-et-compter"><span class="header-section-number">4.1</span> 4.1 Grouper et compter</a>
+  <li><a href="#créer-une-base-de-données-et-une-collection" id="toc-créer-une-base-de-données-et-une-collection" class="nav-link" data-scroll-target="#créer-une-base-de-données-et-une-collection">3.1 Créer une base de données et une collection</a>
   <ul class="collapse">
-  <li><a href="#compter-les-employés-par-ville" id="toc-compter-les-employés-par-ville" class="nav-link" data-scroll-target="#compter-les-employés-par-ville"><span class="header-section-number">4.1.1</span> Compter les employés par ville</a></li>
-  <li><a href="#salaire-moyen-par-ville" id="toc-salaire-moyen-par-ville" class="nav-link" data-scroll-target="#salaire-moyen-par-ville"><span class="header-section-number">4.1.2</span> Salaire moyen par ville</a></li>
-  <li><a href="#grouper-par-poste" id="toc-grouper-par-poste" class="nav-link" data-scroll-target="#grouper-par-poste"><span class="header-section-number">4.1.3</span> Grouper par poste</a></li>
+  <li><a href="#créersélectionner-une-base-de-données" id="toc-créersélectionner-une-base-de-données" class="nav-link" data-scroll-target="#créersélectionner-une-base-de-données">Créer/Sélectionner une base de données</a></li>
+  <li><a href="#voir-la-base-de-données-actuelle" id="toc-voir-la-base-de-données-actuelle" class="nav-link" data-scroll-target="#voir-la-base-de-données-actuelle">Voir la base de données actuelle</a></li>
+  <li><a href="#lister-toutes-les-bases-de-données" id="toc-lister-toutes-les-bases-de-données" class="nav-link" data-scroll-target="#lister-toutes-les-bases-de-données">Lister toutes les bases de données</a></li>
+  <li><a href="#lister-les-collections" id="toc-lister-les-collections" class="nav-link" data-scroll-target="#lister-les-collections">Lister les collections</a></li>
   </ul></li>
-  <li><a href="#filtrer-avant-dagréger" id="toc-filtrer-avant-dagréger" class="nav-link" data-scroll-target="#filtrer-avant-dagréger"><span class="header-section-number">4.2</span> 4.2 Filtrer avant d’agréger</a></li>
-  <li><a href="#statistiques-globales" id="toc-statistiques-globales" class="nav-link" data-scroll-target="#statistiques-globales"><span class="header-section-number">4.3</span> 4.3 Statistiques globales</a></li>
+  <li><a href="#create---insérer-des-documents" id="toc-create---insérer-des-documents" class="nav-link" data-scroll-target="#create---insérer-des-documents">3.2 CREATE - Insérer des documents</a>
+  <ul class="collapse">
+  <li><a href="#insérer-un-document" id="toc-insérer-un-document" class="nav-link" data-scroll-target="#insérer-un-document">Insérer UN document</a></li>
+  <li><a href="#insérer-plusieurs-documents" id="toc-insérer-plusieurs-documents" class="nav-link" data-scroll-target="#insérer-plusieurs-documents">Insérer PLUSIEURS documents</a></li>
   </ul></li>
-  <li><a href="#résumé" id="toc-résumé" class="nav-link" data-scroll-target="#résumé"><span class="header-section-number">5</span> 🎓 Résumé</a>
+  <li><a href="#read---lire-des-documents" id="toc-read---lire-des-documents" class="nav-link" data-scroll-target="#read---lire-des-documents">3.3 READ - Lire des documents</a>
   <ul class="collapse">
-  <li><a href="#ce-que-vous-avez-appris" id="toc-ce-que-vous-avez-appris" class="nav-link" data-scroll-target="#ce-que-vous-avez-appris"><span class="header-section-number">5.1</span> Ce que vous avez appris ✅</a>
-  <ul class="collapse">
-  <li><a href="#concepts" id="toc-concepts" class="nav-link" data-scroll-target="#concepts"><span class="header-section-number">5.1.1</span> Concepts</a></li>
-  <li><a href="#commandes-essentielles" id="toc-commandes-essentielles" class="nav-link" data-scroll-target="#commandes-essentielles"><span class="header-section-number">5.1.2</span> Commandes essentielles</a></li>
+  <li><a href="#lire-tous-les-documents" id="toc-lire-tous-les-documents" class="nav-link" data-scroll-target="#lire-tous-les-documents">Lire TOUS les documents</a></li>
+  <li><a href="#lire-avec-un-affichage-formaté-pretty" id="toc-lire-avec-un-affichage-formaté-pretty" class="nav-link" data-scroll-target="#lire-avec-un-affichage-formaté-pretty">Lire avec un affichage formaté (pretty)</a></li>
+  <li><a href="#lire-un-seul-document" id="toc-lire-un-seul-document" class="nav-link" data-scroll-target="#lire-un-seul-document">Lire UN seul document</a></li>
+  <li><a href="#filtrer-employés-à-paris" id="toc-filtrer-employés-à-paris" class="nav-link" data-scroll-target="#filtrer-employés-à-paris">Filtrer : employés à Paris</a></li>
+  <li><a href="#filtrer-salaire-supérieur-à-50000" id="toc-filtrer-salaire-supérieur-à-50000" class="nav-link" data-scroll-target="#filtrer-salaire-supérieur-à-50000">Filtrer : salaire supérieur à 50000</a></li>
+  <li><a href="#filtrer-avec-plusieurs-conditions-and" id="toc-filtrer-avec-plusieurs-conditions-and" class="nav-link" data-scroll-target="#filtrer-avec-plusieurs-conditions-and">Filtrer avec plusieurs conditions (AND)</a></li>
+  <li><a href="#filtrer-avec-or" id="toc-filtrer-avec-or" class="nav-link" data-scroll-target="#filtrer-avec-or">Filtrer avec OR</a></li>
+  <li><a href="#sélectionner-certains-champs-seulement-projection" id="toc-sélectionner-certains-champs-seulement-projection" class="nav-link" data-scroll-target="#sélectionner-certains-champs-seulement-projection">Sélectionner certains champs seulement (projection)</a></li>
   </ul></li>
-  <li><a href="#opérateurs-importants" id="toc-opérateurs-importants" class="nav-link" data-scroll-target="#opérateurs-importants"><span class="header-section-number">5.2</span> Opérateurs importants 📝</a>
+  <li><a href="#trier-limiter-compter" id="toc-trier-limiter-compter" class="nav-link" data-scroll-target="#trier-limiter-compter">3.4 Trier, limiter, compter</a>
   <ul class="collapse">
-  <li><a href="#comparaison" id="toc-comparaison" class="nav-link" data-scroll-target="#comparaison"><span class="header-section-number">5.2.1</span> Comparaison</a></li>
-  <li><a href="#modification" id="toc-modification" class="nav-link" data-scroll-target="#modification"><span class="header-section-number">5.2.2</span> Modification</a></li>
-  <li><a href="#agrégation" id="toc-agrégation" class="nav-link" data-scroll-target="#agrégation"><span class="header-section-number">5.2.3</span> Agrégation</a></li>
+  <li><a href="#trier-par-salaire-croissant" id="toc-trier-par-salaire-croissant" class="nav-link" data-scroll-target="#trier-par-salaire-croissant">Trier par salaire (croissant)</a></li>
+  <li><a href="#trier-par-salaire-décroissant" id="toc-trier-par-salaire-décroissant" class="nav-link" data-scroll-target="#trier-par-salaire-décroissant">Trier par salaire (décroissant)</a></li>
+  <li><a href="#limiter-les-résultats-top-3" id="toc-limiter-les-résultats-top-3" class="nav-link" data-scroll-target="#limiter-les-résultats-top-3">Limiter les résultats (top 3)</a></li>
+  <li><a href="#sauter-des-résultats-pagination" id="toc-sauter-des-résultats-pagination" class="nav-link" data-scroll-target="#sauter-des-résultats-pagination">Sauter des résultats (pagination)</a></li>
+  <li><a href="#compter-les-documents" id="toc-compter-les-documents" class="nav-link" data-scroll-target="#compter-les-documents">Compter les documents</a></li>
   </ul></li>
+  <li><a href="#update---modifier-des-documents" id="toc-update---modifier-des-documents" class="nav-link" data-scroll-target="#update---modifier-des-documents">3.5 UPDATE - Modifier des documents</a>
+  <ul class="collapse">
+  <li><a href="#modifier-un-document" id="toc-modifier-un-document" class="nav-link" data-scroll-target="#modifier-un-document">Modifier UN document</a></li>
+  <li><a href="#modifier-plusieurs-documents" id="toc-modifier-plusieurs-documents" class="nav-link" data-scroll-target="#modifier-plusieurs-documents">Modifier PLUSIEURS documents</a></li>
+  <li><a href="#opérateurs-de-modification" id="toc-opérateurs-de-modification" class="nav-link" data-scroll-target="#opérateurs-de-modification">Opérateurs de modification</a></li>
+  <li><a href="#ajouter-un-champ-à-tous-les-documents" id="toc-ajouter-un-champ-à-tous-les-documents" class="nav-link" data-scroll-target="#ajouter-un-champ-à-tous-les-documents">Ajouter un champ à tous les documents</a></li>
   </ul></li>
-  <li><a href="#partie-5-index-optimiser-les-performances" id="toc-partie-5-index-optimiser-les-performances" class="nav-link" data-scroll-target="#partie-5-index-optimiser-les-performances"><span class="header-section-number">6</span> 5️⃣ Partie 5 : Index — Optimiser les performances</a>
+  <li><a href="#delete---supprimer-des-documents" id="toc-delete---supprimer-des-documents" class="nav-link" data-scroll-target="#delete---supprimer-des-documents">3.6 DELETE - Supprimer des documents</a>
   <ul class="collapse">
-  <li><a href="#pourquoi-les-index" id="toc-pourquoi-les-index" class="nav-link" data-scroll-target="#pourquoi-les-index"><span class="header-section-number">6.1</span> 5.1 Pourquoi les index ?</a></li>
-  <li><a href="#créer-un-index" id="toc-créer-un-index" class="nav-link" data-scroll-target="#créer-un-index"><span class="header-section-number">6.2</span> 5.2 Créer un index</a>
-  <ul class="collapse">
-  <li><a href="#index-simple-un-champ" id="toc-index-simple-un-champ" class="nav-link" data-scroll-target="#index-simple-un-champ"><span class="header-section-number">6.2.1</span> Index simple (un champ)</a></li>
-  <li><a href="#index-composé-plusieurs-champs" id="toc-index-composé-plusieurs-champs" class="nav-link" data-scroll-target="#index-composé-plusieurs-champs"><span class="header-section-number">6.2.2</span> Index composé (plusieurs champs)</a></li>
-  <li><a href="#index-unique" id="toc-index-unique" class="nav-link" data-scroll-target="#index-unique"><span class="header-section-number">6.2.3</span> Index unique</a></li>
-  </ul></li>
-  <li><a href="#gérer-les-index" id="toc-gérer-les-index" class="nav-link" data-scroll-target="#gérer-les-index"><span class="header-section-number">6.3</span> 5.3 Gérer les index</a></li>
-  <li><a href="#analyser-les-performances" id="toc-analyser-les-performances" class="nav-link" data-scroll-target="#analyser-les-performances"><span class="header-section-number">6.4</span> 5.4 Analyser les performances</a></li>
-  <li><a href="#bonnes-pratiques" id="toc-bonnes-pratiques" class="nav-link" data-scroll-target="#bonnes-pratiques"><span class="header-section-number">6.5</span> 5.5 Bonnes pratiques</a></li>
-  </ul></li>
-  <li><a href="#partie-6-recherche-avancée" id="toc-partie-6-recherche-avancée" class="nav-link" data-scroll-target="#partie-6-recherche-avancée"><span class="header-section-number">7</span> 6️⃣ Partie 6 : Recherche avancée</a>
-  <ul class="collapse">
-  <li><a href="#recherche-avec-expressions-régulières" id="toc-recherche-avec-expressions-régulières" class="nav-link" data-scroll-target="#recherche-avec-expressions-régulières"><span class="header-section-number">7.1</span> 6.1 Recherche avec expressions régulières</a></li>
-  <li><a href="#opérateurs-de-tableau" id="toc-opérateurs-de-tableau" class="nav-link" data-scroll-target="#opérateurs-de-tableau"><span class="header-section-number">7.2</span> 6.2 Opérateurs de tableau</a></li>
-  <li><a href="#recherche-dans-les-objets-imbriqués" id="toc-recherche-dans-les-objets-imbriqués" class="nav-link" data-scroll-target="#recherche-dans-les-objets-imbriqués"><span class="header-section-number">7.3</span> 6.3 Recherche dans les objets imbriqués</a></li>
-  <li><a href="#cheatsheet-sql-vs-mongodb" id="toc-cheatsheet-sql-vs-mongodb" class="nav-link" data-scroll-target="#cheatsheet-sql-vs-mongodb"><span class="header-section-number">7.4</span> 📋 Cheatsheet : SQL vs MongoDB</a></li>
-  <li><a href="#exercices-pratiques-à-toi-de-jouer" id="toc-exercices-pratiques-à-toi-de-jouer" class="nav-link" data-scroll-target="#exercices-pratiques-à-toi-de-jouer"><span class="header-section-number">7.5</span> 🎯 Exercices pratiques — À toi de jouer !</a>
-  <ul class="collapse">
-  <li><a href="#collection-disponible-employes" id="toc-collection-disponible-employes" class="nav-link" data-scroll-target="#collection-disponible-employes"><span class="header-section-number">7.5.1</span> Collection disponible : <code>employes</code></a></li>
-  <li><a href="#exercice-1-facile" id="toc-exercice-1-facile" class="nav-link" data-scroll-target="#exercice-1-facile"><span class="header-section-number">7.5.2</span> 🏋️ Exercice 1 — Facile</a></li>
-  <li><a href="#exercice-2-facile" id="toc-exercice-2-facile" class="nav-link" data-scroll-target="#exercice-2-facile"><span class="header-section-number">7.5.3</span> 🏋️ Exercice 2 — Facile</a></li>
-  <li><a href="#exercice-3-intermédiaire" id="toc-exercice-3-intermédiaire" class="nav-link" data-scroll-target="#exercice-3-intermédiaire"><span class="header-section-number">7.5.4</span> 🏋️ Exercice 3 — Intermédiaire</a></li>
-  <li><a href="#exercice-4-intermédiaire" id="toc-exercice-4-intermédiaire" class="nav-link" data-scroll-target="#exercice-4-intermédiaire"><span class="header-section-number">7.5.5</span> 🏋️ Exercice 4 — Intermédiaire</a></li>
-  <li><a href="#exercice-5-avancé" id="toc-exercice-5-avancé" class="nav-link" data-scroll-target="#exercice-5-avancé"><span class="header-section-number">7.5.6</span> 🏋️ Exercice 5 — Avancé</a></li>
-  <li><a href="#exercice-6-avancé" id="toc-exercice-6-avancé" class="nav-link" data-scroll-target="#exercice-6-avancé"><span class="header-section-number">7.5.7</span> 🏋️ Exercice 6 — Avancé</a></li>
+  <li><a href="#supprimer-un-document" id="toc-supprimer-un-document" class="nav-link" data-scroll-target="#supprimer-un-document">Supprimer UN document</a></li>
+  <li><a href="#supprimer-plusieurs-documents" id="toc-supprimer-plusieurs-documents" class="nav-link" data-scroll-target="#supprimer-plusieurs-documents">Supprimer PLUSIEURS documents</a></li>
+  <li><a href="#supprimer-tous-les-documents" id="toc-supprimer-tous-les-documents" class="nav-link" data-scroll-target="#supprimer-tous-les-documents">⚠️ Supprimer TOUS les documents</a></li>
+  <li><a href="#supprimer-une-collection-entière" id="toc-supprimer-une-collection-entière" class="nav-link" data-scroll-target="#supprimer-une-collection-entière">Supprimer une collection entière</a></li>
+  <li><a href="#supprimer-une-base-de-données" id="toc-supprimer-une-base-de-données" class="nav-link" data-scroll-target="#supprimer-une-base-de-données">Supprimer une base de données</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#quiz-final" id="toc-quiz-final" class="nav-link" data-scroll-target="#quiz-final"><span class="header-section-number">8</span> 🧪 Quiz Final</a>
+  <li><a href="#partie-4-agrégations-simples" id="toc-partie-4-agrégations-simples" class="nav-link" data-scroll-target="#partie-4-agrégations-simples">4️⃣ Partie 4 : Agrégations simples</a>
   <ul class="collapse">
-  <li><a href="#q1.-quelle-est-la-différence-principale-entre-sql-et-mongodb" id="toc-q1.-quelle-est-la-différence-principale-entre-sql-et-mongodb" class="nav-link" data-scroll-target="#q1.-quelle-est-la-différence-principale-entre-sql-et-mongodb"><span class="header-section-number">8.0.1</span> ❓ Q1. Quelle est la différence principale entre SQL et MongoDB ?</a></li>
-  <li><a href="#q2.-dans-mongodb-comment-appelle-t-on-léquivalent-dune-table-sql" id="toc-q2.-dans-mongodb-comment-appelle-t-on-léquivalent-dune-table-sql" class="nav-link" data-scroll-target="#q2.-dans-mongodb-comment-appelle-t-on-léquivalent-dune-table-sql"><span class="header-section-number">8.0.2</span> ❓ Q2. Dans MongoDB, comment appelle-t-on l’équivalent d’une “table” SQL ?</a></li>
-  <li><a href="#q3.-quelle-commande-permet-dinsérer-plusieurs-documents-à-la-fois" id="toc-q3.-quelle-commande-permet-dinsérer-plusieurs-documents-à-la-fois" class="nav-link" data-scroll-target="#q3.-quelle-commande-permet-dinsérer-plusieurs-documents-à-la-fois"><span class="header-section-number">8.0.3</span> ❓ Q3. Quelle commande permet d’insérer plusieurs documents à la fois ?</a></li>
-  <li><a href="#q4.-comment-trouver-tous-les-employés-avec-un-salaire-supérieur-à-50000" id="toc-q4.-comment-trouver-tous-les-employés-avec-un-salaire-supérieur-à-50000" class="nav-link" data-scroll-target="#q4.-comment-trouver-tous-les-employés-avec-un-salaire-supérieur-à-50000"><span class="header-section-number">8.0.4</span> ❓ Q4. Comment trouver tous les employés avec un salaire supérieur à 50000 ?</a></li>
-  <li><a href="#q5.-que-fait-la-commande-db.employes.updatemany-inc-age-1" id="toc-q5.-que-fait-la-commande-db.employes.updatemany-inc-age-1" class="nav-link" data-scroll-target="#q5.-que-fait-la-commande-db.employes.updatemany-inc-age-1"><span class="header-section-number">8.0.5</span> ❓ Q5. Que fait la commande <code>db.employes.updateMany({}, { $inc: { age: 1 } })</code> ?</a></li>
-  <li><a href="#q6.-quelle-est-la-meilleure-utilisation-de-mongodb" id="toc-q6.-quelle-est-la-meilleure-utilisation-de-mongodb" class="nav-link" data-scroll-target="#q6.-quelle-est-la-meilleure-utilisation-de-mongodb"><span class="header-section-number">8.0.6</span> ❓ Q6. Quelle est la meilleure utilisation de MongoDB ?</a></li>
-  <li><a href="#q7.-comment-trier-les-résultats-par-salaire-décroissant" id="toc-q7.-comment-trier-les-résultats-par-salaire-décroissant" class="nav-link" data-scroll-target="#q7.-comment-trier-les-résultats-par-salaire-décroissant"><span class="header-section-number">8.0.7</span> ❓ Q7. Comment trier les résultats par salaire décroissant ?</a></li>
-  <li><a href="#q8.-que-fait-la-commande-db.employes.aggregate-group-_id-ville-count-sum-1" id="toc-q8.-que-fait-la-commande-db.employes.aggregate-group-_id-ville-count-sum-1" class="nav-link" data-scroll-target="#q8.-que-fait-la-commande-db.employes.aggregate-group-_id-ville-count-sum-1"><span class="header-section-number">8.0.8</span> ❓ Q8. Que fait la commande <code>db.employes.aggregate([{ $group: { _id: "$ville", count: { $sum: 1 } } }])</code> ?</a></li>
-  <li><a href="#q9.-quel-est-lavantage-principal-de-mongodb-atlas" id="toc-q9.-quel-est-lavantage-principal-de-mongodb-atlas" class="nav-link" data-scroll-target="#q9.-quel-est-lavantage-principal-de-mongodb-atlas"><span class="header-section-number">8.0.9</span> ❓ Q9. Quel est l’avantage principal de MongoDB Atlas ?</a></li>
-  <li><a href="#q10.-comment-supprimer-tous-les-documents-dune-collection-sans-supprimer-la-collection-elle-même" id="toc-q10.-comment-supprimer-tous-les-documents-dune-collection-sans-supprimer-la-collection-elle-même" class="nav-link" data-scroll-target="#q10.-comment-supprimer-tous-les-documents-dune-collection-sans-supprimer-la-collection-elle-même"><span class="header-section-number">8.0.10</span> ❓ Q10. Comment supprimer TOUS les documents d’une collection sans supprimer la collection elle-même ?</a></li>
-  <li><a href="#votre-score" id="toc-votre-score" class="nav-link" data-scroll-target="#votre-score"><span class="header-section-number">8.1</span> 📊 Votre score</a></li>
-  <li><a href="#prochaine-étape" id="toc-prochaine-étape" class="nav-link" data-scroll-target="#prochaine-étape"><span class="header-section-number">8.2</span> ➡️ Prochaine étape</a>
+  <li><a href="#grouper-et-compter" id="toc-grouper-et-compter" class="nav-link" data-scroll-target="#grouper-et-compter">4.1 Grouper et compter</a>
   <ul class="collapse">
-  <li><a href="#ressources" id="toc-ressources" class="nav-link" data-scroll-target="#ressources"><span class="header-section-number">8.2.1</span> 📚 Ressources</a></li>
+  <li><a href="#compter-les-employés-par-ville" id="toc-compter-les-employés-par-ville" class="nav-link" data-scroll-target="#compter-les-employés-par-ville">Compter les employés par ville</a></li>
+  <li><a href="#salaire-moyen-par-ville" id="toc-salaire-moyen-par-ville" class="nav-link" data-scroll-target="#salaire-moyen-par-ville">Salaire moyen par ville</a></li>
+  <li><a href="#grouper-par-poste" id="toc-grouper-par-poste" class="nav-link" data-scroll-target="#grouper-par-poste">Grouper par poste</a></li>
+  </ul></li>
+  <li><a href="#filtrer-avant-dagréger" id="toc-filtrer-avant-dagréger" class="nav-link" data-scroll-target="#filtrer-avant-dagréger">4.2 Filtrer avant d’agréger</a></li>
+  <li><a href="#statistiques-globales" id="toc-statistiques-globales" class="nav-link" data-scroll-target="#statistiques-globales">4.3 Statistiques globales</a></li>
+  </ul></li>
+  <li><a href="#résumé" id="toc-résumé" class="nav-link" data-scroll-target="#résumé">🎓 Résumé</a>
+  <ul class="collapse">
+  <li><a href="#ce-que-vous-avez-appris" id="toc-ce-que-vous-avez-appris" class="nav-link" data-scroll-target="#ce-que-vous-avez-appris">Ce que vous avez appris ✅</a>
+  <ul class="collapse">
+  <li><a href="#concepts" id="toc-concepts" class="nav-link" data-scroll-target="#concepts">Concepts</a></li>
+  <li><a href="#commandes-essentielles" id="toc-commandes-essentielles" class="nav-link" data-scroll-target="#commandes-essentielles">Commandes essentielles</a></li>
+  </ul></li>
+  <li><a href="#opérateurs-importants" id="toc-opérateurs-importants" class="nav-link" data-scroll-target="#opérateurs-importants">Opérateurs importants 📝</a>
+  <ul class="collapse">
+  <li><a href="#comparaison" id="toc-comparaison" class="nav-link" data-scroll-target="#comparaison">Comparaison</a></li>
+  <li><a href="#modification" id="toc-modification" class="nav-link" data-scroll-target="#modification">Modification</a></li>
+  <li><a href="#agrégation" id="toc-agrégation" class="nav-link" data-scroll-target="#agrégation">Agrégation</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#partie-5-index-optimiser-les-performances" id="toc-partie-5-index-optimiser-les-performances" class="nav-link" data-scroll-target="#partie-5-index-optimiser-les-performances">5️⃣ Partie 5 : Index — Optimiser les performances</a>
+  <ul class="collapse">
+  <li><a href="#pourquoi-les-index" id="toc-pourquoi-les-index" class="nav-link" data-scroll-target="#pourquoi-les-index">5.1 Pourquoi les index ?</a></li>
+  <li><a href="#créer-un-index" id="toc-créer-un-index" class="nav-link" data-scroll-target="#créer-un-index">5.2 Créer un index</a>
+  <ul class="collapse">
+  <li><a href="#index-simple-un-champ" id="toc-index-simple-un-champ" class="nav-link" data-scroll-target="#index-simple-un-champ">Index simple (un champ)</a></li>
+  <li><a href="#index-composé-plusieurs-champs" id="toc-index-composé-plusieurs-champs" class="nav-link" data-scroll-target="#index-composé-plusieurs-champs">Index composé (plusieurs champs)</a></li>
+  <li><a href="#index-unique" id="toc-index-unique" class="nav-link" data-scroll-target="#index-unique">Index unique</a></li>
+  </ul></li>
+  <li><a href="#gérer-les-index" id="toc-gérer-les-index" class="nav-link" data-scroll-target="#gérer-les-index">5.3 Gérer les index</a></li>
+  <li><a href="#analyser-les-performances" id="toc-analyser-les-performances" class="nav-link" data-scroll-target="#analyser-les-performances">5.4 Analyser les performances</a></li>
+  <li><a href="#bonnes-pratiques" id="toc-bonnes-pratiques" class="nav-link" data-scroll-target="#bonnes-pratiques">5.5 Bonnes pratiques</a></li>
+  </ul></li>
+  <li><a href="#partie-6-recherche-avancée" id="toc-partie-6-recherche-avancée" class="nav-link" data-scroll-target="#partie-6-recherche-avancée">6️⃣ Partie 6 : Recherche avancée</a>
+  <ul class="collapse">
+  <li><a href="#recherche-avec-expressions-régulières" id="toc-recherche-avec-expressions-régulières" class="nav-link" data-scroll-target="#recherche-avec-expressions-régulières">6.1 Recherche avec expressions régulières</a></li>
+  <li><a href="#opérateurs-de-tableau" id="toc-opérateurs-de-tableau" class="nav-link" data-scroll-target="#opérateurs-de-tableau">6.2 Opérateurs de tableau</a></li>
+  <li><a href="#recherche-dans-les-objets-imbriqués" id="toc-recherche-dans-les-objets-imbriqués" class="nav-link" data-scroll-target="#recherche-dans-les-objets-imbriqués">6.3 Recherche dans les objets imbriqués</a></li>
+  <li><a href="#cheatsheet-sql-vs-mongodb" id="toc-cheatsheet-sql-vs-mongodb" class="nav-link" data-scroll-target="#cheatsheet-sql-vs-mongodb">📋 Cheatsheet : SQL vs MongoDB</a></li>
+  <li><a href="#exercices-pratiques-à-toi-de-jouer" id="toc-exercices-pratiques-à-toi-de-jouer" class="nav-link" data-scroll-target="#exercices-pratiques-à-toi-de-jouer">🎯 Exercices pratiques — À toi de jouer !</a>
+  <ul class="collapse">
+  <li><a href="#collection-disponible-employes" id="toc-collection-disponible-employes" class="nav-link" data-scroll-target="#collection-disponible-employes">Collection disponible : <code>employes</code></a></li>
+  <li><a href="#exercice-1-facile" id="toc-exercice-1-facile" class="nav-link" data-scroll-target="#exercice-1-facile">🏋️ Exercice 1 — Facile</a></li>
+  <li><a href="#exercice-2-facile" id="toc-exercice-2-facile" class="nav-link" data-scroll-target="#exercice-2-facile">🏋️ Exercice 2 — Facile</a></li>
+  <li><a href="#exercice-3-intermédiaire" id="toc-exercice-3-intermédiaire" class="nav-link" data-scroll-target="#exercice-3-intermédiaire">🏋️ Exercice 3 — Intermédiaire</a></li>
+  <li><a href="#exercice-4-intermédiaire" id="toc-exercice-4-intermédiaire" class="nav-link" data-scroll-target="#exercice-4-intermédiaire">🏋️ Exercice 4 — Intermédiaire</a></li>
+  <li><a href="#exercice-5-avancé" id="toc-exercice-5-avancé" class="nav-link" data-scroll-target="#exercice-5-avancé">🏋️ Exercice 5 — Avancé</a></li>
+  <li><a href="#exercice-6-avancé" id="toc-exercice-6-avancé" class="nav-link" data-scroll-target="#exercice-6-avancé">🏋️ Exercice 6 — Avancé</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#quiz-final" id="toc-quiz-final" class="nav-link" data-scroll-target="#quiz-final">🧪 Quiz Final</a>
+  <ul class="collapse">
+  <li><a href="#q1.-quelle-est-la-différence-principale-entre-sql-et-mongodb" id="toc-q1.-quelle-est-la-différence-principale-entre-sql-et-mongodb" class="nav-link" data-scroll-target="#q1.-quelle-est-la-différence-principale-entre-sql-et-mongodb">❓ Q1. Quelle est la différence principale entre SQL et MongoDB ?</a></li>
+  <li><a href="#q2.-dans-mongodb-comment-appelle-t-on-léquivalent-dune-table-sql" id="toc-q2.-dans-mongodb-comment-appelle-t-on-léquivalent-dune-table-sql" class="nav-link" data-scroll-target="#q2.-dans-mongodb-comment-appelle-t-on-léquivalent-dune-table-sql">❓ Q2. Dans MongoDB, comment appelle-t-on l’équivalent d’une “table” SQL ?</a></li>
+  <li><a href="#q3.-quelle-commande-permet-dinsérer-plusieurs-documents-à-la-fois" id="toc-q3.-quelle-commande-permet-dinsérer-plusieurs-documents-à-la-fois" class="nav-link" data-scroll-target="#q3.-quelle-commande-permet-dinsérer-plusieurs-documents-à-la-fois">❓ Q3. Quelle commande permet d’insérer plusieurs documents à la fois ?</a></li>
+  <li><a href="#q4.-comment-trouver-tous-les-employés-avec-un-salaire-supérieur-à-50000" id="toc-q4.-comment-trouver-tous-les-employés-avec-un-salaire-supérieur-à-50000" class="nav-link" data-scroll-target="#q4.-comment-trouver-tous-les-employés-avec-un-salaire-supérieur-à-50000">❓ Q4. Comment trouver tous les employés avec un salaire supérieur à 50000 ?</a></li>
+  <li><a href="#q5.-que-fait-la-commande-db.employes.updatemany-inc-age-1" id="toc-q5.-que-fait-la-commande-db.employes.updatemany-inc-age-1" class="nav-link" data-scroll-target="#q5.-que-fait-la-commande-db.employes.updatemany-inc-age-1">❓ Q5. Que fait la commande <code>db.employes.updateMany({}, { $inc: { age: 1 } })</code> ?</a></li>
+  <li><a href="#q6.-quelle-est-la-meilleure-utilisation-de-mongodb" id="toc-q6.-quelle-est-la-meilleure-utilisation-de-mongodb" class="nav-link" data-scroll-target="#q6.-quelle-est-la-meilleure-utilisation-de-mongodb">❓ Q6. Quelle est la meilleure utilisation de MongoDB ?</a></li>
+  <li><a href="#q7.-comment-trier-les-résultats-par-salaire-décroissant" id="toc-q7.-comment-trier-les-résultats-par-salaire-décroissant" class="nav-link" data-scroll-target="#q7.-comment-trier-les-résultats-par-salaire-décroissant">❓ Q7. Comment trier les résultats par salaire décroissant ?</a></li>
+  <li><a href="#q8.-que-fait-la-commande-db.employes.aggregate-group-_id-ville-count-sum-1" id="toc-q8.-que-fait-la-commande-db.employes.aggregate-group-_id-ville-count-sum-1" class="nav-link" data-scroll-target="#q8.-que-fait-la-commande-db.employes.aggregate-group-_id-ville-count-sum-1">❓ Q8. Que fait la commande <code>db.employes.aggregate([{ $group: { _id: "$ville", count: { $sum: 1 } } }])</code> ?</a></li>
+  <li><a href="#q9.-quel-est-lavantage-principal-de-mongodb-atlas" id="toc-q9.-quel-est-lavantage-principal-de-mongodb-atlas" class="nav-link" data-scroll-target="#q9.-quel-est-lavantage-principal-de-mongodb-atlas">❓ Q9. Quel est l’avantage principal de MongoDB Atlas ?</a></li>
+  <li><a href="#q10.-comment-supprimer-tous-les-documents-dune-collection-sans-supprimer-la-collection-elle-même" id="toc-q10.-comment-supprimer-tous-les-documents-dune-collection-sans-supprimer-la-collection-elle-même" class="nav-link" data-scroll-target="#q10.-comment-supprimer-tous-les-documents-dune-collection-sans-supprimer-la-collection-elle-même">❓ Q10. Comment supprimer TOUS les documents d’une collection sans supprimer la collection elle-même ?</a></li>
+  <li><a href="#votre-score" id="toc-votre-score" class="nav-link" data-scroll-target="#votre-score">📊 Votre score</a></li>
+  <li><a href="#prochaine-étape" id="toc-prochaine-étape" class="nav-link" data-scroll-target="#prochaine-étape">➡️ Prochaine étape</a>
+  <ul class="collapse">
+  <li><a href="#ressources" id="toc-ressources" class="nav-link" data-scroll-target="#ressources">📚 Ressources</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -579,7 +611,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notebooks/beginner/01_intro_data_engineering.html">Débutant</a></li><li class="breadcrumb-item"><a href="../../notebooks/beginner/09_mongodb_for_data_engineers.html">🍃 MongoDB for Data Engineers</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">🍃 MongoDB for Data Engineers</h1>
 </div>
@@ -600,8 +632,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>Ce module présente <strong>MongoDB</strong>, la base de données NoSQL documentaire la plus populaire.</p>
 <hr>
-<section id="prérequis" class="level2" data-number="0.1">
-<h2 data-number="0.1" class="anchored" data-anchor-id="prérequis"><span class="header-section-number">0.1</span> 📋 Prérequis</h2>
+<section id="prérequis" class="level2">
+<h2 class="anchored" data-anchor-id="prérequis">📋 Prérequis</h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -629,16 +661,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 </section>
-<section id="objectifs-du-module" class="level2" data-number="0.2">
-<h2 data-number="0.2" class="anchored" data-anchor-id="objectifs-du-module"><span class="header-section-number">0.2</span> 🎯 Objectifs du module</h2>
+<section id="objectifs-du-module" class="level2">
+<h2 class="anchored" data-anchor-id="objectifs-du-module">🎯 Objectifs du module</h2>
 <p>À la fin de ce notebook, tu seras capable de : - ✅ Configurer MongoDB Atlas (gratuit, cloud) - ✅ Maîtriser le CRUD (Create, Read, Update, Delete) - ✅ Utiliser les opérateurs de filtrage et comparaison - ✅ Écrire des agrégations - ✅ Créer des index pour optimiser les performances</p>
 <hr>
 </section>
-<section id="mongodb-dans-lécosystème-big-data" class="level2" data-number="0.3">
-<h2 data-number="0.3" class="anchored" data-anchor-id="mongodb-dans-lécosystème-big-data"><span class="header-section-number">0.3</span> 🎯 MongoDB dans l’écosystème Big Data</h2>
+<section id="mongodb-dans-lécosystème-big-data" class="level2">
+<h2 class="anchored" data-anchor-id="mongodb-dans-lécosystème-big-data">🎯 MongoDB dans l’écosystème Big Data</h2>
 <p>Tu as vu dans le module précédent que MongoDB est une base <strong>NoSQL documentaire</strong>. Voici comment elle répond aux défis du Big Data :</p>
-<section id="rappel-les-5v" class="level3" data-number="0.3.1">
-<h3 data-number="0.3.1" class="anchored" data-anchor-id="rappel-les-5v"><span class="header-section-number">0.3.1</span> Rappel : Les 5V</h3>
+<section id="rappel-les-5v" class="level3">
+<h3 class="anchored" data-anchor-id="rappel-les-5v">Rappel : Les 5V</h3>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 11%">
@@ -674,8 +706,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 </section>
-<section id="rappel-cap-base" class="level3" data-number="0.3.2">
-<h3 data-number="0.3.2" class="anchored" data-anchor-id="rappel-cap-base"><span class="header-section-number">0.3.2</span> Rappel : CAP &amp; BASE</h3>
+<section id="rappel-cap-base" class="level3">
+<h3 class="anchored" data-anchor-id="rappel-cap-base">Rappel : CAP &amp; BASE</h3>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -700,13 +732,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 </section>
-<section id="partie-1-cest-quoi-mongodb" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> 📚 Partie 1 : C’est quoi MongoDB ?</h1>
-<section id="explication-simple" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="explication-simple"><span class="header-section-number">1.1</span> 1.1 Explication simple</h2>
+<section id="partie-1-cest-quoi-mongodb" class="level1">
+<h1>📚 Partie 1 : C’est quoi MongoDB ?</h1>
+<section id="explication-simple" class="level2">
+<h2 class="anchored" data-anchor-id="explication-simple">1.1 Explication simple</h2>
 <p><strong>MongoDB</strong> est une base de données qui stocke les données au format <strong>JSON</strong> (comme des fichiers texte structurés).</p>
-<section id="comparaison-sql-vs-mongodb" class="level3" data-number="1.1.1">
-<h3 data-number="1.1.1" class="anchored" data-anchor-id="comparaison-sql-vs-mongodb"><span class="header-section-number">1.1.1</span> Comparaison : SQL vs MongoDB</h3>
+<section id="comparaison-sql-vs-mongodb" class="level3">
+<h3 class="anchored" data-anchor-id="comparaison-sql-vs-mongodb">Comparaison : SQL vs MongoDB</h3>
 <p><strong>Base de données SQL</strong> (MySQL, PostgreSQL) :</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">Table</span> : employes</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>┌────┬──────────┬─────┬───────┬─────────┐</span>
@@ -742,8 +774,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="co">// Requête MongoDB</span></span>
 <span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>db<span class="op">.</span><span class="at">employes</span><span class="op">.</span><span class="fu">find</span>({ <span class="dt">ville</span><span class="op">:</span> <span class="st">"Paris"</span> })</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="différences-principales" class="level3" data-number="1.1.2">
-<h3 data-number="1.1.2" class="anchored" data-anchor-id="différences-principales"><span class="header-section-number">1.1.2</span> 🔑 Différences principales :</h3>
+<section id="différences-principales" class="level3">
+<h3 class="anchored" data-anchor-id="différences-principales">🔑 Différences principales :</h3>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 34%">
@@ -787,8 +819,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 </section>
 </section>
-<section id="vocabulaire-de-base" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="vocabulaire-de-base"><span class="header-section-number">1.2</span> 1.2 Vocabulaire de base</h2>
+<section id="vocabulaire-de-base" class="level2">
+<h2 class="anchored" data-anchor-id="vocabulaire-de-base">1.2 Vocabulaire de base</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 13%">
@@ -831,8 +863,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<section id="structure-visuelle" class="level3" data-number="1.2.1">
-<h3 data-number="1.2.1" class="anchored" data-anchor-id="structure-visuelle"><span class="header-section-number">1.2.1</span> Structure visuelle :</h3>
+<section id="structure-visuelle" class="level3">
+<h3 class="anchored" data-anchor-id="structure-visuelle">Structure visuelle :</h3>
 <pre><code>MongoDB Server
   └── Database: ma_boutique
        ├── Collection: clients
@@ -844,11 +876,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
             └── Document 2: { nom: "Souris", prix: 29 }</code></pre>
 </section>
 </section>
-<section id="format-des-documents" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="format-des-documents"><span class="header-section-number">1.3</span> 1.3 Format des documents</h2>
+<section id="format-des-documents" class="level2">
+<h2 class="anchored" data-anchor-id="format-des-documents">1.3 Format des documents</h2>
 <p>MongoDB stocke les données en <strong>BSON</strong> (Binary JSON).</p>
-<section id="exemple-de-document-complet" class="level3" data-number="1.3.1">
-<h3 data-number="1.3.1" class="anchored" data-anchor-id="exemple-de-document-complet"><span class="header-section-number">1.3.1</span> Exemple de document complet :</h3>
+<section id="exemple-de-document-complet" class="level3">
+<h3 class="anchored" data-anchor-id="exemple-de-document-complet">Exemple de document complet :</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>{</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"_id"</span><span class="op">:</span> <span class="fu">ObjectId</span>(<span class="st">"507f1f77bcf86cd799439011"</span>)<span class="op">,</span>  <span class="co">// ID unique automatique</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"nom"</span><span class="op">:</span> <span class="st">"Alice Dupont"</span><span class="op">,</span>                        <span class="co">// String (texte)</span></span>
@@ -865,8 +897,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  <span class="st">"notes"</span><span class="op">:</span> <span class="kw">null</span>                                  <span class="co">// Null (vide)</span></span>
 <span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="points-importants" class="level3" data-number="1.3.2">
-<h3 data-number="1.3.2" class="anchored" data-anchor-id="points-importants"><span class="header-section-number">1.3.2</span> Points importants :</h3>
+<section id="points-importants" class="level3">
+<h3 class="anchored" data-anchor-id="points-importants">Points importants :</h3>
 <ul>
 <li>Chaque document a un champ <code>_id</code> unique (créé automatiquement si absent)</li>
 <li>On peut imbriquer des objets et des tableaux</li>
@@ -875,10 +907,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 </section>
 </section>
-<section id="pourquoi-utiliser-mongodb-en-data-engineering" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="pourquoi-utiliser-mongodb-en-data-engineering"><span class="header-section-number">1.4</span> 1.4 Pourquoi utiliser MongoDB en Data Engineering ?</h2>
-<section id="avantages" class="level3" data-number="1.4.1">
-<h3 data-number="1.4.1" class="anchored" data-anchor-id="avantages"><span class="header-section-number">1.4.1</span> ✅ Avantages :</h3>
+<section id="pourquoi-utiliser-mongodb-en-data-engineering" class="level2">
+<h2 class="anchored" data-anchor-id="pourquoi-utiliser-mongodb-en-data-engineering">1.4 Pourquoi utiliser MongoDB en Data Engineering ?</h2>
+<section id="avantages" class="level3">
+<h3 class="anchored" data-anchor-id="avantages">✅ Avantages :</h3>
 <p><strong>1. Flexibilité du schéma</strong> - Pas besoin de définir la structure à l’avance - Parfait pour des données qui changent souvent - Chaque document peut être différent</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Document 1 : simple</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>{ <span class="dt">nom</span><span class="op">:</span> <span class="st">"Alice"</span><span class="op">,</span> <span class="dt">age</span><span class="op">:</span> <span class="dv">25</span> }</span>
@@ -900,10 +932,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
-<section id="quand-utiliser-mongodb" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="quand-utiliser-mongodb"><span class="header-section-number">1.5</span> 1.5 Quand utiliser MongoDB ?</h2>
-<section id="utilisez-mongodb-pour" class="level3" data-number="1.5.1">
-<h3 data-number="1.5.1" class="anchored" data-anchor-id="utilisez-mongodb-pour"><span class="header-section-number">1.5.1</span> ✅ Utilisez MongoDB pour :</h3>
+<section id="quand-utiliser-mongodb" class="level2">
+<h2 class="anchored" data-anchor-id="quand-utiliser-mongodb">1.5 Quand utiliser MongoDB ?</h2>
+<section id="utilisez-mongodb-pour" class="level3">
+<h3 class="anchored" data-anchor-id="utilisez-mongodb-pour">✅ Utilisez MongoDB pour :</h3>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -943,8 +975,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 </section>
-<section id="nutilisez-pas-mongodb-pour" class="level3" data-number="1.5.2">
-<h3 data-number="1.5.2" class="anchored" data-anchor-id="nutilisez-pas-mongodb-pour"><span class="header-section-number">1.5.2</span> ❌ N’utilisez PAS MongoDB pour :</h3>
+<section id="nutilisez-pas-mongodb-pour" class="level3">
+<h3 class="anchored" data-anchor-id="nutilisez-pas-mongodb-pour">❌ N’utilisez PAS MongoDB pour :</h3>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -972,8 +1004,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 </section>
-<section id="règle-simple" class="level3" data-number="1.5.3">
-<h3 data-number="1.5.3" class="anchored" data-anchor-id="règle-simple"><span class="header-section-number">1.5.3</span> 💡 Règle simple :</h3>
+<section id="règle-simple" class="level3">
+<h3 class="anchored" data-anchor-id="règle-simple">💡 Règle simple :</h3>
 <ul>
 <li>Données <strong>flexibles</strong>, <strong>JSON</strong>, <strong>volume élevé</strong> → <strong>MongoDB</strong><br>
 </li>
@@ -983,13 +1015,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 </section>
 </section>
-<section id="partie-2-setup-mongodb-atlas" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> 📦 Partie 2 : Setup MongoDB Atlas</h1>
-<section id="pourquoi-mongodb-atlas" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="pourquoi-mongodb-atlas"><span class="header-section-number">2.1</span> 2.1 Pourquoi MongoDB Atlas ?</h2>
+<section id="partie-2-setup-mongodb-atlas" class="level1">
+<h1>📦 Partie 2 : Setup MongoDB Atlas</h1>
+<section id="pourquoi-mongodb-atlas" class="level2">
+<h2 class="anchored" data-anchor-id="pourquoi-mongodb-atlas">2.1 Pourquoi MongoDB Atlas ?</h2>
 <p><strong>MongoDB Atlas</strong> = MongoDB hébergé dans le cloud (gratuit)</p>
-<section id="avantages-1" class="level3" data-number="2.1.1">
-<h3 data-number="2.1.1" class="anchored" data-anchor-id="avantages-1"><span class="header-section-number">2.1.1</span> Avantages :</h3>
+<section id="avantages-1" class="level3">
+<h3 class="anchored" data-anchor-id="avantages-1">Avantages :</h3>
 <p>✅ <strong>Gratuit</strong> : Tier M0 avec 512 MB de stockage<br>
 ✅ <strong>Pas d’installation</strong> : Tout dans le navigateur<br>
 ✅ <strong>Interface graphique</strong> : Data Explorer facile<br>
@@ -997,18 +1029,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 ✅ <strong>MongoDB Shell intégré</strong> : Testez vos commandes directement</p>
 </section>
 </section>
-<section id="créer-votre-compte-5-minutes" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="créer-votre-compte-5-minutes"><span class="header-section-number">2.2</span> 2.2 Créer votre compte (5 minutes)</h2>
-<section id="étape-1-inscription" class="level3" data-number="2.2.1">
-<h3 data-number="2.2.1" class="anchored" data-anchor-id="étape-1-inscription"><span class="header-section-number">2.2.1</span> ▶️ Étape 1 : Inscription</h3>
+<section id="créer-votre-compte-5-minutes" class="level2">
+<h2 class="anchored" data-anchor-id="créer-votre-compte-5-minutes">2.2 Créer votre compte (5 minutes)</h2>
+<section id="étape-1-inscription" class="level3">
+<h3 class="anchored" data-anchor-id="étape-1-inscription">▶️ Étape 1 : Inscription</h3>
 <ol type="1">
 <li>Allez sur 👉 <strong><a href="https://cloud.mongodb.com/">cloud.mongodb.com</a></strong></li>
 <li>Cliquez sur <strong>“Try Free”</strong></li>
 <li>Inscrivez-vous avec email/mot de passe (ou Google)</li>
 </ol>
 </section>
-<section id="étape-2-créer-un-cluster-gratuit" class="level3" data-number="2.2.2">
-<h3 data-number="2.2.2" class="anchored" data-anchor-id="étape-2-créer-un-cluster-gratuit"><span class="header-section-number">2.2.2</span> ▶️ Étape 2 : Créer un cluster gratuit</h3>
+<section id="étape-2-créer-un-cluster-gratuit" class="level3">
+<h3 class="anchored" data-anchor-id="étape-2-créer-un-cluster-gratuit">▶️ Étape 2 : Créer un cluster gratuit</h3>
 <ol type="1">
 <li>Choisissez <strong>M0 (FREE)</strong> 🎉</li>
 <li><strong>Provider</strong> : AWS (ou Google Cloud/Azure)</li>
@@ -1023,8 +1055,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 <p>⏳ <strong>Attendez 2-3 minutes</strong> que le cluster se crée</p>
 </section>
-<section id="étape-3-créer-un-utilisateur" class="level3" data-number="2.2.3">
-<h3 data-number="2.2.3" class="anchored" data-anchor-id="étape-3-créer-un-utilisateur"><span class="header-section-number">2.2.3</span> ▶️ Étape 3 : Créer un utilisateur</h3>
+<section id="étape-3-créer-un-utilisateur" class="level3">
+<h3 class="anchored" data-anchor-id="étape-3-créer-un-utilisateur">▶️ Étape 3 : Créer un utilisateur</h3>
 <ol type="1">
 <li>Dans la popup de sécurité :</li>
 <li><strong>Authentication Method</strong> : Username and Password</li>
@@ -1036,8 +1068,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Cliquez <strong>“Create User”</strong></li>
 </ol>
 </section>
-<section id="étape-4-autoriser-laccès" class="level3" data-number="2.2.4">
-<h3 data-number="2.2.4" class="anchored" data-anchor-id="étape-4-autoriser-laccès"><span class="header-section-number">2.2.4</span> ▶️ Étape 4 : Autoriser l’accès</h3>
+<section id="étape-4-autoriser-laccès" class="level3">
+<h3 class="anchored" data-anchor-id="étape-4-autoriser-laccès">▶️ Étape 4 : Autoriser l’accès</h3>
 <ol type="1">
 <li>Dans la popup : <strong>“Where would you like to connect from?”</strong></li>
 <li>Choisissez <strong>“My Local Environment”</strong></li>
@@ -1054,10 +1086,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>✅ <strong>Votre cluster est prêt !</strong></p>
 </section>
 </section>
-<section id="accéder-à-mongodb-shell" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="accéder-à-mongodb-shell"><span class="header-section-number">2.3</span> 2.3 Accéder à MongoDB Shell</h2>
-<section id="méthode-1-mongodb-shell-web-le-plus-simple" class="level3" data-number="2.3.1">
-<h3 data-number="2.3.1" class="anchored" data-anchor-id="méthode-1-mongodb-shell-web-le-plus-simple"><span class="header-section-number">2.3.1</span> Méthode 1 : MongoDB Shell Web (le plus simple)</h3>
+<section id="accéder-à-mongodb-shell" class="level2">
+<h2 class="anchored" data-anchor-id="accéder-à-mongodb-shell">2.3 Accéder à MongoDB Shell</h2>
+<section id="méthode-1-mongodb-shell-web-le-plus-simple" class="level3">
+<h3 class="anchored" data-anchor-id="méthode-1-mongodb-shell-web-le-plus-simple">Méthode 1 : MongoDB Shell Web (le plus simple)</h3>
 <ol type="1">
 <li>Dans MongoDB Atlas, allez sur <strong>“Database”</strong> (menu gauche)</li>
 <li>Cliquez sur <strong>“Browse Collections”</strong> sur votre cluster</li>
@@ -1065,49 +1097,49 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Une console s’ouvre dans le navigateur ✅</li>
 </ol>
 </section>
-<section id="méthode-2-data-explorer-interface-graphique" class="level3" data-number="2.3.2">
-<h3 data-number="2.3.2" class="anchored" data-anchor-id="méthode-2-data-explorer-interface-graphique"><span class="header-section-number">2.3.2</span> Méthode 2 : Data Explorer (interface graphique)</h3>
+<section id="méthode-2-data-explorer-interface-graphique" class="level3">
+<h3 class="anchored" data-anchor-id="méthode-2-data-explorer-interface-graphique">Méthode 2 : Data Explorer (interface graphique)</h3>
 <ol type="1">
 <li>Cliquez sur <strong>“Browse Collections”</strong></li>
 <li>Vous pouvez créer des bases de données et collections visuellement</li>
 <li>Pratique pour visualiser, mais on va utiliser des commandes</li>
 </ol>
 </section>
-<section id="dans-ce-tutoriel" class="level3" data-number="2.3.3">
-<h3 data-number="2.3.3" class="anchored" data-anchor-id="dans-ce-tutoriel"><span class="header-section-number">2.3.3</span> 💡 Dans ce tutoriel</h3>
+<section id="dans-ce-tutoriel" class="level3">
+<h3 class="anchored" data-anchor-id="dans-ce-tutoriel">💡 Dans ce tutoriel</h3>
 <p>Toutes les commandes ci-dessous sont à taper dans : - <strong>MongoDB Shell Web</strong> (dans Atlas) - Ou <strong>mongosh</strong> (si vous l’installez localement) - Ou <strong>Data Explorer</strong> → Insert Document (pour ajouter des données)</p>
 <p><strong>On utilise la syntaxe JavaScript/MongoDB, pas Python !</strong></p>
 <hr>
 </section>
 </section>
 </section>
-<section id="partie-3-commandes-mongodb-de-base" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> 3️⃣ Partie 3 : Commandes MongoDB de base</h1>
-<section id="créer-une-base-de-données-et-une-collection" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="créer-une-base-de-données-et-une-collection"><span class="header-section-number">3.1</span> 3.1 Créer une base de données et une collection</h2>
-<section id="créersélectionner-une-base-de-données" class="level3" data-number="3.1.1">
-<h3 data-number="3.1.1" class="anchored" data-anchor-id="créersélectionner-une-base-de-données"><span class="header-section-number">3.1.1</span> Créer/Sélectionner une base de données</h3>
+<section id="partie-3-commandes-mongodb-de-base" class="level1">
+<h1>3️⃣ Partie 3 : Commandes MongoDB de base</h1>
+<section id="créer-une-base-de-données-et-une-collection" class="level2">
+<h2 class="anchored" data-anchor-id="créer-une-base-de-données-et-une-collection">3.1 Créer une base de données et une collection</h2>
+<section id="créersélectionner-une-base-de-données" class="level3">
+<h3 class="anchored" data-anchor-id="créersélectionner-une-base-de-données">Créer/Sélectionner une base de données</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Créer ou utiliser la base de données "ma_premiere_db"</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>use ma_premiere_db</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Note</strong> : La base de données n’est créée réellement que quand vous insérez des données.</p>
 </section>
-<section id="voir-la-base-de-données-actuelle" class="level3" data-number="3.1.2">
-<h3 data-number="3.1.2" class="anchored" data-anchor-id="voir-la-base-de-données-actuelle"><span class="header-section-number">3.1.2</span> Voir la base de données actuelle</h3>
+<section id="voir-la-base-de-données-actuelle" class="level3">
+<h3 class="anchored" data-anchor-id="voir-la-base-de-données-actuelle">Voir la base de données actuelle</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>db</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="lister-toutes-les-bases-de-données" class="level3" data-number="3.1.3">
-<h3 data-number="3.1.3" class="anchored" data-anchor-id="lister-toutes-les-bases-de-données"><span class="header-section-number">3.1.3</span> Lister toutes les bases de données</h3>
+<section id="lister-toutes-les-bases-de-données" class="level3">
+<h3 class="anchored" data-anchor-id="lister-toutes-les-bases-de-données">Lister toutes les bases de données</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>show dbs</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="lister-les-collections" class="level3" data-number="3.1.4">
-<h3 data-number="3.1.4" class="anchored" data-anchor-id="lister-les-collections"><span class="header-section-number">3.1.4</span> Lister les collections</h3>
+<section id="lister-les-collections" class="level3">
+<h3 class="anchored" data-anchor-id="lister-les-collections">Lister les collections</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>show collections</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
-<section id="create---insérer-des-documents" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="create---insérer-des-documents"><span class="header-section-number">3.2</span> 3.2 CREATE - Insérer des documents</h2>
-<section id="insérer-un-document" class="level3" data-number="3.2.1">
-<h3 data-number="3.2.1" class="anchored" data-anchor-id="insérer-un-document"><span class="header-section-number">3.2.1</span> Insérer UN document</h3>
+<section id="create---insérer-des-documents" class="level2">
+<h2 class="anchored" data-anchor-id="create---insérer-des-documents">3.2 CREATE - Insérer des documents</h2>
+<section id="insérer-un-document" class="level3">
+<h3 class="anchored" data-anchor-id="insérer-un-document">Insérer UN document</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Créer la collection "employes" et insérer un document</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>db<span class="op">.</span><span class="at">employes</span><span class="op">.</span><span class="fu">insertOne</span>({</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">nom</span><span class="op">:</span> <span class="st">"Alice Dupont"</span><span class="op">,</span></span>
@@ -1122,8 +1154,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">insertedId</span><span class="op">:</span> <span class="fu">ObjectId</span>(<span class="st">"507f1f77bcf86cd799439011"</span>)</span>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="insérer-plusieurs-documents" class="level3" data-number="3.2.2">
-<h3 data-number="3.2.2" class="anchored" data-anchor-id="insérer-plusieurs-documents"><span class="header-section-number">3.2.2</span> Insérer PLUSIEURS documents</h3>
+<section id="insérer-plusieurs-documents" class="level3">
+<h3 class="anchored" data-anchor-id="insérer-plusieurs-documents">Insérer PLUSIEURS documents</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>db<span class="op">.</span><span class="at">employes</span><span class="op">.</span><span class="fu">insertMany</span>([</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  {</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">nom</span><span class="op">:</span> <span class="st">"Bob Martin"</span><span class="op">,</span></span>
@@ -1166,39 +1198,39 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
-<section id="read---lire-des-documents" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="read---lire-des-documents"><span class="header-section-number">3.3</span> 3.3 READ - Lire des documents</h2>
-<section id="lire-tous-les-documents" class="level3" data-number="3.3.1">
-<h3 data-number="3.3.1" class="anchored" data-anchor-id="lire-tous-les-documents"><span class="header-section-number">3.3.1</span> Lire TOUS les documents</h3>
+<section id="read---lire-des-documents" class="level2">
+<h2 class="anchored" data-anchor-id="read---lire-des-documents">3.3 READ - Lire des documents</h2>
+<section id="lire-tous-les-documents" class="level3">
+<h3 class="anchored" data-anchor-id="lire-tous-les-documents">Lire TOUS les documents</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>db<span class="op">.</span><span class="at">employes</span><span class="op">.</span><span class="fu">find</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="lire-avec-un-affichage-formaté-pretty" class="level3" data-number="3.3.2">
-<h3 data-number="3.3.2" class="anchored" data-anchor-id="lire-avec-un-affichage-formaté-pretty"><span class="header-section-number">3.3.2</span> Lire avec un affichage formaté (pretty)</h3>
+<section id="lire-avec-un-affichage-formaté-pretty" class="level3">
+<h3 class="anchored" data-anchor-id="lire-avec-un-affichage-formaté-pretty">Lire avec un affichage formaté (pretty)</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>db<span class="op">.</span><span class="at">employes</span><span class="op">.</span><span class="fu">find</span>()<span class="op">.</span><span class="fu">pretty</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="lire-un-seul-document" class="level3" data-number="3.3.3">
-<h3 data-number="3.3.3" class="anchored" data-anchor-id="lire-un-seul-document"><span class="header-section-number">3.3.3</span> Lire UN seul document</h3>
+<section id="lire-un-seul-document" class="level3">
+<h3 class="anchored" data-anchor-id="lire-un-seul-document">Lire UN seul document</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>db<span class="op">.</span><span class="at">employes</span><span class="op">.</span><span class="fu">findOne</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="filtrer-employés-à-paris" class="level3" data-number="3.3.4">
-<h3 data-number="3.3.4" class="anchored" data-anchor-id="filtrer-employés-à-paris"><span class="header-section-number">3.3.4</span> Filtrer : employés à Paris</h3>
+<section id="filtrer-employés-à-paris" class="level3">
+<h3 class="anchored" data-anchor-id="filtrer-employés-à-paris">Filtrer : employés à Paris</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>db<span class="op">.</span><span class="at">employes</span><span class="op">.</span><span class="fu">find</span>({ <span class="dt">ville</span><span class="op">:</span> <span class="st">"Paris"</span> })</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="filtrer-salaire-supérieur-à-50000" class="level3" data-number="3.3.5">
-<h3 data-number="3.3.5" class="anchored" data-anchor-id="filtrer-salaire-supérieur-à-50000"><span class="header-section-number">3.3.5</span> Filtrer : salaire supérieur à 50000</h3>
+<section id="filtrer-salaire-supérieur-à-50000" class="level3">
+<h3 class="anchored" data-anchor-id="filtrer-salaire-supérieur-à-50000">Filtrer : salaire supérieur à 50000</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>db<span class="op">.</span><span class="at">employes</span><span class="op">.</span><span class="fu">find</span>({ <span class="dt">salaire</span><span class="op">:</span> { <span class="dt">$gt</span><span class="op">:</span> <span class="dv">50000</span> } })</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Opérateurs de comparaison</strong> : - <code>$gt</code> : greater than (&gt;) - <code>$gte</code> : greater than or equal (&gt;=) - <code>$lt</code> : less than (&lt;) - <code>$lte</code> : less than or equal (&lt;=) - <code>$eq</code> : equal (=) - <code>$ne</code> : not equal (!=)</p>
 </section>
-<section id="filtrer-avec-plusieurs-conditions-and" class="level3" data-number="3.3.6">
-<h3 data-number="3.3.6" class="anchored" data-anchor-id="filtrer-avec-plusieurs-conditions-and"><span class="header-section-number">3.3.6</span> Filtrer avec plusieurs conditions (AND)</h3>
+<section id="filtrer-avec-plusieurs-conditions-and" class="level3">
+<h3 class="anchored" data-anchor-id="filtrer-avec-plusieurs-conditions-and">Filtrer avec plusieurs conditions (AND)</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Employés à Paris avec salaire &gt; 50000</span></span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>db<span class="op">.</span><span class="at">employes</span><span class="op">.</span><span class="fu">find</span>({</span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">ville</span><span class="op">:</span> <span class="st">"Paris"</span><span class="op">,</span></span>
 <span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">salaire</span><span class="op">:</span> { <span class="dt">$gt</span><span class="op">:</span> <span class="dv">50000</span> }</span>
 <span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="filtrer-avec-or" class="level3" data-number="3.3.7">
-<h3 data-number="3.3.7" class="anchored" data-anchor-id="filtrer-avec-or"><span class="header-section-number">3.3.7</span> Filtrer avec OR</h3>
+<section id="filtrer-avec-or" class="level3">
+<h3 class="anchored" data-anchor-id="filtrer-avec-or">Filtrer avec OR</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Employés à Paris OU Lyon</span></span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>db<span class="op">.</span><span class="at">employes</span><span class="op">.</span><span class="fu">find</span>({</span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">$or</span><span class="op">:</span> [</span>
@@ -1207,8 +1239,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>  ]</span>
 <span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="sélectionner-certains-champs-seulement-projection" class="level3" data-number="3.3.8">
-<h3 data-number="3.3.8" class="anchored" data-anchor-id="sélectionner-certains-champs-seulement-projection"><span class="header-section-number">3.3.8</span> Sélectionner certains champs seulement (projection)</h3>
+<section id="sélectionner-certains-champs-seulement-projection" class="level3">
+<h3 class="anchored" data-anchor-id="sélectionner-certains-champs-seulement-projection">Sélectionner certains champs seulement (projection)</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Afficher seulement nom et salaire (sans _id)</span></span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>db<span class="op">.</span><span class="at">employes</span><span class="op">.</span><span class="fu">find</span>(</span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  {}<span class="op">,</span></span>
@@ -1217,29 +1249,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><strong>Note</strong> : <code>1</code> = inclure, <code>0</code> = exclure</p>
 </section>
 </section>
-<section id="trier-limiter-compter" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="trier-limiter-compter"><span class="header-section-number">3.4</span> 3.4 Trier, limiter, compter</h2>
-<section id="trier-par-salaire-croissant" class="level3" data-number="3.4.1">
-<h3 data-number="3.4.1" class="anchored" data-anchor-id="trier-par-salaire-croissant"><span class="header-section-number">3.4.1</span> Trier par salaire (croissant)</h3>
+<section id="trier-limiter-compter" class="level2">
+<h2 class="anchored" data-anchor-id="trier-limiter-compter">3.4 Trier, limiter, compter</h2>
+<section id="trier-par-salaire-croissant" class="level3">
+<h3 class="anchored" data-anchor-id="trier-par-salaire-croissant">Trier par salaire (croissant)</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>db<span class="op">.</span><span class="at">employes</span><span class="op">.</span><span class="fu">find</span>()<span class="op">.</span><span class="fu">sort</span>({ <span class="dt">salaire</span><span class="op">:</span> <span class="dv">1</span> })</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="trier-par-salaire-décroissant" class="level3" data-number="3.4.2">
-<h3 data-number="3.4.2" class="anchored" data-anchor-id="trier-par-salaire-décroissant"><span class="header-section-number">3.4.2</span> Trier par salaire (décroissant)</h3>
+<section id="trier-par-salaire-décroissant" class="level3">
+<h3 class="anchored" data-anchor-id="trier-par-salaire-décroissant">Trier par salaire (décroissant)</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>db<span class="op">.</span><span class="at">employes</span><span class="op">.</span><span class="fu">find</span>()<span class="op">.</span><span class="fu">sort</span>({ <span class="dt">salaire</span><span class="op">:</span> <span class="op">-</span><span class="dv">1</span> })</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Note</strong> : <code>1</code> = croissant, <code>-1</code> = décroissant</p>
 </section>
-<section id="limiter-les-résultats-top-3" class="level3" data-number="3.4.3">
-<h3 data-number="3.4.3" class="anchored" data-anchor-id="limiter-les-résultats-top-3"><span class="header-section-number">3.4.3</span> Limiter les résultats (top 3)</h3>
+<section id="limiter-les-résultats-top-3" class="level3">
+<h3 class="anchored" data-anchor-id="limiter-les-résultats-top-3">Limiter les résultats (top 3)</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Top 3 salaires</span></span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>db<span class="op">.</span><span class="at">employes</span><span class="op">.</span><span class="fu">find</span>()<span class="op">.</span><span class="fu">sort</span>({ <span class="dt">salaire</span><span class="op">:</span> <span class="op">-</span><span class="dv">1</span> })<span class="op">.</span><span class="fu">limit</span>(<span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="sauter-des-résultats-pagination" class="level3" data-number="3.4.4">
-<h3 data-number="3.4.4" class="anchored" data-anchor-id="sauter-des-résultats-pagination"><span class="header-section-number">3.4.4</span> Sauter des résultats (pagination)</h3>
+<section id="sauter-des-résultats-pagination" class="level3">
+<h3 class="anchored" data-anchor-id="sauter-des-résultats-pagination">Sauter des résultats (pagination)</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Sauter les 2 premiers, afficher les 3 suivants</span></span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>db<span class="op">.</span><span class="at">employes</span><span class="op">.</span><span class="fu">find</span>()<span class="op">.</span><span class="fu">skip</span>(<span class="dv">2</span>)<span class="op">.</span><span class="fu">limit</span>(<span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="compter-les-documents" class="level3" data-number="3.4.5">
-<h3 data-number="3.4.5" class="anchored" data-anchor-id="compter-les-documents"><span class="header-section-number">3.4.5</span> Compter les documents</h3>
+<section id="compter-les-documents" class="level3">
+<h3 class="anchored" data-anchor-id="compter-les-documents">Compter les documents</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Compter tous les employés</span></span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>db<span class="op">.</span><span class="at">employes</span><span class="op">.</span><span class="fu">countDocuments</span>()</span>
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1250,10 +1282,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a>db<span class="op">.</span><span class="at">employes</span><span class="op">.</span><span class="fu">countDocuments</span>({ <span class="dt">salaire</span><span class="op">:</span> { <span class="dt">$gt</span><span class="op">:</span> <span class="dv">50000</span> } })</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
-<section id="update---modifier-des-documents" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="update---modifier-des-documents"><span class="header-section-number">3.5</span> 3.5 UPDATE - Modifier des documents</h2>
-<section id="modifier-un-document" class="level3" data-number="3.5.1">
-<h3 data-number="3.5.1" class="anchored" data-anchor-id="modifier-un-document"><span class="header-section-number">3.5.1</span> Modifier UN document</h3>
+<section id="update---modifier-des-documents" class="level2">
+<h2 class="anchored" data-anchor-id="update---modifier-des-documents">3.5 UPDATE - Modifier des documents</h2>
+<section id="modifier-un-document" class="level3">
+<h3 class="anchored" data-anchor-id="modifier-un-document">Modifier UN document</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Augmenter le salaire d'Alice</span></span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>db<span class="op">.</span><span class="at">employes</span><span class="op">.</span><span class="fu">updateOne</span>(</span>
 <span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">nom</span><span class="op">:</span> <span class="st">"Alice Dupont"</span> }<span class="op">,</span>           <span class="co">// Condition</span></span>
@@ -1266,16 +1298,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">modifiedCount</span><span class="op">:</span> <span class="dv">1</span></span>
 <span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="modifier-plusieurs-documents" class="level3" data-number="3.5.2">
-<h3 data-number="3.5.2" class="anchored" data-anchor-id="modifier-plusieurs-documents"><span class="header-section-number">3.5.2</span> Modifier PLUSIEURS documents</h3>
+<section id="modifier-plusieurs-documents" class="level3">
+<h3 class="anchored" data-anchor-id="modifier-plusieurs-documents">Modifier PLUSIEURS documents</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Augmenter tous les salaires de Lyon de 2000€</span></span>
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>db<span class="op">.</span><span class="at">employes</span><span class="op">.</span><span class="fu">updateMany</span>(</span>
 <span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">ville</span><span class="op">:</span> <span class="st">"Lyon"</span> }<span class="op">,</span></span>
 <span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">$inc</span><span class="op">:</span> { <span class="dt">salaire</span><span class="op">:</span> <span class="dv">2000</span> } }       <span class="co">// $inc = incrémenter</span></span>
 <span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="opérateurs-de-modification" class="level3" data-number="3.5.3">
-<h3 data-number="3.5.3" class="anchored" data-anchor-id="opérateurs-de-modification"><span class="header-section-number">3.5.3</span> Opérateurs de modification</h3>
+<section id="opérateurs-de-modification" class="level3">
+<h3 class="anchored" data-anchor-id="opérateurs-de-modification">Opérateurs de modification</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co">// $set : définir une valeur</span></span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>{ <span class="dt">$set</span><span class="op">:</span> { <span class="dt">ville</span><span class="op">:</span> <span class="st">"Paris"</span> } }</span>
 <span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1291,47 +1323,47 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a><span class="co">// $rename : renommer un champ</span></span>
 <span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a>{ <span class="dt">$rename</span><span class="op">:</span> { <span class="st">"nom"</span><span class="op">:</span> <span class="st">"nom_complet"</span> } }</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="ajouter-un-champ-à-tous-les-documents" class="level3" data-number="3.5.4">
-<h3 data-number="3.5.4" class="anchored" data-anchor-id="ajouter-un-champ-à-tous-les-documents"><span class="header-section-number">3.5.4</span> Ajouter un champ à tous les documents</h3>
+<section id="ajouter-un-champ-à-tous-les-documents" class="level3">
+<h3 class="anchored" data-anchor-id="ajouter-un-champ-à-tous-les-documents">Ajouter un champ à tous les documents</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>db<span class="op">.</span><span class="at">employes</span><span class="op">.</span><span class="fu">updateMany</span>(</span>
 <span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>  {}<span class="op">,</span></span>
 <span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">$set</span><span class="op">:</span> { <span class="dt">actif</span><span class="op">:</span> <span class="kw">true</span> } }</span>
 <span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
-<section id="delete---supprimer-des-documents" class="level2" data-number="3.6">
-<h2 data-number="3.6" class="anchored" data-anchor-id="delete---supprimer-des-documents"><span class="header-section-number">3.6</span> 3.6 DELETE - Supprimer des documents</h2>
-<section id="supprimer-un-document" class="level3" data-number="3.6.1">
-<h3 data-number="3.6.1" class="anchored" data-anchor-id="supprimer-un-document"><span class="header-section-number">3.6.1</span> Supprimer UN document</h3>
+<section id="delete---supprimer-des-documents" class="level2">
+<h2 class="anchored" data-anchor-id="delete---supprimer-des-documents">3.6 DELETE - Supprimer des documents</h2>
+<section id="supprimer-un-document" class="level3">
+<h3 class="anchored" data-anchor-id="supprimer-un-document">Supprimer UN document</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>db<span class="op">.</span><span class="at">employes</span><span class="op">.</span><span class="fu">deleteOne</span>({ <span class="dt">nom</span><span class="op">:</span> <span class="st">"Test User"</span> })</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="supprimer-plusieurs-documents" class="level3" data-number="3.6.2">
-<h3 data-number="3.6.2" class="anchored" data-anchor-id="supprimer-plusieurs-documents"><span class="header-section-number">3.6.2</span> Supprimer PLUSIEURS documents</h3>
+<section id="supprimer-plusieurs-documents" class="level3">
+<h3 class="anchored" data-anchor-id="supprimer-plusieurs-documents">Supprimer PLUSIEURS documents</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb34"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Supprimer tous les employés de Test</span></span>
 <span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>db<span class="op">.</span><span class="at">employes</span><span class="op">.</span><span class="fu">deleteMany</span>({ <span class="dt">ville</span><span class="op">:</span> <span class="st">"Test"</span> })</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="supprimer-tous-les-documents" class="level3" data-number="3.6.3">
-<h3 data-number="3.6.3" class="anchored" data-anchor-id="supprimer-tous-les-documents"><span class="header-section-number">3.6.3</span> ⚠️ Supprimer TOUS les documents</h3>
+<section id="supprimer-tous-les-documents" class="level3">
+<h3 class="anchored" data-anchor-id="supprimer-tous-les-documents">⚠️ Supprimer TOUS les documents</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb35"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co">// </span><span class="al">ATTENTION</span><span class="co"> : Supprime tout !</span></span>
 <span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>db<span class="op">.</span><span class="at">employes</span><span class="op">.</span><span class="fu">deleteMany</span>({})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="supprimer-une-collection-entière" class="level3" data-number="3.6.4">
-<h3 data-number="3.6.4" class="anchored" data-anchor-id="supprimer-une-collection-entière"><span class="header-section-number">3.6.4</span> Supprimer une collection entière</h3>
+<section id="supprimer-une-collection-entière" class="level3">
+<h3 class="anchored" data-anchor-id="supprimer-une-collection-entière">Supprimer une collection entière</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb36"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>db<span class="op">.</span><span class="at">employes</span><span class="op">.</span><span class="fu">drop</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="supprimer-une-base-de-données" class="level3" data-number="3.6.5">
-<h3 data-number="3.6.5" class="anchored" data-anchor-id="supprimer-une-base-de-données"><span class="header-section-number">3.6.5</span> Supprimer une base de données</h3>
+<section id="supprimer-une-base-de-données" class="level3">
+<h3 class="anchored" data-anchor-id="supprimer-une-base-de-données">Supprimer une base de données</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb37"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>db<span class="op">.</span><span class="fu">dropDatabase</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 </section>
 </section>
-<section id="partie-4-agrégations-simples" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> 4️⃣ Partie 4 : Agrégations simples</h1>
-<section id="grouper-et-compter" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="grouper-et-compter"><span class="header-section-number">4.1</span> 4.1 Grouper et compter</h2>
-<section id="compter-les-employés-par-ville" class="level3" data-number="4.1.1">
-<h3 data-number="4.1.1" class="anchored" data-anchor-id="compter-les-employés-par-ville"><span class="header-section-number">4.1.1</span> Compter les employés par ville</h3>
+<section id="partie-4-agrégations-simples" class="level1">
+<h1>4️⃣ Partie 4 : Agrégations simples</h1>
+<section id="grouper-et-compter" class="level2">
+<h2 class="anchored" data-anchor-id="grouper-et-compter">4.1 Grouper et compter</h2>
+<section id="compter-les-employés-par-ville" class="level3">
+<h3 class="anchored" data-anchor-id="compter-les-employés-par-ville">Compter les employés par ville</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb38"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>db<span class="op">.</span><span class="at">employes</span><span class="op">.</span><span class="fu">aggregate</span>([</span>
 <span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>  {</span>
 <span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">$group</span><span class="op">:</span> {</span>
@@ -1347,8 +1379,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">_id</span><span class="op">:</span> <span class="st">"Marseille"</span><span class="op">,</span> <span class="dt">nombre</span><span class="op">:</span> <span class="dv">1</span> }</span>
 <span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="salaire-moyen-par-ville" class="level3" data-number="4.1.2">
-<h3 data-number="4.1.2" class="anchored" data-anchor-id="salaire-moyen-par-ville"><span class="header-section-number">4.1.2</span> Salaire moyen par ville</h3>
+<section id="salaire-moyen-par-ville" class="level3">
+<h3 class="anchored" data-anchor-id="salaire-moyen-par-ville">Salaire moyen par ville</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb40"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>db<span class="op">.</span><span class="at">employes</span><span class="op">.</span><span class="fu">aggregate</span>([</span>
 <span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>  {</span>
 <span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">$group</span><span class="op">:</span> {</span>
@@ -1364,8 +1396,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb40-13"><a href="#cb40-13" aria-hidden="true" tabindex="-1"></a>  }</span>
 <span id="cb40-14"><a href="#cb40-14" aria-hidden="true" tabindex="-1"></a>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="grouper-par-poste" class="level3" data-number="4.1.3">
-<h3 data-number="4.1.3" class="anchored" data-anchor-id="grouper-par-poste"><span class="header-section-number">4.1.3</span> Grouper par poste</h3>
+<section id="grouper-par-poste" class="level3">
+<h3 class="anchored" data-anchor-id="grouper-par-poste">Grouper par poste</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb41"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>db<span class="op">.</span><span class="at">employes</span><span class="op">.</span><span class="fu">aggregate</span>([</span>
 <span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>  {</span>
 <span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">$group</span><span class="op">:</span> {</span>
@@ -1377,8 +1409,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb41-9"><a href="#cb41-9" aria-hidden="true" tabindex="-1"></a>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
-<section id="filtrer-avant-dagréger" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="filtrer-avant-dagréger"><span class="header-section-number">4.2</span> 4.2 Filtrer avant d’agréger</h2>
+<section id="filtrer-avant-dagréger" class="level2">
+<h2 class="anchored" data-anchor-id="filtrer-avant-dagréger">4.2 Filtrer avant d’agréger</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb42"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Statistiques pour les employés avec salaire &gt; 50000</span></span>
 <span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>db<span class="op">.</span><span class="at">employes</span><span class="op">.</span><span class="fu">aggregate</span>([</span>
 <span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>  {</span>
@@ -1393,8 +1425,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb42-12"><a href="#cb42-12" aria-hidden="true" tabindex="-1"></a>  }</span>
 <span id="cb42-13"><a href="#cb42-13" aria-hidden="true" tabindex="-1"></a>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="statistiques-globales" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="statistiques-globales"><span class="header-section-number">4.3</span> 4.3 Statistiques globales</h2>
+<section id="statistiques-globales" class="level2">
+<h2 class="anchored" data-anchor-id="statistiques-globales">4.3 Statistiques globales</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb43"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Statistiques sur tous les salaires</span></span>
 <span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>db<span class="op">.</span><span class="at">employes</span><span class="op">.</span><span class="fu">aggregate</span>([</span>
 <span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>  {</span>
@@ -1411,12 +1443,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 </section>
-<section id="résumé" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> 🎓 Résumé</h1>
-<section id="ce-que-vous-avez-appris" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="ce-que-vous-avez-appris"><span class="header-section-number">5.1</span> Ce que vous avez appris ✅</h2>
-<section id="concepts" class="level3" data-number="5.1.1">
-<h3 data-number="5.1.1" class="anchored" data-anchor-id="concepts"><span class="header-section-number">5.1.1</span> Concepts</h3>
+<section id="résumé" class="level1">
+<h1>🎓 Résumé</h1>
+<section id="ce-que-vous-avez-appris" class="level2">
+<h2 class="anchored" data-anchor-id="ce-que-vous-avez-appris">Ce que vous avez appris ✅</h2>
+<section id="concepts" class="level3">
+<h3 class="anchored" data-anchor-id="concepts">Concepts</h3>
 <ol type="1">
 <li><strong>MongoDB</strong> = Base de données NoSQL (documents JSON)</li>
 <li><strong>Vocabulaire</strong> : Database → Collection → Document → Field</li>
@@ -1424,8 +1456,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Quand utiliser MongoDB</strong> : APIs, logs, IoT, e-commerce</li>
 </ol>
 </section>
-<section id="commandes-essentielles" class="level3" data-number="5.1.2">
-<h3 data-number="5.1.2" class="anchored" data-anchor-id="commandes-essentielles"><span class="header-section-number">5.1.2</span> Commandes essentielles</h3>
+<section id="commandes-essentielles" class="level3">
+<h3 class="anchored" data-anchor-id="commandes-essentielles">Commandes essentielles</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb44"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="co">// BASES</span></span>
 <span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>use ma_db                    <span class="co">// Créer/utiliser DB</span></span>
 <span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>show dbs                     <span class="co">// Lister les DBs</span></span>
@@ -1457,10 +1489,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb44-29"><a href="#cb44-29" aria-hidden="true" tabindex="-1"></a>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
-<section id="opérateurs-importants" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="opérateurs-importants"><span class="header-section-number">5.2</span> Opérateurs importants 📝</h2>
-<section id="comparaison" class="level3" data-number="5.2.1">
-<h3 data-number="5.2.1" class="anchored" data-anchor-id="comparaison"><span class="header-section-number">5.2.1</span> Comparaison</h3>
+<section id="opérateurs-importants" class="level2">
+<h2 class="anchored" data-anchor-id="opérateurs-importants">Opérateurs importants 📝</h2>
+<section id="comparaison" class="level3">
+<h3 class="anchored" data-anchor-id="comparaison">Comparaison</h3>
 <ul>
 <li><code>$gt</code> : &gt; (greater than)</li>
 <li><code>$gte</code> : &gt;= (greater than or equal)</li>
@@ -1470,8 +1502,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><code>$ne</code> : != (not equal)</li>
 </ul>
 </section>
-<section id="modification" class="level3" data-number="5.2.2">
-<h3 data-number="5.2.2" class="anchored" data-anchor-id="modification"><span class="header-section-number">5.2.2</span> Modification</h3>
+<section id="modification" class="level3">
+<h3 class="anchored" data-anchor-id="modification">Modification</h3>
 <ul>
 <li><code>$set</code> : Définir une valeur</li>
 <li><code>$inc</code> : Incrémenter</li>
@@ -1479,8 +1511,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><code>$unset</code> : Supprimer un champ</li>
 </ul>
 </section>
-<section id="agrégation" class="level3" data-number="5.2.3">
-<h3 data-number="5.2.3" class="anchored" data-anchor-id="agrégation"><span class="header-section-number">5.2.3</span> Agrégation</h3>
+<section id="agrégation" class="level3">
+<h3 class="anchored" data-anchor-id="agrégation">Agrégation</h3>
 <ul>
 <li><code>$sum</code> : Somme</li>
 <li><code>$avg</code> : Moyenne</li>
@@ -1493,10 +1525,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 </section>
 </section>
-<section id="partie-5-index-optimiser-les-performances" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> 5️⃣ Partie 5 : Index — Optimiser les performances</h1>
-<section id="pourquoi-les-index" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="pourquoi-les-index"><span class="header-section-number">6.1</span> 5.1 Pourquoi les index ?</h2>
+<section id="partie-5-index-optimiser-les-performances" class="level1">
+<h1>5️⃣ Partie 5 : Index — Optimiser les performances</h1>
+<section id="pourquoi-les-index" class="level2">
+<h2 class="anchored" data-anchor-id="pourquoi-les-index">5.1 Pourquoi les index ?</h2>
 <p>Sans index, MongoDB doit scanner <strong>tous</strong> les documents pour trouver ceux qui correspondent au filtre. Avec un index, la recherche est <strong>beaucoup plus rapide</strong>.</p>
 <table class="caption-top table">
 <thead>
@@ -1522,30 +1554,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 <hr>
 </section>
-<section id="créer-un-index" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="créer-un-index"><span class="header-section-number">6.2</span> 5.2 Créer un index</h2>
-<section id="index-simple-un-champ" class="level3" data-number="6.2.1">
-<h3 data-number="6.2.1" class="anchored" data-anchor-id="index-simple-un-champ"><span class="header-section-number">6.2.1</span> Index simple (un champ)</h3>
+<section id="créer-un-index" class="level2">
+<h2 class="anchored" data-anchor-id="créer-un-index">5.2 Créer un index</h2>
+<section id="index-simple-un-champ" class="level3">
+<h3 class="anchored" data-anchor-id="index-simple-un-champ">Index simple (un champ)</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb45"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Index sur le champ "email" (croissant)</span></span>
 <span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>db<span class="op">.</span><span class="at">employes</span><span class="op">.</span><span class="fu">createIndex</span>({ <span class="dt">email</span><span class="op">:</span> <span class="dv">1</span> })</span>
 <span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a><span class="co">// Index sur le champ "salaire" (décroissant)</span></span>
 <span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a>db<span class="op">.</span><span class="at">employes</span><span class="op">.</span><span class="fu">createIndex</span>({ <span class="dt">salaire</span><span class="op">:</span> <span class="op">-</span><span class="dv">1</span> })</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="index-composé-plusieurs-champs" class="level3" data-number="6.2.2">
-<h3 data-number="6.2.2" class="anchored" data-anchor-id="index-composé-plusieurs-champs"><span class="header-section-number">6.2.2</span> Index composé (plusieurs champs)</h3>
+<section id="index-composé-plusieurs-champs" class="level3">
+<h3 class="anchored" data-anchor-id="index-composé-plusieurs-champs">Index composé (plusieurs champs)</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb46"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Index sur ville + poste (pour requêtes fréquentes)</span></span>
 <span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>db<span class="op">.</span><span class="at">employes</span><span class="op">.</span><span class="fu">createIndex</span>({ <span class="dt">ville</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">poste</span><span class="op">:</span> <span class="dv">1</span> })</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="index-unique" class="level3" data-number="6.2.3">
-<h3 data-number="6.2.3" class="anchored" data-anchor-id="index-unique"><span class="header-section-number">6.2.3</span> Index unique</h3>
+<section id="index-unique" class="level3">
+<h3 class="anchored" data-anchor-id="index-unique">Index unique</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb47"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Empêche les doublons sur email</span></span>
 <span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>db<span class="op">.</span><span class="at">employes</span><span class="op">.</span><span class="fu">createIndex</span>({ <span class="dt">email</span><span class="op">:</span> <span class="dv">1</span> }<span class="op">,</span> { <span class="dt">unique</span><span class="op">:</span> <span class="kw">true</span> })</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 </section>
-<section id="gérer-les-index" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="gérer-les-index"><span class="header-section-number">6.3</span> 5.3 Gérer les index</h2>
+<section id="gérer-les-index" class="level2">
+<h2 class="anchored" data-anchor-id="gérer-les-index">5.3 Gérer les index</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb48"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Lister tous les index</span></span>
 <span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>db<span class="op">.</span><span class="at">employes</span><span class="op">.</span><span class="fu">getIndexes</span>()</span>
 <span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1556,15 +1588,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb48-8"><a href="#cb48-8" aria-hidden="true" tabindex="-1"></a>db<span class="op">.</span><span class="at">employes</span><span class="op">.</span><span class="fu">dropIndexes</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
-<section id="analyser-les-performances" class="level2" data-number="6.4">
-<h2 data-number="6.4" class="anchored" data-anchor-id="analyser-les-performances"><span class="header-section-number">6.4</span> 5.4 Analyser les performances</h2>
+<section id="analyser-les-performances" class="level2">
+<h2 class="anchored" data-anchor-id="analyser-les-performances">5.4 Analyser les performances</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb49"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Voir le plan d'exécution</span></span>
 <span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>db<span class="op">.</span><span class="at">employes</span><span class="op">.</span><span class="fu">find</span>({ <span class="dt">ville</span><span class="op">:</span> <span class="st">"Paris"</span> })<span class="op">.</span><span class="fu">explain</span>(<span class="st">"executionStats"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Regarder</strong> : - <code>totalDocsExamined</code> : Combien de documents scannés - <code>executionTimeMillis</code> : Temps d’exécution - <code>stage: "IXSCAN"</code> = Index utilisé ✅ - <code>stage: "COLLSCAN"</code> = Scan complet ❌</p>
 <hr>
 </section>
-<section id="bonnes-pratiques" class="level2" data-number="6.5">
-<h2 data-number="6.5" class="anchored" data-anchor-id="bonnes-pratiques"><span class="header-section-number">6.5</span> 5.5 Bonnes pratiques</h2>
+<section id="bonnes-pratiques" class="level2">
+<h2 class="anchored" data-anchor-id="bonnes-pratiques">5.5 Bonnes pratiques</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 35%">
@@ -1598,10 +1630,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 </section>
-<section id="partie-6-recherche-avancée" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> 6️⃣ Partie 6 : Recherche avancée</h1>
-<section id="recherche-avec-expressions-régulières" class="level2" data-number="7.1">
-<h2 data-number="7.1" class="anchored" data-anchor-id="recherche-avec-expressions-régulières"><span class="header-section-number">7.1</span> 6.1 Recherche avec expressions régulières</h2>
+<section id="partie-6-recherche-avancée" class="level1">
+<h1>6️⃣ Partie 6 : Recherche avancée</h1>
+<section id="recherche-avec-expressions-régulières" class="level2">
+<h2 class="anchored" data-anchor-id="recherche-avec-expressions-régulières">6.1 Recherche avec expressions régulières</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb50"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Noms commençant par "A"</span></span>
 <span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>db<span class="op">.</span><span class="at">employes</span><span class="op">.</span><span class="fu">find</span>({ <span class="dt">nom</span><span class="op">:</span> { <span class="dt">$regex</span><span class="op">:</span> <span class="st">"^A"</span> } })</span>
 <span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1612,8 +1644,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb50-8"><a href="#cb50-8" aria-hidden="true" tabindex="-1"></a>db<span class="op">.</span><span class="at">employes</span><span class="op">.</span><span class="fu">find</span>({ <span class="dt">email</span><span class="op">:</span> { <span class="dt">$regex</span><span class="op">:</span> <span class="st">"@gmail</span><span class="sc">\.</span><span class="st">com$"</span> } })</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
-<section id="opérateurs-de-tableau" class="level2" data-number="7.2">
-<h2 data-number="7.2" class="anchored" data-anchor-id="opérateurs-de-tableau"><span class="header-section-number">7.2</span> 6.2 Opérateurs de tableau</h2>
+<section id="opérateurs-de-tableau" class="level2">
+<h2 class="anchored" data-anchor-id="opérateurs-de-tableau">6.2 Opérateurs de tableau</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb51"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Document avec un tableau</span></span>
 <span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>db<span class="op">.</span><span class="at">employes</span><span class="op">.</span><span class="fu">insertOne</span>({</span>
 <span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">nom</span><span class="op">:</span> <span class="st">"Alice"</span><span class="op">,</span></span>
@@ -1630,8 +1662,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb51-14"><a href="#cb51-14" aria-hidden="true" tabindex="-1"></a>db<span class="op">.</span><span class="at">employes</span><span class="op">.</span><span class="fu">find</span>({ <span class="dt">competences</span><span class="op">:</span> { <span class="dt">$size</span><span class="op">:</span> <span class="dv">3</span> } })</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
-<section id="recherche-dans-les-objets-imbriqués" class="level2" data-number="7.3">
-<h2 data-number="7.3" class="anchored" data-anchor-id="recherche-dans-les-objets-imbriqués"><span class="header-section-number">7.3</span> 6.3 Recherche dans les objets imbriqués</h2>
+<section id="recherche-dans-les-objets-imbriqués" class="level2">
+<h2 class="anchored" data-anchor-id="recherche-dans-les-objets-imbriqués">6.3 Recherche dans les objets imbriqués</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb52"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Document avec objet imbriqué</span></span>
 <span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>db<span class="op">.</span><span class="at">employes</span><span class="op">.</span><span class="fu">insertOne</span>({</span>
 <span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">nom</span><span class="op">:</span> <span class="st">"Bob"</span><span class="op">,</span></span>
@@ -1648,8 +1680,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb52-14"><a href="#cb52-14" aria-hidden="true" tabindex="-1"></a>db<span class="op">.</span><span class="at">employes</span><span class="op">.</span><span class="fu">find</span>({ <span class="st">"adresse.code_postal"</span><span class="op">:</span> { <span class="dt">$regex</span><span class="op">:</span> <span class="st">"^75"</span> } })</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
-<section id="cheatsheet-sql-vs-mongodb" class="level2" data-number="7.4">
-<h2 data-number="7.4" class="anchored" data-anchor-id="cheatsheet-sql-vs-mongodb"><span class="header-section-number">7.4</span> 📋 Cheatsheet : SQL vs MongoDB</h2>
+<section id="cheatsheet-sql-vs-mongodb" class="level2">
+<h2 class="anchored" data-anchor-id="cheatsheet-sql-vs-mongodb">📋 Cheatsheet : SQL vs MongoDB</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 45%">
@@ -1743,15 +1775,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 <hr>
 </section>
-<section id="exercices-pratiques-à-toi-de-jouer" class="level2" data-number="7.5">
-<h2 data-number="7.5" class="anchored" data-anchor-id="exercices-pratiques-à-toi-de-jouer"><span class="header-section-number">7.5</span> 🎯 Exercices pratiques — À toi de jouer !</h2>
-<section id="collection-disponible-employes" class="level3" data-number="7.5.1">
-<h3 data-number="7.5.1" class="anchored" data-anchor-id="collection-disponible-employes"><span class="header-section-number">7.5.1</span> Collection disponible : <code>employes</code></h3>
+<section id="exercices-pratiques-à-toi-de-jouer" class="level2">
+<h2 class="anchored" data-anchor-id="exercices-pratiques-à-toi-de-jouer">🎯 Exercices pratiques — À toi de jouer !</h2>
+<section id="collection-disponible-employes" class="level3">
+<h3 class="anchored" data-anchor-id="collection-disponible-employes">Collection disponible : <code>employes</code></h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb53"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>{ nom<span class="op">,</span> age<span class="op">,</span> poste<span class="op">,</span> salaire<span class="op">,</span> ville<span class="op">,</span> <span class="dt">competences</span><span class="op">:</span> [<span class="op">...</span>] }</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
-<section id="exercice-1-facile" class="level3" data-number="7.5.2">
-<h3 data-number="7.5.2" class="anchored" data-anchor-id="exercice-1-facile"><span class="header-section-number">7.5.2</span> 🏋️ Exercice 1 — Facile</h3>
+<section id="exercice-1-facile" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-1-facile">🏋️ Exercice 1 — Facile</h3>
 <p>Trouver tous les employés qui habitent à Lyon.</p>
 <details>
 <summary>
@@ -1761,8 +1793,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 <hr>
 </section>
-<section id="exercice-2-facile" class="level3" data-number="7.5.3">
-<h3 data-number="7.5.3" class="anchored" data-anchor-id="exercice-2-facile"><span class="header-section-number">7.5.3</span> 🏋️ Exercice 2 — Facile</h3>
+<section id="exercice-2-facile" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-2-facile">🏋️ Exercice 2 — Facile</h3>
 <p>Compter le nombre total d’employés.</p>
 <details>
 <summary>
@@ -1772,8 +1804,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 <hr>
 </section>
-<section id="exercice-3-intermédiaire" class="level3" data-number="7.5.4">
-<h3 data-number="7.5.4" class="anchored" data-anchor-id="exercice-3-intermédiaire"><span class="header-section-number">7.5.4</span> 🏋️ Exercice 3 — Intermédiaire</h3>
+<section id="exercice-3-intermédiaire" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-3-intermédiaire">🏋️ Exercice 3 — Intermédiaire</h3>
 <p>Trouver les 3 employés les mieux payés (nom et salaire uniquement).</p>
 <details>
 <summary>
@@ -1785,8 +1817,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 <hr>
 </section>
-<section id="exercice-4-intermédiaire" class="level3" data-number="7.5.5">
-<h3 data-number="7.5.5" class="anchored" data-anchor-id="exercice-4-intermédiaire"><span class="header-section-number">7.5.5</span> 🏋️ Exercice 4 — Intermédiaire</h3>
+<section id="exercice-4-intermédiaire" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-4-intermédiaire">🏋️ Exercice 4 — Intermédiaire</h3>
 <p>Augmenter de 5% le salaire de tous les Data Engineers.</p>
 <details>
 <summary>
@@ -1799,8 +1831,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 <hr>
 </section>
-<section id="exercice-5-avancé" class="level3" data-number="7.5.6">
-<h3 data-number="7.5.6" class="anchored" data-anchor-id="exercice-5-avancé"><span class="header-section-number">7.5.6</span> 🏋️ Exercice 5 — Avancé</h3>
+<section id="exercice-5-avancé" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-5-avancé">🏋️ Exercice 5 — Avancé</h3>
 <p>Calculer le salaire moyen par poste, trié du plus élevé au plus bas.</p>
 <details>
 <summary>
@@ -1813,8 +1845,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 <hr>
 </section>
-<section id="exercice-6-avancé" class="level3" data-number="7.5.7">
-<h3 data-number="7.5.7" class="anchored" data-anchor-id="exercice-6-avancé"><span class="header-section-number">7.5.7</span> 🏋️ Exercice 6 — Avancé</h3>
+<section id="exercice-6-avancé" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-6-avancé">🏋️ Exercice 6 — Avancé</h3>
 <p>Trouver les employés qui ont “Python” dans leurs compétences et gagnent plus de 50000€.</p>
 <details>
 <summary>
@@ -1829,11 +1861,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 </section>
 </section>
-<section id="quiz-final" class="level1" data-number="8">
-<h1 data-number="8"><span class="header-section-number">8</span> 🧪 Quiz Final</h1>
+<section id="quiz-final" class="level1">
+<h1>🧪 Quiz Final</h1>
 <p>Testez vos connaissances !</p>
-<section id="q1.-quelle-est-la-différence-principale-entre-sql-et-mongodb" class="level3" data-number="8.0.1">
-<h3 data-number="8.0.1" class="anchored" data-anchor-id="q1.-quelle-est-la-différence-principale-entre-sql-et-mongodb"><span class="header-section-number">8.0.1</span> ❓ Q1. Quelle est la différence principale entre SQL et MongoDB ?</h3>
+<section id="q1.-quelle-est-la-différence-principale-entre-sql-et-mongodb" class="level3">
+<h3 class="anchored" data-anchor-id="q1.-quelle-est-la-différence-principale-entre-sql-et-mongodb">❓ Q1. Quelle est la différence principale entre SQL et MongoDB ?</h3>
 <ol type="a">
 <li>SQL est gratuit, MongoDB est payant<br>
 </li>
@@ -1851,8 +1883,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 <hr>
 </section>
-<section id="q2.-dans-mongodb-comment-appelle-t-on-léquivalent-dune-table-sql" class="level3" data-number="8.0.2">
-<h3 data-number="8.0.2" class="anchored" data-anchor-id="q2.-dans-mongodb-comment-appelle-t-on-léquivalent-dune-table-sql"><span class="header-section-number">8.0.2</span> ❓ Q2. Dans MongoDB, comment appelle-t-on l’équivalent d’une “table” SQL ?</h3>
+<section id="q2.-dans-mongodb-comment-appelle-t-on-léquivalent-dune-table-sql" class="level3">
+<h3 class="anchored" data-anchor-id="q2.-dans-mongodb-comment-appelle-t-on-léquivalent-dune-table-sql">❓ Q2. Dans MongoDB, comment appelle-t-on l’équivalent d’une “table” SQL ?</h3>
 <ol type="a">
 <li>Document<br>
 </li>
@@ -1870,8 +1902,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 <hr>
 </section>
-<section id="q3.-quelle-commande-permet-dinsérer-plusieurs-documents-à-la-fois" class="level3" data-number="8.0.3">
-<h3 data-number="8.0.3" class="anchored" data-anchor-id="q3.-quelle-commande-permet-dinsérer-plusieurs-documents-à-la-fois"><span class="header-section-number">8.0.3</span> ❓ Q3. Quelle commande permet d’insérer plusieurs documents à la fois ?</h3>
+<section id="q3.-quelle-commande-permet-dinsérer-plusieurs-documents-à-la-fois" class="level3">
+<h3 class="anchored" data-anchor-id="q3.-quelle-commande-permet-dinsérer-plusieurs-documents-à-la-fois">❓ Q3. Quelle commande permet d’insérer plusieurs documents à la fois ?</h3>
 <ol type="a">
 <li><code>db.collection.insert([...])</code><br>
 </li>
@@ -1889,8 +1921,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 <hr>
 </section>
-<section id="q4.-comment-trouver-tous-les-employés-avec-un-salaire-supérieur-à-50000" class="level3" data-number="8.0.4">
-<h3 data-number="8.0.4" class="anchored" data-anchor-id="q4.-comment-trouver-tous-les-employés-avec-un-salaire-supérieur-à-50000"><span class="header-section-number">8.0.4</span> ❓ Q4. Comment trouver tous les employés avec un salaire supérieur à 50000 ?</h3>
+<section id="q4.-comment-trouver-tous-les-employés-avec-un-salaire-supérieur-à-50000" class="level3">
+<h3 class="anchored" data-anchor-id="q4.-comment-trouver-tous-les-employés-avec-un-salaire-supérieur-à-50000">❓ Q4. Comment trouver tous les employés avec un salaire supérieur à 50000 ?</h3>
 <ol type="a">
 <li><code>db.employes.find({ salaire &gt; 50000 })</code><br>
 </li>
@@ -1908,8 +1940,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 <hr>
 </section>
-<section id="q5.-que-fait-la-commande-db.employes.updatemany-inc-age-1" class="level3" data-number="8.0.5">
-<h3 data-number="8.0.5" class="anchored" data-anchor-id="q5.-que-fait-la-commande-db.employes.updatemany-inc-age-1"><span class="header-section-number">8.0.5</span> ❓ Q5. Que fait la commande <code>db.employes.updateMany({}, { $inc: { age: 1 } })</code> ?</h3>
+<section id="q5.-que-fait-la-commande-db.employes.updatemany-inc-age-1" class="level3">
+<h3 class="anchored" data-anchor-id="q5.-que-fait-la-commande-db.employes.updatemany-inc-age-1">❓ Q5. Que fait la commande <code>db.employes.updateMany({}, { $inc: { age: 1 } })</code> ?</h3>
 <ol type="a">
 <li>Supprime tous les employés<br>
 </li>
@@ -1927,8 +1959,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 <hr>
 </section>
-<section id="q6.-quelle-est-la-meilleure-utilisation-de-mongodb" class="level3" data-number="8.0.6">
-<h3 data-number="8.0.6" class="anchored" data-anchor-id="q6.-quelle-est-la-meilleure-utilisation-de-mongodb"><span class="header-section-number">8.0.6</span> ❓ Q6. Quelle est la meilleure utilisation de MongoDB ?</h3>
+<section id="q6.-quelle-est-la-meilleure-utilisation-de-mongodb" class="level3">
+<h3 class="anchored" data-anchor-id="q6.-quelle-est-la-meilleure-utilisation-de-mongodb">❓ Q6. Quelle est la meilleure utilisation de MongoDB ?</h3>
 <ol type="a">
 <li>Gestion de transactions bancaires complexes<br>
 </li>
@@ -1946,8 +1978,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 <hr>
 </section>
-<section id="q7.-comment-trier-les-résultats-par-salaire-décroissant" class="level3" data-number="8.0.7">
-<h3 data-number="8.0.7" class="anchored" data-anchor-id="q7.-comment-trier-les-résultats-par-salaire-décroissant"><span class="header-section-number">8.0.7</span> ❓ Q7. Comment trier les résultats par salaire décroissant ?</h3>
+<section id="q7.-comment-trier-les-résultats-par-salaire-décroissant" class="level3">
+<h3 class="anchored" data-anchor-id="q7.-comment-trier-les-résultats-par-salaire-décroissant">❓ Q7. Comment trier les résultats par salaire décroissant ?</h3>
 <ol type="a">
 <li><code>db.employes.find().sort({ salaire: 1 })</code><br>
 </li>
@@ -1965,8 +1997,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 <hr>
 </section>
-<section id="q8.-que-fait-la-commande-db.employes.aggregate-group-_id-ville-count-sum-1" class="level3" data-number="8.0.8">
-<h3 data-number="8.0.8" class="anchored" data-anchor-id="q8.-que-fait-la-commande-db.employes.aggregate-group-_id-ville-count-sum-1"><span class="header-section-number">8.0.8</span> ❓ Q8. Que fait la commande <code>db.employes.aggregate([{ $group: { _id: "$ville", count: { $sum: 1 } } }])</code> ?</h3>
+<section id="q8.-que-fait-la-commande-db.employes.aggregate-group-_id-ville-count-sum-1" class="level3">
+<h3 class="anchored" data-anchor-id="q8.-que-fait-la-commande-db.employes.aggregate-group-_id-ville-count-sum-1">❓ Q8. Que fait la commande <code>db.employes.aggregate([{ $group: { _id: "$ville", count: { $sum: 1 } } }])</code> ?</h3>
 <ol type="a">
 <li>Compte le nombre total d’employés<br>
 </li>
@@ -1984,8 +2016,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 <hr>
 </section>
-<section id="q9.-quel-est-lavantage-principal-de-mongodb-atlas" class="level3" data-number="8.0.9">
-<h3 data-number="8.0.9" class="anchored" data-anchor-id="q9.-quel-est-lavantage-principal-de-mongodb-atlas"><span class="header-section-number">8.0.9</span> ❓ Q9. Quel est l’avantage principal de MongoDB Atlas ?</h3>
+<section id="q9.-quel-est-lavantage-principal-de-mongodb-atlas" class="level3">
+<h3 class="anchored" data-anchor-id="q9.-quel-est-lavantage-principal-de-mongodb-atlas">❓ Q9. Quel est l’avantage principal de MongoDB Atlas ?</h3>
 <ol type="a">
 <li>Il est 100 fois plus rapide que MongoDB local<br>
 </li>
@@ -2003,8 +2035,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 <hr>
 </section>
-<section id="q10.-comment-supprimer-tous-les-documents-dune-collection-sans-supprimer-la-collection-elle-même" class="level3" data-number="8.0.10">
-<h3 data-number="8.0.10" class="anchored" data-anchor-id="q10.-comment-supprimer-tous-les-documents-dune-collection-sans-supprimer-la-collection-elle-même"><span class="header-section-number">8.0.10</span> ❓ Q10. Comment supprimer TOUS les documents d’une collection sans supprimer la collection elle-même ?</h3>
+<section id="q10.-comment-supprimer-tous-les-documents-dune-collection-sans-supprimer-la-collection-elle-même" class="level3">
+<h3 class="anchored" data-anchor-id="q10.-comment-supprimer-tous-les-documents-dune-collection-sans-supprimer-la-collection-elle-même">❓ Q10. Comment supprimer TOUS les documents d’une collection sans supprimer la collection elle-même ?</h3>
 <ol type="a">
 <li><code>db.collection.remove()</code><br>
 </li>
@@ -2022,8 +2054,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 <hr>
 </section>
-<section id="votre-score" class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="votre-score"><span class="header-section-number">8.1</span> 📊 Votre score</h2>
+<section id="votre-score" class="level2">
+<h2 class="anchored" data-anchor-id="votre-score">📊 Votre score</h2>
 <ul>
 <li><strong>10/10</strong> : 🏆 Expert MongoDB ! Vous êtes prêt pour le niveau intermédiaire</li>
 <li><strong>7-9/10</strong> : 🌟 Très bien ! Relisez les sections où vous avez hésité</li>
@@ -2032,13 +2064,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <hr>
 </section>
-<section id="prochaine-étape" class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="prochaine-étape"><span class="header-section-number">8.2</span> ➡️ Prochaine étape</h2>
+<section id="prochaine-étape" class="level2">
+<h2 class="anchored" data-anchor-id="prochaine-étape">➡️ Prochaine étape</h2>
 <p>Tu maîtrises maintenant MongoDB ! Passons à une autre base NoSQL très utilisée en Data Engineering.</p>
 <p>👉 <strong>Module suivant : <code>10_elasticsearch_for_data_engineers.ipynb</code></strong> — Elasticsearch pour la recherche et l’analytics</p>
 <hr>
-<section id="ressources" class="level3" data-number="8.2.1">
-<h3 data-number="8.2.1" class="anchored" data-anchor-id="ressources"><span class="header-section-number">8.2.1</span> 📚 Ressources</h3>
+<section id="ressources" class="level3">
+<h3 class="anchored" data-anchor-id="ressources">📚 Ressources</h3>
 <ul>
 <li><a href="https://cloud.mongodb.com/">MongoDB Atlas</a> — Votre compte</li>
 <li><a href="https://docs.mongodb.com/">MongoDB Documentation</a> — Doc officielle</li>
