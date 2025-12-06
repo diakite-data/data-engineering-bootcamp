@@ -565,7 +565,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td>✅ Requis</td>
-<td>Avoir suivi le module <code>08_intro_big_data_nosql</code></td>
+<td>Avoir suivi le module <code>08_intro_big_data_distributed</code></td>
 </tr>
 <tr class="even">
 <td>✅ Requis</td>
@@ -588,7 +588,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="objectifs-du-module" class="level2">
 <h2 class="anchored" data-anchor-id="objectifs-du-module">🎯 Objectifs du module</h2>
-<p>À la fin de ce notebook, tu seras capable de : - ✅ Comprendre l’architecture Spark (Driver, Executors, Cluster Manager) - ✅ Créer et manipuler des DataFrames distribués - ✅ Écrire des transformations et actions - ✅ Utiliser Spark SQL - ✅ Optimiser les performances (partitioning, caching, broadcast) - ✅ Lire/écrire des fichiers (CSV, JSON, Parquet) - ✅ Découvrir le streaming temps réel</p>
+<p>À la fin de ce notebook, tu seras capable de :</p>
+<ul>
+<li>✅ Comprendre l’architecture Spark (Driver, Executors, Cluster Manager)</li>
+<li>✅ Créer et manipuler des DataFrames distribués</li>
+<li>✅ Écrire des transformations et actions</li>
+<li>✅ Utiliser Spark SQL</li>
+<li>✅ Optimiser les performances (partitioning, caching, broadcast)</li>
+<li>✅ Lire/écrire des fichiers (CSV, JSON, Parquet)</li>
+<li>✅ Découvrir le streaming temps réel</li>
+</ul>
 <hr>
 </section>
 <section id="pyspark-dans-lécosystème-big-data" class="level2">
@@ -2127,7 +2136,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </section>
 <section id="quand-utiliser-pyspark" class="level2">
 <h2 class="anchored" data-anchor-id="quand-utiliser-pyspark">Quand utiliser PySpark ? 🤔</h2>
-<p>✅ <strong>Utilisez PySpark si :</strong> - Données &gt; 100 GB - Besoin de parallélisation - Traitement distribué nécessaire - Streaming en temps réel</p>
+<p>✅ <strong>Utilisez PySpark si :</strong> - Données &gt; 10 GB - Besoin de parallélisation - Traitement distribué nécessaire - Streaming en temps réel</p>
 <p>❌ <strong>Utilisez Pandas si :</strong> - Données &lt; 10 GB - Prototypage rapide - Analyses exploratoires - Machine learning local</p>
 </section>
 <section id="prochaines-étapes" class="level2">
@@ -2414,7 +2423,8 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <section id="prochaine-étape" class="level2">
 <h2 class="anchored" data-anchor-id="prochaine-étape">➡️ Prochaine étape</h2>
 <p>Tu maîtrises maintenant le traitement Big Data avec PySpark !</p>
-<p>Pour continuer ton parcours Data Engineering, explore : - 🔄 <strong>Apache Airflow</strong> — Orchestration de pipelines - 🌊 <strong>Kafka</strong> — Streaming de données - 🏠 <strong>Delta Lake</strong> — Stockage ACID sur data lake - ☁️ <strong>Cloud Data Engineering</strong> — AWS/GCP/Azure</p>
+<p>Pour continuer ton parcours Data Engineering,</p>
+<p>👉 <strong>Module suivant : <code>12_orchestration_pipelines.ipynb</code></strong> — Orchestration de pipelines</p>
 <hr>
 <p>🎉 <strong>Félicitations !</strong> Tu as terminé le module PySpark et le parcours sur les bases de données et le Big Data !</p>
 <div id="cell-109" class="cell">
