@@ -109,7 +109,7 @@ Licence **MIT**.
 ## ✨ Auteur
 
 **Youssouf Diakité**  
-Ingénieur & Architecte Data  
+Ingénieur & Architecte Data & IA
 Chef de Projet — Transformation Digitale  
 Côte d'Ivoire 🇨🇮
 
