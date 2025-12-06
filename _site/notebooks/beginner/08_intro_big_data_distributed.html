@@ -444,7 +444,7 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#comparaison-hadoop-mapreduce-vs-spark" id="toc-comparaison-hadoop-mapreduce-vs-spark" class="nav-link" data-scroll-target="#comparaison-hadoop-mapreduce-vs-spark">📊 Comparaison Hadoop MapReduce vs Spark</a></li>
   <li><a href="#architecture-spark" id="toc-architecture-spark" class="nav-link" data-scroll-target="#architecture-spark">🏗️ Architecture Spark</a></li>
-  <li><a href="#concepts-spark-à-venir-module-suivant" id="toc-concepts-spark-à-venir-module-suivant" class="nav-link" data-scroll-target="#concepts-spark-à-venir-module-suivant">🔮 Concepts Spark à venir (module suivant)</a></li>
+  <li><a href="#concepts-spark-à-venir" id="toc-concepts-spark-à-venir" class="nav-link" data-scroll-target="#concepts-spark-à-venir">🔮 Concepts Spark à venir</a></li>
   <li><a href="#ce-que-tu-vas-apprendre-avec-pyspark" id="toc-ce-que-tu-vas-apprendre-avec-pyspark" class="nav-link" data-scroll-target="#ce-que-tu-vas-apprendre-avec-pyspark">🎯 Ce que tu vas apprendre avec PySpark</a></li>
   </ul></li>
   <li><a href="#résumé" id="toc-résumé" class="nav-link" data-scroll-target="#résumé">📋 Résumé</a>
@@ -491,7 +491,6 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Ce module pose les <strong>fondations théoriques</strong> nécessaires avant d’aborder PySpark.</p>
 <hr>
 <section id="prérequis" class="level2">
 <h2 class="anchored" data-anchor-id="prérequis">📋 Prérequis</h2>
@@ -505,25 +504,24 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>✅ Requis</td>
-<td>Avoir suivi le module <code>06_intro_databases</code></td>
-</tr>
-<tr class="even">
-<td>✅ Requis</td>
-<td>Avoir suivi les modules MongoDB et Elasticsearch</td>
-</tr>
-<tr class="odd">
-<td>✅ Requis</td>
-<td>Comprendre la différence SQL / NoSQL</td>
+<td>Avoir suivi le module <code>06_intro_relational_databases</code></td>
 </tr>
 </tbody>
 </table>
 </section>
 <section id="objectifs-du-module" class="level2">
 <h2 class="anchored" data-anchor-id="objectifs-du-module">🎯 Objectifs du module</h2>
-<p>À la fin de ce notebook, tu seras capable de : - ✅ Comprendre ce qu’est le Big Data et ses caractéristiques (5V) - ✅ Expliquer pourquoi le traitement distribué est nécessaire - ✅ Décrire l’architecture Hadoop (HDFS, MapReduce, YARN) - ✅ Comprendre le modèle MapReduce - ✅ Expliquer pourquoi Spark a remplacé MapReduce</p>
+<p>À la fin de ce notebook, tu seras capable de :</p>
+<ul>
+<li>✅ Comprendre ce qu’est le Big Data et ses caractéristiques (5V)</li>
+<li>✅ Expliquer pourquoi le traitement distribué est nécessaire</li>
+<li>✅ Décrire l’architecture Hadoop (HDFS, MapReduce, YARN)</li>
+<li>✅ Comprendre le modèle MapReduce</li>
+<li>✅ Expliquer pourquoi Spark a remplacé MapReduce</li>
+</ul>
 <hr>
 <blockquote class="blockquote">
-<p>💡 <strong>Note</strong> : Ce module est théorique. La pratique viendra avec PySpark au module suivant !</p>
+<p>💡 <strong>Note</strong> : Ce module est théorique. La pratique viendra au module PySpark !</p>
 </blockquote>
 <hr>
 </section>
@@ -535,7 +533,13 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="origine" class="level3">
 <h3 class="anchored" data-anchor-id="origine">📅 Origine</h3>
-<p>Le terme a émergé dans les années <strong>2000</strong> avec l’explosion : - 🌐 D’Internet et des réseaux sociaux - 📱 Des smartphones - 📡 Des capteurs IoT - 💳 Des transactions en ligne</p>
+<p>Le terme a émergé dans les années <strong>2000</strong> avec l’explosion :</p>
+<ul>
+<li>🌐 D’Internet et des réseaux sociaux</li>
+<li>📱 Des smartphones</li>
+<li>📡 Des capteurs IoT</li>
+<li>💳 Des transactions en ligne</li>
+</ul>
 </section>
 <section id="ordres-de-grandeur" class="level3">
 <h3 class="anchored" data-anchor-id="ordres-de-grandeur">📊 Ordres de grandeur</h3>
@@ -950,7 +954,12 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="yarn-yet-another-resource-negotiator" class="level3">
 <h3 class="anchored" data-anchor-id="yarn-yet-another-resource-negotiator">🎛️ YARN — Yet Another Resource Negotiator</h3>
-<p>Gestionnaire de ressources du cluster : - Alloue CPU/RAM aux applications - Gère la file d’attente des jobs - Surveille l’état des nœuds</p>
+<p>Gestionnaire de ressources du cluster :</p>
+<ul>
+<li>Alloue CPU/RAM aux applications</li>
+<li>Gère la file d’attente des jobs</li>
+<li>Surveille l’état des nœuds</li>
+</ul>
 <hr>
 </section>
 </section>
@@ -1222,8 +1231,8 @@ Spark :     DISQUE → Map → MÉMOIRE → Shuffle → MÉMOIRE → Reduce
 </blockquote>
 <hr>
 </section>
-<section id="concepts-spark-à-venir-module-suivant" class="level3">
-<h3 class="anchored" data-anchor-id="concepts-spark-à-venir-module-suivant">🔮 Concepts Spark à venir (module suivant)</h3>
+<section id="concepts-spark-à-venir" class="level3">
+<h3 class="anchored" data-anchor-id="concepts-spark-à-venir">🔮 Concepts Spark à venir</h3>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 40%">
@@ -1517,7 +1526,7 @@ Spark :     DISQUE → Map → MÉMOIRE → Shuffle → MÉMOIRE → Reduce
 <section id="prochaine-étape" class="level2">
 <h2 class="anchored" data-anchor-id="prochaine-étape">➡️ Prochaine étape</h2>
 <p>Tu as maintenant les bases théoriques du Big Data et du traitement distribué. Place à la pratique !</p>
-<p>👉 <strong>Module suivant : <code>11_pyspark_for_data_engineers.ipynb</code></strong> — PySpark pour le traitement distribué</p>
+<p>👉 <strong>Module suivant : <code>09_mongodb_for_data_engineers.ipynb</code></strong> — PySpark pour le traitement distribué</p>
 <hr>
 <p>🎉 <strong>Félicitations !</strong> Tu comprends maintenant pourquoi et comment le Big Data fonctionne.</p>
 
@@ -1938,6 +1947,38 @@ Spark :     DISQUE → Map → MÉMOIRE → Shuffle → MÉMOIRE → Reduce
     }
   });
   </script>
+<input type="hidden" id="giscus-base-theme" value="preferred_color_scheme">
+<input type="hidden" id="giscus-alt-theme" value="preferred_color_scheme">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      if (authorPrefersDark) {
+          [baseTheme, altTheme] = [altTheme, baseTheme];
+      }
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "diakite-data/data-engineering-bootcamp";
+    script.dataset.repoId = "R_kgDOQjHMsg";
+    script.dataset.category = "General";
+    script.dataset.categoryId = "DIC_kwDOQjHMss4CzeOO";
+    script.dataset.mapping = "pathname";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "top";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "fr";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script>
 </div> <!-- /content -->
 
 

@@ -519,7 +519,15 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="objectifs-du-module" class="level2">
 <h2 class="anchored" data-anchor-id="objectifs-du-module">🎯 Objectifs du module</h2>
-<p>À la fin de ce notebook, tu seras capable de : - ✅ Expliquer ce qu’est une base de données - ✅ Comprendre le modèle relationnel (tables, colonnes, lignes) - ✅ Définir les clés primaires et étrangères - ✅ Identifier les types de relations (1-1, 1-N, N-N) - ✅ Comprendre les principes de normalisation - ✅ Expliquer les propriétés ACID</p>
+<p>À la fin de ce notebook, tu seras capable de :</p>
+<ul>
+<li>✅ Expliquer ce qu’est une base de données</li>
+<li>✅ Comprendre le modèle relationnel (tables, colonnes, lignes)</li>
+<li>✅ Définir les clés primaires et étrangères</li>
+<li>✅ Identifier les types de relations (1-1, 1-N, N-N)</li>
+<li>✅ Comprendre les principes de normalisation</li>
+<li>✅ Expliquer les propriétés ACID</li>
+</ul>
 <hr>
 <blockquote class="blockquote">
 <p>💡 <strong>Note</strong> : Ce module est théorique. La pratique SQL viendra au module suivant !</p>
@@ -1991,6 +1999,38 @@ RELATIONS :
     }
   });
   </script>
+<input type="hidden" id="giscus-base-theme" value="preferred_color_scheme">
+<input type="hidden" id="giscus-alt-theme" value="preferred_color_scheme">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      if (authorPrefersDark) {
+          [baseTheme, altTheme] = [altTheme, baseTheme];
+      }
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "diakite-data/data-engineering-bootcamp";
+    script.dataset.repoId = "R_kgDOQjHMsg";
+    script.dataset.category = "General";
+    script.dataset.categoryId = "DIC_kwDOQjHMss4CzeOO";
+    script.dataset.mapping = "pathname";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "top";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "fr";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script>
 </div> <!-- /content -->
 
 

@@ -502,15 +502,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>✅ Basique</td>
-<td>Connaître les concepts de base d’internet (API, serveurs, clients)</td>
-</tr>
-<tr class="odd">
-<td>🟡 Optionnel</td>
-<td>Avoir déjà écrit quelques lignes de code (Python, JavaScript, etc.)</td>
-</tr>
-<tr class="even">
-<td>🟡 Optionnel</td>
-<td>Connaître les bases de SQL (SELECT, WHERE, JOIN)</td>
+<td>Connaître les concepts de base d’internet</td>
 </tr>
 </tbody>
 </table>
@@ -583,13 +575,13 @@ ul.task-list li input[type="checkbox"] {
 <td>🔧 Data Engineer</td>
 <td>Construire et maintenir l’infrastructure de données</td>
 <td>Infrastructure &amp; Pipelines</td>
-<td>Apache Airflow, Apache Spark, Kafka, Snowflake, dbt, Python, SQL, Prefect, Docker, Kubernetes</td>
+<td>Apache Airflow, Apache Spark, Kafka, Snowflake, dbt, Python, SQL, Prefect, Docker, Kubernetes, etc…</td>
 </tr>
 <tr class="even">
 <td>🔬 Data Scientist</td>
 <td>Extraire des insights et créer des modèles prédictifs</td>
 <td>Modélisation &amp; ML</td>
-<td>Python, R, scikit-learn, TensorFlow, PyTorch, Jupyter, MLflow, Pandas, XGBoost</td>
+<td>Python, R, scikit-learn, TensorFlow, PyTorch, Jupyter, MLflow, Pandas, XGBoost, etc…</td>
 </tr>
 <tr class="odd">
 <td>📈 Data Analyst</td>
@@ -615,57 +607,41 @@ ul.task-list li input[type="checkbox"] {
 <section id="architecture-typique-dun-pipeline-de-données-moderne" class="level2">
 <h2 class="anchored" data-anchor-id="architecture-typique-dun-pipeline-de-données-moderne">🏗️ 3. Architecture typique d’un pipeline de données moderne</h2>
 <p>Un pipeline de données moderne suit généralement ce flux :</p>
-<pre class="mermaid"><code>flowchart LR
-    subgraph Sources["📥 Sources"]
-        A1[API REST]
-        A2[Bases de données]
-        A3[Fichiers CSV/JSON]
-        A4[Événements/Logs]
-    end
-    
-    subgraph Ingestion["🔄 Ingestion"]
-        B1[ETL / ELT]
-        B2[Streaming]
-    end
-    
-    subgraph Storage["💾 Stockage"]
-        C1[Data Lake]
-        C2[Data Warehouse]
-    end
-    
-    subgraph Transform["⚙️ Transformation"]
-        D1[Nettoyage]
-        D2[Agrégation]
-        D3[Enrichissement]
-    end
-    
-    subgraph Exposition["📊 Exposition"]
-        E1[Dashboards BI]
-        E2[Modèles ML]
-        E3[APIs]
-    end
-    
-    Sources --&gt; Ingestion --&gt; Storage --&gt; Transform --&gt; Exposition</code></pre>
-<p><strong>Représentation simplifiée :</strong></p>
-<pre><code>┌──────────────────┐
-│  📥 SOURCES      │  API, CSV, Bases de données, Logs, IoT
-└────────┬─────────┘
-         ▼
-┌──────────────────┐
-│  🔄 INGESTION    │  ETL / ELT (Airbyte, Fivetran, Scripts)
-└────────┬─────────┘
-         ▼
-┌──────────────────┐
-│  💾 STOCKAGE     │  Data Lake (S3) / Data Warehouse (Snowflake, BigQuery)
-└────────┬─────────┘
-         ▼
-┌──────────────────┐
-│  ⚙️ TRANSFORMATION│  dbt, Spark, SQL, Pandas
-└────────┬─────────┘
-         ▼
-┌──────────────────┐
-│  📊 EXPOSITION   │  Dashboards (Tableau, Power BI), ML, APIs
-└──────────────────┘</code></pre>
+<pre><code>                 ┌─────────────────────────────────────────────────────────┐
+                 │                🛡️  GOUVERNANCE DATA                    │
+                 │ Catalogue, Qualité, Lineage, Sécurité, RBAC, Privacy   │
+                 │ Compliance, MDM                                        │
+                 └─────────────────────────────────────────────────────────┘
+
+
+┌──────────────────┐         ┌───────────────────────────────────────────┐
+│   📥 SOURCES      │   →     │               💾 STOCKAGE                 │
+│ API, DB, Logs,    │         │         (Data Lakehouse : S3, ADLS…)     │
+│ CSV, IoT          │         │                                           │
+└──────────────────┘         │   BRONZE : Données brutes (Raw)           │
+                             │   - Ingérées telles quelles                │
+                             │   - Formats variés (JSON, CSV, Parquet)    │
+   ┌──────────────────────┐  │   - Pas de qualité garantie                │
+   │   🔄 INGESTION        │  │                                           │
+   │ ETL/ELT, Streams     │  │   SILVER : Données nettoyées (Clean)       │
+   │ Airbyte, Fivetran    │  │   - Normalisées, typées, dédupliquées      │
+   └──────────────────────┘  │   - Qualité contrôlée                      │
+                             │   - Jointures simples / enrichissement     │
+                             │                                           │
+   ┌──────────────────────┐  │   GOLD : Données business (Curated)        │
+   │ ⚙️ TRANSFORMATION      │  │   - Modèles analytiques (Star Schema)      │
+   │ dbt, SQL, Spark,      │  │   - KPIs, métriques, tables prêtes BI     │
+   │ Pandas, MLflow        │  │   - Haute qualité et gouvernance forte     │
+   └──────────────────────┘  └───────────────────────────────────────────┘
+
+
+                              ┌──────────────────────────────┐
+                              │        📊 EXPOSITION         │
+                              │ Dashboards, ML, APIs, Apps   │
+                              │ Power BI, Tableau, Looker    │
+                              │ (⚠️ Toujours à partir du GOLD)│
+                              └──────────────────────────────┘
+</code></pre>
 <section id="etl-vs-elt-quelle-est-la-différence" class="level3">
 <h3 class="anchored" data-anchor-id="etl-vs-elt-quelle-est-la-différence">🔁 ETL vs ELT — Quelle est la différence ?</h3>
 <table class="caption-top table">
@@ -704,8 +680,8 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td>🛠️ Outils typiques</td>
-<td>Informatica, Talend, scripts Python</td>
-<td>dbt, Snowflake, BigQuery</td>
+<td>Informatica, Talend, scripts Python, …</td>
+<td>dbt, Snowflake, BigQuery, …</td>
 </tr>
 <tr class="even">
 <td>📅 Cas d’usage</td>
@@ -1579,6 +1555,38 @@ C’est une approche hybride où une partie des transformations est faite <stron
     }
   });
   </script>
+<input type="hidden" id="giscus-base-theme" value="preferred_color_scheme">
+<input type="hidden" id="giscus-alt-theme" value="preferred_color_scheme">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      if (authorPrefersDark) {
+          [baseTheme, altTheme] = [altTheme, baseTheme];
+      }
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "diakite-data/data-engineering-bootcamp";
+    script.dataset.repoId = "R_kgDOQjHMsg";
+    script.dataset.category = "General";
+    script.dataset.categoryId = "DIC_kwDOQjHMss4CzeOO";
+    script.dataset.mapping = "pathname";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "top";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "fr";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script>
 </div> <!-- /content -->
 
 

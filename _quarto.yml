@@ -38,6 +38,22 @@ website:
       - icon: github
         href: https://github.com/diakite-data/data-engineering-bootcamp
 
+
+# --- Giscus Comments (correct + valid for Quarto) ---
+comments:
+  giscus:
+    repo: "diakite-data/data-engineering-bootcamp"
+    repo-id: "R_kgDOQjHMsg"
+    category: "General"
+    category-id: "DIC_kwDOQjHMss4CzeOO"
+    mapping: "pathname"
+    reactions-enabled: true
+    input-position: "top"
+    theme: "preferred_color_scheme"
+    language: "fr"
+
+
+# --- HTML Format ---
 format:
   html:
     theme:
@@ -51,4 +67,3 @@ format:
     code-fold: true
     highlight-style: dracula
     search: true
-

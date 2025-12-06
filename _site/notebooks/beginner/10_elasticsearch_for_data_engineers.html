@@ -563,21 +563,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td>✅ Requis</td>
-<td>Avoir suivi le module <code>08_intro_big_data_nosql</code></td>
+<td>Avoir suivi le module <code>08_intro_big_data_distributed</code></td>
 </tr>
 <tr class="even">
-<td>✅ Requis</td>
-<td>Avoir suivi le module <code>09_mongodb_for_data_engineers</code></td>
-</tr>
-<tr class="odd">
 <td>✅ Requis</td>
 <td>Comprendre les 5V du Big Data</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>✅ Requis</td>
 <td>Comprendre CAP et BASE</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>✅ Requis</td>
 <td>Connaître le format JSON</td>
 </tr>
@@ -586,7 +582,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="objectifs-du-module" class="level2">
 <h2 class="anchored" data-anchor-id="objectifs-du-module">🎯 Objectifs du module</h2>
-<p>À la fin de ce notebook, tu seras capable de : - ✅ Comprendre l’architecture Elasticsearch (index, shards, replicas) - ✅ Utiliser Elasticvue pour interagir avec le cluster - ✅ Créer des index avec mapping approprié - ✅ Créer des <strong>Index Templates</strong> pour automatiser les mappings - ✅ Indexer, rechercher, modifier et supprimer des documents - ✅ Écrire des requêtes de recherche (match, bool, fuzzy, range) - ✅ Réaliser des agrégations analytiques</p>
+<p>À la fin de ce notebook, tu seras capable de :</p>
+<ul>
+<li>✅ Comprendre l’architecture Elasticsearch (index, shards, replicas)</li>
+<li>✅ Utiliser Elasticvue pour interagir avec le cluster</li>
+<li>✅ Créer des index avec mapping approprié</li>
+<li>✅ Créer des <strong>Index Templates</strong> pour automatiser les mappings</li>
+<li>✅ Indexer, rechercher, modifier et supprimer des documents</li>
+<li>✅ Écrire des requêtes de recherche (match, bool, fuzzy, range)</li>
+<li>✅ Réaliser des agrégations analytiques</li>
+</ul>
 <hr>
 </section>
 <section id="version-elasticsearch" class="level2">
@@ -2298,6 +2303,38 @@ GET /logs-2024-01-15/_mapping</code></pre>
     }
   });
   </script>
+<input type="hidden" id="giscus-base-theme" value="preferred_color_scheme">
+<input type="hidden" id="giscus-alt-theme" value="preferred_color_scheme">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      if (authorPrefersDark) {
+          [baseTheme, altTheme] = [altTheme, baseTheme];
+      }
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "diakite-data/data-engineering-bootcamp";
+    script.dataset.repoId = "R_kgDOQjHMsg";
+    script.dataset.category = "General";
+    script.dataset.categoryId = "DIC_kwDOQjHMss4CzeOO";
+    script.dataset.mapping = "pathname";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "top";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "fr";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script>
 </div> <!-- /content -->
 
 

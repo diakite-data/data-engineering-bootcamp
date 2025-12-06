@@ -644,7 +644,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td>✅ Requis</td>
-<td>Avoir suivi le module <code>08_intro_big_data_nosql</code></td>
+<td>Avoir suivi le module <code>08_intro_big_data_distributed</code></td>
 </tr>
 <tr class="even">
 <td>✅ Requis</td>
@@ -663,7 +663,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="objectifs-du-module" class="level2">
 <h2 class="anchored" data-anchor-id="objectifs-du-module">🎯 Objectifs du module</h2>
-<p>À la fin de ce notebook, tu seras capable de : - ✅ Configurer MongoDB Atlas (gratuit, cloud) - ✅ Maîtriser le CRUD (Create, Read, Update, Delete) - ✅ Utiliser les opérateurs de filtrage et comparaison - ✅ Écrire des agrégations - ✅ Créer des index pour optimiser les performances</p>
+<p>À la fin de ce notebook, tu seras capable de :</p>
+<ul>
+<li>✅ Configurer MongoDB Atlas (gratuit, cloud)</li>
+<li>✅ Maîtriser le CRUD (Create, Read, Update, Delete)</li>
+<li>✅ Utiliser les opérateurs de filtrage et comparaison</li>
+<li>✅ Écrire des agrégations</li>
+<li>✅ Créer des index pour optimiser les performances</li>
+</ul>
 <hr>
 </section>
 <section id="mongodb-dans-lécosystème-big-data" class="level2">
@@ -911,15 +918,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="pourquoi-utiliser-mongodb-en-data-engineering">1.4 Pourquoi utiliser MongoDB en Data Engineering ?</h2>
 <section id="avantages" class="level3">
 <h3 class="anchored" data-anchor-id="avantages">✅ Avantages :</h3>
-<p><strong>1. Flexibilité du schéma</strong> - Pas besoin de définir la structure à l’avance - Parfait pour des données qui changent souvent - Chaque document peut être différent</p>
+<p><strong>1. Flexibilité du schéma</strong></p>
+<ul>
+<li>Pas besoin de définir la structure à l’avance</li>
+<li>Parfait pour des données qui changent souvent</li>
+<li>Chaque document peut être différent</li>
+</ul>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Document 1 : simple</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>{ <span class="dt">nom</span><span class="op">:</span> <span class="st">"Alice"</span><span class="op">,</span> <span class="dt">age</span><span class="op">:</span> <span class="dv">25</span> }</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co">// Document 2 : plus détaillé (dans la même collection !)</span></span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>{ <span class="dt">nom</span><span class="op">:</span> <span class="st">"Bob"</span><span class="op">,</span> <span class="dt">age</span><span class="op">:</span> <span class="dv">30</span><span class="op">,</span> <span class="dt">ville</span><span class="op">:</span> <span class="st">"Lyon"</span><span class="op">,</span> <span class="dt">competences</span><span class="op">:</span> [<span class="st">"Python"</span>]<span class="op">,</span> <span class="dt">manager</span><span class="op">:</span> <span class="st">"Alice"</span> }</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><strong>2. Format JSON natif</strong> - Les APIs web utilisent JSON - Pas de conversion nécessaire - Facile à lire et manipuler</p>
-<p><strong>3. Performance</strong> - Lectures et écritures très rapides - Gère facilement des millions de documents - Scalabilité horizontale (ajouter des serveurs)</p>
-<p><strong>4. Données imbriquées</strong> - Stocke des structures complexes facilement - Pas besoin de multiples tables et jointures</p>
+<p><strong>2. Format JSON natif</strong></p>
+<ul>
+<li>Les APIs web utilisent JSON</li>
+<li>Pas de conversion nécessaire</li>
+<li>Facile à lire et manipuler</li>
+</ul>
+<p><strong>3. Performance</strong></p>
+<ul>
+<li>Lectures et écritures très rapides</li>
+<li>Gère facilement des millions de documents</li>
+<li>Scalabilité horizontale (ajouter des serveurs)</li>
+</ul>
+<p><strong>4. Données imbriquées</strong></p>
+<ul>
+<li>Stocke des structures complexes facilement</li>
+<li>Pas besoin de multiples tables et jointures</li>
+</ul>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Tout dans un seul document !</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>{</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"commande_id"</span><span class="op">:</span> <span class="st">"CMD001"</span><span class="op">,</span></span>
@@ -1592,7 +1618,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="analyser-les-performances">5.4 Analyser les performances</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb49"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Voir le plan d'exécution</span></span>
 <span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>db<span class="op">.</span><span class="at">employes</span><span class="op">.</span><span class="fu">find</span>({ <span class="dt">ville</span><span class="op">:</span> <span class="st">"Paris"</span> })<span class="op">.</span><span class="fu">explain</span>(<span class="st">"executionStats"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><strong>Regarder</strong> : - <code>totalDocsExamined</code> : Combien de documents scannés - <code>executionTimeMillis</code> : Temps d’exécution - <code>stage: "IXSCAN"</code> = Index utilisé ✅ - <code>stage: "COLLSCAN"</code> = Scan complet ❌</p>
+<p><strong>Regarder</strong> :</p>
+<ul>
+<li><code>totalDocsExamined</code> : Combien de documents scannés</li>
+<li><code>executionTimeMillis</code> : Temps d’exécution</li>
+<li><code>stage: "IXSCAN"</code> = Index utilisé ✅</li>
+<li><code>stage: "COLLSCAN"</code> = Scan complet ❌</li>
+</ul>
 <hr>
 </section>
 <section id="bonnes-pratiques" class="level2">
@@ -2499,6 +2531,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     }
   });
   </script>
+<input type="hidden" id="giscus-base-theme" value="preferred_color_scheme">
+<input type="hidden" id="giscus-alt-theme" value="preferred_color_scheme">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      if (authorPrefersDark) {
+          [baseTheme, altTheme] = [altTheme, baseTheme];
+      }
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "diakite-data/data-engineering-bootcamp";
+    script.dataset.repoId = "R_kgDOQjHMsg";
+    script.dataset.category = "General";
+    script.dataset.categoryId = "DIC_kwDOQjHMss4CzeOO";
+    script.dataset.mapping = "pathname";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "top";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "fr";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script>
 </div> <!-- /content -->
 
 
