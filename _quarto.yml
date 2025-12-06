@@ -9,7 +9,6 @@ website:
   repo-url: "git@github.com:diakite-data/data-engineering-bootcamp.git"
   repo-actions: [source, issue]
 
-  # --- Sidebar moderne ---
   sidebar:
     style: "floating"
     search: true
@@ -19,27 +18,25 @@ website:
 
       - section: "Débutant"
         contents:
-          - notebooks/beginner/01_intro_data_engineering.ipynb
-          - notebooks/beginner/02_bash_for_data_engineers.ipynb
-          - notebooks/beginner/03_git_for_data_engineers.ipynb
-          - notebooks/beginner/04_python_basics_for_data_engineers.ipynb
-          - notebooks/beginner/05_python_data_processing_for_data_engineers.ipynb
-          - notebooks/beginner/06_intro_relational_databases.ipynb
-          - notebooks/beginner/07_sql_for_data_engineers.ipynb
-          - notebooks/beginner/08_intro_big_data_distributed.ipynb
-          - notebooks/beginner/09_mongodb_for_data_engineers.ipynb
-          - notebooks/beginner/10_elasticsearch_for_data_engineers.ipynb
-          - notebooks/beginner/11_pyspark_for_data_engineering.ipynb
-          - notebooks/beginner/12_orchestration_pipelines.ipynb
+          - 01_intro_data_engineering.ipynb
+          - 02_bash_for_data_engineers.ipynb
+          - 03_git_for_data_engineers.ipynb
+          - 04_python_basics_for_data_engineers.ipynb
+          - 05_python_data_processing_for_data_engineers.ipynb
+          - 06_intro_relational_databases.ipynb
+          - 07_sql_for_data_engineers.ipynb
+          - 08_intro_big_data_distributed.ipynb
+          - 09_mongodb_for_data_engineers.ipynb
+          - 10_elasticsearch_for_data_engineers.ipynb
+          - 11_pyspark_for_data_engineering.ipynb
+          - 12_orchestration_pipelines.ipynb
+          - 13_BONUS_fastapi_for_data_engineers.ipynb
 
-  # --- Navbar ---
   navbar:
     right:
       - icon: github
         href: https://github.com/diakite-data/data-engineering-bootcamp
 
-
-# --- Giscus Comments (correct + valid for Quarto) ---
 comments:
   giscus:
     repo: "diakite-data/data-engineering-bootcamp"
@@ -52,8 +49,6 @@ comments:
     theme: "preferred_color_scheme"
     language: "fr"
 
-
-# --- HTML Format ---
 format:
   html:
     theme:

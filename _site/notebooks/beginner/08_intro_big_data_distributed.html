@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>🐘 Introduction au Big Data &amp; Traitement Distribué – Bootcamp Data Engineering – From Zero to Hero</title>
+<title>🐘 Introduction au Big Data &amp; Systèmes Distribués – Bootcamp Data Engineering – From Zero to Hero</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -274,7 +309,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notebooks/beginner/01_intro_data_engineering.html">Débutant</a></li><li class="breadcrumb-item"><a href="../../notebooks/beginner/08_intro_big_data_distributed.html">🐘 Introduction au Big Data &amp; Traitement Distribué</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notebooks/beginner/01_intro_data_engineering.html">Débutant</a></li><li class="breadcrumb-item"><a href="../../notebooks/beginner/08_intro_big_data_distributed.html">🐘 Introduction au Big Data &amp; Systèmes Distribués</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -354,7 +389,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../notebooks/beginner/08_intro_big_data_distributed.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">🐘 Introduction au Big Data &amp; Traitement Distribué</span></a>
+ <span class="menu-text">🐘 Introduction au Big Data &amp; Systèmes Distribués</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -447,11 +482,56 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#concepts-spark-à-venir" id="toc-concepts-spark-à-venir" class="nav-link" data-scroll-target="#concepts-spark-à-venir">🔮 Concepts Spark à venir</a></li>
   <li><a href="#ce-que-tu-vas-apprendre-avec-pyspark" id="toc-ce-que-tu-vas-apprendre-avec-pyspark" class="nav-link" data-scroll-target="#ce-que-tu-vas-apprendre-avec-pyspark">🎯 Ce que tu vas apprendre avec PySpark</a></li>
   </ul></li>
+  <li><a href="#nosql-au-delà-des-bases-relationnelles" id="toc-nosql-au-delà-des-bases-relationnelles" class="nav-link" data-scroll-target="#nosql-au-delà-des-bases-relationnelles">🗄️ NoSQL — Au-delà des bases relationnelles</a>
+  <ul class="collapse">
+  <li><a href="#pourquoi-nosql" id="toc-pourquoi-nosql" class="nav-link" data-scroll-target="#pourquoi-nosql">🤔 Pourquoi NoSQL ?</a>
+  <ul class="collapse">
+  <li><a href="#les-limites-des-bases-relationnelles-face-au-big-data" id="toc-les-limites-des-bases-relationnelles-face-au-big-data" class="nav-link" data-scroll-target="#les-limites-des-bases-relationnelles-face-au-big-data">Les limites des bases relationnelles face au Big Data</a></li>
+  <li><a href="#la-solution-nosql" id="toc-la-solution-nosql" class="nav-link" data-scroll-target="#la-solution-nosql">La solution NoSQL</a></li>
+  </ul></li>
+  <li><a href="#les-4-types-de-bases-nosql" id="toc-les-4-types-de-bases-nosql" class="nav-link" data-scroll-target="#les-4-types-de-bases-nosql">📊 Les 4 types de bases NoSQL</a>
+  <ul class="collapse">
+  <li><a href="#bases-document-mongodb-couchbase" id="toc-bases-document-mongodb-couchbase" class="nav-link" data-scroll-target="#bases-document-mongodb-couchbase">📄 1. Bases Document (MongoDB, Couchbase)</a></li>
+  <li><a href="#bases-clé-valeur-redis-memcached-dynamodb" id="toc-bases-clé-valeur-redis-memcached-dynamodb" class="nav-link" data-scroll-target="#bases-clé-valeur-redis-memcached-dynamodb">🔑 2. Bases Clé-Valeur (Redis, Memcached, DynamoDB)</a></li>
+  <li><a href="#bases-colonnes-cassandra-hbase-scylladb" id="toc-bases-colonnes-cassandra-hbase-scylladb" class="nav-link" data-scroll-target="#bases-colonnes-cassandra-hbase-scylladb">📊 3. Bases Colonnes (Cassandra, HBase, ScyllaDB)</a></li>
+  <li><a href="#bases-graphe-neo4j-amazon-neptune-arangodb" id="toc-bases-graphe-neo4j-amazon-neptune-arangodb" class="nav-link" data-scroll-target="#bases-graphe-neo4j-amazon-neptune-arangodb">🔗 4. Bases Graphe (Neo4j, Amazon Neptune, ArangoDB)</a></li>
+  </ul></li>
+  <li><a href="#le-théorème-cap" id="toc-le-théorème-cap" class="nav-link" data-scroll-target="#le-théorème-cap">🔺 Le théorème CAP</a>
+  <ul class="collapse">
+  <li><a href="#les-3-propriétés" id="toc-les-3-propriétés" class="nav-link" data-scroll-target="#les-3-propriétés">📖 Les 3 propriétés</a></li>
+  <li><a href="#le-théorème-dit" id="toc-le-théorème-dit" class="nav-link" data-scroll-target="#le-théorème-dit">⚠️ Le théorème dit :</a></li>
+  <li><a href="#classification-des-bases-selon-cap" id="toc-classification-des-bases-selon-cap" class="nav-link" data-scroll-target="#classification-des-bases-selon-cap">🗂️ Classification des bases selon CAP</a></li>
+  <li><a href="#en-pratique-cohérence-éventuelle-eventual-consistency" id="toc-en-pratique-cohérence-éventuelle-eventual-consistency" class="nav-link" data-scroll-target="#en-pratique-cohérence-éventuelle-eventual-consistency">💡 En pratique : Cohérence éventuelle (Eventual Consistency)</a></li>
+  </ul></li>
+  <li><a href="#sql-vs-nosql-quand-utiliser-quoi" id="toc-sql-vs-nosql-quand-utiliser-quoi" class="nav-link" data-scroll-target="#sql-vs-nosql-quand-utiliser-quoi">⚖️ SQL vs NoSQL — Quand utiliser quoi ?</a>
+  <ul class="collapse">
+  <li><a href="#tableau-comparatif" id="toc-tableau-comparatif" class="nav-link" data-scroll-target="#tableau-comparatif">📊 Tableau comparatif</a></li>
+  <li><a href="#utilise-sql-quand" id="toc-utilise-sql-quand" class="nav-link" data-scroll-target="#utilise-sql-quand">✅ Utilise SQL quand…</a></li>
+  <li><a href="#utilise-nosql-quand" id="toc-utilise-nosql-quand" class="nav-link" data-scroll-target="#utilise-nosql-quand">✅ Utilise NoSQL quand…</a></li>
+  <li><a href="#en-réalité-on-utilise-les-deux" id="toc-en-réalité-on-utilise-les-deux" class="nav-link" data-scroll-target="#en-réalité-on-utilise-les-deux">🎯 En réalité : on utilise les deux !</a></li>
+  </ul></li>
+  <li><a href="#bases-nosql-populaires" id="toc-bases-nosql-populaires" class="nav-link" data-scroll-target="#bases-nosql-populaires">🗂️ Bases NoSQL populaires</a>
+  <ul class="collapse">
+  <li><a href="#mongodb-la-plus-populaire-document" id="toc-mongodb-la-plus-populaire-document" class="nav-link" data-scroll-target="#mongodb-la-plus-populaire-document">📄 MongoDB — La plus populaire (Document)</a></li>
+  <li><a href="#redis-ultra-rapide-clé-valeur" id="toc-redis-ultra-rapide-clé-valeur" class="nav-link" data-scroll-target="#redis-ultra-rapide-clé-valeur">⚡ Redis — Ultra-rapide (Clé-valeur)</a></li>
+  <li><a href="#cassandra-écritures-massives-colonnes" id="toc-cassandra-écritures-massives-colonnes" class="nav-link" data-scroll-target="#cassandra-écritures-massives-colonnes">🌐 Cassandra — Écritures massives (Colonnes)</a></li>
+  <li><a href="#elasticsearch-recherche-document-search" id="toc-elasticsearch-recherche-document-search" class="nav-link" data-scroll-target="#elasticsearch-recherche-document-search">🔍 Elasticsearch — Recherche (Document + Search)</a></li>
+  </ul></li>
+  <li><a href="#quiz-nosql" id="toc-quiz-nosql" class="nav-link" data-scroll-target="#quiz-nosql">🧠 Quiz NoSQL</a>
+  <ul class="collapse">
+  <li><a href="#q8.-que-signifie-nosql" id="toc-q8.-que-signifie-nosql" class="nav-link" data-scroll-target="#q8.-que-signifie-nosql">❓ Q8. Que signifie NoSQL ?</a></li>
+  <li><a href="#q9.-quel-type-de-base-nosql-est-mongodb" id="toc-q9.-quel-type-de-base-nosql-est-mongodb" class="nav-link" data-scroll-target="#q9.-quel-type-de-base-nosql-est-mongodb">❓ Q9. Quel type de base NoSQL est MongoDB ?</a></li>
+  <li><a href="#q10.-selon-le-théorème-cap-que-sacrifie-une-base-ap" id="toc-q10.-selon-le-théorème-cap-que-sacrifie-une-base-ap" class="nav-link" data-scroll-target="#q10.-selon-le-théorème-cap-que-sacrifie-une-base-ap">❓ Q10. Selon le théorème CAP, que sacrifie une base AP ?</a></li>
+  <li><a href="#q11.-pour-quel-cas-dusage-redis-est-il-le-plus-adapté" id="toc-q11.-pour-quel-cas-dusage-redis-est-il-le-plus-adapté" class="nav-link" data-scroll-target="#q11.-pour-quel-cas-dusage-redis-est-il-le-plus-adapté">❓ Q11. Pour quel cas d’usage Redis est-il le plus adapté ?</a></li>
+  <li><a href="#q12.-quelle-base-nosql-choisir-pour-des-relations-complexes-réseau-social" id="toc-q12.-quelle-base-nosql-choisir-pour-des-relations-complexes-réseau-social" class="nav-link" data-scroll-target="#q12.-quelle-base-nosql-choisir-pour-des-relations-complexes-réseau-social">❓ Q12. Quelle base NoSQL choisir pour des relations complexes (réseau social) ?</a></li>
+  </ul></li>
   <li><a href="#résumé" id="toc-résumé" class="nav-link" data-scroll-target="#résumé">📋 Résumé</a>
   <ul class="collapse">
   <li><a href="#les-5v-du-big-data-1" id="toc-les-5v-du-big-data-1" class="nav-link" data-scroll-target="#les-5v-du-big-data-1">Les 5V du Big Data</a></li>
   <li><a href="#traitement-distribué" id="toc-traitement-distribué" class="nav-link" data-scroll-target="#traitement-distribué">Traitement distribué</a></li>
   <li><a href="#hadoop-vs-spark" id="toc-hadoop-vs-spark" class="nav-link" data-scroll-target="#hadoop-vs-spark">Hadoop vs Spark</a></li>
+  <li><a href="#sql-vs-nosql" id="toc-sql-vs-nosql" class="nav-link" data-scroll-target="#sql-vs-nosql">SQL vs NoSQL</a></li>
+  <li><a href="#théorème-cap" id="toc-théorème-cap" class="nav-link" data-scroll-target="#théorème-cap">Théorème CAP</a></li>
   </ul></li>
   <li><a href="#quiz" id="toc-quiz" class="nav-link" data-scroll-target="#quiz">🧠 Quiz</a>
   <ul class="collapse">
@@ -463,8 +543,13 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#q6.-dans-mapreduce-que-fait-létape-shuffle" id="toc-q6.-dans-mapreduce-que-fait-létape-shuffle" class="nav-link" data-scroll-target="#q6.-dans-mapreduce-que-fait-létape-shuffle">❓ Q6. Dans MapReduce, que fait l’étape “Shuffle” ?</a></li>
   <li><a href="#q7.-combien-de-copies-hdfs-fait-il-par-défaut" id="toc-q7.-combien-de-copies-hdfs-fait-il-par-défaut" class="nav-link" data-scroll-target="#q7.-combien-de-copies-hdfs-fait-il-par-défaut">❓ Q7. Combien de copies HDFS fait-il par défaut ?</a></li>
   </ul></li>
-  <li><a href="#ressources" id="toc-ressources" class="nav-link" data-scroll-target="#ressources">📚 Ressources</a></li>
+  <li><a href="#ressources" id="toc-ressources" class="nav-link" data-scroll-target="#ressources">📚 Ressources</a>
+  <ul class="collapse">
+  <li><a href="#big-data-hadoop" id="toc-big-data-hadoop" class="nav-link" data-scroll-target="#big-data-hadoop">Big Data &amp; Hadoop</a></li>
+  <li><a href="#nosql" id="toc-nosql" class="nav-link" data-scroll-target="#nosql">NoSQL</a></li>
+  </ul></li>
   <li><a href="#prochaine-étape" id="toc-prochaine-étape" class="nav-link" data-scroll-target="#prochaine-étape">➡️ Prochaine étape</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="git@github.com:diakite-data/data-engineering-bootcamp.git/blob/main/notebooks/beginner/08_intro_big_data_distributed.ipynb" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="git@github.com:diakite-data/data-engineering-bootcamp.git/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -472,9 +557,9 @@ ul.task-list li input[type="checkbox"] {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notebooks/beginner/01_intro_data_engineering.html">Débutant</a></li><li class="breadcrumb-item"><a href="../../notebooks/beginner/08_intro_big_data_distributed.html">🐘 Introduction au Big Data &amp; Traitement Distribué</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notebooks/beginner/01_intro_data_engineering.html">Débutant</a></li><li class="breadcrumb-item"><a href="../../notebooks/beginner/08_intro_big_data_distributed.html">🐘 Introduction au Big Data &amp; Systèmes Distribués</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">🐘 Introduction au Big Data &amp; Traitement Distribué</h1>
+<h1 class="title">🐘 Introduction au Big Data &amp; Systèmes Distribués</h1>
 </div>
 
 
@@ -506,6 +591,10 @@ ul.task-list li input[type="checkbox"] {
 <td>✅ Requis</td>
 <td>Avoir suivi le module <code>06_intro_relational_databases</code></td>
 </tr>
+<tr class="even">
+<td>✅ Requis</td>
+<td>Avoir suivi le module <code>07_sql_for_data_engineers</code></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -518,10 +607,13 @@ ul.task-list li input[type="checkbox"] {
 <li>✅ Décrire l’architecture Hadoop (HDFS, MapReduce, YARN)</li>
 <li>✅ Comprendre le modèle MapReduce</li>
 <li>✅ Expliquer pourquoi Spark a remplacé MapReduce</li>
+<li>✅ <strong>Comprendre le NoSQL et ses différents types</strong></li>
+<li>✅ <strong>Savoir quand utiliser SQL vs NoSQL</strong></li>
+<li>✅ <strong>Connaître le théorème CAP</strong></li>
 </ul>
 <hr>
 <blockquote class="blockquote">
-<p>💡 <strong>Note</strong> : Ce module est théorique. La pratique viendra au module PySpark !</p>
+<p>💡 <strong>Note</strong> : Ce module est théorique. La pratique viendra avec MongoDB (module suivant) et PySpark !</p>
 </blockquote>
 <hr>
 </section>
@@ -1285,6 +1377,747 @@ Spark :     DISQUE → Map → MÉMOIRE → Shuffle → MÉMOIRE → Reduce
 <hr>
 </section>
 </section>
+<section id="nosql-au-delà-des-bases-relationnelles" class="level1">
+<h1>🗄️ NoSQL — Au-delà des bases relationnelles</h1>
+<p>Jusqu’ici, tu as travaillé avec des bases <strong>relationnelles</strong> (SQL). Mais le Big Data a fait émerger un nouveau paradigme : <strong>NoSQL</strong>.</p>
+<hr>
+<section id="pourquoi-nosql" class="level2">
+<h2 class="anchored" data-anchor-id="pourquoi-nosql">🤔 Pourquoi NoSQL ?</h2>
+<section id="les-limites-des-bases-relationnelles-face-au-big-data" class="level3">
+<h3 class="anchored" data-anchor-id="les-limites-des-bases-relationnelles-face-au-big-data">Les limites des bases relationnelles face au Big Data</h3>
+<pre><code>┌─────────────────────────────────────────────────────────────────┐
+│              PROBLÈMES DES BASES SQL CLASSIQUES                 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  ❌ Schéma rigide → Difficile de changer la structure           │
+│  ❌ Scale-up only → Un seul serveur (coûteux)                   │
+│  ❌ Jointures → Lentes sur des milliards de lignes              │
+│  ❌ ACID strict → Latence élevée                                │
+│  ❌ Données variées → JSON, graphes mal gérés                   │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘</code></pre>
+</section>
+<section id="la-solution-nosql" class="level3">
+<h3 class="anchored" data-anchor-id="la-solution-nosql">La solution NoSQL</h3>
+<pre><code>┌─────────────────────────────────────────────────────────────────┐
+│                    AVANTAGES NoSQL                              │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  ✅ Schéma flexible → S'adapte aux données                      │
+│  ✅ Scale-out natif → Ajout de serveurs facile                  │
+│  ✅ Pas de jointures → Données dénormalisées, rapides           │
+│  ✅ Haute disponibilité → Tolérance aux pannes                  │
+│  ✅ Modèles variés → Document, clé-valeur, graphe...            │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘</code></pre>
+<blockquote class="blockquote">
+<p>💡 <strong>NoSQL</strong> = “Not Only SQL” (pas seulement SQL), pas “No SQL” !</p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="les-4-types-de-bases-nosql" class="level2">
+<h2 class="anchored" data-anchor-id="les-4-types-de-bases-nosql">📊 Les 4 types de bases NoSQL</h2>
+<pre><code>┌─────────────────────────────────────────────────────────────────────────────┐
+│                         TYPES DE BASES NoSQL                                │
+├─────────────────────┬─────────────────────┬─────────────────────┬───────────┤
+│     📄 DOCUMENT     │   🔑 CLÉ-VALEUR    │    📊 COLONNES      │  🔗 GRAPHE │
+├─────────────────────┼─────────────────────┼─────────────────────┼───────────┤
+│                     │                     │                     │           │
+│  {                  │   key1 → value1     │  Row1: col1, col2   │   (A)──→(B)│
+│    "nom": "Alice", │   key2 → value2     │  Row2: col1, col3   │    │       │
+│    "age": 30        │   key3 → value3     │  Row3: col2, col4   │    ↓       │
+│  }                  │                     │                     │   (C)     │
+│                     │                     │                     │           │
+├─────────────────────┼─────────────────────┼─────────────────────┼───────────┤
+│  MongoDB            │  Redis              │  Cassandra          │ Neo4j     │
+│  Couchbase          │  Memcached          │  HBase              │ Amazon    │
+│  Firestore          │  DynamoDB           │  ScyllaDB           │ Neptune   │
+└─────────────────────┴─────────────────────┴─────────────────────┴───────────┘</code></pre>
+<hr>
+<section id="bases-document-mongodb-couchbase" class="level3">
+<h3 class="anchored" data-anchor-id="bases-document-mongodb-couchbase">📄 1. Bases Document (MongoDB, Couchbase)</h3>
+<p>Stockent des <strong>documents JSON/BSON</strong> avec un schéma flexible.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="er">//</span> <span class="er">Document</span> <span class="er">MongoDB</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"_id"</span><span class="fu">:</span> <span class="st">"user123"</span><span class="fu">,</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"nom"</span><span class="fu">:</span> <span class="st">"Alice Dupont"</span><span class="fu">,</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"email"</span><span class="fu">:</span> <span class="st">"alice@example.com"</span><span class="fu">,</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"adresses"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span><span class="dt">"type"</span><span class="fu">:</span> <span class="st">"domicile"</span><span class="fu">,</span> <span class="dt">"ville"</span><span class="fu">:</span> <span class="st">"Paris"</span><span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span><span class="dt">"type"</span><span class="fu">:</span> <span class="st">"travail"</span><span class="fu">,</span> <span class="dt">"ville"</span><span class="fu">:</span> <span class="st">"Lyon"</span><span class="fu">}</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>  <span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"commandes"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span><span class="dt">"id"</span><span class="fu">:</span> <span class="st">"cmd001"</span><span class="fu">,</span> <span class="dt">"total"</span><span class="fu">:</span> <span class="fl">150.00</span><span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span><span class="dt">"id"</span><span class="fu">:</span> <span class="st">"cmd002"</span><span class="fu">,</span> <span class="dt">"total"</span><span class="fu">:</span> <span class="fl">89.99</span><span class="fu">}</span></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>  <span class="ot">]</span></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Avantages</th>
+<th>Inconvénients</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Schéma flexible</td>
+<td>Pas de jointures natives</td>
+</tr>
+<tr class="even">
+<td>Documents imbriqués</td>
+<td>Données dupliquées</td>
+</tr>
+<tr class="odd">
+<td>Requêtes riches</td>
+<td>Transactions limitées</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cas d’usage</strong> : Catalogues produits, profils utilisateurs, CMS, logs</p>
+<hr>
+</section>
+<section id="bases-clé-valeur-redis-memcached-dynamodb" class="level3">
+<h3 class="anchored" data-anchor-id="bases-clé-valeur-redis-memcached-dynamodb">🔑 2. Bases Clé-Valeur (Redis, Memcached, DynamoDB)</h3>
+<p>Stockage ultra-simple : une <strong>clé</strong> → une <strong>valeur</strong>.</p>
+<pre><code>┌─────────────────┬────────────────────────────┐
+│      CLÉ        │          VALEUR            │
+├─────────────────┼────────────────────────────┤
+│  user:123       │  {"nom": "Alice", ...}    │
+│  session:abc    │  {"user_id": 123, ...}    │
+│  cache:page:42  │  "&lt;html&gt;...&lt;/html&gt;"       │
+│  counter:views  │  1583920                   │
+└─────────────────┴────────────────────────────┘</code></pre>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Avantages</th>
+<th>Inconvénients</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ultra-rapide (RAM)</td>
+<td>Requêtes limitées</td>
+</tr>
+<tr class="even">
+<td>Simple</td>
+<td>Pas de structure</td>
+</tr>
+<tr class="odd">
+<td>Scalable</td>
+<td>Recherche par clé uniquement</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cas d’usage</strong> : Cache, sessions, compteurs, files d’attente</p>
+<hr>
+</section>
+<section id="bases-colonnes-cassandra-hbase-scylladb" class="level3">
+<h3 class="anchored" data-anchor-id="bases-colonnes-cassandra-hbase-scylladb">📊 3. Bases Colonnes (Cassandra, HBase, ScyllaDB)</h3>
+<p>Optimisées pour les <strong>écritures massives</strong> et les <strong>requêtes analytiques</strong>.</p>
+<pre><code>┌──────────────────────────────────────────────────────┐
+│  Row Key: user123                                    │
+├──────────────┬──────────────┬──────────────┬─────────┤
+│  nom:Alice   │  age:30      │  ville:Paris │  ...    │
+├──────────────────────────────────────────────────────┤
+│  Row Key: user456                                    │
+├──────────────┬──────────────┬──────────────────────────┤
+│  nom:Bob     │  email:...   │  (pas de ville)          │
+└──────────────┴──────────────┴──────────────────────────┘</code></pre>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Avantages</th>
+<th>Inconvénients</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Écritures très rapides</td>
+<td>Modèle complexe</td>
+</tr>
+<tr class="even">
+<td>Scalabilité linéaire</td>
+<td>Requêtes limitées</td>
+</tr>
+<tr class="odd">
+<td>Tolérance aux pannes</td>
+<td>Pas de jointures</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cas d’usage</strong> : IoT, time-series, logs, analytics</p>
+<hr>
+</section>
+<section id="bases-graphe-neo4j-amazon-neptune-arangodb" class="level3">
+<h3 class="anchored" data-anchor-id="bases-graphe-neo4j-amazon-neptune-arangodb">🔗 4. Bases Graphe (Neo4j, Amazon Neptune, ArangoDB)</h3>
+<p>Optimisées pour les <strong>relations complexes</strong> entre entités.</p>
+<pre><code>         ┌─────────┐
+         │  Alice  │
+         └────┬────┘
+              │ KNOWS
+              ▼
+         ┌─────────┐       WORKS_AT       ┌─────────────┐
+         │   Bob   │ ──────────────────►  │  TechCorp   │
+         └────┬────┘                      └─────────────┘
+              │ FOLLOWS
+              ▼
+         ┌─────────┐
+         │ Charlie │
+         └─────────┘</code></pre>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Avantages</th>
+<th>Inconvénients</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Relations naturelles</td>
+<td>Scalabilité complexe</td>
+</tr>
+<tr class="even">
+<td>Requêtes de traversée rapides</td>
+<td>Cas d’usage spécifique</td>
+</tr>
+<tr class="odd">
+<td>Flexibilité</td>
+<td>Moins mature</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cas d’usage</strong> : Réseaux sociaux, recommandations, fraude, connaissances</p>
+<hr>
+</section>
+</section>
+<section id="le-théorème-cap" class="level2">
+<h2 class="anchored" data-anchor-id="le-théorème-cap">🔺 Le théorème CAP</h2>
+<p>Le <strong>théorème CAP</strong> (Eric Brewer, 2000) est fondamental pour comprendre les choix de design des bases distribuées.</p>
+<pre><code>                         C
+                    Consistency
+                    (Cohérence)
+                        /\
+                       /  \
+                      /    \
+                     /  CA  \
+                    /________\
+                   /\        /\
+                  /  \      /  \
+                 / CP \    / AP \
+                /______\  /______\
+               A                    P
+          Availability          Partition
+         (Disponibilité)        Tolerance
+                              (Tolérance aux
+                                partitions)</code></pre>
+<section id="les-3-propriétés" class="level3">
+<h3 class="anchored" data-anchor-id="les-3-propriétés">📖 Les 3 propriétés</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 32%">
+<col style="width: 44%">
+<col style="width: 23%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Propriété</th>
+<th>Signification</th>
+<th>Exemple</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>C</strong>onsistency</td>
+<td>Tous les nœuds voient les mêmes données</td>
+<td>Lecture après écriture identique</td>
+</tr>
+<tr class="even">
+<td><strong>A</strong>vailability</td>
+<td>Le système répond toujours</td>
+<td>Pas de timeout</td>
+</tr>
+<tr class="odd">
+<td><strong>P</strong>artition Tolerance</td>
+<td>Fonctionne malgré des pannes réseau</td>
+<td>Serveurs isolés continuent</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="le-théorème-dit" class="level3">
+<h3 class="anchored" data-anchor-id="le-théorème-dit">⚠️ Le théorème dit :</h3>
+<blockquote class="blockquote">
+<p><strong>En cas de partition réseau, tu dois choisir entre Cohérence et Disponibilité.</strong></p>
+</blockquote>
+<p>Tu ne peux avoir que <strong>2 sur 3</strong> !</p>
+<hr>
+</section>
+<section id="classification-des-bases-selon-cap" class="level3">
+<h3 class="anchored" data-anchor-id="classification-des-bases-selon-cap">🗂️ Classification des bases selon CAP</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 29%">
+<col style="width: 18%">
+<col style="width: 35%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Type</th>
+<th>Choix CAP</th>
+<th>Bases</th>
+<th>Comportement</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>CP</strong></td>
+<td>Cohérence + Partition</td>
+<td>MongoDB, HBase, Redis</td>
+<td>Peut refuser des requêtes si partition</td>
+</tr>
+<tr class="even">
+<td><strong>AP</strong></td>
+<td>Disponibilité + Partition</td>
+<td>Cassandra, DynamoDB, CouchDB</td>
+<td>Répond toujours, cohérence éventuelle</td>
+</tr>
+<tr class="odd">
+<td><strong>CA</strong></td>
+<td>Cohérence + Disponibilité</td>
+<td>PostgreSQL, MySQL (single node)</td>
+<td>Pas de tolérance aux partitions</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="en-pratique-cohérence-éventuelle-eventual-consistency" class="level3">
+<h3 class="anchored" data-anchor-id="en-pratique-cohérence-éventuelle-eventual-consistency">💡 En pratique : Cohérence éventuelle (Eventual Consistency)</h3>
+<p>La plupart des bases NoSQL utilisent la <strong>cohérence éventuelle</strong> :</p>
+<pre><code>Temps T0: Écriture sur Nœud A
+          [A: nouvelle valeur] [B: ancienne] [C: ancienne]
+          
+Temps T1: Réplication en cours
+          [A: nouvelle valeur] [B: nouvelle] [C: ancienne]
+          
+Temps T2: Cohérence atteinte
+          [A: nouvelle valeur] [B: nouvelle] [C: nouvelle]</code></pre>
+<blockquote class="blockquote">
+<p>💡 Acceptable pour : likes, vues, logs. Pas pour : transactions bancaires !</p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="sql-vs-nosql-quand-utiliser-quoi" class="level2">
+<h2 class="anchored" data-anchor-id="sql-vs-nosql-quand-utiliser-quoi">⚖️ SQL vs NoSQL — Quand utiliser quoi ?</h2>
+<section id="tableau-comparatif" class="level3">
+<h3 class="anchored" data-anchor-id="tableau-comparatif">📊 Tableau comparatif</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Critère</th>
+<th>SQL (Relationnel)</th>
+<th>NoSQL</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Schéma</strong></td>
+<td>Fixe, défini à l’avance</td>
+<td>Flexible, dynamique</td>
+</tr>
+<tr class="even">
+<td><strong>Données</strong></td>
+<td>Structurées, normalisées</td>
+<td>Semi/non-structurées</td>
+</tr>
+<tr class="odd">
+<td><strong>Relations</strong></td>
+<td>Jointures natives</td>
+<td>Données embarquées/dénormalisées</td>
+</tr>
+<tr class="even">
+<td><strong>Transactions</strong></td>
+<td>ACID complet</td>
+<td>BASE (éventuel)</td>
+</tr>
+<tr class="odd">
+<td><strong>Scalabilité</strong></td>
+<td>Verticale (scale-up)</td>
+<td>Horizontale (scale-out)</td>
+</tr>
+<tr class="even">
+<td><strong>Requêtes</strong></td>
+<td>SQL standardisé</td>
+<td>Langage spécifique</td>
+</tr>
+<tr class="odd">
+<td><strong>Maturité</strong></td>
+<td>40+ ans</td>
+<td>15+ ans</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="utilise-sql-quand" class="level3">
+<h3 class="anchored" data-anchor-id="utilise-sql-quand">✅ Utilise SQL quand…</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Situation</th>
+<th>Exemple</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Données très structurées</td>
+<td>Comptabilité, RH</td>
+</tr>
+<tr class="even">
+<td>Relations complexes</td>
+<td>ERP, CRM</td>
+</tr>
+<tr class="odd">
+<td>Transactions critiques</td>
+<td>Banque, e-commerce</td>
+</tr>
+<tr class="even">
+<td>Requêtes ad-hoc variées</td>
+<td>Reporting, BI</td>
+</tr>
+<tr class="odd">
+<td>Intégrité des données critique</td>
+<td>Santé, finance</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="utilise-nosql-quand" class="level3">
+<h3 class="anchored" data-anchor-id="utilise-nosql-quand">✅ Utilise NoSQL quand…</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Situation</th>
+<th>Type NoSQL</th>
+<th>Exemple</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Schéma variable</td>
+<td>Document</td>
+<td>Catalogues, profils</td>
+</tr>
+<tr class="even">
+<td>Cache haute performance</td>
+<td>Clé-valeur</td>
+<td>Sessions, cache</td>
+</tr>
+<tr class="odd">
+<td>Écritures massives</td>
+<td>Colonnes</td>
+<td>IoT, logs</td>
+</tr>
+<tr class="even">
+<td>Relations complexes</td>
+<td>Graphe</td>
+<td>Réseaux sociaux</td>
+</tr>
+<tr class="odd">
+<td>Scale-out nécessaire</td>
+<td>Tous</td>
+<td>Big Data</td>
+</tr>
+<tr class="even">
+<td>Développement agile</td>
+<td>Document</td>
+<td>Startups, MVPs</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="en-réalité-on-utilise-les-deux" class="level3">
+<h3 class="anchored" data-anchor-id="en-réalité-on-utilise-les-deux">🎯 En réalité : on utilise les deux !</h3>
+<pre><code>┌─────────────────────────────────────────────────────────────────┐
+│                  ARCHITECTURE POLYGLOTTE                        │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│   [Application Web]                                             │
+│         │                                                       │
+│         ├──► PostgreSQL (utilisateurs, commandes, paiements)   │
+│         │                                                       │
+│         ├──► MongoDB (catalogues produits, reviews)            │
+│         │                                                       │
+│         ├──► Redis (sessions, cache, rate limiting)            │
+│         │                                                       │
+│         ├──► Elasticsearch (recherche full-text)               │
+│         │                                                       │
+│         └──► Neo4j (recommandations, graphe social)            │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘</code></pre>
+<blockquote class="blockquote">
+<p>💡 <strong>Polyglot Persistence</strong> : Utiliser la bonne base pour le bon cas d’usage !</p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="bases-nosql-populaires" class="level2">
+<h2 class="anchored" data-anchor-id="bases-nosql-populaires">🗂️ Bases NoSQL populaires</h2>
+<section id="mongodb-la-plus-populaire-document" class="level3">
+<h3 class="anchored" data-anchor-id="mongodb-la-plus-populaire-document">📄 MongoDB — La plus populaire (Document)</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Caractéristique</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Type</strong></td>
+<td>Base de documents JSON (BSON)</td>
+</tr>
+<tr class="even">
+<td><strong>Langage de requête</strong></td>
+<td>MQL (MongoDB Query Language)</td>
+</tr>
+<tr class="odd">
+<td><strong>Scalabilité</strong></td>
+<td>Sharding natif</td>
+</tr>
+<tr class="even">
+<td><strong>Transactions</strong></td>
+<td>ACID multi-documents (depuis v4.0)</td>
+</tr>
+<tr class="odd">
+<td><strong>Cloud</strong></td>
+<td>MongoDB Atlas</td>
+</tr>
+</tbody>
+</table>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Exemple de requête MongoDB</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>db<span class="op">.</span><span class="at">users</span><span class="op">.</span><span class="fu">find</span>({</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">age</span><span class="op">:</span> { <span class="dt">$gte</span><span class="op">:</span> <span class="dv">25</span> }<span class="op">,</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">ville</span><span class="op">:</span> <span class="st">"Paris"</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>})<span class="op">.</span><span class="fu">sort</span>({ <span class="dt">nom</span><span class="op">:</span> <span class="dv">1</span> })</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<blockquote class="blockquote">
+<p>💡 <strong>Tu vas apprendre MongoDB en détail dans le module suivant !</strong></p>
+</blockquote>
+<hr>
+</section>
+<section id="redis-ultra-rapide-clé-valeur" class="level3">
+<h3 class="anchored" data-anchor-id="redis-ultra-rapide-clé-valeur">⚡ Redis — Ultra-rapide (Clé-valeur)</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Caractéristique</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Type</strong></td>
+<td>In-memory key-value store</td>
+</tr>
+<tr class="even">
+<td><strong>Performance</strong></td>
+<td>&lt; 1ms de latence</td>
+</tr>
+<tr class="odd">
+<td><strong>Structures</strong></td>
+<td>Strings, Lists, Sets, Hashes, Streams</td>
+</tr>
+<tr class="even">
+<td><strong>Persistance</strong></td>
+<td>Optionnelle (RDB, AOF)</td>
+</tr>
+</tbody>
+</table>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Exemple avec Python</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> redis</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> redis.Redis()</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>r.<span class="bu">set</span>(<span class="st">"user:123:name"</span>, <span class="st">"Alice"</span>)</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>r.get(<span class="st">"user:123:name"</span>)  <span class="co"># b'Alice'</span></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>r.incr(<span class="st">"page:views"</span>)  <span class="co"># Compteur atomique</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="cassandra-écritures-massives-colonnes" class="level3">
+<h3 class="anchored" data-anchor-id="cassandra-écritures-massives-colonnes">🌐 Cassandra — Écritures massives (Colonnes)</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Caractéristique</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Type</strong></td>
+<td>Wide-column store</td>
+</tr>
+<tr class="even">
+<td><strong>Origine</strong></td>
+<td>Facebook (inbox search)</td>
+</tr>
+<tr class="odd">
+<td><strong>Scalabilité</strong></td>
+<td>Linéaire, peer-to-peer</td>
+</tr>
+<tr class="even">
+<td><strong>Disponibilité</strong></td>
+<td>Pas de single point of failure</td>
+</tr>
+</tbody>
+</table>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- CQL (Cassandra Query Language)</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> <span class="kw">events</span> (</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>    device_id UUID,</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">timestamp</span> <span class="dt">TIMESTAMP</span>,</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">value</span> <span class="dt">DOUBLE</span>,</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">PRIMARY</span> <span class="kw">KEY</span> (device_id, <span class="dt">timestamp</span>)</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>);</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="elasticsearch-recherche-document-search" class="level3">
+<h3 class="anchored" data-anchor-id="elasticsearch-recherche-document-search">🔍 Elasticsearch — Recherche (Document + Search)</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Caractéristique</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Type</strong></td>
+<td>Moteur de recherche distribué</td>
+</tr>
+<tr class="even">
+<td><strong>Base</strong></td>
+<td>Apache Lucene</td>
+</tr>
+<tr class="odd">
+<td><strong>Usage</strong></td>
+<td>Full-text search, logs, analytics</td>
+</tr>
+<tr class="even">
+<td><strong>Stack</strong></td>
+<td>ELK (Elasticsearch, Logstash, Kibana)</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="blockquote">
+<p>💡 <strong>Tu as vu Elasticsearch dans le module 10 !</strong></p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="quiz-nosql" class="level2">
+<h2 class="anchored" data-anchor-id="quiz-nosql">🧠 Quiz NoSQL</h2>
+<section id="q8.-que-signifie-nosql" class="level3">
+<h3 class="anchored" data-anchor-id="q8.-que-signifie-nosql">❓ Q8. Que signifie NoSQL ?</h3>
+<ol type="a">
+<li>No SQL (pas de SQL)<br>
+</li>
+<li>Not Only SQL<br>
+</li>
+<li>New SQL<br>
+</li>
+<li>Non-Structured Query Language</li>
+</ol>
+<details>
+<summary>
+💡 Réponse
+</summary>
+✅ <strong>b</strong> — NoSQL = “Not Only SQL” (pas seulement SQL). Ces bases peuvent parfois supporter du SQL !
+</details>
+<hr>
+</section>
+<section id="q9.-quel-type-de-base-nosql-est-mongodb" class="level3">
+<h3 class="anchored" data-anchor-id="q9.-quel-type-de-base-nosql-est-mongodb">❓ Q9. Quel type de base NoSQL est MongoDB ?</h3>
+<ol type="a">
+<li>Clé-valeur<br>
+</li>
+<li>Colonnes<br>
+</li>
+<li>Document<br>
+</li>
+<li>Graphe</li>
+</ol>
+<details>
+<summary>
+💡 Réponse
+</summary>
+✅ <strong>c</strong> — MongoDB est une base de <strong>documents</strong> (JSON/BSON).
+</details>
+<hr>
+</section>
+<section id="q10.-selon-le-théorème-cap-que-sacrifie-une-base-ap" class="level3">
+<h3 class="anchored" data-anchor-id="q10.-selon-le-théorème-cap-que-sacrifie-une-base-ap">❓ Q10. Selon le théorème CAP, que sacrifie une base AP ?</h3>
+<ol type="a">
+<li>Disponibilité<br>
+</li>
+<li>Cohérence<br>
+</li>
+<li>Tolérance aux partitions<br>
+</li>
+<li>Performance</li>
+</ol>
+<details>
+<summary>
+💡 Réponse
+</summary>
+✅ <strong>b</strong> — Une base AP (Available + Partition tolerant) sacrifie la Cohérence immédiate. Elle utilise la “cohérence éventuelle”.
+</details>
+<hr>
+</section>
+<section id="q11.-pour-quel-cas-dusage-redis-est-il-le-plus-adapté" class="level3">
+<h3 class="anchored" data-anchor-id="q11.-pour-quel-cas-dusage-redis-est-il-le-plus-adapté">❓ Q11. Pour quel cas d’usage Redis est-il le plus adapté ?</h3>
+<ol type="a">
+<li>Stockage de documents JSON<br>
+</li>
+<li>Cache et sessions<br>
+</li>
+<li>Analyse de graphes sociaux<br>
+</li>
+<li>Stockage de vidéos</li>
+</ol>
+<details>
+<summary>
+💡 Réponse
+</summary>
+✅ <strong>b</strong> — Redis est une base in-memory clé-valeur, idéale pour le cache et les sessions.
+</details>
+<hr>
+</section>
+<section id="q12.-quelle-base-nosql-choisir-pour-des-relations-complexes-réseau-social" class="level3">
+<h3 class="anchored" data-anchor-id="q12.-quelle-base-nosql-choisir-pour-des-relations-complexes-réseau-social">❓ Q12. Quelle base NoSQL choisir pour des relations complexes (réseau social) ?</h3>
+<ol type="a">
+<li>MongoDB<br>
+</li>
+<li>Redis<br>
+</li>
+<li>Cassandra<br>
+</li>
+<li>Neo4j</li>
+</ol>
+<details>
+<summary>
+💡 Réponse
+</summary>
+✅ <strong>d</strong> — Neo4j est une base de <strong>graphes</strong>, optimisée pour les relations complexes.
+</details>
+<hr>
+</section>
+</section>
 <section id="résumé" class="level2">
 <h2 class="anchored" data-anchor-id="résumé">📋 Résumé</h2>
 <section id="les-5v-du-big-data-1" class="level3">
@@ -1370,6 +2203,64 @@ Spark :     DISQUE → Map → MÉMOIRE → Shuffle → MÉMOIRE → Reduce
 <td>Langages</td>
 <td>Java</td>
 <td>Python, Scala, SQL</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="sql-vs-nosql" class="level3">
+<h3 class="anchored" data-anchor-id="sql-vs-nosql">SQL vs NoSQL</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Type</th>
+<th>Quand utiliser</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>SQL</strong></td>
+<td>Données structurées, transactions, intégrité</td>
+</tr>
+<tr class="even">
+<td><strong>NoSQL Document</strong></td>
+<td>Schéma flexible, JSON (MongoDB)</td>
+</tr>
+<tr class="odd">
+<td><strong>NoSQL Clé-valeur</strong></td>
+<td>Cache, sessions (Redis)</td>
+</tr>
+<tr class="even">
+<td><strong>NoSQL Colonnes</strong></td>
+<td>Écritures massives, IoT (Cassandra)</td>
+</tr>
+<tr class="odd">
+<td><strong>NoSQL Graphe</strong></td>
+<td>Relations complexes (Neo4j)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="théorème-cap" class="level3">
+<h3 class="anchored" data-anchor-id="théorème-cap">Théorème CAP</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Choix</th>
+<th>Exemples</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>CP</strong></td>
+<td>MongoDB, HBase</td>
+</tr>
+<tr class="even">
+<td><strong>AP</strong></td>
+<td>Cassandra, DynamoDB</td>
+</tr>
+<tr class="odd">
+<td><strong>CA</strong></td>
+<td>PostgreSQL (single node)</td>
 </tr>
 </tbody>
 </table>
@@ -1515,22 +2406,36 @@ Spark :     DISQUE → Map → MÉMOIRE → Shuffle → MÉMOIRE → Reduce
 </section>
 <section id="ressources" class="level2">
 <h2 class="anchored" data-anchor-id="ressources">📚 Ressources</h2>
+<section id="big-data-hadoop" class="level3">
+<h3 class="anchored" data-anchor-id="big-data-hadoop">Big Data &amp; Hadoop</h3>
 <ul>
 <li><a href="https://hadoop.apache.org/docs/stable/">Hadoop Documentation</a></li>
 <li><a href="https://spark.apache.org/docs/latest/">Spark Documentation</a></li>
-<li><a href="https://research.google/pubs/pub51/">The Google File System (paper)</a> — L’article original</li>
-<li><a href="https://research.google/pubs/pub62/">MapReduce: Simplified Data Processing (paper)</a> — L’article original</li>
+<li><a href="https://research.google/pubs/pub51/">The Google File System (paper)</a></li>
+<li><a href="https://research.google/pubs/pub62/">MapReduce: Simplified Data Processing (paper)</a></li>
+</ul>
+</section>
+<section id="nosql" class="level3">
+<h3 class="anchored" data-anchor-id="nosql">NoSQL</h3>
+<ul>
+<li><a href="https://university.mongodb.com/">MongoDB University</a> — Cours gratuits</li>
+<li><a href="https://redis.io/docs/">Redis Documentation</a></li>
+<li><a href="https://cassandra.apache.org/doc/latest/">Cassandra Documentation</a></li>
+<li><a href="https://www.ibm.com/topics/cap-theorem">CAP Theorem Explained</a></li>
 </ul>
 <hr>
 </section>
+</section>
 <section id="prochaine-étape" class="level2">
 <h2 class="anchored" data-anchor-id="prochaine-étape">➡️ Prochaine étape</h2>
-<p>Tu as maintenant les bases théoriques du Big Data et du traitement distribué. Place à la pratique !</p>
-<p>👉 <strong>Module suivant : <code>09_mongodb_for_data_engineers.ipynb</code></strong> — PySpark pour le traitement distribué</p>
+<p>Tu as maintenant les bases théoriques du Big Data, du traitement distribué et du NoSQL. Place à la pratique avec MongoDB !</p>
+<p>👉 <strong>Module suivant : <code>09_mongodb_for_data_engineers.ipynb</code></strong> — MongoDB pour les Data Engineers</p>
+<p>Tu apprendras à : - Installer et utiliser MongoDB - Créer des collections et documents - Écrire des requêtes MQL (MongoDB Query Language) - Utiliser PyMongo depuis Python - Modéliser des données pour MongoDB</p>
 <hr>
-<p>🎉 <strong>Félicitations !</strong> Tu comprends maintenant pourquoi et comment le Big Data fonctionne.</p>
+<p>🎉 <strong>Félicitations !</strong> Tu comprends maintenant le Big Data, les systèmes distribués et le NoSQL.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
