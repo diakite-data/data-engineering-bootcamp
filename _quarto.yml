@@ -52,12 +52,11 @@ website:
 
           # Bloc 7 – Spark Avancé
           - notebooks/intermediate/19_pyspark_advanced.ipynb
-          # (Ton futur fichier)
-          # - notebooks/intermediate/20_spark_sql_deep_dive.ipynb
-          # - notebooks/intermediate/21_spark_on_kubernetes.ipynb
+          - notebooks/intermediate/20_spark_sql_deep_dive.ipynb
+          - notebooks/intermediate/21_spark_on_kubernetes.ipynb
 
           # Bloc 8 – Cloud & Lakehouse (arrive dans module 22+)
-          # - notebooks/intermediate/22_cloud_and_object_storage.ipynb
+          - notebooks/intermediate/22_cloud_and_object_storage.ipynb
           # - notebooks/intermediate/23_table_formats_delta_iceberg.ipynb
           # - notebooks/intermediate/24_kafka_and_streaming.ipynb
           # - notebooks/intermediate/25_dbt_and_data_quality.ipynb
