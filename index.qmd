@@ -7,55 +7,152 @@ format:
 
 <div class="hero">
 
-# 🚀 Bootcamp Data Engineering  
-### From Zero to Hero  
-Deviens un Data Engineer opérationnel, étape par étape.
+# 🚀 Bootcamp Data Engineering : From Zero to Hero  
+### Devenez un Data Engineer opérationnel, Senior-Ready.
 
 </div>
 
 ---
 
-## 🎯 Pourquoi ce Bootcamp ?
+## 🎯 Pourquoi choisir ce Bootcamp ?
 
-Bienvenue dans le **Bootcamp Data Engineering – From Zero to Hero**, un programme structuré pensé pour :
+Ce programme a été conçu par et pour des Data Engineers, en se concentrant sur les **exigences réelles** du marché du travail. Nous transformons votre ambition en expertise pratique.
 
-- apprendre **les bases solides** du Data Engineering,  
-- maîtriser **les outils modernes** utilisés par les Data Engineers professionnels,  
-- comprendre **les architectures data d’entreprise**,  
-- pratiquer avec des notebooks interactifs et des projets concrets,  
-- progresser du **niveau Débutant → Intermédiaire → Avancé**.
+* ✔ **Expertise Industrielle :** Maîtrisez les outils modernes utilisés par les géants de la Tech (Spark 3.x, Kafka, Docker, Kubernetes, dbt, Cloud multi-plateforme).
+* ✔ **Architectures Avancées :** Devenez architecte de vos propres pipelines en comprenant les modèles Lakehouse (Delta/Iceberg), Medaillon, et les architectures Kappa/Lambda modernes. 
+* ✔ **Focus Production :** Déployez des pipelines batch et streaming de bout en bout, de l'ingestion brute à la table Gold optimisée.
+* ✔ **Progression Mesurée :** Le parcours est divisé en trois niveaux clairs : **Débutant → Intermédiaire → Avancé**, pour une montée en compétence garantie.
+
+### 👥 À qui s’adresse ce Bootcamp ?
+
+* **Étudiants & Développeurs :** Vous voulez une porte d'entrée structurée dans le domaine de la Data Engineering.
+* **Analystes BI :** Vous souhaitez migrer vers le Big Data, le Cloud et l'industrialisation des pipelines.
+* **Professionnels :** Vous cherchez à structurer, optimiser et gouverner une plateforme Data moderne en entreprise.
 
 ---
 
-## 📘 Structure du programme
+### 🛠️ Résumé des Technologies (Votre Boîte à Outils)
 
-### 🟦 **Débutant**
-- Python pour les Data Engineers  
-- Bash, Git, Bases de données  
-- SQL, Pandas, PySpark  
-- Architecture de bases & premiers pipelines  
+| Domaine | Outils & Technologies |
+| :--- | :--- |
+| **Big Data Processing** | Spark (PySpark), Spark SQL, Polars, Dask, Vaex |
+| **Data Lakehouse** | **Delta Lake, Apache Iceberg**, Hudi |
+| **Streaming** | Apache Kafka, Spark Structured Streaming, Flink |
+| **DevOps / Infra** | Docker, **Kubernetes (K8s), Spark Operator**, Helm |
+| **Cloud Computing** | AWS S3, GCP GCS, Azure Blob, IAM, MinIO |
+| **Data Quality & ETL** | **dbt (Data Build Tool)**, Great Expectations |
+| **MLOps & Architecture** | MLflow, Feature Store, Data Mesh, Observability |
 
-### 🟩 **Intermédiaire**
-- Spark avancé, Scala  
-- Kafka & streaming  
-- Docker, Kubernetes  
-- Data Lakes, Lakehouse, Polars, DuckDB  
-- Data Quality, Governance, CI/CD  
+---
 
-### 🟥 **Avancé**
-- Distributed Systems  
-- Advanced Streaming (Flink/Spark)  
-- Lakehouse Internals  
-- MLOps, MLflow, Kubeflow  
-- SRE/Observability pour la Data  
-- FinOps et architectures cloud à grande échelle  
+## 📘 La Structure Complète du Programme
+
+La progression est claire : **Fondations → Industrialisation → Architecture.**
+
+---
+
+# 🟦 Niveau 1 : Débutant – Fondations & Premiers Pipelines
+
+**Objectif :** Poser les bases solides pour lire, comprendre et manipuler la donnée dans un contexte d'entreprise.
+
+### 🔹 Bloc 1 : Python & Ingénierie des Fondations
+* Python pour Data Engineering, Bash & Shell.
+* Git & Flux de versionning.
+* Environnements, Packaging & Dépendances.
+
+### 🔹 Bloc 2 : Données Relationnelles & Modélisation
+* Bases de données relationnelles & SQL avancé.
+* Modélisation (Star Schema, Datamarts).
+* Architecture Data Classique (DW vs DL).
+
+### 🔹 Bloc 3 : Big Data & Architectures Fondamentales
+* Introduction au Big Data & Distributed Computing.
+* Architectures : **Lambda, Kappa, Lakehouse, Medaillon**.
+* PySpark pour débutants (RDD → DataFrames).
+* MongoDB & Systèmes NoSQL.
+
+### 🔹 Bloc 4 : Orchestration & Premiers Pas
+* Elasticsearch et NoSQL.
+* Orchestration : Introduction (Airflow, Nifi – Aperçu).
+* Projet : Pipeline PySpark simple sur fichiers locaux.
+
+> **➡️ Résultat Concret :** Vous êtes capable d'ingérer un dataset brut, de le nettoyer et de le transformer en **couche Silver puis Gold** via un pipeline PySpark.
+
+---
+
+# 🟩 Niveau 2 : Intermédiaire – Industrialisation & Lakehouse
+
+**Objectif :** Maîtriser le cœur du métier : l'optimisation, le Cloud, les formats transactionnels et le déploiement sur K8s.
+
+### 🔹 Bloc 5 : Containerisation & Orchestration (Déploiement)
+* Docker pour la Data.
+* Kubernetes (bases et concepts clés).
+* Kubernetes pour Workloads Data.
+
+### 🔹 Bloc 6 : Traitement Distribué Avancé & Cloud
+* Polars & High Performance Python (Multiprocessing, Dask).
+* PySpark avancé & Spark SQL Deep Dive (Window Functions, Optimisations).
+* Spark sur Kubernetes (**Spark Operator, Autoscaling**).
+* Cloud & Object Storage (S3, GCS, Azure Blob, MinIO).
+
+### 🔹 Bloc 7 : Data Lakehouse Transactionnel
+* Table Formats modernes : **Delta Lake, Iceberg, Hudi** (ACID).
+* Time Travel, Schema Evolution, Opérations `MERGE INTO`, Compaction.
+* Gouvernance & Catalogue (Glue, Purview).
+
+### 🔹 Bloc 8 : Streaming & Qualité Industrielle
+* Kafka & Architectures Streaming.
+* **Spark Structured Streaming** (Exactly-once, Watermarks).
+* Data Quality & Tests : **dbt + Great Expectations**.
+* CI/CD pour Pipelines Data.
+
+> **➡️ Résultat Concret :** Vous êtes capable de déployer un job Spark sur Kubernetes avec un **Operator**, en accédant à un storage Cloud sécurisé et en gérant les transactions (ACID).
+
+---
+
+# 🟥 Niveau 3 : Avancé – Architecture & Seniority
+
+**Objectif :** Concevoir, optimiser et gouverner des systèmes résilients à grande échelle.
+
+### 🔹 Bloc 9 : Optimisation Extrême & Internals
+* Internals Spark : Le Shuffle, Catalyst, Memory Management.
+* Optimisation avancée (**AQE, Skew Join Handling**).
+* HPC & Parallélisme Python (mécanismes avancés).
+
+### 🔹 Bloc 10 : Systèmes Temps Réel Avancés
+* Apache Flink (traitement d'événements à faible latence).
+* Exactly-once processing, Watermarks et gestion du "late data".
+* Unified Batch-Streaming (Architecture Kappa Moderne).
+
+### 🔹 Bloc 11 : Architecture & Stratégie d'Entreprise
+* Architecture Cloud à Grande Échelle (Serverless, multi-région).
+* **Data Mesh** & Domain Ownership.
+* MLOps pour Data Engineers (Feature Store, MLflow).
+* Observability : Logs, Metrics (Prometheus/Grafana).
+* **FinOps** pour Data Engineering (optimisation des coûts Cloud et Spark).
+
+> **➡️ Résultat Concret :** Vous êtes capable d'architecturer une plateforme Data multi-cloud scalable, optimisée pour la performance et les coûts, en intégrant les principes de Data Mesh et d'Observability.
+
+---
+
+## 📌 Comment utiliser ce Bootcamp ?
+
+Le Bootcamp est organisé dans l’ordre pédagogique exact nécessaire pour devenir Data Engineer :
+
+1. Ouvrez le **menu latéral gauche**.  
+2. Cliquez sur le premier module : **01 – Introduction au Data Engineering**.  
+3. Progressez ensuite dans l’ordre recommandé (Débutant → Intermédiaire → Avancé).
+
+👉 Pour commencer tout de suite :  
+[🚀 **Démarrer le Module 01**](notebooks/beginner/01_intro_data_engineering.ipynb)
 
 ---
 
 ## 🚀 Ready to Start?
 
-👉 Navigue dans le menu à gauche pour commencer ton parcours.  
-👉 Tu peux contribuer ou proposer des améliorations via GitHub.
+Ce bootcamp est conçu pour vous emmener de la théorie à la pratique industrielle.
 
-Bonne montée en compétence ! 💪  
+👉 **Commencez aujourd'hui** pour démarrer votre transition.  
+👉 Le programme est 100% pratique, progressif et centré sur le monde professionnel.
 
+**Bonne montée en compétence ! 💪**
