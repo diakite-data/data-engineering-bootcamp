@@ -424,6 +424,53 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Intermédiaire</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/14_docker_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🐳 Docker pour Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/15_kubernetes_fundamentals.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">☸️ Kubernetes Fundamentals pour Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/16_k8s_for_data_workloads.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">☸️ Kubernetes pour Workloads Data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/17_polars_for_data_engineering.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🐻‍❄️ Polars pour Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/18_high_performance_python.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">⚡ High Performance Python</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/19_pyspark_advanced.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🚀 PySpark Advanced</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -488,7 +535,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#concepts-spark-à-venir" id="toc-concepts-spark-à-venir" class="nav-link" data-scroll-target="#concepts-spark-à-venir">🔮 Concepts Spark à venir</a></li>
   <li><a href="#ce-que-tu-vas-apprendre-avec-pyspark" id="toc-ce-que-tu-vas-apprendre-avec-pyspark" class="nav-link" data-scroll-target="#ce-que-tu-vas-apprendre-avec-pyspark">🎯 Ce que tu vas apprendre avec PySpark</a></li>
   </ul></li>
-  <li><a href="#nosql-au-delà-des-bases-relationnelles" id="toc-nosql-au-delà-des-bases-relationnelles" class="nav-link" data-scroll-target="#nosql-au-delà-des-bases-relationnelles">🗄️ NoSQL — Au-delà des bases relationnelles</a>
+  <li><a href="#architectures-de-stockage-modernes" id="toc-architectures-de-stockage-modernes" class="nav-link" data-scroll-target="#architectures-de-stockage-modernes">🏗️ 9. Architectures de Stockage Modernes</a>
+  <ul class="collapse">
+  <li><a href="#data-lake-le-lac-de-données" id="toc-data-lake-le-lac-de-données" class="nav-link" data-scroll-target="#data-lake-le-lac-de-données">🌊 9.1 Data Lake — Le lac de données</a></li>
+  <li><a href="#data-lakehouse-le-meilleur-des-deux-mondes" id="toc-data-lakehouse-le-meilleur-des-deux-mondes" class="nav-link" data-scroll-target="#data-lakehouse-le-meilleur-des-deux-mondes">🏠 9.2 Data Lakehouse — Le meilleur des deux mondes</a></li>
+  <li><a href="#comparaison-warehouse-vs-lake-vs-lakehouse" id="toc-comparaison-warehouse-vs-lake-vs-lakehouse" class="nav-link" data-scroll-target="#comparaison-warehouse-vs-lake-vs-lakehouse">⚖️ 9.3 Comparaison : Warehouse vs Lake vs Lakehouse</a></li>
+  <li><a href="#medallion-architecture-bronze-silver-gold" id="toc-medallion-architecture-bronze-silver-gold" class="nav-link" data-scroll-target="#medallion-architecture-bronze-silver-gold">🥉🥈🥇 9.4 Medallion Architecture — Bronze, Silver, Gold</a></li>
+  </ul></li>
+  <li><a href="#architectures-de-traitement-lambda-kappa" id="toc-architectures-de-traitement-lambda-kappa" class="nav-link" data-scroll-target="#architectures-de-traitement-lambda-kappa">🔄 10. Architectures de Traitement — Lambda &amp; Kappa</a>
+  <ul class="collapse">
+  <li><a href="#lambda-architecture-batch-streaming" id="toc-lambda-architecture-batch-streaming" class="nav-link" data-scroll-target="#lambda-architecture-batch-streaming">⚡ 10.1 Lambda Architecture — Batch + Streaming</a></li>
+  <li><a href="#kappa-architecture-streaming-first" id="toc-kappa-architecture-streaming-first" class="nav-link" data-scroll-target="#kappa-architecture-streaming-first">🌀 10.2 Kappa Architecture — Streaming-first</a></li>
+  <li><a href="#lambda-vs-kappa-quand-utiliser-quoi" id="toc-lambda-vs-kappa-quand-utiliser-quoi" class="nav-link" data-scroll-target="#lambda-vs-kappa-quand-utiliser-quoi">⚖️ 10.3 Lambda vs Kappa — Quand utiliser quoi ?</a></li>
+  </ul></li>
+  <li><a href="#data-mesh-lapproche-décentralisée" id="toc-data-mesh-lapproche-décentralisée" class="nav-link" data-scroll-target="#data-mesh-lapproche-décentralisée">🕸️ 11. Data Mesh — L’approche décentralisée</a>
+  <ul class="collapse">
+  <li><a href="#origine-du-problème" id="toc-origine-du-problème" class="nav-link" data-scroll-target="#origine-du-problème">📖 Origine du problème</a></li>
+  <li><a href="#les-4-principes-du-data-mesh" id="toc-les-4-principes-du-data-mesh" class="nav-link" data-scroll-target="#les-4-principes-du-data-mesh">🎯 Les 4 principes du Data Mesh</a></li>
+  <li><a href="#architecture-data-mesh" id="toc-architecture-data-mesh" class="nav-link" data-scroll-target="#architecture-data-mesh">🏗️ Architecture Data Mesh</a></li>
+  <li><a href="#data-mesh-vs-architecture-centralisée" id="toc-data-mesh-vs-architecture-centralisée" class="nav-link" data-scroll-target="#data-mesh-vs-architecture-centralisée">💡 Data Mesh vs Architecture Centralisée</a></li>
+  </ul></li>
+  <li><a href="#nosql-au-delà-des-bases-relationnelles" id="toc-nosql-au-delà-des-bases-relationnelles" class="nav-link" data-scroll-target="#nosql-au-delà-des-bases-relationnelles">🗄️ 12. NoSQL — Au-delà des bases relationnelles</a>
   <ul class="collapse">
   <li><a href="#pourquoi-nosql" id="toc-pourquoi-nosql" class="nav-link" data-scroll-target="#pourquoi-nosql">🤔 Pourquoi NoSQL ?</a>
   <ul class="collapse">
@@ -498,16 +565,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#les-4-types-de-bases-nosql" id="toc-les-4-types-de-bases-nosql" class="nav-link" data-scroll-target="#les-4-types-de-bases-nosql">📊 Les 4 types de bases NoSQL</a>
   <ul class="collapse">
   <li><a href="#bases-document-mongodb-couchbase" id="toc-bases-document-mongodb-couchbase" class="nav-link" data-scroll-target="#bases-document-mongodb-couchbase">📄 1. Bases Document (MongoDB, Couchbase)</a></li>
-  <li><a href="#bases-clé-valeur-redis-memcached-dynamodb" id="toc-bases-clé-valeur-redis-memcached-dynamodb" class="nav-link" data-scroll-target="#bases-clé-valeur-redis-memcached-dynamodb">🔑 2. Bases Clé-Valeur (Redis, Memcached, DynamoDB)</a></li>
-  <li><a href="#bases-colonnes-cassandra-hbase-scylladb" id="toc-bases-colonnes-cassandra-hbase-scylladb" class="nav-link" data-scroll-target="#bases-colonnes-cassandra-hbase-scylladb">📊 3. Bases Colonnes (Cassandra, HBase, ScyllaDB)</a></li>
-  <li><a href="#bases-graphe-neo4j-amazon-neptune-arangodb" id="toc-bases-graphe-neo4j-amazon-neptune-arangodb" class="nav-link" data-scroll-target="#bases-graphe-neo4j-amazon-neptune-arangodb">🔗 4. Bases Graphe (Neo4j, Amazon Neptune, ArangoDB)</a></li>
+  <li><a href="#bases-clé-valeur-redis-memcached" id="toc-bases-clé-valeur-redis-memcached" class="nav-link" data-scroll-target="#bases-clé-valeur-redis-memcached">🔑 2. Bases Clé-Valeur (Redis, Memcached)</a></li>
+  <li><a href="#bases-colonnes-cassandra-hbase" id="toc-bases-colonnes-cassandra-hbase" class="nav-link" data-scroll-target="#bases-colonnes-cassandra-hbase">📊 3. Bases Colonnes (Cassandra, HBase)</a></li>
+  <li><a href="#bases-graphe-neo4j-amazon-neptune" id="toc-bases-graphe-neo4j-amazon-neptune" class="nav-link" data-scroll-target="#bases-graphe-neo4j-amazon-neptune">🔗 4. Bases Graphe (Neo4j, Amazon Neptune)</a></li>
   </ul></li>
   <li><a href="#le-théorème-cap" id="toc-le-théorème-cap" class="nav-link" data-scroll-target="#le-théorème-cap">🔺 Le théorème CAP</a>
   <ul class="collapse">
   <li><a href="#les-3-propriétés" id="toc-les-3-propriétés" class="nav-link" data-scroll-target="#les-3-propriétés">📖 Les 3 propriétés</a></li>
   <li><a href="#le-théorème-dit" id="toc-le-théorème-dit" class="nav-link" data-scroll-target="#le-théorème-dit">⚠️ Le théorème dit :</a></li>
   <li><a href="#classification-des-bases-selon-cap" id="toc-classification-des-bases-selon-cap" class="nav-link" data-scroll-target="#classification-des-bases-selon-cap">🗂️ Classification des bases selon CAP</a></li>
-  <li><a href="#en-pratique-cohérence-éventuelle-eventual-consistency" id="toc-en-pratique-cohérence-éventuelle-eventual-consistency" class="nav-link" data-scroll-target="#en-pratique-cohérence-éventuelle-eventual-consistency">💡 En pratique : Cohérence éventuelle (Eventual Consistency)</a></li>
   </ul></li>
   <li><a href="#sql-vs-nosql-quand-utiliser-quoi" id="toc-sql-vs-nosql-quand-utiliser-quoi" class="nav-link" data-scroll-target="#sql-vs-nosql-quand-utiliser-quoi">⚖️ SQL vs NoSQL — Quand utiliser quoi ?</a>
   <ul class="collapse">
@@ -516,28 +582,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#utilise-nosql-quand" id="toc-utilise-nosql-quand" class="nav-link" data-scroll-target="#utilise-nosql-quand">✅ Utilise NoSQL quand…</a></li>
   <li><a href="#en-réalité-on-utilise-les-deux" id="toc-en-réalité-on-utilise-les-deux" class="nav-link" data-scroll-target="#en-réalité-on-utilise-les-deux">🎯 En réalité : on utilise les deux !</a></li>
   </ul></li>
-  <li><a href="#bases-nosql-populaires" id="toc-bases-nosql-populaires" class="nav-link" data-scroll-target="#bases-nosql-populaires">🗂️ Bases NoSQL populaires</a>
-  <ul class="collapse">
-  <li><a href="#mongodb-la-plus-populaire-document" id="toc-mongodb-la-plus-populaire-document" class="nav-link" data-scroll-target="#mongodb-la-plus-populaire-document">📄 MongoDB — La plus populaire (Document)</a></li>
-  <li><a href="#redis-ultra-rapide-clé-valeur" id="toc-redis-ultra-rapide-clé-valeur" class="nav-link" data-scroll-target="#redis-ultra-rapide-clé-valeur">⚡ Redis — Ultra-rapide (Clé-valeur)</a></li>
-  <li><a href="#cassandra-écritures-massives-colonnes" id="toc-cassandra-écritures-massives-colonnes" class="nav-link" data-scroll-target="#cassandra-écritures-massives-colonnes">🌐 Cassandra — Écritures massives (Colonnes)</a></li>
-  <li><a href="#elasticsearch-recherche-document-search" id="toc-elasticsearch-recherche-document-search" class="nav-link" data-scroll-target="#elasticsearch-recherche-document-search">🔍 Elasticsearch — Recherche (Document + Search)</a></li>
-  </ul></li>
-  <li><a href="#quiz-nosql" id="toc-quiz-nosql" class="nav-link" data-scroll-target="#quiz-nosql">🧠 Quiz NoSQL</a>
-  <ul class="collapse">
-  <li><a href="#q8.-que-signifie-nosql" id="toc-q8.-que-signifie-nosql" class="nav-link" data-scroll-target="#q8.-que-signifie-nosql">❓ Q8. Que signifie NoSQL ?</a></li>
-  <li><a href="#q9.-quel-type-de-base-nosql-est-mongodb" id="toc-q9.-quel-type-de-base-nosql-est-mongodb" class="nav-link" data-scroll-target="#q9.-quel-type-de-base-nosql-est-mongodb">❓ Q9. Quel type de base NoSQL est MongoDB ?</a></li>
-  <li><a href="#q10.-selon-le-théorème-cap-que-sacrifie-une-base-ap" id="toc-q10.-selon-le-théorème-cap-que-sacrifie-une-base-ap" class="nav-link" data-scroll-target="#q10.-selon-le-théorème-cap-que-sacrifie-une-base-ap">❓ Q10. Selon le théorème CAP, que sacrifie une base AP ?</a></li>
-  <li><a href="#q11.-pour-quel-cas-dusage-redis-est-il-le-plus-adapté" id="toc-q11.-pour-quel-cas-dusage-redis-est-il-le-plus-adapté" class="nav-link" data-scroll-target="#q11.-pour-quel-cas-dusage-redis-est-il-le-plus-adapté">❓ Q11. Pour quel cas d’usage Redis est-il le plus adapté ?</a></li>
-  <li><a href="#q12.-quelle-base-nosql-choisir-pour-des-relations-complexes-réseau-social" id="toc-q12.-quelle-base-nosql-choisir-pour-des-relations-complexes-réseau-social" class="nav-link" data-scroll-target="#q12.-quelle-base-nosql-choisir-pour-des-relations-complexes-réseau-social">❓ Q12. Quelle base NoSQL choisir pour des relations complexes (réseau social) ?</a></li>
-  </ul></li>
   <li><a href="#résumé" id="toc-résumé" class="nav-link" data-scroll-target="#résumé">📋 Résumé</a>
   <ul class="collapse">
   <li><a href="#les-5v-du-big-data-1" id="toc-les-5v-du-big-data-1" class="nav-link" data-scroll-target="#les-5v-du-big-data-1">Les 5V du Big Data</a></li>
   <li><a href="#traitement-distribué" id="toc-traitement-distribué" class="nav-link" data-scroll-target="#traitement-distribué">Traitement distribué</a></li>
   <li><a href="#hadoop-vs-spark" id="toc-hadoop-vs-spark" class="nav-link" data-scroll-target="#hadoop-vs-spark">Hadoop vs Spark</a></li>
+  <li><a href="#architectures-de-stockage" id="toc-architectures-de-stockage" class="nav-link" data-scroll-target="#architectures-de-stockage">Architectures de stockage</a></li>
+  <li><a href="#architectures-de-traitement" id="toc-architectures-de-traitement" class="nav-link" data-scroll-target="#architectures-de-traitement">Architectures de traitement</a></li>
   <li><a href="#sql-vs-nosql" id="toc-sql-vs-nosql" class="nav-link" data-scroll-target="#sql-vs-nosql">SQL vs NoSQL</a></li>
-  <li><a href="#théorème-cap" id="toc-théorème-cap" class="nav-link" data-scroll-target="#théorème-cap">Théorème CAP</a></li>
   </ul></li>
   <li><a href="#quiz" id="toc-quiz" class="nav-link" data-scroll-target="#quiz">🧠 Quiz</a>
   <ul class="collapse">
@@ -546,12 +598,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#q3.-quel-est-le-principe-de-data-locality" id="toc-q3.-quel-est-le-principe-de-data-locality" class="nav-link" data-scroll-target="#q3.-quel-est-le-principe-de-data-locality">❓ Q3. Quel est le principe de “Data Locality” ?</a></li>
   <li><a href="#q4.-quels-sont-les-3-composants-principaux-de-hadoop" id="toc-q4.-quels-sont-les-3-composants-principaux-de-hadoop" class="nav-link" data-scroll-target="#q4.-quels-sont-les-3-composants-principaux-de-hadoop">❓ Q4. Quels sont les 3 composants principaux de Hadoop ?</a></li>
   <li><a href="#q5.-pourquoi-spark-est-plus-rapide-que-mapreduce" id="toc-q5.-pourquoi-spark-est-plus-rapide-que-mapreduce" class="nav-link" data-scroll-target="#q5.-pourquoi-spark-est-plus-rapide-que-mapreduce">❓ Q5. Pourquoi Spark est plus rapide que MapReduce ?</a></li>
-  <li><a href="#q6.-dans-mapreduce-que-fait-létape-shuffle" id="toc-q6.-dans-mapreduce-que-fait-létape-shuffle" class="nav-link" data-scroll-target="#q6.-dans-mapreduce-que-fait-létape-shuffle">❓ Q6. Dans MapReduce, que fait l’étape “Shuffle” ?</a></li>
-  <li><a href="#q7.-combien-de-copies-hdfs-fait-il-par-défaut" id="toc-q7.-combien-de-copies-hdfs-fait-il-par-défaut" class="nav-link" data-scroll-target="#q7.-combien-de-copies-hdfs-fait-il-par-défaut">❓ Q7. Combien de copies HDFS fait-il par défaut ?</a></li>
+  <li><a href="#q6.-quelle-est-la-différence-entre-data-lake-et-data-lakehouse" id="toc-q6.-quelle-est-la-différence-entre-data-lake-et-data-lakehouse" class="nav-link" data-scroll-target="#q6.-quelle-est-la-différence-entre-data-lake-et-data-lakehouse">❓ Q6. Quelle est la différence entre Data Lake et Data Lakehouse ?</a></li>
+  <li><a href="#q7.-quelles-sont-les-3-couches-de-larchitecture-lambda" id="toc-q7.-quelles-sont-les-3-couches-de-larchitecture-lambda" class="nav-link" data-scroll-target="#q7.-quelles-sont-les-3-couches-de-larchitecture-lambda">❓ Q7. Quelles sont les 3 couches de l’architecture Lambda ?</a></li>
+  <li><a href="#q8.-quel-est-lavantage-principal-de-larchitecture-kappa-sur-lambda" id="toc-q8.-quel-est-lavantage-principal-de-larchitecture-kappa-sur-lambda" class="nav-link" data-scroll-target="#q8.-quel-est-lavantage-principal-de-larchitecture-kappa-sur-lambda">❓ Q8. Quel est l’avantage principal de l’architecture Kappa sur Lambda ?</a></li>
+  <li><a href="#q9.-quest-ce-quun-data-swamp" id="toc-q9.-quest-ce-quun-data-swamp" class="nav-link" data-scroll-target="#q9.-quest-ce-quun-data-swamp">❓ Q9. Qu’est-ce qu’un Data Swamp ?</a></li>
+  <li><a href="#q10.-quel-principe-du-data-mesh-dit-que-chaque-domaine-métier-est-responsable-de-ses-données" id="toc-q10.-quel-principe-du-data-mesh-dit-que-chaque-domaine-métier-est-responsable-de-ses-données" class="nav-link" data-scroll-target="#q10.-quel-principe-du-data-mesh-dit-que-chaque-domaine-métier-est-responsable-de-ses-données">❓ Q10. Quel principe du Data Mesh dit que chaque domaine métier est responsable de ses données ?</a></li>
+  <li><a href="#q11.-combien-de-copies-hdfs-fait-il-par-défaut" id="toc-q11.-combien-de-copies-hdfs-fait-il-par-défaut" class="nav-link" data-scroll-target="#q11.-combien-de-copies-hdfs-fait-il-par-défaut">❓ Q11. Combien de copies HDFS fait-il par défaut ?</a></li>
+  <li><a href="#q12.-quelle-base-nosql-est-idéale-pour-le-cache-et-les-sessions" id="toc-q12.-quelle-base-nosql-est-idéale-pour-le-cache-et-les-sessions" class="nav-link" data-scroll-target="#q12.-quelle-base-nosql-est-idéale-pour-le-cache-et-les-sessions">❓ Q12. Quelle base NoSQL est idéale pour le cache et les sessions ?</a></li>
+  <li><a href="#q13.-dans-larchitecture-medallion-quelle-couche-contient-les-données-brutes-non-transformées" id="toc-q13.-dans-larchitecture-medallion-quelle-couche-contient-les-données-brutes-non-transformées" class="nav-link" data-scroll-target="#q13.-dans-larchitecture-medallion-quelle-couche-contient-les-données-brutes-non-transformées">❓ Q13. Dans l’architecture Medallion, quelle couche contient les données brutes non transformées ?</a></li>
+  <li><a href="#q14.-quel-est-lordre-correct-de-qualité-croissante-dans-larchitecture-medallion" id="toc-q14.-quel-est-lordre-correct-de-qualité-croissante-dans-larchitecture-medallion" class="nav-link" data-scroll-target="#q14.-quel-est-lordre-correct-de-qualité-croissante-dans-larchitecture-medallion">❓ Q14. Quel est l’ordre correct de qualité croissante dans l’architecture Medallion ?</a></li>
   </ul></li>
   <li><a href="#ressources" id="toc-ressources" class="nav-link" data-scroll-target="#ressources">📚 Ressources</a>
   <ul class="collapse">
   <li><a href="#big-data-hadoop" id="toc-big-data-hadoop" class="nav-link" data-scroll-target="#big-data-hadoop">Big Data &amp; Hadoop</a></li>
+  <li><a href="#architectures-modernes" id="toc-architectures-modernes" class="nav-link" data-scroll-target="#architectures-modernes">Architectures modernes</a></li>
   <li><a href="#nosql" id="toc-nosql" class="nav-link" data-scroll-target="#nosql">NoSQL</a></li>
   </ul></li>
   <li><a href="#prochaine-étape" id="toc-prochaine-étape" class="nav-link" data-scroll-target="#prochaine-étape">➡️ Prochaine étape</a></li>
@@ -613,9 +673,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>✅ Décrire l’architecture Hadoop (HDFS, MapReduce, YARN)</li>
 <li>✅ Comprendre le modèle MapReduce</li>
 <li>✅ Expliquer pourquoi Spark a remplacé MapReduce</li>
-<li>✅ <strong>Comprendre le NoSQL et ses différents types</strong></li>
-<li>✅ <strong>Savoir quand utiliser SQL vs NoSQL</strong></li>
-<li>✅ <strong>Connaître le théorème CAP</strong></li>
+<li>✅ <strong>Différencier Data Lake et Data Lakehouse</strong></li>
+<li>✅ <strong>Comprendre les architectures Lambda et Kappa</strong></li>
+<li>✅ <strong>Connaître le concept de Data Mesh</strong></li>
+<li>✅ <strong>Comprendre l’architecture Medallion (Bronze/Silver/Gold)</strong></li>
+<li>✅ Comprendre le NoSQL et ses différents types</li>
+<li>✅ Savoir quand utiliser SQL vs NoSQL</li>
+<li>✅ Connaître le théorème CAP</li>
 </ul>
 <hr>
 <blockquote class="blockquote">
@@ -1383,8 +1447,972 @@ Spark :     DISQUE → Map → MÉMOIRE → Shuffle → MÉMOIRE → Reduce
 <hr>
 </section>
 </section>
+<section id="architectures-de-stockage-modernes" class="level2">
+<h2 class="anchored" data-anchor-id="architectures-de-stockage-modernes">🏗️ 9. Architectures de Stockage Modernes</h2>
+<p>Maintenant que tu connais le Big Data et le traitement distribué, voyons comment <strong>organiser et stocker</strong> ces données.</p>
+<blockquote class="blockquote">
+<p>💡 <strong>Rappel</strong> : Tu as vu Data Warehouse et Data Mart dans le module 06. Ici, on complète avec Data Lake et Lakehouse !</p>
+</blockquote>
+<hr>
+<section id="data-lake-le-lac-de-données" class="level3">
+<h3 class="anchored" data-anchor-id="data-lake-le-lac-de-données">🌊 9.1 Data Lake — Le lac de données</h3>
+<p>Un <strong>Data Lake</strong> est un système de stockage qui contient une <strong>grande quantité de données brutes</strong> dans leur format natif.</p>
+<section id="définition-1" class="level4">
+<h4 class="anchored" data-anchor-id="définition-1">📖 Définition</h4>
+<blockquote class="blockquote">
+<p>“Un Data Lake est un référentiel centralisé qui permet de stocker toutes les données structurées et non structurées à n’importe quelle échelle.”</p>
+</blockquote>
+</section>
+<section id="caractéristiques" class="level4">
+<h4 class="anchored" data-anchor-id="caractéristiques">🎯 Caractéristiques</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 56%">
+<col style="width: 43%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Caractéristique</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Schema-on-read</strong></td>
+<td>Pas de schéma défini à l’écriture, appliqué à la lecture</td>
+</tr>
+<tr class="even">
+<td><strong>Tous formats</strong></td>
+<td>Structuré, semi-structuré, non-structuré</td>
+</tr>
+<tr class="odd">
+<td><strong>Stockage brut</strong></td>
+<td>Données dans leur format original</td>
+</tr>
+<tr class="even">
+<td><strong>Scalabilité</strong></td>
+<td>Pétaoctets de données</td>
+</tr>
+<tr class="odd">
+<td><strong>Coût faible</strong></td>
+<td>Stockage object (S3, ADLS, GCS)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="exemples-de-data-lakes" class="level4">
+<h4 class="anchored" data-anchor-id="exemples-de-data-lakes">🏭 Exemples de Data Lakes</h4>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Produit</th>
+<th>Provider</th>
+<th>Stockage</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Amazon S3</strong></td>
+<td>AWS</td>
+<td>Object storage</td>
+</tr>
+<tr class="even">
+<td><strong>Azure Data Lake Storage (ADLS)</strong></td>
+<td>Azure</td>
+<td>Object storage</td>
+</tr>
+<tr class="odd">
+<td><strong>Google Cloud Storage (GCS)</strong></td>
+<td>GCP</td>
+<td>Object storage</td>
+</tr>
+<tr class="even">
+<td><strong>HDFS</strong></td>
+<td>On-premise</td>
+<td>Distributed filesystem</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="le-piège-data-swamp-marécage-de-données" class="level4">
+<h4 class="anchored" data-anchor-id="le-piège-data-swamp-marécage-de-données">⚠️ Le piège : Data Swamp (Marécage de données)</h4>
+<pre><code>❌ DATA SWAMP — Ce qu'il faut éviter :
+
+┌─────────────────────────────────────────────────────────────────┐
+│                       DATA LAKE                                 │
+│                                                                 │
+│   📁 old_data/                  📁 test_final_v2_FINAL/         │
+│   📁 backup_2019/               📁 john_analysis/               │
+│   📄 data.csv                   📄 data_new.csv                 │
+│   📄 data_copy.csv              📄 ???.parquet                  │
+│   📁 temp/                      📁 DO_NOT_DELETE/               │
+│                                                                 │
+│   😱 Personne ne sait ce que contiennent ces fichiers !        │
+│   😱 Pas de documentation                                       │
+│   😱 Données dupliquées, obsolètes, invalides                   │
+└─────────────────────────────────────────────────────────────────┘</code></pre>
+<blockquote class="blockquote">
+<p>💡 Sans <strong>gouvernance</strong>, un Data Lake devient un Data Swamp inutilisable !</p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="data-lakehouse-le-meilleur-des-deux-mondes" class="level3">
+<h3 class="anchored" data-anchor-id="data-lakehouse-le-meilleur-des-deux-mondes">🏠 9.2 Data Lakehouse — Le meilleur des deux mondes</h3>
+<p>Un <strong>Data Lakehouse</strong> combine les avantages du Data Lake (flexibilité, coût) et du Data Warehouse (performance, ACID).</p>
+<section id="définition-2" class="level4">
+<h4 class="anchored" data-anchor-id="définition-2">📖 Définition</h4>
+<blockquote class="blockquote">
+<p>“Un Lakehouse est une nouvelle architecture qui combine les meilleurs éléments des Data Lakes et des Data Warehouses.”</p>
+</blockquote>
+</section>
+<section id="technologies-clés" class="level4">
+<h4 class="anchored" data-anchor-id="technologies-clés">🔑 Technologies clés</h4>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Technologie</th>
+<th>Description</th>
+<th>Créateur</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Delta Lake</strong></td>
+<td>Format de table ACID sur Data Lake</td>
+<td>Databricks</td>
+</tr>
+<tr class="even">
+<td><strong>Apache Iceberg</strong></td>
+<td>Format de table open source</td>
+<td>Netflix</td>
+</tr>
+<tr class="odd">
+<td><strong>Apache Hudi</strong></td>
+<td>Format de table pour upserts</td>
+<td>Uber</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="ce-que-le-lakehouse-apporte" class="level4">
+<h4 class="anchored" data-anchor-id="ce-que-le-lakehouse-apporte">✅ Ce que le Lakehouse apporte</h4>
+<pre><code>┌─────────────────────────────────────────────────────────────────┐
+│                      DATA LAKEHOUSE                             │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│   ✅ Transactions ACID (comme un Data Warehouse)               │
+│   ✅ Schema enforcement &amp; evolution                             │
+│   ✅ Time Travel (historique des versions)                      │
+│   ✅ Stockage sur object storage (comme un Data Lake)          │
+│   ✅ Support batch ET streaming                                │
+│   ✅ Format ouvert (Parquet + métadonnées)                     │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘</code></pre>
+<hr>
+</section>
+</section>
+<section id="comparaison-warehouse-vs-lake-vs-lakehouse" class="level3">
+<h3 class="anchored" data-anchor-id="comparaison-warehouse-vs-lake-vs-lakehouse">⚖️ 9.3 Comparaison : Warehouse vs Lake vs Lakehouse</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Critère</th>
+<th>Data Warehouse</th>
+<th>Data Lake</th>
+<th>Data Lakehouse</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Données</strong></td>
+<td>Structurées</td>
+<td>Toutes</td>
+<td>Toutes</td>
+</tr>
+<tr class="even">
+<td><strong>Schéma</strong></td>
+<td>Schema-on-write</td>
+<td>Schema-on-read</td>
+<td>Schema-on-write</td>
+</tr>
+<tr class="odd">
+<td><strong>ACID</strong></td>
+<td>✅ Oui</td>
+<td>❌ Non</td>
+<td>✅ Oui</td>
+</tr>
+<tr class="even">
+<td><strong>Coût</strong></td>
+<td>💰💰💰 Élevé</td>
+<td>💰 Faible</td>
+<td>💰 Faible</td>
+</tr>
+<tr class="odd">
+<td><strong>Performance</strong></td>
+<td>⚡ Haute</td>
+<td>⚠️ Variable</td>
+<td>⚡ Haute</td>
+</tr>
+<tr class="even">
+<td><strong>Use cases</strong></td>
+<td>BI, Reporting</td>
+<td>ML, Data Science</td>
+<td>BI + ML</td>
+</tr>
+<tr class="odd">
+<td><strong>Time Travel</strong></td>
+<td>⚠️ Limité</td>
+<td>❌ Non</td>
+<td>✅ Oui</td>
+</tr>
+<tr class="even">
+<td><strong>Exemples</strong></td>
+<td>Snowflake, Redshift</td>
+<td>S3, ADLS</td>
+<td>Delta Lake, Iceberg</td>
+</tr>
+</tbody>
+</table>
+<pre><code>🕐 Évolution historique :
+
+    1990s-2000s           2010s              2020s+
+         │                  │                  │
+         ▼                  ▼                  ▼
+  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐
+  │    DATA     │    │    DATA     │    │    DATA     │
+  │  WAREHOUSE  │ →  │    LAKE     │ →  │  LAKEHOUSE  │
+  │             │    │             │    │             │
+  │ Structuré   │    │ Tout format │    │ Best of     │
+  │ Coûteux     │    │ Pas d'ACID  │    │ both worlds │
+  └─────────────┘    └─────────────┘    └─────────────┘</code></pre>
+<blockquote class="blockquote">
+<p>🔮 <strong>À venir</strong> : Tu apprendras Delta Lake et Iceberg en détail dans le module intermédiaire !</p>
+</blockquote>
+<hr>
+</section>
+<section id="medallion-architecture-bronze-silver-gold" class="level3">
+<h3 class="anchored" data-anchor-id="medallion-architecture-bronze-silver-gold">🥉🥈🥇 9.4 Medallion Architecture — Bronze, Silver, Gold</h3>
+<p>La <strong>Medallion Architecture</strong> (ou architecture en médaillons) est un pattern d’organisation des données dans un Data Lakehouse. Elle structure les données en <strong>3 couches</strong> de qualité croissante.</p>
+<blockquote class="blockquote">
+<p>💡 Cette architecture est très populaire avec <strong>Delta Lake</strong> et <strong>Databricks</strong>, mais s’applique à tout Lakehouse.</p>
+</blockquote>
+<hr>
+<section id="vue-densemble" class="level4">
+<h4 class="anchored" data-anchor-id="vue-densemble">🏗️ Vue d’ensemble</h4>
+<pre><code>┌─────────────────────────────────────────────────────────────────────────┐
+│                     MEDALLION ARCHITECTURE                              │
+├─────────────────────────────────────────────────────────────────────────┤
+│                                                                         │
+│   SOURCES              BRONZE            SILVER            GOLD         │
+│   ───────              ──────            ──────            ────         │
+│                                                                         │
+│  ┌─────────┐        ┌─────────┐       ┌─────────┐       ┌─────────┐    │
+│  │   API   │───────►│         │       │         │       │         │    │
+│  └─────────┘        │  Raw    │       │ Cleaned │       │ Curated │    │
+│  ┌─────────┐        │  Data   │──────►│  Data   │──────►│  Data   │    │
+│  │   DB    │───────►│         │       │         │       │         │    │
+│  └─────────┘        │  🥉     │       │  🥈     │       │  🥇     │    │
+│  ┌─────────┐        │ BRONZE  │       │ SILVER  │       │  GOLD   │    │
+│  │  Files  │───────►│         │       │         │       │         │    │
+│  └─────────┘        └─────────┘       └─────────┘       └─────────┘    │
+│  ┌─────────┐                                                  │        │
+│  │ Streams │───────►        ...                               ▼        │
+│  └─────────┘                                           ┌───────────┐   │
+│                                                        │ Dashboard │   │
+│                                                        │ ML Models │   │
+│                                                        │ Reports   │   │
+│                                                        └───────────┘   │
+└─────────────────────────────────────────────────────────────────────────┘</code></pre>
+<hr>
+</section>
+<section id="couche-bronze-données-brutes" class="level4">
+<h4 class="anchored" data-anchor-id="couche-bronze-données-brutes">🥉 Couche Bronze — Données brutes</h4>
+<p>La couche <strong>Bronze</strong> contient les données <strong>exactement comme elles arrivent</strong> des sources.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Caractéristique</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Contenu</strong></td>
+<td>Données brutes, non transformées</td>
+</tr>
+<tr class="even">
+<td><strong>Format</strong></td>
+<td>Copie exacte des sources (JSON, CSV, logs…)</td>
+</tr>
+<tr class="odd">
+<td><strong>Qualité</strong></td>
+<td>Aucun nettoyage, peut contenir des erreurs</td>
+</tr>
+<tr class="even">
+<td><strong>But</strong></td>
+<td>Historique complet, traçabilité, replay</td>
+</tr>
+<tr class="odd">
+<td><strong>Rétention</strong></td>
+<td>Longue durée (mois/années)</td>
+</tr>
+</tbody>
+</table>
+<pre><code>🥉 BRONZE — Exemple de données brutes
+
+┌────────────────────────────────────────────────────────────────┐
+│ {                                                              │
+│   "event_id": "abc123",                                       │
+│   "timestamp": "2024-01-15T14:30:00Z",                        │
+│   "user_id": "usr_456",                                       │
+│   "action": "purchase",                                       │
+│   "amount": "99.99",      ← String au lieu de number         │
+│   "product": null,         ← Valeur manquante                 │
+│   "_ingested_at": "2024-01-15T14:30:05Z"  ← Métadonnée ajoutée│
+│ }                                                              │
+└────────────────────────────────────────────────────────────────┘</code></pre>
+<hr>
+</section>
+<section id="couche-silver-données-nettoyées" class="level4">
+<h4 class="anchored" data-anchor-id="couche-silver-données-nettoyées">🥈 Couche Silver — Données nettoyées</h4>
+<p>La couche <strong>Silver</strong> contient les données <strong>nettoyées, validées et conformées</strong>.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 56%">
+<col style="width: 43%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Caractéristique</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Contenu</strong></td>
+<td>Données nettoyées et validées</td>
+</tr>
+<tr class="even">
+<td><strong>Transformations</strong></td>
+<td>Types corrigés, doublons supprimés, nulls gérés</td>
+</tr>
+<tr class="odd">
+<td><strong>Qualité</strong></td>
+<td>Données fiables, schéma appliqué</td>
+</tr>
+<tr class="even">
+<td><strong>But</strong></td>
+<td>Source de vérité pour les analyses</td>
+</tr>
+<tr class="odd">
+<td><strong>Structure</strong></td>
+<td>Tables normalisées ou semi-normalisées</td>
+</tr>
+</tbody>
+</table>
+<pre><code>🥈 SILVER — Données nettoyées
+
+┌────────────────────────────────────────────────────────────────┐
+│ Table: silver_events                                          │
+│ ┌───────────┬────────────────────┬──────────┬─────────┬──────┐│
+│ │ event_id  │     timestamp      │ user_id  │ action  │amount││
+│ ├───────────┼────────────────────┼──────────┼─────────┼──────┤│
+│ │ abc123    │ 2024-01-15 14:30:00│ usr_456  │purchase │ 99.99││
+│ │ def789    │ 2024-01-15 14:31:00│ usr_789  │ view    │  0.00││
+│ └───────────┴────────────────────┴──────────┴─────────┴──────┘│
+│                                                                │
+│ ✅ Types corrects (DECIMAL pour amount)                       │
+│ ✅ Pas de doublons                                            │
+│ ✅ Valeurs nulles remplacées par défauts                      │
+└────────────────────────────────────────────────────────────────┘</code></pre>
+<hr>
+</section>
+<section id="couche-gold-données-agrégées-pour-le-business" class="level4">
+<h4 class="anchored" data-anchor-id="couche-gold-données-agrégées-pour-le-business">🥇 Couche Gold — Données agrégées pour le business</h4>
+<p>La couche <strong>Gold</strong> contient les données <strong>agrégées et optimisées</strong> pour des cas d’usage métier spécifiques.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Caractéristique</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Contenu</strong></td>
+<td>Agrégations, KPIs, métriques business</td>
+</tr>
+<tr class="even">
+<td><strong>Structure</strong></td>
+<td>Tables dénormalisées (Star Schema)</td>
+</tr>
+<tr class="odd">
+<td><strong>Qualité</strong></td>
+<td>Données prêtes pour dashboards et ML</td>
+</tr>
+<tr class="even">
+<td><strong>But</strong></td>
+<td>Consommation directe par les analystes</td>
+</tr>
+<tr class="odd">
+<td><strong>Performance</strong></td>
+<td>Optimisées pour les requêtes</td>
+</tr>
+</tbody>
+</table>
+<pre><code>🥇 GOLD — Données agrégées
+
+┌────────────────────────────────────────────────────────────────┐
+│ Table: gold_daily_sales                                       │
+│ ┌────────────┬─────────────┬───────────┬───────────┬─────────┐│
+│ │    date    │   region    │ category  │total_sales│num_orders││
+│ ├────────────┼─────────────┼───────────┼───────────┼─────────┤│
+│ │ 2024-01-15 │   France    │Electronics│ 125,430.50│    1,245││
+│ │ 2024-01-15 │   Germany   │Electronics│  98,200.00│      987││
+│ │ 2024-01-15 │   France    │  Fashion  │  45,670.00│      567││
+│ └────────────┴─────────────┴───────────┴───────────┴─────────┘│
+│                                                                │
+│ → Prêt pour Power BI, Tableau, Looker                         │
+│ → Requêtes ultra-rapides                                      │
+└────────────────────────────────────────────────────────────────┘</code></pre>
+<hr>
+</section>
+<section id="résumé-des-3-couches" class="level4">
+<h4 class="anchored" data-anchor-id="résumé-des-3-couches">📊 Résumé des 3 couches</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 14%">
+<col style="width: 26%">
+<col style="width: 21%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Couche</th>
+<th>Qualité</th>
+<th>Transformations</th>
+<th>Utilisateurs</th>
+<th>Format typique</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>🥉 <strong>Bronze</strong></td>
+<td>Brute</td>
+<td>Aucune</td>
+<td>Data Engineers</td>
+<td>JSON, CSV, Parquet brut</td>
+</tr>
+<tr class="even">
+<td>🥈 <strong>Silver</strong></td>
+<td>Nettoyée</td>
+<td>Cleaning, validation, typing</td>
+<td>Data Engineers, Analysts</td>
+<td>Delta Lake, Iceberg</td>
+</tr>
+<tr class="odd">
+<td>🥇 <strong>Gold</strong></td>
+<td>Business-ready</td>
+<td>Agrégations, dénormalisation</td>
+<td>Analysts, Dashboard, ML</td>
+<td>Tables Star Schema</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="avantages-de-medallion-architecture" class="level4">
+<h4 class="anchored" data-anchor-id="avantages-de-medallion-architecture">✅ Avantages de Medallion Architecture</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 43%">
+<col style="width: 56%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Avantage</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Traçabilité</strong></td>
+<td>On peut toujours revenir aux données brutes (Bronze)</td>
+</tr>
+<tr class="even">
+<td><strong>Qualité progressive</strong></td>
+<td>Chaque couche améliore la qualité</td>
+</tr>
+<tr class="odd">
+<td><strong>Réutilisabilité</strong></td>
+<td>Silver sert de source commune à plusieurs tables Gold</td>
+</tr>
+<tr class="even">
+<td><strong>Debugging</strong></td>
+<td>Facile de trouver où une erreur s’est introduite</td>
+</tr>
+<tr class="odd">
+<td><strong>Performance</strong></td>
+<td>Gold optimisé pour les requêtes analytiques</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="flux-de-données-typique" class="level4">
+<h4 class="anchored" data-anchor-id="flux-de-données-typique">🔄 Flux de données typique</h4>
+<pre><code>┌──────────────────────────────────────────────────────────────────────────┐
+│                         PIPELINE ETL/ELT                                 │
+├──────────────────────────────────────────────────────────────────────────┤
+│                                                                          │
+│   SOURCE          BRONZE              SILVER              GOLD           │
+│      │               │                   │                  │            │
+│      │   Ingestion   │    Cleaning       │   Aggregation    │            │
+│      │   (raw copy)  │    Validation     │   Denormalization│            │
+│      │               │    Deduplication  │   Business rules │            │
+│      ▼               ▼                   ▼                  ▼            │
+│  ┌───────┐      ┌────────┐         ┌──────────┐       ┌──────────┐      │
+│  │  API  │─────►│ bronze_│────────►│ silver_  │──────►│ gold_    │      │
+│  │ logs  │      │ events │         │ events   │   ┌──►│ daily_   │      │
+│  └───────┘      └────────┘         └──────────┘   │   │ metrics  │      │
+│                                         │        │   └──────────┘      │
+│  ┌───────┐      ┌────────┐         ┌────▼─────┐   │   ┌──────────┐      │
+│  │  DB   │─────►│ bronze_│────────►│ silver_  │───┼──►│ gold_    │      │
+│  │ users │      │ users  │         │ users    │   │   │ user_    │      │
+│  └───────┘      └────────┘         └──────────┘   │   │ segments │      │
+│                                                   │   └──────────┘      │
+│                                                   │   ┌──────────┐      │
+│                                                   └──►│ gold_    │      │
+│                                                       │ funnel   │      │
+│                                                       └──────────┘      │
+└──────────────────────────────────────────────────────────────────────────┘</code></pre>
+<blockquote class="blockquote">
+<p>🔮 <strong>À venir</strong> : Tu implémenteras cette architecture avec Delta Lake dans le module intermédiaire !</p>
+</blockquote>
+<hr>
+</section>
+</section>
+</section>
+<section id="architectures-de-traitement-lambda-kappa" class="level2">
+<h2 class="anchored" data-anchor-id="architectures-de-traitement-lambda-kappa">🔄 10. Architectures de Traitement — Lambda &amp; Kappa</h2>
+<p>Comment organiser le traitement des données ? Deux grandes architectures dominent.</p>
+<hr>
+<section id="lambda-architecture-batch-streaming" class="level3">
+<h3 class="anchored" data-anchor-id="lambda-architecture-batch-streaming">⚡ 10.1 Lambda Architecture — Batch + Streaming</h3>
+<p>L’architecture <strong>Lambda</strong> (Nathan Marz, 2011) combine traitement <strong>batch</strong> et <strong>streaming</strong> pour avoir le meilleur des deux.</p>
+<section id="structure" class="level4">
+<h4 class="anchored" data-anchor-id="structure">🏗️ Structure</h4>
+<pre><code>                         ┌─────────────────────────────────────┐
+                         │            DATA SOURCES             │
+                         │     (Events, Logs, Transactions)    │
+                         └─────────────────┬───────────────────┘
+                                           │
+                    ┌──────────────────────┴──────────────────────┐
+                    │                                             │
+                    ▼                                             ▼
+         ┌─────────────────────┐                      ┌─────────────────────┐
+         │    BATCH LAYER      │                      │    SPEED LAYER      │
+         │   (Traitement lot)  │                      │   (Temps réel)      │
+         │                     │                      │                     │
+         │  • Hadoop/Spark     │                      │  • Kafka Streams    │
+         │  • Données complètes│                      │  • Spark Streaming  │
+         │  • Haute précision  │                      │  • Flink            │
+         │  • Latence: heures  │                      │  • Latence: secondes│
+         └──────────┬──────────┘                      └──────────┬──────────┘
+                    │                                             │
+                    │     ┌─────────────────────────┐             │
+                    │     │     SERVING LAYER       │             │
+                    └────►│  (Couche de service)    │◄────────────┘
+                          │                         │
+                          │  • Combine les deux     │
+                          │  • Requêtes rapides     │
+                          │  • Vue unifiée          │
+                          └───────────┬─────────────┘
+                                      │
+                                      ▼
+                          ┌─────────────────────────┐
+                          │      APPLICATIONS       │
+                          │   Dashboards, APIs, ML  │
+                          └─────────────────────────┘</code></pre>
+</section>
+<section id="les-3-couches" class="level4">
+<h4 class="anchored" data-anchor-id="les-3-couches">📋 Les 3 couches</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 18%">
+<col style="width: 56%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Couche</th>
+<th>Rôle</th>
+<th>Caractéristiques</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Batch Layer</strong></td>
+<td>Traitement complet, précis</td>
+<td>Latence haute, données historiques</td>
+</tr>
+<tr class="even">
+<td><strong>Speed Layer</strong></td>
+<td>Traitement temps réel</td>
+<td>Latence basse, données récentes</td>
+</tr>
+<tr class="odd">
+<td><strong>Serving Layer</strong></td>
+<td>Combine et sert les données</td>
+<td>Requêtes rapides, vue unifiée</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="avantages-inconvénients" class="level4">
+<h4 class="anchored" data-anchor-id="avantages-inconvénients">✅ Avantages / ❌ Inconvénients</h4>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>✅ Avantages</th>
+<th>❌ Inconvénients</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Robuste (double traitement)</td>
+<td>Complexe (2 systèmes à maintenir)</td>
+</tr>
+<tr class="even">
+<td>Données historiques complètes</td>
+<td>Code dupliqué (batch + streaming)</td>
+</tr>
+<tr class="odd">
+<td>Faible latence possible</td>
+<td>Coût élevé (2 pipelines)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="kappa-architecture-streaming-first" class="level3">
+<h3 class="anchored" data-anchor-id="kappa-architecture-streaming-first">🌀 10.2 Kappa Architecture — Streaming-first</h3>
+<p>L’architecture <strong>Kappa</strong> (Jay Kreps, 2014) simplifie Lambda en utilisant <strong>uniquement du streaming</strong>.</p>
+<section id="structure-1" class="level4">
+<h4 class="anchored" data-anchor-id="structure-1">🏗️ Structure</h4>
+<pre><code>                         ┌─────────────────────────────────────┐
+                         │            DATA SOURCES             │
+                         │     (Events, Logs, Transactions)    │
+                         └─────────────────┬───────────────────┘
+                                           │
+                                           ▼
+                         ┌─────────────────────────────────────┐
+                         │       MESSAGE QUEUE / LOG           │
+                         │           (Apache Kafka)            │
+                         │                                     │
+                         │   • Stocke TOUS les événements      │
+                         │   • Rétention longue (jours/mois)   │
+                         │   • Replay possible                 │
+                         └─────────────────┬───────────────────┘
+                                           │
+                                           ▼
+                         ┌─────────────────────────────────────┐
+                         │        STREAM PROCESSING            │
+                         │    (Kafka Streams, Flink, Spark)    │
+                         │                                     │
+                         │   • Une seule codebase              │
+                         │   • Traite events en temps réel     │
+                         │   • Reprocessing = replay du log    │
+                         └─────────────────┬───────────────────┘
+                                           │
+                                           ▼
+                         ┌─────────────────────────────────────┐
+                         │         SERVING LAYER               │
+                         │   (Base de données, Cache, API)     │
+                         └─────────────────────────────────────┘</code></pre>
+</section>
+<section id="le-concept-clé-replay" class="level4">
+<h4 class="anchored" data-anchor-id="le-concept-clé-replay">🔄 Le concept clé : Replay</h4>
+<pre><code>Besoin de recalculer les données ?
+
+Lambda : Relance le batch job (heures)
+Kappa  : Rejoue le log Kafka (même vitesse que le streaming)
+
+┌──────────────────────────────────────────────────────────────┐
+│  Kafka Log (rétention 30 jours)                              │
+│  ┌────┬────┬────┬────┬────┬────┬────┬────┬────┬────┐        │
+│  │ E1 │ E2 │ E3 │ E4 │ E5 │ E6 │ E7 │ E8 │ E9 │E10 │ ...   │
+│  └────┴────┴────┴────┴────┴────┴────┴────┴────┴────┘        │
+│                              ▲                               │
+│                              │                               │
+│                    Consumer peut "remonter"                  │
+│                    et rejouer les événements                 │
+└──────────────────────────────────────────────────────────────┘</code></pre>
+</section>
+<section id="avantages-inconvénients-1" class="level4">
+<h4 class="anchored" data-anchor-id="avantages-inconvénients-1">✅ Avantages / ❌ Inconvénients</h4>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>✅ Avantages</th>
+<th>❌ Inconvénients</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Simple (1 seul système)</td>
+<td>Stockage Kafka coûteux (rétention longue)</td>
+</tr>
+<tr class="even">
+<td>Une seule codebase</td>
+<td>Pas idéal pour analytics très complexes</td>
+</tr>
+<tr class="odd">
+<td>Reprocessing facile</td>
+<td>Nécessite Kafka bien configuré</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="lambda-vs-kappa-quand-utiliser-quoi" class="level3">
+<h3 class="anchored" data-anchor-id="lambda-vs-kappa-quand-utiliser-quoi">⚖️ 10.3 Lambda vs Kappa — Quand utiliser quoi ?</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 37%">
+<col style="width: 33%">
+<col style="width: 29%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Critère</th>
+<th>Lambda</th>
+<th>Kappa</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Complexité</strong></td>
+<td>Haute (2 systèmes)</td>
+<td>Moyenne (1 système)</td>
+</tr>
+<tr class="even">
+<td><strong>Maintenance</strong></td>
+<td>2 codebases</td>
+<td>1 codebase</td>
+</tr>
+<tr class="odd">
+<td><strong>Reprocessing</strong></td>
+<td>Batch job (lent mais fiable)</td>
+<td>Replay Kafka (rapide)</td>
+</tr>
+<tr class="even">
+<td><strong>Use case idéal</strong></td>
+<td>Analytics historiques + temps réel</td>
+<td>Event-driven, streaming-first</td>
+</tr>
+<tr class="odd">
+<td><strong>Coût</strong></td>
+<td>Élevé</td>
+<td>Moyen</td>
+</tr>
+</tbody>
+</table>
+<section id="recommandations" class="level4">
+<h4 class="anchored" data-anchor-id="recommandations">🎯 Recommandations</h4>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Situation</th>
+<th>Architecture recommandée</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Besoin de rapports historiques précis + temps réel</td>
+<td><strong>Lambda</strong></td>
+</tr>
+<tr class="even">
+<td>Application principalement event-driven</td>
+<td><strong>Kappa</strong></td>
+</tr>
+<tr class="odd">
+<td>Équipe petite, budget limité</td>
+<td><strong>Kappa</strong></td>
+</tr>
+<tr class="even">
+<td>Données complexes nécessitant du batch lourd</td>
+<td><strong>Lambda</strong></td>
+</tr>
+<tr class="odd">
+<td>Startup, MVP, itération rapide</td>
+<td><strong>Kappa</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote class="blockquote">
+<p>💡 <strong>En pratique</strong> : Beaucoup d’entreprises utilisent des <strong>architectures hybrides</strong> adaptées à leurs besoins spécifiques.</p>
+</blockquote>
+<hr>
+</section>
+</section>
+</section>
+<section id="data-mesh-lapproche-décentralisée" class="level2">
+<h2 class="anchored" data-anchor-id="data-mesh-lapproche-décentralisée">🕸️ 11. Data Mesh — L’approche décentralisée</h2>
+<p>Le <strong>Data Mesh</strong> est une approche <strong>organisationnelle</strong> (pas technique) pour gérer les données à grande échelle.</p>
+<section id="origine-du-problème" class="level3">
+<h3 class="anchored" data-anchor-id="origine-du-problème">📖 Origine du problème</h3>
+<pre><code>Architecture centralisée traditionnelle :
+
+    Domain A        Domain B        Domain C
+        │               │               │
+        └───────────────┼───────────────┘
+                        │
+                        ▼
+              ┌─────────────────────┐
+              │   DATA TEAM         │
+              │   CENTRALISÉE       │  ← Goulot d'étranglement !
+              │                     │
+              │ • Pipeline A        │
+              │ • Pipeline B        │
+              │ • Pipeline C        │
+              └─────────────────────┘
+                        │
+                        ▼
+              ┌─────────────────────┐
+              │   DATA WAREHOUSE    │
+              └─────────────────────┘
+
+❌ Problèmes :
+  • L'équipe data devient un goulot d'étranglement
+  • Elle ne comprend pas tous les domaines métiers
+  • Temps de livraison très long</code></pre>
+<hr>
+</section>
+<section id="les-4-principes-du-data-mesh" class="level3">
+<h3 class="anchored" data-anchor-id="les-4-principes-du-data-mesh">🎯 Les 4 principes du Data Mesh</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 43%">
+<col style="width: 56%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Principe</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>1. Domain Ownership</strong></td>
+<td>Chaque domaine métier est responsable de ses données</td>
+</tr>
+<tr class="even">
+<td><strong>2. Data as a Product</strong></td>
+<td>Les données sont traitées comme des produits avec SLA, qualité, documentation</td>
+</tr>
+<tr class="odd">
+<td><strong>3. Self-serve Platform</strong></td>
+<td>Plateforme en libre-service pour créer des data products</td>
+</tr>
+<tr class="even">
+<td><strong>4. Federated Governance</strong></td>
+<td>Gouvernance fédérée avec des standards communs</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="architecture-data-mesh" class="level3">
+<h3 class="anchored" data-anchor-id="architecture-data-mesh">🏗️ Architecture Data Mesh</h3>
+<pre><code>┌─────────────────────────────────────────────────────────────────────────┐
+│                         DATA MESH                                       │
+├─────────────────────────────────────────────────────────────────────────┤
+│                                                                         │
+│  ┌───────────────────┐  ┌───────────────────┐  ┌───────────────────┐   │
+│  │   DOMAIN: Sales   │  │  DOMAIN: Product  │  │ DOMAIN: Customer  │   │
+│  │                   │  │                   │  │                   │   │
+│  │  ┌─────────────┐  │  │  ┌─────────────┐  │  │  ┌─────────────┐  │   │
+│  │  │ Data Product│  │  │  │ Data Product│  │  │  │ Data Product│  │   │
+│  │  │ "Orders"    │  │  │  │ "Catalog"   │  │  │  │ "Profiles"  │  │   │
+│  │  └─────────────┘  │  │  └─────────────┘  │  │  └─────────────┘  │   │
+│  │                   │  │                   │  │                   │   │
+│  │  Owner: Sales Team│  │  Owner: Product   │  │  Owner: CRM Team  │   │
+│  └─────────┬─────────┘  └─────────┬─────────┘  └─────────┬─────────┘   │
+│            │                      │                      │             │
+│            └──────────────────────┼──────────────────────┘             │
+│                                   │                                     │
+│                    ┌──────────────▼──────────────┐                     │
+│                    │    SELF-SERVE PLATFORM      │                     │
+│                    │  (Infrastructure commune)   │                     │
+│                    └──────────────┬──────────────┘                     │
+│                                   │                                     │
+│                    ┌──────────────▼──────────────┐                     │
+│                    │   FEDERATED GOVERNANCE      │                     │
+│                    │  (Standards, Sécurité, ...)│                     │
+│                    └─────────────────────────────┘                     │
+│                                                                         │
+└─────────────────────────────────────────────────────────────────────────┘</code></pre>
+<hr>
+</section>
+<section id="data-mesh-vs-architecture-centralisée" class="level3">
+<h3 class="anchored" data-anchor-id="data-mesh-vs-architecture-centralisée">💡 Data Mesh vs Architecture Centralisée</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 24%">
+<col style="width: 39%">
+<col style="width: 36%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Aspect</th>
+<th>Centralisée</th>
+<th>Data Mesh</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Ownership</strong></td>
+<td>Équipe data centrale</td>
+<td>Équipes domaines</td>
+</tr>
+<tr class="even">
+<td><strong>Scalabilité</strong></td>
+<td>Limitée par l’équipe data</td>
+<td>Scale avec l’organisation</td>
+</tr>
+<tr class="odd">
+<td><strong>Connaissance métier</strong></td>
+<td>Faible</td>
+<td>Forte (experts domaine)</td>
+</tr>
+<tr class="even">
+<td><strong>Time-to-market</strong></td>
+<td>Lent</td>
+<td>Rapide</td>
+</tr>
+<tr class="odd">
+<td><strong>Complexité</strong></td>
+<td>Technique</td>
+<td>Organisationnelle</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="blockquote">
+<p>⚠️ <strong>Attention</strong> : Data Mesh n’est <strong>pas pour tout le monde</strong>. Il convient aux <strong>grandes organisations</strong> avec de nombreux domaines métiers distincts.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>🔮 <strong>Pour approfondir</strong> : Le Data Mesh est un concept avancé que tu exploreras au niveau expert du bootcamp !</p>
+</blockquote>
+<hr>
+</section>
+</section>
 <section id="nosql-au-delà-des-bases-relationnelles" class="level1">
-<h1>🗄️ NoSQL — Au-delà des bases relationnelles</h1>
+<h1>🗄️ 12. NoSQL — Au-delà des bases relationnelles</h1>
 <p>Jusqu’ici, tu as travaillé avec des bases <strong>relationnelles</strong> (SQL). Mais le Big Data a fait émerger un nouveau paradigme : <strong>NoSQL</strong>.</p>
 <hr>
 <section id="pourquoi-nosql" class="level2">
@@ -1444,20 +2472,16 @@ Spark :     DISQUE → Map → MÉMOIRE → Shuffle → MÉMOIRE → Reduce
 <section id="bases-document-mongodb-couchbase" class="level3">
 <h3 class="anchored" data-anchor-id="bases-document-mongodb-couchbase">📄 1. Bases Document (MongoDB, Couchbase)</h3>
 <p>Stockent des <strong>documents JSON/BSON</strong> avec un schéma flexible.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="er">//</span> <span class="er">Document</span> <span class="er">MongoDB</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"_id"</span><span class="fu">:</span> <span class="st">"user123"</span><span class="fu">,</span></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"nom"</span><span class="fu">:</span> <span class="st">"Alice Dupont"</span><span class="fu">,</span></span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"email"</span><span class="fu">:</span> <span class="st">"alice@example.com"</span><span class="fu">,</span></span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"adresses"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span><span class="dt">"type"</span><span class="fu">:</span> <span class="st">"domicile"</span><span class="fu">,</span> <span class="dt">"ville"</span><span class="fu">:</span> <span class="st">"Paris"</span><span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span><span class="dt">"type"</span><span class="fu">:</span> <span class="st">"travail"</span><span class="fu">,</span> <span class="dt">"ville"</span><span class="fu">:</span> <span class="st">"Lyon"</span><span class="fu">}</span></span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>  <span class="ot">]</span><span class="fu">,</span></span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"commandes"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span><span class="dt">"id"</span><span class="fu">:</span> <span class="st">"cmd001"</span><span class="fu">,</span> <span class="dt">"total"</span><span class="fu">:</span> <span class="fl">150.00</span><span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span><span class="dt">"id"</span><span class="fu">:</span> <span class="st">"cmd002"</span><span class="fu">,</span> <span class="dt">"total"</span><span class="fu">:</span> <span class="fl">89.99</span><span class="fu">}</span></span>
-<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>  <span class="ot">]</span></span>
-<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="er">//</span> <span class="er">Document</span> <span class="er">MongoDB</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"_id"</span><span class="fu">:</span> <span class="st">"user123"</span><span class="fu">,</span></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"nom"</span><span class="fu">:</span> <span class="st">"Alice Dupont"</span><span class="fu">,</span></span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"email"</span><span class="fu">:</span> <span class="st">"alice@example.com"</span><span class="fu">,</span></span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"adresses"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span><span class="dt">"type"</span><span class="fu">:</span> <span class="st">"domicile"</span><span class="fu">,</span> <span class="dt">"ville"</span><span class="fu">:</span> <span class="st">"Paris"</span><span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span><span class="dt">"type"</span><span class="fu">:</span> <span class="st">"travail"</span><span class="fu">,</span> <span class="dt">"ville"</span><span class="fu">:</span> <span class="st">"Lyon"</span><span class="fu">}</span></span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a>  <span class="ot">]</span></span>
+<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -1483,8 +2507,8 @@ Spark :     DISQUE → Map → MÉMOIRE → Shuffle → MÉMOIRE → Reduce
 <p><strong>Cas d’usage</strong> : Catalogues produits, profils utilisateurs, CMS, logs</p>
 <hr>
 </section>
-<section id="bases-clé-valeur-redis-memcached-dynamodb" class="level3">
-<h3 class="anchored" data-anchor-id="bases-clé-valeur-redis-memcached-dynamodb">🔑 2. Bases Clé-Valeur (Redis, Memcached, DynamoDB)</h3>
+<section id="bases-clé-valeur-redis-memcached" class="level3">
+<h3 class="anchored" data-anchor-id="bases-clé-valeur-redis-memcached">🔑 2. Bases Clé-Valeur (Redis, Memcached)</h3>
 <p>Stockage ultra-simple : une <strong>clé</strong> → une <strong>valeur</strong>.</p>
 <pre><code>┌─────────────────┬────────────────────────────┐
 │      CLÉ        │          VALEUR            │
@@ -1492,72 +2516,18 @@ Spark :     DISQUE → Map → MÉMOIRE → Shuffle → MÉMOIRE → Reduce
 │  user:123       │  {"nom": "Alice", ...}    │
 │  session:abc    │  {"user_id": 123, ...}    │
 │  cache:page:42  │  "&lt;html&gt;...&lt;/html&gt;"       │
-│  counter:views  │  1583920                   │
 └─────────────────┴────────────────────────────┘</code></pre>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Avantages</th>
-<th>Inconvénients</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Ultra-rapide (RAM)</td>
-<td>Requêtes limitées</td>
-</tr>
-<tr class="even">
-<td>Simple</td>
-<td>Pas de structure</td>
-</tr>
-<tr class="odd">
-<td>Scalable</td>
-<td>Recherche par clé uniquement</td>
-</tr>
-</tbody>
-</table>
 <p><strong>Cas d’usage</strong> : Cache, sessions, compteurs, files d’attente</p>
 <hr>
 </section>
-<section id="bases-colonnes-cassandra-hbase-scylladb" class="level3">
-<h3 class="anchored" data-anchor-id="bases-colonnes-cassandra-hbase-scylladb">📊 3. Bases Colonnes (Cassandra, HBase, ScyllaDB)</h3>
+<section id="bases-colonnes-cassandra-hbase" class="level3">
+<h3 class="anchored" data-anchor-id="bases-colonnes-cassandra-hbase">📊 3. Bases Colonnes (Cassandra, HBase)</h3>
 <p>Optimisées pour les <strong>écritures massives</strong> et les <strong>requêtes analytiques</strong>.</p>
-<pre><code>┌──────────────────────────────────────────────────────┐
-│  Row Key: user123                                    │
-├──────────────┬──────────────┬──────────────┬─────────┤
-│  nom:Alice   │  age:30      │  ville:Paris │  ...    │
-├──────────────────────────────────────────────────────┤
-│  Row Key: user456                                    │
-├──────────────┬──────────────┬──────────────────────────┤
-│  nom:Bob     │  email:...   │  (pas de ville)          │
-└──────────────┴──────────────┴──────────────────────────┘</code></pre>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Avantages</th>
-<th>Inconvénients</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Écritures très rapides</td>
-<td>Modèle complexe</td>
-</tr>
-<tr class="even">
-<td>Scalabilité linéaire</td>
-<td>Requêtes limitées</td>
-</tr>
-<tr class="odd">
-<td>Tolérance aux pannes</td>
-<td>Pas de jointures</td>
-</tr>
-</tbody>
-</table>
 <p><strong>Cas d’usage</strong> : IoT, time-series, logs, analytics</p>
 <hr>
 </section>
-<section id="bases-graphe-neo4j-amazon-neptune-arangodb" class="level3">
-<h3 class="anchored" data-anchor-id="bases-graphe-neo4j-amazon-neptune-arangodb">🔗 4. Bases Graphe (Neo4j, Amazon Neptune, ArangoDB)</h3>
+<section id="bases-graphe-neo4j-amazon-neptune" class="level3">
+<h3 class="anchored" data-anchor-id="bases-graphe-neo4j-amazon-neptune">🔗 4. Bases Graphe (Neo4j, Amazon Neptune)</h3>
 <p>Optimisées pour les <strong>relations complexes</strong> entre entités.</p>
 <pre><code>         ┌─────────┐
          │  Alice  │
@@ -1566,34 +2536,7 @@ Spark :     DISQUE → Map → MÉMOIRE → Shuffle → MÉMOIRE → Reduce
               ▼
          ┌─────────┐       WORKS_AT       ┌─────────────┐
          │   Bob   │ ──────────────────►  │  TechCorp   │
-         └────┬────┘                      └─────────────┘
-              │ FOLLOWS
-              ▼
-         ┌─────────┐
-         │ Charlie │
-         └─────────┘</code></pre>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Avantages</th>
-<th>Inconvénients</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Relations naturelles</td>
-<td>Scalabilité complexe</td>
-</tr>
-<tr class="even">
-<td>Requêtes de traversée rapides</td>
-<td>Cas d’usage spécifique</td>
-</tr>
-<tr class="odd">
-<td>Flexibilité</td>
-<td>Moins mature</td>
-</tr>
-</tbody>
-</table>
+         └─────────┘                      └─────────────┘</code></pre>
 <p><strong>Cas d’usage</strong> : Réseaux sociaux, recommandations, fraude, connaissances</p>
 <hr>
 </section>
@@ -1615,39 +2558,28 @@ Spark :     DISQUE → Map → MÉMOIRE → Shuffle → MÉMOIRE → Reduce
                 /______\  /______\
                A                    P
           Availability          Partition
-         (Disponibilité)        Tolerance
-                              (Tolérance aux
-                                partitions)</code></pre>
+         (Disponibilité)        Tolerance</code></pre>
 <section id="les-3-propriétés" class="level3">
 <h3 class="anchored" data-anchor-id="les-3-propriétés">📖 Les 3 propriétés</h3>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 32%">
-<col style="width: 44%">
-<col style="width: 23%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Propriété</th>
 <th>Signification</th>
-<th>Exemple</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><strong>C</strong>onsistency</td>
 <td>Tous les nœuds voient les mêmes données</td>
-<td>Lecture après écriture identique</td>
 </tr>
 <tr class="even">
 <td><strong>A</strong>vailability</td>
 <td>Le système répond toujours</td>
-<td>Pas de timeout</td>
 </tr>
 <tr class="odd">
 <td><strong>P</strong>artition Tolerance</td>
 <td>Fonctionne malgré des pannes réseau</td>
-<td>Serveurs isolés continuent</td>
 </tr>
 </tbody>
 </table>
@@ -1700,22 +2632,6 @@ Spark :     DISQUE → Map → MÉMOIRE → Shuffle → MÉMOIRE → Reduce
 </table>
 <hr>
 </section>
-<section id="en-pratique-cohérence-éventuelle-eventual-consistency" class="level3">
-<h3 class="anchored" data-anchor-id="en-pratique-cohérence-éventuelle-eventual-consistency">💡 En pratique : Cohérence éventuelle (Eventual Consistency)</h3>
-<p>La plupart des bases NoSQL utilisent la <strong>cohérence éventuelle</strong> :</p>
-<pre><code>Temps T0: Écriture sur Nœud A
-          [A: nouvelle valeur] [B: ancienne] [C: ancienne]
-          
-Temps T1: Réplication en cours
-          [A: nouvelle valeur] [B: nouvelle] [C: ancienne]
-          
-Temps T2: Cohérence atteinte
-          [A: nouvelle valeur] [B: nouvelle] [C: nouvelle]</code></pre>
-<blockquote class="blockquote">
-<p>💡 Acceptable pour : likes, vues, logs. Pas pour : transactions bancaires !</p>
-</blockquote>
-<hr>
-</section>
 </section>
 <section id="sql-vs-nosql-quand-utiliser-quoi" class="level2">
 <h2 class="anchored" data-anchor-id="sql-vs-nosql-quand-utiliser-quoi">⚖️ SQL vs NoSQL — Quand utiliser quoi ?</h2>
@@ -1743,7 +2659,7 @@ Temps T2: Cohérence atteinte
 <tr class="odd">
 <td><strong>Relations</strong></td>
 <td>Jointures natives</td>
-<td>Données embarquées/dénormalisées</td>
+<td>Données embarquées</td>
 </tr>
 <tr class="even">
 <td><strong>Transactions</strong></td>
@@ -1755,372 +2671,32 @@ Temps T2: Cohérence atteinte
 <td>Verticale (scale-up)</td>
 <td>Horizontale (scale-out)</td>
 </tr>
-<tr class="even">
-<td><strong>Requêtes</strong></td>
-<td>SQL standardisé</td>
-<td>Langage spécifique</td>
-</tr>
-<tr class="odd">
-<td><strong>Maturité</strong></td>
-<td>40+ ans</td>
-<td>15+ ans</td>
-</tr>
 </tbody>
 </table>
 <hr>
 </section>
 <section id="utilise-sql-quand" class="level3">
 <h3 class="anchored" data-anchor-id="utilise-sql-quand">✅ Utilise SQL quand…</h3>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Situation</th>
-<th>Exemple</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Données très structurées</td>
-<td>Comptabilité, RH</td>
-</tr>
-<tr class="even">
-<td>Relations complexes</td>
-<td>ERP, CRM</td>
-</tr>
-<tr class="odd">
-<td>Transactions critiques</td>
-<td>Banque, e-commerce</td>
-</tr>
-<tr class="even">
-<td>Requêtes ad-hoc variées</td>
-<td>Reporting, BI</td>
-</tr>
-<tr class="odd">
-<td>Intégrité des données critique</td>
-<td>Santé, finance</td>
-</tr>
-</tbody>
-</table>
-<hr>
+<ul>
+<li>Données très structurées (comptabilité, RH)</li>
+<li>Relations complexes (ERP, CRM)</li>
+<li>Transactions critiques (banque, e-commerce)</li>
+</ul>
 </section>
 <section id="utilise-nosql-quand" class="level3">
 <h3 class="anchored" data-anchor-id="utilise-nosql-quand">✅ Utilise NoSQL quand…</h3>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Situation</th>
-<th>Type NoSQL</th>
-<th>Exemple</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Schéma variable</td>
-<td>Document</td>
-<td>Catalogues, profils</td>
-</tr>
-<tr class="even">
-<td>Cache haute performance</td>
-<td>Clé-valeur</td>
-<td>Sessions, cache</td>
-</tr>
-<tr class="odd">
-<td>Écritures massives</td>
-<td>Colonnes</td>
-<td>IoT, logs</td>
-</tr>
-<tr class="even">
-<td>Relations complexes</td>
-<td>Graphe</td>
-<td>Réseaux sociaux</td>
-</tr>
-<tr class="odd">
-<td>Scale-out nécessaire</td>
-<td>Tous</td>
-<td>Big Data</td>
-</tr>
-<tr class="even">
-<td>Développement agile</td>
-<td>Document</td>
-<td>Startups, MVPs</td>
-</tr>
-</tbody>
-</table>
-<hr>
+<ul>
+<li>Schéma variable (catalogues, profils)</li>
+<li>Cache haute performance (sessions)</li>
+<li>Écritures massives (IoT, logs)</li>
+<li>Scale-out nécessaire (Big Data)</li>
+</ul>
 </section>
 <section id="en-réalité-on-utilise-les-deux" class="level3">
 <h3 class="anchored" data-anchor-id="en-réalité-on-utilise-les-deux">🎯 En réalité : on utilise les deux !</h3>
-<pre><code>┌─────────────────────────────────────────────────────────────────┐
-│                  ARCHITECTURE POLYGLOTTE                        │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                 │
-│   [Application Web]                                             │
-│         │                                                       │
-│         ├──► PostgreSQL (utilisateurs, commandes, paiements)   │
-│         │                                                       │
-│         ├──► MongoDB (catalogues produits, reviews)            │
-│         │                                                       │
-│         ├──► Redis (sessions, cache, rate limiting)            │
-│         │                                                       │
-│         ├──► Elasticsearch (recherche full-text)               │
-│         │                                                       │
-│         └──► Neo4j (recommandations, graphe social)            │
-│                                                                 │
-└─────────────────────────────────────────────────────────────────┘</code></pre>
 <blockquote class="blockquote">
 <p>💡 <strong>Polyglot Persistence</strong> : Utiliser la bonne base pour le bon cas d’usage !</p>
 </blockquote>
-<hr>
-</section>
-</section>
-<section id="bases-nosql-populaires" class="level2">
-<h2 class="anchored" data-anchor-id="bases-nosql-populaires">🗂️ Bases NoSQL populaires</h2>
-<section id="mongodb-la-plus-populaire-document" class="level3">
-<h3 class="anchored" data-anchor-id="mongodb-la-plus-populaire-document">📄 MongoDB — La plus populaire (Document)</h3>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Caractéristique</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Type</strong></td>
-<td>Base de documents JSON (BSON)</td>
-</tr>
-<tr class="even">
-<td><strong>Langage de requête</strong></td>
-<td>MQL (MongoDB Query Language)</td>
-</tr>
-<tr class="odd">
-<td><strong>Scalabilité</strong></td>
-<td>Sharding natif</td>
-</tr>
-<tr class="even">
-<td><strong>Transactions</strong></td>
-<td>ACID multi-documents (depuis v4.0)</td>
-</tr>
-<tr class="odd">
-<td><strong>Cloud</strong></td>
-<td>MongoDB Atlas</td>
-</tr>
-</tbody>
-</table>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Exemple de requête MongoDB</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>db<span class="op">.</span><span class="at">users</span><span class="op">.</span><span class="fu">find</span>({</span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">age</span><span class="op">:</span> { <span class="dt">$gte</span><span class="op">:</span> <span class="dv">25</span> }<span class="op">,</span></span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">ville</span><span class="op">:</span> <span class="st">"Paris"</span></span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>})<span class="op">.</span><span class="fu">sort</span>({ <span class="dt">nom</span><span class="op">:</span> <span class="dv">1</span> })</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<blockquote class="blockquote">
-<p>💡 <strong>Tu vas apprendre MongoDB en détail dans le module suivant !</strong></p>
-</blockquote>
-<hr>
-</section>
-<section id="redis-ultra-rapide-clé-valeur" class="level3">
-<h3 class="anchored" data-anchor-id="redis-ultra-rapide-clé-valeur">⚡ Redis — Ultra-rapide (Clé-valeur)</h3>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Caractéristique</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Type</strong></td>
-<td>In-memory key-value store</td>
-</tr>
-<tr class="even">
-<td><strong>Performance</strong></td>
-<td>&lt; 1ms de latence</td>
-</tr>
-<tr class="odd">
-<td><strong>Structures</strong></td>
-<td>Strings, Lists, Sets, Hashes, Streams</td>
-</tr>
-<tr class="even">
-<td><strong>Persistance</strong></td>
-<td>Optionnelle (RDB, AOF)</td>
-</tr>
-</tbody>
-</table>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Exemple avec Python</span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> redis</span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> redis.Redis()</span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>r.<span class="bu">set</span>(<span class="st">"user:123:name"</span>, <span class="st">"Alice"</span>)</span>
-<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>r.get(<span class="st">"user:123:name"</span>)  <span class="co"># b'Alice'</span></span>
-<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>r.incr(<span class="st">"page:views"</span>)  <span class="co"># Compteur atomique</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="cassandra-écritures-massives-colonnes" class="level3">
-<h3 class="anchored" data-anchor-id="cassandra-écritures-massives-colonnes">🌐 Cassandra — Écritures massives (Colonnes)</h3>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Caractéristique</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Type</strong></td>
-<td>Wide-column store</td>
-</tr>
-<tr class="even">
-<td><strong>Origine</strong></td>
-<td>Facebook (inbox search)</td>
-</tr>
-<tr class="odd">
-<td><strong>Scalabilité</strong></td>
-<td>Linéaire, peer-to-peer</td>
-</tr>
-<tr class="even">
-<td><strong>Disponibilité</strong></td>
-<td>Pas de single point of failure</td>
-</tr>
-</tbody>
-</table>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- CQL (Cassandra Query Language)</span></span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> <span class="kw">events</span> (</span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>    device_id UUID,</span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">timestamp</span> <span class="dt">TIMESTAMP</span>,</span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">value</span> <span class="dt">DOUBLE</span>,</span>
-<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">PRIMARY</span> <span class="kw">KEY</span> (device_id, <span class="dt">timestamp</span>)</span>
-<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>);</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="elasticsearch-recherche-document-search" class="level3">
-<h3 class="anchored" data-anchor-id="elasticsearch-recherche-document-search">🔍 Elasticsearch — Recherche (Document + Search)</h3>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Caractéristique</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Type</strong></td>
-<td>Moteur de recherche distribué</td>
-</tr>
-<tr class="even">
-<td><strong>Base</strong></td>
-<td>Apache Lucene</td>
-</tr>
-<tr class="odd">
-<td><strong>Usage</strong></td>
-<td>Full-text search, logs, analytics</td>
-</tr>
-<tr class="even">
-<td><strong>Stack</strong></td>
-<td>ELK (Elasticsearch, Logstash, Kibana)</td>
-</tr>
-</tbody>
-</table>
-<blockquote class="blockquote">
-<p>💡 <strong>Tu as vu Elasticsearch dans le module 10 !</strong></p>
-</blockquote>
-<hr>
-</section>
-</section>
-<section id="quiz-nosql" class="level2">
-<h2 class="anchored" data-anchor-id="quiz-nosql">🧠 Quiz NoSQL</h2>
-<section id="q8.-que-signifie-nosql" class="level3">
-<h3 class="anchored" data-anchor-id="q8.-que-signifie-nosql">❓ Q8. Que signifie NoSQL ?</h3>
-<ol type="a">
-<li>No SQL (pas de SQL)<br>
-</li>
-<li>Not Only SQL<br>
-</li>
-<li>New SQL<br>
-</li>
-<li>Non-Structured Query Language</li>
-</ol>
-<details>
-<summary>
-💡 Réponse
-</summary>
-✅ <strong>b</strong> — NoSQL = “Not Only SQL” (pas seulement SQL). Ces bases peuvent parfois supporter du SQL !
-</details>
-<hr>
-</section>
-<section id="q9.-quel-type-de-base-nosql-est-mongodb" class="level3">
-<h3 class="anchored" data-anchor-id="q9.-quel-type-de-base-nosql-est-mongodb">❓ Q9. Quel type de base NoSQL est MongoDB ?</h3>
-<ol type="a">
-<li>Clé-valeur<br>
-</li>
-<li>Colonnes<br>
-</li>
-<li>Document<br>
-</li>
-<li>Graphe</li>
-</ol>
-<details>
-<summary>
-💡 Réponse
-</summary>
-✅ <strong>c</strong> — MongoDB est une base de <strong>documents</strong> (JSON/BSON).
-</details>
-<hr>
-</section>
-<section id="q10.-selon-le-théorème-cap-que-sacrifie-une-base-ap" class="level3">
-<h3 class="anchored" data-anchor-id="q10.-selon-le-théorème-cap-que-sacrifie-une-base-ap">❓ Q10. Selon le théorème CAP, que sacrifie une base AP ?</h3>
-<ol type="a">
-<li>Disponibilité<br>
-</li>
-<li>Cohérence<br>
-</li>
-<li>Tolérance aux partitions<br>
-</li>
-<li>Performance</li>
-</ol>
-<details>
-<summary>
-💡 Réponse
-</summary>
-✅ <strong>b</strong> — Une base AP (Available + Partition tolerant) sacrifie la Cohérence immédiate. Elle utilise la “cohérence éventuelle”.
-</details>
-<hr>
-</section>
-<section id="q11.-pour-quel-cas-dusage-redis-est-il-le-plus-adapté" class="level3">
-<h3 class="anchored" data-anchor-id="q11.-pour-quel-cas-dusage-redis-est-il-le-plus-adapté">❓ Q11. Pour quel cas d’usage Redis est-il le plus adapté ?</h3>
-<ol type="a">
-<li>Stockage de documents JSON<br>
-</li>
-<li>Cache et sessions<br>
-</li>
-<li>Analyse de graphes sociaux<br>
-</li>
-<li>Stockage de vidéos</li>
-</ol>
-<details>
-<summary>
-💡 Réponse
-</summary>
-✅ <strong>b</strong> — Redis est une base in-memory clé-valeur, idéale pour le cache et les sessions.
-</details>
-<hr>
-</section>
-<section id="q12.-quelle-base-nosql-choisir-pour-des-relations-complexes-réseau-social" class="level3">
-<h3 class="anchored" data-anchor-id="q12.-quelle-base-nosql-choisir-pour-des-relations-complexes-réseau-social">❓ Q12. Quelle base NoSQL choisir pour des relations complexes (réseau social) ?</h3>
-<ol type="a">
-<li>MongoDB<br>
-</li>
-<li>Redis<br>
-</li>
-<li>Cassandra<br>
-</li>
-<li>Neo4j</li>
-</ol>
-<details>
-<summary>
-💡 Réponse
-</summary>
-✅ <strong>d</strong> — Neo4j est une base de <strong>graphes</strong>, optimisée pour les relations complexes.
-</details>
 <hr>
 </section>
 </section>
@@ -2213,6 +2789,48 @@ Temps T2: Cohérence atteinte
 </tbody>
 </table>
 </section>
+<section id="architectures-de-stockage" class="level3">
+<h3 class="anchored" data-anchor-id="architectures-de-stockage">Architectures de stockage</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Type</th>
+<th>Caractéristique clé</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Data Lake</strong></td>
+<td>Stockage brut, schema-on-read</td>
+</tr>
+<tr class="even">
+<td><strong>Data Lakehouse</strong></td>
+<td>Lake + ACID + Performance</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="architectures-de-traitement" class="level3">
+<h3 class="anchored" data-anchor-id="architectures-de-traitement">Architectures de traitement</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Architecture</th>
+<th>Approche</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Lambda</strong></td>
+<td>Batch + Streaming (2 systèmes)</td>
+</tr>
+<tr class="even">
+<td><strong>Kappa</strong></td>
+<td>Streaming-first (1 système)</td>
+</tr>
+</tbody>
+</table>
+</section>
 <section id="sql-vs-nosql" class="level3">
 <h3 class="anchored" data-anchor-id="sql-vs-nosql">SQL vs NoSQL</h3>
 <table class="caption-top table">
@@ -2242,31 +2860,6 @@ Temps T2: Cohérence atteinte
 <tr class="odd">
 <td><strong>NoSQL Graphe</strong></td>
 <td>Relations complexes (Neo4j)</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="théorème-cap" class="level3">
-<h3 class="anchored" data-anchor-id="théorème-cap">Théorème CAP</h3>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Choix</th>
-<th>Exemples</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>CP</strong></td>
-<td>MongoDB, HBase</td>
-</tr>
-<tr class="even">
-<td><strong>AP</strong></td>
-<td>Cassandra, DynamoDB</td>
-</tr>
-<tr class="odd">
-<td><strong>CA</strong></td>
-<td>PostgreSQL (single node)</td>
 </tr>
 </tbody>
 </table>
@@ -2371,27 +2964,103 @@ Temps T2: Cohérence atteinte
 </details>
 <hr>
 </section>
-<section id="q6.-dans-mapreduce-que-fait-létape-shuffle" class="level3">
-<h3 class="anchored" data-anchor-id="q6.-dans-mapreduce-que-fait-létape-shuffle">❓ Q6. Dans MapReduce, que fait l’étape “Shuffle” ?</h3>
+<section id="q6.-quelle-est-la-différence-entre-data-lake-et-data-lakehouse" class="level3">
+<h3 class="anchored" data-anchor-id="q6.-quelle-est-la-différence-entre-data-lake-et-data-lakehouse">❓ Q6. Quelle est la différence entre Data Lake et Data Lakehouse ?</h3>
 <ol type="a">
-<li>Trier les données<br>
+<li>Aucune différence<br>
 </li>
-<li>Regrouper les données par clé<br>
+<li>Le Lakehouse ajoute les transactions ACID au Data Lake<br>
 </li>
-<li>Supprimer les doublons<br>
+<li>Le Data Lake est plus récent<br>
 </li>
-<li>Compresser les résultats</li>
+<li>Le Lakehouse ne supporte que les données structurées</li>
 </ol>
 <details>
 <summary>
 💡 Réponse
 </summary>
-✅ <strong>b</strong> — Le Shuffle regroupe toutes les valeurs ayant la même clé pour les envoyer au même Reducer.
+✅ <strong>b</strong> — Le Data Lakehouse combine la flexibilité du Data Lake avec les transactions ACID et les performances du Data Warehouse.
 </details>
 <hr>
 </section>
-<section id="q7.-combien-de-copies-hdfs-fait-il-par-défaut" class="level3">
-<h3 class="anchored" data-anchor-id="q7.-combien-de-copies-hdfs-fait-il-par-défaut">❓ Q7. Combien de copies HDFS fait-il par défaut ?</h3>
+<section id="q7.-quelles-sont-les-3-couches-de-larchitecture-lambda" class="level3">
+<h3 class="anchored" data-anchor-id="q7.-quelles-sont-les-3-couches-de-larchitecture-lambda">❓ Q7. Quelles sont les 3 couches de l’architecture Lambda ?</h3>
+<ol type="a">
+<li>Bronze, Silver, Gold<br>
+</li>
+<li>Batch, Speed, Serving<br>
+</li>
+<li>Extract, Transform, Load<br>
+</li>
+<li>Input, Process, Output</li>
+</ol>
+<details>
+<summary>
+💡 Réponse
+</summary>
+✅ <strong>b</strong> — Lambda Architecture = Batch Layer + Speed Layer + Serving Layer.
+</details>
+<hr>
+</section>
+<section id="q8.-quel-est-lavantage-principal-de-larchitecture-kappa-sur-lambda" class="level3">
+<h3 class="anchored" data-anchor-id="q8.-quel-est-lavantage-principal-de-larchitecture-kappa-sur-lambda">❓ Q8. Quel est l’avantage principal de l’architecture Kappa sur Lambda ?</h3>
+<ol type="a">
+<li>Plus rapide<br>
+</li>
+<li>Plus simple (une seule codebase)<br>
+</li>
+<li>Moins de stockage<br>
+</li>
+<li>Meilleure précision</li>
+</ol>
+<details>
+<summary>
+💡 Réponse
+</summary>
+✅ <strong>b</strong> — Kappa simplifie l’architecture en n’utilisant qu’un seul système (streaming), évitant de maintenir deux codebases.
+</details>
+<hr>
+</section>
+<section id="q9.-quest-ce-quun-data-swamp" class="level3">
+<h3 class="anchored" data-anchor-id="q9.-quest-ce-quun-data-swamp">❓ Q9. Qu’est-ce qu’un Data Swamp ?</h3>
+<ol type="a">
+<li>Un type de Data Lake optimisé<br>
+</li>
+<li>Un Data Lake mal géré et inutilisable<br>
+</li>
+<li>Une architecture de streaming<br>
+</li>
+<li>Un Data Warehouse sur le cloud</li>
+</ol>
+<details>
+<summary>
+💡 Réponse
+</summary>
+✅ <strong>b</strong> — Un Data Swamp est un Data Lake devenu ingérable par manque de gouvernance (données non documentées, dupliquées, obsolètes).
+</details>
+<hr>
+</section>
+<section id="q10.-quel-principe-du-data-mesh-dit-que-chaque-domaine-métier-est-responsable-de-ses-données" class="level3">
+<h3 class="anchored" data-anchor-id="q10.-quel-principe-du-data-mesh-dit-que-chaque-domaine-métier-est-responsable-de-ses-données">❓ Q10. Quel principe du Data Mesh dit que chaque domaine métier est responsable de ses données ?</h3>
+<ol type="a">
+<li>Data as a Product<br>
+</li>
+<li>Self-serve Platform<br>
+</li>
+<li>Domain Ownership<br>
+</li>
+<li>Federated Governance</li>
+</ol>
+<details>
+<summary>
+💡 Réponse
+</summary>
+✅ <strong>c</strong> — Domain Ownership : chaque domaine métier possède et gère ses propres données.
+</details>
+<hr>
+</section>
+<section id="q11.-combien-de-copies-hdfs-fait-il-par-défaut" class="level3">
+<h3 class="anchored" data-anchor-id="q11.-combien-de-copies-hdfs-fait-il-par-défaut">❓ Q11. Combien de copies HDFS fait-il par défaut ?</h3>
 <ol type="a">
 <li>1<br>
 </li>
@@ -2409,6 +3078,63 @@ Temps T2: Cohérence atteinte
 </details>
 <hr>
 </section>
+<section id="q12.-quelle-base-nosql-est-idéale-pour-le-cache-et-les-sessions" class="level3">
+<h3 class="anchored" data-anchor-id="q12.-quelle-base-nosql-est-idéale-pour-le-cache-et-les-sessions">❓ Q12. Quelle base NoSQL est idéale pour le cache et les sessions ?</h3>
+<ol type="a">
+<li>MongoDB<br>
+</li>
+<li>Redis<br>
+</li>
+<li>Cassandra<br>
+</li>
+<li>Neo4j</li>
+</ol>
+<details>
+<summary>
+💡 Réponse
+</summary>
+✅ <strong>b</strong> — Redis est une base in-memory clé-valeur, idéale pour le cache et les sessions.
+</details>
+<hr>
+</section>
+<section id="q13.-dans-larchitecture-medallion-quelle-couche-contient-les-données-brutes-non-transformées" class="level3">
+<h3 class="anchored" data-anchor-id="q13.-dans-larchitecture-medallion-quelle-couche-contient-les-données-brutes-non-transformées">❓ Q13. Dans l’architecture Medallion, quelle couche contient les données brutes non transformées ?</h3>
+<ol type="a">
+<li>Gold<br>
+</li>
+<li>Silver<br>
+</li>
+<li>Bronze<br>
+</li>
+<li>Platinum</li>
+</ol>
+<details>
+<summary>
+💡 Réponse
+</summary>
+✅ <strong>c</strong> — Bronze contient les données brutes exactement comme elles arrivent des sources.
+</details>
+<hr>
+</section>
+<section id="q14.-quel-est-lordre-correct-de-qualité-croissante-dans-larchitecture-medallion" class="level3">
+<h3 class="anchored" data-anchor-id="q14.-quel-est-lordre-correct-de-qualité-croissante-dans-larchitecture-medallion">❓ Q14. Quel est l’ordre correct de qualité croissante dans l’architecture Medallion ?</h3>
+<ol type="a">
+<li>Gold → Silver → Bronze<br>
+</li>
+<li>Bronze → Gold → Silver<br>
+</li>
+<li>Silver → Bronze → Gold<br>
+</li>
+<li>Bronze → Silver → Gold</li>
+</ol>
+<details>
+<summary>
+💡 Réponse
+</summary>
+✅ <strong>d</strong> — Bronze (brut) → Silver (nettoyé) → Gold (agrégé/business-ready). La qualité augmente à chaque couche.
+</details>
+<hr>
+</section>
 </section>
 <section id="ressources" class="level2">
 <h2 class="anchored" data-anchor-id="ressources">📚 Ressources</h2>
@@ -2421,12 +3147,22 @@ Temps T2: Cohérence atteinte
 <li><a href="https://research.google/pubs/pub62/">MapReduce: Simplified Data Processing (paper)</a></li>
 </ul>
 </section>
+<section id="architectures-modernes" class="level3">
+<h3 class="anchored" data-anchor-id="architectures-modernes">Architectures modernes</h3>
+<ul>
+<li><a href="https://docs.delta.io/">Delta Lake Documentation</a></li>
+<li><a href="https://www.databricks.com/glossary/medallion-architecture">Medallion Architecture (Databricks)</a></li>
+<li><a href="https://iceberg.apache.org/">Apache Iceberg</a></li>
+<li><a href="http://nathanmarz.com/blog/how-to-beat-the-cap-theorem.html">Lambda Architecture (Nathan Marz)</a></li>
+<li><a href="https://www.oreilly.com/radar/questioning-the-lambda-architecture/">Kappa Architecture (Jay Kreps)</a></li>
+<li><a href="https://martinfowler.com/articles/data-mesh-principles.html">Data Mesh (Zhamak Dehghani)</a></li>
+</ul>
+</section>
 <section id="nosql" class="level3">
 <h3 class="anchored" data-anchor-id="nosql">NoSQL</h3>
 <ul>
 <li><a href="https://university.mongodb.com/">MongoDB University</a> — Cours gratuits</li>
 <li><a href="https://redis.io/docs/">Redis Documentation</a></li>
-<li><a href="https://cassandra.apache.org/doc/latest/">Cassandra Documentation</a></li>
 <li><a href="https://www.ibm.com/topics/cap-theorem">CAP Theorem Explained</a></li>
 </ul>
 <hr>
@@ -2434,11 +3170,11 @@ Temps T2: Cohérence atteinte
 </section>
 <section id="prochaine-étape" class="level2">
 <h2 class="anchored" data-anchor-id="prochaine-étape">➡️ Prochaine étape</h2>
-<p>Tu as maintenant les bases théoriques du Big Data, du traitement distribué et du NoSQL. Place à la pratique avec MongoDB !</p>
+<p>Tu as maintenant les bases théoriques du Big Data, du traitement distribué, des architectures modernes et du NoSQL. Place à la pratique avec MongoDB !</p>
 <p>👉 <strong>Module suivant : <code>09_mongodb_for_data_engineers.ipynb</code></strong> — MongoDB pour les Data Engineers</p>
 <p>Tu apprendras à : - Installer et utiliser MongoDB - Créer des collections et documents - Écrire des requêtes MQL (MongoDB Query Language) - Utiliser PyMongo depuis Python - Modéliser des données pour MongoDB</p>
 <hr>
-<p>🎉 <strong>Félicitations !</strong> Tu comprends maintenant le Big Data, les systèmes distribués et le NoSQL.</p>
+<p>🎉 <strong>Félicitations !</strong> Tu comprends maintenant le Big Data, les systèmes distribués, les architectures modernes et le NoSQL.</p>
 
 
 </section>
