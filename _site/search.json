@@ -1746,7 +1746,7 @@
     "href": "index.html#ready-to-start",
     "title": "Bootcamp Data Engineering – From Zero to Hero",
     "section": "🚀 Ready to Start?",
-    "text": "🚀 Ready to Start?\nCe bootcamp est conçu pour vous emmener de la théorie à la pratique industrielle.\n\n👉 Commencez aujourd’hui pour démarrer votre transition.\n👉 Le programme est 100% pratique, progressif et centré sur le monde professionnel.\n\nBonne montée en compétence ! 💪",
+    "text": "🚀 Ready to Start?\nCe bootcamp est conçu pour vous emmener de la théorie à la pratique industrielle.\n👉 Commencez aujourd’hui pour démarrer votre transition.\n👉 Le programme est 100% pratique, progressif et centré sur le monde professionnel.\nBonne montée en compétence ! 💪",
     "crumbs": [
       "Bootcamp Data Engineering – From Zero to Hero"
     ]
@@ -5394,5 +5394,15 @@
     "title": "☸️ Kubernetes Fundamentals pour Data Engineers",
     "section": "➡️ Prochaine étape",
     "text": "➡️ Prochaine étape\nMaintenant que tu maîtrises les fondamentaux de Kubernetes, passons aux workloads Data Engineering avancés !\n👉 Module suivant : 16_k8s_for_data_workloads.ipynb — Kubernetes pour les workloads Data\nTu vas apprendre : - Spark on Kubernetes - Airflow on Kubernetes - Helm charts pour packager tes déploiements - Horizontal Pod Autoscaler\n\n🎉 Félicitations ! Tu as terminé le module Kubernetes Fundamentals pour Data Engineers."
+  },
+  {
+    "objectID": "index.html#comment-utiliser-ce-bootcamp",
+    "href": "index.html#comment-utiliser-ce-bootcamp",
+    "title": "Bootcamp Data Engineering – From Zero to Hero",
+    "section": "📌 Comment utiliser ce Bootcamp ?",
+    "text": "📌 Comment utiliser ce Bootcamp ?\nLe Bootcamp est organisé dans l’ordre pédagogique exact nécessaire pour devenir Data Engineer :\n\nOuvrez le menu latéral gauche.\n\nCliquez sur le premier module : 01 – Introduction au Data Engineering.\n\nProgressez ensuite dans l’ordre recommandé (Débutant → Intermédiaire → Avancé).\n\n👉 Pour commencer tout de suite :\n🚀 Démarrer le Module 01",
+    "crumbs": [
+      "Bootcamp Data Engineering – From Zero to Hero"
+    ]
   }
 ]

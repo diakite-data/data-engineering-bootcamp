@@ -389,6 +389,53 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Intermédiaire</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./notebooks/intermediate/14_docker_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🐳 Docker pour Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./notebooks/intermediate/15_kubernetes_fundamentals.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">☸️ Kubernetes Fundamentals pour Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./notebooks/intermediate/16_k8s_for_data_workloads.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">☸️ Kubernetes pour Workloads Data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./notebooks/intermediate/17_polars_for_data_engineering.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🐻‍❄️ Polars pour Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./notebooks/intermediate/18_high_performance_python.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">⚡ High Performance Python</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./notebooks/intermediate/19_pyspark_advanced.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🚀 PySpark Advanced</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -499,7 +546,7 @@ ul.task-list li input[type="checkbox"] {
 <h1>🟦 Niveau 1 : Débutant – Fondations &amp; Premiers Pipelines</h1>
 <p><strong>Objectif :</strong> Poser les bases solides pour lire, comprendre et manipuler la donnée dans un contexte d’entreprise.</p>
 <section id="bloc-1-python-ingénierie-des-fondations" class="level3">
-<h3 class="anchored" data-anchor-id="bloc-1-python-ingénierie-des-fondations"><strong>🔹 Bloc 1 : Python &amp; Ingénierie des Fondations</strong></h3>
+<h3 class="anchored" data-anchor-id="bloc-1-python-ingénierie-des-fondations">🔹 Bloc 1 : Python &amp; Ingénierie des Fondations</h3>
 <ul>
 <li>Python pour Data Engineering, Bash &amp; Shell.</li>
 <li>Git &amp; Flux de versionning.</li>
@@ -507,7 +554,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 <section id="bloc-2-données-relationnelles-modélisation" class="level3">
-<h3 class="anchored" data-anchor-id="bloc-2-données-relationnelles-modélisation"><strong>🔹 Bloc 2 : Données Relationnelles &amp; Modélisation</strong></h3>
+<h3 class="anchored" data-anchor-id="bloc-2-données-relationnelles-modélisation">🔹 Bloc 2 : Données Relationnelles &amp; Modélisation</h3>
 <ul>
 <li>Bases de données relationnelles &amp; SQL avancé.</li>
 <li>Modélisation (Star Schema, Datamarts).</li>
@@ -515,7 +562,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 <section id="bloc-3-big-data-architectures-fondamentales" class="level3">
-<h3 class="anchored" data-anchor-id="bloc-3-big-data-architectures-fondamentales"><strong>🔹 Bloc 3 : Big Data &amp; Architectures Fondamentales</strong></h3>
+<h3 class="anchored" data-anchor-id="bloc-3-big-data-architectures-fondamentales">🔹 Bloc 3 : Big Data &amp; Architectures Fondamentales</h3>
 <ul>
 <li>Introduction au Big Data &amp; Distributed Computing.</li>
 <li>Architectures : <strong>Lambda, Kappa, Lakehouse, Medaillon</strong>.</li>
@@ -524,7 +571,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 <section id="bloc-4-orchestration-premiers-pas" class="level3">
-<h3 class="anchored" data-anchor-id="bloc-4-orchestration-premiers-pas"><strong>🔹 Bloc 4 : Orchestration &amp; Premiers Pas</strong></h3>
+<h3 class="anchored" data-anchor-id="bloc-4-orchestration-premiers-pas">🔹 Bloc 4 : Orchestration &amp; Premiers Pas</h3>
 <ul>
 <li>Elasticsearch et NoSQL.</li>
 <li>Orchestration : Introduction (Airflow, Nifi – Aperçu).</li>
@@ -540,7 +587,7 @@ ul.task-list li input[type="checkbox"] {
 <h1>🟩 Niveau 2 : Intermédiaire – Industrialisation &amp; Lakehouse</h1>
 <p><strong>Objectif :</strong> Maîtriser le cœur du métier : l’optimisation, le Cloud, les formats transactionnels et le déploiement sur K8s.</p>
 <section id="bloc-5-containerisation-orchestration-déploiement" class="level3">
-<h3 class="anchored" data-anchor-id="bloc-5-containerisation-orchestration-déploiement"><strong>🔹 Bloc 5 : Containerisation &amp; Orchestration (Déploiement)</strong></h3>
+<h3 class="anchored" data-anchor-id="bloc-5-containerisation-orchestration-déploiement">🔹 Bloc 5 : Containerisation &amp; Orchestration (Déploiement)</h3>
 <ul>
 <li>Docker pour la Data.</li>
 <li>Kubernetes (bases et concepts clés).</li>
@@ -548,7 +595,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 <section id="bloc-6-traitement-distribué-avancé-cloud" class="level3">
-<h3 class="anchored" data-anchor-id="bloc-6-traitement-distribué-avancé-cloud"><strong>🔹 Bloc 6 : Traitement Distribué Avancé &amp; Cloud</strong></h3>
+<h3 class="anchored" data-anchor-id="bloc-6-traitement-distribué-avancé-cloud">🔹 Bloc 6 : Traitement Distribué Avancé &amp; Cloud</h3>
 <ul>
 <li>Polars &amp; High Performance Python (Multiprocessing, Dask).</li>
 <li>PySpark avancé &amp; Spark SQL Deep Dive (Window Functions, Optimisations).</li>
@@ -557,7 +604,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 <section id="bloc-7-data-lakehouse-transactionnel" class="level3">
-<h3 class="anchored" data-anchor-id="bloc-7-data-lakehouse-transactionnel"><strong>🔹 Bloc 7 : Data Lakehouse Transactionnel</strong></h3>
+<h3 class="anchored" data-anchor-id="bloc-7-data-lakehouse-transactionnel">🔹 Bloc 7 : Data Lakehouse Transactionnel</h3>
 <ul>
 <li>Table Formats modernes : <strong>Delta Lake, Iceberg, Hudi</strong> (ACID).</li>
 <li>Time Travel, Schema Evolution, Opérations <code>MERGE INTO</code>, Compaction.</li>
@@ -565,7 +612,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 <section id="bloc-8-streaming-qualité-industrielle" class="level3">
-<h3 class="anchored" data-anchor-id="bloc-8-streaming-qualité-industrielle"><strong>🔹 Bloc 8 : Streaming &amp; Qualité Industrielle</strong></h3>
+<h3 class="anchored" data-anchor-id="bloc-8-streaming-qualité-industrielle">🔹 Bloc 8 : Streaming &amp; Qualité Industrielle</h3>
 <ul>
 <li>Kafka &amp; Architectures Streaming.</li>
 <li><strong>Spark Structured Streaming</strong> (Exactly-once, Watermarks).</li>
@@ -582,7 +629,7 @@ ul.task-list li input[type="checkbox"] {
 <h1>🟥 Niveau 3 : Avancé – Architecture &amp; Seniority</h1>
 <p><strong>Objectif :</strong> Concevoir, optimiser et gouverner des systèmes résilients à grande échelle.</p>
 <section id="bloc-9-optimisation-extrême-internals" class="level3">
-<h3 class="anchored" data-anchor-id="bloc-9-optimisation-extrême-internals"><strong>🔹 Bloc 9 : Optimisation Extrême &amp; Internals</strong></h3>
+<h3 class="anchored" data-anchor-id="bloc-9-optimisation-extrême-internals">🔹 Bloc 9 : Optimisation Extrême &amp; Internals</h3>
 <ul>
 <li>Internals Spark : Le Shuffle, Catalyst, Memory Management.</li>
 <li>Optimisation avancée (<strong>AQE, Skew Join Handling</strong>).</li>
@@ -590,7 +637,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 <section id="bloc-10-systèmes-temps-réel-avancés" class="level3">
-<h3 class="anchored" data-anchor-id="bloc-10-systèmes-temps-réel-avancés"><strong>🔹 Bloc 10 : Systèmes Temps Réel Avancés</strong></h3>
+<h3 class="anchored" data-anchor-id="bloc-10-systèmes-temps-réel-avancés">🔹 Bloc 10 : Systèmes Temps Réel Avancés</h3>
 <ul>
 <li>Apache Flink (traitement d’événements à faible latence).</li>
 <li>Exactly-once processing, Watermarks et gestion du “late data”.</li>
@@ -598,7 +645,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 <section id="bloc-11-architecture-stratégie-dentreprise" class="level3">
-<h3 class="anchored" data-anchor-id="bloc-11-architecture-stratégie-dentreprise"><strong>🔹 Bloc 11 : Architecture &amp; Stratégie d’Entreprise</strong></h3>
+<h3 class="anchored" data-anchor-id="bloc-11-architecture-stratégie-dentreprise">🔹 Bloc 11 : Architecture &amp; Stratégie d’Entreprise</h3>
 <ul>
 <li>Architecture Cloud à Grande Échelle (Serverless, multi-région).</li>
 <li><strong>Data Mesh</strong> &amp; Domain Ownership.</li>
@@ -611,13 +658,25 @@ ul.task-list li input[type="checkbox"] {
 </blockquote>
 <hr>
 </section>
+<section id="comment-utiliser-ce-bootcamp" class="level2">
+<h2 class="anchored" data-anchor-id="comment-utiliser-ce-bootcamp">📌 Comment utiliser ce Bootcamp ?</h2>
+<p>Le Bootcamp est organisé dans l’ordre pédagogique exact nécessaire pour devenir Data Engineer :</p>
+<ol type="1">
+<li>Ouvrez le <strong>menu latéral gauche</strong>.<br>
+</li>
+<li>Cliquez sur le premier module : <strong>01 – Introduction au Data Engineering</strong>.<br>
+</li>
+<li>Progressez ensuite dans l’ordre recommandé (Débutant → Intermédiaire → Avancé).</li>
+</ol>
+<p>👉 Pour commencer tout de suite :<br>
+<a href="./notebooks/beginner/01_intro_data_engineering.html">🚀 <strong>Démarrer le Module 01</strong></a></p>
+<hr>
+</section>
 <section id="ready-to-start" class="level2">
 <h2 class="anchored" data-anchor-id="ready-to-start">🚀 Ready to Start?</h2>
 <p>Ce bootcamp est conçu pour vous emmener de la théorie à la pratique industrielle.</p>
-<ul>
-<li>👉 <strong>Commencez aujourd’hui</strong> pour démarrer votre transition.</li>
-<li>👉 Le programme est 100% pratique, progressif et centré sur le monde professionnel.</li>
-</ul>
+<p>👉 <strong>Commencez aujourd’hui</strong> pour démarrer votre transition.<br>
+👉 Le programme est 100% pratique, progressif et centré sur le monde professionnel.</p>
 <p><strong>Bonne montée en compétence ! 💪</strong></p>
 
 
