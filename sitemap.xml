@@ -5,12 +5,12 @@
     <lastmod>2025-12-11T12:44:17.719Z</lastmod>
   </url>
   <url>
-    <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/intermediate/18_high_performance_python.html</loc>
-    <lastmod>2025-12-11T12:44:28.056Z</lastmod>
+    <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/intermediate/15_kubernetes_fundamentals.html</loc>
+    <lastmod>2025-12-11T12:43:56.153Z</lastmod>
   </url>
   <url>
-    <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/intermediate/20_spark_sql_deep_dive.html</loc>
-    <lastmod>2025-12-11T13:51:32.044Z</lastmod>
+    <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/intermediate/19_pyspark_advanced.html</loc>
+    <lastmod>2025-12-11T12:44:37.811Z</lastmod>
   </url>
   <url>
     <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/intermediate/14_docker_for_data_engineers.html</loc>
@@ -85,15 +85,15 @@
     <lastmod>2025-12-11T12:44:06.239Z</lastmod>
   </url>
   <url>
-    <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/intermediate/22_cloud_object_storage.html</loc>
+    <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/intermediate/20_spark_sql_deep_dive.html</loc>
+    <lastmod>2025-12-11T13:51:32.044Z</lastmod>
+  </url>
+  <url>
+    <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/intermediate/18_high_performance_python.html</loc>
+    <lastmod>2025-12-11T12:44:28.056Z</lastmod>
+  </url>
+  <url>
+    <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/intermediate/22_cloud_and_object_storage.html</loc>
     <lastmod>2025-12-11T13:51:54.223Z</lastmod>
-  </url>
-  <url>
-    <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/intermediate/19_pyspark_advanced.html</loc>
-    <lastmod>2025-12-11T12:44:37.811Z</lastmod>
-  </url>
-  <url>
-    <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/intermediate/15_kubernetes_fundamentals.html</loc>
-    <lastmod>2025-12-11T12:43:56.153Z</lastmod>
   </url>
 </urlset>
