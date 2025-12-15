@@ -55,17 +55,30 @@ website:
           - notebooks/intermediate/20_spark_sql_deep_dive.ipynb
           - notebooks/intermediate/21_spark_on_kubernetes.ipynb
 
-          # Bloc 8 – Cloud & Lakehouse (arrive dans module 22+)
+          # Bloc 8 – Cloud & Lakehouse (actif)
           - notebooks/intermediate/22_cloud_and_object_storage.ipynb
+
+          # Bloc 9 – Lakehouse Formats (à activer quand prêts)
           # - notebooks/intermediate/23_table_formats_delta_iceberg.ipynb
+
+          # Bloc 10 – Streaming (à activer quand prêts)
           # - notebooks/intermediate/24_kafka_and_streaming.ipynb
+
+          # Bloc 11 – Data Quality & dbt (à activer quand prêts)
           # - notebooks/intermediate/25_dbt_and_data_quality.ipynb
+
+          # Projet intégrateur
+          # - notebooks/intermediate/26_capstone_project.ipynb
+
 
   navbar:
     right:
       - icon: github
         href: https://github.com/diakite-data/data-engineering-bootcamp
 
+# -------------------------------------
+# COMMENTAIRES & GISCUS
+# -------------------------------------
 comments:
   giscus:
     repo: "diakite-data/data-engineering-bootcamp"
@@ -78,6 +91,9 @@ comments:
     theme: "preferred_color_scheme"
     language: "fr"
 
+# -------------------------------------
+# FORMAT HTML GLOBAL
+# -------------------------------------
 format:
   html:
     theme:
@@ -91,3 +107,10 @@ format:
     code-fold: true
     highlight-style: dracula
     search: true
+
+    # Intégration des fichiers personnalisés
+    include-in-header:
+      - includes/progress.html
+      - includes/sidebar.html
+    include-after-body:
+      - includes/download.html

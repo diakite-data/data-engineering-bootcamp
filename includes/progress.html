@@ -1,0 +1,33 @@
+<!-- ====== Progress Bar (Scroll-Based) ====== -->
+
+<style>
+  #progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: transparent;
+    z-index: 9999;
+  }
+
+  #progress-bar {
+    height: 4px;
+    width: 0%;
+    background: #00b4d8; /* bleu moderne */
+    transition: width 0.1s ease-out;
+  }
+</style>
+
+<div id="progress-container">
+  <div id="progress-bar"></div>
+</div>
+
+<script>
+  document.addEventListener("scroll", function () {
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrolled = window.scrollY;
+    const progress = (scrolled / docHeight) * 100;
+    document.getElementById("progress-bar").style.width = progress + "%";
+  });
+</script>
