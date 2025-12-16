@@ -58,14 +58,14 @@ website:
           # Bloc 8 – Cloud & Lakehouse (actif)
           - notebooks/intermediate/22_cloud_and_object_storage.ipynb
 
-          # Bloc 9 – Lakehouse Formats (à activer quand prêts)
-          # - notebooks/intermediate/23_table_formats_delta_iceberg.ipynb
+          # Bloc 9 – Lakehouse Formats 
+          - notebooks/intermediate/23_table_formats_delta_iceberg.ipynb
 
-          # Bloc 10 – Streaming (à activer quand prêts)
-          # - notebooks/intermediate/24_kafka_and_streaming.ipynb
+          # Bloc 10 – Streaming 
+          - notebooks/intermediate/24_kafka_streaming.ipynb
 
-          # Bloc 11 – Data Quality & dbt (à activer quand prêts)
-          # - notebooks/intermediate/25_dbt_and_data_quality.ipynb
+          # Bloc 11 – Data Quality & dbt 
+          - notebooks/intermediate/25_dbt_data_quality.ipynb
 
           # Projet intégrateur
           # - notebooks/intermediate/26_capstone_project.ipynb
@@ -110,7 +110,7 @@ format:
 
     # Intégration des fichiers personnalisés
     include-in-header:
-      - includes/progress.html
+     # - includes/progress.html
       - includes/sidebar.html
     include-after-body:
       - includes/download.html
