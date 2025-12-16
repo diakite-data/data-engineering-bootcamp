@@ -7,7 +7,7 @@ format:
 
 <div class="hero" style="padding: 40px 0; text-align:center;">
   <h1>🚀 Bootcamp Data Engineering : From Zero to Hero</h1>
-  <h3>Devenez un Data Engineer opérationnel, prêt pour l’entreprise.</h3>
+  <h3>Devenez un Data Engineer opérationnel, prêt pour l'entreprise.</h3>
 </div>
 
 ---
@@ -19,14 +19,15 @@ Il vous accompagne de manière progressive vers un niveau **professionnel – Se
 
 ### ✔ Ce que vous allez maîtriser
 
-- **Outils industriels** : Spark 3.x, Kafka, Docker, Kubernetes, dbt, Lakehouse (Delta/Iceberg).
-- **Architectures modernes** : Médaillon (Bronze/Silver/Gold), Kappa, Lambda, Data Lakehouse.
-- **Compétences d’ingénierie** : optimisation, gouvernance, orchestration, CI/CD, cloud.
+- **Outils industriels** : Spark 3.x, Kafka, Flink, Docker, Kubernetes, dbt, Lakehouse (Delta/Iceberg).
+- **Architectures modernes** : Médaillon (Bronze/Silver/Gold), Kappa, Lambda, Data Lakehouse, Data Mesh.
+- **Compétences d'ingénierie** : optimisation, gouvernance, orchestration, CI/CD, cloud.
 - **Industrialisation** : création de pipelines batch et streaming totalement opérationnels.
+- **Leadership technique** : RFC, Design Reviews, ADR, pensée architecturale.
 
 ---
 
-## 👥 À qui s’adresse ce Bootcamp ?
+## 👥 À qui s'adresse ce Bootcamp ?
 
 - **Étudiants / Développeurs** voulant entrer dans le monde du Big Data.
 - **Analystes BI** souhaitant évoluer vers le Data Engineering moderne.
@@ -39,13 +40,15 @@ Il vous accompagne de manière progressive vers un niveau **professionnel – Se
 
 | Domaine | Outils & Technologies |
 | :--- | :--- |
-| **Big Data Processing** | PySpark, Spark SQL, Polars, Dask |
+| **Big Data Processing** | PySpark, Spark SQL, Scala, Polars, Dask |
 | **Lakehouse** | Delta Lake, Apache Iceberg, Hudi |
-| **Streaming** | Kafka, Spark Streaming, Flink |
-| **DevOps / Infra** | Docker, Kubernetes, Helm, Spark Operator |
+| **Streaming** | Kafka, Spark Streaming, Flink, Debezium CDC |
+| **DevOps / Infra** | Docker, Kubernetes, Helm, ArgoCD, Spark Operator |
+| **Monitoring** | Prometheus, Grafana, Alertmanager |
 | **Cloud** | AWS S3, GCP GCS, Azure Blob, IAM, MinIO |
-| **Qualité & ETL** | dbt, Great Expectations |
-| **MLOps / Architecture** | MLflow, Feature Store, Observability, Data Mesh |
+| **Qualité & ETL** | dbt, Great Expectations, Data Contracts |
+| **MLOps** | MLflow, Feast (Feature Store), Model Monitoring |
+| **Governance** | DataHub, Unity Catalog, RLS/CLS, GDPR |
 
 ---
 
@@ -57,35 +60,55 @@ La progression est organisée selon un parcours **pédagogique optimal** :
 
 # 🟦 Niveau 1 : Débutant – Fondations & Premiers Pipelines
 
-### Objectif :  
+### 🎯 Objectif  
 Construire des bases solides en Python, SQL, systèmes distribués, modélisation et premiers pipelines.
 
-### Contenu :
-- Python, Bash, Git, Packaging
-- SQL & bases relationnelles
-- Big Data & architectures fondamentales (Lambda, Kappa, Lakehouse)
-- PySpark pour débutants
-- MongoDB, Elasticsearch
-- Orchestration (Airflow – introduction)
+### 📚 Modules
 
-> **🎯 Résultat :** Capable d’ingérer, transformer et produire un dataset Gold simple.
+| # | Module | Thèmes Clés |
+|:--|:-------|:------------|
+| 01 | Introduction au Data Engineering | Rôle du DE, écosystème, architectures (Lambda, Kappa, Lakehouse) |
+| 02 | Fondamentaux Linux & Bash | Commandes essentielles, scripting, cron, permissions |
+| 03 | Git & Versioning | Branches, merge, rebase, workflows collaboratifs |
+| 04 | Python pour Data Engineering | Syntaxe, structures, fichiers, exceptions |
+| 05 | Python Avancé | POO, décorateurs, générateurs, context managers |
+| 06 | Packaging & Environnements | venv, pip, pyproject.toml, structure projet |
+| 07 | SQL Fondamental | SELECT, JOIN, agrégations, sous-requêtes |
+| 08 | SQL Avancé | Window functions, CTE, optimisation, indexation |
+| 09 | Modélisation de Données | Normalisation, Star Schema, Data Vault, SCD |
+| 10 | Introduction Big Data | Hadoop, HDFS, MapReduce, écosystème |
+| 11 | Introduction PySpark | RDD, DataFrame, transformations, actions |
+| 12 | MongoDB pour Data Engineers | NoSQL, CRUD, agrégations, indexation |
+| 13 | Projet Intégrateur Débutant | Pipeline CSV → Nettoyage → Agrégation → Export |
+
+> **🎯 Résultat :** Capable d'ingérer, transformer et produire un dataset Gold simple.
 
 ---
 
 # 🟩 Niveau 2 : Intermédiaire – Industrialisation & Lakehouse
 
-### Objectif :  
-Maîtriser les technologies indispensables en entreprise : Docker, Kubernetes, Spark avancé, Lakehouse, streaming.
+### 🎯 Objectif  
+Maîtriser les technologies indispensables en entreprise : Docker, Kubernetes, Spark avancé, Lakehouse, streaming, orchestration.
 
-### Contenu :
-- Docker & Kubernetes (bases → workloads Data)
-- Spark Avancé + Spark SQL Deep Dive
-- Polars & High Performance Python
-- Cloud Object Storage (S3, GCS, Azure Blob)
-- Formats transactionnels (Delta, Iceberg, Hudi)
-- Kafka et streaming moderne
-- dbt & Data Quality
-- CI/CD pour pipelines Data
+### 📚 Modules
+
+| # | Module | Thèmes Clés |
+|:--|:-------|:------------|
+| 14 | Docker pour Data Engineering | Images, containers, volumes, Dockerfile, Compose |
+| 15 | Kubernetes Fondamentaux | Pods, Deployments, Services, ConfigMaps, Secrets |
+| 16 | Cloud Object Storage | S3, GCS, Azure Blob, MinIO, IAM, performances |
+| 17 | PySpark Avancé | Partitioning, caching, broadcast, UDF, optimisation |
+| 18 | Spark SQL Deep Dive | Catalyst, plans d'exécution, tuning, adaptive query |
+| 19 | Spark on Kubernetes | Spark Operator, SparkApplication, scaling, monitoring |
+| 20 | Polars & High Performance Python | API Polars, lazy evaluation, vs Pandas/Spark |
+| 21 | Formats de Fichiers | Parquet, Avro, ORC, compression, partitioning |
+| 22 | Table Formats (Delta, Iceberg, Hudi) | ACID, Time Travel, Schema Evolution, MERGE INTO |
+| 23 | Apache Kafka & Streaming | Producers, Consumers, Topics, Partitions, Consumer Groups |
+| 24 | Spark Structured Streaming | Watermarks, Windows, foreachBatch, checkpointing |
+| 25 | Orchestration avec Airflow | DAGs, Operators, XCom, Connections, bonnes pratiques |
+| 26 | dbt & Data Quality | Models, Tests, Documentation, Great Expectations |
+| 27 | CI/CD pour Data Pipelines | GitHub Actions, tests, déploiement automatisé |
+| 28 | Projet Intégrateur Intermédiaire | Pipeline Kafka → Spark → Delta Lake → dbt (Dataset Olist) |
 
 > **🎯 Résultat :** Déployer un job Spark sur Kubernetes, stocker en Delta, orchestrer & monitorer.
 
@@ -93,32 +116,99 @@ Maîtriser les technologies indispensables en entreprise : Docker, Kubernetes, S
 
 # 🟥 Niveau 3 : Avancé – Architecture, Optimisation & Seniority
 
-### Objectif :  
-Atteindre le niveau “Senior Data Engineer / Architecte Data”.
+### 🎯 Objectif  
+Atteindre le niveau "Senior Data Engineer / Architecte Data".
 
-### Contenu :
-- Internals Spark (Catalyst, Tungsten, AQE, optimisation extrême)
-- Apache Flink & traitement évènementiel temps réel
-- MLOps pour Data Engineers (Feature Store, MLflow)
-- Observability (Prometheus/Grafana, logs, metrics)
-- Data Mesh & architectures distribuées
-- FinOps & optimisation des coûts Cloud
-- Soft Skills (RFC, design reviews, pensée architecturale)
+### 📚 Modules
 
-> **🎯 Résultat :** Architecturer une plateforme Data complète, scalable et optimisée.
+| # | Module | Thèmes Clés |
+|:--|:-------|:------------|
+| 31 | Kubernetes Deep Dive | StatefulSets, Operators, CNI/CSI, Prometheus/Grafana, Helm, ArgoCD |
+| 32 | Distributed Messaging Systems | Kafka avancé, RabbitMQ, Pulsar, Debezium CDC, choix d'architecture |
+| 33 | Spark & Scala Internals | Scala essentials, Catalyst, Tungsten, AQE, shuffling, joins optimisés |
+| 34 | Apache Flink | Exactly-once, State Management, Watermarks, Flink SQL, vs Kafka Streams |
+| 35 | MLOps for Data Engineers | Feature Stores (Feast), MLflow, Pipelines ML, Model Monitoring |
+| 36 | Data Governance & Security | IAM, RLS/CLS, chiffrement, Data Contracts, DataHub, GDPR, Audit |
+| 37 | Architectural Trade-Offs | FinOps, ADR, Latence vs Coût, Capacity Planning, justification technique |
+| 38 | Technical Leadership | RFC, Design Reviews, Incidents/Postmortems, Mentoring, Communication |
+| 39 | Data Platform Design | Data Mesh, Multi-Format Strategy (Delta/Iceberg/Hudi), Platform Patterns |
+| 40 | Projet Intégrateur Avancé | Plateforme Data Multi-Tenant : K8s + Kafka + Flink + Lakehouse + MLOps + Governance |
+
+> **🎯 Résultat :** Architecturer une plateforme Data complète, scalable, sécurisée et optimisée.
+
+---
+
+# 📊 Vue d'Ensemble du Parcours
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                           PARCOURS COMPLET                                  │
+│                                                                             │
+│   🟦 NIVEAU 1 : DÉBUTANT                    Durée estimée : 6-8 semaines   │
+│   ════════════════════════                                                  │
+│   Modules 01-13                                                             │
+│   Python → SQL → Big Data → PySpark → MongoDB                               │
+│   📦 Projet : Pipeline simple                                               │
+│                          │                                                  │
+│                          ▼                                                  │
+│   🟩 NIVEAU 2 : INTERMÉDIAIRE               Durée estimée : 8-10 semaines  │
+│   ════════════════════════════                                              │
+│   Modules 14-28                                                             │
+│   Docker → K8s → Spark avancé → Lakehouse → Streaming → dbt                │
+│   📦 Projet : Pipeline E-commerce (Olist)                                   │
+│                          │                                                  │
+│                          ▼                                                  │
+│   🟥 NIVEAU 3 : AVANCÉ                      Durée estimée : 8-10 semaines  │
+│   ═════════════════════                                                     │
+│   Modules 31-40                                                             │
+│   K8s Deep Dive → Flink → MLOps → Governance → Architecture → Leadership   │
+│   📦 Projet : Plateforme Data Multi-Tenant                                  │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+# 🏆 Compétences Acquises par Niveau
+
+| Compétence | Débutant | Intermédiaire | Avancé |
+|:-----------|:--------:|:-------------:|:------:|
+| Python & SQL | ✅ | ✅✅ | ✅✅✅ |
+| PySpark | ✅ | ✅✅ | ✅✅✅ |
+| Docker & Kubernetes | - | ✅✅ | ✅✅✅ |
+| Lakehouse (Delta/Iceberg) | - | ✅✅ | ✅✅✅ |
+| Streaming (Kafka) | - | ✅✅ | ✅✅✅ |
+| Flink | - | - | ✅✅ |
+| dbt & Data Quality | - | ✅✅ | ✅✅ |
+| MLOps | - | - | ✅✅ |
+| Governance & Security | - | ✅ | ✅✅✅ |
+| Architecture & Design | - | ✅ | ✅✅✅ |
+| Leadership technique | - | - | ✅✅✅ |
 
 ---
 
 # 🚀 Démarrer le Bootcamp
 
-👉 Cliquez dans le menu de gauche pour ouvrir :  
-**01 – Introduction au Data Engineering**
+👉 Cliquez dans le menu de gauche pour ouvrir le premier module, ou démarrez ici :
 
-Ou démarrez ici :
+<div style="text-align: center; margin: 30px 0;">
+  <a href="notebooks/beginner/01_intro_data_engineering.ipynb" style="background-color: #4CAF50; color: white; padding: 15px 30px; text-decoration: none; font-size: 18px; border-radius: 5px;">
+    📘 Commencer le Module 01
+  </a>
+</div>
 
-👉 [📘 **Ouvrir le Module 01**](notebooks/beginner/01_intro_data_engineering.ipynb)
+---
+
+## 💡 Conseils pour Réussir
+
+1. **Suivez l'ordre** : Les modules sont conçus pour être suivis séquentiellement.
+2. **Pratiquez** : Faites tous les exercices et projets intégrateurs.
+3. **Expérimentez** : Modifiez le code, cassez des choses, apprenez des erreurs.
+4. **Documentez** : Prenez des notes, créez votre propre documentation.
+5. **Construisez votre portfolio** : Les projets intégrateurs sont présentables en entretien.
 
 ---
 
 ## 🎉 Bonne montée en compétence !  
-Vous êtes maintenant prêt à progresser étape par étape jusqu’au niveau expert.
+
+Vous êtes maintenant prêt à progresser étape par étape jusqu'au niveau **Senior Data Engineer**.

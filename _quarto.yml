@@ -1,114 +1,386 @@
+# ==============================================================================
+# 🚀 BOOTCAMP DATA ENGINEERING - FROM ZERO TO HERO
+# ==============================================================================
+# Configuration Quarto pour le site web du bootcamp
+# Structure : Débutant (01-13) → Intermédiaire (14-28) → Avancé (31-40)
+# ==============================================================================
+
 project:
   type: website
   output-dir: _site
+  preview:
+    port: 4200
+    browser: true
+
+# ==============================================================================
+# 🌐 WEBSITE CONFIGURATION
+# ==============================================================================
 
 website:
-  title: "Bootcamp Data Engineering – From Zero to Hero"
-  description: "Programme Data Engineering — Débutant → Intermédiaire → Avancé"
+  title: "Bootcamp Data Engineering"
+  description: "Programme complet Data Engineering — Du débutant au Senior Engineer"
   site-url: "https://diakite-data.github.io/data-engineering-bootcamp"
-  repo-url: "git@github.com:diakite-data/data-engineering-bootcamp.git"
-  repo-actions: [source, issue]
-
-  navbar:
+  repo-url: "https://github.com/diakite-data/data-engineering-bootcamp"
+  repo-actions: [source, issue, edit]
+  
+  # Favicon & Branding
+  favicon: assets/images/favicon.ico
+  
+  # Open Graph / Social Media
+  open-graph:
+    locale: fr_FR
+    site-name: "Bootcamp Data Engineering"
+  twitter-card:
+    creator: "@diakite_data"
+    site: "@diakite_data"
+  
+  # Google Analytics (optionnel)
+  # google-analytics: "G-XXXXXXXXXX"
+  
+  # Page Footer
+  page-footer:
+    left: |
+      © 2025 Bootcamp Data Engineering · From Zero to Hero
+    center: |
+      Fait avec ❤️ et [Quarto](https://quarto.org)
     right:
       - icon: github
         href: https://github.com/diakite-data/data-engineering-bootcamp
+      - icon: linkedin
+        href: https://linkedin.com/in/diakite-data
+    border: true
+    background: dark
 
+  # ---------------------------------------------------------------------------
+  # 🧭 NAVBAR
+  # ---------------------------------------------------------------------------
+  navbar:
+    background: dark
+    logo: assets/images/logo.png
+    logo-alt: "Data Engineering Bootcamp"
+    title: false
+    collapse-below: lg
+    pinned: true
+    
+    left:
+      - text: "🏠 Accueil"
+        href: index.qmd
+      - text: "📘 Programme"
+        menu:
+          - text: "🟦 Niveau Débutant"
+            href: notebooks/beginner/01_intro_data_engineering.ipynb
+          - text: "🟩 Niveau Intermédiaire"
+            href: notebooks/intermediate/14_docker_for_data_engineers.ipynb
+          - text: "🟥 Niveau Avancé"
+            href: notebooks/advanced/31_k8s_deep_dive.ipynb
+          - text: "---"
+          - text: "📊 Vue d'ensemble"
+            href: curriculum.qmd
+      - text: "🛠️ Ressources"
+        menu:
+          - text: "📚 Documentation"
+            href: resources/documentation.qmd
+          - text: "🔧 Setup Environnement"
+            href: resources/setup.qmd
+          - text: "❓ FAQ"
+            href: resources/faq.qmd
+          - text: "---"
+          - text: "🔗 Liens Utiles"
+            href: resources/links.qmd
+    
+    right:
+      - icon: search
+        id: search
+      - icon: moon
+        id: theme-toggle
+        aria-label: "Toggle dark mode"
+      - icon: github
+        href: https://github.com/diakite-data/data-engineering-bootcamp
+        aria-label: "GitHub Repository"
+
+  # ---------------------------------------------------------------------------
+  # 📑 SIDEBAR
+  # ---------------------------------------------------------------------------
   sidebar:
-    style: "floating"
+    style: floating
     search: true
-    collapse-level: 2
+    collapse-level: 1
+    border: true
+    
     contents:
-
-      # -------------------------------------
-      # NIVEAU DÉBUTANT
-      # -------------------------------------
-      - section: "Débutant"
+      # =========================================================================
+      # 🟦 NIVEAU 1 : DÉBUTANT
+      # =========================================================================
+      - section: "🟦 Niveau 1 : Débutant"
         contents:
-          - notebooks/beginner/01_intro_data_engineering.ipynb
-          - notebooks/beginner/02_bash_for_data_engineers.ipynb
-          - notebooks/beginner/03_git_for_data_engineers.ipynb
-          - notebooks/beginner/04_python_basics_for_data_engineers.ipynb
-          - notebooks/beginner/05_python_data_processing_for_data_engineers.ipynb
-          - notebooks/beginner/06_intro_relational_databases.ipynb
-          - notebooks/beginner/07_sql_for_data_engineers.ipynb
-          - notebooks/beginner/08_intro_big_data_distributed.ipynb
-          - notebooks/beginner/09_mongodb_for_data_engineers.ipynb
-          - notebooks/beginner/10_elasticsearch_for_data_engineers.ipynb
-          - notebooks/beginner/11_pyspark_for_data_engineering.ipynb
-          - notebooks/beginner/12_orchestration_pipelines.ipynb
-          - notebooks/beginner/13_BONUS_fastapi_for_data_engineers.ipynb
+          - text: "---"
+          - section: "📌 Fondations"
+            contents:
+              - text: "01 · Introduction au Data Engineering"
+                href: notebooks/beginner/01_intro_data_engineering.ipynb
+              - text: "02 · Linux & Bash"
+                href: notebooks/beginner/02_bash_for_data_engineers.ipynb
+              - text: "03 · Git & Versioning"
+                href: notebooks/beginner/03_git_for_data_engineers.ipynb
+          
+          - section: "🐍 Python"
+            contents:
+              - text: "04 · Python Fondamental"
+                href: notebooks/beginner/04_python_basics_for_data_engineers.ipynb
+              - text: "05 · Python Data Processing"
+                href: notebooks/beginner/05_python_data_processing_for_data_engineers.ipynb
+          
+          - section: "🗄️ Bases de Données"
+            contents:
+              - text: "06 · Introduction aux BDD Relationnelles"
+                href: notebooks/beginner/06_intro_relational_databases.ipynb
+              - text: "07 · SQL pour Data Engineers"
+                href: notebooks/beginner/07_sql_for_data_engineers.ipynb
+          
+          - section: "📊 Big Data & NoSQL"
+            contents:
+              - text: "08 · Introduction Big Data"
+                href: notebooks/beginner/08_intro_big_data_distributed.ipynb
+              - text: "09 · MongoDB"
+                href: notebooks/beginner/09_mongodb_for_data_engineers.ipynb
+              - text: "10 · Elasticsearch"
+                href: notebooks/beginner/10_elasticsearch_for_data_engineers.ipynb
+          
+          - section: "⚡ Spark & Orchestration"
+            contents:
+              - text: "11 · Introduction PySpark"
+                href: notebooks/beginner/11_pyspark_for_data_engineering.ipynb
+              - text: "12 · Orchestration de Pipelines"
+                href: notebooks/beginner/12_orchestration_pipelines.ipynb
+          
+          - section: "🎁 Bonus"
+            contents:
+              - text: "13 · FastAPI pour Data Engineers"
+                href: notebooks/beginner/13_BONUS_fastapi_for_data_engineers.ipynb
+          
+          - text: "---"
+          - text: "📦 **Projet Débutant**"
+            href: notebooks/beginner/projet_debutant.ipynb
 
-      # -------------------------------------
-      # NIVEAU INTERMÉDIAIRE
-      # -------------------------------------
-      - section: "Intermédiaire"
+      # =========================================================================
+      # 🟩 NIVEAU 2 : INTERMÉDIAIRE
+      # =========================================================================
+      - section: "🟩 Niveau 2 : Intermédiaire"
         contents:
-          - notebooks/intermediate/14_docker_for_data_engineers.ipynb
-          - notebooks/intermediate/15_kubernetes_fundamentals.ipynb
-          - notebooks/intermediate/16_k8s_for_data_workloads.ipynb
+          - text: "---"
+          - section: "🐳 Containers & Cloud"
+            contents:
+              - text: "14 · Docker pour Data Engineers"
+                href: notebooks/intermediate/14_docker_for_data_engineers.ipynb
+              - text: "15 · Kubernetes Fondamentaux"
+                href: notebooks/intermediate/15_kubernetes_fundamentals.ipynb
+              - text: "16 · K8s pour Data Workloads"
+                href: notebooks/intermediate/16_k8s_for_data_workloads.ipynb
+              - text: "17 · Cloud Object Storage"
+                href: notebooks/intermediate/17_cloud_object_storage.ipynb
+          
+          - section: "🚀 High Performance Python"
+            contents:
+              - text: "18 · Polars pour Data Engineering"
+                href: notebooks/intermediate/18_polars_for_data_engineering.ipynb
+              - text: "19 · High Performance Python"
+                href: notebooks/intermediate/19_high_performance_python.ipynb
+          
+          - section: "⚡ Spark Avancé"
+            contents:
+              - text: "20 · PySpark Avancé"
+                href: notebooks/intermediate/20_pyspark_advanced.ipynb
+              - text: "21 · Spark SQL Deep Dive"
+                href: notebooks/intermediate/21_spark_sql_deep_dive.ipynb
+              - text: "22 · Spark on Kubernetes"
+                href: notebooks/intermediate/22_spark_on_kubernetes.ipynb
+          
+          - section: "🏠 Lakehouse & Streaming"
+            contents:
+              - text: "23 · Table Formats (Delta, Iceberg)"
+                href: notebooks/intermediate/23_table_formats_delta_iceberg.ipynb
+              - text: "24 · Kafka & Streaming"
+                href: notebooks/intermediate/24_kafka_streaming.ipynb
+              - text: "25 · Spark Structured Streaming"
+                href: notebooks/intermediate/25_spark_structured_streaming.ipynb
+          
+          - section: "🔧 Industrialisation"
+            contents:
+              - text: "26 · Orchestration Airflow"
+                href: notebooks/intermediate/26_airflow_orchestration.ipynb
+              - text: "27 · dbt & Data Quality"
+                href: notebooks/intermediate/27_dbt_data_quality.ipynb
+              - text: "28 · CI/CD pour Data Pipelines"
+                href: notebooks/intermediate/28_cicd_data_pipelines.ipynb
+          
+          - text: "---"
+          - text: "📦 **Projet Intermédiaire** (Olist)"
+            href: notebooks/intermediate/29_projet_integrateur.ipynb
 
-          - notebooks/intermediate/17_polars_for_data_engineering.ipynb
-          - notebooks/intermediate/18_high_performance_python.ipynb
+      # =========================================================================
+      # 🟥 NIVEAU 3 : AVANCÉ
+      # =========================================================================
+      - section: "🟥 Niveau 3 : Avancé"
+        contents:
+          - text: "---"
+          - section: "☸️ Infrastructure Avancée"
+            contents:
+              - text: "31 · Kubernetes Deep Dive"
+                href: notebooks/advanced/31_k8s_deep_dive.ipynb
+              - text: "32 · Messaging Systems (Kafka, RabbitMQ, Pulsar)"
+                href: notebooks/advanced/32_distributed_messaging_systems.ipynb
+          
+          - section: "⚡ Processing Avancé"
+            contents:
+              - text: "33 · Spark & Scala Internals"
+                href: notebooks/advanced/33_spark_scala_internals.ipynb
+              - text: "34 · Apache Flink"
+                href: notebooks/advanced/34_apache_flink.ipynb
+          
+          - section: "🤖 MLOps & Governance"
+            contents:
+              - text: "35 · MLOps pour Data Engineers"
+                href: notebooks/advanced/35_mlops_for_data_engineers.ipynb
+              - text: "36 · Data Governance & Security"
+                href: notebooks/advanced/36_data_governance_security.ipynb
+          
+          - section: "🏛️ Architecture & Leadership"
+            contents:
+              - text: "37 · Architectural Trade-Offs"
+                href: notebooks/advanced/37_architectural_tradeoffs.ipynb
+              - text: "38 · Technical Leadership"
+                href: notebooks/advanced/38_technical_leadership.ipynb
+              - text: "39 · Data Platform Design"
+                href: notebooks/advanced/39_data_platform_design.ipynb
+          
+          - text: "---"
+          - text: "📦 **Projet Avancé** (Multi-Tenant Platform)"
+            href: notebooks/advanced/40_projet_integrateur_avance.ipynb
 
-          - notebooks/intermediate/19_pyspark_advanced.ipynb
-          - notebooks/intermediate/20_spark_sql_deep_dive.ipynb
-          - notebooks/intermediate/21_spark_on_kubernetes.ipynb
+      # =========================================================================
+      # 📚 RESSOURCES
+      # =========================================================================
+      - text: "---"
+      - section: "📚 Ressources"
+        contents:
+          - text: "🔧 Setup Environnement"
+            href: resources/setup.qmd
+          - text: "📖 Documentation"
+            href: resources/documentation.qmd
+          - text: "❓ FAQ"
+            href: resources/faq.qmd
+          - text: "🔗 Liens Utiles"
+            href: resources/links.qmd
+          - text: "📝 Glossaire"
+            href: resources/glossary.qmd
 
-          - notebooks/intermediate/22_cloud_and_object_storage.ipynb
-          - notebooks/intermediate/23_table_formats_delta_iceberg.ipynb
-          - notebooks/intermediate/24_kafka_streaming.ipynb
-          - notebooks/intermediate/25_dbt_data_quality.ipynb
-          - notebooks/intermediate/26_projet_integrateur.ipynb
+  # ---------------------------------------------------------------------------
+  # 🔍 SEARCH
+  # ---------------------------------------------------------------------------
+  search:
+    location: navbar
+    type: overlay
+    copy-button: true
 
-      # -------------------------------------
-      # NIVEAU AVANCÉ
-      # -------------------------------------
-      - section: "Avancé"
-        # contents:
-        #  - notebooks/advanced/31_k8s_deep_dive.ipynb
-        #  - notebooks/advanced/32_kafka_vs_rabbitmq.ipynb
-        #  - notebooks/advanced/33_spark_scala_advanced.ipynb
-        #  - notebooks/advanced/34_flink_realtime_engine.ipynb
-        #  - notebooks/advanced/35_feature_store_engineering.ipynb
-        #  - notebooks/advanced/36_architecture_decision_framework.ipynb
-        #  - notebooks/advanced/37_soft_skills_senior_engineer.ipynb
+# ==============================================================================
+# 💬 COMMENTS (GISCUS)
+# ==============================================================================
 
-
-# -------------------------------------
-# COMMENTAIRES (GISCUS)
-# -------------------------------------
 comments:
   giscus:
     repo: "diakite-data/data-engineering-bootcamp"
     repo-id: "R_kgDOQjHMsg"
     category: "General"
     category-id: "DIC_kwDOQjHMss4CzeOO"
-    mapping: "pathname"
+    mapping: pathname
     reactions-enabled: true
-    input-position: "top"
-    theme: "preferred_color_scheme"
-    language: "fr"
+    input-position: top
+    theme: preferred_color_scheme
+    language: fr
+    loading: lazy
 
-# -------------------------------------
-# FORMAT HTML GLOBAL
-# -------------------------------------
+# ==============================================================================
+# 🎨 FORMAT HTML GLOBAL
+# ==============================================================================
+
 format:
   html:
     theme:
-      light: cosmo
-      dark: cyborg
-    css: styles.css
+      light: [cosmo, styles.css]
+      dark: [cyborg, styles.css]
+    
+    # Code
+    code-fold: true
+    code-summary: "Voir le code"
+    code-tools: true
+    code-copy: true
+    code-overflow: wrap
+    code-line-numbers: false
+    highlight-style: dracula
+    
+    # Table of Contents
     toc: true
     toc-depth: 3
-    number-sections: false
+    toc-title: "📑 Sommaire"
+    toc-expand: 2
+    
+    # Layout
+    page-layout: article
+    grid:
+      sidebar-width: 280px
+      body-width: 900px
+      margin-width: 250px
+    
+    # Navigation
     smooth-scroll: true
-    code-fold: true
-    highlight-style: dracula
-    search: true
+    anchor-sections: true
+    link-external-icon: true
+    link-external-newwindow: true
+    
+    # Other
+    number-sections: false
+    fig-responsive: true
+    self-contained: false
+    
+    # Include
+    include-in-header:
+      - text: |
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+          <meta name="author" content="Diakite Data">
+          <meta name="keywords" content="data engineering, spark, kafka, python, kubernetes, lakehouse, delta lake, bootcamp">
 
-# -------------------------------------
-# RÈGLE AUTOMATIQUE POUR LES FLEX BUTTONS
-# -------------------------------------
+# ==============================================================================
+# 📓 JUPYTER / NOTEBOOKS
+# ==============================================================================
+
+jupyter:
+  kernel: python3
+  
+execute:
+  enabled: true
+  cache: true
+  freeze: auto
+  error: false
+  warning: true
+  echo: true
+  output: true
+
+# ==============================================================================
+# 🔧 METADATA FILES
+# ==============================================================================
+
 metadata-files:
   - includes/ipynb-button.yml
+
+# ==============================================================================
+# 📁 RESOURCES
+# ==============================================================================
+
+resources:
+  - assets/images/**
+  - assets/data/**
+  - notebooks/**/*.csv
+  - notebooks/**/*.json
+  - notebooks/**/*.parquet
