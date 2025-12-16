@@ -40,34 +40,21 @@ website:
       # -------------------------------------
       - section: "Intermédiaire"
         contents:
-
-          # Bloc 5 – Containerisation / Kubernetes
           - notebooks/intermediate/14_docker_for_data_engineers.ipynb
           - notebooks/intermediate/15_kubernetes_fundamentals.ipynb
           - notebooks/intermediate/16_k8s_for_data_workloads.ipynb
 
-          # Bloc 6 – Performance & Distributed Python
           - notebooks/intermediate/17_polars_for_data_engineering.ipynb
           - notebooks/intermediate/18_high_performance_python.ipynb
 
-          # Bloc 7 – Spark Avancé
           - notebooks/intermediate/19_pyspark_advanced.ipynb
           - notebooks/intermediate/20_spark_sql_deep_dive.ipynb
           - notebooks/intermediate/21_spark_on_kubernetes.ipynb
 
-          # Bloc 8 – Cloud & Lakehouse (actif)
           - notebooks/intermediate/22_cloud_and_object_storage.ipynb
-
-          # Bloc 9 – Lakehouse Formats 
           - notebooks/intermediate/23_table_formats_delta_iceberg.ipynb
-
-          # Bloc 10 – Streaming 
           - notebooks/intermediate/24_kafka_streaming.ipynb
-
-          # Bloc 11 – Data Quality & dbt 
           - notebooks/intermediate/25_dbt_data_quality.ipynb
-
-          # Projet intégrateur
           # - notebooks/intermediate/26_capstone_project.ipynb
 
 
@@ -108,6 +95,8 @@ format:
     highlight-style: dracula
     search: true
 
-    # Intégration des fichiers personnalisés
-    include-after-body:
-      - includes/download.html
+# -------------------------------------
+# RÈGLE AUTOMATIQUE POUR LES MODULES .ipynb
+# -------------------------------------
+metadata-files:
+  - includes/ipynb-button.yml

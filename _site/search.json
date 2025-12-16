@@ -2860,37 +2860,37 @@
     "href": "index.html#pourquoi-choisir-ce-bootcamp",
     "title": "Bootcamp Data Engineering – From Zero to Hero",
     "section": "🎯 Pourquoi choisir ce Bootcamp ?",
-    "text": "🎯 Pourquoi choisir ce Bootcamp ?\nCe programme a été conçu par et pour des Data Engineers, en se concentrant sur les exigences réelles du marché du travail. Nous transformons votre ambition en expertise pratique.\n\n✔ Expertise Industrielle : Maîtrisez les outils modernes utilisés par les géants de la Tech (Spark 3.x, Kafka, Docker, Kubernetes, dbt, Cloud multi-plateforme).\n✔ Architectures Avancées : Devenez architecte de vos propres pipelines en comprenant les modèles Lakehouse (Delta/Iceberg), Medaillon, et les architectures Kappa/Lambda modernes.\n✔ Focus Production : Déployez des pipelines batch et streaming de bout en bout, de l’ingestion brute à la table Gold optimisée.\n✔ Progression Mesurée : Le parcours est divisé en trois niveaux clairs : Débutant → Intermédiaire → Avancé, pour une montée en compétence garantie.\n\n\n👥 À qui s’adresse ce Bootcamp ?\n\nÉtudiants & Développeurs : Vous voulez une porte d’entrée structurée dans le domaine de la Data Engineering.\nAnalystes BI : Vous souhaitez migrer vers le Big Data, le Cloud et l’industrialisation des pipelines.\nProfessionnels : Vous cherchez à structurer, optimiser et gouverner une plateforme Data moderne en entreprise.\n\n\n\n\n🛠️ Résumé des Technologies (Votre Boîte à Outils)\n\n\n\n\n\n\n\nDomaine\nOutils & Technologies\n\n\n\n\nBig Data Processing\nSpark (PySpark), Spark SQL, Polars, Dask, Vaex\n\n\nData Lakehouse\nDelta Lake, Apache Iceberg, Hudi\n\n\nStreaming\nApache Kafka, Spark Structured Streaming, Flink\n\n\nDevOps / Infra\nDocker, Kubernetes (K8s), Spark Operator, Helm\n\n\nCloud Computing\nAWS S3, GCP GCS, Azure Blob, IAM, MinIO\n\n\nData Quality & ETL\ndbt (Data Build Tool), Great Expectations\n\n\nMLOps & Architecture\nMLflow, Feature Store, Data Mesh, Observability",
+    "text": "🎯 Pourquoi choisir ce Bootcamp ?\nCe programme a été conçu par des Data Engineers expérimentés, en se concentrant sur les exigences réelles du marché.\nIl vous accompagne de manière progressive vers un niveau professionnel – Senior Ready.\n\n✔ Ce que vous allez maîtriser\n\nOutils industriels : Spark 3.x, Kafka, Docker, Kubernetes, dbt, Lakehouse (Delta/Iceberg).\nArchitectures modernes : Médaillon (Bronze/Silver/Gold), Kappa, Lambda, Data Lakehouse.\nCompétences d’ingénierie : optimisation, gouvernance, orchestration, CI/CD, cloud.\nIndustrialisation : création de pipelines batch et streaming totalement opérationnels.",
     "crumbs": [
       "Bootcamp Data Engineering – From Zero to Hero"
     ]
   },
   {
-    "objectID": "index.html#la-structure-complète-du-programme",
-    "href": "index.html#la-structure-complète-du-programme",
+    "objectID": "index.html#à-qui-sadresse-ce-bootcamp",
+    "href": "index.html#à-qui-sadresse-ce-bootcamp",
     "title": "Bootcamp Data Engineering – From Zero to Hero",
-    "section": "📘 La Structure Complète du Programme",
-    "text": "📘 La Structure Complète du Programme\nLa progression est claire : Fondations → Industrialisation → Architecture.",
+    "section": "👥 À qui s’adresse ce Bootcamp ?",
+    "text": "👥 À qui s’adresse ce Bootcamp ?\n\nÉtudiants / Développeurs voulant entrer dans le monde du Big Data.\nAnalystes BI souhaitant évoluer vers le Data Engineering moderne.\nProfessionnels expérimentés voulant structurer une plateforme Data complète.\nArchitectes & Managers cherchant à comprendre les technos Data modernes.",
     "crumbs": [
       "Bootcamp Data Engineering – From Zero to Hero"
     ]
   },
   {
-    "objectID": "index.html#comment-utiliser-ce-bootcamp",
-    "href": "index.html#comment-utiliser-ce-bootcamp",
+    "objectID": "index.html#votre-boîte-à-outils-data-engineering",
+    "href": "index.html#votre-boîte-à-outils-data-engineering",
     "title": "Bootcamp Data Engineering – From Zero to Hero",
-    "section": "📌 Comment utiliser ce Bootcamp ?",
-    "text": "📌 Comment utiliser ce Bootcamp ?\nLe Bootcamp est organisé dans l’ordre pédagogique exact nécessaire pour devenir Data Engineer :\n\nOuvrez le menu latéral gauche.\n\nCliquez sur le premier module : 01 – Introduction au Data Engineering.\n\nProgressez ensuite dans l’ordre recommandé (Débutant → Intermédiaire → Avancé).\n\n👉 Pour commencer tout de suite :\n🚀 Démarrer le Module 01",
+    "section": "🛠️ Votre Boîte à Outils Data Engineering",
+    "text": "🛠️ Votre Boîte à Outils Data Engineering\n\n\n\n\n\n\n\nDomaine\nOutils & Technologies\n\n\n\n\nBig Data Processing\nPySpark, Spark SQL, Polars, Dask\n\n\nLakehouse\nDelta Lake, Apache Iceberg, Hudi\n\n\nStreaming\nKafka, Spark Streaming, Flink\n\n\nDevOps / Infra\nDocker, Kubernetes, Helm, Spark Operator\n\n\nCloud\nAWS S3, GCP GCS, Azure Blob, IAM, MinIO\n\n\nQualité & ETL\ndbt, Great Expectations\n\n\nMLOps / Architecture\nMLflow, Feature Store, Observability, Data Mesh",
     "crumbs": [
       "Bootcamp Data Engineering – From Zero to Hero"
     ]
   },
   {
-    "objectID": "index.html#ready-to-start",
-    "href": "index.html#ready-to-start",
+    "objectID": "index.html#bonne-montée-en-compétence",
+    "href": "index.html#bonne-montée-en-compétence",
     "title": "Bootcamp Data Engineering – From Zero to Hero",
-    "section": "🚀 Ready to Start?",
-    "text": "🚀 Ready to Start?\nCe bootcamp est conçu pour vous emmener de la théorie à la pratique industrielle.\n👉 Commencez aujourd’hui pour démarrer votre transition.\n👉 Le programme est 100% pratique, progressif et centré sur le monde professionnel.\nBonne montée en compétence ! 💪",
+    "section": "🎉 Bonne montée en compétence !",
+    "text": "🎉 Bonne montée en compétence !\nVous êtes maintenant prêt à progresser étape par étape jusqu’au niveau expert.",
     "crumbs": [
       "Bootcamp Data Engineering – From Zero to Hero"
     ]
