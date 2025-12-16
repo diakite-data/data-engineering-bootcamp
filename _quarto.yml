@@ -262,17 +262,17 @@ website:
       # =========================================================================
       - text: "---"
       - section: "📚 Ressources"
-        contents:
-          - text: "🔧 Setup Environnement"
-            href: resources/setup.qmd
-          - text: "📖 Documentation"
-            href: resources/documentation.qmd
-          - text: "❓ FAQ"
-            href: resources/faq.qmd
-          - text: "🔗 Liens Utiles"
-            href: resources/links.qmd
-          - text: "📝 Glossaire"
-            href: resources/glossary.qmd
+        # contents:
+        #   - text: "🔧 Setup Environnement"
+        #     href: resources/setup.qmd
+        #   - text: "📖 Documentation"
+        #     href: resources/documentation.qmd
+        #   - text: "❓ FAQ"
+        #     href: resources/faq.qmd
+        #   - text: "🔗 Liens Utiles"
+        #     href: resources/links.qmd
+        #   - text: "📝 Glossaire"
+        #     href: resources/glossary.qmd
 
   # ---------------------------------------------------------------------------
   # 🔍 SEARCH
@@ -355,17 +355,10 @@ format:
 # 📓 JUPYTER / NOTEBOOKS
 # ==============================================================================
 
-jupyter:
-  kernel: python3
-  
+# Exécution désactivée - affiche le code sans l'exécuter
 execute:
-  enabled: true
-  cache: true
-  freeze: auto
-  error: false
-  warning: true
+  enabled: false
   echo: true
-  output: true
 
 # ==============================================================================
 # 🔧 METADATA FILES
