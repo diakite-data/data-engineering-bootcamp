@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>🗄️ Introduction aux Bases de Données Relationnelles – Bootcamp Data Engineering – From Zero to Hero</title>
+<title>🗄️ Introduction aux Bases de Données Relationnelles – Bootcamp Data Engineering</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -59,12 +59,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<link href="../../assets/images/favicon.ico" rel="icon">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -77,12 +77,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-fc8d3d93f0a84b7619e1f8ff6eb63d42.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-6a2c4b793c0becaeb94cc5bf146c1484.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-9829addb8a8859fb2d6fc218213bf783.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-6a2c4b793c0becaeb94cc5bf146c1484.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-47097dccd91f59de9ae0f4db9509ef40.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-ce6d9ca224b9dc18717c34b3a116d6e3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-47097dccd91f59de9ae0f4db9509ef40.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
-  "copy-button": false,
+  "copy-button": true,
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
@@ -92,7 +92,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "/",
     "s"
   ],
-  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -108,9 +107,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<meta name="author" content="Diakite Data">
+<meta name="keywords" content="data engineering, spark, kafka, python, kubernetes, lakehouse, delta lake, bootcamp">
 
 
-<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="🗄️ Introduction aux Bases de Données Relationnelles – Bootcamp Data Engineering">
+<meta property="og:description" content="Programme complet Data Engineering — Du débutant au Senior Engineer">
+<meta property="og:site_name" content="Bootcamp Data Engineering">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:title" content="🗄️ Introduction aux Bases de Données Relationnelles – Bootcamp Data Engineering">
+<meta name="twitter:description" content="Programme complet Data Engineering — Du débutant au Senior Engineer">
+<meta name="twitter:creator" content="@diakite_data">
+<meta name="twitter:site" content="@diakite_data">
+<meta name="twitter:card" content="summary">
 </head>
 
 <body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -282,8 +294,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">Bootcamp Data Engineering – From Zero to Hero</span>
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../assets/images/logo.png" alt="Data Engineering Bootcamp" class="navbar-logo light-content">
+    <img src="../../assets/images/logo.png" alt="Data Engineering Bootcamp" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -291,9 +304,63 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">🏠 Accueil</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-programme" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">📘 Programme</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-programme">    
+        <li>
+    <a class="dropdown-item" href="../../notebooks/beginner/01_intro_data_engineering.html">
+ <span class="dropdown-text">🟦 Niveau Débutant</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../notebooks/intermediate/14_docker_for_data_engineers.html">
+ <span class="dropdown-text">🟩 Niveau Intermédiaire</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../notebooks/advanced/31_k8s_deep_dive.ipynb">
+ <span class="dropdown-text">🟥 Niveau Avancé</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li>
+    <a class="dropdown-item" href="../../curriculum.qmd">
+ <span class="dropdown-text">📊 Vue d’ensemble</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-ressources" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">🛠️ Ressources</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-ressources">    
+        <li>
+    <a class="dropdown-item" href="../../resources/documentation.qmd">
+ <span class="dropdown-text">📚 Documentation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../resources/setup.qmd">
+ <span class="dropdown-text">🔧 Setup Environnement</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../resources/faq.qmd">
+ <span class="dropdown-text">❓ FAQ</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li>
+    <a class="dropdown-item" href="../../resources/links.qmd">
+ <span class="dropdown-text">🔗 Liens Utiles</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/diakite-data/data-engineering-bootcamp"> <i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/diakite-data/data-engineering-bootcamp"> <i class="bi bi-github" role="img" aria-label="GitHub Repository">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -309,7 +376,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notebooks/beginner/01_intro_data_engineering.html">Débutant</a></li><li class="breadcrumb-item"><a href="../../notebooks/beginner/06_intro_relational_databases.html">🗄️ Introduction aux Bases de Données Relationnelles</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">🟦 Niveau 1 : Débutant</li><li class="breadcrumb-item"><a href="../../notebooks/beginner/06_intro_relational_databases.html">🗄️ Bases de Données</a></li><li class="breadcrumb-item"><a href="../../notebooks/beginner/06_intro_relational_databases.html">06 · Introduction aux BDD Relationnelles</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -332,184 +399,451 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Débutant</span></a>
+ <span class="menu-text">🟦 Niveau 1 : Débutant</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="px-0"><hr class="sidebar-divider hi "></li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">📌 Fondations</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../notebooks/beginner/01_intro_data_engineering.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">🧠 Introduction au Data Engineering</span></a>
+ <span class="menu-text">01 · Introduction au Data Engineering</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../notebooks/beginner/02_bash_for_data_engineers.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">🧰 Bash pour Data Engineers</span></a>
+ <span class="menu-text">02 · Linux &amp; Bash</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../notebooks/beginner/03_git_for_data_engineers.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">📘 Git pour Data Engineers</span></a>
+ <span class="menu-text">03 · Git &amp; Versioning</span></a>
   </div>
 </li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">🐍 Python</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../notebooks/beginner/04_python_basics_for_data_engineers.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">📘 Python – Bases pour Data Engineers</span></a>
+ <span class="menu-text">04 · Python Fondamental</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../notebooks/beginner/05_python_data_processing_for_data_engineers.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">📊 Python for Data Processing - Complete Guide</span></a>
+ <span class="menu-text">05 · Python Data Processing</span></a>
   </div>
 </li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">🗄️ Bases de Données</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../notebooks/beginner/06_intro_relational_databases.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">🗄️ Introduction aux Bases de Données Relationnelles</span></a>
+ <span class="menu-text">06 · Introduction aux BDD Relationnelles</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../notebooks/beginner/07_sql_for_data_engineers.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">🐘 SQL for Data Engineers</span></a>
+ <span class="menu-text">07 · SQL pour Data Engineers</span></a>
   </div>
 </li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">📊 Big Data &amp; NoSQL</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../notebooks/beginner/08_intro_big_data_distributed.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">🐘 Introduction au Big Data &amp; Systèmes Distribués</span></a>
+ <span class="menu-text">08 · Introduction Big Data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../notebooks/beginner/09_mongodb_for_data_engineers.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">🍃 MongoDB for Data Engineers</span></a>
+ <span class="menu-text">09 · MongoDB</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../notebooks/beginner/10_elasticsearch_for_data_engineers.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">🔍 Elasticsearch for Data Engineers</span></a>
+ <span class="menu-text">10 · Elasticsearch</span></a>
   </div>
 </li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">⚡ Spark &amp; Orchestration</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../notebooks/beginner/11_pyspark_for_data_engineering.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">⚡ PySpark for Data Engineering</span></a>
+ <span class="menu-text">11 · Introduction PySpark</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../notebooks/beginner/12_orchestration_pipelines.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">⏰ Orchestration de Pipelines Data</span></a>
+ <span class="menu-text">12 · Orchestration de Pipelines</span></a>
   </div>
 </li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">🎁 Bonus</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">🚀 BONUS : FastAPI pour Data Engineers</span></a>
+ <span class="menu-text">13 · FastAPI pour Data Engineers</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="px-0"><hr class="sidebar-divider hi "></li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/projet_debutant.ipynb" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">📦 <strong>Projet Débutant</strong></span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Intermédiaire</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
+ <span class="menu-text">🟩 Niveau 2 : Intermédiaire</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="px-0"><hr class="sidebar-divider hi "></li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
+ <span class="menu-text">🐳 Containers &amp; Cloud</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../notebooks/intermediate/14_docker_for_data_engineers.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">🐳 Docker pour Data Engineers</span></a>
+ <span class="menu-text">14 · Docker pour Data Engineers</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../notebooks/intermediate/15_kubernetes_fundamentals.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">☸️ Kubernetes Fundamentals pour Data Engineers</span></a>
+ <span class="menu-text">15 · Kubernetes Fondamentaux</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../notebooks/intermediate/16_k8s_for_data_workloads.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">☸️ Kubernetes pour Workloads Data</span></a>
+ <span class="menu-text">16 · K8s pour Data Workloads</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notebooks/intermediate/17_polars_for_data_engineering.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">🐻‍❄️ Polars pour Data Engineers</span></a>
+  <a href="../../notebooks/intermediate/17_cloud_object_storage.ipynb" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">17 · Cloud Object Storage</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false">
+ <span class="menu-text">🚀 High Performance Python</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/18_polars_for_data_engineering.ipynb" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">18 · Polars pour Data Engineering</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notebooks/intermediate/18_high_performance_python.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">⚡ High Performance Python</span></a>
+  <a href="../../notebooks/intermediate/19_high_performance_python.ipynb" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">19 · High Performance Python</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false">
+ <span class="menu-text">⚡ Spark Avancé</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/20_pyspark_advanced.ipynb" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">20 · PySpark Avancé</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notebooks/intermediate/19_pyspark_advanced.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">🚀 PySpark Advanced</span></a>
+  <a href="../../notebooks/intermediate/21_spark_sql_deep_dive.ipynb" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">21 · Spark SQL Deep Dive</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notebooks/intermediate/20_spark_sql_deep_dive.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">🔍 Spark SQL Deep Dive &amp; Optimisation</span></a>
+  <a href="../../notebooks/intermediate/22_spark_on_kubernetes.ipynb" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">22 · Spark on Kubernetes</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../notebooks/intermediate/21_spark_on_kubernetes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">☸️ Spark on Kubernetes — Production-Grade Deployment</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../notebooks/intermediate/22_cloud_and_object_storage.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">☁️ Cloud &amp; Object Storage for Data Engineers</span></a>
-  </div>
-</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false">
+ <span class="menu-text">🏠 Lakehouse &amp; Streaming</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../notebooks/intermediate/23_table_formats_delta_iceberg.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">💎 Table Formats : Delta Lake &amp; Apache Iceberg</span></a>
+ <span class="menu-text">23 · Table Formats (Delta, Iceberg)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../notebooks/intermediate/24_kafka_streaming.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">🌊 Kafka, Python &amp; Structured Streaming</span></a>
+ <span class="menu-text">24 · Kafka &amp; Streaming</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notebooks/intermediate/25_dbt_data_quality.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">🏗️ dbt (Data Build Tool) &amp; Data Quality</span></a>
+  <a href="../../notebooks/intermediate/25_spark_structured_streaming.ipynb" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">25 · Spark Structured Streaming</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false">
+ <span class="menu-text">🔧 Industrialisation</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/26_airflow_orchestration.ipynb" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">26 · Orchestration Airflow</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notebooks/intermediate/26_projet_integrateur.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">🚀 Projet Intégrateur : Pipeline E-commerce Olist</span></a>
+  <a href="../../notebooks/intermediate/27_dbt_data_quality.ipynb" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">27 · dbt &amp; Data Quality</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/28_cicd_data_pipelines.ipynb" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">28 · CI/CD pour Data Pipelines</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="px-0"><hr class="sidebar-divider hi "></li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/29_projet_integrateur.ipynb" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">📦 <strong>Projet Intermédiaire</strong> (Olist)</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false">
+ <span class="menu-text">🟥 Niveau 3 : Avancé</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="px-0"><hr class="sidebar-divider hi "></li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false">
+ <span class="menu-text">☸️ Infrastructure Avancée</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/advanced/31_k8s_deep_dive.ipynb" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">31 · Kubernetes Deep Dive</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/advanced/32_distributed_messaging_systems.ipynb" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">32 · Messaging Systems (Kafka, RabbitMQ, Pulsar)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="false">
+ <span class="menu-text">⚡ Processing Avancé</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-16" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/advanced/33_spark_scala_internals.ipynb" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">33 · Spark &amp; Scala Internals</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/advanced/34_apache_flink.ipynb" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">34 · Apache Flink</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" role="navigation" aria-expanded="false">
+ <span class="menu-text">🤖 MLOps &amp; Governance</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-17" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/advanced/35_mlops_for_data_engineers.ipynb" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">35 · MLOps pour Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/advanced/36_data_governance_security.ipynb" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">36 · Data Governance &amp; Security</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" role="navigation" aria-expanded="false">
+ <span class="menu-text">🏛️ Architecture &amp; Leadership</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-18" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/advanced/37_architectural_tradeoffs.ipynb" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">37 · Architectural Trade-Offs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/advanced/38_technical_leadership.ipynb" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">38 · Technical Leadership</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/advanced/39_data_platform_design.ipynb" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">39 · Data Platform Design</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="px-0"><hr class="sidebar-divider hi "></li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/advanced/40_projet_integrateur_avance.ipynb" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">📦 <strong>Projet Avancé</strong> (Multi-Tenant Platform)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
       <span class="sidebar-item-text sidebar-link text-start">
- <span class="menu-text">Avancé</span></span>
+ <span class="menu-text">📚 Ressources</span></span>
   </li>
     </ul>
     </div>
@@ -517,8 +851,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="2">
+    <h2 id="toc-title">📑 Sommaire</h2>
    
   <ul>
   <li><a href="#prérequis" id="toc-prérequis" class="nav-link active" data-scroll-target="#prérequis">📋 Prérequis</a></li>
@@ -626,13 +960,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#prochaine-étape" id="toc-prochaine-étape" class="nav-link" data-scroll-target="#prochaine-étape">➡️ Prochaine étape</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="git@github.com:diakite-data/data-engineering-bootcamp.git/blob/main/notebooks/beginner/06_intro_relational_databases.ipynb" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="git@github.com:diakite-data/data-engineering-bootcamp.git/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/diakite-data/data-engineering-bootcamp/blob/main/notebooks/beginner/06_intro_relational_databases.ipynb" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/diakite-data/data-engineering-bootcamp/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.dev/diakite-data/data-engineering-bootcamp/blob/main/notebooks/beginner/06_intro_relational_databases.ipynb" class="toc-action"><i class="bi empty"></i>Edit this page</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notebooks/beginner/01_intro_data_engineering.html">Débutant</a></li><li class="breadcrumb-item"><a href="../../notebooks/beginner/06_intro_relational_databases.html">🗄️ Introduction aux Bases de Données Relationnelles</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">🟦 Niveau 1 : Débutant</li><li class="breadcrumb-item"><a href="../../notebooks/beginner/06_intro_relational_databases.html">🗄️ Bases de Données</a></li><li class="breadcrumb-item"><a href="../../notebooks/beginner/06_intro_relational_databases.html">06 · Introduction aux BDD Relationnelles</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">🗄️ Introduction aux Bases de Données Relationnelles</h1>
 </div>
@@ -2744,6 +3078,57 @@ function downloadPDF() {
       });
       clipboardModal.on('success', onCopySuccess);
     }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
         var filterRegex = new RegExp("https:\/\/diakite-data\.github\.io\/data-engineering-bootcamp");
@@ -2760,6 +3145,13 @@ function downloadPDF() {
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -3106,9 +3498,35 @@ function downloadPDF() {
   loadGiscus();
 </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2025 Bootcamp Data Engineering · From Zero to Hero</p>
+</div>   
+    <div class="nav-footer-center">
+<p>Fait avec ❤️ et <a href="https://quarto.org">Quarto</a></p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/diakite-data/data-engineering-bootcamp/blob/main/notebooks/beginner/06_intro_relational_databases.ipynb" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/diakite-data/data-engineering-bootcamp/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.dev/diakite-data/data-engineering-bootcamp/blob/main/notebooks/beginner/06_intro_relational_databases.ipynb" class="toc-action"><i class="bi empty"></i>Edit this page</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/diakite-data/data-engineering-bootcamp">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://linkedin.com/in/diakite-data">
+      <i class="bi bi-linkedin" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
 
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="git@github.com:diakite-data/data-engineering-bootcamp.git/blob/main/notebooks/beginner/06_intro_relational_databases.ipynb" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="git@github.com:diakite-data/data-engineering-bootcamp.git/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
