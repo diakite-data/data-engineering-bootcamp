@@ -108,37 +108,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
-<!-- ===== Sidebar Progress Tracker ===== -->
 
-<style>
-  .progress-box {
-    margin-top: 20px;
-    padding: 10px;
-    background: #f8f9fa;
-    border-radius: 8px;
-    font-size: 14px;
-  }
 
-  .module-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 4px 0;
-    cursor: pointer;
-  }
+<link rel="stylesheet" href="../../styles.css">
+</head>
 
-  .module-item label {
-    cursor: pointer;
-  }
-
-  .progress-total {
-    margin-top: 10px;
-    font-weight: bold;
-    text-align: center;
-  }
-</style>
-
-</head><body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -300,90 +275,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     } else {
       toggleColorMode(false);
     }
-  </script><div class="progress-box">
-  <h4>📘 Progression</h4>
-
-  <div id="module-list">
-    <!-- Items ajoutés dynamiquement -->
-  </div>
-
-  <div class="progress-total">
-    <span id="progress-percent">0%</span> complété
-  </div>
-</div>
-
-<script>
-  // ------------- Config : liste des modules -----------------
-  const modules = [
-    "01_intro_data_engineering",
-    "02_bash_for_data_engineers",
-    "03_git_for_data_engineers",
-    "04_python_basics_for_data_engineers",
-    "05_python_data_processing_for_data_engineers",
-    "06_intro_relational_databases",
-    "07_sql_for_data_engineers",
-    "08_intro_big_data_distributed",
-    "09_mongodb_for_data_engineers",
-    "10_elasticsearch_for_data_engineers",
-    "11_pyspark_for_data_engineering",
-    "12_orchestration_pipelines",
-    "13_fastapi_for_data_engineers",
-    // Intermédiaire :
-    "14_docker_for_data_engineers",
-    "15_kubernetes_fundamentals",
-    "16_k8s_for_data_workloads",
-    "17_polars_for_data_engineering",
-    "18_high_performance_python",
-    "19_pyspark_advanced",
-    "20_spark_sql_deepdive",
-    "21_spark_on_k8s",
-    "22_cloud_storage",
-    "23_table_formats",
-    "24_kafka_streaming",
-    "25_dbt_data_quality",
-    "26_projet_integrateur"
-  ];
-
-  // ----------- Création dynamique de la liste ----------
-  const listContainer = document.getElementById("module-list");
-
-  modules.forEach(mod => {
-    const checked = localStorage.getItem(mod) === "true" ? "checked" : "";
-    
-    const item = `
-      <div class="module-item">
-          <label>${mod.replace(/_/g, " ")}</label>
-          <input type="checkbox" data-mod="${mod}" ${checked}>
-      </div>`;
-    
-    listContainer.insertAdjacentHTML("beforeend", item);
-  });
-
-  // ----------- Gestion du clic + sauvegarde ----------
-  listContainer.addEventListener("change", (e) => {
-    const mod = e.target.dataset.mod;
-    localStorage.setItem(mod, e.target.checked);
-    updateProgress();
-  });
-
-  // ----------- Calcul progression ----------
-  function updateProgress() {
-    let completed = 0;
-    modules.forEach(m => {
-      if (localStorage.getItem(m) === "true") completed++;
-    });
-    const percent = Math.round((completed / modules.length) * 100);
-    document.getElementById("progress-percent").textContent = percent + "%";
-  }
-
-  updateProgress();
-</script>
-
-
-<link rel="stylesheet" href="../../styles.css">
-
-
-
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
