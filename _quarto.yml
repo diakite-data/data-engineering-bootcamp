@@ -9,15 +9,19 @@ website:
   repo-url: "git@github.com:diakite-data/data-engineering-bootcamp.git"
   repo-actions: [source, issue]
 
+  navbar:
+    right:
+      - icon: github
+        href: https://github.com/diakite-data/data-engineering-bootcamp
+
   sidebar:
     style: "floating"
     search: true
     collapse-level: 2
     contents:
-      - index.qmd
 
       # -------------------------------------
-      # NIVEAU DEBUTANT
+      # NIVEAU DÉBUTANT
       # -------------------------------------
       - section: "Débutant"
         contents:
@@ -55,16 +59,24 @@ website:
           - notebooks/intermediate/23_table_formats_delta_iceberg.ipynb
           - notebooks/intermediate/24_kafka_streaming.ipynb
           - notebooks/intermediate/25_dbt_data_quality.ipynb
-          # - notebooks/intermediate/26_capstone_project.ipynb
+          - notebooks/intermediate/26_projet_integrateur.ipynb
 
+      # -------------------------------------
+      # NIVEAU AVANCÉ
+      # -------------------------------------
+      - section: "Avancé"
+        # contents:
+        #  - notebooks/advanced/31_k8s_deep_dive.ipynb
+        #  - notebooks/advanced/32_kafka_vs_rabbitmq.ipynb
+        #  - notebooks/advanced/33_spark_scala_advanced.ipynb
+        #  - notebooks/advanced/34_flink_realtime_engine.ipynb
+        #  - notebooks/advanced/35_feature_store_engineering.ipynb
+        #  - notebooks/advanced/36_architecture_decision_framework.ipynb
+        #  - notebooks/advanced/37_soft_skills_senior_engineer.ipynb
 
-  navbar:
-    right:
-      - icon: github
-        href: https://github.com/diakite-data/data-engineering-bootcamp
 
 # -------------------------------------
-# COMMENTAIRES & GISCUS
+# COMMENTAIRES (GISCUS)
 # -------------------------------------
 comments:
   giscus:
@@ -96,7 +108,7 @@ format:
     search: true
 
 # -------------------------------------
-# RÈGLE AUTOMATIQUE POUR LES MODULES .ipynb
+# RÈGLE AUTOMATIQUE POUR LES FLEX BUTTONS
 # -------------------------------------
 metadata-files:
   - includes/ipynb-button.yml

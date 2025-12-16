@@ -2860,40 +2860,28 @@
     "href": "index.html#pourquoi-choisir-ce-bootcamp",
     "title": "Bootcamp Data Engineering – From Zero to Hero",
     "section": "🎯 Pourquoi choisir ce Bootcamp ?",
-    "text": "🎯 Pourquoi choisir ce Bootcamp ?\nCe programme a été conçu par des Data Engineers expérimentés, en se concentrant sur les exigences réelles du marché.\nIl vous accompagne de manière progressive vers un niveau professionnel – Senior Ready.\n\n✔ Ce que vous allez maîtriser\n\nOutils industriels : Spark 3.x, Kafka, Docker, Kubernetes, dbt, Lakehouse (Delta/Iceberg).\nArchitectures modernes : Médaillon (Bronze/Silver/Gold), Kappa, Lambda, Data Lakehouse.\nCompétences d’ingénierie : optimisation, gouvernance, orchestration, CI/CD, cloud.\nIndustrialisation : création de pipelines batch et streaming totalement opérationnels.",
-    "crumbs": [
-      "Bootcamp Data Engineering – From Zero to Hero"
-    ]
+    "text": "🎯 Pourquoi choisir ce Bootcamp ?\nCe programme a été conçu par des Data Engineers expérimentés, en se concentrant sur les exigences réelles du marché.\nIl vous accompagne de manière progressive vers un niveau professionnel – Senior Ready.\n\n✔ Ce que vous allez maîtriser\n\nOutils industriels : Spark 3.x, Kafka, Docker, Kubernetes, dbt, Lakehouse (Delta/Iceberg).\nArchitectures modernes : Médaillon (Bronze/Silver/Gold), Kappa, Lambda, Data Lakehouse.\nCompétences d’ingénierie : optimisation, gouvernance, orchestration, CI/CD, cloud.\nIndustrialisation : création de pipelines batch et streaming totalement opérationnels."
   },
   {
     "objectID": "index.html#à-qui-sadresse-ce-bootcamp",
     "href": "index.html#à-qui-sadresse-ce-bootcamp",
     "title": "Bootcamp Data Engineering – From Zero to Hero",
     "section": "👥 À qui s’adresse ce Bootcamp ?",
-    "text": "👥 À qui s’adresse ce Bootcamp ?\n\nÉtudiants / Développeurs voulant entrer dans le monde du Big Data.\nAnalystes BI souhaitant évoluer vers le Data Engineering moderne.\nProfessionnels expérimentés voulant structurer une plateforme Data complète.\nArchitectes & Managers cherchant à comprendre les technos Data modernes.",
-    "crumbs": [
-      "Bootcamp Data Engineering – From Zero to Hero"
-    ]
+    "text": "👥 À qui s’adresse ce Bootcamp ?\n\nÉtudiants / Développeurs voulant entrer dans le monde du Big Data.\nAnalystes BI souhaitant évoluer vers le Data Engineering moderne.\nProfessionnels expérimentés voulant structurer une plateforme Data complète.\nArchitectes & Managers cherchant à comprendre les technos Data modernes."
   },
   {
     "objectID": "index.html#votre-boîte-à-outils-data-engineering",
     "href": "index.html#votre-boîte-à-outils-data-engineering",
     "title": "Bootcamp Data Engineering – From Zero to Hero",
     "section": "🛠️ Votre Boîte à Outils Data Engineering",
-    "text": "🛠️ Votre Boîte à Outils Data Engineering\n\n\n\n\n\n\n\nDomaine\nOutils & Technologies\n\n\n\n\nBig Data Processing\nPySpark, Spark SQL, Polars, Dask\n\n\nLakehouse\nDelta Lake, Apache Iceberg, Hudi\n\n\nStreaming\nKafka, Spark Streaming, Flink\n\n\nDevOps / Infra\nDocker, Kubernetes, Helm, Spark Operator\n\n\nCloud\nAWS S3, GCP GCS, Azure Blob, IAM, MinIO\n\n\nQualité & ETL\ndbt, Great Expectations\n\n\nMLOps / Architecture\nMLflow, Feature Store, Observability, Data Mesh",
-    "crumbs": [
-      "Bootcamp Data Engineering – From Zero to Hero"
-    ]
+    "text": "🛠️ Votre Boîte à Outils Data Engineering\n\n\n\n\n\n\n\nDomaine\nOutils & Technologies\n\n\n\n\nBig Data Processing\nPySpark, Spark SQL, Polars, Dask\n\n\nLakehouse\nDelta Lake, Apache Iceberg, Hudi\n\n\nStreaming\nKafka, Spark Streaming, Flink\n\n\nDevOps / Infra\nDocker, Kubernetes, Helm, Spark Operator\n\n\nCloud\nAWS S3, GCP GCS, Azure Blob, IAM, MinIO\n\n\nQualité & ETL\ndbt, Great Expectations\n\n\nMLOps / Architecture\nMLflow, Feature Store, Observability, Data Mesh"
   },
   {
     "objectID": "index.html#bonne-montée-en-compétence",
     "href": "index.html#bonne-montée-en-compétence",
     "title": "Bootcamp Data Engineering – From Zero to Hero",
     "section": "🎉 Bonne montée en compétence !",
-    "text": "🎉 Bonne montée en compétence !\nVous êtes maintenant prêt à progresser étape par étape jusqu’au niveau expert.",
-    "crumbs": [
-      "Bootcamp Data Engineering – From Zero to Hero"
-    ]
+    "text": "🎉 Bonne montée en compétence !\nVous êtes maintenant prêt à progresser étape par étape jusqu’au niveau expert."
   },
   {
     "objectID": "notebooks/beginner/08_intro_big_data_distributed.html#prérequis",
