@@ -487,6 +487,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">☁️ Cloud &amp; Object Storage for Data Engineers</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/23_table_formats_delta_iceberg.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">💎 Table Formats : Delta Lake &amp; Apache Iceberg</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/24_kafka_streaming.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🌊 Kafka, Python &amp; Structured Streaming</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/25_dbt_data_quality.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🏗️ dbt (Data Build Tool) &amp; Data Quality</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -2342,6 +2360,37 @@ data/processed/output.parquet</code></pre>
 </section>
 
 </main> <!-- /main -->
+<!-- ===== Floating PDF Download Button ===== -->
+
+<style>
+#pdf-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #00b4d8;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 9999;
+  transition: 0.2s ease-in-out;
+}
+#pdf-button:hover {
+  background: #0077b6;
+}
+</style>
+
+<div id="pdf-button" onclick="downloadPDF()">
+  📄 Télécharger ce module en PDF
+</div>
+
+<script>
+function downloadPDF() {
+  window.print(); // fonctionne directement dans Quarto HTML
+}
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

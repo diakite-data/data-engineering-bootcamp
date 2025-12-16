@@ -487,6 +487,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">☁️ Cloud &amp; Object Storage for Data Engineers</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/23_table_formats_delta_iceberg.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">💎 Table Formats : Delta Lake &amp; Apache Iceberg</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/24_kafka_streaming.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🌊 Kafka, Python &amp; Structured Streaming</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/25_dbt_data_quality.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🏗️ dbt (Data Build Tool) &amp; Data Quality</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -1197,7 +1215,12 @@ YARN si :                           Kubernetes si :
 </section>
 <section id="exercice-2-construire-une-image-spark" class="level3">
 <h3 class="anchored" data-anchor-id="exercice-2-construire-une-image-spark">🏋️ Exercice 2 : Construire une image Spark</h3>
-<p><strong>Objectif</strong> : Créer un Dockerfile Spark avec : - Base <code>bitnami/spark:3.5</code> - Dépendance Python : <code>numpy</code> - Un script <code>hello.py</code> qui affiche “Hello Spark on K8s!”</p>
+<p><strong>Objectif</strong> : Créer un Dockerfile Spark avec :</p>
+<ul>
+<li>Base <code>bitnami/spark:3.5</code></li>
+<li>Dépendance Python : <code>numpy</code></li>
+<li>Un script <code>hello.py</code> qui affiche “Hello Spark on K8s!”</li>
+</ul>
 <details>
 <summary>
 💡 Solution
@@ -1241,7 +1264,12 @@ YARN si :                           Kubernetes si :
 </section>
 <section id="serviceaccount-rbac" class="level3">
 <h3 class="anchored" data-anchor-id="serviceaccount-rbac">4.2 ServiceAccount &amp; RBAC</h3>
-<p>Spark a besoin de permissions pour : - Créer des Pods (executors) - Lister/supprimer des Pods - Accéder aux ConfigMaps et Secrets</p>
+<p>Spark a besoin de permissions pour :</p>
+<ul>
+<li>Créer des Pods (executors)</li>
+<li>Lister/supprimer des Pods</li>
+<li>Accéder aux ConfigMaps et Secrets</li>
+</ul>
 <div id="rbac_yaml" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1419,7 +1447,12 @@ YARN si :                           Kubernetes si :
 <summary>
 💡 Réponse
 </summary>
-<p>Le Driver Spark a besoin de lire les logs des Executor Pods pour : - Afficher les erreurs dans le Spark UI - Permettre le debugging via <code>kubectl logs</code> - Collecter les métriques d’exécution</p>
+<p>Le Driver Spark a besoin de lire les logs des Executor Pods pour :</p>
+<ul>
+<li>Afficher les erreurs dans le Spark UI</li>
+<li>Permettre le debugging via <code>kubectl logs</code></li>
+<li>Collecter les métriques d’exécution</li>
+</ul>
 </details>
 <hr>
 </section>
@@ -1985,7 +2018,12 @@ YARN si :                           Kubernetes si :
 </section>
 <section id="exercice-6-configurer-dynamic-allocation" class="level3">
 <h3 class="anchored" data-anchor-id="exercice-6-configurer-dynamic-allocation">🏋️ Exercice 6 : Configurer Dynamic Allocation</h3>
-<p><strong>Objectif</strong> : Modifier la SparkApplication pour avoir : - Min 2 executors - Max 8 executors - Initial 3 executors</p>
+<p><strong>Objectif</strong> : Modifier la SparkApplication pour avoir :</p>
+<ul>
+<li>Min 2 executors</li>
+<li>Max 8 executors</li>
+<li>Initial 3 executors</li>
+</ul>
 <details>
 <summary>
 💡 Solution
@@ -2326,7 +2364,11 @@ Solutions :
 <section id="exercice-8-diagnostiquer-un-job-qui-échoue" class="level3">
 <h3 class="anchored" data-anchor-id="exercice-8-diagnostiquer-un-job-qui-échoue">🏋️ Exercice 8 : Diagnostiquer un job qui échoue</h3>
 <p><strong>Scénario</strong> : Un job Spark échoue avec le message “Pod OOMKilled”.</p>
-<p><strong>Questions</strong> : 1. Quelle commande pour voir les events du pod ? 2. Quelles configs Spark vérifier ?</p>
+<p><strong>Questions</strong> :</p>
+<ol type="1">
+<li>Quelle commande pour voir les events du pod ?</li>
+<li>Quelles configs Spark vérifier ?</li>
+</ol>
 <details>
 <summary>
 💡 Solution
@@ -2367,7 +2409,12 @@ Sur K8s avec Object Storage :
 │ │Executor│           │      │             │
 │ └────────┘           │      └─────────────┘
 └──────────────────────┘</code></pre>
-<p><strong>Solutions</strong> : - Utiliser des formats colonnaires (Parquet) optimisés - Configurer S3A/GCS pour le parallélisme - External Shuffle Service (Spark 3.4+)</p>
+<p><strong>Solutions</strong> :</p>
+<ul>
+<li>Utiliser des formats colonnaires (Parquet) optimisés</li>
+<li>Configurer S3A/GCS pour le parallélisme</li>
+<li>External Shuffle Service (Spark 3.4+)</li>
+</ul>
 <div id="s3a_optimizations" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -3026,7 +3073,13 @@ Sur K8s avec Object Storage :
 <h2 class="anchored" data-anchor-id="prochaine-étape">➡️ Prochaine étape</h2>
 <p>Maintenant que tu sais déployer Spark sur Kubernetes, passons au <strong>Cloud et Object Storage</strong> !</p>
 <p>👉 <strong>Module suivant : <code>22_cloud_object_storage.ipynb</code></strong> — Cloud &amp; Object Storage</p>
-<p>Tu vas apprendre : - <strong>Cloud Computing</strong> : IaaS, PaaS, SaaS - <strong>AWS, GCP, Azure</strong> : Services Data Engineering - <strong>Object Storage</strong> : S3, GCS, Azure Blob - <strong>MinIO</strong> : Pratiquer localement</p>
+<p>Tu vas apprendre :</p>
+<ul>
+<li><strong>Cloud Computing</strong> : IaaS, PaaS, SaaS</li>
+<li><strong>AWS, GCP, Azure</strong> : Services Data Engineering</li>
+<li><strong>Object Storage</strong> : S3, GCS, Azure Blob</li>
+<li><strong>MinIO</strong> : Pratiquer localement</li>
+</ul>
 <hr>
 <section id="récapitulatif-de-ce-module" class="level3">
 <h3 class="anchored" data-anchor-id="récapitulatif-de-ce-module">📝 Récapitulatif de ce module</h3>
@@ -3107,6 +3160,37 @@ Sur K8s avec Object Storage :
 </section>
 
 </main> <!-- /main -->
+<!-- ===== Floating PDF Download Button ===== -->
+
+<style>
+#pdf-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #00b4d8;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 9999;
+  transition: 0.2s ease-in-out;
+}
+#pdf-button:hover {
+  background: #0077b6;
+}
+</style>
+
+<div id="pdf-button" onclick="downloadPDF()">
+  📄 Télécharger ce module en PDF
+</div>
+
+<script>
+function downloadPDF() {
+  window.print(); // fonctionne directement dans Quarto HTML
+}
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
