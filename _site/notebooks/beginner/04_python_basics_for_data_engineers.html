@@ -108,12 +108,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
+<!-- ===== Sidebar Progress Tracker ===== -->
 
+<style>
+  .progress-box {
+    margin-top: 20px;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    font-size: 14px;
+  }
 
-<link rel="stylesheet" href="../../styles.css">
-</head>
+  .module-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 0;
+    cursor: pointer;
+  }
 
-<body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+  .module-item label {
+    cursor: pointer;
+  }
+
+  .progress-total {
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+  }
+</style>
+
+</head><body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -275,7 +300,90 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     } else {
       toggleColorMode(false);
     }
-  </script>
+  </script><div class="progress-box">
+  <h4>📘 Progression</h4>
+
+  <div id="module-list">
+    <!-- Items ajoutés dynamiquement -->
+  </div>
+
+  <div class="progress-total">
+    <span id="progress-percent">0%</span> complété
+  </div>
+</div>
+
+<script>
+  // ------------- Config : liste des modules -----------------
+  const modules = [
+    "01_intro_data_engineering",
+    "02_bash_for_data_engineers",
+    "03_git_for_data_engineers",
+    "04_python_basics_for_data_engineers",
+    "05_python_data_processing_for_data_engineers",
+    "06_intro_relational_databases",
+    "07_sql_for_data_engineers",
+    "08_intro_big_data_distributed",
+    "09_mongodb_for_data_engineers",
+    "10_elasticsearch_for_data_engineers",
+    "11_pyspark_for_data_engineering",
+    "12_orchestration_pipelines",
+    "13_fastapi_for_data_engineers",
+    // Intermédiaire :
+    "14_docker_for_data_engineers",
+    "15_kubernetes_fundamentals",
+    "16_k8s_for_data_workloads",
+    "17_polars_for_data_engineering",
+    "18_high_performance_python",
+    "19_pyspark_advanced",
+    "20_spark_sql_deepdive",
+    "21_spark_on_k8s",
+    "22_cloud_storage",
+    "23_table_formats",
+    "24_kafka_streaming",
+    "25_dbt_data_quality",
+    "26_projet_integrateur"
+  ];
+
+  // ----------- Création dynamique de la liste ----------
+  const listContainer = document.getElementById("module-list");
+
+  modules.forEach(mod => {
+    const checked = localStorage.getItem(mod) === "true" ? "checked" : "";
+    
+    const item = `
+      <div class="module-item">
+          <label>${mod.replace(/_/g, " ")}</label>
+          <input type="checkbox" data-mod="${mod}" ${checked}>
+      </div>`;
+    
+    listContainer.insertAdjacentHTML("beforeend", item);
+  });
+
+  // ----------- Gestion du clic + sauvegarde ----------
+  listContainer.addEventListener("change", (e) => {
+    const mod = e.target.dataset.mod;
+    localStorage.setItem(mod, e.target.checked);
+    updateProgress();
+  });
+
+  // ----------- Calcul progression ----------
+  function updateProgress() {
+    let completed = 0;
+    modules.forEach(m => {
+      if (localStorage.getItem(m) === "true") completed++;
+    });
+    const percent = Math.round((completed / modules.length) * 100);
+    document.getElementById("progress-percent").textContent = percent + "%";
+  }
+
+  updateProgress();
+</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+
+
+
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -485,6 +593,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="../../notebooks/intermediate/22_cloud_and_object_storage.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">☁️ Cloud &amp; Object Storage for Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/23_table_formats_delta_iceberg.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">💎 Table Formats : Delta Lake &amp; Apache Iceberg</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/24_kafka_streaming.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🌊 Kafka, Python &amp; Structured Streaming</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/25_dbt_data_quality.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🏗️ dbt (Data Build Tool) &amp; Data Quality</span></a>
   </div>
 </li>
       </ul>
@@ -4376,6 +4502,37 @@ Afficher une solution possible
 </section>
 
 </main> <!-- /main -->
+<!-- ===== Floating PDF Download Button ===== -->
+
+<style>
+#pdf-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #00b4d8;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 9999;
+  transition: 0.2s ease-in-out;
+}
+#pdf-button:hover {
+  background: #0077b6;
+}
+</style>
+
+<div id="pdf-button" onclick="downloadPDF()">
+  📄 Télécharger ce module en PDF
+</div>
+
+<script>
+function downloadPDF() {
+  window.print(); // fonctionne directement dans Quarto HTML
+}
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

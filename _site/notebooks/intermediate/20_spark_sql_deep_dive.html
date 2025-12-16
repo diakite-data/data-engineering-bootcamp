@@ -487,6 +487,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">☁️ Cloud &amp; Object Storage for Data Engineers</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/23_table_formats_delta_iceberg.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">💎 Table Formats : Delta Lake &amp; Apache Iceberg</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/24_kafka_streaming.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🌊 Kafka, Python &amp; Structured Streaming</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/25_dbt_data_quality.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🏗️ dbt (Data Build Tool) &amp; Data Quality</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -2141,9 +2159,8 @@ Données originales          PARTITION BY category    ORDER BY date       Calcul
 </section>
 <section id="prochaine-étape" class="level2">
 <h2 class="anchored" data-anchor-id="prochaine-étape">➡️ Prochaine étape</h2>
-<p>Maintenant que tu maîtrises Spark SQL, passons aux <strong>architectures Lakehouse modernes</strong> !</p>
-<p>👉 <strong>Module suivant : <code>21_lakehouse_delta_iceberg.ipynb</code></strong> — Lakehouse avec Delta Lake &amp; Iceberg</p>
-<p>Tu vas apprendre : - <strong>Delta Lake</strong> : ACID, Time Travel, Versioning - <strong>Apache Iceberg</strong> : Table format moderne - <strong>Schema Evolution</strong> : Gérer les changements de schéma - <strong>Optimisations</strong> : Compaction, Z-Ordering, Vacuum</p>
+<p>Maintenant que tu maîtrises Spark SQL, passons à spark sur K8S !</p>
+<p>👉 <strong>Module suivant : <code>21_spark_on_kubernetes.ipynb</code></strong> - Spark &amp; Kubernetes</p>
 <hr>
 <section id="récapitulatif-de-ce-module" class="level3">
 <h3 class="anchored" data-anchor-id="récapitulatif-de-ce-module">📝 Récapitulatif de ce module</h3>
@@ -2207,6 +2224,37 @@ Données originales          PARTITION BY category    ORDER BY date       Calcul
 </section>
 
 </main> <!-- /main -->
+<!-- ===== Floating PDF Download Button ===== -->
+
+<style>
+#pdf-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #00b4d8;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 9999;
+  transition: 0.2s ease-in-out;
+}
+#pdf-button:hover {
+  background: #0077b6;
+}
+</style>
+
+<div id="pdf-button" onclick="downloadPDF()">
+  📄 Télécharger ce module en PDF
+</div>
+
+<script>
+function downloadPDF() {
+  window.print(); // fonctionne directement dans Quarto HTML
+}
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

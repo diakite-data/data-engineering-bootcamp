@@ -1,0 +1,1906 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>💎 Table Formats : Delta Lake &amp; Apache Iceberg – Bootcamp Data Engineering – From Zero to Hero</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-fc8d3d93f0a84b7619e1f8ff6eb63d42.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-fc8d3d93f0a84b7619e1f8ff6eb63d42.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-fc8d3d93f0a84b7619e1f8ff6eb63d42.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-6a2c4b793c0becaeb94cc5bf146c1484.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-9829addb8a8859fb2d6fc218213bf783.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-6a2c4b793c0becaeb94cc5bf146c1484.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Bootcamp Data Engineering – From Zero to Hero</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/diakite-data/data-engineering-bootcamp"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notebooks/intermediate/14_docker_for_data_engineers.html">Intermédiaire</a></li><li class="breadcrumb-item"><a href="../../notebooks/intermediate/23_table_formats_delta_iceberg.html">💎 Table Formats : Delta Lake &amp; Apache Iceberg</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bootcamp Data Engineering – From Zero to Hero</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Débutant</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/01_intro_data_engineering.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🧠 Introduction au Data Engineering</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/02_bash_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🧰 Bash pour Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/03_git_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">📘 Git pour Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/04_python_basics_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">📘 Python – Bases pour Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/05_python_data_processing_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">📊 Python for Data Processing - Complete Guide</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/06_intro_relational_databases.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🗄️ Introduction aux Bases de Données Relationnelles</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/07_sql_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🐘 SQL for Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/08_intro_big_data_distributed.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🐘 Introduction au Big Data &amp; Systèmes Distribués</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/09_mongodb_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🍃 MongoDB for Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/10_elasticsearch_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🔍 Elasticsearch for Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/11_pyspark_for_data_engineering.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">⚡ PySpark for Data Engineering</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/12_orchestration_pipelines.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">⏰ Orchestration de Pipelines Data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🚀 BONUS : FastAPI pour Data Engineers</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Intermédiaire</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/14_docker_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🐳 Docker pour Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/15_kubernetes_fundamentals.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">☸️ Kubernetes Fundamentals pour Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/16_k8s_for_data_workloads.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">☸️ Kubernetes pour Workloads Data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/17_polars_for_data_engineering.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🐻‍❄️ Polars pour Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/18_high_performance_python.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">⚡ High Performance Python</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/19_pyspark_advanced.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🚀 PySpark Advanced</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/20_spark_sql_deep_dive.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🔍 Spark SQL Deep Dive &amp; Optimisation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/21_spark_on_kubernetes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">☸️ Spark on Kubernetes — Production-Grade Deployment</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/22_cloud_and_object_storage.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">☁️ Cloud &amp; Object Storage for Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/23_table_formats_delta_iceberg.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">💎 Table Formats : Delta Lake &amp; Apache Iceberg</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/24_kafka_streaming.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🌊 Kafka, Python &amp; Structured Streaming</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/25_dbt_data_quality.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🏗️ dbt (Data Build Tool) &amp; Data Quality</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#du-data-lake-au-data-lakehouse" id="toc-du-data-lake-au-data-lakehouse" class="nav-link active" data-scroll-target="#du-data-lake-au-data-lakehouse">Du Data Lake au Data Lakehouse</a></li>
+  <li><a href="#prérequis" id="toc-prérequis" class="nav-link" data-scroll-target="#prérequis">📋 Prérequis</a></li>
+  <li><a href="#objectifs" id="toc-objectifs" class="nav-link" data-scroll-target="#objectifs">🎯 Objectifs</a></li>
+  <li><a href="#introduction-pourquoi-les-table-formats" id="toc-introduction-pourquoi-les-table-formats" class="nav-link" data-scroll-target="#introduction-pourquoi-les-table-formats">📚 1. Introduction — Pourquoi les Table Formats ?</a>
+  <ul class="collapse">
+  <li><a href="#lévolution-du-stockage" id="toc-lévolution-du-stockage" class="nav-link" data-scroll-target="#lévolution-du-stockage">1.1 L’évolution du stockage</a></li>
+  <li><a href="#le-problème-avec-parquet-seul" id="toc-le-problème-avec-parquet-seul" class="nav-link" data-scroll-target="#le-problème-avec-parquet-seul">1.2 Le problème avec Parquet seul</a></li>
+  <li><a href="#cest-quoi-un-data-lakehouse" id="toc-cest-quoi-un-data-lakehouse" class="nav-link" data-scroll-target="#cest-quoi-un-data-lakehouse">1.3 C’est quoi un Data Lakehouse ?</a></li>
+  <li><a href="#exercice-1-identifier-les-limites-de-parquet" id="toc-exercice-1-identifier-les-limites-de-parquet" class="nav-link" data-scroll-target="#exercice-1-identifier-les-limites-de-parquet">🏋️ Exercice 1 : Identifier les limites de Parquet</a></li>
+  </ul></li>
+  <li><a href="#les-limites-du-data-lake-classique" id="toc-les-limites-du-data-lake-classique" class="nav-link" data-scroll-target="#les-limites-du-data-lake-classique">🚫 2. Les Limites du Data Lake Classique</a>
+  <ul class="collapse">
+  <li><a href="#pas-de-transactions-acid" id="toc-pas-de-transactions-acid" class="nav-link" data-scroll-target="#pas-de-transactions-acid">2.1 Pas de transactions ACID</a></li>
+  <li><a href="#mutations-coûteuses" id="toc-mutations-coûteuses" class="nav-link" data-scroll-target="#mutations-coûteuses">2.2 Mutations coûteuses</a></li>
+  <li><a href="#small-files-problem" id="toc-small-files-problem" class="nav-link" data-scroll-target="#small-files-problem">2.3 Small Files Problem</a></li>
+  <li><a href="#schéma-rigide" id="toc-schéma-rigide" class="nav-link" data-scroll-target="#schéma-rigide">2.4 Schéma rigide</a></li>
+  </ul></li>
+  <li><a href="#introduction-aux-table-formats" id="toc-introduction-aux-table-formats" class="nav-link" data-scroll-target="#introduction-aux-table-formats">🏗️ 3. Introduction aux Table Formats</a>
+  <ul class="collapse">
+  <li><a href="#architecture" id="toc-architecture" class="nav-link" data-scroll-target="#architecture">3.1 Architecture</a></li>
+  <li><a href="#le-transaction-log" id="toc-le-transaction-log" class="nav-link" data-scroll-target="#le-transaction-log">3.2 Le Transaction Log</a></li>
+  <li><a href="#comparaison-delta-vs-iceberg-vs-hudi" id="toc-comparaison-delta-vs-iceberg-vs-hudi" class="nav-link" data-scroll-target="#comparaison-delta-vs-iceberg-vs-hudi">3.3 Comparaison Delta vs Iceberg vs Hudi</a></li>
+  <li><a href="#lequel-choisir" id="toc-lequel-choisir" class="nav-link" data-scroll-target="#lequel-choisir">3.4 Lequel choisir ?</a></li>
+  </ul></li>
+  <li><a href="#delta-lake-deep-dive" id="toc-delta-lake-deep-dive" class="nav-link" data-scroll-target="#delta-lake-deep-dive">🔷 4. Delta Lake — Deep Dive</a>
+  <ul class="collapse">
+  <li><a href="#architecture-_delta_log" id="toc-architecture-_delta_log" class="nav-link" data-scroll-target="#architecture-_delta_log">4.1 Architecture : _delta_log/</a></li>
+  <li><a href="#exercice-2-créer-une-table-delta" id="toc-exercice-2-créer-une-table-delta" class="nav-link" data-scroll-target="#exercice-2-créer-une-table-delta">🏋️ Exercice 2 : Créer une table Delta</a></li>
+  <li><a href="#merge-into-cdc-et-upsert" id="toc-merge-into-cdc-et-upsert" class="nav-link" data-scroll-target="#merge-into-cdc-et-upsert">4.4 MERGE INTO : CDC et Upsert</a></li>
+  <li><a href="#exercice-3-cdc-avec-merge-into" id="toc-exercice-3-cdc-avec-merge-into" class="nav-link" data-scroll-target="#exercice-3-cdc-avec-merge-into">🏋️ Exercice 3 : CDC avec MERGE INTO</a></li>
+  <li><a href="#time-travel" id="toc-time-travel" class="nav-link" data-scroll-target="#time-travel">4.5 Time Travel</a></li>
+  <li><a href="#exercice-4-restaurer-après-erreur" id="toc-exercice-4-restaurer-après-erreur" class="nav-link" data-scroll-target="#exercice-4-restaurer-après-erreur">🏋️ Exercice 4 : Restaurer après erreur</a></li>
+  <li><a href="#schema-management" id="toc-schema-management" class="nav-link" data-scroll-target="#schema-management">4.6 Schema Management</a></li>
+  </ul></li>
+  <li><a href="#apache-iceberg-deep-dive" id="toc-apache-iceberg-deep-dive" class="nav-link" data-scroll-target="#apache-iceberg-deep-dive">🧊 5. Apache Iceberg — Deep Dive</a>
+  <ul class="collapse">
+  <li><a href="#architecture-1" id="toc-architecture-1" class="nav-link" data-scroll-target="#architecture-1">5.1 Architecture</a></li>
+  <li><a href="#hidden-partitioning-killer-feature" id="toc-hidden-partitioning-killer-feature" class="nav-link" data-scroll-target="#hidden-partitioning-killer-feature">5.2 Hidden Partitioning (Killer Feature)</a></li>
+  <li><a href="#exercice-5-table-iceberg-avec-hidden-partitioning" id="toc-exercice-5-table-iceberg-avec-hidden-partitioning" class="nav-link" data-scroll-target="#exercice-5-table-iceberg-avec-hidden-partitioning">🏋️ Exercice 5 : Table Iceberg avec Hidden Partitioning</a></li>
+  <li><a href="#schema-evolution-avancée" id="toc-schema-evolution-avancée" class="nav-link" data-scroll-target="#schema-evolution-avancée">5.3 Schema Evolution avancée</a></li>
+  <li><a href="#catalog-obligatoire" id="toc-catalog-obligatoire" class="nav-link" data-scroll-target="#catalog-obligatoire">5.4 Catalog (obligatoire)</a></li>
+  </ul></li>
+  <li><a href="#maintenance-optimisation" id="toc-maintenance-optimisation" class="nav-link" data-scroll-target="#maintenance-optimisation">🔧 7. Maintenance &amp; Optimisation</a>
+  <ul class="collapse">
+  <li><a href="#compaction-optimize" id="toc-compaction-optimize" class="nav-link" data-scroll-target="#compaction-optimize">7.1 Compaction (OPTIMIZE)</a></li>
+  <li><a href="#z-ordering" id="toc-z-ordering" class="nav-link" data-scroll-target="#z-ordering">7.2 Z-Ordering</a></li>
+  <li><a href="#vacuum" id="toc-vacuum" class="nav-link" data-scroll-target="#vacuum">7.3 VACUUM</a></li>
+  <li><a href="#exercice-7-compacter-une-table" id="toc-exercice-7-compacter-une-table" class="nav-link" data-scroll-target="#exercice-7-compacter-une-table">🏋️ Exercice 7 : Compacter une table</a></li>
+  </ul></li>
+  <li><a href="#migration-parquet-delta" id="toc-migration-parquet-delta" class="nav-link" data-scroll-target="#migration-parquet-delta">🔄 8. Migration Parquet → Delta</a>
+  <ul class="collapse">
+  <li><a href="#conversion-in-place-sans-copie" id="toc-conversion-in-place-sans-copie" class="nav-link" data-scroll-target="#conversion-in-place-sans-copie">8.1 Conversion in-place (SANS copie !)</a></li>
+  <li><a href="#migration-avec-ctas" id="toc-migration-avec-ctas" class="nav-link" data-scroll-target="#migration-avec-ctas">8.2 Migration avec CTAS</a></li>
+  </ul></li>
+  <li><a href="#apache-hudi-aperçu" id="toc-apache-hudi-aperçu" class="nav-link" data-scroll-target="#apache-hudi-aperçu">🔶 9. Apache Hudi — Aperçu</a>
+  <ul class="collapse">
+  <li><a href="#copy-on-write-vs-merge-on-read" id="toc-copy-on-write-vs-merge-on-read" class="nav-link" data-scroll-target="#copy-on-write-vs-merge-on-read">Copy-on-Write vs Merge-on-Read</a></li>
+  </ul></li>
+  <li><a href="#mini-projet-lakehouse-avec-minio" id="toc-mini-projet-lakehouse-avec-minio" class="nav-link" data-scroll-target="#mini-projet-lakehouse-avec-minio">🚀 10. Mini-Projet : Lakehouse avec MinIO</a></li>
+  <li><a href="#quiz" id="toc-quiz" class="nav-link" data-scroll-target="#quiz">🧪 Quiz</a></li>
+  <li><a href="#ressources" id="toc-ressources" class="nav-link" data-scroll-target="#ressources">📚 Ressources</a></li>
+  <li><a href="#prochaine-étape" id="toc-prochaine-étape" class="nav-link" data-scroll-target="#prochaine-étape">➡️ Prochaine étape</a></li>
+  <li><a href="#récapitulatif" id="toc-récapitulatif" class="nav-link" data-scroll-target="#récapitulatif">📝 Récapitulatif</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="git@github.com:diakite-data/data-engineering-bootcamp.git/blob/main/notebooks/intermediate/23_table_formats_delta_iceberg.ipynb" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="git@github.com:diakite-data/data-engineering-bootcamp.git/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notebooks/intermediate/14_docker_for_data_engineers.html">Intermédiaire</a></li><li class="breadcrumb-item"><a href="../../notebooks/intermediate/23_table_formats_delta_iceberg.html">💎 Table Formats : Delta Lake &amp; Apache Iceberg</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">💎 Table Formats : Delta Lake &amp; Apache Iceberg</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="du-data-lake-au-data-lakehouse" class="level2">
+<h2 class="anchored" data-anchor-id="du-data-lake-au-data-lakehouse">Du Data Lake au Data Lakehouse</h2>
+<p>Bienvenue dans ce module où tu vas transformer un Data Lake en <strong>Data Lakehouse</strong> — combinant flexibilité et ACID.</p>
+<hr>
+</section>
+<section id="prérequis" class="level2">
+<h2 class="anchored" data-anchor-id="prérequis">📋 Prérequis</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Module</th>
+<th>Compétence</th>
+<th>Pourquoi ?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>✅ 19</td>
+<td>PySpark Advanced</td>
+<td>DataFrame API</td>
+</tr>
+<tr class="even">
+<td>✅ 20</td>
+<td>Spark SQL</td>
+<td>SQL, Catalyst</td>
+</tr>
+<tr class="odd">
+<td>✅ 22</td>
+<td>Cloud Storage</td>
+<td>MinIO, s3a://</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="objectifs" class="level2">
+<h2 class="anchored" data-anchor-id="objectifs">🎯 Objectifs</h2>
+<ul>
+<li>Comprendre pourquoi <strong>Parquet seul ne suffit pas</strong></li>
+<li>Maîtriser <strong>ACID</strong> pour les Data Lakes</li>
+<li>Utiliser <strong>Delta Lake</strong> : MERGE, Time Travel, Schema Evolution</li>
+<li>Comprendre <strong>Iceberg</strong> : Hidden Partitioning</li>
+<li>Optimiser avec <strong>OPTIMIZE, Z-ORDER, VACUUM</strong></li>
+</ul>
+<hr>
+</section>
+<section id="introduction-pourquoi-les-table-formats" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-pourquoi-les-table-formats">📚 1. Introduction — Pourquoi les Table Formats ?</h2>
+<section id="lévolution-du-stockage" class="level3">
+<h3 class="anchored" data-anchor-id="lévolution-du-stockage">1.1 L’évolution du stockage</h3>
+<pre><code>2000s: DATA WAREHOUSE     2010s: DATA LAKE        2020s: LAKEHOUSE
+• Oracle, Teradata        • Hadoop, S3+Parquet    • Delta, Iceberg
+• ACID ✅                 • Flexible              • ACID ✅
+• Coûteux 💰              • Pas ACID ❌           • Flexible
+• Rigide                  • Cheap 💵              • Cheap 💵</code></pre>
+</section>
+<section id="le-problème-avec-parquet-seul" class="level3">
+<h3 class="anchored" data-anchor-id="le-problème-avec-parquet-seul">1.2 Le problème avec Parquet seul</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Scénario</th>
+<th>Problème</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Deux jobs écrivent en même temps</td>
+<td>💥 Données corrompues</td>
+</tr>
+<tr class="even">
+<td>UPDATE 100 lignes sur 10M</td>
+<td>😰 Réécrire toute la partition</td>
+</tr>
+<tr class="odd">
+<td>Job échoue à mi-chemin</td>
+<td>🗑️ Fichiers partiels</td>
+</tr>
+<tr class="even">
+<td>Voir données d’il y a 3 jours</td>
+<td>❌ Impossible</td>
+</tr>
+<tr class="odd">
+<td>Schéma source change</td>
+<td>💔 Erreurs de lecture</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Les Table Formats résolvent TOUS ces problèmes.</strong></p>
+</section>
+<section id="cest-quoi-un-data-lakehouse" class="level3">
+<h3 class="anchored" data-anchor-id="cest-quoi-un-data-lakehouse">1.3 C’est quoi un Data Lakehouse ?</h3>
+<pre><code>┌─────────────────────────────────────────────────────┐
+│                  DATA LAKEHOUSE                     │
+│                                                     │
+│   DATA LAKE          +       DATA WAREHOUSE         │
+│   • Stockage cheap           • ACID                 │
+│   • Formats ouverts          • Schema enforce       │
+│   • Flexibilité              • SQL performant       │
+│                                                     │
+│   = Le meilleur des deux mondes !                   │
+└─────────────────────────────────────────────────────┘</code></pre>
+<p>Les Table Formats ajoutent une <strong>couche de métadonnées</strong> (Transaction Log) au-dessus des fichiers Parquet.</p>
+</section>
+<section id="exercice-1-identifier-les-limites-de-parquet" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-1-identifier-les-limites-de-parquet">🏋️ Exercice 1 : Identifier les limites de Parquet</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Scénario</th>
+<th>Problème ?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Job A lit pendant que Job B écrit</td>
+<td>?</td>
+</tr>
+<tr class="even">
+<td>UPDATE 100 lignes sur 10M</td>
+<td>?</td>
+</tr>
+<tr class="odd">
+<td>Suppression accidentelle d’une partition</td>
+<td>?</td>
+</tr>
+</tbody>
+</table>
+<details>
+<summary>
+💡 Réponses
+</summary>
+<ul>
+<li><strong>Dirty Read</strong> : données partielles/incohérentes</li>
+<li><strong>Réécriture totale</strong> : toute la partition</li>
+<li><strong>Pas de rollback</strong> : données perdues</li>
+</ul>
+</details>
+<hr>
+</section>
+</section>
+<section id="les-limites-du-data-lake-classique" class="level2">
+<h2 class="anchored" data-anchor-id="les-limites-du-data-lake-classique">🚫 2. Les Limites du Data Lake Classique</h2>
+<section id="pas-de-transactions-acid" class="level3">
+<h3 class="anchored" data-anchor-id="pas-de-transactions-acid">2.1 Pas de transactions ACID</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Propriété</th>
+<th>Signification</th>
+<th>Parquet seul ?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>A</strong>tomicity</td>
+<td>Tout-ou-rien</td>
+<td>❌ Fichiers partiels</td>
+</tr>
+<tr class="even">
+<td><strong>C</strong>onsistency</td>
+<td>Contraintes respectées</td>
+<td>❌ Pas de validation</td>
+</tr>
+<tr class="odd">
+<td><strong>I</strong>solation</td>
+<td>Opérations isolées</td>
+<td>❌ Dirty reads</td>
+</tr>
+<tr class="even">
+<td><strong>D</strong>urability</td>
+<td>Données persistantes</td>
+<td>✅ Sur S3</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="mutations-coûteuses" class="level3">
+<h3 class="anchored" data-anchor-id="mutations-coûteuses">2.2 Mutations coûteuses</h3>
+<p>UPDATE 1 ligne = lire 10M lignes → modifier → réécrire 10M lignes = <strong>minutes</strong></p>
+</section>
+<section id="small-files-problem" class="level3">
+<h3 class="anchored" data-anchor-id="small-files-problem">2.3 Small Files Problem</h3>
+<p>Streaming 5min/jour = 288 fichiers/jour × 365 = <strong>100K+ fichiers/an</strong></p>
+</section>
+<section id="schéma-rigide" class="level3">
+<h3 class="anchored" data-anchor-id="schéma-rigide">2.4 Schéma rigide</h3>
+<p>Pas de schema enforcement natif. Changer partitionnement = réécriture totale.</p>
+<hr>
+</section>
+</section>
+<section id="introduction-aux-table-formats" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-aux-table-formats">🏗️ 3. Introduction aux Table Formats</h2>
+<section id="architecture" class="level3">
+<h3 class="anchored" data-anchor-id="architecture">3.1 Architecture</h3>
+<pre><code>┌─────────────────────────────────────────────┐
+│           QUERY ENGINE (Spark, Trino)       │
+└─────────────────────┬───────────────────────┘
+                      ▼
+┌─────────────────────────────────────────────┐
+│         TABLE FORMAT LAYER                  │
+│      (Delta Lake / Iceberg / Hudi)          │
+│  • Transaction Log                          │
+│  • ACID, Time Travel, Schema Evolution      │
+└─────────────────────┬───────────────────────┘
+                      ▼
+┌─────────────────────────────────────────────┐
+│     FILE FORMAT (Parquet) sur STORAGE (S3)  │
+└─────────────────────────────────────────────┘</code></pre>
+</section>
+<section id="le-transaction-log" class="level3">
+<h3 class="anchored" data-anchor-id="le-transaction-log">3.2 Le Transaction Log</h3>
+<pre><code>Version 0 : ADD file_001.parquet
+Version 1 : ADD file_002.parquet
+Version 2 : ADD file_003.parquet, REMOVE file_001.parquet
+
+État actuel = { file_002, file_003 }
+État v1     = { file_001, file_002 }  ← Time Travel !</code></pre>
+</section>
+<section id="comparaison-delta-vs-iceberg-vs-hudi" class="level3">
+<h3 class="anchored" data-anchor-id="comparaison-delta-vs-iceberg-vs-hudi">3.3 Comparaison Delta vs Iceberg vs Hudi</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Critère</th>
+<th>Delta Lake</th>
+<th>Iceberg</th>
+<th>Hudi</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Créateur</strong></td>
+<td>Databricks</td>
+<td>Netflix</td>
+<td>Uber</td>
+</tr>
+<tr class="even">
+<td><strong>Moteurs</strong></td>
+<td>Spark +++</td>
+<td>Multi-engine</td>
+<td>Spark, Flink</td>
+</tr>
+<tr class="odd">
+<td><strong>ACID</strong></td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr class="even">
+<td><strong>Time Travel</strong></td>
+<td>✅✅</td>
+<td>✅✅</td>
+<td>✅</td>
+</tr>
+<tr class="odd">
+<td><strong>Schema Evolution</strong></td>
+<td>✅</td>
+<td>✅✅ (best)</td>
+<td>✅</td>
+</tr>
+<tr class="even">
+<td><strong>Hidden Partitioning</strong></td>
+<td>❌</td>
+<td>✅ (unique!)</td>
+<td>❌</td>
+</tr>
+<tr class="odd">
+<td><strong>Z-Ordering</strong></td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr class="even">
+<td><strong>Catalog requis</strong></td>
+<td>Optionnel</td>
+<td><strong>Obligatoire</strong></td>
+<td>Obligatoire</td>
+</tr>
+<tr class="odd">
+<td><strong>CDC natif</strong></td>
+<td>Change Data Feed</td>
+<td>❌</td>
+<td>✅✅ (best)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="lequel-choisir" class="level3">
+<h3 class="anchored" data-anchor-id="lequel-choisir">3.4 Lequel choisir ?</h3>
+<ul>
+<li>🎯 <strong>Delta Lake</strong> : Spark, Databricks, simplicité, débutants</li>
+<li>🎯 <strong>Iceberg</strong> : Multi-engine, Hidden Partitioning, AWS Athena</li>
+<li>🎯 <strong>Hudi</strong> : CDC massif, near-real-time, AWS EMR</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="delta-lake-deep-dive" class="level2">
+<h2 class="anchored" data-anchor-id="delta-lake-deep-dive">🔷 4. Delta Lake — Deep Dive</h2>
+<section id="architecture-_delta_log" class="level3">
+<h3 class="anchored" data-anchor-id="architecture-_delta_log">4.1 Architecture : _delta_log/</h3>
+<pre><code>s3://bucket/sales/
+├── _delta_log/
+│   ├── 00000000000000000000.json  ← Version 0
+│   ├── 00000000000000000001.json  ← Version 1
+│   ├── 00000000000000000010.checkpoint.parquet
+│   └── _last_checkpoint
+├── part-00000-abc.parquet
+└── part-00001-def.parquet</code></pre>
+<p>Chaque JSON contient :</p>
+<ul>
+<li><code>add</code> : nouveau fichier ajouté</li>
+<li><code>remove</code> : fichier retiré</li>
+<li><code>commitInfo</code> : métadonnées de l’opération</li>
+<li><code>stats</code> : min/max pour Data Skipping</li>
+</ul>
+<div id="cell-9" class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Configuration Spark avec Delta Lake</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>config <span class="op">=</span> <span class="st">'''</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="st">from pyspark.sql import SparkSession</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="st">spark = SparkSession.builder </span><span class="op">\</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="st">    .appName("Delta Lake Demo") </span><span class="op">\</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="st">    .config("spark.jars.packages", "io.delta:delta-spark_2.12:3.1.0") </span><span class="op">\</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="st">    .config("spark.sql.extensions", "io.delta.sql.DeltaSparkSessionExtension") </span><span class="op">\</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="st">    .config("spark.sql.catalog.spark_catalog", "org.apache.spark.sql.delta.catalog.DeltaCatalog") </span><span class="op">\</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="st">    .getOrCreate()</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="st"># Pour MinIO</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="st">spark.conf.set("spark.hadoop.fs.s3a.endpoint", "http://localhost:9000")</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="st">spark.conf.set("spark.hadoop.fs.s3a.access.key", "minioadmin")</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="st">spark.conf.set("spark.hadoop.fs.s3a.secret.key", "minioadmin")</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="st">spark.conf.set("spark.hadoop.fs.s3a.path.style.access", "true")</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="st">'''</span></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(config)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<div id="cell-10" class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Créer une table Delta</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>create_examples <span class="op">=</span> <span class="st">'''</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="st"># MÉTHODE 1 : Depuis DataFrame</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="st">df = spark.createDataFrame([</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="st">    (1, "Alice", 1200.0, "2024-01-15"),</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="st">    (2, "Bob", 350.0, "2024-01-15"),</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="st">], ["id", "customer", "amount", "date"])</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="st">df.write.format("delta").mode("overwrite").save("s3a://silver/sales/")</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="st"># MÉTHODE 2 : SQL</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="st">spark.sql("""</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="st">    CREATE TABLE sales (id INT, customer STRING, amount DOUBLE, date DATE)</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="st">    USING DELTA</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="st">    LOCATION 's3a://silver/sales/'</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="st">""")</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="st"># MÉTHODE 3 : Convertir Parquet existant (SANS copie !)</span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a><span class="st">spark.sql("CONVERT TO DELTA parquet.`s3a://bronze/old_table/`")</span></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a><span class="st">'''</span></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(create_examples)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+</section>
+<section id="exercice-2-créer-une-table-delta" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-2-créer-une-table-delta">🏋️ Exercice 2 : Créer une table Delta</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Créer DataFrame</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> [(<span class="dv">1</span>, <span class="st">"Laptop"</span>, <span class="fl">1200.0</span>), (<span class="dv">2</span>, <span class="st">"Mouse"</span>, <span class="fl">25.0</span>)]</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> spark.createDataFrame(data, [<span class="st">"id"</span>, <span class="st">"product"</span>, <span class="st">"price"</span>])</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Sauvegarder en Delta</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">TODO</span><span class="co">: df.write.format("delta")...</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Lister _delta_log/</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details>
+<summary>
+💡 Solution
+</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>df.write.<span class="bu">format</span>(<span class="st">"delta"</span>).mode(<span class="st">"overwrite"</span>).save(<span class="st">"/tmp/products"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</section>
+<section id="merge-into-cdc-et-upsert" class="level3">
+<h3 class="anchored" data-anchor-id="merge-into-cdc-et-upsert">4.4 MERGE INTO : CDC et Upsert</h3>
+<pre><code>TARGET               SOURCE CDC             APRÈS MERGE
+┌────┬───────┐      ┌────┬───────┬────┐    ┌────┬───────┐
+│ id │ name  │      │ id │ name  │ op │    │ id │ name  │
+├────┼───────┤      ├────┼───────┼────┤    ├────┼───────┤
+│ 1  │ Alice │      │ 1  │ Alice │ U  │ →  │ 1  │ ALICE │ Updated
+│ 2  │ Bob   │      │ 3  │ New   │ I  │ →  │ 3  │ New   │ Inserted
+└────┴───────┘      │ 2  │ Bob   │ D  │    └────┴───────┘ (Bob deleted)
+                    └────┴───────┴────┘</code></pre>
+<div id="cell-13" class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># MERGE INTO - Exemple complet</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>merge_sql <span class="op">=</span> <span class="st">'''</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="st">MERGE INTO target_table AS target</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="st">USING source_cdc AS source</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="st">ON target.id = source.id</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="st">WHEN MATCHED AND source.op = 'D' THEN DELETE</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="st">WHEN MATCHED AND source.op = 'U' THEN</span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="st">    UPDATE SET target.name = source.name, target.amount = source.amount</span></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="st">WHEN NOT MATCHED THEN</span></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a><span class="st">    INSERT (id, name, amount) VALUES (source.id, source.name, source.amount)</span></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a><span class="st">'''</span></span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>merge_python <span class="op">=</span> <span class="st">'''</span></span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a><span class="st">from delta.tables import DeltaTable</span></span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a><span class="st">target = DeltaTable.forPath(spark, "s3a://silver/customers/")</span></span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a><span class="st">source = spark.read.parquet("s3a://bronze/cdc/")</span></span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a><span class="st">target.alias("t").merge(source.alias("s"), "t.id = s.id") </span><span class="op">\</span></span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a><span class="st">    .whenMatchedDelete(condition="s.op = 'D'") </span><span class="op">\</span></span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a><span class="st">    .whenMatchedUpdate(condition="s.op = 'U'", set={"name": "s.name"}) </span><span class="op">\</span></span>
+<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a><span class="st">    .whenNotMatchedInsert(values={"id": "s.id", "name": "s.name"}) </span><span class="op">\</span></span>
+<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a><span class="st">    .execute()</span></span>
+<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a><span class="st">'''</span></span>
+<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"SQL:"</span>, merge_sql)</span>
+<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Python:"</span>, merge_python)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+</section>
+<section id="exercice-3-cdc-avec-merge-into" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-3-cdc-avec-merge-into">🏋️ Exercice 3 : CDC avec MERGE INTO</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Initial</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>initial <span class="op">=</span> [(<span class="dv">1</span>, <span class="st">"Alice"</span>), (<span class="dv">2</span>, <span class="st">"Bob"</span>)]</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co"># CDC</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>cdc <span class="op">=</span> [(<span class="dv">1</span>, <span class="st">"ALICE"</span>, <span class="st">"U"</span>), (<span class="dv">3</span>, <span class="st">"New"</span>, <span class="st">"I"</span>), (<span class="dv">2</span>, <span class="va">None</span>, <span class="st">"D"</span>)]</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">TODO</span><span class="co">: Créer table, appliquer MERGE</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details>
+<summary>
+💡 Solution
+</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>target <span class="op">=</span> DeltaTable.forPath(spark, <span class="st">"/tmp/customers"</span>)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>target.alias(<span class="st">"t"</span>).merge(df_cdc.alias(<span class="st">"s"</span>), <span class="st">"t.id = s.id"</span>) <span class="op">\</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    .whenMatchedDelete(condition<span class="op">=</span><span class="st">"s.op = 'D'"</span>) <span class="op">\</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    .whenMatchedUpdate(condition<span class="op">=</span><span class="st">"s.op = 'U'"</span>, <span class="bu">set</span><span class="op">=</span>{<span class="st">"name"</span>: <span class="st">"s.name"</span>}) <span class="op">\</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    .whenNotMatchedInsert(values<span class="op">=</span>{<span class="st">"id"</span>: <span class="st">"s.id"</span>, <span class="st">"name"</span>: <span class="st">"s.name"</span>}) <span class="op">\</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    .execute()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</section>
+<section id="time-travel" class="level3">
+<h3 class="anchored" data-anchor-id="time-travel">4.5 Time Travel</h3>
+<pre><code>Version 0     Version 1     Version 2     Version 3
+(Create)      (INSERT)      (UPDATE)      (DELETE)
+   │              │              │              │
+   ▼              ▼              ▼              ▼
+┌────────┐   ┌────────┐   ┌────────┐   ┌────────┐
+│ 1 row  │ → │ 3 rows │ → │ 3 rows │ → │ 2 rows │
+└────────┘   └────────┘   │modified│   └────────┘
+
+Tu peux lire N'IMPORTE quelle version !</code></pre>
+<div id="cell-16" class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Time Travel</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>time_travel <span class="op">=</span> <span class="st">'''</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="st"># Voir l'historique</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="st">spark.sql("DESCRIBE HISTORY sales").show()</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="st"># Lire par version</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="st">df_v1 = spark.sql("SELECT * FROM sales VERSION AS OF 1")</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="st">df_v1 = spark.read.format("delta").option("versionAsOf", 1).load("path/")</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="st"># Lire par timestamp</span></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a><span class="st">df = spark.sql("SELECT * FROM sales TIMESTAMP AS OF '2024-01-03 12:00:00'")</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a><span class="st"># RESTORE : Revenir à une version</span></span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a><span class="st">spark.sql("RESTORE TABLE sales TO VERSION AS OF 5")</span></span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a><span class="st">'''</span></span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(time_travel)</span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">💡 Use cases: Audit, rollback, debug, ML reproductibility"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+</section>
+<section id="exercice-4-restaurer-après-erreur" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-4-restaurer-après-erreur">🏋️ Exercice 4 : Restaurer après erreur</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># OUPS ! DELETE sans WHERE</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>spark.sql(<span class="st">"DELETE FROM sales"</span>)</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">TODO</span><span class="co">: Utiliser Time Travel pour restaurer</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details>
+<summary>
+💡 Solution
+</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>spark.sql(<span class="st">"DESCRIBE HISTORY sales"</span>).show()  <span class="co"># Trouver version avant DELETE</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>spark.sql(<span class="st">"RESTORE TABLE sales TO VERSION AS OF 1"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</section>
+<section id="schema-management" class="level3">
+<h3 class="anchored" data-anchor-id="schema-management">4.6 Schema Management</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Mode</th>
+<th>Comportement</th>
+<th>Option</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Enforcement</strong></td>
+<td>Rejette schémas différents</td>
+<td>(défaut)</td>
+</tr>
+<tr class="even">
+<td><strong>Evolution</strong></td>
+<td>Ajoute nouvelles colonnes</td>
+<td><code>mergeSchema=true</code></td>
+</tr>
+<tr class="odd">
+<td><strong>Overwrite</strong></td>
+<td>Remplace schéma entier</td>
+<td><code>overwriteSchema=true</code></td>
+</tr>
+</tbody>
+</table>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Schema Evolution</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>df_new.write.<span class="bu">format</span>(<span class="st">"delta"</span>) <span class="op">\</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    .mode(<span class="st">"append"</span>) <span class="op">\</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    .option(<span class="st">"mergeSchema"</span>, <span class="st">"true"</span>) <span class="op">\</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>    .save(<span class="st">"path/"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+</section>
+<section id="apache-iceberg-deep-dive" class="level2">
+<h2 class="anchored" data-anchor-id="apache-iceberg-deep-dive">🧊 5. Apache Iceberg — Deep Dive</h2>
+<section id="architecture-1" class="level3">
+<h3 class="anchored" data-anchor-id="architecture-1">5.1 Architecture</h3>
+<pre><code>s3://bucket/sales/
+├── metadata/
+│   ├── v1.metadata.json     ← Metadata File
+│   ├── snap-xxx.avro        ← Manifest List
+│   └── xxx-m0.avro          ← Manifest File
+└── data/
+    └── part-00000.parquet</code></pre>
+<p>Structure arborescente vs log séquentiel = plus rapide pour grandes tables.</p>
+</section>
+<section id="hidden-partitioning-killer-feature" class="level3">
+<h3 class="anchored" data-anchor-id="hidden-partitioning-killer-feature">5.2 Hidden Partitioning (Killer Feature)</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> <span class="kw">events</span> (</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>    event_id <span class="dt">LONG</span>,</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>    event_ts <span class="dt">TIMESTAMP</span>,</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>    user_id <span class="dt">LONG</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="kw">USING</span> iceberg</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>PARTITIONED <span class="kw">BY</span> (</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>    days(event_ts),      <span class="co">-- Partition par jour (caché !)</span></span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>    bucket(<span class="dv">16</span>, user_id)  <span class="co">-- Bucket hash</span></span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a><span class="co">-- L'utilisateur n'a PAS besoin de connaître le partitionnement !</span></span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> <span class="kw">events</span> <span class="kw">WHERE</span> event_ts <span class="op">=</span> <span class="st">'2024-01-15 10:00:00'</span></span>
+<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a><span class="co">-- Partition pruning automatique !</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Transforms</strong> : <code>years()</code>, <code>months()</code>, <code>days()</code>, <code>hours()</code>, <code>bucket(N, col)</code>, <code>truncate(L, col)</code></p>
+</section>
+<section id="exercice-5-table-iceberg-avec-hidden-partitioning" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-5-table-iceberg-avec-hidden-partitioning">🏋️ Exercice 5 : Table Iceberg avec Hidden Partitioning</h3>
+<details>
+<summary>
+💡 Solution
+</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> my_catalog.db.page_views (</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>    view_id <span class="dt">LONG</span>, view_timestamp <span class="dt">TIMESTAMP</span>, user_id <span class="dt">LONG</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="kw">USING</span> iceberg</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>PARTITIONED <span class="kw">BY</span> (days(view_timestamp), bucket(<span class="dv">8</span>, user_id))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</section>
+<section id="schema-evolution-avancée" class="level3">
+<h3 class="anchored" data-anchor-id="schema-evolution-avancée">5.3 Schema Evolution avancée</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="kw">ALTER</span> <span class="kw">TABLE</span> <span class="kw">events</span> <span class="kw">ADD</span> <span class="kw">COLUMN</span> <span class="kw">source</span> STRING</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="kw">ALTER</span> <span class="kw">TABLE</span> <span class="kw">events</span> <span class="kw">RENAME</span> <span class="kw">COLUMN</span> payload <span class="kw">TO</span> event_data  <span class="co">-- Sans réécriture !</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="kw">ALTER</span> <span class="kw">TABLE</span> <span class="kw">events</span> <span class="kw">DROP</span> <span class="kw">COLUMN</span> deprecated              <span class="co">-- Sans réécriture !</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="catalog-obligatoire" class="level3">
+<h3 class="anchored" data-anchor-id="catalog-obligatoire">5.4 Catalog (obligatoire)</h3>
+<p>Iceberg nécessite un catalog : Hive Metastore, AWS Glue, Nessie, Unity Catalog.</p>
+<hr>
+</section>
+</section>
+<section id="maintenance-optimisation" class="level2">
+<h2 class="anchored" data-anchor-id="maintenance-optimisation">🔧 7. Maintenance &amp; Optimisation</h2>
+<section id="compaction-optimize" class="level3">
+<h3 class="anchored" data-anchor-id="compaction-optimize">7.1 Compaction (OPTIMIZE)</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Delta</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>OPTIMIZE sales</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>OPTIMIZE sales <span class="kw">WHERE</span> <span class="dt">date</span> <span class="op">&gt;=</span> <span class="st">'2024-01-01'</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="co">-- Iceberg</span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="kw">CALL</span> catalog.<span class="kw">system</span>.rewrite_data_files(<span class="kw">table</span> <span class="op">=&gt;</span> <span class="st">'db.sales'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="z-ordering" class="level3">
+<h3 class="anchored" data-anchor-id="z-ordering">7.2 Z-Ordering</h3>
+<p>Organise données par colonnes filtrées → meilleur Data Skipping.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>OPTIMIZE sales ZORDER <span class="kw">BY</span> (customer_id, product_id)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Règle</strong> : Partition par faible cardinalité, Z-ORDER par haute cardinalité.</p>
+</section>
+<section id="vacuum" class="level3">
+<h3 class="anchored" data-anchor-id="vacuum">7.3 VACUUM</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Supprimer fichiers &gt; 7 jours</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>VACUUM sales</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>VACUUM sales RETAIN <span class="dv">168</span> HOURS</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="co">-- Iceberg</span></span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a><span class="kw">CALL</span> catalog.<span class="kw">system</span>.expire_snapshots(<span class="kw">table</span> <span class="op">=&gt;</span> <span class="st">'db.sales'</span>, retain_last <span class="op">=&gt;</span> <span class="dv">5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>⚠️ <strong>Après VACUUM, Time Travel sur versions supprimées impossible !</strong></p>
+</section>
+<section id="exercice-7-compacter-une-table" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-7-compacter-une-table">🏋️ Exercice 7 : Compacter une table</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérifier fichiers avant</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>spark.sql(<span class="st">"DESCRIBE DETAIL delta.`path`"</span>).select(<span class="st">"numFiles"</span>).show()</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">TODO</span><span class="co">: OPTIMIZE + ZORDER</span></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérifier après</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details>
+<summary>
+💡 Solution
+</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>spark.sql(<span class="st">"OPTIMIZE delta.`path` ZORDER BY (id)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<hr>
+</section>
+</section>
+<section id="migration-parquet-delta" class="level2">
+<h2 class="anchored" data-anchor-id="migration-parquet-delta">🔄 8. Migration Parquet → Delta</h2>
+<section id="conversion-in-place-sans-copie" class="level3">
+<h3 class="anchored" data-anchor-id="conversion-in-place-sans-copie">8.1 Conversion in-place (SANS copie !)</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">CONVERT</span> <span class="kw">TO</span> DELTA parquet.`s3a:<span class="op">//</span>bronze<span class="op">/</span>old_table<span class="op">/</span>`</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="fu">CONVERT</span> <span class="kw">TO</span> DELTA parquet.`s3a:<span class="op">//</span>bronze<span class="op">/</span>partitioned<span class="op">/</span>`</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>    PARTITIONED <span class="kw">BY</span> (<span class="dt">date</span> STRING)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Crée <code>_delta_log/</code> sans déplacer les données. <strong>Temps : secondes.</strong></p>
+</section>
+<section id="migration-avec-ctas" class="level3">
+<h3 class="anchored" data-anchor-id="migration-avec-ctas">8.2 Migration avec CTAS</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> new_delta <span class="kw">USING</span> DELTA <span class="kw">AS</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> parquet.`s3a:<span class="op">//</span>bronze<span class="op">/</span><span class="kw">old</span><span class="op">/</span>`</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+</section>
+<section id="apache-hudi-aperçu" class="level2">
+<h2 class="anchored" data-anchor-id="apache-hudi-aperçu">🔶 9. Apache Hudi — Aperçu</h2>
+<section id="copy-on-write-vs-merge-on-read" class="level3">
+<h3 class="anchored" data-anchor-id="copy-on-write-vs-merge-on-read">Copy-on-Write vs Merge-on-Read</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>CoW</th>
+<th>MoR</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Écriture</strong></td>
+<td>Réécrit fichier entier (🐢)</td>
+<td>Écrit delta log (🚀)</td>
+</tr>
+<tr class="even">
+<td><strong>Lecture</strong></td>
+<td>Lit fichier (🚀)</td>
+<td>Merge base + deltas (🐢)</td>
+</tr>
+<tr class="odd">
+<td><strong>Use case</strong></td>
+<td>Lectures fréquentes</td>
+<td>CDC intensif</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Quand utiliser Hudi</strong> : CDC massif, near-real-time, AWS EMR.</p>
+<hr>
+</section>
+</section>
+<section id="mini-projet-lakehouse-avec-minio" class="level2">
+<h2 class="anchored" data-anchor-id="mini-projet-lakehouse-avec-minio">🚀 10. Mini-Projet : Lakehouse avec MinIO</h2>
+<pre><code>┌─────────────────────────────────────────────────────┐
+│                    MinIO                            │
+│  bronze/          silver/           gold/           │
+│  (CSV)     →     (Delta)      →    (Delta)          │
+│  orders.csv       orders/           daily_sales/    │
+│                   _delta_log/       _delta_log/     │
+│      ↓               ↓                  ↓           │
+│   Upload       MERGE INTO          OPTIMIZE         │
+│               (Dedupe+CDC)         ZORDER BY        │
+└─────────────────────────────────────────────────────┘</code></pre>
+<p><strong>Étapes</strong> :</p>
+<ol type="1">
+<li>Démarrer MinIO</li>
+<li>Configurer Spark + Delta</li>
+<li>Bronze → Silver (MERGE)</li>
+<li>Time Travel audit</li>
+<li>Silver → Gold (agrégations)</li>
+<li>OPTIMIZE + ZORDER</li>
+<li>VACUUM</li>
+</ol>
+<hr>
+</section>
+<section id="quiz" class="level2">
+<h2 class="anchored" data-anchor-id="quiz">🧪 Quiz</h2>
+<strong>Q1.</strong> Pourquoi Parquet seul ne garantit pas ACID ?
+<details>
+<summary>
+R
+</summary>
+Pas de Transaction Log pour atomicité/isolation.
+</details>
+<strong>Q2.</strong> Différence Schema Enforcement vs Evolution ?
+<details>
+<summary>
+R
+</summary>
+Enforcement rejette, Evolution adapte.
+</details>
+<strong>Q3.</strong> Quel format supporte Hidden Partitioning ?
+<details>
+<summary>
+R
+</summary>
+Apache Iceberg uniquement.
+</details>
+<strong>Q4.</strong> Rôle du Transaction Log Delta ?
+<details>
+<summary>
+R
+</summary>
+Enregistre add/remove pour ACID et Time Travel.
+</details>
+<strong>Q5.</strong> Objectif de ZORDER BY ?
+<details>
+<summary>
+R
+</summary>
+Organiser données pour meilleur Data Skipping.
+</details>
+<strong>Q6.</strong> Quelle opération supprime les vieux fichiers ?
+<details>
+<summary>
+R
+</summary>
+VACUUM (Delta) ou expire_snapshots (Iceberg).
+</details>
+<hr>
+</section>
+<section id="ressources" class="level2">
+<h2 class="anchored" data-anchor-id="ressources">📚 Ressources</h2>
+<ul>
+<li><a href="https://docs.delta.io/">Delta Lake Docs</a></li>
+<li><a href="https://iceberg.apache.org/docs/">Apache Iceberg Docs</a></li>
+<li><a href="https://hudi.apache.org/docs/">Apache Hudi Docs</a></li>
+</ul>
+<hr>
+</section>
+<section id="prochaine-étape" class="level2">
+<h2 class="anchored" data-anchor-id="prochaine-étape">➡️ Prochaine étape</h2>
+<p>👉 <strong>Module 24 : <code>24_kafka_streaming.ipynb</code></strong> — Kafka &amp; Streaming</p>
+<hr>
+</section>
+<section id="récapitulatif" class="level2">
+<h2 class="anchored" data-anchor-id="récapitulatif">📝 Récapitulatif</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Concept</th>
+<th>Appris</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Data Lakehouse</td>
+<td>Lake + Warehouse</td>
+</tr>
+<tr class="even">
+<td>ACID</td>
+<td>Atomicité, Consistance, Isolation, Durabilité</td>
+</tr>
+<tr class="odd">
+<td>Delta Lake</td>
+<td>Transaction Log, MERGE, Time Travel</td>
+</tr>
+<tr class="even">
+<td>Iceberg</td>
+<td>Hidden Partitioning, Schema Evolution</td>
+</tr>
+<tr class="odd">
+<td>Maintenance</td>
+<td>OPTIMIZE, ZORDER, VACUUM</td>
+</tr>
+<tr class="even">
+<td>Migration</td>
+<td>CONVERT TO DELTA</td>
+</tr>
+</tbody>
+</table>
+<p>🎉 <strong>Félicitations !</strong> Module Table Formats terminé.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<!-- ===== Floating PDF Download Button ===== -->
+
+<style>
+#pdf-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #00b4d8;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 9999;
+  transition: 0.2s ease-in-out;
+}
+#pdf-button:hover {
+  background: #0077b6;
+}
+</style>
+
+<div id="pdf-button" onclick="downloadPDF()">
+  📄 Télécharger ce module en PDF
+</div>
+
+<script>
+function downloadPDF() {
+  window.print(); // fonctionne directement dans Quarto HTML
+}
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/diakite-data\.github\.io\/data-engineering-bootcamp");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<input type="hidden" id="giscus-base-theme" value="preferred_color_scheme">
+<input type="hidden" id="giscus-alt-theme" value="preferred_color_scheme">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      if (authorPrefersDark) {
+          [baseTheme, altTheme] = [altTheme, baseTheme];
+      }
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "diakite-data/data-engineering-bootcamp";
+    script.dataset.repoId = "R_kgDOQjHMsg";
+    script.dataset.category = "General";
+    script.dataset.categoryId = "DIC_kwDOQjHMss4CzeOO";
+    script.dataset.mapping = "pathname";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "top";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "fr";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="git@github.com:diakite-data/data-engineering-bootcamp.git/blob/main/notebooks/intermediate/23_table_formats_delta_iceberg.ipynb" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="git@github.com:diakite-data/data-engineering-bootcamp.git/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

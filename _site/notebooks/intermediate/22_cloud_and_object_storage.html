@@ -487,6 +487,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">☁️ Cloud &amp; Object Storage for Data Engineers</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/23_table_formats_delta_iceberg.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">💎 Table Formats : Delta Lake &amp; Apache Iceberg</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/24_kafka_streaming.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🌊 Kafka, Python &amp; Structured Streaming</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/25_dbt_data_quality.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🏗️ dbt (Data Build Tool) &amp; Data Quality</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -1568,7 +1586,12 @@ Dans Spark, TOUJOURS utiliser s3a://, abfss://, ou gs://</code></pre>
 </section>
 <section id="exercice-3-calculer-le-coût-de-stockage" class="level3">
 <h3 class="anchored" data-anchor-id="exercice-3-calculer-le-coût-de-stockage">🏋️ Exercice 3 : Calculer le coût de stockage</h3>
-<p><strong>Scénario</strong> : Tu as un Data Lake avec : - Bronze : 500 GB (accès rare) - Silver : 200 GB (accès fréquent) - Gold : 50 GB (accès très fréquent)</p>
+<p><strong>Scénario</strong> : Tu as un Data Lake avec :</p>
+<ul>
+<li>Bronze : 500 GB (accès rare)</li>
+<li>Silver : 200 GB (accès fréquent)</li>
+<li>Gold : 50 GB (accès très fréquent)</li>
+</ul>
 <p>Calcule le coût mensuel optimal sur S3.</p>
 <details>
 <summary>
@@ -1856,7 +1879,13 @@ Utiliser :
 </section>
 <section id="exercice-4-uploaddownload-avec-boto3" class="level3">
 <h3 class="anchored" data-anchor-id="exercice-4-uploaddownload-avec-boto3">🏋️ Exercice 4 : Upload/Download avec boto3</h3>
-<p>Écris un script Python qui : 1. Crée un fichier CSV local avec 3 lignes 2. L’upload vers S3 (ou MinIO) 3. Liste les fichiers du bucket 4. Télécharge le fichier sous un autre nom</p>
+<p>Écris un script Python qui :</p>
+<ol type="1">
+<li>Crée un fichier CSV local avec 3 lignes</li>
+<li>L’upload vers S3 (ou MinIO)</li>
+<li>Liste les fichiers du bucket</li>
+<li>Télécharge le fichier sous un autre nom</li>
+</ol>
 <details>
 <summary>
 💡 Voir la solution
@@ -2530,7 +2559,11 @@ Utiliser :
 └── year=2023/
     └── ...</code></pre>
 <p><strong>Avantages</strong> : - Partition pruning (Spark ne lit que les partitions nécessaires) - Requêtes plus rapides</p>
-<p><strong>⚠️ Attention au over-partitioning</strong> : - Trop de partitions = trop de petits fichiers - Règle : max 10,000 partitions</p>
+<p><strong>⚠️ Attention au over-partitioning</strong> :</p>
+<ul>
+<li>Trop de partitions = trop de petits fichiers</li>
+<li>Règle : max 10,000 partitions</li>
+</ul>
 <div id="partitioning_example" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -2884,7 +2917,15 @@ Utiliser :
 </section>
 <section id="exercice-10-estimer-le-coût-mensuel-dun-data-lake" class="level3">
 <h3 class="anchored" data-anchor-id="exercice-10-estimer-le-coût-mensuel-dun-data-lake">🏋️ Exercice 10 : Estimer le coût mensuel d’un Data Lake</h3>
-<p><strong>Scénario</strong> : - Bronze : 1 TB (accès rare) - Silver : 500 GB (accès fréquent) - Gold : 100 GB (accès très fréquent) - 100,000 requêtes GET/jour - 10,000 requêtes PUT/jour - 50 GB egress/mois</p>
+<p><strong>Scénario</strong> :</p>
+<ul>
+<li>Bronze : 1 TB (accès rare)</li>
+<li>Silver : 500 GB (accès fréquent)</li>
+<li>Gold : 100 GB (accès très fréquent)</li>
+<li>100,000 requêtes GET/jour</li>
+<li>10,000 requêtes PUT/jour</li>
+<li>50 GB egress/mois</li>
+</ul>
 <p>Calcule le coût mensuel sur AWS S3.</p>
 <details>
 <summary>
@@ -3366,7 +3407,13 @@ Utiliser :
 <h2 class="anchored" data-anchor-id="prochaine-étape">➡️ Prochaine étape</h2>
 <p>Maintenant que tu maîtrises l’Object Storage, passons aux <strong>Table Formats</strong> pour transformer ton Data Lake en <strong>Lakehouse</strong> !</p>
 <p>👉 <strong>Module suivant : <code>23_table_formats_delta_iceberg.ipynb</code></strong> — Delta Lake &amp; Apache Iceberg</p>
-<p>Tu vas apprendre : - <strong>Delta Lake</strong> : ACID, Time Travel, Schema Evolution - <strong>Apache Iceberg</strong> : Table format open-source - <strong>Transaction Log</strong> : Comment ça remplace le Metastore - <strong>Optimisations</strong> : Compaction, Z-Ordering, Vacuum</p>
+<p>Tu vas apprendre :</p>
+<ul>
+<li><strong>Delta Lake</strong> : ACID, Time Travel, Schema Evolution</li>
+<li><strong>Apache Iceberg</strong> : Table format open-source</li>
+<li><strong>Transaction Log</strong> : Comment ça remplace le Metastore</li>
+<li><strong>Optimisations</strong> : Compaction, Z-Ordering, Vacuum</li>
+</ul>
 <hr>
 <section id="récapitulatif-de-ce-module" class="level3">
 <h3 class="anchored" data-anchor-id="récapitulatif-de-ce-module">📝 Récapitulatif de ce module</h3>
@@ -3432,6 +3479,37 @@ Utiliser :
 </section>
 
 </main> <!-- /main -->
+<!-- ===== Floating PDF Download Button ===== -->
+
+<style>
+#pdf-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #00b4d8;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 9999;
+  transition: 0.2s ease-in-out;
+}
+#pdf-button:hover {
+  background: #0077b6;
+}
+</style>
+
+<div id="pdf-button" onclick="downloadPDF()">
+  📄 Télécharger ce module en PDF
+</div>
+
+<script>
+function downloadPDF() {
+  window.print(); // fonctionne directement dans Quarto HTML
+}
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

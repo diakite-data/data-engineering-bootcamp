@@ -487,6 +487,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">☁️ Cloud &amp; Object Storage for Data Engineers</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/23_table_formats_delta_iceberg.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">💎 Table Formats : Delta Lake &amp; Apache Iceberg</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/24_kafka_streaming.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🌊 Kafka, Python &amp; Structured Streaming</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/25_dbt_data_quality.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🏗️ dbt (Data Build Tool) &amp; Data Quality</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -1148,7 +1166,13 @@ Usage: Debug, interactif            Usage: Production</code></pre>
 </blockquote>
 <section id="quest-ce-quun-shuffle" class="level3">
 <h3 class="anchored" data-anchor-id="quest-ce-quun-shuffle">4.1 Qu’est-ce qu’un Shuffle ?</h3>
-<p>Le shuffle est la <strong>redistribution des données entre partitions</strong>. Il est nécessaire pour : - <code>groupBy</code>, <code>reduceByKey</code> - <code>join</code> (sauf broadcast) - <code>distinct</code>, <code>repartition</code> - <code>orderBy</code> (tri global)</p>
+<p>Le shuffle est la <strong>redistribution des données entre partitions</strong>. Il est nécessaire pour :</p>
+<ul>
+<li><code>groupBy</code>, <code>reduceByKey</code></li>
+<li><code>join</code> (sauf broadcast)</li>
+<li><code>distinct</code>, <code>repartition</code></li>
+<li><code>orderBy</code> (tri global)</li>
+</ul>
 <pre class="text"><code>SHUFFLE = GOULOT D'ÉTRANGLEMENT
 ══════════════════════════════
 
@@ -1267,7 +1291,12 @@ Temps: ████                         Temps: █████████�
        4 tâches parallèles                 ↑
        = temps minimal                     Un seul executor bloqué !
                                            Les autres attendent...</code></pre>
-<p><strong>Techniques anti-skew :</strong> 1. <strong>Broadcast join</strong> : si une table est petite (&lt; 100 MB) 2. <strong>Salting</strong> : ajouter une clé aléatoire pour distribuer 3. <strong>AQE</strong> (Adaptive Query Execution) : Spark 3.0+ gère automatiquement</p>
+<p><strong>Techniques anti-skew :</strong></p>
+<ol type="1">
+<li><strong>Broadcast join</strong> : si une table est petite (&lt; 100 MB)</li>
+<li><strong>Salting</strong> : ajouter une clé aléatoire pour distribuer</li>
+<li><strong>AQE</strong> (Adaptive Query Execution) : Spark 3.0+ gère automatiquement</li>
+</ol>
 <div id="aqe_config" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1284,7 +1313,12 @@ Temps: ████                         Temps: █████████�
 </section>
 <section id="caching-persistence" class="level3">
 <h3 class="anchored" data-anchor-id="caching-persistence">4.5 Caching &amp; Persistence</h3>
-<p><strong>Quand utiliser le cache ?</strong> - DataFrame réutilisé dans <strong>plusieurs actions</strong> - Calcul <strong>coûteux</strong> (join, aggregation) réutilisé - <strong>Itérations</strong> (ML training)</p>
+<p><strong>Quand utiliser le cache ?</strong></p>
+<ul>
+<li>DataFrame réutilisé dans <strong>plusieurs actions</strong></li>
+<li>Calcul <strong>coûteux</strong> (join, aggregation) réutilisé</li>
+<li><strong>Itérations</strong> (ML training)</li>
+</ul>
 <p><strong>cache() vs persist()</strong></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># cache() = persist(StorageLevel.MEMORY_AND_DISK)</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>df.cache()</span>
@@ -1575,7 +1609,15 @@ Temps: ████                         Temps: █████████�
 </tbody>
 </table>
 <blockquote class="blockquote">
-<p>🔭 <strong>Les formats modernes</strong> (Delta, Iceberg, Hudi) seront approfondis dans le <strong>module 21 (Lakehouse)</strong> : - Transactions ACID - Time Travel - Vacuum, Compaction - Z-Ordering</p>
+<p>🔭 <strong>Les formats modernes</strong> (Delta, Iceberg, Hudi) seront approfondis dans le <strong>module 21 (Lakehouse)</strong> :</p>
+</blockquote>
+<blockquote class="blockquote">
+<ul>
+<li>Transactions ACID</li>
+<li>Time Travel</li>
+<li>Vacuum, Compaction</li>
+<li>Z-Ordering</li>
+</ul>
 </blockquote>
 </section>
 <section id="predicate-pushdown" class="level3">
@@ -1643,7 +1685,12 @@ Temps: ████                         Temps: █████████�
 </section>
 <section id="schémas-explicites" class="level3">
 <h3 class="anchored" data-anchor-id="schémas-explicites">6.4 Schémas explicites</h3>
-<p><strong>Pourquoi définir un schéma ?</strong> - Évite l’<strong>inférence</strong> (coûteuse sur gros fichiers) - <strong>Garantit</strong> les types attendus - Détecte les erreurs <strong>tôt</strong></p>
+<p><strong>Pourquoi définir un schéma ?</strong></p>
+<ul>
+<li>Évite l’<strong>inférence</strong> (coûteuse sur gros fichiers)</li>
+<li><strong>Garantit</strong> les types attendus</li>
+<li>Détecte les erreurs <strong>tôt</strong></li>
+</ul>
 <div id="schema_example" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -2649,10 +2696,16 @@ memoryOverhead = 15-20% pour PySpark (sérialisation Python)</code></pre>
 <h2 class="anchored" data-anchor-id="prochaine-étape">➡️ Prochaine étape</h2>
 <p>Maintenant que tu maîtrises l’optimisation Spark, passons aux <strong>fonctionnalités SQL avancées</strong> !</p>
 <p>👉 <strong>Module suivant : <code>20_spark_sql_deep_dive.ipynb</code></strong> — Spark SQL Deep Dive</p>
-<p>Tu vas apprendre : - <strong>Window functions</strong> avancées - <strong>CTEs</strong> et subqueries - Optimisation SQL - Spark SQL vs DataFrame API</p>
+<p>Tu vas apprendre :</p>
+<ul>
+<li><strong>Window functions</strong> avancées</li>
+<li><strong>CTEs</strong> et subqueries</li>
+<li>Optimisation SQL</li>
+<li>Spark SQL vs DataFrame API</li>
+</ul>
 <hr>
 <blockquote class="blockquote">
-<p>⚠️ <strong>Note</strong> : Spark Streaming sera couvert dans les <strong>modules 23-24</strong> après Kafka.</p>
+<p>⚠️ <strong>Note</strong> : Spark Streaming sera couvert dans le <strong>module 24</strong> Kafka.</p>
 </blockquote>
 <hr>
 <section id="récapitulatif-de-ce-module" class="level3">
@@ -2727,6 +2780,37 @@ memoryOverhead = 15-20% pour PySpark (sérialisation Python)</code></pre>
 </section>
 
 </main> <!-- /main -->
+<!-- ===== Floating PDF Download Button ===== -->
+
+<style>
+#pdf-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #00b4d8;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 9999;
+  transition: 0.2s ease-in-out;
+}
+#pdf-button:hover {
+  background: #0077b6;
+}
+</style>
+
+<div id="pdf-button" onclick="downloadPDF()">
+  📄 Télécharger ce module en PDF
+</div>
+
+<script>
+function downloadPDF() {
+  window.print(); // fonctionne directement dans Quarto HTML
+}
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
