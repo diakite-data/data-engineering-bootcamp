@@ -6,7 +6,8 @@ format:
 ---
 
 <div class="hero" style="padding: 40px 0; text-align:center;">
-  <h1>🚀 Bootcamp Data Engineering : From Zero to Hero</h1>
+  <h2>🚀 Bootcamp Data Engineering </h2>
+  <h1>From Zero to Hero</h1>
   <h3>Devenez un Data Engineer opérationnel, prêt pour l'entreprise.</h3>
 </div>
 

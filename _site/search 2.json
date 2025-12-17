@@ -4920,13 +4920,6 @@
     "text": "🛠️ Votre Boîte à Outils Data Engineering\n\n\n\n\n\n\n\nDomaine\nOutils & Technologies\n\n\n\n\nBig Data Processing\nPySpark, Spark SQL, Scala, Polars, Dask\n\n\nLakehouse\nDelta Lake, Apache Iceberg, Hudi\n\n\nStreaming\nKafka, Spark Streaming, Flink, Debezium CDC\n\n\nDevOps / Infra\nDocker, Kubernetes, Helm, ArgoCD, Spark Operator\n\n\nMonitoring\nPrometheus, Grafana, Alertmanager\n\n\nCloud\nAWS S3, GCP GCS, Azure Blob, IAM, MinIO\n\n\nQualité & ETL\ndbt, Great Expectations, Data Contracts\n\n\nMLOps\nMLflow, Feast (Feature Store), Model Monitoring\n\n\nGovernance\nDataHub, Unity Catalog, RLS/CLS, GDPR"
   },
   {
-    "objectID": "index.html#a-venir",
-    "href": "index.html#a-venir",
-    "title": "Bootcamp Data Engineering – From Zero to Hero",
-    "section": "A venir",
-    "text": "A venir"
-  },
-  {
     "objectID": "index.html#conseils-pour-réussir",
     "href": "index.html#conseils-pour-réussir",
     "title": "Bootcamp Data Engineering – From Zero to Hero",
@@ -4945,456 +4938,266 @@
     "href": "resources/links.html",
     "title": "🔗 Liens Utiles",
     "section": "",
-    "text": "Outil\nDescription\nLien\n\n\n\n\nVS Code\nÉditeur de code\ncode.visualstudio.com\n\n\nPyCharm\nIDE Python\njetbrains.com/pycharm\n\n\nDataGrip\nIDE SQL\njetbrains.com/datagrip\n\n\nDBeaver\nClient SQL gratuit\ndbeaver.io\n\n\nPostman\nTest d’API\npostman.com\n\n\n\n\n\n\n\n\n\nOutil\nDescription\nLien\n\n\n\n\niTerm2\nTerminal macOS\niterm2.com\n\n\nOh My Zsh\nFramework Zsh\nohmyz.sh\n\n\nStarship\nPrompt moderne\nstarship.rs\n\n\ntmux\nMultiplexeur terminal\ngithub.com/tmux\n\n\n\n\n\n\n\n\n\nOutil\nDescription\nLien\n\n\n\n\nGitHub\nHébergement Git\ngithub.com\n\n\nGitLab\nAlternative GitHub\ngitlab.com\n\n\nGitKraken\nClient Git visuel\ngitkraken.com\n\n\nSourcetree\nClient Git Atlassian\nsourcetreeapp.com",
-    "crumbs": [
-      "🏠 Accueil",
-      "📚 Ressources",
-      "🔗 Liens Utiles"
-    ]
+    "text": "Outil\nDescription\nLien\n\n\n\n\nVS Code\nÉditeur de code\ncode.visualstudio.com\n\n\nPyCharm\nIDE Python\njetbrains.com/pycharm\n\n\nDataGrip\nIDE SQL\njetbrains.com/datagrip\n\n\nDBeaver\nClient SQL gratuit\ndbeaver.io\n\n\nPostman\nTest d’API\npostman.com\n\n\n\n\n\n\n\n\n\nOutil\nDescription\nLien\n\n\n\n\niTerm2\nTerminal macOS\niterm2.com\n\n\nOh My Zsh\nFramework Zsh\nohmyz.sh\n\n\nStarship\nPrompt moderne\nstarship.rs\n\n\ntmux\nMultiplexeur terminal\ngithub.com/tmux\n\n\n\n\n\n\n\n\n\nOutil\nDescription\nLien\n\n\n\n\nGitHub\nHébergement Git\ngithub.com\n\n\nGitLab\nAlternative GitHub\ngitlab.com\n\n\nGitKraken\nClient Git visuel\ngitkraken.com\n\n\nSourcetree\nClient Git Atlassian\nsourcetreeapp.com"
   },
   {
     "objectID": "resources/links.html#outils-essentiels",
     "href": "resources/links.html#outils-essentiels",
     "title": "🔗 Liens Utiles",
     "section": "",
-    "text": "Outil\nDescription\nLien\n\n\n\n\nVS Code\nÉditeur de code\ncode.visualstudio.com\n\n\nPyCharm\nIDE Python\njetbrains.com/pycharm\n\n\nDataGrip\nIDE SQL\njetbrains.com/datagrip\n\n\nDBeaver\nClient SQL gratuit\ndbeaver.io\n\n\nPostman\nTest d’API\npostman.com\n\n\n\n\n\n\n\n\n\nOutil\nDescription\nLien\n\n\n\n\niTerm2\nTerminal macOS\niterm2.com\n\n\nOh My Zsh\nFramework Zsh\nohmyz.sh\n\n\nStarship\nPrompt moderne\nstarship.rs\n\n\ntmux\nMultiplexeur terminal\ngithub.com/tmux\n\n\n\n\n\n\n\n\n\nOutil\nDescription\nLien\n\n\n\n\nGitHub\nHébergement Git\ngithub.com\n\n\nGitLab\nAlternative GitHub\ngitlab.com\n\n\nGitKraken\nClient Git visuel\ngitkraken.com\n\n\nSourcetree\nClient Git Atlassian\nsourcetreeapp.com",
-    "crumbs": [
-      "🏠 Accueil",
-      "📚 Ressources",
-      "🔗 Liens Utiles"
-    ]
+    "text": "Outil\nDescription\nLien\n\n\n\n\nVS Code\nÉditeur de code\ncode.visualstudio.com\n\n\nPyCharm\nIDE Python\njetbrains.com/pycharm\n\n\nDataGrip\nIDE SQL\njetbrains.com/datagrip\n\n\nDBeaver\nClient SQL gratuit\ndbeaver.io\n\n\nPostman\nTest d’API\npostman.com\n\n\n\n\n\n\n\n\n\nOutil\nDescription\nLien\n\n\n\n\niTerm2\nTerminal macOS\niterm2.com\n\n\nOh My Zsh\nFramework Zsh\nohmyz.sh\n\n\nStarship\nPrompt moderne\nstarship.rs\n\n\ntmux\nMultiplexeur terminal\ngithub.com/tmux\n\n\n\n\n\n\n\n\n\nOutil\nDescription\nLien\n\n\n\n\nGitHub\nHébergement Git\ngithub.com\n\n\nGitLab\nAlternative GitHub\ngitlab.com\n\n\nGitKraken\nClient Git visuel\ngitkraken.com\n\n\nSourcetree\nClient Git Atlassian\nsourcetreeapp.com"
   },
   {
     "objectID": "resources/links.html#datasets-pour-pratiquer",
     "href": "resources/links.html#datasets-pour-pratiquer",
     "title": "🔗 Liens Utiles",
     "section": "📊 Datasets pour Pratiquer",
-    "text": "📊 Datasets pour Pratiquer\n\nDatasets Kaggle\n\n\n\nDataset\nDescription\nLien\n\n\n\n\nOlist E-commerce\n100K commandes Brésil\nkaggle.com/olistbr\n\n\nNYC Taxi\nTrajets taxis NYC\nkaggle.com/nyc-taxi\n\n\nSpotify\nDonnées musicales\nkaggle.com/spotify\n\n\nCOVID-19\nDonnées pandémie\nkaggle.com/covid19\n\n\n\n\n\nDatasets Open Data\n\n\n\nSource\nDescription\nLien\n\n\n\n\ndata.gouv.fr\nOpen Data France\ndata.gouv.fr\n\n\nNYC Open Data\nDonnées NYC\nopendata.cityofnewyork.us\n\n\nWorld Bank\nDonnées mondiales\ndata.worldbank.org\n\n\nAwesome Public Datasets\nListe curatée\ngithub.com/awesomedata",
-    "crumbs": [
-      "🏠 Accueil",
-      "📚 Ressources",
-      "🔗 Liens Utiles"
-    ]
+    "text": "📊 Datasets pour Pratiquer\n\nDatasets Kaggle\n\n\n\nDataset\nDescription\nLien\n\n\n\n\nOlist E-commerce\n100K commandes Brésil\nkaggle.com/olistbr\n\n\nNYC Taxi\nTrajets taxis NYC\nkaggle.com/nyc-taxi\n\n\nSpotify\nDonnées musicales\nkaggle.com/spotify\n\n\nCOVID-19\nDonnées pandémie\nkaggle.com/covid19\n\n\n\n\n\nDatasets Open Data\n\n\n\nSource\nDescription\nLien\n\n\n\n\ndata.gouv.fr\nOpen Data France\ndata.gouv.fr\n\n\nNYC Open Data\nDonnées NYC\nopendata.cityofnewyork.us\n\n\nWorld Bank\nDonnées mondiales\ndata.worldbank.org\n\n\nAwesome Public Datasets\nListe curatée\ngithub.com/awesomedata"
   },
   {
     "objectID": "resources/links.html#cloud-infrastructure",
     "href": "resources/links.html#cloud-infrastructure",
     "title": "🔗 Liens Utiles",
     "section": "☁️ Cloud & Infrastructure",
-    "text": "☁️ Cloud & Infrastructure\n\nCloud Providers\n\n\n\nProvider\nConsole\nDocumentation\n\n\n\n\nAWS\nconsole.aws.amazon.com\ndocs.aws.amazon.com\n\n\nGoogle Cloud\nconsole.cloud.google.com\ncloud.google.com/docs\n\n\nAzure\nportal.azure.com\ndocs.microsoft.com\n\n\n\n\n\nData Platforms\n\n\n\nPlateforme\nDescription\nLien\n\n\n\n\nDatabricks\nLakehouse platform\ndatabricks.com\n\n\nSnowflake\nData Cloud\nsnowflake.com\n\n\nConfluent Cloud\nKafka managed\nconfluent.cloud\n\n\ndbt Cloud\ndbt managed\ngetdbt.com\n\n\n\n\n\nContainers & Orchestration\n\n\n\nOutil\nDescription\nLien\n\n\n\n\nDocker Hub\nRegistry d’images\nhub.docker.com\n\n\nArtifact Hub\nCharts Helm\nartifacthub.io\n\n\nOperatorHub\nOperators K8s\noperatorhub.io",
-    "crumbs": [
-      "🏠 Accueil",
-      "📚 Ressources",
-      "🔗 Liens Utiles"
-    ]
+    "text": "☁️ Cloud & Infrastructure\n\nCloud Providers\n\n\n\nProvider\nConsole\nDocumentation\n\n\n\n\nAWS\nconsole.aws.amazon.com\ndocs.aws.amazon.com\n\n\nGoogle Cloud\nconsole.cloud.google.com\ncloud.google.com/docs\n\n\nAzure\nportal.azure.com\ndocs.microsoft.com\n\n\n\n\n\nData Platforms\n\n\n\nPlateforme\nDescription\nLien\n\n\n\n\nDatabricks\nLakehouse platform\ndatabricks.com\n\n\nSnowflake\nData Cloud\nsnowflake.com\n\n\nConfluent Cloud\nKafka managed\nconfluent.cloud\n\n\ndbt Cloud\ndbt managed\ngetdbt.com\n\n\n\n\n\nContainers & Orchestration\n\n\n\nOutil\nDescription\nLien\n\n\n\n\nDocker Hub\nRegistry d’images\nhub.docker.com\n\n\nArtifact Hub\nCharts Helm\nartifacthub.io\n\n\nOperatorHub\nOperators K8s\noperatorhub.io"
   },
   {
     "objectID": "resources/links.html#apprentissage",
     "href": "resources/links.html#apprentissage",
     "title": "🔗 Liens Utiles",
     "section": "📚 Apprentissage",
-    "text": "📚 Apprentissage\n\nCours en ligne\n\n\n\nPlateforme\nFocus\nLien\n\n\n\n\nCoursera\nCertifications cloud\ncoursera.org\n\n\nDataCamp\nData skills\ndatacamp.com\n\n\nUdemy\nCours variés\nudemy.com\n\n\nPluralsight\nTech skills\npluralsight.com\n\n\ndbt Learn\ndbt gratuit\ncourses.getdbt.com\n\n\n\n\n\nYouTube Channels\n\n\n\nChannel\nFocus\nLien\n\n\n\n\nDatabricks\nSpark, Delta Lake\nyoutube.com/@Databricks\n\n\nConfluent\nKafka\nyoutube.com/@Confluent\n\n\nData Engineering\nTutoriels\nyoutube.com/@DataEngineering\n\n\nSeattle Data Guy\nCarrière DE\nyoutube.com/@SeattleDataGuy\n\n\n\n\n\nLivres (liens d’achat)\n\n\n\nLivre\nAuteur\nLien\n\n\n\n\nDesigning Data-Intensive Applications\nKleppmann\nO’Reilly\n\n\nFundamentals of Data Engineering\nReis & Housley\nO’Reilly\n\n\nLearning Spark, 2nd Ed\nDamji et al.\nO’Reilly",
-    "crumbs": [
-      "🏠 Accueil",
-      "📚 Ressources",
-      "🔗 Liens Utiles"
-    ]
+    "text": "📚 Apprentissage\n\nCours en ligne\n\n\n\nPlateforme\nFocus\nLien\n\n\n\n\nCoursera\nCertifications cloud\ncoursera.org\n\n\nDataCamp\nData skills\ndatacamp.com\n\n\nUdemy\nCours variés\nudemy.com\n\n\nPluralsight\nTech skills\npluralsight.com\n\n\ndbt Learn\ndbt gratuit\ncourses.getdbt.com\n\n\n\n\n\nYouTube Channels\n\n\n\nChannel\nFocus\nLien\n\n\n\n\nDatabricks\nSpark, Delta Lake\nyoutube.com/@Databricks\n\n\nConfluent\nKafka\nyoutube.com/@Confluent\n\n\nData Engineering\nTutoriels\nyoutube.com/@DataEngineering\n\n\nSeattle Data Guy\nCarrière DE\nyoutube.com/@SeattleDataGuy\n\n\n\n\n\nLivres (liens d’achat)\n\n\n\nLivre\nAuteur\nLien\n\n\n\n\nDesigning Data-Intensive Applications\nKleppmann\nO’Reilly\n\n\nFundamentals of Data Engineering\nReis & Housley\nO’Reilly\n\n\nLearning Spark, 2nd Ed\nDamji et al.\nO’Reilly"
   },
   {
     "objectID": "resources/links.html#playgrounds-labs",
     "href": "resources/links.html#playgrounds-labs",
     "title": "🔗 Liens Utiles",
     "section": "🧪 Playgrounds & Labs",
-    "text": "🧪 Playgrounds & Labs\n\nSQL\n\n\n\nOutil\nDescription\nLien\n\n\n\n\nSQLFiddle\nSQL en ligne\nsqlfiddle.com\n\n\nDB Fiddle\nMulti-DB\ndb-fiddle.com\n\n\nMode SQL Tutorial\nApprendre SQL\nmode.com/sql-tutorial\n\n\nLeetCode\nChallenges SQL\nleetcode.com\n\n\n\n\n\nPython & Spark\n\n\n\nOutil\nDescription\nLien\n\n\n\n\nGoogle Colab\nNotebooks gratuits\ncolab.research.google.com\n\n\nDatabricks Community\nSpark gratuit\ncommunity.cloud.databricks.com\n\n\nReplit\nIDE en ligne\nreplit.com\n\n\nGitpod\nDev environments\ngitpod.io\n\n\n\n\n\nKubernetes\n\n\n\nOutil\nDescription\nLien\n\n\n\n\nKillercoda\nLabs K8s\nkillercoda.com\n\n\nPlay with K8s\nK8s gratuit\nlabs.play-with-k8s.com\n\n\nKatacoda\nTutoriels interactifs\nkatacoda.com",
-    "crumbs": [
-      "🏠 Accueil",
-      "📚 Ressources",
-      "🔗 Liens Utiles"
-    ]
+    "text": "🧪 Playgrounds & Labs\n\nSQL\n\n\n\nOutil\nDescription\nLien\n\n\n\n\nSQLFiddle\nSQL en ligne\nsqlfiddle.com\n\n\nDB Fiddle\nMulti-DB\ndb-fiddle.com\n\n\nMode SQL Tutorial\nApprendre SQL\nmode.com/sql-tutorial\n\n\nLeetCode\nChallenges SQL\nleetcode.com\n\n\n\n\n\nPython & Spark\n\n\n\nOutil\nDescription\nLien\n\n\n\n\nGoogle Colab\nNotebooks gratuits\ncolab.research.google.com\n\n\nDatabricks Community\nSpark gratuit\ncommunity.cloud.databricks.com\n\n\nReplit\nIDE en ligne\nreplit.com\n\n\nGitpod\nDev environments\ngitpod.io\n\n\n\n\n\nKubernetes\n\n\n\nOutil\nDescription\nLien\n\n\n\n\nKillercoda\nLabs K8s\nkillercoda.com\n\n\nPlay with K8s\nK8s gratuit\nlabs.play-with-k8s.com\n\n\nKatacoda\nTutoriels interactifs\nkatacoda.com"
   },
   {
     "objectID": "resources/links.html#newsletters-blogs",
     "href": "resources/links.html#newsletters-blogs",
     "title": "🔗 Liens Utiles",
     "section": "📰 Newsletters & Blogs",
-    "text": "📰 Newsletters & Blogs\n\nNewsletters\n\n\n\nNewsletter\nFréquence\nLien\n\n\n\n\nData Engineering Weekly\nHebdo\ndataengineeringweekly.com\n\n\nSeattle Data Guy\nHebdo\nseattledataguy.substack.com\n\n\nData Council\nMensuel\ndatacouncil.ai\n\n\nLast Week in AWS\nHebdo\nlastweekinaws.com\n\n\n\n\n\nBlogs\n\n\n\nBlog\nFocus\nLien\n\n\n\n\nDatabricks Blog\nSpark, Lakehouse\ndatabricks.com/blog\n\n\nConfluent Blog\nKafka, Streaming\nconfluent.io/blog\n\n\ndbt Blog\nAnalytics Engineering\ngetdbt.com/blog\n\n\nNetflix Tech Blog\nScale\nnetflixtechblog.com\n\n\nUber Engineering\nData at scale\neng.uber.com",
-    "crumbs": [
-      "🏠 Accueil",
-      "📚 Ressources",
-      "🔗 Liens Utiles"
-    ]
+    "text": "📰 Newsletters & Blogs\n\nNewsletters\n\n\n\nNewsletter\nFréquence\nLien\n\n\n\n\nData Engineering Weekly\nHebdo\ndataengineeringweekly.com\n\n\nSeattle Data Guy\nHebdo\nseattledataguy.substack.com\n\n\nData Council\nMensuel\ndatacouncil.ai\n\n\nLast Week in AWS\nHebdo\nlastweekinaws.com\n\n\n\n\n\nBlogs\n\n\n\nBlog\nFocus\nLien\n\n\n\n\nDatabricks Blog\nSpark, Lakehouse\ndatabricks.com/blog\n\n\nConfluent Blog\nKafka, Streaming\nconfluent.io/blog\n\n\ndbt Blog\nAnalytics Engineering\ngetdbt.com/blog\n\n\nNetflix Tech Blog\nScale\nnetflixtechblog.com\n\n\nUber Engineering\nData at scale\neng.uber.com"
   },
   {
     "objectID": "resources/links.html#communautés",
     "href": "resources/links.html#communautés",
     "title": "🔗 Liens Utiles",
     "section": "👥 Communautés",
-    "text": "👥 Communautés\n\nForums & Discord\n\n\n\nCommunauté\nPlateforme\nLien\n\n\n\n\nr/dataengineering\nReddit\nreddit.com/r/dataengineering\n\n\ndbt Community\nSlack\ncommunity.getdbt.com\n\n\nData Talks Club\nSlack\ndatatalks.club\n\n\nApache Slack\nSlack\nthe-asf.slack.com\n\n\nMLOps Community\nSlack\nmlops.community\n\n\n\n\n\nMeetups & Conférences\n\n\n\nEvent\nType\nLien\n\n\n\n\nData Council\nConférence\ndatacouncil.ai\n\n\nSpark Summit\nConférence\ndatabricks.com/dataaisummit\n\n\nKafka Summit\nConférence\nkafka-summit.org\n\n\ndbt Coalesce\nConférence\ncoalesce.getdbt.com",
-    "crumbs": [
-      "🏠 Accueil",
-      "📚 Ressources",
-      "🔗 Liens Utiles"
-    ]
+    "text": "👥 Communautés\n\nForums & Discord\n\n\n\nCommunauté\nPlateforme\nLien\n\n\n\n\nr/dataengineering\nReddit\nreddit.com/r/dataengineering\n\n\ndbt Community\nSlack\ncommunity.getdbt.com\n\n\nData Talks Club\nSlack\ndatatalks.club\n\n\nApache Slack\nSlack\nthe-asf.slack.com\n\n\nMLOps Community\nSlack\nmlops.community\n\n\n\n\n\nMeetups & Conférences\n\n\n\nEvent\nType\nLien\n\n\n\n\nData Council\nConférence\ndatacouncil.ai\n\n\nSpark Summit\nConférence\ndatabricks.com/dataaisummit\n\n\nKafka Summit\nConférence\nkafka-summit.org\n\n\ndbt Coalesce\nConférence\ncoalesce.getdbt.com"
   },
   {
     "objectID": "resources/links.html#préparation-entretiens",
     "href": "resources/links.html#préparation-entretiens",
     "title": "🔗 Liens Utiles",
     "section": "🎯 Préparation Entretiens",
-    "text": "🎯 Préparation Entretiens\n\nCoding Practice\n\n\n\nSite\nType\nLien\n\n\n\n\nLeetCode\nAlgorithmes + SQL\nleetcode.com\n\n\nHackerRank\nChallenges\nhackerrank.com\n\n\nStrataScratch\nSQL réel\nstratascratch.com\n\n\nDataLemur\nSQL pour DE\ndatalemur.com\n\n\n\n\n\nSystem Design\n\n\n\nRessource\nDescription\nLien\n\n\n\n\nSystem Design Primer\nGuide complet\ngithub.com/donnemartin\n\n\nGrokking System Design\nCours\neducative.io\n\n\nByteByteGo\nNewsletter\nbytebytego.com",
-    "crumbs": [
-      "🏠 Accueil",
-      "📚 Ressources",
-      "🔗 Liens Utiles"
-    ]
+    "text": "🎯 Préparation Entretiens\n\nCoding Practice\n\n\n\nSite\nType\nLien\n\n\n\n\nLeetCode\nAlgorithmes + SQL\nleetcode.com\n\n\nHackerRank\nChallenges\nhackerrank.com\n\n\nStrataScratch\nSQL réel\nstratascratch.com\n\n\nDataLemur\nSQL pour DE\ndatalemur.com\n\n\n\n\n\nSystem Design\n\n\n\nRessource\nDescription\nLien\n\n\n\n\nSystem Design Primer\nGuide complet\ngithub.com/donnemartin\n\n\nGrokking System Design\nCours\neducative.io\n\n\nByteByteGo\nNewsletter\nbytebytego.com"
   },
   {
     "objectID": "resources/links.html#bookmarks-recommandés",
     "href": "resources/links.html#bookmarks-recommandés",
     "title": "🔗 Liens Utiles",
     "section": "🔖 Bookmarks Recommandés",
-    "text": "🔖 Bookmarks Recommandés\nAjoutez ces liens à vos favoris :\n📁 Data Engineering/\n├── 📁 Documentation/\n│   ├── Spark Docs\n│   ├── Kafka Docs\n│   ├── dbt Docs\n│   └── K8s Docs\n├── 📁 Outils/\n│   ├── GitHub\n│   ├── Docker Hub\n│   └── Artifact Hub\n├── 📁 Apprentissage/\n│   ├── dbt Learn\n│   ├── Databricks Academy\n│   └── Confluent Developer\n└── 📁 Communautés/\n    ├── r/dataengineering\n    └── dbt Community\n\n🔙 Retour à l’accueil",
-    "crumbs": [
-      "🏠 Accueil",
-      "📚 Ressources",
-      "🔗 Liens Utiles"
-    ]
+    "text": "🔖 Bookmarks Recommandés\nAjoutez ces liens à vos favoris :\n📁 Data Engineering/\n├── 📁 Documentation/\n│   ├── Spark Docs\n│   ├── Kafka Docs\n│   ├── dbt Docs\n│   └── K8s Docs\n├── 📁 Outils/\n│   ├── GitHub\n│   ├── Docker Hub\n│   └── Artifact Hub\n├── 📁 Apprentissage/\n│   ├── dbt Learn\n│   ├── Databricks Academy\n│   └── Confluent Developer\n└── 📁 Communautés/\n    ├── r/dataengineering\n    └── dbt Community\n\n🔙 Retour à l’accueil"
   },
   {
     "objectID": "resources/documentation.html",
     "href": "resources/documentation.html",
     "title": "📖 Documentation",
     "section": "",
-    "text": "Technologie\nDocumentation\nNotes\n\n\n\n\nPython\ndocs.python.org\nRéférence complète\n\n\nPandas\npandas.pydata.org\nManipulation de données\n\n\nPolars\npola.rs\nAlternative haute performance\n\n\nNumPy\nnumpy.org\nCalcul scientifique\n\n\n\n\n\n\n\n\n\n\nRessource\nLien\nDescription\n\n\n\n\nDocumentation officielle\nspark.apache.org/docs\nGuide complet\n\n\nPySpark API\nspark.apache.org/docs/latest/api/python\nRéférence API Python\n\n\nSpark SQL Guide\nspark.apache.org/docs/latest/sql-programming-guide\nGuide SQL\n\n\nStructured Streaming\nspark.apache.org/docs/latest/structured-streaming\nStreaming guide\n\n\n\nLivres recommandés :\n\nLearning Spark, 2nd Edition — O’Reilly\nSpark: The Definitive Guide — O’Reilly\n\n\n\n\n\n\n\n\nFormat\nDocumentation\nGitHub\n\n\n\n\nDelta Lake\ndocs.delta.io\ndelta-io/delta\n\n\nApache Iceberg\niceberg.apache.org\napache/iceberg\n\n\nApache Hudi\nhudi.apache.org\napache/hudi\n\n\n\n\n\n\n\n\n\n\nTechnologie\nDocumentation\nNotes\n\n\n\n\nApache Kafka\nkafka.apache.org/documentation\nMessage broker\n\n\nConfluent\ndocs.confluent.io\nKafka enterprise\n\n\nApache Flink\nflink.apache.org/docs\nStream processing\n\n\nDebezium\ndebezium.io/documentation\nCDC\n\n\n\n\n\n\n\n\n\n\nTechnologie\nDocumentation\nCheatsheet\n\n\n\n\nDocker\ndocs.docker.com\nDocker Cheatsheet\n\n\nKubernetes\nkubernetes.io/docs\nkubectl Cheatsheet\n\n\nHelm\nhelm.sh/docs\nPackage manager K8s\n\n\nArgoCD\nargo-cd.readthedocs.io\nGitOps\n\n\n\n\n\n\n\n\n\n\nTechnologie\nDocumentation\nNotes\n\n\n\n\nApache Airflow\nairflow.apache.org/docs\nOrchestration\n\n\ndbt\ndocs.getdbt.com\nTransformation\n\n\nGreat Expectations\ndocs.greatexpectations.io\nData Quality\n\n\nDagster\ndocs.dagster.io\nAlternative moderne\n\n\n\n\n\n\n\n\n\n\nProvider\nDocumentation Data\nServices clés\n\n\n\n\nAWS\ndocs.aws.amazon.com\nS3, EMR, Glue, Redshift\n\n\nGCP\ncloud.google.com/docs\nGCS, Dataproc, BigQuery\n\n\nAzure\ndocs.microsoft.com/azure\nBlob, Synapse, Databricks\n\n\n\n\n\n\n\n\n\n\nOutil\nDocumentation\nUsage\n\n\n\n\nPrometheus\nprometheus.io/docs\nMétriques\n\n\nGrafana\ngrafana.com/docs\nDashboards\n\n\nDataHub\ndatahubproject.io/docs\nData Catalog",
-    "crumbs": [
-      "🏠 Accueil",
-      "📚 Ressources",
-      "📖 Documentation"
-    ]
+    "text": "Technologie\nDocumentation\nNotes\n\n\n\n\nPython\ndocs.python.org\nRéférence complète\n\n\nPandas\npandas.pydata.org\nManipulation de données\n\n\nPolars\npola.rs\nAlternative haute performance\n\n\nNumPy\nnumpy.org\nCalcul scientifique\n\n\n\n\n\n\n\n\n\n\nRessource\nLien\nDescription\n\n\n\n\nDocumentation officielle\nspark.apache.org/docs\nGuide complet\n\n\nPySpark API\nspark.apache.org/docs/latest/api/python\nRéférence API Python\n\n\nSpark SQL Guide\nspark.apache.org/docs/latest/sql-programming-guide\nGuide SQL\n\n\nStructured Streaming\nspark.apache.org/docs/latest/structured-streaming\nStreaming guide\n\n\n\nLivres recommandés :\n\nLearning Spark, 2nd Edition — O’Reilly\nSpark: The Definitive Guide — O’Reilly\n\n\n\n\n\n\n\n\nFormat\nDocumentation\nGitHub\n\n\n\n\nDelta Lake\ndocs.delta.io\ndelta-io/delta\n\n\nApache Iceberg\niceberg.apache.org\napache/iceberg\n\n\nApache Hudi\nhudi.apache.org\napache/hudi\n\n\n\n\n\n\n\n\n\n\nTechnologie\nDocumentation\nNotes\n\n\n\n\nApache Kafka\nkafka.apache.org/documentation\nMessage broker\n\n\nConfluent\ndocs.confluent.io\nKafka enterprise\n\n\nApache Flink\nflink.apache.org/docs\nStream processing\n\n\nDebezium\ndebezium.io/documentation\nCDC\n\n\n\n\n\n\n\n\n\n\nTechnologie\nDocumentation\nCheatsheet\n\n\n\n\nDocker\ndocs.docker.com\nDocker Cheatsheet\n\n\nKubernetes\nkubernetes.io/docs\nkubectl Cheatsheet\n\n\nHelm\nhelm.sh/docs\nPackage manager K8s\n\n\nArgoCD\nargo-cd.readthedocs.io\nGitOps\n\n\n\n\n\n\n\n\n\n\nTechnologie\nDocumentation\nNotes\n\n\n\n\nApache Airflow\nairflow.apache.org/docs\nOrchestration\n\n\ndbt\ndocs.getdbt.com\nTransformation\n\n\nGreat Expectations\ndocs.greatexpectations.io\nData Quality\n\n\nDagster\ndocs.dagster.io\nAlternative moderne\n\n\n\n\n\n\n\n\n\n\nProvider\nDocumentation Data\nServices clés\n\n\n\n\nAWS\ndocs.aws.amazon.com\nS3, EMR, Glue, Redshift\n\n\nGCP\ncloud.google.com/docs\nGCS, Dataproc, BigQuery\n\n\nAzure\ndocs.microsoft.com/azure\nBlob, Synapse, Databricks\n\n\n\n\n\n\n\n\n\n\nOutil\nDocumentation\nUsage\n\n\n\n\nPrometheus\nprometheus.io/docs\nMétriques\n\n\nGrafana\ngrafana.com/docs\nDashboards\n\n\nDataHub\ndatahubproject.io/docs\nData Catalog"
   },
   {
     "objectID": "resources/documentation.html#documentation-officielle-par-technologie",
     "href": "resources/documentation.html#documentation-officielle-par-technologie",
     "title": "📖 Documentation",
     "section": "",
-    "text": "Technologie\nDocumentation\nNotes\n\n\n\n\nPython\ndocs.python.org\nRéférence complète\n\n\nPandas\npandas.pydata.org\nManipulation de données\n\n\nPolars\npola.rs\nAlternative haute performance\n\n\nNumPy\nnumpy.org\nCalcul scientifique\n\n\n\n\n\n\n\n\n\n\nRessource\nLien\nDescription\n\n\n\n\nDocumentation officielle\nspark.apache.org/docs\nGuide complet\n\n\nPySpark API\nspark.apache.org/docs/latest/api/python\nRéférence API Python\n\n\nSpark SQL Guide\nspark.apache.org/docs/latest/sql-programming-guide\nGuide SQL\n\n\nStructured Streaming\nspark.apache.org/docs/latest/structured-streaming\nStreaming guide\n\n\n\nLivres recommandés :\n\nLearning Spark, 2nd Edition — O’Reilly\nSpark: The Definitive Guide — O’Reilly\n\n\n\n\n\n\n\n\nFormat\nDocumentation\nGitHub\n\n\n\n\nDelta Lake\ndocs.delta.io\ndelta-io/delta\n\n\nApache Iceberg\niceberg.apache.org\napache/iceberg\n\n\nApache Hudi\nhudi.apache.org\napache/hudi\n\n\n\n\n\n\n\n\n\n\nTechnologie\nDocumentation\nNotes\n\n\n\n\nApache Kafka\nkafka.apache.org/documentation\nMessage broker\n\n\nConfluent\ndocs.confluent.io\nKafka enterprise\n\n\nApache Flink\nflink.apache.org/docs\nStream processing\n\n\nDebezium\ndebezium.io/documentation\nCDC\n\n\n\n\n\n\n\n\n\n\nTechnologie\nDocumentation\nCheatsheet\n\n\n\n\nDocker\ndocs.docker.com\nDocker Cheatsheet\n\n\nKubernetes\nkubernetes.io/docs\nkubectl Cheatsheet\n\n\nHelm\nhelm.sh/docs\nPackage manager K8s\n\n\nArgoCD\nargo-cd.readthedocs.io\nGitOps\n\n\n\n\n\n\n\n\n\n\nTechnologie\nDocumentation\nNotes\n\n\n\n\nApache Airflow\nairflow.apache.org/docs\nOrchestration\n\n\ndbt\ndocs.getdbt.com\nTransformation\n\n\nGreat Expectations\ndocs.greatexpectations.io\nData Quality\n\n\nDagster\ndocs.dagster.io\nAlternative moderne\n\n\n\n\n\n\n\n\n\n\nProvider\nDocumentation Data\nServices clés\n\n\n\n\nAWS\ndocs.aws.amazon.com\nS3, EMR, Glue, Redshift\n\n\nGCP\ncloud.google.com/docs\nGCS, Dataproc, BigQuery\n\n\nAzure\ndocs.microsoft.com/azure\nBlob, Synapse, Databricks\n\n\n\n\n\n\n\n\n\n\nOutil\nDocumentation\nUsage\n\n\n\n\nPrometheus\nprometheus.io/docs\nMétriques\n\n\nGrafana\ngrafana.com/docs\nDashboards\n\n\nDataHub\ndatahubproject.io/docs\nData Catalog",
-    "crumbs": [
-      "🏠 Accueil",
-      "📚 Ressources",
-      "📖 Documentation"
-    ]
+    "text": "Technologie\nDocumentation\nNotes\n\n\n\n\nPython\ndocs.python.org\nRéférence complète\n\n\nPandas\npandas.pydata.org\nManipulation de données\n\n\nPolars\npola.rs\nAlternative haute performance\n\n\nNumPy\nnumpy.org\nCalcul scientifique\n\n\n\n\n\n\n\n\n\n\nRessource\nLien\nDescription\n\n\n\n\nDocumentation officielle\nspark.apache.org/docs\nGuide complet\n\n\nPySpark API\nspark.apache.org/docs/latest/api/python\nRéférence API Python\n\n\nSpark SQL Guide\nspark.apache.org/docs/latest/sql-programming-guide\nGuide SQL\n\n\nStructured Streaming\nspark.apache.org/docs/latest/structured-streaming\nStreaming guide\n\n\n\nLivres recommandés :\n\nLearning Spark, 2nd Edition — O’Reilly\nSpark: The Definitive Guide — O’Reilly\n\n\n\n\n\n\n\n\nFormat\nDocumentation\nGitHub\n\n\n\n\nDelta Lake\ndocs.delta.io\ndelta-io/delta\n\n\nApache Iceberg\niceberg.apache.org\napache/iceberg\n\n\nApache Hudi\nhudi.apache.org\napache/hudi\n\n\n\n\n\n\n\n\n\n\nTechnologie\nDocumentation\nNotes\n\n\n\n\nApache Kafka\nkafka.apache.org/documentation\nMessage broker\n\n\nConfluent\ndocs.confluent.io\nKafka enterprise\n\n\nApache Flink\nflink.apache.org/docs\nStream processing\n\n\nDebezium\ndebezium.io/documentation\nCDC\n\n\n\n\n\n\n\n\n\n\nTechnologie\nDocumentation\nCheatsheet\n\n\n\n\nDocker\ndocs.docker.com\nDocker Cheatsheet\n\n\nKubernetes\nkubernetes.io/docs\nkubectl Cheatsheet\n\n\nHelm\nhelm.sh/docs\nPackage manager K8s\n\n\nArgoCD\nargo-cd.readthedocs.io\nGitOps\n\n\n\n\n\n\n\n\n\n\nTechnologie\nDocumentation\nNotes\n\n\n\n\nApache Airflow\nairflow.apache.org/docs\nOrchestration\n\n\ndbt\ndocs.getdbt.com\nTransformation\n\n\nGreat Expectations\ndocs.greatexpectations.io\nData Quality\n\n\nDagster\ndocs.dagster.io\nAlternative moderne\n\n\n\n\n\n\n\n\n\n\nProvider\nDocumentation Data\nServices clés\n\n\n\n\nAWS\ndocs.aws.amazon.com\nS3, EMR, Glue, Redshift\n\n\nGCP\ncloud.google.com/docs\nGCS, Dataproc, BigQuery\n\n\nAzure\ndocs.microsoft.com/azure\nBlob, Synapse, Databricks\n\n\n\n\n\n\n\n\n\n\nOutil\nDocumentation\nUsage\n\n\n\n\nPrometheus\nprometheus.io/docs\nMétriques\n\n\nGrafana\ngrafana.com/docs\nDashboards\n\n\nDataHub\ndatahubproject.io/docs\nData Catalog"
   },
   {
     "objectID": "resources/documentation.html#cours-formations-gratuits",
     "href": "resources/documentation.html#cours-formations-gratuits",
     "title": "📖 Documentation",
     "section": "🎓 Cours & Formations Gratuits",
-    "text": "🎓 Cours & Formations Gratuits\n\nPlateformes\n\n\n\nPlateforme\nCours recommandés\n\n\n\n\nCoursera\nData Engineering on Google Cloud\n\n\nDataCamp\nData Engineer Track\n\n\nUdemy\nSpark, Airflow, Kafka courses\n\n\nYouTube\nDatabricks, Confluent channels\n\n\n\n\n\nTutoriels officiels\n\ndbt Learn — Gratuit, certifiant\nKafka Tutorials — Confluent Developer\nDatabricks Academy — Spark & Delta Lake",
-    "crumbs": [
-      "🏠 Accueil",
-      "📚 Ressources",
-      "📖 Documentation"
-    ]
+    "text": "🎓 Cours & Formations Gratuits\n\nPlateformes\n\n\n\nPlateforme\nCours recommandés\n\n\n\n\nCoursera\nData Engineering on Google Cloud\n\n\nDataCamp\nData Engineer Track\n\n\nUdemy\nSpark, Airflow, Kafka courses\n\n\nYouTube\nDatabricks, Confluent channels\n\n\n\n\n\nTutoriels officiels\n\ndbt Learn — Gratuit, certifiant\nKafka Tutorials — Confluent Developer\nDatabricks Academy — Spark & Delta Lake"
   },
   {
     "objectID": "resources/documentation.html#blogs-articles",
     "href": "resources/documentation.html#blogs-articles",
     "title": "📖 Documentation",
     "section": "📝 Blogs & Articles",
-    "text": "📝 Blogs & Articles\n\nBlogs techniques\n\n\n\nBlog\nFocus\n\n\n\n\nDatabricks Blog\nSpark, Delta Lake\n\n\nConfluent Blog\nKafka, Streaming\n\n\ndbt Blog\nAnalytics Engineering\n\n\nTowards Data Science\nData Engineering articles\n\n\nData Engineering Weekly\nNewsletter\n\n\n\n\n\nArticles fondamentaux\n\nThe Modern Data Stack\nMedallion Architecture\nData Mesh Principles\nLakehouse Architecture",
-    "crumbs": [
-      "🏠 Accueil",
-      "📚 Ressources",
-      "📖 Documentation"
-    ]
+    "text": "📝 Blogs & Articles\n\nBlogs techniques\n\n\n\nBlog\nFocus\n\n\n\n\nDatabricks Blog\nSpark, Delta Lake\n\n\nConfluent Blog\nKafka, Streaming\n\n\ndbt Blog\nAnalytics Engineering\n\n\nTowards Data Science\nData Engineering articles\n\n\nData Engineering Weekly\nNewsletter\n\n\n\n\n\nArticles fondamentaux\n\nThe Modern Data Stack\nMedallion Architecture\nData Mesh Principles\nLakehouse Architecture"
   },
   {
     "objectID": "resources/documentation.html#outils-utiles",
     "href": "resources/documentation.html#outils-utiles",
     "title": "📖 Documentation",
     "section": "🛠️ Outils Utiles",
-    "text": "🛠️ Outils Utiles\n\nIDEs & Éditeurs\n\n\n\nOutil\nUsage\nLien\n\n\n\n\nVS Code\nDéveloppement général\ncode.visualstudio.com\n\n\nPyCharm\nPython IDE\njetbrains.com/pycharm\n\n\nDataGrip\nSQL IDE\njetbrains.com/datagrip\n\n\nDBeaver\nSQL gratuit\ndbeaver.io\n\n\n\n\n\nExtensions VS Code recommandées\n- Python\n- Jupyter\n- Docker\n- Kubernetes\n- YAML\n- SQL Tools\n- GitLens",
-    "crumbs": [
-      "🏠 Accueil",
-      "📚 Ressources",
-      "📖 Documentation"
-    ]
+    "text": "🛠️ Outils Utiles\n\nIDEs & Éditeurs\n\n\n\nOutil\nUsage\nLien\n\n\n\n\nVS Code\nDéveloppement général\ncode.visualstudio.com\n\n\nPyCharm\nPython IDE\njetbrains.com/pycharm\n\n\nDataGrip\nSQL IDE\njetbrains.com/datagrip\n\n\nDBeaver\nSQL gratuit\ndbeaver.io\n\n\n\n\n\nExtensions VS Code recommandées\n- Python\n- Jupyter\n- Docker\n- Kubernetes\n- YAML\n- SQL Tools\n- GitLens"
   },
   {
     "objectID": "resources/documentation.html#livres-recommandés",
     "href": "resources/documentation.html#livres-recommandés",
     "title": "📖 Documentation",
     "section": "📖 Livres Recommandés",
-    "text": "📖 Livres Recommandés\n\nEssentiels\n\n\n\n\n\n\n\n\nLivre\nAuteur\nSujet\n\n\n\n\nDesigning Data-Intensive Applications\nMartin Kleppmann\nArchitecture\n\n\nFundamentals of Data Engineering\nJoe Reis & Matt Housley\nVue d’ensemble\n\n\nData Pipelines Pocket Reference\nJames Densmore\nPipelines\n\n\nLearning Spark, 2nd Ed\nDamji et al.\nSpark\n\n\n\n\n\nAvancés\n\n\n\nLivre\nAuteur\nSujet\n\n\n\n\nStreaming Systems\nAkidau et al.\nStreaming\n\n\nBuilding Microservices\nSam Newman\nArchitecture\n\n\nThe Data Warehouse Toolkit\nRalph Kimball\nModélisation",
-    "crumbs": [
-      "🏠 Accueil",
-      "📚 Ressources",
-      "📖 Documentation"
-    ]
+    "text": "📖 Livres Recommandés\n\nEssentiels\n\n\n\n\n\n\n\n\nLivre\nAuteur\nSujet\n\n\n\n\nDesigning Data-Intensive Applications\nMartin Kleppmann\nArchitecture\n\n\nFundamentals of Data Engineering\nJoe Reis & Matt Housley\nVue d’ensemble\n\n\nData Pipelines Pocket Reference\nJames Densmore\nPipelines\n\n\nLearning Spark, 2nd Ed\nDamji et al.\nSpark\n\n\n\n\n\nAvancés\n\n\n\nLivre\nAuteur\nSujet\n\n\n\n\nStreaming Systems\nAkidau et al.\nStreaming\n\n\nBuilding Microservices\nSam Newman\nArchitecture\n\n\nThe Data Warehouse Toolkit\nRalph Kimball\nModélisation"
   },
   {
     "objectID": "resources/documentation.html#communautés",
     "href": "resources/documentation.html#communautés",
     "title": "📖 Documentation",
     "section": "🔗 Communautés",
-    "text": "🔗 Communautés\n\n\n\nCommunauté\nPlateforme\n\n\n\n\nData Engineering\nr/dataengineering\n\n\ndbt Community\ncommunity.getdbt.com\n\n\nApache Slack\nthe-asf.slack.com\n\n\nData Talks Club\ndatatalks.club\n\n\n\n\n🔙 Retour à l’accueil",
-    "crumbs": [
-      "🏠 Accueil",
-      "📚 Ressources",
-      "📖 Documentation"
-    ]
+    "text": "🔗 Communautés\n\n\n\nCommunauté\nPlateforme\n\n\n\n\nData Engineering\nr/dataengineering\n\n\ndbt Community\ncommunity.getdbt.com\n\n\nApache Slack\nthe-asf.slack.com\n\n\nData Talks Club\ndatatalks.club\n\n\n\n\n🔙 Retour à l’accueil"
   },
   {
     "objectID": "resources/faq.html",
     "href": "resources/faq.html",
     "title": "❓ FAQ",
     "section": "",
-    "text": "Un Data Engineer conçoit, construit et maintient les infrastructures et pipelines de données qui permettent aux entreprises de collecter, stocker, transformer et analyser leurs données à grande échelle.\nData Engineer = Architecte + Développeur + DevOps pour la Data\n\n\n\n\n\n\n\n\n\n\n\nRôle\nFocus\nOutils\n\n\n\n\nData Engineer\nInfrastructure & Pipelines\nSpark, Kafka, Airflow, SQL\n\n\nData Scientist\nModèles & Prédictions\nPython, ML, Statistics\n\n\nData Analyst\nInsights & Reporting\nSQL, BI Tools, Excel\n\n\n\n\n\n\n\n\n\nNiveau\nDurée estimée\nRythme\n\n\n\n\nDébutant\n6-8 semaines\n10-15h/semaine\n\n\nIntermédiaire\n8-10 semaines\n10-15h/semaine\n\n\nAvancé\n8-10 semaines\n10-15h/semaine\n\n\nTotal\n22-28 semaines\n~6 mois",
-    "crumbs": [
-      "🏠 Accueil",
-      "📚 Ressources",
-      "❓ FAQ"
-    ]
+    "text": "Un Data Engineer conçoit, construit et maintient les infrastructures et pipelines de données qui permettent aux entreprises de collecter, stocker, transformer et analyser leurs données à grande échelle.\nData Engineer = Architecte + Développeur + DevOps pour la Data\n\n\n\n\n\n\n\n\n\n\n\nRôle\nFocus\nOutils\n\n\n\n\nData Engineer\nInfrastructure & Pipelines\nSpark, Kafka, Airflow, SQL\n\n\nData Scientist\nModèles & Prédictions\nPython, ML, Statistics\n\n\nData Analyst\nInsights & Reporting\nSQL, BI Tools, Excel\n\n\n\n\n\n\n\n\n\nNiveau\nDurée estimée\nRythme\n\n\n\n\nDébutant\n6-8 semaines\n10-15h/semaine\n\n\nIntermédiaire\n8-10 semaines\n10-15h/semaine\n\n\nAvancé\n8-10 semaines\n10-15h/semaine\n\n\nTotal\n22-28 semaines\n~6 mois"
   },
   {
     "objectID": "resources/faq.html#questions-générales",
     "href": "resources/faq.html#questions-générales",
     "title": "❓ FAQ",
     "section": "",
-    "text": "Un Data Engineer conçoit, construit et maintient les infrastructures et pipelines de données qui permettent aux entreprises de collecter, stocker, transformer et analyser leurs données à grande échelle.\nData Engineer = Architecte + Développeur + DevOps pour la Data\n\n\n\n\n\n\n\n\n\n\n\nRôle\nFocus\nOutils\n\n\n\n\nData Engineer\nInfrastructure & Pipelines\nSpark, Kafka, Airflow, SQL\n\n\nData Scientist\nModèles & Prédictions\nPython, ML, Statistics\n\n\nData Analyst\nInsights & Reporting\nSQL, BI Tools, Excel\n\n\n\n\n\n\n\n\n\nNiveau\nDurée estimée\nRythme\n\n\n\n\nDébutant\n6-8 semaines\n10-15h/semaine\n\n\nIntermédiaire\n8-10 semaines\n10-15h/semaine\n\n\nAvancé\n8-10 semaines\n10-15h/semaine\n\n\nTotal\n22-28 semaines\n~6 mois",
-    "crumbs": [
-      "🏠 Accueil",
-      "📚 Ressources",
-      "❓ FAQ"
-    ]
+    "text": "Un Data Engineer conçoit, construit et maintient les infrastructures et pipelines de données qui permettent aux entreprises de collecter, stocker, transformer et analyser leurs données à grande échelle.\nData Engineer = Architecte + Développeur + DevOps pour la Data\n\n\n\n\n\n\n\n\n\n\n\nRôle\nFocus\nOutils\n\n\n\n\nData Engineer\nInfrastructure & Pipelines\nSpark, Kafka, Airflow, SQL\n\n\nData Scientist\nModèles & Prédictions\nPython, ML, Statistics\n\n\nData Analyst\nInsights & Reporting\nSQL, BI Tools, Excel\n\n\n\n\n\n\n\n\n\nNiveau\nDurée estimée\nRythme\n\n\n\n\nDébutant\n6-8 semaines\n10-15h/semaine\n\n\nIntermédiaire\n8-10 semaines\n10-15h/semaine\n\n\nAvancé\n8-10 semaines\n10-15h/semaine\n\n\nTotal\n22-28 semaines\n~6 mois"
   },
   {
     "objectID": "resources/faq.html#questions-techniques",
     "href": "resources/faq.html#questions-techniques",
     "title": "❓ FAQ",
     "section": "💻 Questions Techniques",
-    "text": "💻 Questions Techniques\n\nAi-je besoin d’un ordinateur puissant ?\nConfiguration minimale :\n\nRAM : 8 Go (16 Go recommandé)\nCPU : 4 cores\nDisque : 50 Go libres\nOS : macOS, Linux, ou Windows + WSL2\n\n\n\nPuis-je suivre le bootcamp sur Windows ?\nOui, avec WSL2 (Windows Subsystem for Linux). C’est même recommandé car la plupart des outils Data sont conçus pour Linux.\n# Installer WSL2\nwsl --install\n\n# Puis suivre les instructions Ubuntu\n\n\nDocker ou Kubernetes local ?\nPour le bootcamp :\n\n\n\nOutil\nUsage\nQuand\n\n\n\n\nDocker Desktop\nContainers simples\nModules 14-16\n\n\nminikube\nCluster K8s local\nModules 19-22\n\n\nkind\nAlternative légère\nSi minikube est trop lourd\n\n\n\n\n\nQuelle version de Python utiliser ?\nPython 3.11 est recommandé. C’est la version la plus stable et compatible avec PySpark 3.5.\npython3 --version\n# Python 3.11.x ✓",
-    "crumbs": [
-      "🏠 Accueil",
-      "📚 Ressources",
-      "❓ FAQ"
-    ]
+    "text": "💻 Questions Techniques\n\nAi-je besoin d’un ordinateur puissant ?\nConfiguration minimale :\n\nRAM : 8 Go (16 Go recommandé)\nCPU : 4 cores\nDisque : 50 Go libres\nOS : macOS, Linux, ou Windows + WSL2\n\n\n\nPuis-je suivre le bootcamp sur Windows ?\nOui, avec WSL2 (Windows Subsystem for Linux). C’est même recommandé car la plupart des outils Data sont conçus pour Linux.\n# Installer WSL2\nwsl --install\n\n# Puis suivre les instructions Ubuntu\n\n\nDocker ou Kubernetes local ?\nPour le bootcamp :\n\n\n\nOutil\nUsage\nQuand\n\n\n\n\nDocker Desktop\nContainers simples\nModules 14-16\n\n\nminikube\nCluster K8s local\nModules 19-22\n\n\nkind\nAlternative légère\nSi minikube est trop lourd\n\n\n\n\n\nQuelle version de Python utiliser ?\nPython 3.11 est recommandé. C’est la version la plus stable et compatible avec PySpark 3.5.\npython3 --version\n# Python 3.11.x ✓"
   },
   {
     "objectID": "resources/faq.html#questions-sur-spark",
     "href": "resources/faq.html#questions-sur-spark",
     "title": "❓ FAQ",
     "section": "⚡ Questions sur Spark",
-    "text": "⚡ Questions sur Spark\n\nPySpark ou Scala ?\n\n\n\n\n\n\n\n\nLangage\nAvantages\nRecommandé pour\n\n\n\n\nPySpark\nFacile, écosystème Python\n90% des cas, Data Scientists\n\n\nScala\nPerformance, API native\nOptimisation avancée, core development\n\n\n\nLe bootcamp utilise PySpark pour les niveaux 1-2, et introduit Scala au niveau 3.\n\n\nSpark local vs cluster ?\nPour apprendre, Spark local suffit :\nspark = SparkSession.builder \\\n    .master(\"local[*]\") \\\n    .appName(\"Bootcamp\") \\\n    .getOrCreate()\nEn production, vous utiliserez un cluster (Kubernetes, EMR, Dataproc).\n\n\nDelta Lake ou Iceberg ?\n\n\n\nFormat\nAvantages\nÉcosystème\n\n\n\n\nDelta Lake\nMature, Databricks-backed\nSpark-centric\n\n\nIceberg\nOpen, multi-engine\nTrino, Flink, Spark\n\n\nHudi\nCDC optimisé\nKafka, Flink\n\n\n\nLe bootcamp couvre Delta Lake en priorité (plus répandu), avec une introduction à Iceberg.",
-    "crumbs": [
-      "🏠 Accueil",
-      "📚 Ressources",
-      "❓ FAQ"
-    ]
+    "text": "⚡ Questions sur Spark\n\nPySpark ou Scala ?\n\n\n\n\n\n\n\n\nLangage\nAvantages\nRecommandé pour\n\n\n\n\nPySpark\nFacile, écosystème Python\n90% des cas, Data Scientists\n\n\nScala\nPerformance, API native\nOptimisation avancée, core development\n\n\n\nLe bootcamp utilise PySpark pour les niveaux 1-2, et introduit Scala au niveau 3.\n\n\nSpark local vs cluster ?\nPour apprendre, Spark local suffit :\nspark = SparkSession.builder \\\n    .master(\"local[*]\") \\\n    .appName(\"Bootcamp\") \\\n    .getOrCreate()\nEn production, vous utiliserez un cluster (Kubernetes, EMR, Dataproc).\n\n\nDelta Lake ou Iceberg ?\n\n\n\nFormat\nAvantages\nÉcosystème\n\n\n\n\nDelta Lake\nMature, Databricks-backed\nSpark-centric\n\n\nIceberg\nOpen, multi-engine\nTrino, Flink, Spark\n\n\nHudi\nCDC optimisé\nKafka, Flink\n\n\n\nLe bootcamp couvre Delta Lake en priorité (plus répandu), avec une introduction à Iceberg."
   },
   {
     "objectID": "resources/faq.html#questions-sur-les-pipelines",
     "href": "resources/faq.html#questions-sur-les-pipelines",
     "title": "❓ FAQ",
     "section": "🔄 Questions sur les Pipelines",
-    "text": "🔄 Questions sur les Pipelines\n\nAirflow ou Dagster ?\n\n\n\nOutil\nAvantages\nInconvénients\n\n\n\n\nAirflow\nStandard industrie, mature\nComplexe, legacy\n\n\nDagster\nModerne, testable\nMoins adopté\n\n\nPrefect\nSimple, cloud-native\nMoins de features\n\n\n\nLe bootcamp enseigne Airflow car c’est le standard de l’industrie (90%+ des offres d’emploi).\n\n\nBatch ou Streaming ?\n\n\n\nType\nLatence\nComplexité\nCas d’usage\n\n\n\n\nBatch\nMinutes-Heures\nSimple\nReporting, analytics\n\n\nStreaming\nSecondes\nComplexe\nReal-time, alerting\n\n\n\nCommencez par le batch, puis évoluez vers le streaming quand nécessaire.\n\n\nC’est quoi le Lakehouse ?\nLe Lakehouse combine les avantages du Data Lake (stockage pas cher, données brutes) et du Data Warehouse (performance, ACID, SQL).\nData Lake + Data Warehouse = Lakehouse\n\nTechnologies : Delta Lake, Iceberg, Hudi\nArchitecture : Bronze → Silver → Gold (Medallion)",
-    "crumbs": [
-      "🏠 Accueil",
-      "📚 Ressources",
-      "❓ FAQ"
-    ]
+    "text": "🔄 Questions sur les Pipelines\n\nAirflow ou Dagster ?\n\n\n\nOutil\nAvantages\nInconvénients\n\n\n\n\nAirflow\nStandard industrie, mature\nComplexe, legacy\n\n\nDagster\nModerne, testable\nMoins adopté\n\n\nPrefect\nSimple, cloud-native\nMoins de features\n\n\n\nLe bootcamp enseigne Airflow car c’est le standard de l’industrie (90%+ des offres d’emploi).\n\n\nBatch ou Streaming ?\n\n\n\nType\nLatence\nComplexité\nCas d’usage\n\n\n\n\nBatch\nMinutes-Heures\nSimple\nReporting, analytics\n\n\nStreaming\nSecondes\nComplexe\nReal-time, alerting\n\n\n\nCommencez par le batch, puis évoluez vers le streaming quand nécessaire.\n\n\nC’est quoi le Lakehouse ?\nLe Lakehouse combine les avantages du Data Lake (stockage pas cher, données brutes) et du Data Warehouse (performance, ACID, SQL).\nData Lake + Data Warehouse = Lakehouse\n\nTechnologies : Delta Lake, Iceberg, Hudi\nArchitecture : Bronze → Silver → Gold (Medallion)"
   },
   {
     "objectID": "resources/faq.html#questions-sur-la-carrière",
     "href": "resources/faq.html#questions-sur-la-carrière",
     "title": "❓ FAQ",
     "section": "🎯 Questions sur la Carrière",
-    "text": "🎯 Questions sur la Carrière\n\nQuel salaire peut-on espérer ?\n\n\n\nNiveau\nFrance\nUSA\nRemote\n\n\n\n\nJunior (0-2 ans)\n40-50K€\n$80-100K\n$60-90K\n\n\nConfirmé (2-5 ans)\n50-70K€\n$100-140K\n$90-120K\n\n\nSenior (5+ ans)\n70-90K€\n$140-200K\n$120-180K\n\n\nStaff/Principal\n90K+€\n$200K+\n$150K+\n\n\n\n\n\nQuelles certifications sont utiles ?\n\n\n\nCertification\nValeur\nCoût\n\n\n\n\nAWS Data Analytics\n⭐⭐⭐⭐\n~$300\n\n\nGCP Data Engineer\n⭐⭐⭐⭐\n~$200\n\n\nDatabricks Certified\n⭐⭐⭐⭐⭐\n~$200\n\n\ndbt Certification\n⭐⭐⭐\nGratuit\n\n\n\n\n\nComment préparer les entretiens ?\n\nThéorie : SQL, Python, Spark, architecture\nPratique : Projets GitHub, contributions open-source\nSystem Design : Savoir concevoir un pipeline end-to-end\nCoding : LeetCode (SQL, Python) — niveau Medium\n\nLes projets intégrateurs du bootcamp sont conçus pour être présentés en entretien.",
-    "crumbs": [
-      "🏠 Accueil",
-      "📚 Ressources",
-      "❓ FAQ"
-    ]
+    "text": "🎯 Questions sur la Carrière\n\nQuel salaire peut-on espérer ?\n\n\n\nNiveau\nFrance\nUSA\nRemote\n\n\n\n\nJunior (0-2 ans)\n40-50K€\n$80-100K\n$60-90K\n\n\nConfirmé (2-5 ans)\n50-70K€\n$100-140K\n$90-120K\n\n\nSenior (5+ ans)\n70-90K€\n$140-200K\n$120-180K\n\n\nStaff/Principal\n90K+€\n$200K+\n$150K+\n\n\n\n\n\nQuelles certifications sont utiles ?\n\n\n\nCertification\nValeur\nCoût\n\n\n\n\nAWS Data Analytics\n⭐⭐⭐⭐\n~$300\n\n\nGCP Data Engineer\n⭐⭐⭐⭐\n~$200\n\n\nDatabricks Certified\n⭐⭐⭐⭐⭐\n~$200\n\n\ndbt Certification\n⭐⭐⭐\nGratuit\n\n\n\n\n\nComment préparer les entretiens ?\n\nThéorie : SQL, Python, Spark, architecture\nPratique : Projets GitHub, contributions open-source\nSystem Design : Savoir concevoir un pipeline end-to-end\nCoding : LeetCode (SQL, Python) — niveau Medium\n\nLes projets intégrateurs du bootcamp sont conçus pour être présentés en entretien."
   },
   {
     "objectID": "resources/faq.html#problèmes-courants",
     "href": "resources/faq.html#problèmes-courants",
     "title": "❓ FAQ",
     "section": "🆘 Problèmes Courants",
-    "text": "🆘 Problèmes Courants\n\nSpark : “Java gateway process exited”\n# Vérifier Java\njava -version\n\n# Installer Java 11\n# macOS\nbrew install openjdk@11\nexport JAVA_HOME=$(/usr/libexec/java_home -v 11)\n\n# Ubuntu\nsudo apt install openjdk-11-jdk\n\n\nDocker : “permission denied”\nsudo usermod -aG docker $USER\nnewgrp docker\n# Puis logout/login\n\n\nKafka : “broker not available”\n# Vérifier que Zookeeper est démarré avant Kafka\ndocker-compose logs zookeeper\ndocker-compose logs kafka\n\n# Redémarrer\ndocker-compose down\ndocker-compose up -d\n\n\nAirflow : “No module named ‘xyz’”\n# Installer dans le même environnement qu'Airflow\npip install xyz\n\n# Ou avec contraintes Airflow\npip install xyz --constraint \"https://raw.githubusercontent.com/apache/airflow/constraints-2.8.0/constraints-3.11.txt\"",
-    "crumbs": [
-      "🏠 Accueil",
-      "📚 Ressources",
-      "❓ FAQ"
-    ]
+    "text": "🆘 Problèmes Courants\n\nSpark : “Java gateway process exited”\n# Vérifier Java\njava -version\n\n# Installer Java 11\n# macOS\nbrew install openjdk@11\nexport JAVA_HOME=$(/usr/libexec/java_home -v 11)\n\n# Ubuntu\nsudo apt install openjdk-11-jdk\n\n\nDocker : “permission denied”\nsudo usermod -aG docker $USER\nnewgrp docker\n# Puis logout/login\n\n\nKafka : “broker not available”\n# Vérifier que Zookeeper est démarré avant Kafka\ndocker-compose logs zookeeper\ndocker-compose logs kafka\n\n# Redémarrer\ndocker-compose down\ndocker-compose up -d\n\n\nAirflow : “No module named ‘xyz’”\n# Installer dans le même environnement qu'Airflow\npip install xyz\n\n# Ou avec contraintes Airflow\npip install xyz --constraint \"https://raw.githubusercontent.com/apache/airflow/constraints-2.8.0/constraints-3.11.txt\""
   },
   {
     "objectID": "resources/faq.html#support",
     "href": "resources/faq.html#support",
     "title": "❓ FAQ",
     "section": "📞 Support",
-    "text": "📞 Support\n\nComment poser une question ?\n\nGitHub Issues : Pour les bugs ou suggestions\nDiscussions : Pour les questions générales\nCommentaires Giscus : En bas de chaque page\n\n\n\nJe suis bloqué, que faire ?\n\nRelire le module précédent\nChercher l’erreur sur Google/StackOverflow\nConsulter la documentation officielle\nPoser une question sur GitHub Discussions\n\n\n🔙 Retour à l’accueil",
-    "crumbs": [
-      "🏠 Accueil",
-      "📚 Ressources",
-      "❓ FAQ"
-    ]
+    "text": "📞 Support\n\nComment poser une question ?\n\nGitHub Issues : Pour les bugs ou suggestions\nDiscussions : Pour les questions générales\nCommentaires Giscus : En bas de chaque page\n\n\n\nJe suis bloqué, que faire ?\n\nRelire le module précédent\nChercher l’erreur sur Google/StackOverflow\nConsulter la documentation officielle\nPoser une question sur GitHub Discussions\n\n\n🔙 Retour à l’accueil"
   },
   {
     "objectID": "resources/setup.html",
     "href": "resources/setup.html",
     "title": "🔧 Setup Environnement",
     "section": "",
-    "text": "Avant de commencer, assurez-vous d’avoir :\n\n\n\nOutil\nVersion minimale\nVérification\n\n\n\n\nOS\nmacOS 12+, Ubuntu 20.04+, Windows 10+ (WSL2)\n-\n\n\nRAM\n8 Go minimum (16 Go recommandé)\n-\n\n\nDisque\n50 Go d’espace libre\n-",
-    "crumbs": [
-      "🏠 Accueil",
-      "📚 Ressources",
-      "🔧 Setup Environnement"
-    ]
+    "text": "Avant de commencer, assurez-vous d’avoir :\n\n\n\nOutil\nVersion minimale\nVérification\n\n\n\n\nOS\nmacOS 12+, Ubuntu 20.04+, Windows 10+ (WSL2)\n-\n\n\nRAM\n8 Go minimum (16 Go recommandé)\n-\n\n\nDisque\n50 Go d’espace libre\n-"
   },
   {
     "objectID": "resources/setup.html#prérequis",
     "href": "resources/setup.html#prérequis",
     "title": "🔧 Setup Environnement",
     "section": "",
-    "text": "Avant de commencer, assurez-vous d’avoir :\n\n\n\nOutil\nVersion minimale\nVérification\n\n\n\n\nOS\nmacOS 12+, Ubuntu 20.04+, Windows 10+ (WSL2)\n-\n\n\nRAM\n8 Go minimum (16 Go recommandé)\n-\n\n\nDisque\n50 Go d’espace libre\n-",
-    "crumbs": [
-      "🏠 Accueil",
-      "📚 Ressources",
-      "🔧 Setup Environnement"
-    ]
+    "text": "Avant de commencer, assurez-vous d’avoir :\n\n\n\nOutil\nVersion minimale\nVérification\n\n\n\n\nOS\nmacOS 12+, Ubuntu 20.04+, Windows 10+ (WSL2)\n-\n\n\nRAM\n8 Go minimum (16 Go recommandé)\n-\n\n\nDisque\n50 Go d’espace libre\n-"
   },
   {
     "objectID": "resources/setup.html#python",
     "href": "resources/setup.html#python",
     "title": "🔧 Setup Environnement",
     "section": "🐍 1. Python",
-    "text": "🐍 1. Python\n\nInstallation\n\nmacOSUbuntu/DebianWindows (WSL2)\n\n\n# Avec Homebrew\nbrew install python@3.11\n\n# Vérifier\npython3 --version\n\n\nsudo apt update\nsudo apt install python3.11 python3.11-venv python3-pip\n\n# Vérifier\npython3 --version\n\n\n# Dans WSL2\nsudo apt update\nsudo apt install python3.11 python3.11-venv python3-pip\n\n\n\n\n\nEnvironnement virtuel\n# Créer un venv pour le bootcamp\npython3 -m venv ~/bootcamp-env\n\n# Activer\nsource ~/bootcamp-env/bin/activate  # Linux/macOS\n# ou\n.\\bootcamp-env\\Scripts\\activate     # Windows\n\n# Installer les packages de base\npip install --upgrade pip\npip install jupyter pandas numpy pyspark polars",
-    "crumbs": [
-      "🏠 Accueil",
-      "📚 Ressources",
-      "🔧 Setup Environnement"
-    ]
+    "text": "🐍 1. Python\n\nInstallation\n\nmacOSUbuntu/DebianWindows (WSL2)\n\n\n# Avec Homebrew\nbrew install python@3.11\n\n# Vérifier\npython3 --version\n\n\nsudo apt update\nsudo apt install python3.11 python3.11-venv python3-pip\n\n# Vérifier\npython3 --version\n\n\n# Dans WSL2\nsudo apt update\nsudo apt install python3.11 python3.11-venv python3-pip\n\n\n\n\n\nEnvironnement virtuel\n# Créer un venv pour le bootcamp\npython3 -m venv ~/bootcamp-env\n\n# Activer\nsource ~/bootcamp-env/bin/activate  # Linux/macOS\n# ou\n.\\bootcamp-env\\Scripts\\activate     # Windows\n\n# Installer les packages de base\npip install --upgrade pip\npip install jupyter pandas numpy pyspark polars"
   },
   {
     "objectID": "resources/setup.html#docker",
     "href": "resources/setup.html#docker",
     "title": "🔧 Setup Environnement",
     "section": "🐳 2. Docker",
-    "text": "🐳 2. Docker\n\nInstallation\n\nmacOSUbuntuWindows\n\n\n# Télécharger Docker Desktop\n# https://www.docker.com/products/docker-desktop\n\n# Ou avec Homebrew\nbrew install --cask docker\n\n\n# Installer Docker Engine\ncurl -fsSL https://get.docker.com -o get-docker.sh\nsudo sh get-docker.sh\n\n# Ajouter l'utilisateur au groupe docker\nsudo usermod -aG docker $USER\nnewgrp docker\n\n# Vérifier\ndocker --version\ndocker run hello-world\n\n\n# Installer Docker Desktop avec WSL2 backend\n# https://www.docker.com/products/docker-desktop\n\n\n\n\n\nVérification\ndocker --version\ndocker-compose --version\ndocker run hello-world",
-    "crumbs": [
-      "🏠 Accueil",
-      "📚 Ressources",
-      "🔧 Setup Environnement"
-    ]
+    "text": "🐳 2. Docker\n\nInstallation\n\nmacOSUbuntuWindows\n\n\n# Télécharger Docker Desktop\n# https://www.docker.com/products/docker-desktop\n\n# Ou avec Homebrew\nbrew install --cask docker\n\n\n# Installer Docker Engine\ncurl -fsSL https://get.docker.com -o get-docker.sh\nsudo sh get-docker.sh\n\n# Ajouter l'utilisateur au groupe docker\nsudo usermod -aG docker $USER\nnewgrp docker\n\n# Vérifier\ndocker --version\ndocker run hello-world\n\n\n# Installer Docker Desktop avec WSL2 backend\n# https://www.docker.com/products/docker-desktop\n\n\n\n\n\nVérification\ndocker --version\ndocker-compose --version\ndocker run hello-world"
   },
   {
     "objectID": "resources/setup.html#kubernetes-kubectl-minikube",
     "href": "resources/setup.html#kubernetes-kubectl-minikube",
     "title": "🔧 Setup Environnement",
     "section": "☸️ 3. Kubernetes (kubectl + minikube)",
-    "text": "☸️ 3. Kubernetes (kubectl + minikube)\n\nkubectl\n\nmacOSUbuntu\n\n\nbrew install kubectl\n\n\ncurl -LO \"https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl\"\nsudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl\n\n\n\n\n\nminikube (cluster local)\n\nmacOSUbuntu\n\n\nbrew install minikube\nminikube start --memory=4096 --cpus=2\n\n\ncurl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64\nsudo install minikube-linux-amd64 /usr/local/bin/minikube\nminikube start --memory=4096 --cpus=2\n\n\n\n\n\nVérification\nkubectl version --client\nminikube status\nkubectl get nodes",
-    "crumbs": [
-      "🏠 Accueil",
-      "📚 Ressources",
-      "🔧 Setup Environnement"
-    ]
+    "text": "☸️ 3. Kubernetes (kubectl + minikube)\n\nkubectl\n\nmacOSUbuntu\n\n\nbrew install kubectl\n\n\ncurl -LO \"https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl\"\nsudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl\n\n\n\n\n\nminikube (cluster local)\n\nmacOSUbuntu\n\n\nbrew install minikube\nminikube start --memory=4096 --cpus=2\n\n\ncurl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64\nsudo install minikube-linux-amd64 /usr/local/bin/minikube\nminikube start --memory=4096 --cpus=2\n\n\n\n\n\nVérification\nkubectl version --client\nminikube status\nkubectl get nodes"
   },
   {
     "objectID": "resources/setup.html#apache-spark",
     "href": "resources/setup.html#apache-spark",
     "title": "🔧 Setup Environnement",
     "section": "⚡ 4. Apache Spark",
-    "text": "⚡ 4. Apache Spark\n\nInstallation locale (optionnel)\n# Avec pip (PySpark inclut Spark)\npip install pyspark==3.5.0\n\n# Vérifier\npyspark --version\n\n\nAvec Docker (recommandé)\n# Image Bitnami Spark\ndocker pull bitnami/spark:3.5\n\n# Lancer Spark standalone\ndocker run -it --rm \\\n  -p 8080:8080 \\\n  -p 7077:7077 \\\n  bitnami/spark:3.5",
-    "crumbs": [
-      "🏠 Accueil",
-      "📚 Ressources",
-      "🔧 Setup Environnement"
-    ]
+    "text": "⚡ 4. Apache Spark\n\nInstallation locale (optionnel)\n# Avec pip (PySpark inclut Spark)\npip install pyspark==3.5.0\n\n# Vérifier\npyspark --version\n\n\nAvec Docker (recommandé)\n# Image Bitnami Spark\ndocker pull bitnami/spark:3.5\n\n# Lancer Spark standalone\ndocker run -it --rm \\\n  -p 8080:8080 \\\n  -p 7077:7077 \\\n  bitnami/spark:3.5"
   },
   {
     "objectID": "resources/setup.html#apache-kafka",
     "href": "resources/setup.html#apache-kafka",
     "title": "🔧 Setup Environnement",
     "section": "📨 5. Apache Kafka",
-    "text": "📨 5. Apache Kafka\n\nAvec Docker Compose\nCréez un fichier docker-compose-kafka.yml :\nversion: '3.8'\nservices:\n  zookeeper:\n    image: confluentinc/cp-zookeeper:7.5.0\n    environment:\n      ZOOKEEPER_CLIENT_PORT: 2181\n    ports:\n      - \"2181:2181\"\n\n  kafka:\n    image: confluentinc/cp-kafka:7.5.0\n    depends_on:\n      - zookeeper\n    ports:\n      - \"9092:9092\"\n    environment:\n      KAFKA_BROKER_ID: 1\n      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181\n      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092\n      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1\ndocker-compose -f docker-compose-kafka.yml up -d",
-    "crumbs": [
-      "🏠 Accueil",
-      "📚 Ressources",
-      "🔧 Setup Environnement"
-    ]
+    "text": "📨 5. Apache Kafka\n\nAvec Docker Compose\nCréez un fichier docker-compose-kafka.yml :\nversion: '3.8'\nservices:\n  zookeeper:\n    image: confluentinc/cp-zookeeper:7.5.0\n    environment:\n      ZOOKEEPER_CLIENT_PORT: 2181\n    ports:\n      - \"2181:2181\"\n\n  kafka:\n    image: confluentinc/cp-kafka:7.5.0\n    depends_on:\n      - zookeeper\n    ports:\n      - \"9092:9092\"\n    environment:\n      KAFKA_BROKER_ID: 1\n      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181\n      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092\n      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1\ndocker-compose -f docker-compose-kafka.yml up -d"
   },
   {
     "objectID": "resources/setup.html#bases-de-données",
     "href": "resources/setup.html#bases-de-données",
     "title": "🔧 Setup Environnement",
     "section": "🗄️ 6. Bases de données",
-    "text": "🗄️ 6. Bases de données\n\nPostgreSQL\n# Avec Docker\ndocker run -d \\\n  --name postgres \\\n  -e POSTGRES_PASSWORD=bootcamp \\\n  -p 5432:5432 \\\n  postgres:15\n\n\nMongoDB\n# Avec Docker\ndocker run -d \\\n  --name mongodb \\\n  -p 27017:27017 \\\n  mongo:7\n\n\nMinIO (S3 local)\n# Avec Docker\ndocker run -d \\\n  --name minio \\\n  -p 9000:9000 \\\n  -p 9001:9001 \\\n  -e MINIO_ROOT_USER=minioadmin \\\n  -e MINIO_ROOT_PASSWORD=minioadmin \\\n  minio/minio server /data --console-address \":9001\"",
-    "crumbs": [
-      "🏠 Accueil",
-      "📚 Ressources",
-      "🔧 Setup Environnement"
-    ]
+    "text": "🗄️ 6. Bases de données\n\nPostgreSQL\n# Avec Docker\ndocker run -d \\\n  --name postgres \\\n  -e POSTGRES_PASSWORD=bootcamp \\\n  -p 5432:5432 \\\n  postgres:15\n\n\nMongoDB\n# Avec Docker\ndocker run -d \\\n  --name mongodb \\\n  -p 27017:27017 \\\n  mongo:7\n\n\nMinIO (S3 local)\n# Avec Docker\ndocker run -d \\\n  --name minio \\\n  -p 9000:9000 \\\n  -p 9001:9001 \\\n  -e MINIO_ROOT_USER=minioadmin \\\n  -e MINIO_ROOT_PASSWORD=minioadmin \\\n  minio/minio server /data --console-address \":9001\""
   },
   {
     "objectID": "resources/setup.html#outils-additionnels",
     "href": "resources/setup.html#outils-additionnels",
     "title": "🔧 Setup Environnement",
     "section": "🛠️ 7. Outils additionnels",
-    "text": "🛠️ 7. Outils additionnels\n\ndbt\npip install dbt-core dbt-postgres\ndbt --version\n\n\nGreat Expectations\npip install great-expectations\ngreat_expectations --version\n\n\nAirflow\npip install apache-airflow==2.8.0\nairflow version",
-    "crumbs": [
-      "🏠 Accueil",
-      "📚 Ressources",
-      "🔧 Setup Environnement"
-    ]
+    "text": "🛠️ 7. Outils additionnels\n\ndbt\npip install dbt-core dbt-postgres\ndbt --version\n\n\nGreat Expectations\npip install great-expectations\ngreat_expectations --version\n\n\nAirflow\npip install apache-airflow==2.8.0\nairflow version"
   },
   {
     "objectID": "resources/setup.html#structure-du-projet",
     "href": "resources/setup.html#structure-du-projet",
     "title": "🔧 Setup Environnement",
     "section": "📁 8. Structure du projet",
-    "text": "📁 8. Structure du projet\nCréez cette structure pour suivre le bootcamp :\n~/data-engineering-bootcamp/\n├── .venv/                  # Environnement virtuel\n├── data/                   # Datasets\n│   ├── raw/\n│   ├── processed/\n│   └── output/\n├── notebooks/              # Vos notebooks\n├── spark_jobs/             # Scripts Spark\n├── dbt_project/            # Projet dbt\n├── docker/                 # Dockerfiles\n├── k8s/                    # Manifests Kubernetes\n└── airflow/                # DAGs Airflow\n    └── dags/\nmkdir -p ~/data-engineering-bootcamp/{data/{raw,processed,output},notebooks,spark_jobs,dbt_project,docker,k8s,airflow/dags}\ncd ~/data-engineering-bootcamp\npython3 -m venv .venv\nsource .venv/bin/activate",
-    "crumbs": [
-      "🏠 Accueil",
-      "📚 Ressources",
-      "🔧 Setup Environnement"
-    ]
+    "text": "📁 8. Structure du projet\nCréez cette structure pour suivre le bootcamp :\n~/data-engineering-bootcamp/\n├── .venv/                  # Environnement virtuel\n├── data/                   # Datasets\n│   ├── raw/\n│   ├── processed/\n│   └── output/\n├── notebooks/              # Vos notebooks\n├── spark_jobs/             # Scripts Spark\n├── dbt_project/            # Projet dbt\n├── docker/                 # Dockerfiles\n├── k8s/                    # Manifests Kubernetes\n└── airflow/                # DAGs Airflow\n    └── dags/\nmkdir -p ~/data-engineering-bootcamp/{data/{raw,processed,output},notebooks,spark_jobs,dbt_project,docker,k8s,airflow/dags}\ncd ~/data-engineering-bootcamp\npython3 -m venv .venv\nsource .venv/bin/activate"
   },
   {
     "objectID": "resources/setup.html#checklist-de-vérification",
     "href": "resources/setup.html#checklist-de-vérification",
     "title": "🔧 Setup Environnement",
     "section": "✅ Checklist de vérification",
-    "text": "✅ Checklist de vérification\nExécutez ces commandes pour vérifier votre setup :\n# Python\npython3 --version          # ✓ 3.10+\n\n# Docker\ndocker --version           # ✓ 24+\ndocker-compose --version   # ✓ 2.0+\n\n# Kubernetes\nkubectl version --client   # ✓ 1.28+\nminikube version          # ✓ 1.32+\n\n# Spark\npyspark --version         # ✓ 3.5+\n\n# Autres\ngit --version             # ✓ 2.0+",
-    "crumbs": [
-      "🏠 Accueil",
-      "📚 Ressources",
-      "🔧 Setup Environnement"
-    ]
+    "text": "✅ Checklist de vérification\nExécutez ces commandes pour vérifier votre setup :\n# Python\npython3 --version          # ✓ 3.10+\n\n# Docker\ndocker --version           # ✓ 24+\ndocker-compose --version   # ✓ 2.0+\n\n# Kubernetes\nkubectl version --client   # ✓ 1.28+\nminikube version          # ✓ 1.32+\n\n# Spark\npyspark --version         # ✓ 3.5+\n\n# Autres\ngit --version             # ✓ 2.0+"
   },
   {
     "objectID": "resources/setup.html#problèmes-courants",
     "href": "resources/setup.html#problèmes-courants",
     "title": "🔧 Setup Environnement",
     "section": "🆘 Problèmes courants",
-    "text": "🆘 Problèmes courants\n\nDocker : permission denied\nsudo usermod -aG docker $USER\nnewgrp docker\n\n\nSpark : Java not found\n# macOS\nbrew install openjdk@11\nexport JAVA_HOME=$(/usr/libexec/java_home -v 11)\n\n# Ubuntu\nsudo apt install openjdk-11-jdk\nexport JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64\n\n\nminikube : not enough memory\nminikube delete\nminikube start --memory=4096 --cpus=2 --driver=docker",
-    "crumbs": [
-      "🏠 Accueil",
-      "📚 Ressources",
-      "🔧 Setup Environnement"
-    ]
+    "text": "🆘 Problèmes courants\n\nDocker : permission denied\nsudo usermod -aG docker $USER\nnewgrp docker\n\n\nSpark : Java not found\n# macOS\nbrew install openjdk@11\nexport JAVA_HOME=$(/usr/libexec/java_home -v 11)\n\n# Ubuntu\nsudo apt install openjdk-11-jdk\nexport JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64\n\n\nminikube : not enough memory\nminikube delete\nminikube start --memory=4096 --cpus=2 --driver=docker"
   },
   {
     "objectID": "resources/setup.html#prêt",
     "href": "resources/setup.html#prêt",
     "title": "🔧 Setup Environnement",
     "section": "🚀 Prêt !",
-    "text": "🚀 Prêt !\nUne fois tout installé, vous pouvez commencer le bootcamp :\n📘 Commencer le Module 01",
-    "crumbs": [
-      "🏠 Accueil",
-      "📚 Ressources",
-      "🔧 Setup Environnement"
-    ]
+    "text": "🚀 Prêt !\nUne fois tout installé, vous pouvez commencer le bootcamp :\n📘 Commencer le Module 01"
   },
   {
     "objectID": "curriculum.html",
@@ -7197,9 +7000,9 @@
   {
     "objectID": "notebooks/beginner/tmp.html",
     "href": "notebooks/beginner/tmp.html",
-    "title": "Bootcamp Data Engineering",
+    "title": "",
     "section": "",
-    "text": "Voir le code\n---\n\n## 🪜 Problématique 7 : Filtrer après agrégation — `bucket_selector` (équivalent `HAVING`)\n\n```bash\ncurl -X GET \"http://localhost:9200/clients/_search\" -H 'Content-Type: application/json' -d '\n{\n  \"size\": 0,\n  \"aggs\": {\n    \"par_pays\": {\n      \"terms\": {\n        \"field\": \"pays.keyword\"\n      },\n      \"aggs\": {\n        \"nb_docs\": {\n          \"value_count\": { \"field\": \"pays.keyword\" }\n        },\n        \"filtre_nb\": {\n          \"bucket_selector\": {\n            \"buckets_path\": { \"total\": \"nb_docs\" },\n            \"script\": \"params.total &gt; 1\"\n          }\n        }\n      }\n    }\n  }\n}'\n```\n\n✅ **Interprétation** :\nEquivalent de :\n```sql\nSELECT pays, COUNT(*) as nb_clients\nFROM clients\nGROUP BY pays\nHAVING COUNT(*) &gt; 1;\n```\n\n---\n\n## 🪜 Problématique 8 : Champs calculés — `script_fields` (équivalent `CASE`)\n\n```bash\ncurl -X GET \"http://localhost:9200/clients/_search\" -H 'Content-Type: application/json' -d '\n{\n  \"script_fields\": {\n    \"continent\": {\n      \"script\": {\n        \"lang\": \"painless\",\n        \"source\": \"if (doc['pays.keyword'].value == 'France') { return 'Europe'; } else { return 'Autre'; }\"\n      }\n    }\n  }\n}'\n```\n\n✅ **Interprétation** :\nEquivalent de :\n```sql\nSELECT nom, pays,\nCASE \n  WHEN pays = 'France' THEN 'Europe'\n  ELSE 'Autre'\nEND AS continent\nFROM clients;\n```\n\n---\n\n## 🪜 Problématique 9 : Agrégations imbriquées (équivalent sous-requêtes)\n\n```bash\ncurl -X GET \"http://localhost:9200/ventes/_search\" -H 'Content-Type: application/json' -d '\n{\n  \"size\": 0,\n  \"aggs\": {\n    \"par_pays\": {\n      \"terms\": { \"field\": \"pays.keyword\" },\n      \"aggs\": {\n        \"par_produit\": {\n          \"terms\": { \"field\": \"produit.keyword\" }\n        }\n      }\n    }\n  }\n}'\n```\n\n✅ **Interprétation** :\nEquivalent de :\n```sql\nSELECT pays, produit, COUNT(*)\nFROM ventes\nGROUP BY pays, produit;\n```\n\n---\n\n## 🪜 Problématique 10 : Fonctions analytiques — `top_hits`, `bucket_sort` (équivalent `RANK()`)\n\n```bash\ncurl -X GET \"http://localhost:9200/ventes/_search\" -H 'Content-Type: application/json' -d '\n{\n  \"size\": 0,\n  \"aggs\": {\n    \"par_pays\": {\n      \"terms\": { \"field\": \"pays.keyword\" },\n      \"aggs\": {\n        \"top_vente\": {\n          \"top_hits\": {\n            \"size\": 1,\n            \"sort\": [ { \"montant\": { \"order\": \"desc\" } } ]\n          }\n        }\n      }\n    }\n  }\n}'\n```\n\n✅ **Interprétation** :\nEquivalent de :\n```sql\nSELECT *\nFROM (\n  SELECT *, RANK() OVER (PARTITION BY pays ORDER BY montant DESC) as rang\n  FROM ventes\n) t\nWHERE rang = 1;\n```\n\n\n\n\n\nVoir le code\noui mais pour le contenu ; il faut faire définition ; rappeler les notions shards et replicas , installations\n\n\n\n\nVoir le code\nbeeruschatgpt_db_user   ------  cH0cBlDbokqCohcB"
+    "text": "CodeShow All CodeHide All Code\n\n\n\n\n\n\n\nVoir le code\n---\n\n## 🪜 Problématique 7 : Filtrer après agrégation — `bucket_selector` (équivalent `HAVING`)\n\n```bash\ncurl -X GET \"http://localhost:9200/clients/_search\" -H 'Content-Type: application/json' -d '\n{\n  \"size\": 0,\n  \"aggs\": {\n    \"par_pays\": {\n      \"terms\": {\n        \"field\": \"pays.keyword\"\n      },\n      \"aggs\": {\n        \"nb_docs\": {\n          \"value_count\": { \"field\": \"pays.keyword\" }\n        },\n        \"filtre_nb\": {\n          \"bucket_selector\": {\n            \"buckets_path\": { \"total\": \"nb_docs\" },\n            \"script\": \"params.total &gt; 1\"\n          }\n        }\n      }\n    }\n  }\n}'\n```\n\n✅ **Interprétation** :\nEquivalent de :\n```sql\nSELECT pays, COUNT(*) as nb_clients\nFROM clients\nGROUP BY pays\nHAVING COUNT(*) &gt; 1;\n```\n\n---\n\n## 🪜 Problématique 8 : Champs calculés — `script_fields` (équivalent `CASE`)\n\n```bash\ncurl -X GET \"http://localhost:9200/clients/_search\" -H 'Content-Type: application/json' -d '\n{\n  \"script_fields\": {\n    \"continent\": {\n      \"script\": {\n        \"lang\": \"painless\",\n        \"source\": \"if (doc['pays.keyword'].value == 'France') { return 'Europe'; } else { return 'Autre'; }\"\n      }\n    }\n  }\n}'\n```\n\n✅ **Interprétation** :\nEquivalent de :\n```sql\nSELECT nom, pays,\nCASE \n  WHEN pays = 'France' THEN 'Europe'\n  ELSE 'Autre'\nEND AS continent\nFROM clients;\n```\n\n---\n\n## 🪜 Problématique 9 : Agrégations imbriquées (équivalent sous-requêtes)\n\n```bash\ncurl -X GET \"http://localhost:9200/ventes/_search\" -H 'Content-Type: application/json' -d '\n{\n  \"size\": 0,\n  \"aggs\": {\n    \"par_pays\": {\n      \"terms\": { \"field\": \"pays.keyword\" },\n      \"aggs\": {\n        \"par_produit\": {\n          \"terms\": { \"field\": \"produit.keyword\" }\n        }\n      }\n    }\n  }\n}'\n```\n\n✅ **Interprétation** :\nEquivalent de :\n```sql\nSELECT pays, produit, COUNT(*)\nFROM ventes\nGROUP BY pays, produit;\n```\n\n---\n\n## 🪜 Problématique 10 : Fonctions analytiques — `top_hits`, `bucket_sort` (équivalent `RANK()`)\n\n```bash\ncurl -X GET \"http://localhost:9200/ventes/_search\" -H 'Content-Type: application/json' -d '\n{\n  \"size\": 0,\n  \"aggs\": {\n    \"par_pays\": {\n      \"terms\": { \"field\": \"pays.keyword\" },\n      \"aggs\": {\n        \"top_vente\": {\n          \"top_hits\": {\n            \"size\": 1,\n            \"sort\": [ { \"montant\": { \"order\": \"desc\" } } ]\n          }\n        }\n      }\n    }\n  }\n}'\n```\n\n✅ **Interprétation** :\nEquivalent de :\n```sql\nSELECT *\nFROM (\n  SELECT *, RANK() OVER (PARTITION BY pays ORDER BY montant DESC) as rang\n  FROM ventes\n) t\nWHERE rang = 1;\n```\n\n\n\n\n\nVoir le code\noui mais pour le contenu ; il faut faire définition ; rappeler les notions shards et replicas , installations\n\n\n\n\nVoir le code\nbeeruschatgpt_db_user   ------  cH0cBlDbokqCohcB"
   },
   {
     "objectID": "notebooks/beginner/02_bash_for_data_engineers.html",
@@ -8825,5 +8628,12 @@
       "🏠 Lakehouse & Streaming & Cloud",
       "22 · Cloud Object Storage"
     ]
+  },
+  {
+    "objectID": "index.html#a-venir",
+    "href": "index.html#a-venir",
+    "title": "Bootcamp Data Engineering – From Zero to Hero",
+    "section": "A venir",
+    "text": "A venir"
   }
 ]
