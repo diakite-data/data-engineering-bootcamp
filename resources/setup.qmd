@@ -1,0 +1,388 @@
+---
+title: "🔧 Setup Environnement"
+subtitle: "Guide d'installation pour le bootcamp"
+---
+
+## 📋 Prérequis
+
+Avant de commencer, assurez-vous d'avoir :
+
+| Outil | Version minimale | Vérification |
+|-------|------------------|--------------|
+| **OS** | macOS 12+, Ubuntu 20.04+, Windows 10+ (WSL2) | - |
+| **RAM** | 8 Go minimum (16 Go recommandé) | - |
+| **Disque** | 50 Go d'espace libre | - |
+
+---
+
+## 🐍 1. Python
+
+### Installation
+
+::: {.panel-tabset}
+
+## macOS
+
+```bash
+# Avec Homebrew
+brew install python@3.11
+
+# Vérifier
+python3 --version
+```
+
+## Ubuntu/Debian
+
+```bash
+sudo apt update
+sudo apt install python3.11 python3.11-venv python3-pip
+
+# Vérifier
+python3 --version
+```
+
+## Windows (WSL2)
+
+```bash
+# Dans WSL2
+sudo apt update
+sudo apt install python3.11 python3.11-venv python3-pip
+```
+
+:::
+
+### Environnement virtuel
+
+```bash
+# Créer un venv pour le bootcamp
+python3 -m venv ~/bootcamp-env
+
+# Activer
+source ~/bootcamp-env/bin/activate  # Linux/macOS
+# ou
+.\bootcamp-env\Scripts\activate     # Windows
+
+# Installer les packages de base
+pip install --upgrade pip
+pip install jupyter pandas numpy pyspark polars
+```
+
+---
+
+## 🐳 2. Docker
+
+### Installation
+
+::: {.panel-tabset}
+
+## macOS
+
+```bash
+# Télécharger Docker Desktop
+# https://www.docker.com/products/docker-desktop
+
+# Ou avec Homebrew
+brew install --cask docker
+```
+
+## Ubuntu
+
+```bash
+# Installer Docker Engine
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+
+# Ajouter l'utilisateur au groupe docker
+sudo usermod -aG docker $USER
+newgrp docker
+
+# Vérifier
+docker --version
+docker run hello-world
+```
+
+## Windows
+
+```bash
+# Installer Docker Desktop avec WSL2 backend
+# https://www.docker.com/products/docker-desktop
+```
+
+:::
+
+### Vérification
+
+```bash
+docker --version
+docker-compose --version
+docker run hello-world
+```
+
+---
+
+## ☸️ 3. Kubernetes (kubectl + minikube)
+
+### kubectl
+
+::: {.panel-tabset}
+
+## macOS
+
+```bash
+brew install kubectl
+```
+
+## Ubuntu
+
+```bash
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+```
+
+:::
+
+### minikube (cluster local)
+
+::: {.panel-tabset}
+
+## macOS
+
+```bash
+brew install minikube
+minikube start --memory=4096 --cpus=2
+```
+
+## Ubuntu
+
+```bash
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+sudo install minikube-linux-amd64 /usr/local/bin/minikube
+minikube start --memory=4096 --cpus=2
+```
+
+:::
+
+### Vérification
+
+```bash
+kubectl version --client
+minikube status
+kubectl get nodes
+```
+
+---
+
+## ⚡ 4. Apache Spark
+
+### Installation locale (optionnel)
+
+```bash
+# Avec pip (PySpark inclut Spark)
+pip install pyspark==3.5.0
+
+# Vérifier
+pyspark --version
+```
+
+### Avec Docker (recommandé)
+
+```bash
+# Image Bitnami Spark
+docker pull bitnami/spark:3.5
+
+# Lancer Spark standalone
+docker run -it --rm \
+  -p 8080:8080 \
+  -p 7077:7077 \
+  bitnami/spark:3.5
+```
+
+---
+
+## 📨 5. Apache Kafka
+
+### Avec Docker Compose
+
+Créez un fichier `docker-compose-kafka.yml` :
+
+```yaml
+version: '3.8'
+services:
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.5.0
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+    ports:
+      - "2181:2181"
+
+  kafka:
+    image: confluentinc/cp-kafka:7.5.0
+    depends_on:
+      - zookeeper
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+```
+
+```bash
+docker-compose -f docker-compose-kafka.yml up -d
+```
+
+---
+
+## 🗄️ 6. Bases de données
+
+### PostgreSQL
+
+```bash
+# Avec Docker
+docker run -d \
+  --name postgres \
+  -e POSTGRES_PASSWORD=bootcamp \
+  -p 5432:5432 \
+  postgres:15
+```
+
+### MongoDB
+
+```bash
+# Avec Docker
+docker run -d \
+  --name mongodb \
+  -p 27017:27017 \
+  mongo:7
+```
+
+### MinIO (S3 local)
+
+```bash
+# Avec Docker
+docker run -d \
+  --name minio \
+  -p 9000:9000 \
+  -p 9001:9001 \
+  -e MINIO_ROOT_USER=minioadmin \
+  -e MINIO_ROOT_PASSWORD=minioadmin \
+  minio/minio server /data --console-address ":9001"
+```
+
+---
+
+## 🛠️ 7. Outils additionnels
+
+### dbt
+
+```bash
+pip install dbt-core dbt-postgres
+dbt --version
+```
+
+### Great Expectations
+
+```bash
+pip install great-expectations
+great_expectations --version
+```
+
+### Airflow
+
+```bash
+pip install apache-airflow==2.8.0
+airflow version
+```
+
+---
+
+## 📁 8. Structure du projet
+
+Créez cette structure pour suivre le bootcamp :
+
+```
+~/data-engineering-bootcamp/
+├── .venv/                  # Environnement virtuel
+├── data/                   # Datasets
+│   ├── raw/
+│   ├── processed/
+│   └── output/
+├── notebooks/              # Vos notebooks
+├── spark_jobs/             # Scripts Spark
+├── dbt_project/            # Projet dbt
+├── docker/                 # Dockerfiles
+├── k8s/                    # Manifests Kubernetes
+└── airflow/                # DAGs Airflow
+    └── dags/
+```
+
+```bash
+mkdir -p ~/data-engineering-bootcamp/{data/{raw,processed,output},notebooks,spark_jobs,dbt_project,docker,k8s,airflow/dags}
+cd ~/data-engineering-bootcamp
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+---
+
+## ✅ Checklist de vérification
+
+Exécutez ces commandes pour vérifier votre setup :
+
+```bash
+# Python
+python3 --version          # ✓ 3.10+
+
+# Docker
+docker --version           # ✓ 24+
+docker-compose --version   # ✓ 2.0+
+
+# Kubernetes
+kubectl version --client   # ✓ 1.28+
+minikube version          # ✓ 1.32+
+
+# Spark
+pyspark --version         # ✓ 3.5+
+
+# Autres
+git --version             # ✓ 2.0+
+```
+
+---
+
+## 🆘 Problèmes courants
+
+### Docker : permission denied
+
+```bash
+sudo usermod -aG docker $USER
+newgrp docker
+```
+
+### Spark : Java not found
+
+```bash
+# macOS
+brew install openjdk@11
+export JAVA_HOME=$(/usr/libexec/java_home -v 11)
+
+# Ubuntu
+sudo apt install openjdk-11-jdk
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+```
+
+### minikube : not enough memory
+
+```bash
+minikube delete
+minikube start --memory=4096 --cpus=2 --driver=docker
+```
+
+---
+
+## 🚀 Prêt !
+
+Une fois tout installé, vous pouvez commencer le bootcamp :
+
+[📘 Commencer le Module 01](notebooks/beginner/01_intro_data_engineering.ipynb){.btn .btn-primary}

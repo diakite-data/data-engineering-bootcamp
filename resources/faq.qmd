@@ -1,0 +1,245 @@
+---
+title: "❓ FAQ"
+subtitle: "Questions fréquemment posées"
+---
+
+## 📚 Questions Générales
+
+### Qu'est-ce qu'un Data Engineer ?
+
+Un **Data Engineer** conçoit, construit et maintient les infrastructures et pipelines de données qui permettent aux entreprises de collecter, stocker, transformer et analyser leurs données à grande échelle.
+
+```
+Data Engineer = Architecte + Développeur + DevOps pour la Data
+```
+
+### Quelle est la différence entre Data Engineer, Data Scientist et Data Analyst ?
+
+| Rôle | Focus | Outils |
+|------|-------|--------|
+| **Data Engineer** | Infrastructure & Pipelines | Spark, Kafka, Airflow, SQL |
+| **Data Scientist** | Modèles & Prédictions | Python, ML, Statistics |
+| **Data Analyst** | Insights & Reporting | SQL, BI Tools, Excel |
+
+### Combien de temps faut-il pour finir le bootcamp ?
+
+| Niveau | Durée estimée | Rythme |
+|--------|---------------|--------|
+| Débutant | 6-8 semaines | 10-15h/semaine |
+| Intermédiaire | 8-10 semaines | 10-15h/semaine |
+| Avancé | 8-10 semaines | 10-15h/semaine |
+| **Total** | **22-28 semaines** | ~6 mois |
+
+---
+
+## 💻 Questions Techniques
+
+### Ai-je besoin d'un ordinateur puissant ?
+
+**Configuration minimale :**
+
+- RAM : 8 Go (16 Go recommandé)
+- CPU : 4 cores
+- Disque : 50 Go libres
+- OS : macOS, Linux, ou Windows + WSL2
+
+### Puis-je suivre le bootcamp sur Windows ?
+
+Oui, avec **WSL2** (Windows Subsystem for Linux). C'est même recommandé car la plupart des outils Data sont conçus pour Linux.
+
+```bash
+# Installer WSL2
+wsl --install
+
+# Puis suivre les instructions Ubuntu
+```
+
+### Docker ou Kubernetes local ?
+
+Pour le bootcamp :
+
+| Outil | Usage | Quand |
+|-------|-------|-------|
+| **Docker Desktop** | Containers simples | Modules 14-16 |
+| **minikube** | Cluster K8s local | Modules 19-22 |
+| **kind** | Alternative légère | Si minikube est trop lourd |
+
+### Quelle version de Python utiliser ?
+
+**Python 3.11** est recommandé. C'est la version la plus stable et compatible avec PySpark 3.5.
+
+```bash
+python3 --version
+# Python 3.11.x ✓
+```
+
+---
+
+## ⚡ Questions sur Spark
+
+### PySpark ou Scala ?
+
+| Langage | Avantages | Recommandé pour |
+|---------|-----------|-----------------|
+| **PySpark** | Facile, écosystème Python | 90% des cas, Data Scientists |
+| **Scala** | Performance, API native | Optimisation avancée, core development |
+
+Le bootcamp utilise **PySpark** pour les niveaux 1-2, et introduit Scala au niveau 3.
+
+### Spark local vs cluster ?
+
+Pour apprendre, **Spark local** suffit :
+
+```python
+spark = SparkSession.builder \
+    .master("local[*]") \
+    .appName("Bootcamp") \
+    .getOrCreate()
+```
+
+En production, vous utiliserez un cluster (Kubernetes, EMR, Dataproc).
+
+### Delta Lake ou Iceberg ?
+
+| Format | Avantages | Écosystème |
+|--------|-----------|------------|
+| **Delta Lake** | Mature, Databricks-backed | Spark-centric |
+| **Iceberg** | Open, multi-engine | Trino, Flink, Spark |
+| **Hudi** | CDC optimisé | Kafka, Flink |
+
+Le bootcamp couvre **Delta Lake** en priorité (plus répandu), avec une introduction à Iceberg.
+
+---
+
+## 🔄 Questions sur les Pipelines
+
+### Airflow ou Dagster ?
+
+| Outil | Avantages | Inconvénients |
+|-------|-----------|---------------|
+| **Airflow** | Standard industrie, mature | Complexe, legacy |
+| **Dagster** | Moderne, testable | Moins adopté |
+| **Prefect** | Simple, cloud-native | Moins de features |
+
+Le bootcamp enseigne **Airflow** car c'est le standard de l'industrie (90%+ des offres d'emploi).
+
+### Batch ou Streaming ?
+
+| Type | Latence | Complexité | Cas d'usage |
+|------|---------|------------|-------------|
+| **Batch** | Minutes-Heures | Simple | Reporting, analytics |
+| **Streaming** | Secondes | Complexe | Real-time, alerting |
+
+Commencez par le batch, puis évoluez vers le streaming quand nécessaire.
+
+### C'est quoi le Lakehouse ?
+
+Le **Lakehouse** combine les avantages du Data Lake (stockage pas cher, données brutes) et du Data Warehouse (performance, ACID, SQL).
+
+```
+Data Lake + Data Warehouse = Lakehouse
+
+Technologies : Delta Lake, Iceberg, Hudi
+Architecture : Bronze → Silver → Gold (Medallion)
+```
+
+---
+
+## 🎯 Questions sur la Carrière
+
+### Quel salaire peut-on espérer ?
+
+| Niveau | France | USA | Remote |
+|--------|--------|-----|--------|
+| Junior (0-2 ans) | 40-50K€ | $80-100K | $60-90K |
+| Confirmé (2-5 ans) | 50-70K€ | $100-140K | $90-120K |
+| Senior (5+ ans) | 70-90K€ | $140-200K | $120-180K |
+| Staff/Principal | 90K+€ | $200K+ | $150K+ |
+
+### Quelles certifications sont utiles ?
+
+| Certification | Valeur | Coût |
+|---------------|--------|------|
+| **AWS Data Analytics** | ⭐⭐⭐⭐ | ~$300 |
+| **GCP Data Engineer** | ⭐⭐⭐⭐ | ~$200 |
+| **Databricks Certified** | ⭐⭐⭐⭐⭐ | ~$200 |
+| **dbt Certification** | ⭐⭐⭐ | Gratuit |
+
+### Comment préparer les entretiens ?
+
+1. **Théorie** : SQL, Python, Spark, architecture
+2. **Pratique** : Projets GitHub, contributions open-source
+3. **System Design** : Savoir concevoir un pipeline end-to-end
+4. **Coding** : LeetCode (SQL, Python) — niveau Medium
+
+Les projets intégrateurs du bootcamp sont conçus pour être présentés en entretien.
+
+---
+
+## 🆘 Problèmes Courants
+
+### Spark : "Java gateway process exited"
+
+```bash
+# Vérifier Java
+java -version
+
+# Installer Java 11
+# macOS
+brew install openjdk@11
+export JAVA_HOME=$(/usr/libexec/java_home -v 11)
+
+# Ubuntu
+sudo apt install openjdk-11-jdk
+```
+
+### Docker : "permission denied"
+
+```bash
+sudo usermod -aG docker $USER
+newgrp docker
+# Puis logout/login
+```
+
+### Kafka : "broker not available"
+
+```bash
+# Vérifier que Zookeeper est démarré avant Kafka
+docker-compose logs zookeeper
+docker-compose logs kafka
+
+# Redémarrer
+docker-compose down
+docker-compose up -d
+```
+
+### Airflow : "No module named 'xyz'"
+
+```bash
+# Installer dans le même environnement qu'Airflow
+pip install xyz
+
+# Ou avec contraintes Airflow
+pip install xyz --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.8.0/constraints-3.11.txt"
+```
+
+---
+
+## 📞 Support
+
+### Comment poser une question ?
+
+1. **GitHub Issues** : Pour les bugs ou suggestions
+2. **Discussions** : Pour les questions générales
+3. **Commentaires Giscus** : En bas de chaque page
+
+### Je suis bloqué, que faire ?
+
+1. Relire le module précédent
+2. Chercher l'erreur sur Google/StackOverflow
+3. Consulter la documentation officielle
+4. Poser une question sur GitHub Discussions
+
+---
+
+[🔙 Retour à l'accueil](index.qmd){.btn .btn-secondary}

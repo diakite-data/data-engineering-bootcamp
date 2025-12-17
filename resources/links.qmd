@@ -1,0 +1,243 @@
+---
+title: "🔗 Liens Utiles"
+subtitle: "Ressources externes et outils recommandés"
+---
+
+## 🛠️ Outils Essentiels
+
+### Développement
+
+| Outil | Description | Lien |
+|-------|-------------|------|
+| **VS Code** | Éditeur de code | [code.visualstudio.com](https://code.visualstudio.com/) |
+| **PyCharm** | IDE Python | [jetbrains.com/pycharm](https://www.jetbrains.com/pycharm/) |
+| **DataGrip** | IDE SQL | [jetbrains.com/datagrip](https://www.jetbrains.com/datagrip/) |
+| **DBeaver** | Client SQL gratuit | [dbeaver.io](https://dbeaver.io/) |
+| **Postman** | Test d'API | [postman.com](https://www.postman.com/) |
+
+### Terminal & Shell
+
+| Outil | Description | Lien |
+|-------|-------------|------|
+| **iTerm2** | Terminal macOS | [iterm2.com](https://iterm2.com/) |
+| **Oh My Zsh** | Framework Zsh | [ohmyz.sh](https://ohmyz.sh/) |
+| **Starship** | Prompt moderne | [starship.rs](https://starship.rs/) |
+| **tmux** | Multiplexeur terminal | [github.com/tmux](https://github.com/tmux/tmux) |
+
+### Git & Collaboration
+
+| Outil | Description | Lien |
+|-------|-------------|------|
+| **GitHub** | Hébergement Git | [github.com](https://github.com/) |
+| **GitLab** | Alternative GitHub | [gitlab.com](https://gitlab.com/) |
+| **GitKraken** | Client Git visuel | [gitkraken.com](https://www.gitkraken.com/) |
+| **Sourcetree** | Client Git Atlassian | [sourcetreeapp.com](https://www.sourcetreeapp.com/) |
+
+---
+
+## 📊 Datasets pour Pratiquer
+
+### Datasets Kaggle
+
+| Dataset | Description | Lien |
+|---------|-------------|------|
+| **Olist E-commerce** | 100K commandes Brésil | [kaggle.com/olistbr](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) |
+| **NYC Taxi** | Trajets taxis NYC | [kaggle.com/nyc-taxi](https://www.kaggle.com/competitions/nyc-taxi-trip-duration) |
+| **Spotify** | Données musicales | [kaggle.com/spotify](https://www.kaggle.com/datasets/vatsalmavani/spotify-dataset) |
+| **COVID-19** | Données pandémie | [kaggle.com/covid19](https://www.kaggle.com/datasets/imdevskp/corona-virus-report) |
+
+### Datasets Open Data
+
+| Source | Description | Lien |
+|--------|-------------|------|
+| **data.gouv.fr** | Open Data France | [data.gouv.fr](https://www.data.gouv.fr/) |
+| **NYC Open Data** | Données NYC | [opendata.cityofnewyork.us](https://opendata.cityofnewyork.us/) |
+| **World Bank** | Données mondiales | [data.worldbank.org](https://data.worldbank.org/) |
+| **Awesome Public Datasets** | Liste curatée | [github.com/awesomedata](https://github.com/awesomedata/awesome-public-datasets) |
+
+---
+
+## ☁️ Cloud & Infrastructure
+
+### Cloud Providers
+
+| Provider | Console | Documentation |
+|----------|---------|---------------|
+| **AWS** | [console.aws.amazon.com](https://console.aws.amazon.com/) | [docs.aws.amazon.com](https://docs.aws.amazon.com/) |
+| **Google Cloud** | [console.cloud.google.com](https://console.cloud.google.com/) | [cloud.google.com/docs](https://cloud.google.com/docs) |
+| **Azure** | [portal.azure.com](https://portal.azure.com/) | [docs.microsoft.com](https://docs.microsoft.com/azure/) |
+
+### Data Platforms
+
+| Plateforme | Description | Lien |
+|------------|-------------|------|
+| **Databricks** | Lakehouse platform | [databricks.com](https://www.databricks.com/) |
+| **Snowflake** | Data Cloud | [snowflake.com](https://www.snowflake.com/) |
+| **Confluent Cloud** | Kafka managed | [confluent.cloud](https://confluent.cloud/) |
+| **dbt Cloud** | dbt managed | [getdbt.com](https://www.getdbt.com/) |
+
+### Containers & Orchestration
+
+| Outil | Description | Lien |
+|-------|-------------|------|
+| **Docker Hub** | Registry d'images | [hub.docker.com](https://hub.docker.com/) |
+| **Artifact Hub** | Charts Helm | [artifacthub.io](https://artifacthub.io/) |
+| **OperatorHub** | Operators K8s | [operatorhub.io](https://operatorhub.io/) |
+
+---
+
+## 📚 Apprentissage
+
+### Cours en ligne
+
+| Plateforme | Focus | Lien |
+|------------|-------|------|
+| **Coursera** | Certifications cloud | [coursera.org](https://www.coursera.org/) |
+| **DataCamp** | Data skills | [datacamp.com](https://www.datacamp.com/) |
+| **Udemy** | Cours variés | [udemy.com](https://www.udemy.com/) |
+| **Pluralsight** | Tech skills | [pluralsight.com](https://www.pluralsight.com/) |
+| **dbt Learn** | dbt gratuit | [courses.getdbt.com](https://courses.getdbt.com/) |
+
+### YouTube Channels
+
+| Channel | Focus | Lien |
+|---------|-------|------|
+| **Databricks** | Spark, Delta Lake | [youtube.com/@Databricks](https://www.youtube.com/@Databricks) |
+| **Confluent** | Kafka | [youtube.com/@Confluent](https://www.youtube.com/@Confluent) |
+| **Data Engineering** | Tutoriels | [youtube.com/@DataEngineering](https://www.youtube.com/@DataEngineering) |
+| **Seattle Data Guy** | Carrière DE | [youtube.com/@SeattleDataGuy](https://www.youtube.com/@SeattleDataGuy) |
+
+### Livres (liens d'achat)
+
+| Livre | Auteur | Lien |
+|-------|--------|------|
+| *Designing Data-Intensive Applications* | Kleppmann | [O'Reilly](https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/) |
+| *Fundamentals of Data Engineering* | Reis & Housley | [O'Reilly](https://www.oreilly.com/library/view/fundamentals-of-data/9781098108298/) |
+| *Learning Spark, 2nd Ed* | Damji et al. | [O'Reilly](https://www.oreilly.com/library/view/learning-spark-2nd/9781492050032/) |
+
+---
+
+## 🧪 Playgrounds & Labs
+
+### SQL
+
+| Outil | Description | Lien |
+|-------|-------------|------|
+| **SQLFiddle** | SQL en ligne | [sqlfiddle.com](http://sqlfiddle.com/) |
+| **DB Fiddle** | Multi-DB | [db-fiddle.com](https://www.db-fiddle.com/) |
+| **Mode SQL Tutorial** | Apprendre SQL | [mode.com/sql-tutorial](https://mode.com/sql-tutorial/) |
+| **LeetCode** | Challenges SQL | [leetcode.com](https://leetcode.com/problemset/database/) |
+
+### Python & Spark
+
+| Outil | Description | Lien |
+|-------|-------------|------|
+| **Google Colab** | Notebooks gratuits | [colab.research.google.com](https://colab.research.google.com/) |
+| **Databricks Community** | Spark gratuit | [community.cloud.databricks.com](https://community.cloud.databricks.com/) |
+| **Replit** | IDE en ligne | [replit.com](https://replit.com/) |
+| **Gitpod** | Dev environments | [gitpod.io](https://www.gitpod.io/) |
+
+### Kubernetes
+
+| Outil | Description | Lien |
+|-------|-------------|------|
+| **Killercoda** | Labs K8s | [killercoda.com](https://killercoda.com/) |
+| **Play with K8s** | K8s gratuit | [labs.play-with-k8s.com](https://labs.play-with-k8s.com/) |
+| **Katacoda** | Tutoriels interactifs | [katacoda.com](https://www.katacoda.com/) |
+
+---
+
+## 📰 Newsletters & Blogs
+
+### Newsletters
+
+| Newsletter | Fréquence | Lien |
+|------------|-----------|------|
+| **Data Engineering Weekly** | Hebdo | [dataengineeringweekly.com](https://www.dataengineeringweekly.com/) |
+| **Seattle Data Guy** | Hebdo | [seattledataguy.substack.com](https://seattledataguy.substack.com/) |
+| **Data Council** | Mensuel | [datacouncil.ai](https://www.datacouncil.ai/) |
+| **Last Week in AWS** | Hebdo | [lastweekinaws.com](https://www.lastweekinaws.com/) |
+
+### Blogs
+
+| Blog | Focus | Lien |
+|------|-------|------|
+| **Databricks Blog** | Spark, Lakehouse | [databricks.com/blog](https://www.databricks.com/blog) |
+| **Confluent Blog** | Kafka, Streaming | [confluent.io/blog](https://www.confluent.io/blog/) |
+| **dbt Blog** | Analytics Engineering | [getdbt.com/blog](https://www.getdbt.com/blog/) |
+| **Netflix Tech Blog** | Scale | [netflixtechblog.com](https://netflixtechblog.com/) |
+| **Uber Engineering** | Data at scale | [eng.uber.com](https://eng.uber.com/) |
+
+---
+
+## 👥 Communautés
+
+### Forums & Discord
+
+| Communauté | Plateforme | Lien |
+|------------|------------|------|
+| **r/dataengineering** | Reddit | [reddit.com/r/dataengineering](https://www.reddit.com/r/dataengineering/) |
+| **dbt Community** | Slack | [community.getdbt.com](https://community.getdbt.com/) |
+| **Data Talks Club** | Slack | [datatalks.club](https://datatalks.club/) |
+| **Apache Slack** | Slack | [the-asf.slack.com](https://the-asf.slack.com/) |
+| **MLOps Community** | Slack | [mlops.community](https://mlops.community/) |
+
+### Meetups & Conférences
+
+| Event | Type | Lien |
+|-------|------|------|
+| **Data Council** | Conférence | [datacouncil.ai](https://www.datacouncil.ai/) |
+| **Spark Summit** | Conférence | [databricks.com/dataaisummit](https://www.databricks.com/dataaisummit) |
+| **Kafka Summit** | Conférence | [kafka-summit.org](https://www.kafka-summit.org/) |
+| **dbt Coalesce** | Conférence | [coalesce.getdbt.com](https://coalesce.getdbt.com/) |
+
+---
+
+## 🎯 Préparation Entretiens
+
+### Coding Practice
+
+| Site | Type | Lien |
+|------|------|------|
+| **LeetCode** | Algorithmes + SQL | [leetcode.com](https://leetcode.com/) |
+| **HackerRank** | Challenges | [hackerrank.com](https://www.hackerrank.com/) |
+| **StrataScratch** | SQL réel | [stratascratch.com](https://www.stratascratch.com/) |
+| **DataLemur** | SQL pour DE | [datalemur.com](https://datalemur.com/) |
+
+### System Design
+
+| Ressource | Description | Lien |
+|-----------|-------------|------|
+| **System Design Primer** | Guide complet | [github.com/donnemartin](https://github.com/donnemartin/system-design-primer) |
+| **Grokking System Design** | Cours | [educative.io](https://www.educative.io/courses/grokking-the-system-design-interview) |
+| **ByteByteGo** | Newsletter | [bytebytego.com](https://bytebytego.com/) |
+
+---
+
+## 🔖 Bookmarks Recommandés
+
+Ajoutez ces liens à vos favoris :
+
+```
+📁 Data Engineering/
+├── 📁 Documentation/
+│   ├── Spark Docs
+│   ├── Kafka Docs
+│   ├── dbt Docs
+│   └── K8s Docs
+├── 📁 Outils/
+│   ├── GitHub
+│   ├── Docker Hub
+│   └── Artifact Hub
+├── 📁 Apprentissage/
+│   ├── dbt Learn
+│   ├── Databricks Academy
+│   └── Confluent Developer
+└── 📁 Communautés/
+    ├── r/dataengineering
+    └── dbt Community
+```
+
+---
+
+[🔙 Retour à l'accueil](index.qmd){.btn .btn-secondary}

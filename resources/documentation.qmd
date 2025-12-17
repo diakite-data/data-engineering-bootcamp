@@ -1,0 +1,195 @@
+---
+title: "📖 Documentation"
+subtitle: "Ressources et documentation officielle"
+---
+
+## 📚 Documentation Officielle par Technologie
+
+### 🐍 Python & Data Processing
+
+| Technologie | Documentation | Notes |
+|-------------|---------------|-------|
+| **Python** | [docs.python.org](https://docs.python.org/3/) | Référence complète |
+| **Pandas** | [pandas.pydata.org](https://pandas.pydata.org/docs/) | Manipulation de données |
+| **Polars** | [pola.rs](https://docs.pola.rs/) | Alternative haute performance |
+| **NumPy** | [numpy.org](https://numpy.org/doc/) | Calcul scientifique |
+
+---
+
+### ⚡ Apache Spark
+
+| Ressource | Lien | Description |
+|-----------|------|-------------|
+| **Documentation officielle** | [spark.apache.org/docs](https://spark.apache.org/docs/latest/) | Guide complet |
+| **PySpark API** | [spark.apache.org/docs/latest/api/python](https://spark.apache.org/docs/latest/api/python/) | Référence API Python |
+| **Spark SQL Guide** | [spark.apache.org/docs/latest/sql-programming-guide](https://spark.apache.org/docs/latest/sql-programming-guide.html) | Guide SQL |
+| **Structured Streaming** | [spark.apache.org/docs/latest/structured-streaming](https://spark.apache.org/docs/latest/structured-streaming-programming-guide.html) | Streaming guide |
+
+**Livres recommandés** :
+
+- *Learning Spark, 2nd Edition* — O'Reilly
+- *Spark: The Definitive Guide* — O'Reilly
+
+---
+
+### 🏠 Lakehouse & Table Formats
+
+| Format | Documentation | GitHub |
+|--------|---------------|--------|
+| **Delta Lake** | [docs.delta.io](https://docs.delta.io/) | [delta-io/delta](https://github.com/delta-io/delta) |
+| **Apache Iceberg** | [iceberg.apache.org](https://iceberg.apache.org/docs/latest/) | [apache/iceberg](https://github.com/apache/iceberg) |
+| **Apache Hudi** | [hudi.apache.org](https://hudi.apache.org/docs/overview) | [apache/hudi](https://github.com/apache/hudi) |
+
+---
+
+### 📨 Streaming & Messaging
+
+| Technologie | Documentation | Notes |
+|-------------|---------------|-------|
+| **Apache Kafka** | [kafka.apache.org/documentation](https://kafka.apache.org/documentation/) | Message broker |
+| **Confluent** | [docs.confluent.io](https://docs.confluent.io/) | Kafka enterprise |
+| **Apache Flink** | [flink.apache.org/docs](https://nightlies.apache.org/flink/flink-docs-stable/) | Stream processing |
+| **Debezium** | [debezium.io/documentation](https://debezium.io/documentation/) | CDC |
+
+---
+
+### 🐳 Containers & Orchestration
+
+| Technologie | Documentation | Cheatsheet |
+|-------------|---------------|------------|
+| **Docker** | [docs.docker.com](https://docs.docker.com/) | [Docker Cheatsheet](https://dockerlabs.collabnix.com/docker/cheatsheet/) |
+| **Kubernetes** | [kubernetes.io/docs](https://kubernetes.io/docs/home/) | [kubectl Cheatsheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/) |
+| **Helm** | [helm.sh/docs](https://helm.sh/docs/) | Package manager K8s |
+| **ArgoCD** | [argo-cd.readthedocs.io](https://argo-cd.readthedocs.io/) | GitOps |
+
+---
+
+### 🔄 Orchestration & ETL
+
+| Technologie | Documentation | Notes |
+|-------------|---------------|-------|
+| **Apache Airflow** | [airflow.apache.org/docs](https://airflow.apache.org/docs/) | Orchestration |
+| **dbt** | [docs.getdbt.com](https://docs.getdbt.com/) | Transformation |
+| **Great Expectations** | [docs.greatexpectations.io](https://docs.greatexpectations.io/) | Data Quality |
+| **Dagster** | [docs.dagster.io](https://docs.dagster.io/) | Alternative moderne |
+
+---
+
+### ☁️ Cloud Providers
+
+| Provider | Documentation Data | Services clés |
+|----------|-------------------|---------------|
+| **AWS** | [docs.aws.amazon.com](https://docs.aws.amazon.com/) | S3, EMR, Glue, Redshift |
+| **GCP** | [cloud.google.com/docs](https://cloud.google.com/docs) | GCS, Dataproc, BigQuery |
+| **Azure** | [docs.microsoft.com/azure](https://docs.microsoft.com/en-us/azure/) | Blob, Synapse, Databricks |
+
+---
+
+### 📊 Monitoring & Observability
+
+| Outil | Documentation | Usage |
+|-------|---------------|-------|
+| **Prometheus** | [prometheus.io/docs](https://prometheus.io/docs/) | Métriques |
+| **Grafana** | [grafana.com/docs](https://grafana.com/docs/) | Dashboards |
+| **DataHub** | [datahubproject.io/docs](https://datahubproject.io/docs/) | Data Catalog |
+
+---
+
+## 🎓 Cours & Formations Gratuits
+
+### Plateformes
+
+| Plateforme | Cours recommandés |
+|------------|-------------------|
+| **Coursera** | [Data Engineering on Google Cloud](https://www.coursera.org/professional-certificates/gcp-data-engineering) |
+| **DataCamp** | [Data Engineer Track](https://www.datacamp.com/tracks/data-engineer) |
+| **Udemy** | Spark, Airflow, Kafka courses |
+| **YouTube** | Databricks, Confluent channels |
+
+### Tutoriels officiels
+
+- [dbt Learn](https://courses.getdbt.com/) — Gratuit, certifiant
+- [Kafka Tutorials](https://developer.confluent.io/tutorials/) — Confluent Developer
+- [Databricks Academy](https://www.databricks.com/learn) — Spark & Delta Lake
+
+---
+
+## 📝 Blogs & Articles
+
+### Blogs techniques
+
+| Blog | Focus |
+|------|-------|
+| [Databricks Blog](https://www.databricks.com/blog) | Spark, Delta Lake |
+| [Confluent Blog](https://www.confluent.io/blog/) | Kafka, Streaming |
+| [dbt Blog](https://www.getdbt.com/blog/) | Analytics Engineering |
+| [Towards Data Science](https://towardsdatascience.com/) | Data Engineering articles |
+| [Data Engineering Weekly](https://www.dataengineeringweekly.com/) | Newsletter |
+
+### Articles fondamentaux
+
+- [The Modern Data Stack](https://preset.io/blog/modern-data-stack/)
+- [Medallion Architecture](https://www.databricks.com/glossary/medallion-architecture)
+- [Data Mesh Principles](https://martinfowler.com/articles/data-mesh-principles.html)
+- [Lakehouse Architecture](https://www.databricks.com/glossary/data-lakehouse)
+
+---
+
+## 🛠️ Outils Utiles
+
+### IDEs & Éditeurs
+
+| Outil | Usage | Lien |
+|-------|-------|------|
+| **VS Code** | Développement général | [code.visualstudio.com](https://code.visualstudio.com/) |
+| **PyCharm** | Python IDE | [jetbrains.com/pycharm](https://www.jetbrains.com/pycharm/) |
+| **DataGrip** | SQL IDE | [jetbrains.com/datagrip](https://www.jetbrains.com/datagrip/) |
+| **DBeaver** | SQL gratuit | [dbeaver.io](https://dbeaver.io/) |
+
+### Extensions VS Code recommandées
+
+```
+- Python
+- Jupyter
+- Docker
+- Kubernetes
+- YAML
+- SQL Tools
+- GitLens
+```
+
+---
+
+## 📖 Livres Recommandés
+
+### Essentiels
+
+| Livre | Auteur | Sujet |
+|-------|--------|-------|
+| *Designing Data-Intensive Applications* | Martin Kleppmann | Architecture |
+| *Fundamentals of Data Engineering* | Joe Reis & Matt Housley | Vue d'ensemble |
+| *Data Pipelines Pocket Reference* | James Densmore | Pipelines |
+| *Learning Spark, 2nd Ed* | Damji et al. | Spark |
+
+### Avancés
+
+| Livre | Auteur | Sujet |
+|-------|--------|-------|
+| *Streaming Systems* | Akidau et al. | Streaming |
+| *Building Microservices* | Sam Newman | Architecture |
+| *The Data Warehouse Toolkit* | Ralph Kimball | Modélisation |
+
+---
+
+## 🔗 Communautés
+
+| Communauté | Plateforme |
+|------------|------------|
+| **Data Engineering** | [r/dataengineering](https://www.reddit.com/r/dataengineering/) |
+| **dbt Community** | [community.getdbt.com](https://community.getdbt.com/) |
+| **Apache Slack** | [the-asf.slack.com](https://the-asf.slack.com/) |
+| **Data Talks Club** | [datatalks.club](https://datatalks.club/) |
+
+---
+
+[🔙 Retour à l'accueil](index.qmd){.btn .btn-secondary}
