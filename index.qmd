@@ -94,21 +94,19 @@ Maîtriser les technologies indispensables en entreprise : Docker, Kubernetes, S
 
 | # | Module | Thèmes Clés |
 |:--|:-------|:------------|
-| 14 | Docker pour Data Engineering | Images, containers, volumes, Dockerfile, Compose |
+| 14 | Docker pour Data Engineers | Images, containers, volumes, Dockerfile, Compose |
 | 15 | Kubernetes Fondamentaux | Pods, Deployments, Services, ConfigMaps, Secrets |
-| 16 | Cloud Object Storage | S3, GCS, Azure Blob, MinIO, IAM, performances |
-| 17 | PySpark Avancé | Partitioning, caching, broadcast, UDF, optimisation |
-| 18 | Spark SQL Deep Dive | Catalyst, plans d'exécution, tuning, adaptive query |
-| 19 | Spark on Kubernetes | Spark Operator, SparkApplication, scaling, monitoring |
-| 20 | Polars & High Performance Python | API Polars, lazy evaluation, vs Pandas/Spark |
-| 21 | Formats de Fichiers | Parquet, Avro, ORC, compression, partitioning |
-| 22 | Table Formats (Delta, Iceberg, Hudi) | ACID, Time Travel, Schema Evolution, MERGE INTO |
-| 23 | Apache Kafka & Streaming | Producers, Consumers, Topics, Partitions, Consumer Groups |
-| 24 | Spark Structured Streaming | Watermarks, Windows, foreachBatch, checkpointing |
-| 25 | Orchestration avec Airflow | DAGs, Operators, XCom, Connections, bonnes pratiques |
-| 26 | dbt & Data Quality | Models, Tests, Documentation, Great Expectations |
-| 27 | CI/CD pour Data Pipelines | GitHub Actions, tests, déploiement automatisé |
-| 28 | Projet Intégrateur Intermédiaire | Pipeline Kafka → Spark → Delta Lake → dbt (Dataset Olist) |
+| 16 | K8s pour Data Workloads | StatefulSets, Jobs, CronJobs, volumes persistants |
+| 17 | Polars pour Data Engineering | API Polars, lazy evaluation, vs Pandas/Spark |
+| 18 | High Performance Python | Profiling, optimisation, multiprocessing, Cython |
+| 19 | PySpark Avancé | Partitioning, caching, broadcast, UDF, optimisation |
+| 20 | Spark SQL Deep Dive | Catalyst, plans d'exécution, tuning, adaptive query |
+| 21 | Spark on Kubernetes | Spark Operator, SparkApplication, scaling, monitoring |
+| 22 | Cloud Object Storage | S3, GCS, Azure Blob, MinIO, IAM, performances |
+| 23 | Table Formats (Delta, Iceberg, Hudi) | ACID, Time Travel, Schema Evolution, MERGE INTO |
+| 24 | Kafka & Streaming | Producers, Consumers, Topics, Partitions, Consumer Groups |
+| 25 | dbt & Data Quality | Models, Tests, Documentation, Great Expectations |
+| 26 | Projet Intégrateur Intermédiaire | Pipeline Kafka → Spark → Delta Lake → dbt (Dataset Olist) |
 
 > **🎯 Résultat :** Déployer un job Spark sur Kubernetes, stocker en Delta, orchestrer & monitorer.
 
@@ -121,21 +119,7 @@ Atteindre le niveau "Senior Data Engineer / Architecte Data".
 
 ### 📚 Modules
 
-| # | Module | Thèmes Clés |
-|:--|:-------|:------------|
-| 31 | Kubernetes Deep Dive | StatefulSets, Operators, CNI/CSI, Prometheus/Grafana, Helm, ArgoCD |
-| 32 | Distributed Messaging Systems | Kafka avancé, RabbitMQ, Pulsar, Debezium CDC, choix d'architecture |
-| 33 | Spark & Scala Internals | Scala essentials, Catalyst, Tungsten, AQE, shuffling, joins optimisés |
-| 34 | Apache Flink | Exactly-once, State Management, Watermarks, Flink SQL, vs Kafka Streams |
-| 35 | MLOps for Data Engineers | Feature Stores (Feast), MLflow, Pipelines ML, Model Monitoring |
-| 36 | Data Governance & Security | IAM, RLS/CLS, chiffrement, Data Contracts, DataHub, GDPR, Audit |
-| 37 | Architectural Trade-Offs | FinOps, ADR, Latence vs Coût, Capacity Planning, justification technique |
-| 38 | Technical Leadership | RFC, Design Reviews, Incidents/Postmortems, Mentoring, Communication |
-| 39 | Data Platform Design | Data Mesh, Multi-Format Strategy (Delta/Iceberg/Hudi), Platform Patterns |
-| 40 | Projet Intégrateur Avancé | Plateforme Data Multi-Tenant : K8s + Kafka + Flink + Lakehouse + MLOps + Governance |
-
-> **🎯 Résultat :** Architecturer une plateforme Data complète, scalable, sécurisée et optimisée.
-
+A venir
 ---
 
 # 📊 Vue d'Ensemble du Parcours
@@ -144,25 +128,25 @@ Atteindre le niveau "Senior Data Engineer / Architecte Data".
 ┌─────────────────────────────────────────────────────────────────────────────┐
 │                           PARCOURS COMPLET                                  │
 │                                                                             │
-│   🟦 NIVEAU 1 : DÉBUTANT                    Durée estimée : 6-8 semaines   │
+│   🟦 NIVEAU 1 : DÉBUTANT                    Durée estimée : x semaines   │
 │   ════════════════════════                                                  │
 │   Modules 01-13                                                             │
 │   Python → SQL → Big Data → PySpark → MongoDB                               │
 │   📦 Projet : Pipeline simple                                               │
 │                          │                                                  │
 │                          ▼                                                  │
-│   🟩 NIVEAU 2 : INTERMÉDIAIRE               Durée estimée : 8-10 semaines  │
+│   🟩 NIVEAU 2 : INTERMÉDIAIRE               Durée estimée : x semaines  │
 │   ════════════════════════════                                              │
-│   Modules 14-28                                                             │
+│   Modules 14-26                                                             │
 │   Docker → K8s → Spark avancé → Lakehouse → Streaming → dbt                │
 │   📦 Projet : Pipeline E-commerce (Olist)                                   │
 │                          │                                                  │
 │                          ▼                                                  │
-│   🟥 NIVEAU 3 : AVANCÉ                      Durée estimée : 8-10 semaines  │
+│   🟥 NIVEAU 3 : AVANCÉ                      Durée estimée : x semaines  │
 │   ═════════════════════                                                     │
-│   Modules 31-40                                                             │
-│   K8s Deep Dive → Flink → MLOps → Governance → Architecture → Leadership   │
-│   📦 Projet : Plateforme Data Multi-Tenant                                  │
+│   A venir                                                            │
+│      │
+│                                     │
 │                                                                             │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
