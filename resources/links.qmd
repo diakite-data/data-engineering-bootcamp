@@ -240,4 +240,4 @@ Ajoutez ces liens à vos favoris :
 
 ---
 
-[🔙 Retour à l'accueil](index.qmd){.btn .btn-secondary}
+[🔙 Retour à l'accueil](../index.qmd){.btn .btn-secondary}

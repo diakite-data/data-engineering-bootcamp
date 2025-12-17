@@ -192,4 +192,4 @@ subtitle: "Ressources et documentation officielle"
 
 ---
 
-[🔙 Retour à l'accueil](index.qmd){.btn .btn-secondary}
+[🔙 Retour à l'accueil](../index.qmd){.btn .btn-secondary}

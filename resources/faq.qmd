@@ -242,4 +242,4 @@ pip install xyz --constraint "https://raw.githubusercontent.com/apache/airflow/c
 
 ---
 
-[🔙 Retour à l'accueil](index.qmd){.btn .btn-secondary}
+[🔙 Retour à l'accueil](../index.qmd){.btn .btn-secondary}

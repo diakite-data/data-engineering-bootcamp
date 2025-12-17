@@ -385,4 +385,4 @@ minikube start --memory=4096 --cpus=2 --driver=docker
 
 Une fois tout installé, vous pouvez commencer le bootcamp :
 
-[📘 Commencer le Module 01](notebooks/beginner/01_intro_data_engineering.ipynb){.btn .btn-primary}
+[📘 Commencer le Module 01](../notebooks/beginner/01_intro_data_engineering.ipynb){.btn .btn-primary}

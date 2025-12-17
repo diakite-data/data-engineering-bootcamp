@@ -61,6 +61,26 @@
     <lastmod>2025-12-16T21:41:14.169Z</lastmod>
   </url>
   <url>
+    <loc>https://diakite-data.github.io/data-engineering-bootcamp/resources/links.html</loc>
+    <lastmod>2025-12-17T09:29:09.694Z</lastmod>
+  </url>
+  <url>
+    <loc>https://diakite-data.github.io/data-engineering-bootcamp/resources/documentation.html</loc>
+    <lastmod>2025-12-17T09:28:54.907Z</lastmod>
+  </url>
+  <url>
+    <loc>https://diakite-data.github.io/data-engineering-bootcamp/resources/faq.html</loc>
+    <lastmod>2025-12-17T09:29:02.257Z</lastmod>
+  </url>
+  <url>
+    <loc>https://diakite-data.github.io/data-engineering-bootcamp/resources/setup.html</loc>
+    <lastmod>2025-12-17T09:28:47.126Z</lastmod>
+  </url>
+  <url>
+    <loc>https://diakite-data.github.io/data-engineering-bootcamp/curriculum.html</loc>
+    <lastmod>2025-12-17T09:32:31.669Z</lastmod>
+  </url>
+  <url>
     <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/beginner/09_mongodb_for_data_engineers.html</loc>
     <lastmod>2025-12-06T16:32:03.201Z</lastmod>
   </url>
@@ -111,21 +131,5 @@
   <url>
     <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/intermediate/22_cloud_and_object_storage.html</loc>
     <lastmod>2025-12-16T10:31:13.543Z</lastmod>
-  </url>
-  <url>
-    <loc>https://diakite-data.github.io/data-engineering-bootcamp/resources/setup.html</loc>
-    <lastmod>2025-12-17T09:28:47.126Z</lastmod>
-  </url>
-  <url>
-    <loc>https://diakite-data.github.io/data-engineering-bootcamp/resources/faq.html</loc>
-    <lastmod>2025-12-17T09:29:02.257Z</lastmod>
-  </url>
-  <url>
-    <loc>https://diakite-data.github.io/data-engineering-bootcamp/resources/documentation.html</loc>
-    <lastmod>2025-12-17T09:28:54.907Z</lastmod>
-  </url>
-  <url>
-    <loc>https://diakite-data.github.io/data-engineering-bootcamp/resources/links.html</loc>
-    <lastmod>2025-12-17T09:29:09.694Z</lastmod>
   </url>
 </urlset>
