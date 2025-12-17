@@ -261,17 +261,16 @@ website:
       # =========================================================================
       - text: "---"
       - section: "📚 Ressources"
-        # contents:
-        #   - text: "🔧 Setup Environnement"
-        #     href: resources/setup.qmd
-        #   - text: "📖 Documentation"
-        #     href: resources/documentation.qmd
-        #   - text: "❓ FAQ"
-        #     href: resources/faq.qmd
-        #   - text: "🔗 Liens Utiles"
-        #     href: resources/links.qmd
-        #   - text: "📝 Glossaire"
-        #     href: resources/glossary.qmd
+        contents:
+           - text: "🔧 Setup Environnement"
+             href: resources/setup.qmd
+           - text: "📖 Documentation"
+             href: resources/documentation.qmd
+           - text: "❓ FAQ"
+             href: resources/faq.qmd
+           - text: "🔗 Liens Utiles"
+             href: resources/links.qmd
+
 
   # ---------------------------------------------------------------------------
   # 🔍 SEARCH
@@ -311,7 +310,7 @@ format:
     # Code
     code-fold: true
     code-summary: "Voir le code"
-    code-tools: true
+    code-tools: false
     code-copy: true
     code-overflow: wrap
     code-line-numbers: false
