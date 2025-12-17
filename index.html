@@ -20,41 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -64,7 +29,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./assets/images/favicon.ico" rel="icon">
+<link href="./assets/images/favicon.svg" rel="icon" type="image/svg+xml">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -77,9 +42,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-fc8d3d93f0a84b7619e1f8ff6eb63d42.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-47097dccd91f59de9ae0f4db9509ef40.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-ce6d9ca224b9dc18717c34b3a116d6e3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-47097dccd91f59de9ae0f4db9509ef40.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-a5e5c9297d81242f794464007003a45f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-7ce12bcd0277d468432a98ebc2064ff0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-a5e5c9297d81242f794464007003a45f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": true,
@@ -295,8 +260,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./assets/images/logo.png" alt="Data Engineering Bootcamp" class="navbar-logo light-content">
-    <img src="./assets/images/logo.png" alt="Data Engineering Bootcamp" class="navbar-logo dark-content">
+    <img src="./assets/images/logo.svg" alt="Data Engineering Bootcamp" class="navbar-logo light-content">
+    <img src="./assets/images/logo.svg" alt="Data Engineering Bootcamp" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -322,13 +287,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="dropdown-item" href="./notebooks/intermediate/14_docker_for_data_engineers.html">
  <span class="dropdown-text">🟩 Niveau Intermédiaire</span></a>
   </li>  
-        <li>
-    <a class="dropdown-item" href="./notebooks/advanced/31_k8s_deep_dive.ipynb">
- <span class="dropdown-text">🟥 Niveau Avancé</span></a>
-  </li>  
+        <li class="dropdown-header">🟥 Niveau Avancé</li>
         <li><hr class="dropdown-divider"></li>
         <li>
-    <a class="dropdown-item" href="./curriculum.qmd">
+    <a class="dropdown-item" href="./curriculum.html">
  <span class="dropdown-text">📊 Vue d’ensemble</span></a>
   </li>  
     </ul>
@@ -339,20 +301,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-ressources">    
         <li>
-    <a class="dropdown-item" href="./resources/documentation.qmd">
+    <a class="dropdown-item" href="./resources/documentation.html">
  <span class="dropdown-text">📚 Documentation</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./resources/setup.qmd">
+    <a class="dropdown-item" href="./resources/setup.html">
  <span class="dropdown-text">🔧 Setup Environnement</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./resources/faq.qmd">
+    <a class="dropdown-item" href="./resources/faq.html">
  <span class="dropdown-text">❓ FAQ</span></a>
   </li>  
         <li><hr class="dropdown-divider"></li>
         <li>
-    <a class="dropdown-item" href="./resources/links.qmd">
+    <a class="dropdown-item" href="./resources/links.html">
  <span class="dropdown-text">🔗 Liens Utiles</span></a>
   </li>  
     </ul>
@@ -552,11 +514,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
           <li class="px-0"><hr class="sidebar-divider hi "></li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./notebooks/beginner/projet_debutant.ipynb" class="sidebar-item-text sidebar-link">
- <span class="menu-text">📦 <strong>Projet Débutant</strong></span></a>
-  </div>
-</li>
+ <span class="menu-text">📦 **Projet Débutant**</span>
+  </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -596,12 +555,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">16 · K8s pour Data Workloads</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./notebooks/intermediate/17_cloud_object_storage.ipynb" class="sidebar-item-text sidebar-link">
- <span class="menu-text">17 · Cloud Object Storage</span></a>
-  </div>
-</li>
       </ul>
   </li>
           <li class="sidebar-item sidebar-item-section">
@@ -615,14 +568,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/intermediate/18_polars_for_data_engineering.ipynb" class="sidebar-item-text sidebar-link">
- <span class="menu-text">18 · Polars pour Data Engineering</span></a>
+  <a href="./notebooks/intermediate/17_polars_for_data_engineering.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">17 · Polars pour Data Engineering</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/intermediate/19_high_performance_python.ipynb" class="sidebar-item-text sidebar-link">
- <span class="menu-text">19 · High Performance Python</span></a>
+  <a href="./notebooks/intermediate/18_high_performance_python.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">18 · High Performance Python</span></a>
   </div>
 </li>
       </ul>
@@ -638,20 +591,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/intermediate/20_pyspark_advanced.ipynb" class="sidebar-item-text sidebar-link">
- <span class="menu-text">20 · PySpark Avancé</span></a>
+  <a href="./notebooks/intermediate/19_pyspark_advanced.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">19 · PySpark Avancé</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/intermediate/21_spark_sql_deep_dive.ipynb" class="sidebar-item-text sidebar-link">
- <span class="menu-text">21 · Spark SQL Deep Dive</span></a>
+  <a href="./notebooks/intermediate/20_spark_sql_deep_dive.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">20 · Spark SQL Deep Dive</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/intermediate/22_spark_on_kubernetes.ipynb" class="sidebar-item-text sidebar-link">
- <span class="menu-text">22 · Spark on Kubernetes</span></a>
+  <a href="./notebooks/intermediate/21_spark_on_kubernetes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">21 · Spark on Kubernetes</span></a>
   </div>
 </li>
       </ul>
@@ -659,12 +612,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false">
- <span class="menu-text">🏠 Lakehouse &amp; Streaming</span></a>
+ <span class="menu-text">🏠 Lakehouse &amp; Streaming &amp; Cloud</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./notebooks/intermediate/22_cloud_and_object_storage.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">22 · Cloud Object Storage</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./notebooks/intermediate/23_table_formats_delta_iceberg.html" class="sidebar-item-text sidebar-link">
@@ -675,12 +634,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="./notebooks/intermediate/24_kafka_streaming.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">24 · Kafka &amp; Streaming</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./notebooks/intermediate/25_spark_structured_streaming.ipynb" class="sidebar-item-text sidebar-link">
- <span class="menu-text">25 · Spark Structured Streaming</span></a>
   </div>
 </li>
       </ul>
@@ -696,20 +649,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/intermediate/26_airflow_orchestration.ipynb" class="sidebar-item-text sidebar-link">
- <span class="menu-text">26 · Orchestration Airflow</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./notebooks/intermediate/27_dbt_data_quality.ipynb" class="sidebar-item-text sidebar-link">
- <span class="menu-text">27 · dbt &amp; Data Quality</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./notebooks/intermediate/28_cicd_data_pipelines.ipynb" class="sidebar-item-text sidebar-link">
- <span class="menu-text">28 · CI/CD pour Data Pipelines</span></a>
+  <a href="./notebooks/intermediate/25_dbt_data_quality.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">25 · dbt &amp; Data Quality</span></a>
   </div>
 </li>
       </ul>
@@ -717,133 +658,51 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="px-0"><hr class="sidebar-divider hi "></li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/intermediate/29_projet_integrateur.ipynb" class="sidebar-item-text sidebar-link">
+  <a href="./notebooks/intermediate/26_projet_integrateur.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">📦 <strong>Projet Intermédiaire</strong> (Olist)</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false">
- <span class="menu-text">🟥 Niveau 3 : Avancé</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="px-0"><hr class="sidebar-divider hi "></li>
-          <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">🟥 Niveau 3 : Avancé</span></span>
+  </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false">
- <span class="menu-text">☸️ Infrastructure Avancée</span></a>
+ <span class="menu-text">📚 Ressources</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/advanced/31_k8s_deep_dive.ipynb" class="sidebar-item-text sidebar-link">
- <span class="menu-text">31 · Kubernetes Deep Dive</span></a>
+  <a href="./resources/setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🔧 Setup Environnement</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/advanced/32_distributed_messaging_systems.ipynb" class="sidebar-item-text sidebar-link">
- <span class="menu-text">32 · Messaging Systems (Kafka, RabbitMQ, Pulsar)</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="false">
- <span class="menu-text">⚡ Processing Avancé</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-16" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./notebooks/advanced/33_spark_scala_internals.ipynb" class="sidebar-item-text sidebar-link">
- <span class="menu-text">33 · Spark &amp; Scala Internals</span></a>
+  <a href="./resources/documentation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">📖 Documentation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/advanced/34_apache_flink.ipynb" class="sidebar-item-text sidebar-link">
- <span class="menu-text">34 · Apache Flink</span></a>
+  <a href="./resources/faq.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">❓ FAQ</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./resources/links.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🔗 Liens Utiles</span></a>
   </div>
 </li>
       </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" role="navigation" aria-expanded="false">
- <span class="menu-text">🤖 MLOps &amp; Governance</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-17" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./notebooks/advanced/35_mlops_for_data_engineers.ipynb" class="sidebar-item-text sidebar-link">
- <span class="menu-text">35 · MLOps pour Data Engineers</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./notebooks/advanced/36_data_governance_security.ipynb" class="sidebar-item-text sidebar-link">
- <span class="menu-text">36 · Data Governance &amp; Security</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" role="navigation" aria-expanded="false">
- <span class="menu-text">🏛️ Architecture &amp; Leadership</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-18" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./notebooks/advanced/37_architectural_tradeoffs.ipynb" class="sidebar-item-text sidebar-link">
- <span class="menu-text">37 · Architectural Trade-Offs</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./notebooks/advanced/38_technical_leadership.ipynb" class="sidebar-item-text sidebar-link">
- <span class="menu-text">38 · Technical Leadership</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./notebooks/advanced/39_data_platform_design.ipynb" class="sidebar-item-text sidebar-link">
- <span class="menu-text">39 · Data Platform Design</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="px-0"><hr class="sidebar-divider hi "></li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./notebooks/advanced/40_projet_integrateur_avance.ipynb" class="sidebar-item-text sidebar-link">
- <span class="menu-text">📦 <strong>Projet Avancé</strong> (Multi-Tenant Platform)</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="px-0"><hr class="sidebar-divider hi "></li>
-        <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">
- <span class="menu-text">📚 Ressources</span></span>
   </li>
     </ul>
     </div>
@@ -857,7 +716,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Bootcamp Data Engineering – From Zero to Hero</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<h1 class="title">Bootcamp Data Engineering – From Zero to Hero</h1>
 </div>
 
 
@@ -1087,7 +946,7 @@ Il vous accompagne de manière progressive vers un niveau <strong>professionnel 
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">14</td>
-<td style="text-align: left;">Docker pour Data Engineering</td>
+<td style="text-align: left;">Docker pour Data Engineers</td>
 <td style="text-align: left;">Images, containers, volumes, Dockerfile, Compose</td>
 </tr>
 <tr class="even">
@@ -1097,66 +956,56 @@ Il vous accompagne de manière progressive vers un niveau <strong>professionnel 
 </tr>
 <tr class="odd">
 <td style="text-align: left;">16</td>
-<td style="text-align: left;">Cloud Object Storage</td>
-<td style="text-align: left;">S3, GCS, Azure Blob, MinIO, IAM, performances</td>
+<td style="text-align: left;">K8s pour Data Workloads</td>
+<td style="text-align: left;">StatefulSets, Jobs, CronJobs, volumes persistants</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">17</td>
+<td style="text-align: left;">Polars pour Data Engineering</td>
+<td style="text-align: left;">API Polars, lazy evaluation, vs Pandas/Spark</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">18</td>
+<td style="text-align: left;">High Performance Python</td>
+<td style="text-align: left;">Profiling, optimisation, multiprocessing, Cython</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">19</td>
 <td style="text-align: left;">PySpark Avancé</td>
 <td style="text-align: left;">Partitioning, caching, broadcast, UDF, optimisation</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">18</td>
+<td style="text-align: left;">20</td>
 <td style="text-align: left;">Spark SQL Deep Dive</td>
 <td style="text-align: left;">Catalyst, plans d’exécution, tuning, adaptive query</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">19</td>
+<td style="text-align: left;">21</td>
 <td style="text-align: left;">Spark on Kubernetes</td>
 <td style="text-align: left;">Spark Operator, SparkApplication, scaling, monitoring</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">20</td>
-<td style="text-align: left;">Polars &amp; High Performance Python</td>
-<td style="text-align: left;">API Polars, lazy evaluation, vs Pandas/Spark</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">21</td>
-<td style="text-align: left;">Formats de Fichiers</td>
-<td style="text-align: left;">Parquet, Avro, ORC, compression, partitioning</td>
-</tr>
-<tr class="odd">
 <td style="text-align: left;">22</td>
-<td style="text-align: left;">Table Formats (Delta, Iceberg, Hudi)</td>
-<td style="text-align: left;">ACID, Time Travel, Schema Evolution, MERGE INTO</td>
+<td style="text-align: left;">Cloud Object Storage</td>
+<td style="text-align: left;">S3, GCS, Azure Blob, MinIO, IAM, performances</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">23</td>
-<td style="text-align: left;">Apache Kafka &amp; Streaming</td>
-<td style="text-align: left;">Producers, Consumers, Topics, Partitions, Consumer Groups</td>
+<td style="text-align: left;">Table Formats (Delta, Iceberg, Hudi)</td>
+<td style="text-align: left;">ACID, Time Travel, Schema Evolution, MERGE INTO</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">24</td>
-<td style="text-align: left;">Spark Structured Streaming</td>
-<td style="text-align: left;">Watermarks, Windows, foreachBatch, checkpointing</td>
+<td style="text-align: left;">Kafka &amp; Streaming</td>
+<td style="text-align: left;">Producers, Consumers, Topics, Partitions, Consumer Groups</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">25</td>
-<td style="text-align: left;">Orchestration avec Airflow</td>
-<td style="text-align: left;">DAGs, Operators, XCom, Connections, bonnes pratiques</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">26</td>
 <td style="text-align: left;">dbt &amp; Data Quality</td>
 <td style="text-align: left;">Models, Tests, Documentation, Great Expectations</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">27</td>
-<td style="text-align: left;">CI/CD pour Data Pipelines</td>
-<td style="text-align: left;">GitHub Actions, tests, déploiement automatisé</td>
-</tr>
 <tr class="odd">
-<td style="text-align: left;">28</td>
+<td style="text-align: left;">26</td>
 <td style="text-align: left;">Projet Intégrateur Intermédiaire</td>
 <td style="text-align: left;">Pipeline Kafka → Spark → Delta Lake → dbt (Dataset Olist)</td>
 </tr>
@@ -1176,76 +1025,9 @@ Il vous accompagne de manière progressive vers un niveau <strong>professionnel 
 </section>
 <section id="modules-2" class="level3">
 <h3 class="anchored" data-anchor-id="modules-2">📚 Modules</h3>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 12%">
-<col style="width: 33%">
-<col style="width: 54%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">#</th>
-<th style="text-align: left;">Module</th>
-<th style="text-align: left;">Thèmes Clés</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">31</td>
-<td style="text-align: left;">Kubernetes Deep Dive</td>
-<td style="text-align: left;">StatefulSets, Operators, CNI/CSI, Prometheus/Grafana, Helm, ArgoCD</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">32</td>
-<td style="text-align: left;">Distributed Messaging Systems</td>
-<td style="text-align: left;">Kafka avancé, RabbitMQ, Pulsar, Debezium CDC, choix d’architecture</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">33</td>
-<td style="text-align: left;">Spark &amp; Scala Internals</td>
-<td style="text-align: left;">Scala essentials, Catalyst, Tungsten, AQE, shuffling, joins optimisés</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">34</td>
-<td style="text-align: left;">Apache Flink</td>
-<td style="text-align: left;">Exactly-once, State Management, Watermarks, Flink SQL, vs Kafka Streams</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">35</td>
-<td style="text-align: left;">MLOps for Data Engineers</td>
-<td style="text-align: left;">Feature Stores (Feast), MLflow, Pipelines ML, Model Monitoring</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">36</td>
-<td style="text-align: left;">Data Governance &amp; Security</td>
-<td style="text-align: left;">IAM, RLS/CLS, chiffrement, Data Contracts, DataHub, GDPR, Audit</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">37</td>
-<td style="text-align: left;">Architectural Trade-Offs</td>
-<td style="text-align: left;">FinOps, ADR, Latence vs Coût, Capacity Planning, justification technique</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">38</td>
-<td style="text-align: left;">Technical Leadership</td>
-<td style="text-align: left;">RFC, Design Reviews, Incidents/Postmortems, Mentoring, Communication</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">39</td>
-<td style="text-align: left;">Data Platform Design</td>
-<td style="text-align: left;">Data Mesh, Multi-Format Strategy (Delta/Iceberg/Hudi), Platform Patterns</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">40</td>
-<td style="text-align: left;">Projet Intégrateur Avancé</td>
-<td style="text-align: left;">Plateforme Data Multi-Tenant : K8s + Kafka + Flink + Lakehouse + MLOps + Governance</td>
-</tr>
-</tbody>
-</table>
-<blockquote class="blockquote">
-<p><strong>🎯 Résultat :</strong> Architecturer une plateforme Data complète, scalable, sécurisée et optimisée.</p>
-</blockquote>
-<hr>
+</section>
+<section id="a-venir" class="level2">
+<h2 class="anchored" data-anchor-id="a-venir">A venir</h2>
 </section>
 </section>
 <section id="vue-densemble-du-parcours" class="level1">
@@ -1253,25 +1035,25 @@ Il vous accompagne de manière progressive vers un niveau <strong>professionnel 
 <pre><code>┌─────────────────────────────────────────────────────────────────────────────┐
 │                           PARCOURS COMPLET                                  │
 │                                                                             │
-│   🟦 NIVEAU 1 : DÉBUTANT                    Durée estimée : 6-8 semaines   │
+│   🟦 NIVEAU 1 : DÉBUTANT                    Durée estimée : x semaines   │
 │   ════════════════════════                                                  │
 │   Modules 01-13                                                             │
 │   Python → SQL → Big Data → PySpark → MongoDB                               │
 │   📦 Projet : Pipeline simple                                               │
 │                          │                                                  │
 │                          ▼                                                  │
-│   🟩 NIVEAU 2 : INTERMÉDIAIRE               Durée estimée : 8-10 semaines  │
+│   🟩 NIVEAU 2 : INTERMÉDIAIRE               Durée estimée : x semaines  │
 │   ════════════════════════════                                              │
-│   Modules 14-28                                                             │
+│   Modules 14-26                                                             │
 │   Docker → K8s → Spark avancé → Lakehouse → Streaming → dbt                │
 │   📦 Projet : Pipeline E-commerce (Olist)                                   │
 │                          │                                                  │
 │                          ▼                                                  │
-│   🟥 NIVEAU 3 : AVANCÉ                      Durée estimée : 8-10 semaines  │
+│   🟥 NIVEAU 3 : AVANCÉ                      Durée estimée : x semaines  │
 │   ═════════════════════                                                     │
-│   Modules 31-40                                                             │
-│   K8s Deep Dive → Flink → MLOps → Governance → Architecture → Leadership   │
-│   📦 Projet : Plateforme Data Multi-Tenant                                  │
+│   A venir                                                            │
+│      │
+│                                     │
 │                                                                             │
 └─────────────────────────────────────────────────────────────────────────────┘</code></pre>
 <hr>
@@ -1380,8 +1162,6 @@ Il vous accompagne de manière progressive vers un niveau <strong>professionnel 
 <h2 class="anchored" data-anchor-id="bonne-montée-en-compétence">🎉 Bonne montée en compétence !</h2>
 <p>Vous êtes maintenant prêt à progresser étape par étape jusqu’au niveau <strong>Senior Data Engineer</strong>.</p>
 
-
-<!-- -->
 
 </section>
 </section>
@@ -1501,57 +1281,6 @@ function downloadPDF() {
         container: window.document.getElementById('quarto-embedded-source-code-modal')
       });
       clipboardModal.on('success', onCopySuccess);
-    }
-    const viewSource = window.document.getElementById('quarto-view-source') ||
-                       window.document.getElementById('quarto-code-tools-source');
-    if (viewSource) {
-      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
-      viewSource.addEventListener("click", function(e) {
-        if (sourceUrl) {
-          // rstudio viewer pane
-          if (/\bcapabilities=\b/.test(window.location)) {
-            window.open(sourceUrl);
-          } else {
-            window.location.href = sourceUrl;
-          }
-        } else {
-          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
-          modal.show();
-        }
-        return false;
-      });
-    }
-    function toggleCodeHandler(show) {
-      return function(e) {
-        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
-        for (let i=0; i<detailsSrc.length; i++) {
-          const details = detailsSrc[i].parentElement;
-          if (show) {
-            details.open = true;
-          } else {
-            details.removeAttribute("open");
-          }
-        }
-        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
-        const fromCls = show ? "hidden" : "unhidden";
-        const toCls = show ? "unhidden" : "hidden";
-        for (let i=0; i<cellCodeDivs.length; i++) {
-          const codeDiv = cellCodeDivs[i];
-          if (codeDiv.classList.contains(fromCls)) {
-            codeDiv.classList.remove(fromCls);
-            codeDiv.classList.add(toCls);
-          } 
-        }
-        return false;
-      }
-    }
-    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
-    if (hideAllCode) {
-      hideAllCode.addEventListener("click", toggleCodeHandler(false));
-    }
-    const showAllCode = window.document.getElementById("quarto-show-all-code");
-    if (showAllCode) {
-      showAllCode.addEventListener("click", toggleCodeHandler(true));
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
@@ -1920,222 +1649,7 @@ function downloadPDF() {
     document.getElementById("quarto-content").appendChild(script);
   }
   loadGiscus();
-</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Bootcamp Data Engineering – From Zero to Hero"</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">    toc: false</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"hero"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"padding: 40px 0; text-align:center;"</span><span class="dt">&gt;</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">h1</span><span class="dt">&gt;</span>🚀 Bootcamp Data Engineering : From Zero to Hero<span class="dt">&lt;/</span><span class="kw">h1</span><span class="dt">&gt;</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">h3</span><span class="dt">&gt;</span>Devenez un Data Engineer opérationnel, prêt pour l'entreprise.<span class="dt">&lt;/</span><span class="kw">h3</span><span class="dt">&gt;</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="fu">## 🎯 Pourquoi choisir ce Bootcamp ?</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>Ce programme a été conçu par des Data Engineers expérimentés, en se concentrant sur les **exigences réelles du marché**.  </span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>Il vous accompagne de manière progressive vers un niveau **professionnel – Senior Ready**.</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="fu">### ✔ Ce que vous allez maîtriser</span></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Outils industriels** : Spark 3.x, Kafka, Flink, Docker, Kubernetes, dbt, Lakehouse (Delta/Iceberg).</span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Architectures modernes** : Médaillon (Bronze/Silver/Gold), Kappa, Lambda, Data Lakehouse, Data Mesh.</span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Compétences d'ingénierie** : optimisation, gouvernance, orchestration, CI/CD, cloud.</span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Industrialisation** : création de pipelines batch et streaming totalement opérationnels.</span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Leadership technique** : RFC, Design Reviews, ADR, pensée architecturale.</span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="fu">## 👥 À qui s'adresse ce Bootcamp ?</span></span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Étudiants / Développeurs** voulant entrer dans le monde du Big Data.</span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Analystes BI** souhaitant évoluer vers le Data Engineering moderne.</span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Professionnels expérimentés** voulant structurer une plateforme Data complète.</span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Architectes &amp; Managers** cherchant à comprendre les technos Data modernes.</span>
-<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="fu">## 🛠️ Votre Boîte à Outils Data Engineering</span></span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Domaine <span class="pp">|</span> Outils &amp; Technologies <span class="pp">|</span></span>
-<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a><span class="pp">| :---</span> <span class="pp">| :---</span> <span class="pp">|</span></span>
-<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Big Data Processing** <span class="pp">|</span> PySpark, Spark SQL, Scala, Polars, Dask <span class="pp">|</span></span>
-<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Lakehouse** <span class="pp">|</span> Delta Lake, Apache Iceberg, Hudi <span class="pp">|</span></span>
-<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Streaming** <span class="pp">|</span> Kafka, Spark Streaming, Flink, Debezium CDC <span class="pp">|</span></span>
-<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **DevOps / Infra** <span class="pp">|</span> Docker, Kubernetes, Helm, ArgoCD, Spark Operator <span class="pp">|</span></span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Monitoring** <span class="pp">|</span> Prometheus, Grafana, Alertmanager <span class="pp">|</span></span>
-<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Cloud** <span class="pp">|</span> AWS S3, GCP GCS, Azure Blob, IAM, MinIO <span class="pp">|</span></span>
-<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Qualité &amp; ETL** <span class="pp">|</span> dbt, Great Expectations, Data Contracts <span class="pp">|</span></span>
-<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **MLOps** <span class="pp">|</span> MLflow, Feast (Feature Store), Model Monitoring <span class="pp">|</span></span>
-<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Governance** <span class="pp">|</span> DataHub, Unity Catalog, RLS/CLS, GDPR <span class="pp">|</span></span>
-<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a><span class="fu"># 📘 Structure Complète du Programme (3 Niveaux)</span></span>
-<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>La progression est organisée selon un parcours **pédagogique optimal** :</span>
-<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a><span class="fu"># 🟦 Niveau 1 : Débutant – Fondations &amp; Premiers Pipelines</span></span>
-<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a><span class="fu">### 🎯 Objectif  </span></span>
-<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>Construire des bases solides en Python, SQL, systèmes distribués, modélisation et premiers pipelines.</span>
-<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a><span class="fu">### 📚 Modules</span></span>
-<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> # <span class="pp">|</span> Module <span class="pp">|</span> Thèmes Clés <span class="pp">|</span></span>
-<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>:--<span class="pp">|:-------|:------------|</span></span>
-<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 01 <span class="pp">|</span> Introduction au Data Engineering <span class="pp">|</span> Rôle du DE, écosystème, architectures (Lambda, Kappa, Lakehouse) <span class="pp">|</span></span>
-<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 02 <span class="pp">|</span> Fondamentaux Linux &amp; Bash <span class="pp">|</span> Commandes essentielles, scripting, cron, permissions <span class="pp">|</span></span>
-<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 03 <span class="pp">|</span> Git &amp; Versioning <span class="pp">|</span> Branches, merge, rebase, workflows collaboratifs <span class="pp">|</span></span>
-<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 04 <span class="pp">|</span> Python pour Data Engineering <span class="pp">|</span> Syntaxe, structures, fichiers, exceptions <span class="pp">|</span></span>
-<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 05 <span class="pp">|</span> Python Avancé <span class="pp">|</span> POO, décorateurs, générateurs, context managers <span class="pp">|</span></span>
-<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 06 <span class="pp">|</span> Packaging &amp; Environnements <span class="pp">|</span> venv, pip, pyproject.toml, structure projet <span class="pp">|</span></span>
-<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 07 <span class="pp">|</span> SQL Fondamental <span class="pp">|</span> SELECT, JOIN, agrégations, sous-requêtes <span class="pp">|</span></span>
-<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 08 <span class="pp">|</span> SQL Avancé <span class="pp">|</span> Window functions, CTE, optimisation, indexation <span class="pp">|</span></span>
-<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 09 <span class="pp">|</span> Modélisation de Données <span class="pp">|</span> Normalisation, Star Schema, Data Vault, SCD <span class="pp">|</span></span>
-<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 10 <span class="pp">|</span> Introduction Big Data <span class="pp">|</span> Hadoop, HDFS, MapReduce, écosystème <span class="pp">|</span></span>
-<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 11 <span class="pp">|</span> Introduction PySpark <span class="pp">|</span> RDD, DataFrame, transformations, actions <span class="pp">|</span></span>
-<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 12 <span class="pp">|</span> MongoDB pour Data Engineers <span class="pp">|</span> NoSQL, CRUD, agrégations, indexation <span class="pp">|</span></span>
-<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 13 <span class="pp">|</span> Projet Intégrateur Débutant <span class="pp">|</span> Pipeline CSV → Nettoyage → Agrégation → Export <span class="pp">|</span></span>
-<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; **🎯 Résultat :** Capable d'ingérer, transformer et produire un dataset Gold simple.</span></span>
-<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a><span class="fu"># 🟩 Niveau 2 : Intermédiaire – Industrialisation &amp; Lakehouse</span></span>
-<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a><span class="fu">### 🎯 Objectif  </span></span>
-<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a>Maîtriser les technologies indispensables en entreprise : Docker, Kubernetes, Spark avancé, Lakehouse, streaming, orchestration.</span>
-<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a><span class="fu">### 📚 Modules</span></span>
-<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> # <span class="pp">|</span> Module <span class="pp">|</span> Thèmes Clés <span class="pp">|</span></span>
-<span id="cb2-96"><a href="#cb2-96" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>:--<span class="pp">|:-------|:------------|</span></span>
-<span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 14 <span class="pp">|</span> Docker pour Data Engineering <span class="pp">|</span> Images, containers, volumes, Dockerfile, Compose <span class="pp">|</span></span>
-<span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 15 <span class="pp">|</span> Kubernetes Fondamentaux <span class="pp">|</span> Pods, Deployments, Services, ConfigMaps, Secrets <span class="pp">|</span></span>
-<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 16 <span class="pp">|</span> Cloud Object Storage <span class="pp">|</span> S3, GCS, Azure Blob, MinIO, IAM, performances <span class="pp">|</span></span>
-<span id="cb2-100"><a href="#cb2-100" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 17 <span class="pp">|</span> PySpark Avancé <span class="pp">|</span> Partitioning, caching, broadcast, UDF, optimisation <span class="pp">|</span></span>
-<span id="cb2-101"><a href="#cb2-101" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 18 <span class="pp">|</span> Spark SQL Deep Dive <span class="pp">|</span> Catalyst, plans d'exécution, tuning, adaptive query <span class="pp">|</span></span>
-<span id="cb2-102"><a href="#cb2-102" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 19 <span class="pp">|</span> Spark on Kubernetes <span class="pp">|</span> Spark Operator, SparkApplication, scaling, monitoring <span class="pp">|</span></span>
-<span id="cb2-103"><a href="#cb2-103" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 20 <span class="pp">|</span> Polars &amp; High Performance Python <span class="pp">|</span> API Polars, lazy evaluation, vs Pandas/Spark <span class="pp">|</span></span>
-<span id="cb2-104"><a href="#cb2-104" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 21 <span class="pp">|</span> Formats de Fichiers <span class="pp">|</span> Parquet, Avro, ORC, compression, partitioning <span class="pp">|</span></span>
-<span id="cb2-105"><a href="#cb2-105" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 22 <span class="pp">|</span> Table Formats (Delta, Iceberg, Hudi) <span class="pp">|</span> ACID, Time Travel, Schema Evolution, MERGE INTO <span class="pp">|</span></span>
-<span id="cb2-106"><a href="#cb2-106" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 23 <span class="pp">|</span> Apache Kafka &amp; Streaming <span class="pp">|</span> Producers, Consumers, Topics, Partitions, Consumer Groups <span class="pp">|</span></span>
-<span id="cb2-107"><a href="#cb2-107" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 24 <span class="pp">|</span> Spark Structured Streaming <span class="pp">|</span> Watermarks, Windows, foreachBatch, checkpointing <span class="pp">|</span></span>
-<span id="cb2-108"><a href="#cb2-108" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 25 <span class="pp">|</span> Orchestration avec Airflow <span class="pp">|</span> DAGs, Operators, XCom, Connections, bonnes pratiques <span class="pp">|</span></span>
-<span id="cb2-109"><a href="#cb2-109" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 26 <span class="pp">|</span> dbt &amp; Data Quality <span class="pp">|</span> Models, Tests, Documentation, Great Expectations <span class="pp">|</span></span>
-<span id="cb2-110"><a href="#cb2-110" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 27 <span class="pp">|</span> CI/CD pour Data Pipelines <span class="pp">|</span> GitHub Actions, tests, déploiement automatisé <span class="pp">|</span></span>
-<span id="cb2-111"><a href="#cb2-111" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 28 <span class="pp">|</span> Projet Intégrateur Intermédiaire <span class="pp">|</span> Pipeline Kafka → Spark → Delta Lake → dbt (Dataset Olist) <span class="pp">|</span></span>
-<span id="cb2-112"><a href="#cb2-112" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-113"><a href="#cb2-113" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; **🎯 Résultat :** Déployer un job Spark sur Kubernetes, stocker en Delta, orchestrer &amp; monitorer.</span></span>
-<span id="cb2-114"><a href="#cb2-114" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-115"><a href="#cb2-115" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb2-116"><a href="#cb2-116" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-117"><a href="#cb2-117" aria-hidden="true" tabindex="-1"></a><span class="fu"># 🟥 Niveau 3 : Avancé – Architecture, Optimisation &amp; Seniority</span></span>
-<span id="cb2-118"><a href="#cb2-118" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-119"><a href="#cb2-119" aria-hidden="true" tabindex="-1"></a><span class="fu">### 🎯 Objectif  </span></span>
-<span id="cb2-120"><a href="#cb2-120" aria-hidden="true" tabindex="-1"></a>Atteindre le niveau "Senior Data Engineer / Architecte Data".</span>
-<span id="cb2-121"><a href="#cb2-121" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-122"><a href="#cb2-122" aria-hidden="true" tabindex="-1"></a><span class="fu">### 📚 Modules</span></span>
-<span id="cb2-123"><a href="#cb2-123" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-124"><a href="#cb2-124" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> # <span class="pp">|</span> Module <span class="pp">|</span> Thèmes Clés <span class="pp">|</span></span>
-<span id="cb2-125"><a href="#cb2-125" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>:--<span class="pp">|:-------|:------------|</span></span>
-<span id="cb2-126"><a href="#cb2-126" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 31 <span class="pp">|</span> Kubernetes Deep Dive <span class="pp">|</span> StatefulSets, Operators, CNI/CSI, Prometheus/Grafana, Helm, ArgoCD <span class="pp">|</span></span>
-<span id="cb2-127"><a href="#cb2-127" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 32 <span class="pp">|</span> Distributed Messaging Systems <span class="pp">|</span> Kafka avancé, RabbitMQ, Pulsar, Debezium CDC, choix d'architecture <span class="pp">|</span></span>
-<span id="cb2-128"><a href="#cb2-128" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 33 <span class="pp">|</span> Spark &amp; Scala Internals <span class="pp">|</span> Scala essentials, Catalyst, Tungsten, AQE, shuffling, joins optimisés <span class="pp">|</span></span>
-<span id="cb2-129"><a href="#cb2-129" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 34 <span class="pp">|</span> Apache Flink <span class="pp">|</span> Exactly-once, State Management, Watermarks, Flink SQL, vs Kafka Streams <span class="pp">|</span></span>
-<span id="cb2-130"><a href="#cb2-130" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 35 <span class="pp">|</span> MLOps for Data Engineers <span class="pp">|</span> Feature Stores (Feast), MLflow, Pipelines ML, Model Monitoring <span class="pp">|</span></span>
-<span id="cb2-131"><a href="#cb2-131" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 36 <span class="pp">|</span> Data Governance &amp; Security <span class="pp">|</span> IAM, RLS/CLS, chiffrement, Data Contracts, DataHub, GDPR, Audit <span class="pp">|</span></span>
-<span id="cb2-132"><a href="#cb2-132" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 37 <span class="pp">|</span> Architectural Trade-Offs <span class="pp">|</span> FinOps, ADR, Latence vs Coût, Capacity Planning, justification technique <span class="pp">|</span></span>
-<span id="cb2-133"><a href="#cb2-133" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 38 <span class="pp">|</span> Technical Leadership <span class="pp">|</span> RFC, Design Reviews, Incidents/Postmortems, Mentoring, Communication <span class="pp">|</span></span>
-<span id="cb2-134"><a href="#cb2-134" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 39 <span class="pp">|</span> Data Platform Design <span class="pp">|</span> Data Mesh, Multi-Format Strategy (Delta/Iceberg/Hudi), Platform Patterns <span class="pp">|</span></span>
-<span id="cb2-135"><a href="#cb2-135" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 40 <span class="pp">|</span> Projet Intégrateur Avancé <span class="pp">|</span> Plateforme Data Multi-Tenant : K8s + Kafka + Flink + Lakehouse + MLOps + Governance <span class="pp">|</span></span>
-<span id="cb2-136"><a href="#cb2-136" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-137"><a href="#cb2-137" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; **🎯 Résultat :** Architecturer une plateforme Data complète, scalable, sécurisée et optimisée.</span></span>
-<span id="cb2-138"><a href="#cb2-138" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-139"><a href="#cb2-139" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb2-140"><a href="#cb2-140" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-141"><a href="#cb2-141" aria-hidden="true" tabindex="-1"></a><span class="fu"># 📊 Vue d'Ensemble du Parcours</span></span>
-<span id="cb2-142"><a href="#cb2-142" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-143"><a href="#cb2-143" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-144"><a href="#cb2-144" aria-hidden="true" tabindex="-1"></a><span class="in">┌─────────────────────────────────────────────────────────────────────────────┐</span></span>
-<span id="cb2-145"><a href="#cb2-145" aria-hidden="true" tabindex="-1"></a><span class="in">│                           PARCOURS COMPLET                                  │</span></span>
-<span id="cb2-146"><a href="#cb2-146" aria-hidden="true" tabindex="-1"></a><span class="in">│                                                                             │</span></span>
-<span id="cb2-147"><a href="#cb2-147" aria-hidden="true" tabindex="-1"></a><span class="in">│   🟦 NIVEAU 1 : DÉBUTANT                    Durée estimée : 6-8 semaines   │</span></span>
-<span id="cb2-148"><a href="#cb2-148" aria-hidden="true" tabindex="-1"></a><span class="in">│   ════════════════════════                                                  │</span></span>
-<span id="cb2-149"><a href="#cb2-149" aria-hidden="true" tabindex="-1"></a><span class="in">│   Modules 01-13                                                             │</span></span>
-<span id="cb2-150"><a href="#cb2-150" aria-hidden="true" tabindex="-1"></a><span class="in">│   Python → SQL → Big Data → PySpark → MongoDB                               │</span></span>
-<span id="cb2-151"><a href="#cb2-151" aria-hidden="true" tabindex="-1"></a><span class="in">│   📦 Projet : Pipeline simple                                               │</span></span>
-<span id="cb2-152"><a href="#cb2-152" aria-hidden="true" tabindex="-1"></a><span class="in">│                          │                                                  │</span></span>
-<span id="cb2-153"><a href="#cb2-153" aria-hidden="true" tabindex="-1"></a><span class="in">│                          ▼                                                  │</span></span>
-<span id="cb2-154"><a href="#cb2-154" aria-hidden="true" tabindex="-1"></a><span class="in">│   🟩 NIVEAU 2 : INTERMÉDIAIRE               Durée estimée : 8-10 semaines  │</span></span>
-<span id="cb2-155"><a href="#cb2-155" aria-hidden="true" tabindex="-1"></a><span class="in">│   ════════════════════════════                                              │</span></span>
-<span id="cb2-156"><a href="#cb2-156" aria-hidden="true" tabindex="-1"></a><span class="in">│   Modules 14-28                                                             │</span></span>
-<span id="cb2-157"><a href="#cb2-157" aria-hidden="true" tabindex="-1"></a><span class="in">│   Docker → K8s → Spark avancé → Lakehouse → Streaming → dbt                │</span></span>
-<span id="cb2-158"><a href="#cb2-158" aria-hidden="true" tabindex="-1"></a><span class="in">│   📦 Projet : Pipeline E-commerce (Olist)                                   │</span></span>
-<span id="cb2-159"><a href="#cb2-159" aria-hidden="true" tabindex="-1"></a><span class="in">│                          │                                                  │</span></span>
-<span id="cb2-160"><a href="#cb2-160" aria-hidden="true" tabindex="-1"></a><span class="in">│                          ▼                                                  │</span></span>
-<span id="cb2-161"><a href="#cb2-161" aria-hidden="true" tabindex="-1"></a><span class="in">│   🟥 NIVEAU 3 : AVANCÉ                      Durée estimée : 8-10 semaines  │</span></span>
-<span id="cb2-162"><a href="#cb2-162" aria-hidden="true" tabindex="-1"></a><span class="in">│   ═════════════════════                                                     │</span></span>
-<span id="cb2-163"><a href="#cb2-163" aria-hidden="true" tabindex="-1"></a><span class="in">│   Modules 31-40                                                             │</span></span>
-<span id="cb2-164"><a href="#cb2-164" aria-hidden="true" tabindex="-1"></a><span class="in">│   K8s Deep Dive → Flink → MLOps → Governance → Architecture → Leadership   │</span></span>
-<span id="cb2-165"><a href="#cb2-165" aria-hidden="true" tabindex="-1"></a><span class="in">│   📦 Projet : Plateforme Data Multi-Tenant                                  │</span></span>
-<span id="cb2-166"><a href="#cb2-166" aria-hidden="true" tabindex="-1"></a><span class="in">│                                                                             │</span></span>
-<span id="cb2-167"><a href="#cb2-167" aria-hidden="true" tabindex="-1"></a><span class="in">└─────────────────────────────────────────────────────────────────────────────┘</span></span>
-<span id="cb2-168"><a href="#cb2-168" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-169"><a href="#cb2-169" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-170"><a href="#cb2-170" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb2-171"><a href="#cb2-171" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-172"><a href="#cb2-172" aria-hidden="true" tabindex="-1"></a><span class="fu"># 🏆 Compétences Acquises par Niveau</span></span>
-<span id="cb2-173"><a href="#cb2-173" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-174"><a href="#cb2-174" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Compétence <span class="pp">|</span> Débutant <span class="pp">|</span> Intermédiaire <span class="pp">|</span> Avancé <span class="pp">|</span></span>
-<span id="cb2-175"><a href="#cb2-175" aria-hidden="true" tabindex="-1"></a><span class="pp">|:-----------|:--------:|:-------------:|:------:|</span></span>
-<span id="cb2-176"><a href="#cb2-176" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Python &amp; SQL <span class="pp">|</span> ✅ <span class="pp">|</span> ✅✅ <span class="pp">|</span> ✅✅✅ <span class="pp">|</span></span>
-<span id="cb2-177"><a href="#cb2-177" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> PySpark <span class="pp">|</span> ✅ <span class="pp">|</span> ✅✅ <span class="pp">|</span> ✅✅✅ <span class="pp">|</span></span>
-<span id="cb2-178"><a href="#cb2-178" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Docker &amp; Kubernetes <span class="pp">|</span> - <span class="pp">|</span> ✅✅ <span class="pp">|</span> ✅✅✅ <span class="pp">|</span></span>
-<span id="cb2-179"><a href="#cb2-179" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Lakehouse (Delta/Iceberg) <span class="pp">|</span> - <span class="pp">|</span> ✅✅ <span class="pp">|</span> ✅✅✅ <span class="pp">|</span></span>
-<span id="cb2-180"><a href="#cb2-180" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Streaming (Kafka) <span class="pp">|</span> - <span class="pp">|</span> ✅✅ <span class="pp">|</span> ✅✅✅ <span class="pp">|</span></span>
-<span id="cb2-181"><a href="#cb2-181" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Flink <span class="pp">|</span> - <span class="pp">|</span> - <span class="pp">|</span> ✅✅ <span class="pp">|</span></span>
-<span id="cb2-182"><a href="#cb2-182" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> dbt &amp; Data Quality <span class="pp">|</span> - <span class="pp">|</span> ✅✅ <span class="pp">|</span> ✅✅ <span class="pp">|</span></span>
-<span id="cb2-183"><a href="#cb2-183" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> MLOps <span class="pp">|</span> - <span class="pp">|</span> - <span class="pp">|</span> ✅✅ <span class="pp">|</span></span>
-<span id="cb2-184"><a href="#cb2-184" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Governance &amp; Security <span class="pp">|</span> - <span class="pp">|</span> ✅ <span class="pp">|</span> ✅✅✅ <span class="pp">|</span></span>
-<span id="cb2-185"><a href="#cb2-185" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Architecture &amp; Design <span class="pp">|</span> - <span class="pp">|</span> ✅ <span class="pp">|</span> ✅✅✅ <span class="pp">|</span></span>
-<span id="cb2-186"><a href="#cb2-186" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Leadership technique <span class="pp">|</span> - <span class="pp">|</span> - <span class="pp">|</span> ✅✅✅ <span class="pp">|</span></span>
-<span id="cb2-187"><a href="#cb2-187" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-188"><a href="#cb2-188" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb2-189"><a href="#cb2-189" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-190"><a href="#cb2-190" aria-hidden="true" tabindex="-1"></a><span class="fu"># 🚀 Démarrer le Bootcamp</span></span>
-<span id="cb2-191"><a href="#cb2-191" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-192"><a href="#cb2-192" aria-hidden="true" tabindex="-1"></a>👉 Cliquez dans le menu de gauche pour ouvrir le premier module, ou démarrez ici :</span>
-<span id="cb2-193"><a href="#cb2-193" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-194"><a href="#cb2-194" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">"text-align: center; margin: 30px 0;"</span><span class="dt">&gt;</span></span>
-<span id="cb2-195"><a href="#cb2-195" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"notebooks/beginner/01_intro_data_engineering.ipynb"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"background-color: #4CAF50; color: white; padding: 15px 30px; text-decoration: none; font-size: 18px; border-radius: 5px;"</span><span class="dt">&gt;</span></span>
-<span id="cb2-196"><a href="#cb2-196" aria-hidden="true" tabindex="-1"></a>    📘 Commencer le Module 01</span>
-<span id="cb2-197"><a href="#cb2-197" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
-<span id="cb2-198"><a href="#cb2-198" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb2-199"><a href="#cb2-199" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-200"><a href="#cb2-200" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb2-201"><a href="#cb2-201" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-202"><a href="#cb2-202" aria-hidden="true" tabindex="-1"></a><span class="fu">## 💡 Conseils pour Réussir</span></span>
-<span id="cb2-203"><a href="#cb2-203" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-204"><a href="#cb2-204" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Suivez l'ordre** : Les modules sont conçus pour être suivis séquentiellement.</span>
-<span id="cb2-205"><a href="#cb2-205" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Pratiquez** : Faites tous les exercices et projets intégrateurs.</span>
-<span id="cb2-206"><a href="#cb2-206" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Expérimentez** : Modifiez le code, cassez des choses, apprenez des erreurs.</span>
-<span id="cb2-207"><a href="#cb2-207" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Documentez** : Prenez des notes, créez votre propre documentation.</span>
-<span id="cb2-208"><a href="#cb2-208" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**Construisez votre portfolio** : Les projets intégrateurs sont présentables en entretien.</span>
-<span id="cb2-209"><a href="#cb2-209" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-210"><a href="#cb2-210" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb2-211"><a href="#cb2-211" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-212"><a href="#cb2-212" aria-hidden="true" tabindex="-1"></a><span class="fu">## 🎉 Bonne montée en compétence !  </span></span>
-<span id="cb2-213"><a href="#cb2-213" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-214"><a href="#cb2-214" aria-hidden="true" tabindex="-1"></a>Vous êtes maintenant prêt à progresser étape par étape jusqu'au niveau **Senior Data Engineer**.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
-</div></div></div></div></div>
+</script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -2143,7 +1657,7 @@ function downloadPDF() {
 <p>© 2025 Bootcamp Data Engineering · From Zero to Hero</p>
 </div>   
     <div class="nav-footer-center">
-<p>Fait avec ❤️ et <a href="https://quarto.org">Quarto</a></p>
+<p>Fait avec ❤️ par DIAKITE M. YOUSSOUF</p>
 <div class="toc-actions"><ul><li><a href="https://github.com/diakite-data/data-engineering-bootcamp/blob/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/diakite-data/data-engineering-bootcamp/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/diakite-data/data-engineering-bootcamp/edit/main/index.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
