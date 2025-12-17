@@ -90,14 +90,14 @@ $code-comment: #6c7086;
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
   --font-mono: "JetBrains Mono", "Fira Code", monospace;
   
-  /* Spacing */
-  --spacing-xs: 0.25rem;
-  --spacing-sm: 0.5rem;
-  --spacing-md: 1rem;
-  --spacing-lg: 1.5rem;
-  --spacing-xl: 2rem;
-  --spacing-2xl: 3rem;
-  --spacing-3xl: 4rem;
+  /* Spacing - Compact */
+  --spacing-xs: 0.15rem;
+  --spacing-sm: 0.35rem;
+  --spacing-md: 0.75rem;
+  --spacing-lg: 1rem;
+  --spacing-xl: 1.25rem;
+  --spacing-2xl: 1.75rem;
+  --spacing-3xl: 2.5rem;
   
   /* Border Radius */
   --radius-sm: 6px;
@@ -164,6 +164,8 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.025em;
   line-height: 1.2;
   color: var(--primary-900);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 h1 {
@@ -171,11 +173,14 @@ h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  margin-top: 1rem;
 }
 
 h2 {
   position: relative;
   display: inline-block;
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
 }
 
 h2::after {
