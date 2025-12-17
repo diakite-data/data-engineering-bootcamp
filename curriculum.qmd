@@ -1,0 +1,127 @@
+---
+title: "📊 Curriculum Complet"
+subtitle: "Vue d'ensemble du programme Data Engineering"
+---
+
+## 🎯 Parcours Pédagogique
+
+Ce bootcamp est structuré en **3 niveaux progressifs**, conçus pour vous emmener de zéro à un niveau Senior Data Engineer.
+
+```
+Durée totale estimée : 
+├── 🟦 Niveau 1 (Débutant)      
+├── 🟩 Niveau 2 (Intermédiaire) 
+└── 🟥 Niveau 3 (Avancé)        
+```
+
+---
+
+## 🟦 Niveau 1 : Débutant — Fondations
+
+**Objectif** : Construire des bases solides en Python, SQL, et systèmes distribués.
+
+| # | Module | Durée | Compétences |
+|:--|:-------|:-----:|:------------|
+| 01 | Introduction au Data Engineering | 2h | Rôle du DE, écosystème, architectures |
+| 02 | Linux & Bash | 4h | Commandes, scripting, cron |
+| 03 | Git & Versioning | 3h | Branches, merge, workflows |
+| 04 | Python Fondamental | 6h | Syntaxe, structures, fichiers |
+| 05 | Python Data Processing | 6h | POO, décorateurs, générateurs |
+| 06 | Introduction BDD Relationnelles | 3h | Concepts, modélisation |
+| 07 | SQL pour Data Engineers | 8h | Requêtes, jointures, optimisation |
+| 08 | Introduction Big Data | 4h | Hadoop, HDFS, MapReduce |
+| 09 | MongoDB | 4h | NoSQL, CRUD, agrégations |
+| 10 | Elasticsearch | 4h | Recherche, indexation |
+| 11 | Introduction PySpark | 6h | RDD, DataFrame, transformations |
+| 12 | Orchestration de Pipelines | 4h | Concepts, scheduling |
+| 13 | **Bonus** : FastAPI | 4h | API REST pour Data Engineers |
+
+**📦 Projet Débutant** : Pipeline CSV → Nettoyage → Agrégation → Export
+
+---
+
+## 🟩 Niveau 2 : Intermédiaire — Industrialisation
+
+**Objectif** : Maîtriser les technologies d'entreprise : Docker, Kubernetes, Lakehouse, Streaming.
+
+| # | Module | Durée | Compétences |
+|:--|:-------|:-----:|:------------|
+| 14 | Docker pour Data Engineers | 6h | Images, containers, Compose |
+| 15 | Kubernetes Fondamentaux | 6h | Pods, Deployments, Services |
+| 16 | K8s pour Data Workloads | 4h | StatefulSets, volumes |
+| 17 | Cloud Object Storage | 4h | S3, GCS, MinIO, IAM |
+| 18 | Polars | 4h | High-performance DataFrames |
+| 19 | High Performance Python | 4h | Profiling, optimisation |
+| 20 | PySpark Avancé | 8h | Partitioning, broadcast, UDF |
+| 21 | Spark SQL Deep Dive | 6h | Catalyst, plans d'exécution |
+| 22 | Spark on Kubernetes | 6h | Spark Operator, scaling |
+| 23 | Table Formats (Delta, Iceberg) | 8h | ACID, Time Travel, MERGE |
+| 24 | Kafka & Streaming | 6h | Producers, Consumers, Topics |
+| 25 | Spark Structured Streaming | 6h | Watermarks, Windows |
+| 26 | Orchestration Airflow | 6h | DAGs, Operators, XCom |
+| 27 | dbt & Data Quality | 6h | Models, Tests, Great Expectations |
+| 28 | CI/CD pour Data Pipelines | 4h | GitHub Actions, déploiement |
+
+**📦 Projet Intermédiaire** : Pipeline E-commerce Olist (Kafka → Spark → Delta → dbt)
+
+---
+
+## 🟥 Niveau 3 : Avancé — Architecture & Leadership
+
+**Objectif** : Atteindre le niveau Senior Data Engineer / Architecte Data.
+
+| # | Module | Durée | Compétences |
+|:--|:-------|:-----:|:------------|
+| 31 | Kubernetes Deep Dive | 8h | Prometheus, Grafana, Helm, ArgoCD |
+| 32 | Messaging Systems | 6h | Kafka avancé, RabbitMQ, Pulsar, Debezium |
+| 33 | Spark & Scala Internals | 8h | Catalyst, Tungsten, AQE, optimisation |
+| 34 | Apache Flink | 8h | Exactly-once, State, Flink SQL |
+| 35 | MLOps pour Data Engineers | 6h | Feature Stores, MLflow |
+| 36 | Data Governance & Security | 6h | IAM, RLS, Data Contracts, GDPR |
+| 37 | Architectural Trade-Offs | 4h | FinOps, ADR, Capacity Planning |
+| 38 | Technical Leadership | 4h | RFC, Design Reviews, Mentoring |
+| 39 | Data Platform Design | 6h | Data Mesh, Lakehouse patterns |
+
+**📦 Projet Avancé** : Plateforme Data Multi-Tenant (K8s + Kafka + Flink + MLOps + Governance)
+
+---
+
+## 🏆 Compétences par Niveau
+
+```
+                    Débutant    Intermédiaire    Avancé
+                    ────────    ─────────────    ──────
+Python & SQL           ██░░░        ████░           █████
+PySpark                █░░░░        ████░           █████
+Docker & K8s           ░░░░░        ████░           █████
+Lakehouse              ░░░░░        ████░           █████
+Streaming              ░░░░░        ███░░           █████
+Architecture           ░░░░░        ██░░░           █████
+Leadership             ░░░░░        ░░░░░           █████
+```
+
+---
+
+## 📈 Progression Recommandée
+
+1. **Suivez l'ordre** des modules — ils sont conçus pour être séquentiels
+2. **Faites tous les exercices** — la pratique est essentielle
+3. **Complétez les projets intégrateurs** — ils valident vos compétences
+4. **Prenez des notes** — créez votre propre documentation
+5. **Expérimentez** — modifiez le code, cassez des choses, apprenez
+
+---
+
+## 🎓 Certification
+
+À la fin de chaque niveau, vous serez capable de :
+
+| Niveau | Vous pouvez... |
+|--------|----------------|
+| 🟦 Débutant | Créer des pipelines batch simples, manipuler des données avec Python/SQL/Spark |
+| 🟩 Intermédiaire | Déployer des jobs Spark sur K8s, construire un Lakehouse, orchestrer avec Airflow |
+| 🟥 Avancé | Architecturer une plateforme Data complète, optimiser les performances, lead une équipe |
+
+---
+
+[🚀 Commencer le Bootcamp](notebooks/beginner/01_intro_data_engineering.ipynb){.btn .btn-primary}

@@ -24,7 +24,7 @@ website:
   repo-actions: [source, issue, edit]
   
   # Favicon & Branding
-  favicon: assets/images/favicon.ico
+  favicon: assets/images/favicon.svg
   
   # Open Graph / Social Media
   open-graph:
@@ -42,7 +42,7 @@ website:
     left: |
       © 2025 Bootcamp Data Engineering · From Zero to Hero
     center: |
-      Fait avec ❤️ et [Quarto](https://quarto.org)
+      Fait avec ❤️ par DIAKITE M. YOUSSOUF 
     right:
       - icon: github
         href: https://github.com/diakite-data/data-engineering-bootcamp
@@ -56,7 +56,7 @@ website:
   # ---------------------------------------------------------------------------
   navbar:
     background: dark
-    logo: assets/images/logo.png
+    logo: assets/images/logo.svg
     logo-alt: "Data Engineering Bootcamp"
     title: false
     collapse-below: lg
@@ -72,7 +72,7 @@ website:
           - text: "🟩 Niveau Intermédiaire"
             href: notebooks/intermediate/14_docker_for_data_engineers.ipynb
           - text: "🟥 Niveau Avancé"
-            href: notebooks/advanced/31_k8s_deep_dive.ipynb
+          #  href: notebooks/advanced/31_k8s_deep_dive.ipynb
           - text: "---"
           - text: "📊 Vue d'ensemble"
             href: curriculum.qmd
@@ -160,7 +160,7 @@ website:
           
           - text: "---"
           - text: "📦 **Projet Débutant**"
-            href: notebooks/beginner/projet_debutant.ipynb
+          #  href: notebooks/beginner/projet_debutant.ipynb
 
       # =========================================================================
       # 🟩 NIVEAU 2 : INTERMÉDIAIRE
@@ -176,86 +176,85 @@ website:
                 href: notebooks/intermediate/15_kubernetes_fundamentals.ipynb
               - text: "16 · K8s pour Data Workloads"
                 href: notebooks/intermediate/16_k8s_for_data_workloads.ipynb
-              - text: "17 · Cloud Object Storage"
-                href: notebooks/intermediate/17_cloud_object_storage.ipynb
+              
           
           - section: "🚀 High Performance Python"
             contents:
-              - text: "18 · Polars pour Data Engineering"
-                href: notebooks/intermediate/18_polars_for_data_engineering.ipynb
-              - text: "19 · High Performance Python"
-                href: notebooks/intermediate/19_high_performance_python.ipynb
+              - text: "17 · Polars pour Data Engineering"
+                href: notebooks/intermediate/17_polars_for_data_engineering.ipynb
+              - text: "18 · High Performance Python"
+                href: notebooks/intermediate/18_high_performance_python.ipynb
           
           - section: "⚡ Spark Avancé"
             contents:
-              - text: "20 · PySpark Avancé"
-                href: notebooks/intermediate/20_pyspark_advanced.ipynb
-              - text: "21 · Spark SQL Deep Dive"
-                href: notebooks/intermediate/21_spark_sql_deep_dive.ipynb
-              - text: "22 · Spark on Kubernetes"
-                href: notebooks/intermediate/22_spark_on_kubernetes.ipynb
+              - text: "19 · PySpark Avancé"
+                href: notebooks/intermediate/19_pyspark_advanced.ipynb
+              - text: "20 · Spark SQL Deep Dive"
+                href: notebooks/intermediate/20_spark_sql_deep_dive.ipynb
+              - text: "21 · Spark on Kubernetes"
+                href: notebooks/intermediate/21_spark_on_kubernetes.ipynb
           
-          - section: "🏠 Lakehouse & Streaming"
+          - section: "🏠 Lakehouse & Streaming & Cloud"
             contents:
+              - text: "22 · Cloud Object Storage"
+                href: notebooks/intermediate/22_cloud_and_object_storage.ipynb
               - text: "23 · Table Formats (Delta, Iceberg)"
                 href: notebooks/intermediate/23_table_formats_delta_iceberg.ipynb
               - text: "24 · Kafka & Streaming"
                 href: notebooks/intermediate/24_kafka_streaming.ipynb
-              - text: "25 · Spark Structured Streaming"
-                href: notebooks/intermediate/25_spark_structured_streaming.ipynb
           
           - section: "🔧 Industrialisation"
             contents:
-              - text: "26 · Orchestration Airflow"
-                href: notebooks/intermediate/26_airflow_orchestration.ipynb
-              - text: "27 · dbt & Data Quality"
-                href: notebooks/intermediate/27_dbt_data_quality.ipynb
-              - text: "28 · CI/CD pour Data Pipelines"
-                href: notebooks/intermediate/28_cicd_data_pipelines.ipynb
+              #- text: "26 · Orchestration Airflow"
+               # href: notebooks/intermediate/26_airflow_orchestration.ipynb
+              - text: "25 · dbt & Data Quality"
+                href: notebooks/intermediate/25_dbt_data_quality.ipynb
+             # - text: "28 · CI/CD pour Data Pipelines"
+             #   href: notebooks/intermediate/28_cicd_data_pipelines.ipynb
           
           - text: "---"
           - text: "📦 **Projet Intermédiaire** (Olist)"
-            href: notebooks/intermediate/29_projet_integrateur.ipynb
+            href: notebooks/intermediate/26_projet_integrateur.ipynb
 
       # =========================================================================
       # 🟥 NIVEAU 3 : AVANCÉ
       # =========================================================================
       - section: "🟥 Niveau 3 : Avancé"
         contents:
-          - text: "---"
-          - section: "☸️ Infrastructure Avancée"
-            contents:
-              - text: "31 · Kubernetes Deep Dive"
-                href: notebooks/advanced/31_k8s_deep_dive.ipynb
-              - text: "32 · Messaging Systems (Kafka, RabbitMQ, Pulsar)"
-                href: notebooks/advanced/32_distributed_messaging_systems.ipynb
+          # - text: "---"
+          # - section: "☸️ Infrastructure Avancée"
+          #   contents:
+          #     - text: "31 · Kubernetes Deep Dive"
+          #       href: notebooks/advanced/31_k8s_deep_dive.ipynb
+          #     - text: "32 · Messaging Systems (Kafka, RabbitMQ, Pulsar)"
+          #       href: notebooks/advanced/32_distributed_messaging_systems.ipynb
           
-          - section: "⚡ Processing Avancé"
-            contents:
-              - text: "33 · Spark & Scala Internals"
-                href: notebooks/advanced/33_spark_scala_internals.ipynb
-              - text: "34 · Apache Flink"
-                href: notebooks/advanced/34_apache_flink.ipynb
+          # - section: "⚡ Processing Avancé"
+          #   contents:
+          #     - text: "33 · Spark & Scala Internals"
+          #       href: notebooks/advanced/33_spark_scala_internals.ipynb
+          #     - text: "34 · Apache Flink"
+          #       href: notebooks/advanced/34_apache_flink.ipynb
           
-          - section: "🤖 MLOps & Governance"
-            contents:
-              - text: "35 · MLOps pour Data Engineers"
-                href: notebooks/advanced/35_mlops_for_data_engineers.ipynb
-              - text: "36 · Data Governance & Security"
-                href: notebooks/advanced/36_data_governance_security.ipynb
+          # - section: "🤖 MLOps & Governance"
+          #   contents:
+          #     - text: "35 · MLOps pour Data Engineers"
+          #       href: notebooks/advanced/35_mlops_for_data_engineers.ipynb
+          #     - text: "36 · Data Governance & Security"
+          #       href: notebooks/advanced/36_data_governance_security.ipynb
           
-          - section: "🏛️ Architecture & Leadership"
-            contents:
-              - text: "37 · Architectural Trade-Offs"
-                href: notebooks/advanced/37_architectural_tradeoffs.ipynb
-              - text: "38 · Technical Leadership"
-                href: notebooks/advanced/38_technical_leadership.ipynb
-              - text: "39 · Data Platform Design"
-                href: notebooks/advanced/39_data_platform_design.ipynb
+          # - section: "🏛️ Architecture & Leadership"
+          #   contents:
+          #     - text: "37 · Architectural Trade-Offs"
+          #       href: notebooks/advanced/37_architectural_tradeoffs.ipynb
+          #     - text: "38 · Technical Leadership"
+          #       href: notebooks/advanced/38_technical_leadership.ipynb
+          #     - text: "39 · Data Platform Design"
+          #       href: notebooks/advanced/39_data_platform_design.ipynb
           
-          - text: "---"
-          - text: "📦 **Projet Avancé** (Multi-Tenant Platform)"
-            href: notebooks/advanced/40_projet_integrateur_avance.ipynb
+          # - text: "---"
+          # - text: "📦 **Projet Avancé** (Multi-Tenant Platform)"
+          #   href: notebooks/advanced/40_projet_integrateur_avance.ipynb
 
       # =========================================================================
       # 📚 RESSOURCES
