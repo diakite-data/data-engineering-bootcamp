@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>☸️ Spark on Kubernetes — Production-Grade Deployment – Bootcamp Data Engineering</title>
+<title>Spark on Kubernetes — Production-Grade Deployment – Bootcamp Data Engineering</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -77,9 +77,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-fc8d3d93f0a84b7619e1f8ff6eb63d42.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-a5e5c9297d81242f794464007003a45f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-7ce12bcd0277d468432a98ebc2064ff0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-a5e5c9297d81242f794464007003a45f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-1ded37139ab960446759ac96e383a6c7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-0c5e4731d53392a4fe54074a744a0e14.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-1ded37139ab960446759ac96e383a6c7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": true,
@@ -114,11 +114,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="keywords" content="data engineering, spark, kafka, python, kubernetes, lakehouse, delta lake, bootcamp">
 
 
-<meta property="og:title" content="☸️ Spark on Kubernetes — Production-Grade Deployment – Bootcamp Data Engineering">
+<meta property="og:title" content="Spark on Kubernetes — Production-Grade Deployment – Bootcamp Data Engineering">
 <meta property="og:description" content="Programme complet Data Engineering — Du débutant au Senior Engineer">
 <meta property="og:site_name" content="Bootcamp Data Engineering">
 <meta property="og:locale" content="fr_FR">
-<meta name="twitter:title" content="☸️ Spark on Kubernetes — Production-Grade Deployment – Bootcamp Data Engineering">
+<meta name="twitter:title" content="Spark on Kubernetes — Production-Grade Deployment – Bootcamp Data Engineering">
 <meta name="twitter:description" content="Programme complet Data Engineering — Du débutant au Senior Engineer">
 <meta name="twitter:creator" content="@diakite_data">
 <meta name="twitter:site" content="@diakite_data">
@@ -703,42 +703,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <span class="sidebar-item-text sidebar-link text-start">
  <span class="menu-text">🟥 Niveau 3 : Avancé</span></span>
   </li>
-        <li class="px-0"><hr class="sidebar-divider hi "></li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false">
- <span class="menu-text">📚 Ressources</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../resources/setup.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">🔧 Setup Environnement</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../resources/documentation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">📖 Documentation</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../resources/faq.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">❓ FAQ</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../resources/links.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">🔗 Liens Utiles</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
     </ul>
     </div>
 </nav>
@@ -749,85 +713,83 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">📑 Sommaire</h2>
    
   <ul>
-  <li><a href="#prérequis" id="toc-prérequis" class="nav-link active" data-scroll-target="#prérequis">📋 Prérequis</a></li>
-  <li><a href="#objectifs-du-module" id="toc-objectifs-du-module" class="nav-link" data-scroll-target="#objectifs-du-module">🎯 Objectifs du module</a></li>
-  <li><a href="#introduction-pourquoi-spark-sur-kubernetes" id="toc-introduction-pourquoi-spark-sur-kubernetes" class="nav-link" data-scroll-target="#introduction-pourquoi-spark-sur-kubernetes">📚 1. Introduction — Pourquoi Spark sur Kubernetes ?</a>
+  <li><a href="#prérequis" id="toc-prérequis" class="nav-link active" data-scroll-target="#prérequis">Prérequis</a></li>
+  <li><a href="#objectifs-du-module" id="toc-objectifs-du-module" class="nav-link" data-scroll-target="#objectifs-du-module">Objectifs du module</a></li>
+  <li><a href="#introduction-pourquoi-spark-sur-kubernetes" id="toc-introduction-pourquoi-spark-sur-kubernetes" class="nav-link" data-scroll-target="#introduction-pourquoi-spark-sur-kubernetes">1. Introduction — Pourquoi Spark sur Kubernetes ?</a>
   <ul class="collapse">
   <li><a href="#lévolution-de-linfrastructure-spark" id="toc-lévolution-de-linfrastructure-spark" class="nav-link" data-scroll-target="#lévolution-de-linfrastructure-spark">1.1 L’évolution de l’infrastructure Spark</a></li>
   <li><a href="#avantages-de-kubernetes" id="toc-avantages-de-kubernetes" class="nav-link" data-scroll-target="#avantages-de-kubernetes">1.2 Avantages de Kubernetes</a></li>
   <li><a href="#support-officiel" id="toc-support-officiel" class="nav-link" data-scroll-target="#support-officiel">1.3 Support officiel</a></li>
-  <li><a href="#comparaison-yarn-vs-kubernetes" id="toc-comparaison-yarn-vs-kubernetes" class="nav-link" data-scroll-target="#comparaison-yarn-vs-kubernetes">1.4 🆚 Comparaison YARN vs Kubernetes</a></li>
+  <li><a href="#comparaison-yarn-vs-kubernetes" id="toc-comparaison-yarn-vs-kubernetes" class="nav-link" data-scroll-target="#comparaison-yarn-vs-kubernetes">1.4 Comparaison YARN vs Kubernetes</a></li>
   </ul></li>
-  <li><a href="#architecture-spark-on-kubernetes" id="toc-architecture-spark-on-kubernetes" class="nav-link" data-scroll-target="#architecture-spark-on-kubernetes">🏗️ 2. Architecture Spark on Kubernetes</a>
+  <li><a href="#architecture-spark-on-kubernetes" id="toc-architecture-spark-on-kubernetes" class="nav-link" data-scroll-target="#architecture-spark-on-kubernetes">2. Architecture Spark on Kubernetes</a>
   <ul class="collapse">
   <li><a href="#vue-densemble" id="toc-vue-densemble" class="nav-link" data-scroll-target="#vue-densemble">2.1 Vue d’ensemble</a></li>
   <li><a href="#rôles-et-responsabilités" id="toc-rôles-et-responsabilités" class="nav-link" data-scroll-target="#rôles-et-responsabilités">2.2 Rôles et responsabilités</a></li>
   <li><a href="#client-mode-vs-cluster-mode" id="toc-client-mode-vs-cluster-mode" class="nav-link" data-scroll-target="#client-mode-vs-cluster-mode">2.3 Client Mode vs Cluster Mode</a></li>
-  <li><a href="#exercice-1-identifier-les-composants" id="toc-exercice-1-identifier-les-composants" class="nav-link" data-scroll-target="#exercice-1-identifier-les-composants">🏋️ Exercice 1 : Identifier les composants</a></li>
+  <li><a href="#exercice-1-identifier-les-composants" id="toc-exercice-1-identifier-les-composants" class="nav-link" data-scroll-target="#exercice-1-identifier-les-composants">Exercice 1 : Identifier les composants</a></li>
   </ul></li>
-  <li><a href="#construire-une-image-docker-spark" id="toc-construire-une-image-docker-spark" class="nav-link" data-scroll-target="#construire-une-image-docker-spark">🐳 3. Construire une Image Docker Spark</a>
+  <li><a href="#construire-une-image-docker-spark" id="toc-construire-une-image-docker-spark" class="nav-link" data-scroll-target="#construire-une-image-docker-spark">3. Construire une Image Docker Spark</a>
   <ul class="collapse">
   <li><a href="#image-de-base" id="toc-image-de-base" class="nav-link" data-scroll-target="#image-de-base">3.1 Image de base</a></li>
   <li><a href="#image-production-grade-avec-jars" id="toc-image-production-grade-avec-jars" class="nav-link" data-scroll-target="#image-production-grade-avec-jars">3.2 Image production-grade avec JARs</a></li>
   <li><a href="#best-practices-docker-pour-spark" id="toc-best-practices-docker-pour-spark" class="nav-link" data-scroll-target="#best-practices-docker-pour-spark">3.3 Best practices Docker pour Spark</a></li>
-  <li><a href="#exercice-2-construire-une-image-spark" id="toc-exercice-2-construire-une-image-spark" class="nav-link" data-scroll-target="#exercice-2-construire-une-image-spark">🏋️ Exercice 2 : Construire une image Spark</a></li>
+  <li><a href="#exercice-2-construire-une-image-spark" id="toc-exercice-2-construire-une-image-spark" class="nav-link" data-scroll-target="#exercice-2-construire-une-image-spark">Exercice 2 : Construire une image Spark</a></li>
   </ul></li>
-  <li><a href="#configuration-kubernetes-pour-spark" id="toc-configuration-kubernetes-pour-spark" class="nav-link" data-scroll-target="#configuration-kubernetes-pour-spark">⚙️ 4. Configuration Kubernetes pour Spark</a>
+  <li><a href="#configuration-kubernetes-pour-spark" id="toc-configuration-kubernetes-pour-spark" class="nav-link" data-scroll-target="#configuration-kubernetes-pour-spark">4. Configuration Kubernetes pour Spark</a>
   <ul class="collapse">
   <li><a href="#namespace-dédié" id="toc-namespace-dédié" class="nav-link" data-scroll-target="#namespace-dédié">4.1 Namespace dédié</a></li>
   <li><a href="#serviceaccount-rbac" id="toc-serviceaccount-rbac" class="nav-link" data-scroll-target="#serviceaccount-rbac">4.2 ServiceAccount &amp; RBAC</a></li>
   <li><a href="#secrets-credentials-cloud" id="toc-secrets-credentials-cloud" class="nav-link" data-scroll-target="#secrets-credentials-cloud">4.3 Secrets (credentials cloud)</a></li>
   <li><a href="#persistentvolumeclaims" id="toc-persistentvolumeclaims" class="nav-link" data-scroll-target="#persistentvolumeclaims">4.4 PersistentVolumeClaims</a></li>
   <li><a href="#resourcequotas-limitranges-optionnel-mais-recommandé" id="toc-resourcequotas-limitranges-optionnel-mais-recommandé" class="nav-link" data-scroll-target="#resourcequotas-limitranges-optionnel-mais-recommandé">4.5 ResourceQuotas &amp; LimitRanges (optionnel mais recommandé)</a></li>
-  <li><a href="#exercice-3-créer-les-manifests-rbac" id="toc-exercice-3-créer-les-manifests-rbac" class="nav-link" data-scroll-target="#exercice-3-créer-les-manifests-rbac">🏋️ Exercice 3 : Créer les manifests RBAC</a></li>
+  <li><a href="#exercice-3-créer-les-manifests-rbac" id="toc-exercice-3-créer-les-manifests-rbac" class="nav-link" data-scroll-target="#exercice-3-créer-les-manifests-rbac">Exercice 3 : Créer les manifests RBAC</a></li>
   </ul></li>
-  <li><a href="#spark-submit-sur-kubernetes" id="toc-spark-submit-sur-kubernetes" class="nav-link" data-scroll-target="#spark-submit-sur-kubernetes">🚀 5. spark-submit sur Kubernetes</a>
+  <li><a href="#spark-submit-sur-kubernetes" id="toc-spark-submit-sur-kubernetes" class="nav-link" data-scroll-target="#spark-submit-sur-kubernetes">5. spark-submit sur Kubernetes</a>
   <ul class="collapse">
   <li><a href="#syntaxe-de-base" id="toc-syntaxe-de-base" class="nav-link" data-scroll-target="#syntaxe-de-base">5.1 Syntaxe de base</a></li>
   <li><a href="#commande-complète-production-grade" id="toc-commande-complète-production-grade" class="nav-link" data-scroll-target="#commande-complète-production-grade">5.2 Commande complète production-grade</a></li>
   <li><a href="#configurations-essentielles" id="toc-configurations-essentielles" class="nav-link" data-scroll-target="#configurations-essentielles">5.3 Configurations essentielles</a></li>
   <li><a href="#accéder-au-spark-ui" id="toc-accéder-au-spark-ui" class="nav-link" data-scroll-target="#accéder-au-spark-ui">5.4 Accéder au Spark UI</a></li>
-  <li><a href="#exercice-4-lancer-un-job-spark-sur-minikube" id="toc-exercice-4-lancer-un-job-spark-sur-minikube" class="nav-link" data-scroll-target="#exercice-4-lancer-un-job-spark-sur-minikube">🏋️ Exercice 4 : Lancer un job Spark sur Minikube</a></li>
+  <li><a href="#exercice-4-lancer-un-job-spark-sur-minikube" id="toc-exercice-4-lancer-un-job-spark-sur-minikube" class="nav-link" data-scroll-target="#exercice-4-lancer-un-job-spark-sur-minikube">Exercice 4 : Lancer un job Spark sur Minikube</a></li>
   </ul></li>
-  <li><a href="#spark-operator-production-grade" id="toc-spark-operator-production-grade" class="nav-link" data-scroll-target="#spark-operator-production-grade">🎛️ 6. Spark Operator — Production-Grade</a>
+  <li><a href="#spark-operator-production-grade" id="toc-spark-operator-production-grade" class="nav-link" data-scroll-target="#spark-operator-production-grade">6. Spark Operator — Production-Grade</a>
   <ul class="collapse">
   <li><a href="#pourquoi-utiliser-spark-operator" id="toc-pourquoi-utiliser-spark-operator" class="nav-link" data-scroll-target="#pourquoi-utiliser-spark-operator">6.1 Pourquoi utiliser Spark Operator ?</a></li>
   <li><a href="#installation-avec-helm" id="toc-installation-avec-helm" class="nav-link" data-scroll-target="#installation-avec-helm">6.2 Installation avec Helm</a></li>
   <li><a href="#sparkapplication-crd" id="toc-sparkapplication-crd" class="nav-link" data-scroll-target="#sparkapplication-crd">6.3 SparkApplication CRD</a></li>
   <li><a href="#scheduledsparkapplication-cron-jobs" id="toc-scheduledsparkapplication-cron-jobs" class="nav-link" data-scroll-target="#scheduledsparkapplication-cron-jobs">6.4 ScheduledSparkApplication (Cron jobs)</a></li>
-  <li><a href="#exercice-5-déployer-avec-sparkoperator" id="toc-exercice-5-déployer-avec-sparkoperator" class="nav-link" data-scroll-target="#exercice-5-déployer-avec-sparkoperator">🏋️ Exercice 5 : Déployer avec SparkOperator</a></li>
+  <li><a href="#exercice-5-déployer-avec-sparkoperator" id="toc-exercice-5-déployer-avec-sparkoperator" class="nav-link" data-scroll-target="#exercice-5-déployer-avec-sparkoperator">Exercice 5 : Déployer avec SparkOperator</a></li>
   </ul></li>
-  <li><a href="#autoscaling-resource-management" id="toc-autoscaling-resource-management" class="nav-link" data-scroll-target="#autoscaling-resource-management">📈 7. Autoscaling &amp; Resource Management</a>
+  <li><a href="#autoscaling-resource-management" id="toc-autoscaling-resource-management" class="nav-link" data-scroll-target="#autoscaling-resource-management">7. Autoscaling &amp; Resource Management</a>
   <ul class="collapse">
   <li><a href="#dynamic-allocation-spark-natif" id="toc-dynamic-allocation-spark-natif" class="nav-link" data-scroll-target="#dynamic-allocation-spark-natif">7.1 Dynamic Allocation (Spark natif)</a></li>
   <li><a href="#options-dautoscaling-k8s" id="toc-options-dautoscaling-k8s" class="nav-link" data-scroll-target="#options-dautoscaling-k8s">7.2 Options d’autoscaling K8s</a></li>
   <li><a href="#node-affinity-tolerations" id="toc-node-affinity-tolerations" class="nav-link" data-scroll-target="#node-affinity-tolerations">7.3 Node Affinity &amp; Tolerations</a></li>
-  <li><a href="#exercice-6-configurer-dynamic-allocation" id="toc-exercice-6-configurer-dynamic-allocation" class="nav-link" data-scroll-target="#exercice-6-configurer-dynamic-allocation">🏋️ Exercice 6 : Configurer Dynamic Allocation</a></li>
+  <li><a href="#exercice-6-configurer-dynamic-allocation" id="toc-exercice-6-configurer-dynamic-allocation" class="nav-link" data-scroll-target="#exercice-6-configurer-dynamic-allocation">Exercice 6 : Configurer Dynamic Allocation</a></li>
   </ul></li>
-  <li><a href="#monitoring-observability" id="toc-monitoring-observability" class="nav-link" data-scroll-target="#monitoring-observability">📊 8. Monitoring &amp; Observability</a>
+  <li><a href="#monitoring-observability" id="toc-monitoring-observability" class="nav-link" data-scroll-target="#monitoring-observability">8. Monitoring &amp; Observability</a>
   <ul class="collapse">
   <li><a href="#spark-ui" id="toc-spark-ui" class="nav-link" data-scroll-target="#spark-ui">8.1 Spark UI</a></li>
   <li><a href="#spark-history-server" id="toc-spark-history-server" class="nav-link" data-scroll-target="#spark-history-server">8.2 Spark History Server</a></li>
-  <li><a href="#prometheus-grafana" id="toc-prometheus-grafana" class="nav-link" data-scroll-target="#prometheus-grafana">8.3 Prometheus + Grafana</a></li>
-  <li><a href="#dashboards-grafana" id="toc-dashboards-grafana" class="nav-link" data-scroll-target="#dashboards-grafana">8.4 Dashboards Grafana</a></li>
-  <li><a href="#exercice-7-exposer-spark-ui" id="toc-exercice-7-exposer-spark-ui" class="nav-link" data-scroll-target="#exercice-7-exposer-spark-ui">🏋️ Exercice 7 : Exposer Spark UI</a></li>
+  <li><a href="#exercice-7-exposer-spark-ui" id="toc-exercice-7-exposer-spark-ui" class="nav-link" data-scroll-target="#exercice-7-exposer-spark-ui">Exercice 7 : Exposer Spark UI</a></li>
   </ul></li>
-  <li><a href="#debugging-troubleshooting" id="toc-debugging-troubleshooting" class="nav-link" data-scroll-target="#debugging-troubleshooting">🔧 9. Debugging &amp; Troubleshooting</a>
+  <li><a href="#debugging-troubleshooting" id="toc-debugging-troubleshooting" class="nav-link" data-scroll-target="#debugging-troubleshooting">9. Debugging &amp; Troubleshooting</a>
   <ul class="collapse">
   <li><a href="#erreurs-courantes-et-solutions" id="toc-erreurs-courantes-et-solutions" class="nav-link" data-scroll-target="#erreurs-courantes-et-solutions">9.1 Erreurs courantes et solutions</a></li>
   <li><a href="#debugging-oomkilled" id="toc-debugging-oomkilled" class="nav-link" data-scroll-target="#debugging-oomkilled">9.2 Debugging OOMKilled</a></li>
   <li><a href="#debugging-shuffle-failures" id="toc-debugging-shuffle-failures" class="nav-link" data-scroll-target="#debugging-shuffle-failures">9.3 Debugging Shuffle failures</a></li>
-  <li><a href="#exercice-8-diagnostiquer-un-job-qui-échoue" id="toc-exercice-8-diagnostiquer-un-job-qui-échoue" class="nav-link" data-scroll-target="#exercice-8-diagnostiquer-un-job-qui-échoue">🏋️ Exercice 8 : Diagnostiquer un job qui échoue</a></li>
+  <li><a href="#exercice-8-diagnostiquer-un-job-qui-échoue" id="toc-exercice-8-diagnostiquer-un-job-qui-échoue" class="nav-link" data-scroll-target="#exercice-8-diagnostiquer-un-job-qui-échoue">Exercice 8 : Diagnostiquer un job qui échoue</a></li>
   </ul></li>
-  <li><a href="#optimisations-spark-on-k8s" id="toc-optimisations-spark-on-k8s" class="nav-link" data-scroll-target="#optimisations-spark-on-k8s">⚡ 10. Optimisations Spark on K8s</a>
+  <li><a href="#optimisations-spark-on-k8s" id="toc-optimisations-spark-on-k8s" class="nav-link" data-scroll-target="#optimisations-spark-on-k8s">10. Optimisations Spark on K8s</a>
   <ul class="collapse">
   <li><a href="#data-locality" id="toc-data-locality" class="nav-link" data-scroll-target="#data-locality">10.1 Data Locality</a></li>
   <li><a href="#pod-templates" id="toc-pod-templates" class="nav-link" data-scroll-target="#pod-templates">10.2 Pod Templates</a></li>
   <li><a href="#spotpreemptible-instances" id="toc-spotpreemptible-instances" class="nav-link" data-scroll-target="#spotpreemptible-instances">10.3 Spot/Preemptible Instances</a></li>
   </ul></li>
-  <li><a href="#mini-projet-etl-pipeline-sur-kubernetes" id="toc-mini-projet-etl-pipeline-sur-kubernetes" class="nav-link" data-scroll-target="#mini-projet-etl-pipeline-sur-kubernetes">🚀 11. Mini-Projet : ETL Pipeline sur Kubernetes</a>
+  <li><a href="#mini-projet-etl-pipeline-sur-kubernetes" id="toc-mini-projet-etl-pipeline-sur-kubernetes" class="nav-link" data-scroll-target="#mini-projet-etl-pipeline-sur-kubernetes">11. Mini-Projet : ETL Pipeline sur Kubernetes</a>
   <ul class="collapse">
-  <li><a href="#objectif" id="toc-objectif" class="nav-link" data-scroll-target="#objectif">🎯 Objectif</a></li>
+  <li><a href="#objectif" id="toc-objectif" class="nav-link" data-scroll-target="#objectif">Objectif</a></li>
   <li><a href="#architecture" id="toc-architecture" class="nav-link" data-scroll-target="#architecture">Architecture</a></li>
   <li><a href="#structure-du-projet" id="toc-structure-du-projet" class="nav-link" data-scroll-target="#structure-du-projet">Structure du projet</a></li>
   <li><a href="#étape-1-déployer-minio-sur-k8s" id="toc-étape-1-déployer-minio-sur-k8s" class="nav-link" data-scroll-target="#étape-1-déployer-minio-sur-k8s">Étape 1 : Déployer MinIO sur K8s</a></li>
@@ -868,7 +830,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">🟩 Niveau 2 : Intermédiaire</li><li class="breadcrumb-item"><a href="../../notebooks/intermediate/19_pyspark_advanced.html">⚡ Spark Avancé</a></li><li class="breadcrumb-item"><a href="../../notebooks/intermediate/21_spark_on_kubernetes.html">21 · Spark on Kubernetes</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">☸️ Spark on Kubernetes — Production-Grade Deployment</h1>
+<h1 class="title">Spark on Kubernetes — Production-Grade Deployment</h1>
 </div>
 
 
@@ -888,7 +850,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Bienvenue dans ce module où tu vas apprendre à déployer <strong>Apache Spark sur Kubernetes</strong>. C’est l’architecture moderne de référence pour exécuter des workloads Spark en production.</p>
 <hr>
 <section id="prérequis" class="level2">
-<h2 class="anchored" data-anchor-id="prérequis">📋 Prérequis</h2>
+<h2 class="anchored" data-anchor-id="prérequis">Prérequis</h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -932,7 +894,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 </section>
 <section id="objectifs-du-module" class="level2">
-<h2 class="anchored" data-anchor-id="objectifs-du-module">🎯 Objectifs du module</h2>
+<h2 class="anchored" data-anchor-id="objectifs-du-module">Objectifs du module</h2>
 <p>À la fin de ce module, tu seras capable de :</p>
 <ul>
 <li>Comprendre l’architecture <strong>Spark on Kubernetes</strong></li>
@@ -947,7 +909,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 <section id="introduction-pourquoi-spark-sur-kubernetes" class="level2">
-<h2 class="anchored" data-anchor-id="introduction-pourquoi-spark-sur-kubernetes">📚 1. Introduction — Pourquoi Spark sur Kubernetes ?</h2>
+<h2 class="anchored" data-anchor-id="introduction-pourquoi-spark-sur-kubernetes">1. Introduction — Pourquoi Spark sur Kubernetes ?</h2>
 <section id="lévolution-de-linfrastructure-spark" class="level3">
 <h3 class="anchored" data-anchor-id="lévolution-de-linfrastructure-spark">1.1 L’évolution de l’infrastructure Spark</h3>
 <pre class="text"><code>2010s                              2020s+
@@ -1010,7 +972,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 </section>
 <section id="comparaison-yarn-vs-kubernetes" class="level3">
-<h3 class="anchored" data-anchor-id="comparaison-yarn-vs-kubernetes">1.4 🆚 Comparaison YARN vs Kubernetes</h3>
+<h3 class="anchored" data-anchor-id="comparaison-yarn-vs-kubernetes">1.4 Comparaison YARN vs Kubernetes</h3>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 30%">
@@ -1093,7 +1055,7 @@ YARN si :                           Kubernetes si :
 </section>
 </section>
 <section id="architecture-spark-on-kubernetes" class="level2">
-<h2 class="anchored" data-anchor-id="architecture-spark-on-kubernetes">🏗️ 2. Architecture Spark on Kubernetes</h2>
+<h2 class="anchored" data-anchor-id="architecture-spark-on-kubernetes">2. Architecture Spark on Kubernetes</h2>
 <section id="vue-densemble" class="level3">
 <h3 class="anchored" data-anchor-id="vue-densemble">2.1 Vue d’ensemble</h3>
 <pre class="text"><code>┌─────────────────────────────────────────────────────────────────┐
@@ -1242,7 +1204,7 @@ YARN si :                           Kubernetes si :
 </blockquote>
 </section>
 <section id="exercice-1-identifier-les-composants" class="level3">
-<h3 class="anchored" data-anchor-id="exercice-1-identifier-les-composants">🏋️ Exercice 1 : Identifier les composants</h3>
+<h3 class="anchored" data-anchor-id="exercice-1-identifier-les-composants">Exercice 1 : Identifier les composants</h3>
 <p>Réponds aux questions suivantes :</p>
 <ol type="1">
 <li>Dans quel mode le Driver tourne-t-il en tant que Pod K8s ?</li>
@@ -1263,7 +1225,7 @@ YARN si :                           Kubernetes si :
 </section>
 </section>
 <section id="construire-une-image-docker-spark" class="level2">
-<h2 class="anchored" data-anchor-id="construire-une-image-docker-spark">🐳 3. Construire une Image Docker Spark</h2>
+<h2 class="anchored" data-anchor-id="construire-une-image-docker-spark">3. Construire une Image Docker Spark</h2>
 <section id="image-de-base" class="level3">
 <h3 class="anchored" data-anchor-id="image-de-base">3.1 Image de base</h3>
 <p>Plusieurs options :</p>
@@ -1446,7 +1408,7 @@ YARN si :                           Kubernetes si :
 </div>
 </section>
 <section id="exercice-2-construire-une-image-spark" class="level3">
-<h3 class="anchored" data-anchor-id="exercice-2-construire-une-image-spark">🏋️ Exercice 2 : Construire une image Spark</h3>
+<h3 class="anchored" data-anchor-id="exercice-2-construire-une-image-spark">Exercice 2 : Construire une image Spark</h3>
 <p><strong>Objectif</strong> : Créer un Dockerfile Spark avec :</p>
 <ul>
 <li>Base <code>bitnami/spark:3.5</code></li>
@@ -1477,7 +1439,7 @@ YARN si :                           Kubernetes si :
 </section>
 </section>
 <section id="configuration-kubernetes-pour-spark" class="level2">
-<h2 class="anchored" data-anchor-id="configuration-kubernetes-pour-spark">⚙️ 4. Configuration Kubernetes pour Spark</h2>
+<h2 class="anchored" data-anchor-id="configuration-kubernetes-pour-spark">4. Configuration Kubernetes pour Spark</h2>
 <section id="namespace-dédié" class="level3">
 <h3 class="anchored" data-anchor-id="namespace-dédié">4.1 Namespace dédié</h3>
 <div id="namespace_yaml" class="cell">
@@ -1673,7 +1635,7 @@ YARN si :                           Kubernetes si :
 </div>
 </section>
 <section id="exercice-3-créer-les-manifests-rbac" class="level3">
-<h3 class="anchored" data-anchor-id="exercice-3-créer-les-manifests-rbac">🏋️ Exercice 3 : Créer les manifests RBAC</h3>
+<h3 class="anchored" data-anchor-id="exercice-3-créer-les-manifests-rbac">Exercice 3 : Créer les manifests RBAC</h3>
 <p><strong>Question</strong> : Pourquoi le ServiceAccount Spark a-t-il besoin de la permission <code>pods/log</code> ?</p>
 <details>
 <summary>
@@ -1690,7 +1652,7 @@ YARN si :                           Kubernetes si :
 </section>
 </section>
 <section id="spark-submit-sur-kubernetes" class="level2">
-<h2 class="anchored" data-anchor-id="spark-submit-sur-kubernetes">🚀 5. spark-submit sur Kubernetes</h2>
+<h2 class="anchored" data-anchor-id="spark-submit-sur-kubernetes">5. spark-submit sur Kubernetes</h2>
 <section id="syntaxe-de-base" class="level3">
 <h3 class="anchored" data-anchor-id="syntaxe-de-base">5.1 Syntaxe de base</h3>
 <div id="spark_submit_basic" class="cell">
@@ -1847,7 +1809,7 @@ YARN si :                           Kubernetes si :
 </div>
 </section>
 <section id="exercice-4-lancer-un-job-spark-sur-minikube" class="level3">
-<h3 class="anchored" data-anchor-id="exercice-4-lancer-un-job-spark-sur-minikube">🏋️ Exercice 4 : Lancer un job Spark sur Minikube</h3>
+<h3 class="anchored" data-anchor-id="exercice-4-lancer-un-job-spark-sur-minikube">Exercice 4 : Lancer un job Spark sur Minikube</h3>
 <p><strong>Étapes</strong> : 1. Démarrer Minikube : <code>minikube start --cpus=4 --memory=8g</code> 2. Créer le namespace et RBAC 3. Lancer le job <code>SparkPi</code> intégré</p>
 <details>
 <summary>
@@ -1880,7 +1842,7 @@ YARN si :                           Kubernetes si :
 </section>
 </section>
 <section id="spark-operator-production-grade" class="level2">
-<h2 class="anchored" data-anchor-id="spark-operator-production-grade">🎛️ 6. Spark Operator — Production-Grade</h2>
+<h2 class="anchored" data-anchor-id="spark-operator-production-grade">6. Spark Operator — Production-Grade</h2>
 <section id="pourquoi-utiliser-spark-operator" class="level3">
 <h3 class="anchored" data-anchor-id="pourquoi-utiliser-spark-operator">6.1 Pourquoi utiliser Spark Operator ?</h3>
 <table class="caption-top table">
@@ -2074,7 +2036,7 @@ YARN si :                           Kubernetes si :
 </div>
 </section>
 <section id="exercice-5-déployer-avec-sparkoperator" class="level3">
-<h3 class="anchored" data-anchor-id="exercice-5-déployer-avec-sparkoperator">🏋️ Exercice 5 : Déployer avec SparkOperator</h3>
+<h3 class="anchored" data-anchor-id="exercice-5-déployer-avec-sparkoperator">Exercice 5 : Déployer avec SparkOperator</h3>
 <p><strong>Objectif</strong> : Créer une SparkApplication qui calcule Pi avec 1000 itérations.</p>
 <details>
 <summary>
@@ -2111,7 +2073,7 @@ YARN si :                           Kubernetes si :
 </section>
 </section>
 <section id="autoscaling-resource-management" class="level2">
-<h2 class="anchored" data-anchor-id="autoscaling-resource-management">📈 7. Autoscaling &amp; Resource Management</h2>
+<h2 class="anchored" data-anchor-id="autoscaling-resource-management">7. Autoscaling &amp; Resource Management</h2>
 <section id="dynamic-allocation-spark-natif" class="level3">
 <h3 class="anchored" data-anchor-id="dynamic-allocation-spark-natif">7.1 Dynamic Allocation (Spark natif)</h3>
 <p>Spark peut ajuster dynamiquement le nombre d’executors.</p>
@@ -2249,7 +2211,7 @@ YARN si :                           Kubernetes si :
 </div>
 </section>
 <section id="exercice-6-configurer-dynamic-allocation" class="level3">
-<h3 class="anchored" data-anchor-id="exercice-6-configurer-dynamic-allocation">🏋️ Exercice 6 : Configurer Dynamic Allocation</h3>
+<h3 class="anchored" data-anchor-id="exercice-6-configurer-dynamic-allocation">Exercice 6 : Configurer Dynamic Allocation</h3>
 <p><strong>Objectif</strong> : Modifier la SparkApplication pour avoir :</p>
 <ul>
 <li>Min 2 executors</li>
@@ -2271,7 +2233,7 @@ YARN si :                           Kubernetes si :
 </section>
 </section>
 <section id="monitoring-observability" class="level2">
-<h2 class="anchored" data-anchor-id="monitoring-observability">📊 8. Monitoring &amp; Observability</h2>
+<h2 class="anchored" data-anchor-id="monitoring-observability">8. Monitoring &amp; Observability</h2>
 <section id="spark-ui" class="level3">
 <h3 class="anchored" data-anchor-id="spark-ui">8.1 Spark UI</h3>
 <div id="spark_ui_service" class="cell">
@@ -2363,103 +2325,21 @@ YARN si :                           Kubernetes si :
 </details>
 </div>
 </section>
-<section id="prometheus-grafana" class="level3">
-<h3 class="anchored" data-anchor-id="prometheus-grafana">8.3 Prometheus + Grafana</h3>
-<p>Configuration Spark pour exposer les métriques :</p>
-<div id="prometheus_config" class="cell">
-<details class="code-fold">
-<summary>Voir le code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>prometheus_spark_config <span class="op">=</span> <span class="st">"""</span></span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="st"># Dans sparkConf</span></span>
-<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="st">spark.metrics.conf.*.sink.prometheusServlet.class=org.apache.spark.metrics.sink.PrometheusServlet</span></span>
-<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a><span class="st">spark.metrics.conf.*.sink.prometheusServlet.path=/metrics/prometheus</span></span>
-<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a><span class="st">spark.metrics.conf.master.sink.prometheusServlet.path=/metrics/master/prometheus</span></span>
-<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a><span class="st">spark.metrics.conf.applications.sink.prometheusServlet.path=/metrics/applications/prometheus</span></span>
-<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a><span class="st"># Activer les métriques JVM</span></span>
-<span id="cb32-9"><a href="#cb32-9" aria-hidden="true" tabindex="-1"></a><span class="st">spark.metrics.conf.*.source.jvm.class=org.apache.spark.metrics.source.JvmSource</span></span>
-<span id="cb32-10"><a href="#cb32-10" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
-<span id="cb32-11"><a href="#cb32-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(prometheus_spark_config)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-</div>
-<div id="servicemonitor_yaml" class="cell">
-<details class="code-fold">
-<summary>Voir le code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>writefile <span class="op">/</span>tmp<span class="op">/</span>spark<span class="op">-</span>k8s<span class="op">/</span>servicemonitor.yaml</span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="co"># ServiceMonitor pour Prometheus Operator</span></span>
-<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>apiVersion: monitoring.coreos.com<span class="op">/</span>v1</span>
-<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>kind: ServiceMonitor</span>
-<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>metadata:</span>
-<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>  name: spark<span class="op">-</span>monitor</span>
-<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>  namespace: spark</span>
-<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a>  labels:</span>
-<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a>    release: prometheus  <span class="co"># Match avec ton installation Prometheus</span></span>
-<span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a>spec:</span>
-<span id="cb33-11"><a href="#cb33-11" aria-hidden="true" tabindex="-1"></a>  selector:</span>
-<span id="cb33-12"><a href="#cb33-12" aria-hidden="true" tabindex="-1"></a>    matchLabels:</span>
-<span id="cb33-13"><a href="#cb33-13" aria-hidden="true" tabindex="-1"></a>      spark<span class="op">-</span>role: driver</span>
-<span id="cb33-14"><a href="#cb33-14" aria-hidden="true" tabindex="-1"></a>  endpoints:</span>
-<span id="cb33-15"><a href="#cb33-15" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span> port: spark<span class="op">-</span>ui</span>
-<span id="cb33-16"><a href="#cb33-16" aria-hidden="true" tabindex="-1"></a>      path: <span class="op">/</span>metrics<span class="op">/</span>prometheus</span>
-<span id="cb33-17"><a href="#cb33-17" aria-hidden="true" tabindex="-1"></a>      interval: <span class="dv">15</span><span class="er">s</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-</div>
-</section>
-<section id="dashboards-grafana" class="level3">
-<h3 class="anchored" data-anchor-id="dashboards-grafana">8.4 Dashboards Grafana</h3>
-<p>Métriques clés à surveiller :</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Métrique</th>
-<th>Description</th>
-<th>Alerte si</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>spark_executor_count</code></td>
-<td>Nombre d’executors actifs</td>
-<td>&lt; min expected</td>
-</tr>
-<tr class="even">
-<td><code>spark_executor_memory_used</code></td>
-<td>Mémoire utilisée</td>
-<td>&gt; 80%</td>
-</tr>
-<tr class="odd">
-<td><code>spark_job_duration_seconds</code></td>
-<td>Durée des jobs</td>
-<td>&gt; baseline × 2</td>
-</tr>
-<tr class="even">
-<td><code>spark_task_failures_total</code></td>
-<td>Tasks échouées</td>
-<td>&gt; 0</td>
-</tr>
-<tr class="odd">
-<td><code>spark_shuffle_write_bytes</code></td>
-<td>Shuffle écrit</td>
-<td>Anomalies</td>
-</tr>
-</tbody>
-</table>
-</section>
 <section id="exercice-7-exposer-spark-ui" class="level3">
-<h3 class="anchored" data-anchor-id="exercice-7-exposer-spark-ui">🏋️ Exercice 7 : Exposer Spark UI</h3>
+<h3 class="anchored" data-anchor-id="exercice-7-exposer-spark-ui">Exercice 7 : Exposer Spark UI</h3>
 <p><strong>Objectif</strong> : Accéder au Spark UI d’un job en cours.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb34"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Lister les pods driver</span></span>
-<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="ex">kubectl</span> get pods <span class="at">-n</span> spark <span class="at">-l</span> spark-role=driver</span>
-<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Port-forward</span></span>
-<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a><span class="ex">kubectl</span> port-forward <span class="at">-n</span> spark <span class="op">&lt;</span>driver-pod<span class="op">&gt;</span> 4040:4040</span>
-<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Ouvrir http://localhost:4040</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Lister les pods driver</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="ex">kubectl</span> get pods <span class="at">-n</span> spark <span class="at">-l</span> spark-role=driver</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Port-forward</span></span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a><span class="ex">kubectl</span> port-forward <span class="at">-n</span> spark <span class="op">&lt;</span>driver-pod<span class="op">&gt;</span> 4040:4040</span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Ouvrir http://localhost:4040</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 </section>
 <section id="debugging-troubleshooting" class="level2">
-<h2 class="anchored" data-anchor-id="debugging-troubleshooting">🔧 9. Debugging &amp; Troubleshooting</h2>
+<h2 class="anchored" data-anchor-id="debugging-troubleshooting">9. Debugging &amp; Troubleshooting</h2>
 <section id="erreurs-courantes-et-solutions" class="level3">
 <h3 class="anchored" data-anchor-id="erreurs-courantes-et-solutions">9.1 Erreurs courantes et solutions</h3>
 <table class="caption-top table">
@@ -2511,38 +2391,38 @@ YARN si :                           Kubernetes si :
 <div id="debug_commands" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>debug_commands <span class="op">=</span> <span class="st">"""</span></span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="st"># === Debugging Spark on K8s ===</span></span>
-<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a><span class="st"># 1. Voir les pods et leur statut</span></span>
-<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a><span class="st">kubectl get pods -n spark -o wide</span></span>
-<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a><span class="st"># 2. Détails d'un pod (événements)</span></span>
-<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a><span class="st">kubectl describe pod &lt;pod-name&gt; -n spark</span></span>
-<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-10"><a href="#cb35-10" aria-hidden="true" tabindex="-1"></a><span class="st"># 3. Logs du driver</span></span>
-<span id="cb35-11"><a href="#cb35-11" aria-hidden="true" tabindex="-1"></a><span class="st">kubectl logs -n spark -l spark-role=driver</span></span>
-<span id="cb35-12"><a href="#cb35-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-13"><a href="#cb35-13" aria-hidden="true" tabindex="-1"></a><span class="st"># 4. Logs d'un executor spécifique</span></span>
-<span id="cb35-14"><a href="#cb35-14" aria-hidden="true" tabindex="-1"></a><span class="st">kubectl logs -n spark &lt;executor-pod-name&gt;</span></span>
-<span id="cb35-15"><a href="#cb35-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-16"><a href="#cb35-16" aria-hidden="true" tabindex="-1"></a><span class="st"># 5. Logs en temps réel (follow)</span></span>
-<span id="cb35-17"><a href="#cb35-17" aria-hidden="true" tabindex="-1"></a><span class="st">kubectl logs -n spark -l spark-role=driver -f</span></span>
-<span id="cb35-18"><a href="#cb35-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-19"><a href="#cb35-19" aria-hidden="true" tabindex="-1"></a><span class="st"># 6. Shell dans un pod (debug)</span></span>
-<span id="cb35-20"><a href="#cb35-20" aria-hidden="true" tabindex="-1"></a><span class="st">kubectl exec -it &lt;pod-name&gt; -n spark -- /bin/bash</span></span>
-<span id="cb35-21"><a href="#cb35-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-22"><a href="#cb35-22" aria-hidden="true" tabindex="-1"></a><span class="st"># 7. Vérifier les ressources du namespace</span></span>
-<span id="cb35-23"><a href="#cb35-23" aria-hidden="true" tabindex="-1"></a><span class="st">kubectl describe resourcequota -n spark</span></span>
-<span id="cb35-24"><a href="#cb35-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-25"><a href="#cb35-25" aria-hidden="true" tabindex="-1"></a><span class="st"># 8. Vérifier les events</span></span>
-<span id="cb35-26"><a href="#cb35-26" aria-hidden="true" tabindex="-1"></a><span class="st">kubectl get events -n spark --sort-by='.lastTimestamp'</span></span>
-<span id="cb35-27"><a href="#cb35-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-28"><a href="#cb35-28" aria-hidden="true" tabindex="-1"></a><span class="st"># 9. SparkApplication status</span></span>
-<span id="cb35-29"><a href="#cb35-29" aria-hidden="true" tabindex="-1"></a><span class="st">kubectl get sparkapplication -n spark</span></span>
-<span id="cb35-30"><a href="#cb35-30" aria-hidden="true" tabindex="-1"></a><span class="st">kubectl describe sparkapplication &lt;name&gt; -n spark</span></span>
-<span id="cb35-31"><a href="#cb35-31" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
-<span id="cb35-32"><a href="#cb35-32" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(debug_commands)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>debug_commands <span class="op">=</span> <span class="st">"""</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="st"># === Debugging Spark on K8s ===</span></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="st"># 1. Voir les pods et leur statut</span></span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a><span class="st">kubectl get pods -n spark -o wide</span></span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a><span class="st"># 2. Détails d'un pod (événements)</span></span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a><span class="st">kubectl describe pod &lt;pod-name&gt; -n spark</span></span>
+<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a><span class="st"># 3. Logs du driver</span></span>
+<span id="cb33-11"><a href="#cb33-11" aria-hidden="true" tabindex="-1"></a><span class="st">kubectl logs -n spark -l spark-role=driver</span></span>
+<span id="cb33-12"><a href="#cb33-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-13"><a href="#cb33-13" aria-hidden="true" tabindex="-1"></a><span class="st"># 4. Logs d'un executor spécifique</span></span>
+<span id="cb33-14"><a href="#cb33-14" aria-hidden="true" tabindex="-1"></a><span class="st">kubectl logs -n spark &lt;executor-pod-name&gt;</span></span>
+<span id="cb33-15"><a href="#cb33-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-16"><a href="#cb33-16" aria-hidden="true" tabindex="-1"></a><span class="st"># 5. Logs en temps réel (follow)</span></span>
+<span id="cb33-17"><a href="#cb33-17" aria-hidden="true" tabindex="-1"></a><span class="st">kubectl logs -n spark -l spark-role=driver -f</span></span>
+<span id="cb33-18"><a href="#cb33-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-19"><a href="#cb33-19" aria-hidden="true" tabindex="-1"></a><span class="st"># 6. Shell dans un pod (debug)</span></span>
+<span id="cb33-20"><a href="#cb33-20" aria-hidden="true" tabindex="-1"></a><span class="st">kubectl exec -it &lt;pod-name&gt; -n spark -- /bin/bash</span></span>
+<span id="cb33-21"><a href="#cb33-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-22"><a href="#cb33-22" aria-hidden="true" tabindex="-1"></a><span class="st"># 7. Vérifier les ressources du namespace</span></span>
+<span id="cb33-23"><a href="#cb33-23" aria-hidden="true" tabindex="-1"></a><span class="st">kubectl describe resourcequota -n spark</span></span>
+<span id="cb33-24"><a href="#cb33-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-25"><a href="#cb33-25" aria-hidden="true" tabindex="-1"></a><span class="st"># 8. Vérifier les events</span></span>
+<span id="cb33-26"><a href="#cb33-26" aria-hidden="true" tabindex="-1"></a><span class="st">kubectl get events -n spark --sort-by='.lastTimestamp'</span></span>
+<span id="cb33-27"><a href="#cb33-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-28"><a href="#cb33-28" aria-hidden="true" tabindex="-1"></a><span class="st"># 9. SparkApplication status</span></span>
+<span id="cb33-29"><a href="#cb33-29" aria-hidden="true" tabindex="-1"></a><span class="st">kubectl get sparkapplication -n spark</span></span>
+<span id="cb33-30"><a href="#cb33-30" aria-hidden="true" tabindex="-1"></a><span class="st">kubectl describe sparkapplication &lt;name&gt; -n spark</span></span>
+<span id="cb33-31"><a href="#cb33-31" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
+<span id="cb33-32"><a href="#cb33-32" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(debug_commands)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 </section>
@@ -2570,31 +2450,31 @@ Solutions :
 <div id="shuffle_config" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>shuffle_optimizations <span class="op">=</span> <span class="st">"""</span></span>
-<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="st"># Optimisations shuffle pour K8s</span></span>
-<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a><span class="st"># Augmenter les timeouts</span></span>
-<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a><span class="st">spark.network.timeout=600s</span></span>
-<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a><span class="st">spark.shuffle.io.maxRetries=10</span></span>
-<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a><span class="st">spark.shuffle.io.retryWait=30s</span></span>
-<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a><span class="st"># Compression</span></span>
-<span id="cb37-10"><a href="#cb37-10" aria-hidden="true" tabindex="-1"></a><span class="st">spark.shuffle.compress=true</span></span>
-<span id="cb37-11"><a href="#cb37-11" aria-hidden="true" tabindex="-1"></a><span class="st">spark.shuffle.spill.compress=true</span></span>
-<span id="cb37-12"><a href="#cb37-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-13"><a href="#cb37-13" aria-hidden="true" tabindex="-1"></a><span class="st"># Buffer sizes</span></span>
-<span id="cb37-14"><a href="#cb37-14" aria-hidden="true" tabindex="-1"></a><span class="st">spark.shuffle.file.buffer=64k</span></span>
-<span id="cb37-15"><a href="#cb37-15" aria-hidden="true" tabindex="-1"></a><span class="st">spark.reducer.maxSizeInFlight=96m</span></span>
-<span id="cb37-16"><a href="#cb37-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-17"><a href="#cb37-17" aria-hidden="true" tabindex="-1"></a><span class="st"># Shuffle tracking (pour Dynamic Allocation)</span></span>
-<span id="cb37-18"><a href="#cb37-18" aria-hidden="true" tabindex="-1"></a><span class="st">spark.dynamicAllocation.shuffleTracking.enabled=true</span></span>
-<span id="cb37-19"><a href="#cb37-19" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
-<span id="cb37-20"><a href="#cb37-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(shuffle_optimizations)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>shuffle_optimizations <span class="op">=</span> <span class="st">"""</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="st"># Optimisations shuffle pour K8s</span></span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a><span class="st"># Augmenter les timeouts</span></span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a><span class="st">spark.network.timeout=600s</span></span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a><span class="st">spark.shuffle.io.maxRetries=10</span></span>
+<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a><span class="st">spark.shuffle.io.retryWait=30s</span></span>
+<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a><span class="st"># Compression</span></span>
+<span id="cb35-10"><a href="#cb35-10" aria-hidden="true" tabindex="-1"></a><span class="st">spark.shuffle.compress=true</span></span>
+<span id="cb35-11"><a href="#cb35-11" aria-hidden="true" tabindex="-1"></a><span class="st">spark.shuffle.spill.compress=true</span></span>
+<span id="cb35-12"><a href="#cb35-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-13"><a href="#cb35-13" aria-hidden="true" tabindex="-1"></a><span class="st"># Buffer sizes</span></span>
+<span id="cb35-14"><a href="#cb35-14" aria-hidden="true" tabindex="-1"></a><span class="st">spark.shuffle.file.buffer=64k</span></span>
+<span id="cb35-15"><a href="#cb35-15" aria-hidden="true" tabindex="-1"></a><span class="st">spark.reducer.maxSizeInFlight=96m</span></span>
+<span id="cb35-16"><a href="#cb35-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-17"><a href="#cb35-17" aria-hidden="true" tabindex="-1"></a><span class="st"># Shuffle tracking (pour Dynamic Allocation)</span></span>
+<span id="cb35-18"><a href="#cb35-18" aria-hidden="true" tabindex="-1"></a><span class="st">spark.dynamicAllocation.shuffleTracking.enabled=true</span></span>
+<span id="cb35-19"><a href="#cb35-19" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
+<span id="cb35-20"><a href="#cb35-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(shuffle_optimizations)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 </section>
 <section id="exercice-8-diagnostiquer-un-job-qui-échoue" class="level3">
-<h3 class="anchored" data-anchor-id="exercice-8-diagnostiquer-un-job-qui-échoue">🏋️ Exercice 8 : Diagnostiquer un job qui échoue</h3>
+<h3 class="anchored" data-anchor-id="exercice-8-diagnostiquer-un-job-qui-échoue">Exercice 8 : Diagnostiquer un job qui échoue</h3>
 <p><strong>Scénario</strong> : Un job Spark échoue avec le message “Pod OOMKilled”.</p>
 <p><strong>Questions</strong> :</p>
 <ol type="1">
@@ -2608,8 +2488,8 @@ Solutions :
 <ol type="1">
 <li>Commandes :</li>
 </ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb38"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="ex">kubectl</span> describe pod <span class="op">&lt;</span>pod-name<span class="op">&gt;</span> -n spark</span>
-<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="ex">kubectl</span> get events <span class="at">-n</span> spark <span class="at">--field-selector</span> involvedObject.name=<span class="op">&lt;</span>pod-name<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb36"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="ex">kubectl</span> describe pod <span class="op">&lt;</span>pod-name<span class="op">&gt;</span> -n spark</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="ex">kubectl</span> get events <span class="at">-n</span> spark <span class="at">--field-selector</span> involvedObject.name=<span class="op">&lt;</span>pod-name<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ol start="2" type="1">
 <li>Configs à vérifier :</li>
 </ol>
@@ -2621,7 +2501,7 @@ spark.kubernetes.executor.limit.memory</code></pre>
 </section>
 </section>
 <section id="optimisations-spark-on-k8s" class="level2">
-<h2 class="anchored" data-anchor-id="optimisations-spark-on-k8s">⚡ 10. Optimisations Spark on K8s</h2>
+<h2 class="anchored" data-anchor-id="optimisations-spark-on-k8s">10. Optimisations Spark on K8s</h2>
 <section id="data-locality" class="level3">
 <h3 class="anchored" data-anchor-id="data-locality">10.1 Data Locality</h3>
 <pre class="text"><code>⚠️ Problème : Pas de data locality sur K8s
@@ -2650,24 +2530,24 @@ Sur K8s avec Object Storage :
 <div id="s3a_optimizations" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>s3a_config <span class="op">=</span> <span class="st">"""</span></span>
-<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="st"># Optimisations S3A pour Spark on K8s</span></span>
-<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a><span class="st"># Parallélisme</span></span>
-<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a><span class="st">spark.hadoop.fs.s3a.connection.maximum=200</span></span>
-<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a><span class="st">spark.hadoop.fs.s3a.threads.max=64</span></span>
-<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a><span class="st">spark.hadoop.fs.s3a.threads.core=16</span></span>
-<span id="cb41-8"><a href="#cb41-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-9"><a href="#cb41-9" aria-hidden="true" tabindex="-1"></a><span class="st"># Fast upload</span></span>
-<span id="cb41-10"><a href="#cb41-10" aria-hidden="true" tabindex="-1"></a><span class="st">spark.hadoop.fs.s3a.fast.upload=true</span></span>
-<span id="cb41-11"><a href="#cb41-11" aria-hidden="true" tabindex="-1"></a><span class="st">spark.hadoop.fs.s3a.fast.upload.buffer=bytebuffer</span></span>
-<span id="cb41-12"><a href="#cb41-12" aria-hidden="true" tabindex="-1"></a><span class="st">spark.hadoop.fs.s3a.multipart.size=104857600  # 100MB</span></span>
-<span id="cb41-13"><a href="#cb41-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-14"><a href="#cb41-14" aria-hidden="true" tabindex="-1"></a><span class="st"># Committer (éviter les renames S3)</span></span>
-<span id="cb41-15"><a href="#cb41-15" aria-hidden="true" tabindex="-1"></a><span class="st">spark.sql.sources.commitProtocolClass=org.apache.spark.internal.io.cloud.PathOutputCommitProtocol</span></span>
-<span id="cb41-16"><a href="#cb41-16" aria-hidden="true" tabindex="-1"></a><span class="st">spark.sql.parquet.output.committer.class=org.apache.spark.internal.io.cloud.BindingParquetOutputCommitter</span></span>
-<span id="cb41-17"><a href="#cb41-17" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
-<span id="cb41-18"><a href="#cb41-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(s3a_config)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>s3a_config <span class="op">=</span> <span class="st">"""</span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="st"># Optimisations S3A pour Spark on K8s</span></span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a><span class="st"># Parallélisme</span></span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a><span class="st">spark.hadoop.fs.s3a.connection.maximum=200</span></span>
+<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a><span class="st">spark.hadoop.fs.s3a.threads.max=64</span></span>
+<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a><span class="st">spark.hadoop.fs.s3a.threads.core=16</span></span>
+<span id="cb39-8"><a href="#cb39-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-9"><a href="#cb39-9" aria-hidden="true" tabindex="-1"></a><span class="st"># Fast upload</span></span>
+<span id="cb39-10"><a href="#cb39-10" aria-hidden="true" tabindex="-1"></a><span class="st">spark.hadoop.fs.s3a.fast.upload=true</span></span>
+<span id="cb39-11"><a href="#cb39-11" aria-hidden="true" tabindex="-1"></a><span class="st">spark.hadoop.fs.s3a.fast.upload.buffer=bytebuffer</span></span>
+<span id="cb39-12"><a href="#cb39-12" aria-hidden="true" tabindex="-1"></a><span class="st">spark.hadoop.fs.s3a.multipart.size=104857600  # 100MB</span></span>
+<span id="cb39-13"><a href="#cb39-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-14"><a href="#cb39-14" aria-hidden="true" tabindex="-1"></a><span class="st"># Committer (éviter les renames S3)</span></span>
+<span id="cb39-15"><a href="#cb39-15" aria-hidden="true" tabindex="-1"></a><span class="st">spark.sql.sources.commitProtocolClass=org.apache.spark.internal.io.cloud.PathOutputCommitProtocol</span></span>
+<span id="cb39-16"><a href="#cb39-16" aria-hidden="true" tabindex="-1"></a><span class="st">spark.sql.parquet.output.committer.class=org.apache.spark.internal.io.cloud.BindingParquetOutputCommitter</span></span>
+<span id="cb39-17"><a href="#cb39-17" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
+<span id="cb39-18"><a href="#cb39-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(s3a_config)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 </section>
@@ -2677,42 +2557,42 @@ Sur K8s avec Object Storage :
 <div id="pod_template" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>writefile <span class="op">/</span>tmp<span class="op">/</span>spark<span class="op">-</span>k8s<span class="op">/</span>executor<span class="op">-</span>pod<span class="op">-</span>template.yaml</span>
-<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>apiVersion: v1</span>
-<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>kind: Pod</span>
-<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>spec:</span>
-<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>  containers:</span>
-<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span> name: spark<span class="op">-</span>executor</span>
-<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a>      volumeMounts:</span>
-<span id="cb42-8"><a href="#cb42-8" aria-hidden="true" tabindex="-1"></a>        <span class="op">-</span> name: spark<span class="op">-</span>local<span class="op">-</span><span class="bu">dir</span></span>
-<span id="cb42-9"><a href="#cb42-9" aria-hidden="true" tabindex="-1"></a>          mountPath: <span class="op">/</span>tmp<span class="op">/</span>spark</span>
-<span id="cb42-10"><a href="#cb42-10" aria-hidden="true" tabindex="-1"></a>      resources:</span>
-<span id="cb42-11"><a href="#cb42-11" aria-hidden="true" tabindex="-1"></a>        requests:</span>
-<span id="cb42-12"><a href="#cb42-12" aria-hidden="true" tabindex="-1"></a>          ephemeral<span class="op">-</span>storage: <span class="st">"10Gi"</span></span>
-<span id="cb42-13"><a href="#cb42-13" aria-hidden="true" tabindex="-1"></a>        limits:</span>
-<span id="cb42-14"><a href="#cb42-14" aria-hidden="true" tabindex="-1"></a>          ephemeral<span class="op">-</span>storage: <span class="st">"20Gi"</span></span>
-<span id="cb42-15"><a href="#cb42-15" aria-hidden="true" tabindex="-1"></a>  volumes:</span>
-<span id="cb42-16"><a href="#cb42-16" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span> name: spark<span class="op">-</span>local<span class="op">-</span><span class="bu">dir</span></span>
-<span id="cb42-17"><a href="#cb42-17" aria-hidden="true" tabindex="-1"></a>      emptyDir:</span>
-<span id="cb42-18"><a href="#cb42-18" aria-hidden="true" tabindex="-1"></a>        medium: Memory  <span class="co"># Utiliser RAM pour shuffle local</span></span>
-<span id="cb42-19"><a href="#cb42-19" aria-hidden="true" tabindex="-1"></a>        sizeLimit: <span class="st">"4Gi"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>writefile <span class="op">/</span>tmp<span class="op">/</span>spark<span class="op">-</span>k8s<span class="op">/</span>executor<span class="op">-</span>pod<span class="op">-</span>template.yaml</span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>apiVersion: v1</span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>kind: Pod</span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>spec:</span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a>  containers:</span>
+<span id="cb40-6"><a href="#cb40-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span> name: spark<span class="op">-</span>executor</span>
+<span id="cb40-7"><a href="#cb40-7" aria-hidden="true" tabindex="-1"></a>      volumeMounts:</span>
+<span id="cb40-8"><a href="#cb40-8" aria-hidden="true" tabindex="-1"></a>        <span class="op">-</span> name: spark<span class="op">-</span>local<span class="op">-</span><span class="bu">dir</span></span>
+<span id="cb40-9"><a href="#cb40-9" aria-hidden="true" tabindex="-1"></a>          mountPath: <span class="op">/</span>tmp<span class="op">/</span>spark</span>
+<span id="cb40-10"><a href="#cb40-10" aria-hidden="true" tabindex="-1"></a>      resources:</span>
+<span id="cb40-11"><a href="#cb40-11" aria-hidden="true" tabindex="-1"></a>        requests:</span>
+<span id="cb40-12"><a href="#cb40-12" aria-hidden="true" tabindex="-1"></a>          ephemeral<span class="op">-</span>storage: <span class="st">"10Gi"</span></span>
+<span id="cb40-13"><a href="#cb40-13" aria-hidden="true" tabindex="-1"></a>        limits:</span>
+<span id="cb40-14"><a href="#cb40-14" aria-hidden="true" tabindex="-1"></a>          ephemeral<span class="op">-</span>storage: <span class="st">"20Gi"</span></span>
+<span id="cb40-15"><a href="#cb40-15" aria-hidden="true" tabindex="-1"></a>  volumes:</span>
+<span id="cb40-16"><a href="#cb40-16" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span> name: spark<span class="op">-</span>local<span class="op">-</span><span class="bu">dir</span></span>
+<span id="cb40-17"><a href="#cb40-17" aria-hidden="true" tabindex="-1"></a>      emptyDir:</span>
+<span id="cb40-18"><a href="#cb40-18" aria-hidden="true" tabindex="-1"></a>        medium: Memory  <span class="co"># Utiliser RAM pour shuffle local</span></span>
+<span id="cb40-19"><a href="#cb40-19" aria-hidden="true" tabindex="-1"></a>        sizeLimit: <span class="st">"4Gi"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <div id="pod_template_usage" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>pod_template_usage <span class="op">=</span> <span class="st">"""</span></span>
-<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="st"># Utiliser le pod template dans spark-submit</span></span>
-<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a><span class="st">spark-submit </span><span class="op">\</span></span>
-<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a><span class="st">  --conf spark.kubernetes.executor.podTemplateFile=/path/to/executor-pod-template.yaml </span><span class="op">\</span></span>
-<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a><span class="st">  ...</span></span>
-<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-7"><a href="#cb43-7" aria-hidden="true" tabindex="-1"></a><span class="st"># Ou dans SparkApplication</span></span>
-<span id="cb43-8"><a href="#cb43-8" aria-hidden="true" tabindex="-1"></a><span class="st">spec:</span></span>
-<span id="cb43-9"><a href="#cb43-9" aria-hidden="true" tabindex="-1"></a><span class="st">  executor:</span></span>
-<span id="cb43-10"><a href="#cb43-10" aria-hidden="true" tabindex="-1"></a><span class="st">    podTemplateFile: /path/to/executor-pod-template.yaml</span></span>
-<span id="cb43-11"><a href="#cb43-11" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
-<span id="cb43-12"><a href="#cb43-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(pod_template_usage)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>pod_template_usage <span class="op">=</span> <span class="st">"""</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="st"># Utiliser le pod template dans spark-submit</span></span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a><span class="st">spark-submit </span><span class="op">\</span></span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a><span class="st">  --conf spark.kubernetes.executor.podTemplateFile=/path/to/executor-pod-template.yaml </span><span class="op">\</span></span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a><span class="st">  ...</span></span>
+<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a><span class="st"># Ou dans SparkApplication</span></span>
+<span id="cb41-8"><a href="#cb41-8" aria-hidden="true" tabindex="-1"></a><span class="st">spec:</span></span>
+<span id="cb41-9"><a href="#cb41-9" aria-hidden="true" tabindex="-1"></a><span class="st">  executor:</span></span>
+<span id="cb41-10"><a href="#cb41-10" aria-hidden="true" tabindex="-1"></a><span class="st">    podTemplateFile: /path/to/executor-pod-template.yaml</span></span>
+<span id="cb41-11"><a href="#cb41-11" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
+<span id="cb41-12"><a href="#cb41-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(pod_template_usage)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 </section>
@@ -2722,63 +2602,63 @@ Sur K8s avec Object Storage :
 <div id="spot_config" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>writefile <span class="op">/</span>tmp<span class="op">/</span>spark<span class="op">-</span>k8s<span class="op">/</span>spark<span class="op">-</span><span class="cf">with</span><span class="op">-</span>spot.yaml</span>
-<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>apiVersion: sparkoperator.k8s.io<span class="op">/</span>v1beta2</span>
-<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>kind: SparkApplication</span>
-<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>metadata:</span>
-<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a>  name: spot<span class="op">-</span>etl</span>
-<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a>  namespace: spark</span>
-<span id="cb44-7"><a href="#cb44-7" aria-hidden="true" tabindex="-1"></a>spec:</span>
-<span id="cb44-8"><a href="#cb44-8" aria-hidden="true" tabindex="-1"></a>  <span class="bu">type</span>: Python</span>
-<span id="cb44-9"><a href="#cb44-9" aria-hidden="true" tabindex="-1"></a>  mode: cluster</span>
-<span id="cb44-10"><a href="#cb44-10" aria-hidden="true" tabindex="-1"></a>  image: my<span class="op">-</span>registry<span class="op">/</span>spark<span class="op">-</span>app:<span class="fl">1.0.0</span></span>
-<span id="cb44-11"><a href="#cb44-11" aria-hidden="true" tabindex="-1"></a>  mainApplicationFile: local:<span class="op">///</span>app<span class="op">/</span>etl.py</span>
-<span id="cb44-12"><a href="#cb44-12" aria-hidden="true" tabindex="-1"></a>  sparkVersion: <span class="st">"3.5.0"</span></span>
-<span id="cb44-13"><a href="#cb44-13" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb44-14"><a href="#cb44-14" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Driver sur nodes stables (on-demand)</span></span>
-<span id="cb44-15"><a href="#cb44-15" aria-hidden="true" tabindex="-1"></a>  driver:</span>
-<span id="cb44-16"><a href="#cb44-16" aria-hidden="true" tabindex="-1"></a>    cores: <span class="dv">1</span></span>
-<span id="cb44-17"><a href="#cb44-17" aria-hidden="true" tabindex="-1"></a>    memory: <span class="st">"2g"</span></span>
-<span id="cb44-18"><a href="#cb44-18" aria-hidden="true" tabindex="-1"></a>    serviceAccount: spark<span class="op">-</span>sa</span>
-<span id="cb44-19"><a href="#cb44-19" aria-hidden="true" tabindex="-1"></a>    affinity:</span>
-<span id="cb44-20"><a href="#cb44-20" aria-hidden="true" tabindex="-1"></a>      nodeAffinity:</span>
-<span id="cb44-21"><a href="#cb44-21" aria-hidden="true" tabindex="-1"></a>        requiredDuringSchedulingIgnoredDuringExecution:</span>
-<span id="cb44-22"><a href="#cb44-22" aria-hidden="true" tabindex="-1"></a>          nodeSelectorTerms:</span>
-<span id="cb44-23"><a href="#cb44-23" aria-hidden="true" tabindex="-1"></a>            <span class="op">-</span> matchExpressions:</span>
-<span id="cb44-24"><a href="#cb44-24" aria-hidden="true" tabindex="-1"></a>                <span class="op">-</span> key: node<span class="op">-</span><span class="bu">type</span></span>
-<span id="cb44-25"><a href="#cb44-25" aria-hidden="true" tabindex="-1"></a>                  operator: In</span>
-<span id="cb44-26"><a href="#cb44-26" aria-hidden="true" tabindex="-1"></a>                  values:</span>
-<span id="cb44-27"><a href="#cb44-27" aria-hidden="true" tabindex="-1"></a>                    <span class="op">-</span> on<span class="op">-</span>demand</span>
-<span id="cb44-28"><a href="#cb44-28" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb44-29"><a href="#cb44-29" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Executors sur spot instances</span></span>
-<span id="cb44-30"><a href="#cb44-30" aria-hidden="true" tabindex="-1"></a>  executor:</span>
-<span id="cb44-31"><a href="#cb44-31" aria-hidden="true" tabindex="-1"></a>    cores: <span class="dv">2</span></span>
-<span id="cb44-32"><a href="#cb44-32" aria-hidden="true" tabindex="-1"></a>    instances: <span class="dv">5</span></span>
-<span id="cb44-33"><a href="#cb44-33" aria-hidden="true" tabindex="-1"></a>    memory: <span class="st">"4g"</span></span>
-<span id="cb44-34"><a href="#cb44-34" aria-hidden="true" tabindex="-1"></a>    affinity:</span>
-<span id="cb44-35"><a href="#cb44-35" aria-hidden="true" tabindex="-1"></a>      nodeAffinity:</span>
-<span id="cb44-36"><a href="#cb44-36" aria-hidden="true" tabindex="-1"></a>        preferredDuringSchedulingIgnoredDuringExecution:</span>
-<span id="cb44-37"><a href="#cb44-37" aria-hidden="true" tabindex="-1"></a>          <span class="op">-</span> weight: <span class="dv">100</span></span>
-<span id="cb44-38"><a href="#cb44-38" aria-hidden="true" tabindex="-1"></a>            preference:</span>
-<span id="cb44-39"><a href="#cb44-39" aria-hidden="true" tabindex="-1"></a>              matchExpressions:</span>
-<span id="cb44-40"><a href="#cb44-40" aria-hidden="true" tabindex="-1"></a>                <span class="op">-</span> key: node<span class="op">-</span><span class="bu">type</span></span>
-<span id="cb44-41"><a href="#cb44-41" aria-hidden="true" tabindex="-1"></a>                  operator: In</span>
-<span id="cb44-42"><a href="#cb44-42" aria-hidden="true" tabindex="-1"></a>                  values:</span>
-<span id="cb44-43"><a href="#cb44-43" aria-hidden="true" tabindex="-1"></a>                    <span class="op">-</span> spot</span>
-<span id="cb44-44"><a href="#cb44-44" aria-hidden="true" tabindex="-1"></a>    tolerations:</span>
-<span id="cb44-45"><a href="#cb44-45" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> key: <span class="st">"kubernetes.azure.com/scalesetpriority"</span></span>
-<span id="cb44-46"><a href="#cb44-46" aria-hidden="true" tabindex="-1"></a>        operator: <span class="st">"Equal"</span></span>
-<span id="cb44-47"><a href="#cb44-47" aria-hidden="true" tabindex="-1"></a>        value: <span class="st">"spot"</span></span>
-<span id="cb44-48"><a href="#cb44-48" aria-hidden="true" tabindex="-1"></a>        effect: <span class="st">"NoSchedule"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>writefile <span class="op">/</span>tmp<span class="op">/</span>spark<span class="op">-</span>k8s<span class="op">/</span>spark<span class="op">-</span><span class="cf">with</span><span class="op">-</span>spot.yaml</span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>apiVersion: sparkoperator.k8s.io<span class="op">/</span>v1beta2</span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>kind: SparkApplication</span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>metadata:</span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>  name: spot<span class="op">-</span>etl</span>
+<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a>  namespace: spark</span>
+<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a>spec:</span>
+<span id="cb42-8"><a href="#cb42-8" aria-hidden="true" tabindex="-1"></a>  <span class="bu">type</span>: Python</span>
+<span id="cb42-9"><a href="#cb42-9" aria-hidden="true" tabindex="-1"></a>  mode: cluster</span>
+<span id="cb42-10"><a href="#cb42-10" aria-hidden="true" tabindex="-1"></a>  image: my<span class="op">-</span>registry<span class="op">/</span>spark<span class="op">-</span>app:<span class="fl">1.0.0</span></span>
+<span id="cb42-11"><a href="#cb42-11" aria-hidden="true" tabindex="-1"></a>  mainApplicationFile: local:<span class="op">///</span>app<span class="op">/</span>etl.py</span>
+<span id="cb42-12"><a href="#cb42-12" aria-hidden="true" tabindex="-1"></a>  sparkVersion: <span class="st">"3.5.0"</span></span>
+<span id="cb42-13"><a href="#cb42-13" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb42-14"><a href="#cb42-14" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Driver sur nodes stables (on-demand)</span></span>
+<span id="cb42-15"><a href="#cb42-15" aria-hidden="true" tabindex="-1"></a>  driver:</span>
+<span id="cb42-16"><a href="#cb42-16" aria-hidden="true" tabindex="-1"></a>    cores: <span class="dv">1</span></span>
+<span id="cb42-17"><a href="#cb42-17" aria-hidden="true" tabindex="-1"></a>    memory: <span class="st">"2g"</span></span>
+<span id="cb42-18"><a href="#cb42-18" aria-hidden="true" tabindex="-1"></a>    serviceAccount: spark<span class="op">-</span>sa</span>
+<span id="cb42-19"><a href="#cb42-19" aria-hidden="true" tabindex="-1"></a>    affinity:</span>
+<span id="cb42-20"><a href="#cb42-20" aria-hidden="true" tabindex="-1"></a>      nodeAffinity:</span>
+<span id="cb42-21"><a href="#cb42-21" aria-hidden="true" tabindex="-1"></a>        requiredDuringSchedulingIgnoredDuringExecution:</span>
+<span id="cb42-22"><a href="#cb42-22" aria-hidden="true" tabindex="-1"></a>          nodeSelectorTerms:</span>
+<span id="cb42-23"><a href="#cb42-23" aria-hidden="true" tabindex="-1"></a>            <span class="op">-</span> matchExpressions:</span>
+<span id="cb42-24"><a href="#cb42-24" aria-hidden="true" tabindex="-1"></a>                <span class="op">-</span> key: node<span class="op">-</span><span class="bu">type</span></span>
+<span id="cb42-25"><a href="#cb42-25" aria-hidden="true" tabindex="-1"></a>                  operator: In</span>
+<span id="cb42-26"><a href="#cb42-26" aria-hidden="true" tabindex="-1"></a>                  values:</span>
+<span id="cb42-27"><a href="#cb42-27" aria-hidden="true" tabindex="-1"></a>                    <span class="op">-</span> on<span class="op">-</span>demand</span>
+<span id="cb42-28"><a href="#cb42-28" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb42-29"><a href="#cb42-29" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Executors sur spot instances</span></span>
+<span id="cb42-30"><a href="#cb42-30" aria-hidden="true" tabindex="-1"></a>  executor:</span>
+<span id="cb42-31"><a href="#cb42-31" aria-hidden="true" tabindex="-1"></a>    cores: <span class="dv">2</span></span>
+<span id="cb42-32"><a href="#cb42-32" aria-hidden="true" tabindex="-1"></a>    instances: <span class="dv">5</span></span>
+<span id="cb42-33"><a href="#cb42-33" aria-hidden="true" tabindex="-1"></a>    memory: <span class="st">"4g"</span></span>
+<span id="cb42-34"><a href="#cb42-34" aria-hidden="true" tabindex="-1"></a>    affinity:</span>
+<span id="cb42-35"><a href="#cb42-35" aria-hidden="true" tabindex="-1"></a>      nodeAffinity:</span>
+<span id="cb42-36"><a href="#cb42-36" aria-hidden="true" tabindex="-1"></a>        preferredDuringSchedulingIgnoredDuringExecution:</span>
+<span id="cb42-37"><a href="#cb42-37" aria-hidden="true" tabindex="-1"></a>          <span class="op">-</span> weight: <span class="dv">100</span></span>
+<span id="cb42-38"><a href="#cb42-38" aria-hidden="true" tabindex="-1"></a>            preference:</span>
+<span id="cb42-39"><a href="#cb42-39" aria-hidden="true" tabindex="-1"></a>              matchExpressions:</span>
+<span id="cb42-40"><a href="#cb42-40" aria-hidden="true" tabindex="-1"></a>                <span class="op">-</span> key: node<span class="op">-</span><span class="bu">type</span></span>
+<span id="cb42-41"><a href="#cb42-41" aria-hidden="true" tabindex="-1"></a>                  operator: In</span>
+<span id="cb42-42"><a href="#cb42-42" aria-hidden="true" tabindex="-1"></a>                  values:</span>
+<span id="cb42-43"><a href="#cb42-43" aria-hidden="true" tabindex="-1"></a>                    <span class="op">-</span> spot</span>
+<span id="cb42-44"><a href="#cb42-44" aria-hidden="true" tabindex="-1"></a>    tolerations:</span>
+<span id="cb42-45"><a href="#cb42-45" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> key: <span class="st">"kubernetes.azure.com/scalesetpriority"</span></span>
+<span id="cb42-46"><a href="#cb42-46" aria-hidden="true" tabindex="-1"></a>        operator: <span class="st">"Equal"</span></span>
+<span id="cb42-47"><a href="#cb42-47" aria-hidden="true" tabindex="-1"></a>        value: <span class="st">"spot"</span></span>
+<span id="cb42-48"><a href="#cb42-48" aria-hidden="true" tabindex="-1"></a>        effect: <span class="st">"NoSchedule"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <hr>
 </section>
 </section>
 <section id="mini-projet-etl-pipeline-sur-kubernetes" class="level2">
-<h2 class="anchored" data-anchor-id="mini-projet-etl-pipeline-sur-kubernetes">🚀 11. Mini-Projet : ETL Pipeline sur Kubernetes</h2>
+<h2 class="anchored" data-anchor-id="mini-projet-etl-pipeline-sur-kubernetes">11. Mini-Projet : ETL Pipeline sur Kubernetes</h2>
 <section id="objectif" class="level3">
-<h3 class="anchored" data-anchor-id="objectif">🎯 Objectif</h3>
+<h3 class="anchored" data-anchor-id="objectif">Objectif</h3>
 <p>Déployer un pipeline Spark complet sur K8s avec MinIO (Object Storage local).</p>
 </section>
 <section id="architecture" class="level3">
@@ -2820,32 +2700,32 @@ Sur K8s avec Object Storage :
 <div id="minio_deploy" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>minio_deploy <span class="op">=</span> <span class="st">"""</span></span>
-<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a><span class="st"># Déployer MinIO avec Helm</span></span>
-<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a><span class="st">helm repo add minio https://charts.min.io/</span></span>
-<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a><span class="st">helm repo update</span></span>
-<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-6"><a href="#cb47-6" aria-hidden="true" tabindex="-1"></a><span class="st">helm install minio minio/minio </span><span class="op">\</span></span>
-<span id="cb47-7"><a href="#cb47-7" aria-hidden="true" tabindex="-1"></a><span class="st">  --namespace minio </span><span class="op">\</span></span>
-<span id="cb47-8"><a href="#cb47-8" aria-hidden="true" tabindex="-1"></a><span class="st">  --create-namespace </span><span class="op">\</span></span>
-<span id="cb47-9"><a href="#cb47-9" aria-hidden="true" tabindex="-1"></a><span class="st">  --set rootUser=minioadmin </span><span class="op">\</span></span>
-<span id="cb47-10"><a href="#cb47-10" aria-hidden="true" tabindex="-1"></a><span class="st">  --set rootPassword=minioadmin </span><span class="op">\</span></span>
-<span id="cb47-11"><a href="#cb47-11" aria-hidden="true" tabindex="-1"></a><span class="st">  --set mode=standalone </span><span class="op">\</span></span>
-<span id="cb47-12"><a href="#cb47-12" aria-hidden="true" tabindex="-1"></a><span class="st">  --set resources.requests.memory=512Mi </span><span class="op">\</span></span>
-<span id="cb47-13"><a href="#cb47-13" aria-hidden="true" tabindex="-1"></a><span class="st">  --set persistence.size=10Gi</span></span>
-<span id="cb47-14"><a href="#cb47-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-15"><a href="#cb47-15" aria-hidden="true" tabindex="-1"></a><span class="st"># Port-forward pour accéder à la console</span></span>
-<span id="cb47-16"><a href="#cb47-16" aria-hidden="true" tabindex="-1"></a><span class="st">kubectl port-forward -n minio svc/minio-console 9001:9001</span></span>
-<span id="cb47-17"><a href="#cb47-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-18"><a href="#cb47-18" aria-hidden="true" tabindex="-1"></a><span class="st"># Créer les buckets</span></span>
-<span id="cb47-19"><a href="#cb47-19" aria-hidden="true" tabindex="-1"></a><span class="st">mc alias set myminio http://localhost:9000 minioadmin minioadmin</span></span>
-<span id="cb47-20"><a href="#cb47-20" aria-hidden="true" tabindex="-1"></a><span class="st">mc mb myminio/bronze</span></span>
-<span id="cb47-21"><a href="#cb47-21" aria-hidden="true" tabindex="-1"></a><span class="st">mc mb myminio/silver</span></span>
-<span id="cb47-22"><a href="#cb47-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-23"><a href="#cb47-23" aria-hidden="true" tabindex="-1"></a><span class="st"># Uploader des données de test</span></span>
-<span id="cb47-24"><a href="#cb47-24" aria-hidden="true" tabindex="-1"></a><span class="st">mc cp data/sample.csv myminio/bronze/</span></span>
-<span id="cb47-25"><a href="#cb47-25" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
-<span id="cb47-26"><a href="#cb47-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(minio_deploy)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>minio_deploy <span class="op">=</span> <span class="st">"""</span></span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="st"># Déployer MinIO avec Helm</span></span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a><span class="st">helm repo add minio https://charts.min.io/</span></span>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a><span class="st">helm repo update</span></span>
+<span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-6"><a href="#cb45-6" aria-hidden="true" tabindex="-1"></a><span class="st">helm install minio minio/minio </span><span class="op">\</span></span>
+<span id="cb45-7"><a href="#cb45-7" aria-hidden="true" tabindex="-1"></a><span class="st">  --namespace minio </span><span class="op">\</span></span>
+<span id="cb45-8"><a href="#cb45-8" aria-hidden="true" tabindex="-1"></a><span class="st">  --create-namespace </span><span class="op">\</span></span>
+<span id="cb45-9"><a href="#cb45-9" aria-hidden="true" tabindex="-1"></a><span class="st">  --set rootUser=minioadmin </span><span class="op">\</span></span>
+<span id="cb45-10"><a href="#cb45-10" aria-hidden="true" tabindex="-1"></a><span class="st">  --set rootPassword=minioadmin </span><span class="op">\</span></span>
+<span id="cb45-11"><a href="#cb45-11" aria-hidden="true" tabindex="-1"></a><span class="st">  --set mode=standalone </span><span class="op">\</span></span>
+<span id="cb45-12"><a href="#cb45-12" aria-hidden="true" tabindex="-1"></a><span class="st">  --set resources.requests.memory=512Mi </span><span class="op">\</span></span>
+<span id="cb45-13"><a href="#cb45-13" aria-hidden="true" tabindex="-1"></a><span class="st">  --set persistence.size=10Gi</span></span>
+<span id="cb45-14"><a href="#cb45-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-15"><a href="#cb45-15" aria-hidden="true" tabindex="-1"></a><span class="st"># Port-forward pour accéder à la console</span></span>
+<span id="cb45-16"><a href="#cb45-16" aria-hidden="true" tabindex="-1"></a><span class="st">kubectl port-forward -n minio svc/minio-console 9001:9001</span></span>
+<span id="cb45-17"><a href="#cb45-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-18"><a href="#cb45-18" aria-hidden="true" tabindex="-1"></a><span class="st"># Créer les buckets</span></span>
+<span id="cb45-19"><a href="#cb45-19" aria-hidden="true" tabindex="-1"></a><span class="st">mc alias set myminio http://localhost:9000 minioadmin minioadmin</span></span>
+<span id="cb45-20"><a href="#cb45-20" aria-hidden="true" tabindex="-1"></a><span class="st">mc mb myminio/bronze</span></span>
+<span id="cb45-21"><a href="#cb45-21" aria-hidden="true" tabindex="-1"></a><span class="st">mc mb myminio/silver</span></span>
+<span id="cb45-22"><a href="#cb45-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-23"><a href="#cb45-23" aria-hidden="true" tabindex="-1"></a><span class="st"># Uploader des données de test</span></span>
+<span id="cb45-24"><a href="#cb45-24" aria-hidden="true" tabindex="-1"></a><span class="st">mc cp data/sample.csv myminio/bronze/</span></span>
+<span id="cb45-25"><a href="#cb45-25" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
+<span id="cb45-26"><a href="#cb45-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(minio_deploy)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 </section>
@@ -2854,86 +2734,86 @@ Sur K8s avec Object Storage :
 <div id="etl_job_code" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>writefile <span class="op">/</span>tmp<span class="op">/</span>spark<span class="op">-</span>k8s<span class="op">-</span>project<span class="op">/</span>app<span class="op">/</span>etl_job.py</span>
-<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
-<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a><span class="co">ETL Job : Bronze → Silver</span></span>
-<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a><span class="co">Lit des CSV depuis MinIO, transforme, et écrit en Parquet.</span></span>
-<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
-<span id="cb48-6"><a href="#cb48-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> argparse</span>
-<span id="cb48-7"><a href="#cb48-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pyspark.sql <span class="im">import</span> SparkSession</span>
-<span id="cb48-8"><a href="#cb48-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pyspark.sql.functions <span class="im">import</span> col, upper, current_timestamp</span>
-<span id="cb48-9"><a href="#cb48-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb48-10"><a href="#cb48-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb48-11"><a href="#cb48-11" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> create_spark_session():</span>
-<span id="cb48-12"><a href="#cb48-12" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Créer une SparkSession configurée pour MinIO."""</span></span>
-<span id="cb48-13"><a href="#cb48-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> SparkSession.builder <span class="op">\</span></span>
-<span id="cb48-14"><a href="#cb48-14" aria-hidden="true" tabindex="-1"></a>        .appName(<span class="st">"ETL Bronze to Silver"</span>) <span class="op">\</span></span>
-<span id="cb48-15"><a href="#cb48-15" aria-hidden="true" tabindex="-1"></a>        .config(<span class="st">"spark.hadoop.fs.s3a.impl"</span>, <span class="st">"org.apache.hadoop.fs.s3a.S3AFileSystem"</span>) <span class="op">\</span></span>
-<span id="cb48-16"><a href="#cb48-16" aria-hidden="true" tabindex="-1"></a>        .config(<span class="st">"spark.hadoop.fs.s3a.path.style.access"</span>, <span class="st">"true"</span>) <span class="op">\</span></span>
-<span id="cb48-17"><a href="#cb48-17" aria-hidden="true" tabindex="-1"></a>        .getOrCreate()</span>
-<span id="cb48-18"><a href="#cb48-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb48-19"><a href="#cb48-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb48-20"><a href="#cb48-20" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> extract(spark, input_path):</span>
-<span id="cb48-21"><a href="#cb48-21" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Lire les données brutes depuis le bucket Bronze."""</span></span>
-<span id="cb48-22"><a href="#cb48-22" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"📥 Reading from </span><span class="sc">{</span>input_path<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb48-23"><a href="#cb48-23" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> spark.read <span class="op">\</span></span>
-<span id="cb48-24"><a href="#cb48-24" aria-hidden="true" tabindex="-1"></a>        .option(<span class="st">"header"</span>, <span class="st">"true"</span>) <span class="op">\</span></span>
-<span id="cb48-25"><a href="#cb48-25" aria-hidden="true" tabindex="-1"></a>        .option(<span class="st">"inferSchema"</span>, <span class="st">"true"</span>) <span class="op">\</span></span>
-<span id="cb48-26"><a href="#cb48-26" aria-hidden="true" tabindex="-1"></a>        .csv(input_path)</span>
-<span id="cb48-27"><a href="#cb48-27" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"   Loaded </span><span class="sc">{</span>df<span class="sc">.</span>count()<span class="sc">}</span><span class="ss"> rows"</span>)</span>
-<span id="cb48-28"><a href="#cb48-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> df</span>
-<span id="cb48-29"><a href="#cb48-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb48-30"><a href="#cb48-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb48-31"><a href="#cb48-31" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> transform(df):</span>
-<span id="cb48-32"><a href="#cb48-32" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Appliquer les transformations métier."""</span></span>
-<span id="cb48-33"><a href="#cb48-33" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"🔄 Transforming data"</span>)</span>
-<span id="cb48-34"><a href="#cb48-34" aria-hidden="true" tabindex="-1"></a>    transformed <span class="op">=</span> df <span class="op">\</span></span>
-<span id="cb48-35"><a href="#cb48-35" aria-hidden="true" tabindex="-1"></a>        .dropDuplicates() <span class="op">\</span></span>
-<span id="cb48-36"><a href="#cb48-36" aria-hidden="true" tabindex="-1"></a>        .dropna() <span class="op">\</span></span>
-<span id="cb48-37"><a href="#cb48-37" aria-hidden="true" tabindex="-1"></a>        .withColumn(<span class="st">"processed_at"</span>, current_timestamp())</span>
-<span id="cb48-38"><a href="#cb48-38" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb48-39"><a href="#cb48-39" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Normalisation des colonnes string</span></span>
-<span id="cb48-40"><a href="#cb48-40" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> col_name, dtype <span class="kw">in</span> transformed.dtypes:</span>
-<span id="cb48-41"><a href="#cb48-41" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> dtype <span class="op">==</span> <span class="st">"string"</span>:</span>
-<span id="cb48-42"><a href="#cb48-42" aria-hidden="true" tabindex="-1"></a>            transformed <span class="op">=</span> transformed.withColumn(col_name, upper(col(col_name)))</span>
-<span id="cb48-43"><a href="#cb48-43" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb48-44"><a href="#cb48-44" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"   Transformed to </span><span class="sc">{</span>transformed<span class="sc">.</span>count()<span class="sc">}</span><span class="ss"> rows"</span>)</span>
-<span id="cb48-45"><a href="#cb48-45" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> transformed</span>
-<span id="cb48-46"><a href="#cb48-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb48-47"><a href="#cb48-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb48-48"><a href="#cb48-48" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> load(df, output_path):</span>
-<span id="cb48-49"><a href="#cb48-49" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Écrire les données transformées dans le bucket Silver."""</span></span>
-<span id="cb48-50"><a href="#cb48-50" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"📤 Writing to </span><span class="sc">{</span>output_path<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb48-51"><a href="#cb48-51" aria-hidden="true" tabindex="-1"></a>    df.write <span class="op">\</span></span>
-<span id="cb48-52"><a href="#cb48-52" aria-hidden="true" tabindex="-1"></a>        .mode(<span class="st">"overwrite"</span>) <span class="op">\</span></span>
-<span id="cb48-53"><a href="#cb48-53" aria-hidden="true" tabindex="-1"></a>        .parquet(output_path)</span>
-<span id="cb48-54"><a href="#cb48-54" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"   Done!"</span>)</span>
-<span id="cb48-55"><a href="#cb48-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb48-56"><a href="#cb48-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb48-57"><a href="#cb48-57" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main():</span>
-<span id="cb48-58"><a href="#cb48-58" aria-hidden="true" tabindex="-1"></a>    parser <span class="op">=</span> argparse.ArgumentParser(description<span class="op">=</span><span class="st">"ETL Job"</span>)</span>
-<span id="cb48-59"><a href="#cb48-59" aria-hidden="true" tabindex="-1"></a>    parser.add_argument(<span class="st">"--input"</span>, required<span class="op">=</span><span class="va">True</span>, <span class="bu">help</span><span class="op">=</span><span class="st">"Input path (s3a://...)"</span>)</span>
-<span id="cb48-60"><a href="#cb48-60" aria-hidden="true" tabindex="-1"></a>    parser.add_argument(<span class="st">"--output"</span>, required<span class="op">=</span><span class="va">True</span>, <span class="bu">help</span><span class="op">=</span><span class="st">"Output path (s3a://...)"</span>)</span>
-<span id="cb48-61"><a href="#cb48-61" aria-hidden="true" tabindex="-1"></a>    args <span class="op">=</span> parser.parse_args()</span>
-<span id="cb48-62"><a href="#cb48-62" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb48-63"><a href="#cb48-63" aria-hidden="true" tabindex="-1"></a>    spark <span class="op">=</span> create_spark_session()</span>
-<span id="cb48-64"><a href="#cb48-64" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb48-65"><a href="#cb48-65" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>:</span>
-<span id="cb48-66"><a href="#cb48-66" aria-hidden="true" tabindex="-1"></a>        <span class="co"># ETL Pipeline</span></span>
-<span id="cb48-67"><a href="#cb48-67" aria-hidden="true" tabindex="-1"></a>        df <span class="op">=</span> extract(spark, args.<span class="bu">input</span>)</span>
-<span id="cb48-68"><a href="#cb48-68" aria-hidden="true" tabindex="-1"></a>        transformed <span class="op">=</span> transform(df)</span>
-<span id="cb48-69"><a href="#cb48-69" aria-hidden="true" tabindex="-1"></a>        load(transformed, args.output)</span>
-<span id="cb48-70"><a href="#cb48-70" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb48-71"><a href="#cb48-71" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"✅ ETL completed successfully!"</span>)</span>
-<span id="cb48-72"><a href="#cb48-72" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
-<span id="cb48-73"><a href="#cb48-73" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"❌ ETL failed: </span><span class="sc">{</span>e<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb48-74"><a href="#cb48-74" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span></span>
-<span id="cb48-75"><a href="#cb48-75" aria-hidden="true" tabindex="-1"></a>    <span class="cf">finally</span>:</span>
-<span id="cb48-76"><a href="#cb48-76" aria-hidden="true" tabindex="-1"></a>        spark.stop()</span>
-<span id="cb48-77"><a href="#cb48-77" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb48-78"><a href="#cb48-78" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb48-79"><a href="#cb48-79" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
-<span id="cb48-80"><a href="#cb48-80" aria-hidden="true" tabindex="-1"></a>    main()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>writefile <span class="op">/</span>tmp<span class="op">/</span>spark<span class="op">-</span>k8s<span class="op">-</span>project<span class="op">/</span>app<span class="op">/</span>etl_job.py</span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a><span class="co">ETL Job : Bronze → Silver</span></span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a><span class="co">Lit des CSV depuis MinIO, transforme, et écrit en Parquet.</span></span>
+<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
+<span id="cb46-6"><a href="#cb46-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> argparse</span>
+<span id="cb46-7"><a href="#cb46-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pyspark.sql <span class="im">import</span> SparkSession</span>
+<span id="cb46-8"><a href="#cb46-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pyspark.sql.functions <span class="im">import</span> col, upper, current_timestamp</span>
+<span id="cb46-9"><a href="#cb46-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-10"><a href="#cb46-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-11"><a href="#cb46-11" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> create_spark_session():</span>
+<span id="cb46-12"><a href="#cb46-12" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Créer une SparkSession configurée pour MinIO."""</span></span>
+<span id="cb46-13"><a href="#cb46-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> SparkSession.builder <span class="op">\</span></span>
+<span id="cb46-14"><a href="#cb46-14" aria-hidden="true" tabindex="-1"></a>        .appName(<span class="st">"ETL Bronze to Silver"</span>) <span class="op">\</span></span>
+<span id="cb46-15"><a href="#cb46-15" aria-hidden="true" tabindex="-1"></a>        .config(<span class="st">"spark.hadoop.fs.s3a.impl"</span>, <span class="st">"org.apache.hadoop.fs.s3a.S3AFileSystem"</span>) <span class="op">\</span></span>
+<span id="cb46-16"><a href="#cb46-16" aria-hidden="true" tabindex="-1"></a>        .config(<span class="st">"spark.hadoop.fs.s3a.path.style.access"</span>, <span class="st">"true"</span>) <span class="op">\</span></span>
+<span id="cb46-17"><a href="#cb46-17" aria-hidden="true" tabindex="-1"></a>        .getOrCreate()</span>
+<span id="cb46-18"><a href="#cb46-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-19"><a href="#cb46-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-20"><a href="#cb46-20" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> extract(spark, input_path):</span>
+<span id="cb46-21"><a href="#cb46-21" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Lire les données brutes depuis le bucket Bronze."""</span></span>
+<span id="cb46-22"><a href="#cb46-22" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"📥 Reading from </span><span class="sc">{</span>input_path<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb46-23"><a href="#cb46-23" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> spark.read <span class="op">\</span></span>
+<span id="cb46-24"><a href="#cb46-24" aria-hidden="true" tabindex="-1"></a>        .option(<span class="st">"header"</span>, <span class="st">"true"</span>) <span class="op">\</span></span>
+<span id="cb46-25"><a href="#cb46-25" aria-hidden="true" tabindex="-1"></a>        .option(<span class="st">"inferSchema"</span>, <span class="st">"true"</span>) <span class="op">\</span></span>
+<span id="cb46-26"><a href="#cb46-26" aria-hidden="true" tabindex="-1"></a>        .csv(input_path)</span>
+<span id="cb46-27"><a href="#cb46-27" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"   Loaded </span><span class="sc">{</span>df<span class="sc">.</span>count()<span class="sc">}</span><span class="ss"> rows"</span>)</span>
+<span id="cb46-28"><a href="#cb46-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> df</span>
+<span id="cb46-29"><a href="#cb46-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-30"><a href="#cb46-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-31"><a href="#cb46-31" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> transform(df):</span>
+<span id="cb46-32"><a href="#cb46-32" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Appliquer les transformations métier."""</span></span>
+<span id="cb46-33"><a href="#cb46-33" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"🔄 Transforming data"</span>)</span>
+<span id="cb46-34"><a href="#cb46-34" aria-hidden="true" tabindex="-1"></a>    transformed <span class="op">=</span> df <span class="op">\</span></span>
+<span id="cb46-35"><a href="#cb46-35" aria-hidden="true" tabindex="-1"></a>        .dropDuplicates() <span class="op">\</span></span>
+<span id="cb46-36"><a href="#cb46-36" aria-hidden="true" tabindex="-1"></a>        .dropna() <span class="op">\</span></span>
+<span id="cb46-37"><a href="#cb46-37" aria-hidden="true" tabindex="-1"></a>        .withColumn(<span class="st">"processed_at"</span>, current_timestamp())</span>
+<span id="cb46-38"><a href="#cb46-38" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb46-39"><a href="#cb46-39" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Normalisation des colonnes string</span></span>
+<span id="cb46-40"><a href="#cb46-40" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> col_name, dtype <span class="kw">in</span> transformed.dtypes:</span>
+<span id="cb46-41"><a href="#cb46-41" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> dtype <span class="op">==</span> <span class="st">"string"</span>:</span>
+<span id="cb46-42"><a href="#cb46-42" aria-hidden="true" tabindex="-1"></a>            transformed <span class="op">=</span> transformed.withColumn(col_name, upper(col(col_name)))</span>
+<span id="cb46-43"><a href="#cb46-43" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb46-44"><a href="#cb46-44" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"   Transformed to </span><span class="sc">{</span>transformed<span class="sc">.</span>count()<span class="sc">}</span><span class="ss"> rows"</span>)</span>
+<span id="cb46-45"><a href="#cb46-45" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> transformed</span>
+<span id="cb46-46"><a href="#cb46-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-47"><a href="#cb46-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-48"><a href="#cb46-48" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> load(df, output_path):</span>
+<span id="cb46-49"><a href="#cb46-49" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Écrire les données transformées dans le bucket Silver."""</span></span>
+<span id="cb46-50"><a href="#cb46-50" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"📤 Writing to </span><span class="sc">{</span>output_path<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb46-51"><a href="#cb46-51" aria-hidden="true" tabindex="-1"></a>    df.write <span class="op">\</span></span>
+<span id="cb46-52"><a href="#cb46-52" aria-hidden="true" tabindex="-1"></a>        .mode(<span class="st">"overwrite"</span>) <span class="op">\</span></span>
+<span id="cb46-53"><a href="#cb46-53" aria-hidden="true" tabindex="-1"></a>        .parquet(output_path)</span>
+<span id="cb46-54"><a href="#cb46-54" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"   Done!"</span>)</span>
+<span id="cb46-55"><a href="#cb46-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-56"><a href="#cb46-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-57"><a href="#cb46-57" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main():</span>
+<span id="cb46-58"><a href="#cb46-58" aria-hidden="true" tabindex="-1"></a>    parser <span class="op">=</span> argparse.ArgumentParser(description<span class="op">=</span><span class="st">"ETL Job"</span>)</span>
+<span id="cb46-59"><a href="#cb46-59" aria-hidden="true" tabindex="-1"></a>    parser.add_argument(<span class="st">"--input"</span>, required<span class="op">=</span><span class="va">True</span>, <span class="bu">help</span><span class="op">=</span><span class="st">"Input path (s3a://...)"</span>)</span>
+<span id="cb46-60"><a href="#cb46-60" aria-hidden="true" tabindex="-1"></a>    parser.add_argument(<span class="st">"--output"</span>, required<span class="op">=</span><span class="va">True</span>, <span class="bu">help</span><span class="op">=</span><span class="st">"Output path (s3a://...)"</span>)</span>
+<span id="cb46-61"><a href="#cb46-61" aria-hidden="true" tabindex="-1"></a>    args <span class="op">=</span> parser.parse_args()</span>
+<span id="cb46-62"><a href="#cb46-62" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb46-63"><a href="#cb46-63" aria-hidden="true" tabindex="-1"></a>    spark <span class="op">=</span> create_spark_session()</span>
+<span id="cb46-64"><a href="#cb46-64" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb46-65"><a href="#cb46-65" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>:</span>
+<span id="cb46-66"><a href="#cb46-66" aria-hidden="true" tabindex="-1"></a>        <span class="co"># ETL Pipeline</span></span>
+<span id="cb46-67"><a href="#cb46-67" aria-hidden="true" tabindex="-1"></a>        df <span class="op">=</span> extract(spark, args.<span class="bu">input</span>)</span>
+<span id="cb46-68"><a href="#cb46-68" aria-hidden="true" tabindex="-1"></a>        transformed <span class="op">=</span> transform(df)</span>
+<span id="cb46-69"><a href="#cb46-69" aria-hidden="true" tabindex="-1"></a>        load(transformed, args.output)</span>
+<span id="cb46-70"><a href="#cb46-70" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb46-71"><a href="#cb46-71" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"✅ ETL completed successfully!"</span>)</span>
+<span id="cb46-72"><a href="#cb46-72" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
+<span id="cb46-73"><a href="#cb46-73" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"❌ ETL failed: </span><span class="sc">{</span>e<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb46-74"><a href="#cb46-74" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span></span>
+<span id="cb46-75"><a href="#cb46-75" aria-hidden="true" tabindex="-1"></a>    <span class="cf">finally</span>:</span>
+<span id="cb46-76"><a href="#cb46-76" aria-hidden="true" tabindex="-1"></a>        spark.stop()</span>
+<span id="cb46-77"><a href="#cb46-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-78"><a href="#cb46-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-79"><a href="#cb46-79" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
+<span id="cb46-80"><a href="#cb46-80" aria-hidden="true" tabindex="-1"></a>    main()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 </section>
@@ -2942,26 +2822,26 @@ Sur K8s avec Object Storage :
 <div id="project_dockerfile" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>writefile <span class="op">/</span>tmp<span class="op">/</span>spark<span class="op">-</span>k8s<span class="op">-</span>project<span class="op">/</span>docker<span class="op">/</span>Dockerfile</span>
-<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>FROM bitnami<span class="op">/</span>spark:<span class="fl">3.5</span></span>
-<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a>USER root</span>
-<span id="cb49-5"><a href="#cb49-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-6"><a href="#cb49-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Dépendances Python</span></span>
-<span id="cb49-7"><a href="#cb49-7" aria-hidden="true" tabindex="-1"></a>RUN pip install <span class="op">--</span>no<span class="op">-</span>cache<span class="op">-</span><span class="bu">dir</span> pyarrow pandas</span>
-<span id="cb49-8"><a href="#cb49-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-9"><a href="#cb49-9" aria-hidden="true" tabindex="-1"></a><span class="co"># JARs pour S3/MinIO</span></span>
-<span id="cb49-10"><a href="#cb49-10" aria-hidden="true" tabindex="-1"></a>RUN curl <span class="op">-</span>sL https:<span class="op">//</span>repo1.maven.org<span class="op">/</span>maven2<span class="op">/</span>org<span class="op">/</span>apache<span class="op">/</span>hadoop<span class="op">/</span>hadoop<span class="op">-</span>aws<span class="op">/</span><span class="fl">3.3.4</span><span class="op">/</span>hadoop<span class="op">-</span>aws<span class="op">-</span><span class="fl">3.3.4</span>.jar <span class="op">\</span></span>
-<span id="cb49-11"><a href="#cb49-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span>o <span class="op">/</span>opt<span class="op">/</span>bitnami<span class="op">/</span>spark<span class="op">/</span>jars<span class="op">/</span>hadoop<span class="op">-</span>aws<span class="op">-</span><span class="fl">3.3.4</span>.jar <span class="op">&amp;&amp;</span> <span class="op">\</span></span>
-<span id="cb49-12"><a href="#cb49-12" aria-hidden="true" tabindex="-1"></a>    curl <span class="op">-</span>sL https:<span class="op">//</span>repo1.maven.org<span class="op">/</span>maven2<span class="op">/</span>com<span class="op">/</span>amazonaws<span class="op">/</span>aws<span class="op">-</span>java<span class="op">-</span>sdk<span class="op">-</span>bundle<span class="op">/</span><span class="fl">1.12.262</span><span class="op">/</span>aws<span class="op">-</span>java<span class="op">-</span>sdk<span class="op">-</span>bundle<span class="op">-</span><span class="fl">1.12.262</span>.jar <span class="op">\</span></span>
-<span id="cb49-13"><a href="#cb49-13" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span>o <span class="op">/</span>opt<span class="op">/</span>bitnami<span class="op">/</span>spark<span class="op">/</span>jars<span class="op">/</span>aws<span class="op">-</span>java<span class="op">-</span>sdk<span class="op">-</span>bundle<span class="op">-</span><span class="fl">1.12.262</span>.jar</span>
-<span id="cb49-14"><a href="#cb49-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-15"><a href="#cb49-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Application</span></span>
-<span id="cb49-16"><a href="#cb49-16" aria-hidden="true" tabindex="-1"></a>COPY app<span class="op">/</span> <span class="op">/</span>app<span class="op">/</span></span>
-<span id="cb49-17"><a href="#cb49-17" aria-hidden="true" tabindex="-1"></a>RUN chown <span class="op">-</span>R <span class="dv">1001</span>:<span class="dv">1001</span> <span class="op">/</span>app</span>
-<span id="cb49-18"><a href="#cb49-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-19"><a href="#cb49-19" aria-hidden="true" tabindex="-1"></a>USER <span class="dv">1001</span></span>
-<span id="cb49-20"><a href="#cb49-20" aria-hidden="true" tabindex="-1"></a>WORKDIR <span class="op">/</span>app</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>writefile <span class="op">/</span>tmp<span class="op">/</span>spark<span class="op">-</span>k8s<span class="op">-</span>project<span class="op">/</span>docker<span class="op">/</span>Dockerfile</span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>FROM bitnami<span class="op">/</span>spark:<span class="fl">3.5</span></span>
+<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a>USER root</span>
+<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-6"><a href="#cb47-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Dépendances Python</span></span>
+<span id="cb47-7"><a href="#cb47-7" aria-hidden="true" tabindex="-1"></a>RUN pip install <span class="op">--</span>no<span class="op">-</span>cache<span class="op">-</span><span class="bu">dir</span> pyarrow pandas</span>
+<span id="cb47-8"><a href="#cb47-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-9"><a href="#cb47-9" aria-hidden="true" tabindex="-1"></a><span class="co"># JARs pour S3/MinIO</span></span>
+<span id="cb47-10"><a href="#cb47-10" aria-hidden="true" tabindex="-1"></a>RUN curl <span class="op">-</span>sL https:<span class="op">//</span>repo1.maven.org<span class="op">/</span>maven2<span class="op">/</span>org<span class="op">/</span>apache<span class="op">/</span>hadoop<span class="op">/</span>hadoop<span class="op">-</span>aws<span class="op">/</span><span class="fl">3.3.4</span><span class="op">/</span>hadoop<span class="op">-</span>aws<span class="op">-</span><span class="fl">3.3.4</span>.jar <span class="op">\</span></span>
+<span id="cb47-11"><a href="#cb47-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span>o <span class="op">/</span>opt<span class="op">/</span>bitnami<span class="op">/</span>spark<span class="op">/</span>jars<span class="op">/</span>hadoop<span class="op">-</span>aws<span class="op">-</span><span class="fl">3.3.4</span>.jar <span class="op">&amp;&amp;</span> <span class="op">\</span></span>
+<span id="cb47-12"><a href="#cb47-12" aria-hidden="true" tabindex="-1"></a>    curl <span class="op">-</span>sL https:<span class="op">//</span>repo1.maven.org<span class="op">/</span>maven2<span class="op">/</span>com<span class="op">/</span>amazonaws<span class="op">/</span>aws<span class="op">-</span>java<span class="op">-</span>sdk<span class="op">-</span>bundle<span class="op">/</span><span class="fl">1.12.262</span><span class="op">/</span>aws<span class="op">-</span>java<span class="op">-</span>sdk<span class="op">-</span>bundle<span class="op">-</span><span class="fl">1.12.262</span>.jar <span class="op">\</span></span>
+<span id="cb47-13"><a href="#cb47-13" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span>o <span class="op">/</span>opt<span class="op">/</span>bitnami<span class="op">/</span>spark<span class="op">/</span>jars<span class="op">/</span>aws<span class="op">-</span>java<span class="op">-</span>sdk<span class="op">-</span>bundle<span class="op">-</span><span class="fl">1.12.262</span>.jar</span>
+<span id="cb47-14"><a href="#cb47-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-15"><a href="#cb47-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Application</span></span>
+<span id="cb47-16"><a href="#cb47-16" aria-hidden="true" tabindex="-1"></a>COPY app<span class="op">/</span> <span class="op">/</span>app<span class="op">/</span></span>
+<span id="cb47-17"><a href="#cb47-17" aria-hidden="true" tabindex="-1"></a>RUN chown <span class="op">-</span>R <span class="dv">1001</span>:<span class="dv">1001</span> <span class="op">/</span>app</span>
+<span id="cb47-18"><a href="#cb47-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-19"><a href="#cb47-19" aria-hidden="true" tabindex="-1"></a>USER <span class="dv">1001</span></span>
+<span id="cb47-20"><a href="#cb47-20" aria-hidden="true" tabindex="-1"></a>WORKDIR <span class="op">/</span>app</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 </section>
@@ -2970,58 +2850,58 @@ Sur K8s avec Object Storage :
 <div id="project_spark_app" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>writefile <span class="op">/</span>tmp<span class="op">/</span>spark<span class="op">-</span>k8s<span class="op">-</span>project<span class="op">/</span>manifests<span class="op">/</span>spark<span class="op">-</span>application.yaml</span>
-<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>apiVersion: sparkoperator.k8s.io<span class="op">/</span>v1beta2</span>
-<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a>kind: SparkApplication</span>
-<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a>metadata:</span>
-<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a>  name: etl<span class="op">-</span>bronze<span class="op">-</span>silver</span>
-<span id="cb50-6"><a href="#cb50-6" aria-hidden="true" tabindex="-1"></a>  namespace: spark</span>
-<span id="cb50-7"><a href="#cb50-7" aria-hidden="true" tabindex="-1"></a>spec:</span>
-<span id="cb50-8"><a href="#cb50-8" aria-hidden="true" tabindex="-1"></a>  <span class="bu">type</span>: Python</span>
-<span id="cb50-9"><a href="#cb50-9" aria-hidden="true" tabindex="-1"></a>  pythonVersion: <span class="st">"3"</span></span>
-<span id="cb50-10"><a href="#cb50-10" aria-hidden="true" tabindex="-1"></a>  mode: cluster</span>
-<span id="cb50-11"><a href="#cb50-11" aria-hidden="true" tabindex="-1"></a>  image: spark<span class="op">-</span>etl:<span class="fl">1.0.0</span>  <span class="co"># Image locale (Minikube)</span></span>
-<span id="cb50-12"><a href="#cb50-12" aria-hidden="true" tabindex="-1"></a>  imagePullPolicy: Never  <span class="co"># Pour Minikube</span></span>
-<span id="cb50-13"><a href="#cb50-13" aria-hidden="true" tabindex="-1"></a>  mainApplicationFile: local:<span class="op">///</span>app<span class="op">/</span>etl_job.py</span>
-<span id="cb50-14"><a href="#cb50-14" aria-hidden="true" tabindex="-1"></a>  arguments:</span>
-<span id="cb50-15"><a href="#cb50-15" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span> <span class="st">"--input"</span></span>
-<span id="cb50-16"><a href="#cb50-16" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span> <span class="st">"s3a://bronze/sample.csv"</span></span>
-<span id="cb50-17"><a href="#cb50-17" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span> <span class="st">"--output"</span></span>
-<span id="cb50-18"><a href="#cb50-18" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span> <span class="st">"s3a://silver/data"</span></span>
-<span id="cb50-19"><a href="#cb50-19" aria-hidden="true" tabindex="-1"></a>  sparkVersion: <span class="st">"3.5.0"</span></span>
-<span id="cb50-20"><a href="#cb50-20" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb50-21"><a href="#cb50-21" aria-hidden="true" tabindex="-1"></a>  sparkConf:</span>
-<span id="cb50-22"><a href="#cb50-22" aria-hidden="true" tabindex="-1"></a>    <span class="co">"spark.hadoop.fs.s3a.endpoint"</span>: <span class="st">"http://minio.minio.svc.cluster.local:9000"</span></span>
-<span id="cb50-23"><a href="#cb50-23" aria-hidden="true" tabindex="-1"></a>    <span class="co">"spark.hadoop.fs.s3a.path.style.access"</span>: <span class="st">"true"</span></span>
-<span id="cb50-24"><a href="#cb50-24" aria-hidden="true" tabindex="-1"></a>    <span class="co">"spark.hadoop.fs.s3a.impl"</span>: <span class="st">"org.apache.hadoop.fs.s3a.S3AFileSystem"</span></span>
-<span id="cb50-25"><a href="#cb50-25" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb50-26"><a href="#cb50-26" aria-hidden="true" tabindex="-1"></a>  restartPolicy:</span>
-<span id="cb50-27"><a href="#cb50-27" aria-hidden="true" tabindex="-1"></a>    <span class="bu">type</span>: OnFailure</span>
-<span id="cb50-28"><a href="#cb50-28" aria-hidden="true" tabindex="-1"></a>    onFailureRetries: <span class="dv">2</span></span>
-<span id="cb50-29"><a href="#cb50-29" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb50-30"><a href="#cb50-30" aria-hidden="true" tabindex="-1"></a>  driver:</span>
-<span id="cb50-31"><a href="#cb50-31" aria-hidden="true" tabindex="-1"></a>    cores: <span class="dv">1</span></span>
-<span id="cb50-32"><a href="#cb50-32" aria-hidden="true" tabindex="-1"></a>    memory: <span class="st">"1g"</span></span>
-<span id="cb50-33"><a href="#cb50-33" aria-hidden="true" tabindex="-1"></a>    serviceAccount: spark<span class="op">-</span>sa</span>
-<span id="cb50-34"><a href="#cb50-34" aria-hidden="true" tabindex="-1"></a>    envSecretKeyRefs:</span>
-<span id="cb50-35"><a href="#cb50-35" aria-hidden="true" tabindex="-1"></a>      AWS_ACCESS_KEY_ID:</span>
-<span id="cb50-36"><a href="#cb50-36" aria-hidden="true" tabindex="-1"></a>        name: minio<span class="op">-</span>credentials</span>
-<span id="cb50-37"><a href="#cb50-37" aria-hidden="true" tabindex="-1"></a>        key: AWS_ACCESS_KEY_ID</span>
-<span id="cb50-38"><a href="#cb50-38" aria-hidden="true" tabindex="-1"></a>      AWS_SECRET_ACCESS_KEY:</span>
-<span id="cb50-39"><a href="#cb50-39" aria-hidden="true" tabindex="-1"></a>        name: minio<span class="op">-</span>credentials</span>
-<span id="cb50-40"><a href="#cb50-40" aria-hidden="true" tabindex="-1"></a>        key: AWS_SECRET_ACCESS_KEY</span>
-<span id="cb50-41"><a href="#cb50-41" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb50-42"><a href="#cb50-42" aria-hidden="true" tabindex="-1"></a>  executor:</span>
-<span id="cb50-43"><a href="#cb50-43" aria-hidden="true" tabindex="-1"></a>    cores: <span class="dv">1</span></span>
-<span id="cb50-44"><a href="#cb50-44" aria-hidden="true" tabindex="-1"></a>    instances: <span class="dv">2</span></span>
-<span id="cb50-45"><a href="#cb50-45" aria-hidden="true" tabindex="-1"></a>    memory: <span class="st">"1g"</span></span>
-<span id="cb50-46"><a href="#cb50-46" aria-hidden="true" tabindex="-1"></a>    envSecretKeyRefs:</span>
-<span id="cb50-47"><a href="#cb50-47" aria-hidden="true" tabindex="-1"></a>      AWS_ACCESS_KEY_ID:</span>
-<span id="cb50-48"><a href="#cb50-48" aria-hidden="true" tabindex="-1"></a>        name: minio<span class="op">-</span>credentials</span>
-<span id="cb50-49"><a href="#cb50-49" aria-hidden="true" tabindex="-1"></a>        key: AWS_ACCESS_KEY_ID</span>
-<span id="cb50-50"><a href="#cb50-50" aria-hidden="true" tabindex="-1"></a>      AWS_SECRET_ACCESS_KEY:</span>
-<span id="cb50-51"><a href="#cb50-51" aria-hidden="true" tabindex="-1"></a>        name: minio<span class="op">-</span>credentials</span>
-<span id="cb50-52"><a href="#cb50-52" aria-hidden="true" tabindex="-1"></a>        key: AWS_SECRET_ACCESS_KEY</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>writefile <span class="op">/</span>tmp<span class="op">/</span>spark<span class="op">-</span>k8s<span class="op">-</span>project<span class="op">/</span>manifests<span class="op">/</span>spark<span class="op">-</span>application.yaml</span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>apiVersion: sparkoperator.k8s.io<span class="op">/</span>v1beta2</span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a>kind: SparkApplication</span>
+<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a>metadata:</span>
+<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a>  name: etl<span class="op">-</span>bronze<span class="op">-</span>silver</span>
+<span id="cb48-6"><a href="#cb48-6" aria-hidden="true" tabindex="-1"></a>  namespace: spark</span>
+<span id="cb48-7"><a href="#cb48-7" aria-hidden="true" tabindex="-1"></a>spec:</span>
+<span id="cb48-8"><a href="#cb48-8" aria-hidden="true" tabindex="-1"></a>  <span class="bu">type</span>: Python</span>
+<span id="cb48-9"><a href="#cb48-9" aria-hidden="true" tabindex="-1"></a>  pythonVersion: <span class="st">"3"</span></span>
+<span id="cb48-10"><a href="#cb48-10" aria-hidden="true" tabindex="-1"></a>  mode: cluster</span>
+<span id="cb48-11"><a href="#cb48-11" aria-hidden="true" tabindex="-1"></a>  image: spark<span class="op">-</span>etl:<span class="fl">1.0.0</span>  <span class="co"># Image locale (Minikube)</span></span>
+<span id="cb48-12"><a href="#cb48-12" aria-hidden="true" tabindex="-1"></a>  imagePullPolicy: Never  <span class="co"># Pour Minikube</span></span>
+<span id="cb48-13"><a href="#cb48-13" aria-hidden="true" tabindex="-1"></a>  mainApplicationFile: local:<span class="op">///</span>app<span class="op">/</span>etl_job.py</span>
+<span id="cb48-14"><a href="#cb48-14" aria-hidden="true" tabindex="-1"></a>  arguments:</span>
+<span id="cb48-15"><a href="#cb48-15" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span> <span class="st">"--input"</span></span>
+<span id="cb48-16"><a href="#cb48-16" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span> <span class="st">"s3a://bronze/sample.csv"</span></span>
+<span id="cb48-17"><a href="#cb48-17" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span> <span class="st">"--output"</span></span>
+<span id="cb48-18"><a href="#cb48-18" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span> <span class="st">"s3a://silver/data"</span></span>
+<span id="cb48-19"><a href="#cb48-19" aria-hidden="true" tabindex="-1"></a>  sparkVersion: <span class="st">"3.5.0"</span></span>
+<span id="cb48-20"><a href="#cb48-20" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb48-21"><a href="#cb48-21" aria-hidden="true" tabindex="-1"></a>  sparkConf:</span>
+<span id="cb48-22"><a href="#cb48-22" aria-hidden="true" tabindex="-1"></a>    <span class="co">"spark.hadoop.fs.s3a.endpoint"</span>: <span class="st">"http://minio.minio.svc.cluster.local:9000"</span></span>
+<span id="cb48-23"><a href="#cb48-23" aria-hidden="true" tabindex="-1"></a>    <span class="co">"spark.hadoop.fs.s3a.path.style.access"</span>: <span class="st">"true"</span></span>
+<span id="cb48-24"><a href="#cb48-24" aria-hidden="true" tabindex="-1"></a>    <span class="co">"spark.hadoop.fs.s3a.impl"</span>: <span class="st">"org.apache.hadoop.fs.s3a.S3AFileSystem"</span></span>
+<span id="cb48-25"><a href="#cb48-25" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb48-26"><a href="#cb48-26" aria-hidden="true" tabindex="-1"></a>  restartPolicy:</span>
+<span id="cb48-27"><a href="#cb48-27" aria-hidden="true" tabindex="-1"></a>    <span class="bu">type</span>: OnFailure</span>
+<span id="cb48-28"><a href="#cb48-28" aria-hidden="true" tabindex="-1"></a>    onFailureRetries: <span class="dv">2</span></span>
+<span id="cb48-29"><a href="#cb48-29" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb48-30"><a href="#cb48-30" aria-hidden="true" tabindex="-1"></a>  driver:</span>
+<span id="cb48-31"><a href="#cb48-31" aria-hidden="true" tabindex="-1"></a>    cores: <span class="dv">1</span></span>
+<span id="cb48-32"><a href="#cb48-32" aria-hidden="true" tabindex="-1"></a>    memory: <span class="st">"1g"</span></span>
+<span id="cb48-33"><a href="#cb48-33" aria-hidden="true" tabindex="-1"></a>    serviceAccount: spark<span class="op">-</span>sa</span>
+<span id="cb48-34"><a href="#cb48-34" aria-hidden="true" tabindex="-1"></a>    envSecretKeyRefs:</span>
+<span id="cb48-35"><a href="#cb48-35" aria-hidden="true" tabindex="-1"></a>      AWS_ACCESS_KEY_ID:</span>
+<span id="cb48-36"><a href="#cb48-36" aria-hidden="true" tabindex="-1"></a>        name: minio<span class="op">-</span>credentials</span>
+<span id="cb48-37"><a href="#cb48-37" aria-hidden="true" tabindex="-1"></a>        key: AWS_ACCESS_KEY_ID</span>
+<span id="cb48-38"><a href="#cb48-38" aria-hidden="true" tabindex="-1"></a>      AWS_SECRET_ACCESS_KEY:</span>
+<span id="cb48-39"><a href="#cb48-39" aria-hidden="true" tabindex="-1"></a>        name: minio<span class="op">-</span>credentials</span>
+<span id="cb48-40"><a href="#cb48-40" aria-hidden="true" tabindex="-1"></a>        key: AWS_SECRET_ACCESS_KEY</span>
+<span id="cb48-41"><a href="#cb48-41" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb48-42"><a href="#cb48-42" aria-hidden="true" tabindex="-1"></a>  executor:</span>
+<span id="cb48-43"><a href="#cb48-43" aria-hidden="true" tabindex="-1"></a>    cores: <span class="dv">1</span></span>
+<span id="cb48-44"><a href="#cb48-44" aria-hidden="true" tabindex="-1"></a>    instances: <span class="dv">2</span></span>
+<span id="cb48-45"><a href="#cb48-45" aria-hidden="true" tabindex="-1"></a>    memory: <span class="st">"1g"</span></span>
+<span id="cb48-46"><a href="#cb48-46" aria-hidden="true" tabindex="-1"></a>    envSecretKeyRefs:</span>
+<span id="cb48-47"><a href="#cb48-47" aria-hidden="true" tabindex="-1"></a>      AWS_ACCESS_KEY_ID:</span>
+<span id="cb48-48"><a href="#cb48-48" aria-hidden="true" tabindex="-1"></a>        name: minio<span class="op">-</span>credentials</span>
+<span id="cb48-49"><a href="#cb48-49" aria-hidden="true" tabindex="-1"></a>        key: AWS_ACCESS_KEY_ID</span>
+<span id="cb48-50"><a href="#cb48-50" aria-hidden="true" tabindex="-1"></a>      AWS_SECRET_ACCESS_KEY:</span>
+<span id="cb48-51"><a href="#cb48-51" aria-hidden="true" tabindex="-1"></a>        name: minio<span class="op">-</span>credentials</span>
+<span id="cb48-52"><a href="#cb48-52" aria-hidden="true" tabindex="-1"></a>        key: AWS_SECRET_ACCESS_KEY</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 </section>
@@ -3030,36 +2910,36 @@ Sur K8s avec Object Storage :
 <div id="full_deployment" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb51"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>deployment_script <span class="op">=</span> <span class="st">"""</span></span>
-<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a><span class="st">#!/bin/bash</span></span>
-<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a><span class="st">set -e</span></span>
-<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb51-5"><a href="#cb51-5" aria-hidden="true" tabindex="-1"></a><span class="st">echo "🚀 Déploiement du pipeline ETL Spark on K8s"</span></span>
-<span id="cb51-6"><a href="#cb51-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb51-7"><a href="#cb51-7" aria-hidden="true" tabindex="-1"></a><span class="st"># 1. Créer le namespace et RBAC</span></span>
-<span id="cb51-8"><a href="#cb51-8" aria-hidden="true" tabindex="-1"></a><span class="st">echo "📁 Création namespace et RBAC..."</span></span>
-<span id="cb51-9"><a href="#cb51-9" aria-hidden="true" tabindex="-1"></a><span class="st">kubectl apply -f manifests/namespace.yaml</span></span>
-<span id="cb51-10"><a href="#cb51-10" aria-hidden="true" tabindex="-1"></a><span class="st">kubectl apply -f manifests/rbac.yaml</span></span>
-<span id="cb51-11"><a href="#cb51-11" aria-hidden="true" tabindex="-1"></a><span class="st">kubectl apply -f manifests/minio-secret.yaml</span></span>
-<span id="cb51-12"><a href="#cb51-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb51-13"><a href="#cb51-13" aria-hidden="true" tabindex="-1"></a><span class="st"># 2. Build de l'image (Minikube)</span></span>
-<span id="cb51-14"><a href="#cb51-14" aria-hidden="true" tabindex="-1"></a><span class="st">echo "🐳 Build de l'image Docker..."</span></span>
-<span id="cb51-15"><a href="#cb51-15" aria-hidden="true" tabindex="-1"></a><span class="st">eval $(minikube docker-env)</span></span>
-<span id="cb51-16"><a href="#cb51-16" aria-hidden="true" tabindex="-1"></a><span class="st">docker build -t spark-etl:1.0.0 -f docker/Dockerfile .</span></span>
-<span id="cb51-17"><a href="#cb51-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb51-18"><a href="#cb51-18" aria-hidden="true" tabindex="-1"></a><span class="st"># 3. Vérifier que MinIO est prêt</span></span>
-<span id="cb51-19"><a href="#cb51-19" aria-hidden="true" tabindex="-1"></a><span class="st">echo "⏳ Attente de MinIO..."</span></span>
-<span id="cb51-20"><a href="#cb51-20" aria-hidden="true" tabindex="-1"></a><span class="st">kubectl wait --for=condition=ready pod -l app=minio -n minio --timeout=120s</span></span>
-<span id="cb51-21"><a href="#cb51-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb51-22"><a href="#cb51-22" aria-hidden="true" tabindex="-1"></a><span class="st"># 4. Lancer le job Spark</span></span>
-<span id="cb51-23"><a href="#cb51-23" aria-hidden="true" tabindex="-1"></a><span class="st">echo "🔥 Lancement du job Spark..."</span></span>
-<span id="cb51-24"><a href="#cb51-24" aria-hidden="true" tabindex="-1"></a><span class="st">kubectl apply -f manifests/spark-application.yaml</span></span>
-<span id="cb51-25"><a href="#cb51-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb51-26"><a href="#cb51-26" aria-hidden="true" tabindex="-1"></a><span class="st"># 5. Suivre le job</span></span>
-<span id="cb51-27"><a href="#cb51-27" aria-hidden="true" tabindex="-1"></a><span class="st">echo "📊 Suivi du job..."</span></span>
-<span id="cb51-28"><a href="#cb51-28" aria-hidden="true" tabindex="-1"></a><span class="st">kubectl get sparkapplication -n spark -w</span></span>
-<span id="cb51-29"><a href="#cb51-29" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
-<span id="cb51-30"><a href="#cb51-30" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(deployment_script)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>deployment_script <span class="op">=</span> <span class="st">"""</span></span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="st">#!/bin/bash</span></span>
+<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a><span class="st">set -e</span></span>
+<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-5"><a href="#cb49-5" aria-hidden="true" tabindex="-1"></a><span class="st">echo "🚀 Déploiement du pipeline ETL Spark on K8s"</span></span>
+<span id="cb49-6"><a href="#cb49-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-7"><a href="#cb49-7" aria-hidden="true" tabindex="-1"></a><span class="st"># 1. Créer le namespace et RBAC</span></span>
+<span id="cb49-8"><a href="#cb49-8" aria-hidden="true" tabindex="-1"></a><span class="st">echo "📁 Création namespace et RBAC..."</span></span>
+<span id="cb49-9"><a href="#cb49-9" aria-hidden="true" tabindex="-1"></a><span class="st">kubectl apply -f manifests/namespace.yaml</span></span>
+<span id="cb49-10"><a href="#cb49-10" aria-hidden="true" tabindex="-1"></a><span class="st">kubectl apply -f manifests/rbac.yaml</span></span>
+<span id="cb49-11"><a href="#cb49-11" aria-hidden="true" tabindex="-1"></a><span class="st">kubectl apply -f manifests/minio-secret.yaml</span></span>
+<span id="cb49-12"><a href="#cb49-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-13"><a href="#cb49-13" aria-hidden="true" tabindex="-1"></a><span class="st"># 2. Build de l'image (Minikube)</span></span>
+<span id="cb49-14"><a href="#cb49-14" aria-hidden="true" tabindex="-1"></a><span class="st">echo "🐳 Build de l'image Docker..."</span></span>
+<span id="cb49-15"><a href="#cb49-15" aria-hidden="true" tabindex="-1"></a><span class="st">eval $(minikube docker-env)</span></span>
+<span id="cb49-16"><a href="#cb49-16" aria-hidden="true" tabindex="-1"></a><span class="st">docker build -t spark-etl:1.0.0 -f docker/Dockerfile .</span></span>
+<span id="cb49-17"><a href="#cb49-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-18"><a href="#cb49-18" aria-hidden="true" tabindex="-1"></a><span class="st"># 3. Vérifier que MinIO est prêt</span></span>
+<span id="cb49-19"><a href="#cb49-19" aria-hidden="true" tabindex="-1"></a><span class="st">echo "⏳ Attente de MinIO..."</span></span>
+<span id="cb49-20"><a href="#cb49-20" aria-hidden="true" tabindex="-1"></a><span class="st">kubectl wait --for=condition=ready pod -l app=minio -n minio --timeout=120s</span></span>
+<span id="cb49-21"><a href="#cb49-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-22"><a href="#cb49-22" aria-hidden="true" tabindex="-1"></a><span class="st"># 4. Lancer le job Spark</span></span>
+<span id="cb49-23"><a href="#cb49-23" aria-hidden="true" tabindex="-1"></a><span class="st">echo "🔥 Lancement du job Spark..."</span></span>
+<span id="cb49-24"><a href="#cb49-24" aria-hidden="true" tabindex="-1"></a><span class="st">kubectl apply -f manifests/spark-application.yaml</span></span>
+<span id="cb49-25"><a href="#cb49-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-26"><a href="#cb49-26" aria-hidden="true" tabindex="-1"></a><span class="st"># 5. Suivre le job</span></span>
+<span id="cb49-27"><a href="#cb49-27" aria-hidden="true" tabindex="-1"></a><span class="st">echo "📊 Suivi du job..."</span></span>
+<span id="cb49-28"><a href="#cb49-28" aria-hidden="true" tabindex="-1"></a><span class="st">kubectl get sparkapplication -n spark -w</span></span>
+<span id="cb49-29"><a href="#cb49-29" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
+<span id="cb49-30"><a href="#cb49-30" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(deployment_script)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 </section>
@@ -3068,20 +2948,20 @@ Sur K8s avec Object Storage :
 <div id="verify_commands" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb52"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>verify_commands <span class="op">=</span> <span class="st">"""</span></span>
-<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a><span class="st"># Vérifier le statut du job</span></span>
-<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a><span class="st">kubectl get sparkapplication -n spark</span></span>
-<span id="cb52-4"><a href="#cb52-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-5"><a href="#cb52-5" aria-hidden="true" tabindex="-1"></a><span class="st"># Voir les logs du driver</span></span>
-<span id="cb52-6"><a href="#cb52-6" aria-hidden="true" tabindex="-1"></a><span class="st">kubectl logs -n spark -l spark-role=driver</span></span>
-<span id="cb52-7"><a href="#cb52-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-8"><a href="#cb52-8" aria-hidden="true" tabindex="-1"></a><span class="st"># Vérifier les outputs dans MinIO</span></span>
-<span id="cb52-9"><a href="#cb52-9" aria-hidden="true" tabindex="-1"></a><span class="st">mc ls myminio/silver/data/</span></span>
-<span id="cb52-10"><a href="#cb52-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-11"><a href="#cb52-11" aria-hidden="true" tabindex="-1"></a><span class="st"># Lire un sample des données</span></span>
-<span id="cb52-12"><a href="#cb52-12" aria-hidden="true" tabindex="-1"></a><span class="st">mc cat myminio/silver/data/part-00000.parquet | head</span></span>
-<span id="cb52-13"><a href="#cb52-13" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
-<span id="cb52-14"><a href="#cb52-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(verify_commands)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>verify_commands <span class="op">=</span> <span class="st">"""</span></span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a><span class="st"># Vérifier le statut du job</span></span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a><span class="st">kubectl get sparkapplication -n spark</span></span>
+<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a><span class="st"># Voir les logs du driver</span></span>
+<span id="cb50-6"><a href="#cb50-6" aria-hidden="true" tabindex="-1"></a><span class="st">kubectl logs -n spark -l spark-role=driver</span></span>
+<span id="cb50-7"><a href="#cb50-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-8"><a href="#cb50-8" aria-hidden="true" tabindex="-1"></a><span class="st"># Vérifier les outputs dans MinIO</span></span>
+<span id="cb50-9"><a href="#cb50-9" aria-hidden="true" tabindex="-1"></a><span class="st">mc ls myminio/silver/data/</span></span>
+<span id="cb50-10"><a href="#cb50-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-11"><a href="#cb50-11" aria-hidden="true" tabindex="-1"></a><span class="st"># Lire un sample des données</span></span>
+<span id="cb50-12"><a href="#cb50-12" aria-hidden="true" tabindex="-1"></a><span class="st">mc cat myminio/silver/data/part-00000.parquet | head</span></span>
+<span id="cb50-13"><a href="#cb50-13" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
+<span id="cb50-14"><a href="#cb50-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(verify_commands)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <hr>
@@ -3304,7 +3184,7 @@ Sur K8s avec Object Storage :
 <section id="prochaine-étape" class="level2">
 <h2 class="anchored" data-anchor-id="prochaine-étape">➡️ Prochaine étape</h2>
 <p>Maintenant que tu sais déployer Spark sur Kubernetes, passons au <strong>Cloud et Object Storage</strong> !</p>
-<p>👉 <strong>Module suivant : <code>22_cloud_object_storage.ipynb</code></strong> — Cloud &amp; Object Storage</p>
+<p>👉 <strong>Module suivant : <code>22_cloud_object_storage</code></strong> — Cloud &amp; Object Storage</p>
 <p>Tu vas apprendre :</p>
 <ul>
 <li><strong>Cloud Computing</strong> : IaaS, PaaS, SaaS</li>
@@ -3366,24 +3246,24 @@ Sur K8s avec Object Storage :
 <div id="cleanup" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb53"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Commandes de nettoyage</span></span>
-<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>cleanup_commands <span class="op">=</span> <span class="st">"""</span></span>
-<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a><span class="st"># Supprimer les ressources Spark</span></span>
-<span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a><span class="st">kubectl delete sparkapplication --all -n spark</span></span>
-<span id="cb53-5"><a href="#cb53-5" aria-hidden="true" tabindex="-1"></a><span class="st">kubectl delete namespace spark</span></span>
-<span id="cb53-6"><a href="#cb53-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-7"><a href="#cb53-7" aria-hidden="true" tabindex="-1"></a><span class="st"># Supprimer Spark Operator</span></span>
-<span id="cb53-8"><a href="#cb53-8" aria-hidden="true" tabindex="-1"></a><span class="st">helm uninstall spark-operator -n spark-operator</span></span>
-<span id="cb53-9"><a href="#cb53-9" aria-hidden="true" tabindex="-1"></a><span class="st">kubectl delete namespace spark-operator</span></span>
-<span id="cb53-10"><a href="#cb53-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-11"><a href="#cb53-11" aria-hidden="true" tabindex="-1"></a><span class="st"># Supprimer MinIO</span></span>
-<span id="cb53-12"><a href="#cb53-12" aria-hidden="true" tabindex="-1"></a><span class="st">helm uninstall minio -n minio</span></span>
-<span id="cb53-13"><a href="#cb53-13" aria-hidden="true" tabindex="-1"></a><span class="st">kubectl delete namespace minio</span></span>
-<span id="cb53-14"><a href="#cb53-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-15"><a href="#cb53-15" aria-hidden="true" tabindex="-1"></a><span class="st"># Arrêter Minikube (optionnel)</span></span>
-<span id="cb53-16"><a href="#cb53-16" aria-hidden="true" tabindex="-1"></a><span class="st">minikube stop</span></span>
-<span id="cb53-17"><a href="#cb53-17" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
-<span id="cb53-18"><a href="#cb53-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(cleanup_commands)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb51"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Commandes de nettoyage</span></span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>cleanup_commands <span class="op">=</span> <span class="st">"""</span></span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a><span class="st"># Supprimer les ressources Spark</span></span>
+<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a><span class="st">kubectl delete sparkapplication --all -n spark</span></span>
+<span id="cb51-5"><a href="#cb51-5" aria-hidden="true" tabindex="-1"></a><span class="st">kubectl delete namespace spark</span></span>
+<span id="cb51-6"><a href="#cb51-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-7"><a href="#cb51-7" aria-hidden="true" tabindex="-1"></a><span class="st"># Supprimer Spark Operator</span></span>
+<span id="cb51-8"><a href="#cb51-8" aria-hidden="true" tabindex="-1"></a><span class="st">helm uninstall spark-operator -n spark-operator</span></span>
+<span id="cb51-9"><a href="#cb51-9" aria-hidden="true" tabindex="-1"></a><span class="st">kubectl delete namespace spark-operator</span></span>
+<span id="cb51-10"><a href="#cb51-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-11"><a href="#cb51-11" aria-hidden="true" tabindex="-1"></a><span class="st"># Supprimer MinIO</span></span>
+<span id="cb51-12"><a href="#cb51-12" aria-hidden="true" tabindex="-1"></a><span class="st">helm uninstall minio -n minio</span></span>
+<span id="cb51-13"><a href="#cb51-13" aria-hidden="true" tabindex="-1"></a><span class="st">kubectl delete namespace minio</span></span>
+<span id="cb51-14"><a href="#cb51-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-15"><a href="#cb51-15" aria-hidden="true" tabindex="-1"></a><span class="st"># Arrêter Minikube (optionnel)</span></span>
+<span id="cb51-16"><a href="#cb51-16" aria-hidden="true" tabindex="-1"></a><span class="st">minikube stop</span></span>
+<span id="cb51-17"><a href="#cb51-17" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
+<span id="cb51-18"><a href="#cb51-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(cleanup_commands)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 
@@ -3415,7 +3295,7 @@ Sur K8s avec Object Storage :
 </style>
 
 <div id="pdf-button" onclick="downloadPDF()">
-  📄 Télécharger ce module en PDF
+  📄 Télécharger la version PDF
 </div>
 
 <script>

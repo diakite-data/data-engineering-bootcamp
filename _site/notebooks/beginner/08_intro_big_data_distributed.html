@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>🐘 Introduction au Big Data &amp; Systèmes Distribués – Bootcamp Data Engineering</title>
+<title>Introduction au Big Data &amp; Systèmes Distribués – Bootcamp Data Engineering</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -77,9 +77,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-fc8d3d93f0a84b7619e1f8ff6eb63d42.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-a5e5c9297d81242f794464007003a45f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-7ce12bcd0277d468432a98ebc2064ff0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-a5e5c9297d81242f794464007003a45f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-1ded37139ab960446759ac96e383a6c7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-0c5e4731d53392a4fe54074a744a0e14.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-1ded37139ab960446759ac96e383a6c7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": true,
@@ -114,11 +114,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="keywords" content="data engineering, spark, kafka, python, kubernetes, lakehouse, delta lake, bootcamp">
 
 
-<meta property="og:title" content="🐘 Introduction au Big Data &amp; Systèmes Distribués – Bootcamp Data Engineering">
+<meta property="og:title" content="Introduction au Big Data &amp; Systèmes Distribués – Bootcamp Data Engineering">
 <meta property="og:description" content="Programme complet Data Engineering — Du débutant au Senior Engineer">
 <meta property="og:site_name" content="Bootcamp Data Engineering">
 <meta property="og:locale" content="fr_FR">
-<meta name="twitter:title" content="🐘 Introduction au Big Data &amp; Systèmes Distribués – Bootcamp Data Engineering">
+<meta name="twitter:title" content="Introduction au Big Data &amp; Systèmes Distribués – Bootcamp Data Engineering">
 <meta name="twitter:description" content="Programme complet Data Engineering — Du débutant au Senior Engineer">
 <meta name="twitter:creator" content="@diakite_data">
 <meta name="twitter:site" content="@diakite_data">
@@ -703,42 +703,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <span class="sidebar-item-text sidebar-link text-start">
  <span class="menu-text">🟥 Niveau 3 : Avancé</span></span>
   </li>
-        <li class="px-0"><hr class="sidebar-divider hi "></li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false">
- <span class="menu-text">📚 Ressources</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../resources/setup.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">🔧 Setup Environnement</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../resources/documentation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">📖 Documentation</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../resources/faq.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">❓ FAQ</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../resources/links.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">🔗 Liens Utiles</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
     </ul>
     </div>
 </nav>
@@ -749,108 +713,108 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">📑 Sommaire</h2>
    
   <ul>
-  <li><a href="#prérequis" id="toc-prérequis" class="nav-link active" data-scroll-target="#prérequis">📋 Prérequis</a></li>
-  <li><a href="#objectifs-du-module" id="toc-objectifs-du-module" class="nav-link" data-scroll-target="#objectifs-du-module">🎯 Objectifs du module</a></li>
-  <li><a href="#cest-quoi-le-big-data" id="toc-cest-quoi-le-big-data" class="nav-link" data-scroll-target="#cest-quoi-le-big-data">🌍 1. C’est quoi le Big Data ?</a>
+  <li><a href="#prérequis" id="toc-prérequis" class="nav-link active" data-scroll-target="#prérequis">Prérequis</a></li>
+  <li><a href="#objectifs-du-module" id="toc-objectifs-du-module" class="nav-link" data-scroll-target="#objectifs-du-module">Objectifs du module</a></li>
+  <li><a href="#cest-quoi-le-big-data" id="toc-cest-quoi-le-big-data" class="nav-link" data-scroll-target="#cest-quoi-le-big-data">1. C’est quoi le Big Data ?</a>
   <ul class="collapse">
-  <li><a href="#définition" id="toc-définition" class="nav-link" data-scroll-target="#définition">📖 Définition</a></li>
-  <li><a href="#origine" id="toc-origine" class="nav-link" data-scroll-target="#origine">📅 Origine</a></li>
-  <li><a href="#ordres-de-grandeur" id="toc-ordres-de-grandeur" class="nav-link" data-scroll-target="#ordres-de-grandeur">📊 Ordres de grandeur</a></li>
-  <li><a href="#exemples-concrets" id="toc-exemples-concrets" class="nav-link" data-scroll-target="#exemples-concrets">🏢 Exemples concrets</a></li>
+  <li><a href="#définition" id="toc-définition" class="nav-link" data-scroll-target="#définition">Définition</a></li>
+  <li><a href="#origine" id="toc-origine" class="nav-link" data-scroll-target="#origine">Origine</a></li>
+  <li><a href="#ordres-de-grandeur" id="toc-ordres-de-grandeur" class="nav-link" data-scroll-target="#ordres-de-grandeur">Ordres de grandeur</a></li>
+  <li><a href="#exemples-concrets" id="toc-exemples-concrets" class="nav-link" data-scroll-target="#exemples-concrets">Exemples concrets</a></li>
   </ul></li>
-  <li><a href="#les-5v-du-big-data" id="toc-les-5v-du-big-data" class="nav-link" data-scroll-target="#les-5v-du-big-data">📊 2. Les 5V du Big Data</a>
+  <li><a href="#les-5v-du-big-data" id="toc-les-5v-du-big-data" class="nav-link" data-scroll-target="#les-5v-du-big-data">2. Les 5V du Big Data</a>
   <ul class="collapse">
-  <li><a href="#volume-la-quantité-massive-de-données" id="toc-volume-la-quantité-massive-de-données" class="nav-link" data-scroll-target="#volume-la-quantité-massive-de-données">📦 Volume — La quantité massive de données</a></li>
-  <li><a href="#velocity-la-vitesse-de-génération-et-traitement" id="toc-velocity-la-vitesse-de-génération-et-traitement" class="nav-link" data-scroll-target="#velocity-la-vitesse-de-génération-et-traitement">⚡ Velocity — La vitesse de génération et traitement</a></li>
-  <li><a href="#variety-la-diversité-des-formats" id="toc-variety-la-diversité-des-formats" class="nav-link" data-scroll-target="#variety-la-diversité-des-formats">🎨 Variety — La diversité des formats</a></li>
-  <li><a href="#veracity-la-fiabilité-des-données" id="toc-veracity-la-fiabilité-des-données" class="nav-link" data-scroll-target="#veracity-la-fiabilité-des-données">✅ Veracity — La fiabilité des données</a></li>
-  <li><a href="#value-la-valeur-extraite" id="toc-value-la-valeur-extraite" class="nav-link" data-scroll-target="#value-la-valeur-extraite">💎 Value — La valeur extraite</a></li>
+  <li><a href="#volume-la-quantité-massive-de-données" id="toc-volume-la-quantité-massive-de-données" class="nav-link" data-scroll-target="#volume-la-quantité-massive-de-données">Volume — La quantité massive de données</a></li>
+  <li><a href="#velocity-la-vitesse-de-génération-et-traitement" id="toc-velocity-la-vitesse-de-génération-et-traitement" class="nav-link" data-scroll-target="#velocity-la-vitesse-de-génération-et-traitement">Velocity — La vitesse de génération et traitement</a></li>
+  <li><a href="#variety-la-diversité-des-formats" id="toc-variety-la-diversité-des-formats" class="nav-link" data-scroll-target="#variety-la-diversité-des-formats">Variety — La diversité des formats</a></li>
+  <li><a href="#veracity-la-fiabilité-des-données" id="toc-veracity-la-fiabilité-des-données" class="nav-link" data-scroll-target="#veracity-la-fiabilité-des-données">Veracity — La fiabilité des données</a></li>
+  <li><a href="#value-la-valeur-extraite" id="toc-value-la-valeur-extraite" class="nav-link" data-scroll-target="#value-la-valeur-extraite">Value — La valeur extraite</a></li>
   </ul></li>
-  <li><a href="#pourquoi-le-traitement-distribué" id="toc-pourquoi-le-traitement-distribué" class="nav-link" data-scroll-target="#pourquoi-le-traitement-distribué">⚙️ 3. Pourquoi le traitement distribué ?</a>
+  <li><a href="#pourquoi-le-traitement-distribué" id="toc-pourquoi-le-traitement-distribué" class="nav-link" data-scroll-target="#pourquoi-le-traitement-distribué">3. Pourquoi le traitement distribué ?</a>
   <ul class="collapse">
-  <li><a href="#limites-dune-machine-unique" id="toc-limites-dune-machine-unique" class="nav-link" data-scroll-target="#limites-dune-machine-unique">🚫 Limites d’une machine unique</a></li>
-  <li><a href="#scale-up-vs-scale-out" id="toc-scale-up-vs-scale-out" class="nav-link" data-scroll-target="#scale-up-vs-scale-out">📈 Scale-Up vs Scale-Out</a></li>
-  <li><a href="#le-big-data-utilise-le-scale-out" id="toc-le-big-data-utilise-le-scale-out" class="nav-link" data-scroll-target="#le-big-data-utilise-le-scale-out">✅ Le Big Data utilise le Scale-Out !</a></li>
+  <li><a href="#limites-dune-machine-unique" id="toc-limites-dune-machine-unique" class="nav-link" data-scroll-target="#limites-dune-machine-unique">Limites d’une machine unique</a></li>
+  <li><a href="#scale-up-vs-scale-out" id="toc-scale-up-vs-scale-out" class="nav-link" data-scroll-target="#scale-up-vs-scale-out">Scale-Up vs Scale-Out</a></li>
+  <li><a href="#le-big-data-utilise-le-scale-out" id="toc-le-big-data-utilise-le-scale-out" class="nav-link" data-scroll-target="#le-big-data-utilise-le-scale-out">Le Big Data utilise le Scale-Out !</a></li>
   </ul></li>
-  <li><a href="#concepts-clés-du-traitement-distribué" id="toc-concepts-clés-du-traitement-distribué" class="nav-link" data-scroll-target="#concepts-clés-du-traitement-distribué">🧠 4. Concepts clés du traitement distribué</a>
+  <li><a href="#concepts-clés-du-traitement-distribué" id="toc-concepts-clés-du-traitement-distribué" class="nav-link" data-scroll-target="#concepts-clés-du-traitement-distribué">4. Concepts clés du traitement distribué</a>
   <ul class="collapse">
-  <li><a href="#parallélisme-vs-distribution" id="toc-parallélisme-vs-distribution" class="nav-link" data-scroll-target="#parallélisme-vs-distribution">🔄 Parallélisme vs Distribution</a></li>
-  <li><a href="#data-locality-amener-le-code-aux-données" id="toc-data-locality-amener-le-code-aux-données" class="nav-link" data-scroll-target="#data-locality-amener-le-code-aux-données">📍 Data Locality — “Amener le code aux données”</a></li>
-  <li><a href="#fault-tolerance-tolérance-aux-pannes" id="toc-fault-tolerance-tolérance-aux-pannes" class="nav-link" data-scroll-target="#fault-tolerance-tolérance-aux-pannes">🛡️ Fault Tolerance — Tolérance aux pannes</a></li>
+  <li><a href="#parallélisme-vs-distribution" id="toc-parallélisme-vs-distribution" class="nav-link" data-scroll-target="#parallélisme-vs-distribution">Parallélisme vs Distribution</a></li>
+  <li><a href="#data-locality-amener-le-code-aux-données" id="toc-data-locality-amener-le-code-aux-données" class="nav-link" data-scroll-target="#data-locality-amener-le-code-aux-données">Data Locality — “Amener le code aux données”</a></li>
+  <li><a href="#fault-tolerance-tolérance-aux-pannes" id="toc-fault-tolerance-tolérance-aux-pannes" class="nav-link" data-scroll-target="#fault-tolerance-tolérance-aux-pannes">Fault Tolerance — Tolérance aux pannes</a></li>
   </ul></li>
-  <li><a href="#lécosystème-hadoop" id="toc-lécosystème-hadoop" class="nav-link" data-scroll-target="#lécosystème-hadoop">🐘 5. L’écosystème Hadoop</a>
+  <li><a href="#lécosystème-hadoop" id="toc-lécosystème-hadoop" class="nav-link" data-scroll-target="#lécosystème-hadoop">5. L’écosystème Hadoop</a>
   <ul class="collapse">
   <li><a href="#architecture" id="toc-architecture" class="nav-link" data-scroll-target="#architecture">🏗️ Architecture</a></li>
-  <li><a href="#hdfs-hadoop-distributed-file-system" id="toc-hdfs-hadoop-distributed-file-system" class="nav-link" data-scroll-target="#hdfs-hadoop-distributed-file-system">📁 HDFS — Hadoop Distributed File System</a></li>
-  <li><a href="#yarn-yet-another-resource-negotiator" id="toc-yarn-yet-another-resource-negotiator" class="nav-link" data-scroll-target="#yarn-yet-another-resource-negotiator">🎛️ YARN — Yet Another Resource Negotiator</a></li>
+  <li><a href="#hdfs-hadoop-distributed-file-system" id="toc-hdfs-hadoop-distributed-file-system" class="nav-link" data-scroll-target="#hdfs-hadoop-distributed-file-system">HDFS — Hadoop Distributed File System</a></li>
+  <li><a href="#yarn-yet-another-resource-negotiator" id="toc-yarn-yet-another-resource-negotiator" class="nav-link" data-scroll-target="#yarn-yet-another-resource-negotiator">YARN — Yet Another Resource Negotiator</a></li>
   </ul></li>
-  <li><a href="#mapreduce-le-modèle-de-traitement" id="toc-mapreduce-le-modèle-de-traitement" class="nav-link" data-scroll-target="#mapreduce-le-modèle-de-traitement">🔄 6. MapReduce — Le modèle de traitement</a>
+  <li><a href="#mapreduce-le-modèle-de-traitement" id="toc-mapreduce-le-modèle-de-traitement" class="nav-link" data-scroll-target="#mapreduce-le-modèle-de-traitement">6. MapReduce — Le modèle de traitement</a>
   <ul class="collapse">
-  <li><a href="#les-3-étapes" id="toc-les-3-étapes" class="nav-link" data-scroll-target="#les-3-étapes">📐 Les 3 étapes</a></li>
-  <li><a href="#exemple-word-count" id="toc-exemple-word-count" class="nav-link" data-scroll-target="#exemple-word-count">📝 Exemple : Word Count</a></li>
-  <li><a href="#mapreduce-sur-un-cluster" id="toc-mapreduce-sur-un-cluster" class="nav-link" data-scroll-target="#mapreduce-sur-un-cluster">🖥️ MapReduce sur un cluster</a></li>
+  <li><a href="#les-3-étapes" id="toc-les-3-étapes" class="nav-link" data-scroll-target="#les-3-étapes">Les 3 étapes</a></li>
+  <li><a href="#exemple-word-count" id="toc-exemple-word-count" class="nav-link" data-scroll-target="#exemple-word-count">Exemple : Word Count</a></li>
+  <li><a href="#mapreduce-sur-un-cluster" id="toc-mapreduce-sur-un-cluster" class="nav-link" data-scroll-target="#mapreduce-sur-un-cluster">MapReduce sur un cluster</a></li>
   </ul></li>
-  <li><a href="#limites-de-mapreduce" id="toc-limites-de-mapreduce" class="nav-link" data-scroll-target="#limites-de-mapreduce">⚠️ 7. Limites de MapReduce</a>
+  <li><a href="#limites-de-mapreduce" id="toc-limites-de-mapreduce" class="nav-link" data-scroll-target="#limites-de-mapreduce">7. Limites de MapReduce</a>
   <ul class="collapse">
-  <li><a href="#problèmes-de-mapreduce" id="toc-problèmes-de-mapreduce" class="nav-link" data-scroll-target="#problèmes-de-mapreduce">😓 Problèmes de MapReduce</a></li>
-  <li><a href="#le-problème-du-disque" id="toc-le-problème-du-disque" class="nav-link" data-scroll-target="#le-problème-du-disque">💾 Le problème du disque</a></li>
-  <li><a href="#exemple-algorithme-itératif-ml" id="toc-exemple-algorithme-itératif-ml" class="nav-link" data-scroll-target="#exemple-algorithme-itératif-ml">🔥 Exemple : Algorithme itératif (ML)</a></li>
+  <li><a href="#problèmes-de-mapreduce" id="toc-problèmes-de-mapreduce" class="nav-link" data-scroll-target="#problèmes-de-mapreduce">Problèmes de MapReduce</a></li>
+  <li><a href="#le-problème-du-disque" id="toc-le-problème-du-disque" class="nav-link" data-scroll-target="#le-problème-du-disque">Le problème du disque</a></li>
+  <li><a href="#exemple-algorithme-itératif-ml" id="toc-exemple-algorithme-itératif-ml" class="nav-link" data-scroll-target="#exemple-algorithme-itératif-ml">Exemple : Algorithme itératif (ML)</a></li>
   </ul></li>
-  <li><a href="#spark-lévolution" id="toc-spark-lévolution" class="nav-link" data-scroll-target="#spark-lévolution">⚡ 8. Spark — L’évolution</a>
+  <li><a href="#spark-lévolution" id="toc-spark-lévolution" class="nav-link" data-scroll-target="#spark-lévolution">8. Spark — L’évolution</a>
   <ul class="collapse">
-  <li><a href="#comparaison-hadoop-mapreduce-vs-spark" id="toc-comparaison-hadoop-mapreduce-vs-spark" class="nav-link" data-scroll-target="#comparaison-hadoop-mapreduce-vs-spark">📊 Comparaison Hadoop MapReduce vs Spark</a></li>
-  <li><a href="#architecture-spark" id="toc-architecture-spark" class="nav-link" data-scroll-target="#architecture-spark">🏗️ Architecture Spark</a></li>
-  <li><a href="#concepts-spark-à-venir" id="toc-concepts-spark-à-venir" class="nav-link" data-scroll-target="#concepts-spark-à-venir">🔮 Concepts Spark à venir</a></li>
-  <li><a href="#ce-que-tu-vas-apprendre-avec-pyspark" id="toc-ce-que-tu-vas-apprendre-avec-pyspark" class="nav-link" data-scroll-target="#ce-que-tu-vas-apprendre-avec-pyspark">🎯 Ce que tu vas apprendre avec PySpark</a></li>
+  <li><a href="#comparaison-hadoop-mapreduce-vs-spark" id="toc-comparaison-hadoop-mapreduce-vs-spark" class="nav-link" data-scroll-target="#comparaison-hadoop-mapreduce-vs-spark">Comparaison Hadoop MapReduce vs Spark</a></li>
+  <li><a href="#architecture-spark" id="toc-architecture-spark" class="nav-link" data-scroll-target="#architecture-spark">Architecture Spark</a></li>
+  <li><a href="#concepts-spark-à-venir" id="toc-concepts-spark-à-venir" class="nav-link" data-scroll-target="#concepts-spark-à-venir">Concepts Spark à venir</a></li>
+  <li><a href="#ce-que-tu-vas-apprendre-avec-pyspark" id="toc-ce-que-tu-vas-apprendre-avec-pyspark" class="nav-link" data-scroll-target="#ce-que-tu-vas-apprendre-avec-pyspark">Ce que tu vas apprendre avec PySpark</a></li>
   </ul></li>
-  <li><a href="#architectures-de-stockage-modernes" id="toc-architectures-de-stockage-modernes" class="nav-link" data-scroll-target="#architectures-de-stockage-modernes">🏗️ 9. Architectures de Stockage Modernes</a>
+  <li><a href="#architectures-de-stockage-modernes" id="toc-architectures-de-stockage-modernes" class="nav-link" data-scroll-target="#architectures-de-stockage-modernes">9. Architectures de Stockage Modernes</a>
   <ul class="collapse">
-  <li><a href="#data-lake-le-lac-de-données" id="toc-data-lake-le-lac-de-données" class="nav-link" data-scroll-target="#data-lake-le-lac-de-données">🌊 9.1 Data Lake — Le lac de données</a></li>
-  <li><a href="#data-lakehouse-le-meilleur-des-deux-mondes" id="toc-data-lakehouse-le-meilleur-des-deux-mondes" class="nav-link" data-scroll-target="#data-lakehouse-le-meilleur-des-deux-mondes">🏠 9.2 Data Lakehouse — Le meilleur des deux mondes</a></li>
-  <li><a href="#comparaison-warehouse-vs-lake-vs-lakehouse" id="toc-comparaison-warehouse-vs-lake-vs-lakehouse" class="nav-link" data-scroll-target="#comparaison-warehouse-vs-lake-vs-lakehouse">⚖️ 9.3 Comparaison : Warehouse vs Lake vs Lakehouse</a></li>
-  <li><a href="#medallion-architecture-bronze-silver-gold" id="toc-medallion-architecture-bronze-silver-gold" class="nav-link" data-scroll-target="#medallion-architecture-bronze-silver-gold">🥉🥈🥇 9.4 Medallion Architecture — Bronze, Silver, Gold</a></li>
+  <li><a href="#data-lake-le-lac-de-données" id="toc-data-lake-le-lac-de-données" class="nav-link" data-scroll-target="#data-lake-le-lac-de-données">9.1 Data Lake — Le lac de données</a></li>
+  <li><a href="#data-lakehouse-le-meilleur-des-deux-mondes" id="toc-data-lakehouse-le-meilleur-des-deux-mondes" class="nav-link" data-scroll-target="#data-lakehouse-le-meilleur-des-deux-mondes">9.2 Data Lakehouse — Le meilleur des deux mondes</a></li>
+  <li><a href="#comparaison-warehouse-vs-lake-vs-lakehouse" id="toc-comparaison-warehouse-vs-lake-vs-lakehouse" class="nav-link" data-scroll-target="#comparaison-warehouse-vs-lake-vs-lakehouse">9.3 Comparaison : Warehouse vs Lake vs Lakehouse</a></li>
+  <li><a href="#medallion-architecture-bronze-silver-gold" id="toc-medallion-architecture-bronze-silver-gold" class="nav-link" data-scroll-target="#medallion-architecture-bronze-silver-gold">9.4 Medallion Architecture — Bronze, Silver, Gold</a></li>
   </ul></li>
-  <li><a href="#architectures-de-traitement-lambda-kappa" id="toc-architectures-de-traitement-lambda-kappa" class="nav-link" data-scroll-target="#architectures-de-traitement-lambda-kappa">🔄 10. Architectures de Traitement — Lambda &amp; Kappa</a>
+  <li><a href="#architectures-de-traitement-lambda-kappa" id="toc-architectures-de-traitement-lambda-kappa" class="nav-link" data-scroll-target="#architectures-de-traitement-lambda-kappa">10. Architectures de Traitement — Lambda &amp; Kappa</a>
   <ul class="collapse">
-  <li><a href="#lambda-architecture-batch-streaming" id="toc-lambda-architecture-batch-streaming" class="nav-link" data-scroll-target="#lambda-architecture-batch-streaming">⚡ 10.1 Lambda Architecture — Batch + Streaming</a></li>
-  <li><a href="#kappa-architecture-streaming-first" id="toc-kappa-architecture-streaming-first" class="nav-link" data-scroll-target="#kappa-architecture-streaming-first">🌀 10.2 Kappa Architecture — Streaming-first</a></li>
-  <li><a href="#lambda-vs-kappa-quand-utiliser-quoi" id="toc-lambda-vs-kappa-quand-utiliser-quoi" class="nav-link" data-scroll-target="#lambda-vs-kappa-quand-utiliser-quoi">⚖️ 10.3 Lambda vs Kappa — Quand utiliser quoi ?</a></li>
+  <li><a href="#lambda-architecture-batch-streaming" id="toc-lambda-architecture-batch-streaming" class="nav-link" data-scroll-target="#lambda-architecture-batch-streaming">10.1 Lambda Architecture — Batch + Streaming</a></li>
+  <li><a href="#kappa-architecture-streaming-first" id="toc-kappa-architecture-streaming-first" class="nav-link" data-scroll-target="#kappa-architecture-streaming-first">10.2 Kappa Architecture — Streaming-first</a></li>
+  <li><a href="#lambda-vs-kappa-quand-utiliser-quoi" id="toc-lambda-vs-kappa-quand-utiliser-quoi" class="nav-link" data-scroll-target="#lambda-vs-kappa-quand-utiliser-quoi">10.3 Lambda vs Kappa — Quand utiliser quoi ?</a></li>
   </ul></li>
-  <li><a href="#data-mesh-lapproche-décentralisée" id="toc-data-mesh-lapproche-décentralisée" class="nav-link" data-scroll-target="#data-mesh-lapproche-décentralisée">🕸️ 11. Data Mesh — L’approche décentralisée</a>
+  <li><a href="#data-mesh-lapproche-décentralisée" id="toc-data-mesh-lapproche-décentralisée" class="nav-link" data-scroll-target="#data-mesh-lapproche-décentralisée">11. Data Mesh — L’approche décentralisée</a>
   <ul class="collapse">
-  <li><a href="#origine-du-problème" id="toc-origine-du-problème" class="nav-link" data-scroll-target="#origine-du-problème">📖 Origine du problème</a></li>
-  <li><a href="#les-4-principes-du-data-mesh" id="toc-les-4-principes-du-data-mesh" class="nav-link" data-scroll-target="#les-4-principes-du-data-mesh">🎯 Les 4 principes du Data Mesh</a></li>
-  <li><a href="#architecture-data-mesh" id="toc-architecture-data-mesh" class="nav-link" data-scroll-target="#architecture-data-mesh">🏗️ Architecture Data Mesh</a></li>
-  <li><a href="#data-mesh-vs-architecture-centralisée" id="toc-data-mesh-vs-architecture-centralisée" class="nav-link" data-scroll-target="#data-mesh-vs-architecture-centralisée">💡 Data Mesh vs Architecture Centralisée</a></li>
+  <li><a href="#origine-du-problème" id="toc-origine-du-problème" class="nav-link" data-scroll-target="#origine-du-problème">Origine du problème</a></li>
+  <li><a href="#les-4-principes-du-data-mesh" id="toc-les-4-principes-du-data-mesh" class="nav-link" data-scroll-target="#les-4-principes-du-data-mesh">Les 4 principes du Data Mesh</a></li>
+  <li><a href="#architecture-data-mesh" id="toc-architecture-data-mesh" class="nav-link" data-scroll-target="#architecture-data-mesh">Architecture Data Mesh</a></li>
+  <li><a href="#data-mesh-vs-architecture-centralisée" id="toc-data-mesh-vs-architecture-centralisée" class="nav-link" data-scroll-target="#data-mesh-vs-architecture-centralisée">Data Mesh vs Architecture Centralisée</a></li>
   </ul></li>
-  <li><a href="#nosql-au-delà-des-bases-relationnelles" id="toc-nosql-au-delà-des-bases-relationnelles" class="nav-link" data-scroll-target="#nosql-au-delà-des-bases-relationnelles">🗄️ 12. NoSQL — Au-delà des bases relationnelles</a>
+  <li><a href="#nosql-au-delà-des-bases-relationnelles" id="toc-nosql-au-delà-des-bases-relationnelles" class="nav-link" data-scroll-target="#nosql-au-delà-des-bases-relationnelles">12. NoSQL — Au-delà des bases relationnelles</a>
   <ul class="collapse">
-  <li><a href="#pourquoi-nosql" id="toc-pourquoi-nosql" class="nav-link" data-scroll-target="#pourquoi-nosql">🤔 Pourquoi NoSQL ?</a>
+  <li><a href="#pourquoi-nosql" id="toc-pourquoi-nosql" class="nav-link" data-scroll-target="#pourquoi-nosql">Pourquoi NoSQL ?</a>
   <ul class="collapse">
   <li><a href="#les-limites-des-bases-relationnelles-face-au-big-data" id="toc-les-limites-des-bases-relationnelles-face-au-big-data" class="nav-link" data-scroll-target="#les-limites-des-bases-relationnelles-face-au-big-data">Les limites des bases relationnelles face au Big Data</a></li>
   <li><a href="#la-solution-nosql" id="toc-la-solution-nosql" class="nav-link" data-scroll-target="#la-solution-nosql">La solution NoSQL</a></li>
   </ul></li>
-  <li><a href="#les-4-types-de-bases-nosql" id="toc-les-4-types-de-bases-nosql" class="nav-link" data-scroll-target="#les-4-types-de-bases-nosql">📊 Les 4 types de bases NoSQL</a>
+  <li><a href="#les-4-types-de-bases-nosql" id="toc-les-4-types-de-bases-nosql" class="nav-link" data-scroll-target="#les-4-types-de-bases-nosql">Les 4 types de bases NoSQL</a>
   <ul class="collapse">
-  <li><a href="#bases-document-mongodb-couchbase" id="toc-bases-document-mongodb-couchbase" class="nav-link" data-scroll-target="#bases-document-mongodb-couchbase">📄 1. Bases Document (MongoDB, Couchbase)</a></li>
-  <li><a href="#bases-clé-valeur-redis-memcached" id="toc-bases-clé-valeur-redis-memcached" class="nav-link" data-scroll-target="#bases-clé-valeur-redis-memcached">🔑 2. Bases Clé-Valeur (Redis, Memcached)</a></li>
-  <li><a href="#bases-colonnes-cassandra-hbase" id="toc-bases-colonnes-cassandra-hbase" class="nav-link" data-scroll-target="#bases-colonnes-cassandra-hbase">📊 3. Bases Colonnes (Cassandra, HBase)</a></li>
-  <li><a href="#bases-graphe-neo4j-amazon-neptune" id="toc-bases-graphe-neo4j-amazon-neptune" class="nav-link" data-scroll-target="#bases-graphe-neo4j-amazon-neptune">🔗 4. Bases Graphe (Neo4j, Amazon Neptune)</a></li>
+  <li><a href="#bases-document-mongodb-couchbase" id="toc-bases-document-mongodb-couchbase" class="nav-link" data-scroll-target="#bases-document-mongodb-couchbase">1. Bases Document (MongoDB, Couchbase)</a></li>
+  <li><a href="#bases-clé-valeur-redis-memcached" id="toc-bases-clé-valeur-redis-memcached" class="nav-link" data-scroll-target="#bases-clé-valeur-redis-memcached">2. Bases Clé-Valeur (Redis, Memcached)</a></li>
+  <li><a href="#bases-colonnes-cassandra-hbase" id="toc-bases-colonnes-cassandra-hbase" class="nav-link" data-scroll-target="#bases-colonnes-cassandra-hbase">3. Bases Colonnes (Cassandra, HBase)</a></li>
+  <li><a href="#bases-graphe-neo4j-amazon-neptune" id="toc-bases-graphe-neo4j-amazon-neptune" class="nav-link" data-scroll-target="#bases-graphe-neo4j-amazon-neptune">4. Bases Graphe (Neo4j, Amazon Neptune)</a></li>
   </ul></li>
-  <li><a href="#le-théorème-cap" id="toc-le-théorème-cap" class="nav-link" data-scroll-target="#le-théorème-cap">🔺 Le théorème CAP</a>
+  <li><a href="#le-théorème-cap" id="toc-le-théorème-cap" class="nav-link" data-scroll-target="#le-théorème-cap">Le théorème CAP</a>
   <ul class="collapse">
-  <li><a href="#les-3-propriétés" id="toc-les-3-propriétés" class="nav-link" data-scroll-target="#les-3-propriétés">📖 Les 3 propriétés</a></li>
-  <li><a href="#le-théorème-dit" id="toc-le-théorème-dit" class="nav-link" data-scroll-target="#le-théorème-dit">⚠️ Le théorème dit :</a></li>
-  <li><a href="#classification-des-bases-selon-cap" id="toc-classification-des-bases-selon-cap" class="nav-link" data-scroll-target="#classification-des-bases-selon-cap">🗂️ Classification des bases selon CAP</a></li>
+  <li><a href="#les-3-propriétés" id="toc-les-3-propriétés" class="nav-link" data-scroll-target="#les-3-propriétés">Les 3 propriétés</a></li>
+  <li><a href="#le-théorème-dit" id="toc-le-théorème-dit" class="nav-link" data-scroll-target="#le-théorème-dit">Le théorème dit :</a></li>
+  <li><a href="#classification-des-bases-selon-cap" id="toc-classification-des-bases-selon-cap" class="nav-link" data-scroll-target="#classification-des-bases-selon-cap">Classification des bases selon CAP</a></li>
   </ul></li>
-  <li><a href="#sql-vs-nosql-quand-utiliser-quoi" id="toc-sql-vs-nosql-quand-utiliser-quoi" class="nav-link" data-scroll-target="#sql-vs-nosql-quand-utiliser-quoi">⚖️ SQL vs NoSQL — Quand utiliser quoi ?</a>
+  <li><a href="#sql-vs-nosql-quand-utiliser-quoi" id="toc-sql-vs-nosql-quand-utiliser-quoi" class="nav-link" data-scroll-target="#sql-vs-nosql-quand-utiliser-quoi">SQL vs NoSQL — Quand utiliser quoi ?</a>
   <ul class="collapse">
-  <li><a href="#tableau-comparatif" id="toc-tableau-comparatif" class="nav-link" data-scroll-target="#tableau-comparatif">📊 Tableau comparatif</a></li>
-  <li><a href="#utilise-sql-quand" id="toc-utilise-sql-quand" class="nav-link" data-scroll-target="#utilise-sql-quand">✅ Utilise SQL quand…</a></li>
-  <li><a href="#utilise-nosql-quand" id="toc-utilise-nosql-quand" class="nav-link" data-scroll-target="#utilise-nosql-quand">✅ Utilise NoSQL quand…</a></li>
-  <li><a href="#en-réalité-on-utilise-les-deux" id="toc-en-réalité-on-utilise-les-deux" class="nav-link" data-scroll-target="#en-réalité-on-utilise-les-deux">🎯 En réalité : on utilise les deux !</a></li>
+  <li><a href="#tableau-comparatif" id="toc-tableau-comparatif" class="nav-link" data-scroll-target="#tableau-comparatif">Tableau comparatif</a></li>
+  <li><a href="#utilise-sql-quand" id="toc-utilise-sql-quand" class="nav-link" data-scroll-target="#utilise-sql-quand">Utilise SQL quand…</a></li>
+  <li><a href="#utilise-nosql-quand" id="toc-utilise-nosql-quand" class="nav-link" data-scroll-target="#utilise-nosql-quand">Utilise NoSQL quand…</a></li>
+  <li><a href="#en-réalité-on-utilise-les-deux" id="toc-en-réalité-on-utilise-les-deux" class="nav-link" data-scroll-target="#en-réalité-on-utilise-les-deux">En réalité : on utilise les deux !</a></li>
   </ul></li>
-  <li><a href="#résumé" id="toc-résumé" class="nav-link" data-scroll-target="#résumé">📋 Résumé</a>
+  <li><a href="#résumé" id="toc-résumé" class="nav-link" data-scroll-target="#résumé">Résumé</a>
   <ul class="collapse">
   <li><a href="#les-5v-du-big-data-1" id="toc-les-5v-du-big-data-1" class="nav-link" data-scroll-target="#les-5v-du-big-data-1">Les 5V du Big Data</a></li>
   <li><a href="#traitement-distribué" id="toc-traitement-distribué" class="nav-link" data-scroll-target="#traitement-distribué">Traitement distribué</a></li>
@@ -859,7 +823,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#architectures-de-traitement" id="toc-architectures-de-traitement" class="nav-link" data-scroll-target="#architectures-de-traitement">Architectures de traitement</a></li>
   <li><a href="#sql-vs-nosql" id="toc-sql-vs-nosql" class="nav-link" data-scroll-target="#sql-vs-nosql">SQL vs NoSQL</a></li>
   </ul></li>
-  <li><a href="#quiz" id="toc-quiz" class="nav-link" data-scroll-target="#quiz">🧠 Quiz</a>
+  <li><a href="#quiz" id="toc-quiz" class="nav-link" data-scroll-target="#quiz">Quiz</a>
   <ul class="collapse">
   <li><a href="#q1.-quels-sont-les-3v-originaux-du-big-data" id="toc-q1.-quels-sont-les-3v-originaux-du-big-data" class="nav-link" data-scroll-target="#q1.-quels-sont-les-3v-originaux-du-big-data">❓ Q1. Quels sont les 3V originaux du Big Data ?</a></li>
   <li><a href="#q2.-que-signifie-scale-out" id="toc-q2.-que-signifie-scale-out" class="nav-link" data-scroll-target="#q2.-que-signifie-scale-out">❓ Q2. Que signifie “Scale-out” ?</a></li>
@@ -893,7 +857,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">🟦 Niveau 1 : Débutant</li><li class="breadcrumb-item"><a href="../../notebooks/beginner/08_intro_big_data_distributed.html">📊 Big Data &amp; NoSQL</a></li><li class="breadcrumb-item"><a href="../../notebooks/beginner/08_intro_big_data_distributed.html">08 · Introduction Big Data</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">🐘 Introduction au Big Data &amp; Systèmes Distribués</h1>
+<h1 class="title">Introduction au Big Data &amp; Systèmes Distribués</h1>
 </div>
 
 
@@ -912,7 +876,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <hr>
 <section id="prérequis" class="level2">
-<h2 class="anchored" data-anchor-id="prérequis">📋 Prérequis</h2>
+<h2 class="anchored" data-anchor-id="prérequis">Prérequis</h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -933,46 +897,50 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 </section>
 <section id="objectifs-du-module" class="level2">
-<h2 class="anchored" data-anchor-id="objectifs-du-module">🎯 Objectifs du module</h2>
+<h2 class="anchored" data-anchor-id="objectifs-du-module">Objectifs du module</h2>
 <p>À la fin de ce notebook, tu seras capable de :</p>
 <ul>
-<li>✅ Comprendre ce qu’est le Big Data et ses caractéristiques (5V)</li>
-<li>✅ Expliquer pourquoi le traitement distribué est nécessaire</li>
-<li>✅ Décrire l’architecture Hadoop (HDFS, MapReduce, YARN)</li>
-<li>✅ Comprendre le modèle MapReduce</li>
-<li>✅ Expliquer pourquoi Spark a remplacé MapReduce</li>
-<li>✅ <strong>Différencier Data Lake et Data Lakehouse</strong></li>
-<li>✅ <strong>Comprendre les architectures Lambda et Kappa</strong></li>
-<li>✅ <strong>Connaître le concept de Data Mesh</strong></li>
-<li>✅ <strong>Comprendre l’architecture Medallion (Bronze/Silver/Gold)</strong></li>
-<li>✅ Comprendre le NoSQL et ses différents types</li>
-<li>✅ Savoir quand utiliser SQL vs NoSQL</li>
-<li>✅ Connaître le théorème CAP</li>
+<li>Comprendre ce qu’est le Big Data et ses caractéristiques (5V)</li>
+<li>Expliquer pourquoi le traitement distribué est nécessaire</li>
+<li>Décrire l’architecture Hadoop (HDFS, MapReduce, YARN)</li>
+<li>Comprendre le modèle MapReduce</li>
+<li>Expliquer pourquoi Spark a remplacé MapReduce</li>
+<li>Différencier Data Lake et Data Lakehouse</li>
+<li>Comprendre les architectures Lambda et Kappa</li>
+<li>Connaître le concept de Data Mesh</li>
+<li>Comprendre l’architecture Medallion (Bronze/Silver/Gold)</li>
+<li>Comprendre le NoSQL et ses différents types</li>
+<li>Savoir quand utiliser SQL vs NoSQL</li>
+<li>Connaître le théorème CAP</li>
 </ul>
 <hr>
 <blockquote class="blockquote">
 <p>💡 <strong>Note</strong> : Ce module est théorique. La pratique viendra avec MongoDB (module suivant) et PySpark !</p>
 </blockquote>
+<p><a href="https://colab.research.google.com/github/diakite-data/data-engineering-bootcamp/blob/main/notebooks/beginner/08_intro_big_data_distributed.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a></p>
+<blockquote class="blockquote">
+<p>💡 <strong>Conseil</strong> : Cliquez sur le badge ci-dessus pour exécuter ce notebook directement dans Google Colab (aucune installation requise).</p>
+</blockquote>
 <hr>
 </section>
 <section id="cest-quoi-le-big-data" class="level2">
-<h2 class="anchored" data-anchor-id="cest-quoi-le-big-data">🌍 1. C’est quoi le Big Data ?</h2>
+<h2 class="anchored" data-anchor-id="cest-quoi-le-big-data">1. C’est quoi le Big Data ?</h2>
 <section id="définition" class="level3">
-<h3 class="anchored" data-anchor-id="définition">📖 Définition</h3>
+<h3 class="anchored" data-anchor-id="définition">Définition</h3>
 <p>Le <strong>Big Data</strong> désigne des ensembles de données <strong>tellement volumineux et complexes</strong> qu’ils ne peuvent pas être traités par des outils traditionnels (Excel, bases SQL classiques, un seul serveur).</p>
 </section>
 <section id="origine" class="level3">
-<h3 class="anchored" data-anchor-id="origine">📅 Origine</h3>
+<h3 class="anchored" data-anchor-id="origine">Origine</h3>
 <p>Le terme a émergé dans les années <strong>2000</strong> avec l’explosion :</p>
 <ul>
-<li>🌐 D’Internet et des réseaux sociaux</li>
-<li>📱 Des smartphones</li>
-<li>📡 Des capteurs IoT</li>
-<li>💳 Des transactions en ligne</li>
+<li>D’Internet et des réseaux sociaux</li>
+<li>Des smartphones</li>
+<li>Des capteurs IoT</li>
+<li>Des transactions en ligne</li>
 </ul>
 </section>
 <section id="ordres-de-grandeur" class="level3">
-<h3 class="anchored" data-anchor-id="ordres-de-grandeur">📊 Ordres de grandeur</h3>
+<h3 class="anchored" data-anchor-id="ordres-de-grandeur">Ordres de grandeur</h3>
 <pre><code>1 Ko  (Kilooctet)   = 1 page de texte
 1 Mo  (Mégaoctet)   = 1 photo HD
 1 Go  (Gigaoctet)   = 1 film HD
@@ -982,7 +950,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 1 Zo  (Zettaoctet)  = 1 000 Eo</code></pre>
 </section>
 <section id="exemples-concrets" class="level3">
-<h3 class="anchored" data-anchor-id="exemples-concrets">🏢 Exemples concrets</h3>
+<h3 class="anchored" data-anchor-id="exemples-concrets">Exemples concrets</h3>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -1013,7 +981,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 </section>
 <section id="les-5v-du-big-data" class="level2">
-<h2 class="anchored" data-anchor-id="les-5v-du-big-data">📊 2. Les 5V du Big Data</h2>
+<h2 class="anchored" data-anchor-id="les-5v-du-big-data">2. Les 5V du Big Data</h2>
 <p>Les caractéristiques du Big Data sont souvent résumées par les <strong>5V</strong> :</p>
 <pre><code>                    ┌─────────────┐
                     │   VOLUME    │
@@ -1035,7 +1003,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
                     └─────────────┘</code></pre>
 <hr>
 <section id="volume-la-quantité-massive-de-données" class="level3">
-<h3 class="anchored" data-anchor-id="volume-la-quantité-massive-de-données">📦 Volume — La quantité massive de données</h3>
+<h3 class="anchored" data-anchor-id="volume-la-quantité-massive-de-données">Volume — La quantité massive de données</h3>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 37%">
@@ -1061,7 +1029,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 <section id="velocity-la-vitesse-de-génération-et-traitement" class="level3">
-<h3 class="anchored" data-anchor-id="velocity-la-vitesse-de-génération-et-traitement">⚡ Velocity — La vitesse de génération et traitement</h3>
+<h3 class="anchored" data-anchor-id="velocity-la-vitesse-de-génération-et-traitement">Velocity — La vitesse de génération et traitement</h3>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -1091,7 +1059,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 <section id="variety-la-diversité-des-formats" class="level3">
-<h3 class="anchored" data-anchor-id="variety-la-diversité-des-formats">🎨 Variety — La diversité des formats</h3>
+<h3 class="anchored" data-anchor-id="variety-la-diversité-des-formats">Variety — La diversité des formats</h3>
 <blockquote class="blockquote">
 <p>💡 <strong>Rappel</strong> : Tu as déjà vu ça dans le module 06 !</p>
 </blockquote>
@@ -1129,7 +1097,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 <section id="veracity-la-fiabilité-des-données" class="level3">
-<h3 class="anchored" data-anchor-id="veracity-la-fiabilité-des-données">✅ Veracity — La fiabilité des données</h3>
+<h3 class="anchored" data-anchor-id="veracity-la-fiabilité-des-données">Veracity — La fiabilité des données</h3>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -1162,15 +1130,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 <section id="value-la-valeur-extraite" class="level3">
-<h3 class="anchored" data-anchor-id="value-la-valeur-extraite">💎 Value — La valeur extraite</h3>
-<p>Les données n’ont de valeur que si on peut en tirer des <strong>insights</strong> : - 📈 Prédictions (ML) - 📊 Dashboards - 🔔 Alertes - 💰 Optimisation business</p>
+<h3 class="anchored" data-anchor-id="value-la-valeur-extraite">Value — La valeur extraite</h3>
+<p>Les données n’ont de valeur que si on peut en tirer des <strong>insights</strong> : - Prédictions (ML) - Dashboards - Alertes - Optimisation business.</p>
 <hr>
 </section>
 </section>
 <section id="pourquoi-le-traitement-distribué" class="level2">
-<h2 class="anchored" data-anchor-id="pourquoi-le-traitement-distribué">⚙️ 3. Pourquoi le traitement distribué ?</h2>
+<h2 class="anchored" data-anchor-id="pourquoi-le-traitement-distribué">3. Pourquoi le traitement distribué ?</h2>
 <section id="limites-dune-machine-unique" class="level3">
-<h3 class="anchored" data-anchor-id="limites-dune-machine-unique">🚫 Limites d’une machine unique</h3>
+<h3 class="anchored" data-anchor-id="limites-dune-machine-unique">Limites d’une machine unique</h3>
 <p>Imaginons que tu dois traiter <strong>10 To</strong> de logs :</p>
 <table class="caption-top table">
 <thead>
@@ -1206,7 +1174,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 <section id="scale-up-vs-scale-out" class="level3">
-<h3 class="anchored" data-anchor-id="scale-up-vs-scale-out">📈 Scale-Up vs Scale-Out</h3>
+<h3 class="anchored" data-anchor-id="scale-up-vs-scale-out">Scale-Up vs Scale-Out</h3>
 <pre><code>SCALE-UP (vertical)              SCALE-OUT (horizontal)
 ─────────────────────            ─────────────────────────
 
@@ -1224,15 +1192,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    - Limite physique             - Plus complexe</code></pre>
 </section>
 <section id="le-big-data-utilise-le-scale-out" class="level3">
-<h3 class="anchored" data-anchor-id="le-big-data-utilise-le-scale-out">✅ Le Big Data utilise le Scale-Out !</h3>
+<h3 class="anchored" data-anchor-id="le-big-data-utilise-le-scale-out">Le Big Data utilise le Scale-Out !</h3>
 <p>Au lieu d’une machine surpuissante, on utilise un <strong>cluster</strong> de machines ordinaires.</p>
 <hr>
 </section>
 </section>
 <section id="concepts-clés-du-traitement-distribué" class="level2">
-<h2 class="anchored" data-anchor-id="concepts-clés-du-traitement-distribué">🧠 4. Concepts clés du traitement distribué</h2>
+<h2 class="anchored" data-anchor-id="concepts-clés-du-traitement-distribué">4. Concepts clés du traitement distribué</h2>
 <section id="parallélisme-vs-distribution" class="level3">
-<h3 class="anchored" data-anchor-id="parallélisme-vs-distribution">🔄 Parallélisme vs Distribution</h3>
+<h3 class="anchored" data-anchor-id="parallélisme-vs-distribution">Parallélisme vs Distribution</h3>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 30%">
@@ -1262,7 +1230,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 <section id="data-locality-amener-le-code-aux-données" class="level3">
-<h3 class="anchored" data-anchor-id="data-locality-amener-le-code-aux-données">📍 Data Locality — “Amener le code aux données”</h3>
+<h3 class="anchored" data-anchor-id="data-locality-amener-le-code-aux-données">Data Locality — “Amener le code aux données”</h3>
 <pre><code>❌ MAUVAIS : Déplacer les données vers le code
 ┌────────────────┐                ┌────────────────┐
 │   Serveur 1    │  ══10 To══►    │   Serveur 2    │
@@ -1280,7 +1248,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 <section id="fault-tolerance-tolérance-aux-pannes" class="level3">
-<h3 class="anchored" data-anchor-id="fault-tolerance-tolérance-aux-pannes">🛡️ Fault Tolerance — Tolérance aux pannes</h3>
+<h3 class="anchored" data-anchor-id="fault-tolerance-tolérance-aux-pannes">Fault Tolerance — Tolérance aux pannes</h3>
 <p>Dans un cluster de 1000 machines, <strong>des pannes arrivent tous les jours</strong> !</p>
 <table class="caption-top table">
 <colgroup>
@@ -1312,7 +1280,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 </section>
 <section id="lécosystème-hadoop" class="level2">
-<h2 class="anchored" data-anchor-id="lécosystème-hadoop">🐘 5. L’écosystème Hadoop</h2>
+<h2 class="anchored" data-anchor-id="lécosystème-hadoop">5. L’écosystème Hadoop</h2>
 <p><strong>Hadoop</strong> est un framework open-source créé par Yahoo (2006), inspiré des papiers de Google (GFS, MapReduce).</p>
 <section id="architecture" class="level3">
 <h3 class="anchored" data-anchor-id="architecture">🏗️ Architecture</h3>
@@ -1346,7 +1314,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 <section id="hdfs-hadoop-distributed-file-system" class="level3">
-<h3 class="anchored" data-anchor-id="hdfs-hadoop-distributed-file-system">📁 HDFS — Hadoop Distributed File System</h3>
+<h3 class="anchored" data-anchor-id="hdfs-hadoop-distributed-file-system">HDFS — Hadoop Distributed File System</h3>
 <p>Système de fichiers distribué qui stocke les données sur plusieurs machines.</p>
 <pre><code>Fichier original : data.csv (300 Mo)
                       │
@@ -1383,21 +1351,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 <section id="yarn-yet-another-resource-negotiator" class="level3">
-<h3 class="anchored" data-anchor-id="yarn-yet-another-resource-negotiator">🎛️ YARN — Yet Another Resource Negotiator</h3>
+<h3 class="anchored" data-anchor-id="yarn-yet-another-resource-negotiator">YARN — Yet Another Resource Negotiator</h3>
 <p>Gestionnaire de ressources du cluster :</p>
 <ul>
 <li>Alloue CPU/RAM aux applications</li>
 <li>Gère la file d’attente des jobs</li>
-<li>Surveille l’état des nœuds</li>
+<li>Surveille l’état des nœuds.</li>
 </ul>
 <hr>
 </section>
 </section>
 <section id="mapreduce-le-modèle-de-traitement" class="level2">
-<h2 class="anchored" data-anchor-id="mapreduce-le-modèle-de-traitement">🔄 6. MapReduce — Le modèle de traitement</h2>
+<h2 class="anchored" data-anchor-id="mapreduce-le-modèle-de-traitement">6. MapReduce — Le modèle de traitement</h2>
 <p><strong>MapReduce</strong> est un modèle de programmation pour traiter de grandes quantités de données en parallèle.</p>
 <section id="les-3-étapes" class="level3">
-<h3 class="anchored" data-anchor-id="les-3-étapes">📐 Les 3 étapes</h3>
+<h3 class="anchored" data-anchor-id="les-3-étapes">Les 3 étapes</h3>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -1427,7 +1395,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 <section id="exemple-word-count" class="level3">
-<h3 class="anchored" data-anchor-id="exemple-word-count">📝 Exemple : Word Count</h3>
+<h3 class="anchored" data-anchor-id="exemple-word-count">Exemple : Word Count</h3>
 <p>Compter les occurrences de chaque mot dans un texte.</p>
 <pre><code>ENTRÉE : "hello world hello"
 
@@ -1464,7 +1432,7 @@ SORTIE : { "hello": 2, "world": 1 }</code></pre>
 <hr>
 </section>
 <section id="mapreduce-sur-un-cluster" class="level3">
-<h3 class="anchored" data-anchor-id="mapreduce-sur-un-cluster">🖥️ MapReduce sur un cluster</h3>
+<h3 class="anchored" data-anchor-id="mapreduce-sur-un-cluster">MapReduce sur un cluster</h3>
 <pre><code>                         ┌─────────────┐
                          │   MASTER    │
                          │  (Driver)   │
@@ -1502,9 +1470,9 @@ SORTIE : { "hello": 2, "world": 1 }</code></pre>
 </section>
 </section>
 <section id="limites-de-mapreduce" class="level2">
-<h2 class="anchored" data-anchor-id="limites-de-mapreduce">⚠️ 7. Limites de MapReduce</h2>
+<h2 class="anchored" data-anchor-id="limites-de-mapreduce">7. Limites de MapReduce</h2>
 <section id="problèmes-de-mapreduce" class="level3">
-<h3 class="anchored" data-anchor-id="problèmes-de-mapreduce">😓 Problèmes de MapReduce</h3>
+<h3 class="anchored" data-anchor-id="problèmes-de-mapreduce">Problèmes de MapReduce</h3>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 40%">
@@ -1543,7 +1511,7 @@ SORTIE : { "hello": 2, "world": 1 }</code></pre>
 </table>
 </section>
 <section id="le-problème-du-disque" class="level3">
-<h3 class="anchored" data-anchor-id="le-problème-du-disque">💾 Le problème du disque</h3>
+<h3 class="anchored" data-anchor-id="le-problème-du-disque">Le problème du disque</h3>
 <pre><code>MapReduce : DISQUE → Map → DISQUE → Shuffle → DISQUE → Reduce → DISQUE
                  ↑           ↑              ↑              ↑
                  └───────────┴──────────────┴──────────────┘
@@ -1556,7 +1524,7 @@ Spark :     DISQUE → Map → MÉMOIRE → Shuffle → MÉMOIRE → Reduce
 <hr>
 </section>
 <section id="exemple-algorithme-itératif-ml" class="level3">
-<h3 class="anchored" data-anchor-id="exemple-algorithme-itératif-ml">🔥 Exemple : Algorithme itératif (ML)</h3>
+<h3 class="anchored" data-anchor-id="exemple-algorithme-itératif-ml">Exemple : Algorithme itératif (ML)</h3>
 <p>Pour un algorithme qui fait 10 itérations sur les mêmes données :</p>
 <table class="caption-top table">
 <thead>
@@ -1583,10 +1551,10 @@ Spark :     DISQUE → Map → MÉMOIRE → Shuffle → MÉMOIRE → Reduce
 </section>
 </section>
 <section id="spark-lévolution" class="level2">
-<h2 class="anchored" data-anchor-id="spark-lévolution">⚡ 8. Spark — L’évolution</h2>
+<h2 class="anchored" data-anchor-id="spark-lévolution">8. Spark — L’évolution</h2>
 <p><strong>Apache Spark</strong> (2014) a été créé pour résoudre les limitations de MapReduce.</p>
 <section id="comparaison-hadoop-mapreduce-vs-spark" class="level3">
-<h3 class="anchored" data-anchor-id="comparaison-hadoop-mapreduce-vs-spark">📊 Comparaison Hadoop MapReduce vs Spark</h3>
+<h3 class="anchored" data-anchor-id="comparaison-hadoop-mapreduce-vs-spark">Comparaison Hadoop MapReduce vs Spark</h3>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -1631,7 +1599,7 @@ Spark :     DISQUE → Map → MÉMOIRE → Shuffle → MÉMOIRE → Reduce
 <hr>
 </section>
 <section id="architecture-spark" class="level3">
-<h3 class="anchored" data-anchor-id="architecture-spark">🏗️ Architecture Spark</h3>
+<h3 class="anchored" data-anchor-id="architecture-spark">Architecture Spark</h3>
 <pre><code>┌─────────────────────────────────────────────────────────────┐
 │                      APACHE SPARK                           │
 ├─────────────────────────────────────────────────────────────┤
@@ -1662,7 +1630,7 @@ Spark :     DISQUE → Map → MÉMOIRE → Shuffle → MÉMOIRE → Reduce
 <hr>
 </section>
 <section id="concepts-spark-à-venir" class="level3">
-<h3 class="anchored" data-anchor-id="concepts-spark-à-venir">🔮 Concepts Spark à venir</h3>
+<h3 class="anchored" data-anchor-id="concepts-spark-à-venir">Concepts Spark à venir</h3>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 40%">
@@ -1704,7 +1672,7 @@ Spark :     DISQUE → Map → MÉMOIRE → Shuffle → MÉMOIRE → Reduce
 <hr>
 </section>
 <section id="ce-que-tu-vas-apprendre-avec-pyspark" class="level3">
-<h3 class="anchored" data-anchor-id="ce-que-tu-vas-apprendre-avec-pyspark">🎯 Ce que tu vas apprendre avec PySpark</h3>
+<h3 class="anchored" data-anchor-id="ce-que-tu-vas-apprendre-avec-pyspark">Ce que tu vas apprendre avec PySpark</h3>
 <ul>
 <li>Créer et manipuler des DataFrames distribués</li>
 <li>Écrire des transformations SQL-like</li>
@@ -1716,23 +1684,23 @@ Spark :     DISQUE → Map → MÉMOIRE → Shuffle → MÉMOIRE → Reduce
 </section>
 </section>
 <section id="architectures-de-stockage-modernes" class="level2">
-<h2 class="anchored" data-anchor-id="architectures-de-stockage-modernes">🏗️ 9. Architectures de Stockage Modernes</h2>
+<h2 class="anchored" data-anchor-id="architectures-de-stockage-modernes">9. Architectures de Stockage Modernes</h2>
 <p>Maintenant que tu connais le Big Data et le traitement distribué, voyons comment <strong>organiser et stocker</strong> ces données.</p>
 <blockquote class="blockquote">
 <p>💡 <strong>Rappel</strong> : Tu as vu Data Warehouse et Data Mart dans le module 06. Ici, on complète avec Data Lake et Lakehouse !</p>
 </blockquote>
 <hr>
 <section id="data-lake-le-lac-de-données" class="level3">
-<h3 class="anchored" data-anchor-id="data-lake-le-lac-de-données">🌊 9.1 Data Lake — Le lac de données</h3>
+<h3 class="anchored" data-anchor-id="data-lake-le-lac-de-données">9.1 Data Lake — Le lac de données</h3>
 <p>Un <strong>Data Lake</strong> est un système de stockage qui contient une <strong>grande quantité de données brutes</strong> dans leur format natif.</p>
 <section id="définition-1" class="level4">
-<h4 class="anchored" data-anchor-id="définition-1">📖 Définition</h4>
+<h4 class="anchored" data-anchor-id="définition-1">Définition</h4>
 <blockquote class="blockquote">
 <p>“Un Data Lake est un référentiel centralisé qui permet de stocker toutes les données structurées et non structurées à n’importe quelle échelle.”</p>
 </blockquote>
 </section>
 <section id="caractéristiques" class="level4">
-<h4 class="anchored" data-anchor-id="caractéristiques">🎯 Caractéristiques</h4>
+<h4 class="anchored" data-anchor-id="caractéristiques">Caractéristiques</h4>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 56%">
@@ -1769,7 +1737,7 @@ Spark :     DISQUE → Map → MÉMOIRE → Shuffle → MÉMOIRE → Reduce
 </table>
 </section>
 <section id="exemples-de-data-lakes" class="level4">
-<h4 class="anchored" data-anchor-id="exemples-de-data-lakes">🏭 Exemples de Data Lakes</h4>
+<h4 class="anchored" data-anchor-id="exemples-de-data-lakes">Exemples de Data Lakes</h4>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -1803,7 +1771,7 @@ Spark :     DISQUE → Map → MÉMOIRE → Shuffle → MÉMOIRE → Reduce
 </table>
 </section>
 <section id="le-piège-data-swamp-marécage-de-données" class="level4">
-<h4 class="anchored" data-anchor-id="le-piège-data-swamp-marécage-de-données">⚠️ Le piège : Data Swamp (Marécage de données)</h4>
+<h4 class="anchored" data-anchor-id="le-piège-data-swamp-marécage-de-données">Le piège : Data Swamp (Marécage de données)</h4>
 <pre><code>❌ DATA SWAMP — Ce qu'il faut éviter :
 
 ┌─────────────────────────────────────────────────────────────────┐
@@ -1826,16 +1794,16 @@ Spark :     DISQUE → Map → MÉMOIRE → Shuffle → MÉMOIRE → Reduce
 </section>
 </section>
 <section id="data-lakehouse-le-meilleur-des-deux-mondes" class="level3">
-<h3 class="anchored" data-anchor-id="data-lakehouse-le-meilleur-des-deux-mondes">🏠 9.2 Data Lakehouse — Le meilleur des deux mondes</h3>
+<h3 class="anchored" data-anchor-id="data-lakehouse-le-meilleur-des-deux-mondes">9.2 Data Lakehouse — Le meilleur des deux mondes</h3>
 <p>Un <strong>Data Lakehouse</strong> combine les avantages du Data Lake (flexibilité, coût) et du Data Warehouse (performance, ACID).</p>
 <section id="définition-2" class="level4">
-<h4 class="anchored" data-anchor-id="définition-2">📖 Définition</h4>
+<h4 class="anchored" data-anchor-id="définition-2">Définition</h4>
 <blockquote class="blockquote">
 <p>“Un Lakehouse est une nouvelle architecture qui combine les meilleurs éléments des Data Lakes et des Data Warehouses.”</p>
 </blockquote>
 </section>
 <section id="technologies-clés" class="level4">
-<h4 class="anchored" data-anchor-id="technologies-clés">🔑 Technologies clés</h4>
+<h4 class="anchored" data-anchor-id="technologies-clés">Technologies clés</h4>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -1864,24 +1832,24 @@ Spark :     DISQUE → Map → MÉMOIRE → Shuffle → MÉMOIRE → Reduce
 </table>
 </section>
 <section id="ce-que-le-lakehouse-apporte" class="level4">
-<h4 class="anchored" data-anchor-id="ce-que-le-lakehouse-apporte">✅ Ce que le Lakehouse apporte</h4>
+<h4 class="anchored" data-anchor-id="ce-que-le-lakehouse-apporte">Ce que le Lakehouse apporte</h4>
 <pre><code>┌─────────────────────────────────────────────────────────────────┐
 │                      DATA LAKEHOUSE                             │
 ├─────────────────────────────────────────────────────────────────┤
 │                                                                 │
-│   ✅ Transactions ACID (comme un Data Warehouse)               │
-│   ✅ Schema enforcement &amp; evolution                             │
-│   ✅ Time Travel (historique des versions)                      │
-│   ✅ Stockage sur object storage (comme un Data Lake)          │
-│   ✅ Support batch ET streaming                                │
-│   ✅ Format ouvert (Parquet + métadonnées)                     │
+│      Transactions ACID (comme un Data Warehouse)                │
+│      Schema enforcement &amp; evolution                             │
+│      Time Travel (historique des versions)                      │
+│      Stockage sur object storage (comme un Data Lake)           │
+│      Support batch ET streaming                                 │
+│      Format ouvert (Parquet + métadonnées)                      │
 │                                                                 │
 └─────────────────────────────────────────────────────────────────┘</code></pre>
 <hr>
 </section>
 </section>
 <section id="comparaison-warehouse-vs-lake-vs-lakehouse" class="level3">
-<h3 class="anchored" data-anchor-id="comparaison-warehouse-vs-lake-vs-lakehouse">⚖️ 9.3 Comparaison : Warehouse vs Lake vs Lakehouse</h3>
+<h3 class="anchored" data-anchor-id="comparaison-warehouse-vs-lake-vs-lakehouse">9.3 Comparaison : Warehouse vs Lake vs Lakehouse</h3>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -1942,7 +1910,7 @@ Spark :     DISQUE → Map → MÉMOIRE → Shuffle → MÉMOIRE → Reduce
 </tr>
 </tbody>
 </table>
-<pre><code>🕐 Évolution historique :
+<pre><code>Évolution historique :
 
     1990s-2000s           2010s              2020s+
          │                  │                  │
@@ -1960,14 +1928,14 @@ Spark :     DISQUE → Map → MÉMOIRE → Shuffle → MÉMOIRE → Reduce
 <hr>
 </section>
 <section id="medallion-architecture-bronze-silver-gold" class="level3">
-<h3 class="anchored" data-anchor-id="medallion-architecture-bronze-silver-gold">🥉🥈🥇 9.4 Medallion Architecture — Bronze, Silver, Gold</h3>
+<h3 class="anchored" data-anchor-id="medallion-architecture-bronze-silver-gold">9.4 Medallion Architecture — Bronze, Silver, Gold</h3>
 <p>La <strong>Medallion Architecture</strong> (ou architecture en médaillons) est un pattern d’organisation des données dans un Data Lakehouse. Elle structure les données en <strong>3 couches</strong> de qualité croissante.</p>
 <blockquote class="blockquote">
 <p>💡 Cette architecture est très populaire avec <strong>Delta Lake</strong> et <strong>Databricks</strong>, mais s’applique à tout Lakehouse.</p>
 </blockquote>
 <hr>
 <section id="vue-densemble" class="level4">
-<h4 class="anchored" data-anchor-id="vue-densemble">🏗️ Vue d’ensemble</h4>
+<h4 class="anchored" data-anchor-id="vue-densemble">Vue d’ensemble</h4>
 <pre><code>┌─────────────────────────────────────────────────────────────────────────┐
 │                     MEDALLION ARCHITECTURE                              │
 ├─────────────────────────────────────────────────────────────────────────┤
@@ -1995,7 +1963,7 @@ Spark :     DISQUE → Map → MÉMOIRE → Shuffle → MÉMOIRE → Reduce
 <hr>
 </section>
 <section id="couche-bronze-données-brutes" class="level4">
-<h4 class="anchored" data-anchor-id="couche-bronze-données-brutes">🥉 Couche Bronze — Données brutes</h4>
+<h4 class="anchored" data-anchor-id="couche-bronze-données-brutes">Couche Bronze — Données brutes</h4>
 <p>La couche <strong>Bronze</strong> contient les données <strong>exactement comme elles arrivent</strong> des sources.</p>
 <table class="caption-top table">
 <thead>
@@ -2147,7 +2115,7 @@ Spark :     DISQUE → Map → MÉMOIRE → Shuffle → MÉMOIRE → Reduce
 <hr>
 </section>
 <section id="résumé-des-3-couches" class="level4">
-<h4 class="anchored" data-anchor-id="résumé-des-3-couches">📊 Résumé des 3 couches</h4>
+<h4 class="anchored" data-anchor-id="résumé-des-3-couches">Résumé des 3 couches</h4>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 12%">
@@ -2192,7 +2160,7 @@ Spark :     DISQUE → Map → MÉMOIRE → Shuffle → MÉMOIRE → Reduce
 <hr>
 </section>
 <section id="avantages-de-medallion-architecture" class="level4">
-<h4 class="anchored" data-anchor-id="avantages-de-medallion-architecture">✅ Avantages de Medallion Architecture</h4>
+<h4 class="anchored" data-anchor-id="avantages-de-medallion-architecture">Avantages de Medallion Architecture</h4>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 43%">
@@ -2230,7 +2198,7 @@ Spark :     DISQUE → Map → MÉMOIRE → Shuffle → MÉMOIRE → Reduce
 <hr>
 </section>
 <section id="flux-de-données-typique" class="level4">
-<h4 class="anchored" data-anchor-id="flux-de-données-typique">🔄 Flux de données typique</h4>
+<h4 class="anchored" data-anchor-id="flux-de-données-typique">Flux de données typique</h4>
 <pre><code>┌──────────────────────────────────────────────────────────────────────────┐
 │                         PIPELINE ETL/ELT                                 │
 ├──────────────────────────────────────────────────────────────────────────┤
@@ -2264,14 +2232,14 @@ Spark :     DISQUE → Map → MÉMOIRE → Shuffle → MÉMOIRE → Reduce
 </section>
 </section>
 <section id="architectures-de-traitement-lambda-kappa" class="level2">
-<h2 class="anchored" data-anchor-id="architectures-de-traitement-lambda-kappa">🔄 10. Architectures de Traitement — Lambda &amp; Kappa</h2>
+<h2 class="anchored" data-anchor-id="architectures-de-traitement-lambda-kappa">10. Architectures de Traitement — Lambda &amp; Kappa</h2>
 <p>Comment organiser le traitement des données ? Deux grandes architectures dominent.</p>
 <hr>
 <section id="lambda-architecture-batch-streaming" class="level3">
-<h3 class="anchored" data-anchor-id="lambda-architecture-batch-streaming">⚡ 10.1 Lambda Architecture — Batch + Streaming</h3>
+<h3 class="anchored" data-anchor-id="lambda-architecture-batch-streaming">10.1 Lambda Architecture — Batch + Streaming</h3>
 <p>L’architecture <strong>Lambda</strong> (Nathan Marz, 2011) combine traitement <strong>batch</strong> et <strong>streaming</strong> pour avoir le meilleur des deux.</p>
 <section id="structure" class="level4">
-<h4 class="anchored" data-anchor-id="structure">🏗️ Structure</h4>
+<h4 class="anchored" data-anchor-id="structure">Structure</h4>
 <pre><code>                         ┌─────────────────────────────────────┐
                          │            DATA SOURCES             │
                          │     (Events, Logs, Transactions)    │
@@ -2306,7 +2274,7 @@ Spark :     DISQUE → Map → MÉMOIRE → Shuffle → MÉMOIRE → Reduce
                           └─────────────────────────┘</code></pre>
 </section>
 <section id="les-3-couches" class="level4">
-<h4 class="anchored" data-anchor-id="les-3-couches">📋 Les 3 couches</h4>
+<h4 class="anchored" data-anchor-id="les-3-couches">Les 3 couches</h4>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 25%">
@@ -2340,7 +2308,7 @@ Spark :     DISQUE → Map → MÉMOIRE → Shuffle → MÉMOIRE → Reduce
 </table>
 </section>
 <section id="avantages-inconvénients" class="level4">
-<h4 class="anchored" data-anchor-id="avantages-inconvénients">✅ Avantages / ❌ Inconvénients</h4>
+<h4 class="anchored" data-anchor-id="avantages-inconvénients">Avantages / Inconvénients</h4>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -2367,10 +2335,10 @@ Spark :     DISQUE → Map → MÉMOIRE → Shuffle → MÉMOIRE → Reduce
 </section>
 </section>
 <section id="kappa-architecture-streaming-first" class="level3">
-<h3 class="anchored" data-anchor-id="kappa-architecture-streaming-first">🌀 10.2 Kappa Architecture — Streaming-first</h3>
+<h3 class="anchored" data-anchor-id="kappa-architecture-streaming-first">10.2 Kappa Architecture — Streaming-first</h3>
 <p>L’architecture <strong>Kappa</strong> (Jay Kreps, 2014) simplifie Lambda en utilisant <strong>uniquement du streaming</strong>.</p>
 <section id="structure-1" class="level4">
-<h4 class="anchored" data-anchor-id="structure-1">🏗️ Structure</h4>
+<h4 class="anchored" data-anchor-id="structure-1">Structure</h4>
 <pre><code>                         ┌─────────────────────────────────────┐
                          │            DATA SOURCES             │
                          │     (Events, Logs, Transactions)    │
@@ -2403,7 +2371,7 @@ Spark :     DISQUE → Map → MÉMOIRE → Shuffle → MÉMOIRE → Reduce
                          └─────────────────────────────────────┘</code></pre>
 </section>
 <section id="le-concept-clé-replay" class="level4">
-<h4 class="anchored" data-anchor-id="le-concept-clé-replay">🔄 Le concept clé : Replay</h4>
+<h4 class="anchored" data-anchor-id="le-concept-clé-replay">Le concept clé : Replay</h4>
 <pre><code>Besoin de recalculer les données ?
 
 Lambda : Relance le batch job (heures)
@@ -2421,7 +2389,7 @@ Kappa  : Rejoue le log Kafka (même vitesse que le streaming)
 └──────────────────────────────────────────────────────────────┘</code></pre>
 </section>
 <section id="avantages-inconvénients-1" class="level4">
-<h4 class="anchored" data-anchor-id="avantages-inconvénients-1">✅ Avantages / ❌ Inconvénients</h4>
+<h4 class="anchored" data-anchor-id="avantages-inconvénients-1">Avantages / Inconvénients</h4>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -2448,7 +2416,7 @@ Kappa  : Rejoue le log Kafka (même vitesse que le streaming)
 </section>
 </section>
 <section id="lambda-vs-kappa-quand-utiliser-quoi" class="level3">
-<h3 class="anchored" data-anchor-id="lambda-vs-kappa-quand-utiliser-quoi">⚖️ 10.3 Lambda vs Kappa — Quand utiliser quoi ?</h3>
+<h3 class="anchored" data-anchor-id="lambda-vs-kappa-quand-utiliser-quoi">10.3 Lambda vs Kappa — Quand utiliser quoi ?</h3>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 37%">
@@ -2491,7 +2459,7 @@ Kappa  : Rejoue le log Kafka (même vitesse que le streaming)
 </tbody>
 </table>
 <section id="recommandations" class="level4">
-<h4 class="anchored" data-anchor-id="recommandations">🎯 Recommandations</h4>
+<h4 class="anchored" data-anchor-id="recommandations">Recommandations</h4>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -2530,10 +2498,10 @@ Kappa  : Rejoue le log Kafka (même vitesse que le streaming)
 </section>
 </section>
 <section id="data-mesh-lapproche-décentralisée" class="level2">
-<h2 class="anchored" data-anchor-id="data-mesh-lapproche-décentralisée">🕸️ 11. Data Mesh — L’approche décentralisée</h2>
+<h2 class="anchored" data-anchor-id="data-mesh-lapproche-décentralisée">11. Data Mesh — L’approche décentralisée</h2>
 <p>Le <strong>Data Mesh</strong> est une approche <strong>organisationnelle</strong> (pas technique) pour gérer les données à grande échelle.</p>
 <section id="origine-du-problème" class="level3">
-<h3 class="anchored" data-anchor-id="origine-du-problème">📖 Origine du problème</h3>
+<h3 class="anchored" data-anchor-id="origine-du-problème">Origine du problème</h3>
 <pre><code>Architecture centralisée traditionnelle :
 
     Domain A        Domain B        Domain C
@@ -2562,7 +2530,7 @@ Kappa  : Rejoue le log Kafka (même vitesse que le streaming)
 <hr>
 </section>
 <section id="les-4-principes-du-data-mesh" class="level3">
-<h3 class="anchored" data-anchor-id="les-4-principes-du-data-mesh">🎯 Les 4 principes du Data Mesh</h3>
+<h3 class="anchored" data-anchor-id="les-4-principes-du-data-mesh">Les 4 principes du Data Mesh</h3>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 43%">
@@ -2596,7 +2564,7 @@ Kappa  : Rejoue le log Kafka (même vitesse que le streaming)
 <hr>
 </section>
 <section id="architecture-data-mesh" class="level3">
-<h3 class="anchored" data-anchor-id="architecture-data-mesh">🏗️ Architecture Data Mesh</h3>
+<h3 class="anchored" data-anchor-id="architecture-data-mesh">Architecture Data Mesh</h3>
 <pre><code>┌─────────────────────────────────────────────────────────────────────────┐
 │                         DATA MESH                                       │
 ├─────────────────────────────────────────────────────────────────────────┤
@@ -2628,7 +2596,7 @@ Kappa  : Rejoue le log Kafka (même vitesse que le streaming)
 <hr>
 </section>
 <section id="data-mesh-vs-architecture-centralisée" class="level3">
-<h3 class="anchored" data-anchor-id="data-mesh-vs-architecture-centralisée">💡 Data Mesh vs Architecture Centralisée</h3>
+<h3 class="anchored" data-anchor-id="data-mesh-vs-architecture-centralisée">Data Mesh vs Architecture Centralisée</h3>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 24%">
@@ -2680,22 +2648,22 @@ Kappa  : Rejoue le log Kafka (même vitesse que le streaming)
 </section>
 </section>
 <section id="nosql-au-delà-des-bases-relationnelles" class="level1">
-<h1>🗄️ 12. NoSQL — Au-delà des bases relationnelles</h1>
+<h1>12. NoSQL — Au-delà des bases relationnelles</h1>
 <p>Jusqu’ici, tu as travaillé avec des bases <strong>relationnelles</strong> (SQL). Mais le Big Data a fait émerger un nouveau paradigme : <strong>NoSQL</strong>.</p>
 <hr>
 <section id="pourquoi-nosql" class="level2">
-<h2 class="anchored" data-anchor-id="pourquoi-nosql">🤔 Pourquoi NoSQL ?</h2>
+<h2 class="anchored" data-anchor-id="pourquoi-nosql">Pourquoi NoSQL ?</h2>
 <section id="les-limites-des-bases-relationnelles-face-au-big-data" class="level3">
 <h3 class="anchored" data-anchor-id="les-limites-des-bases-relationnelles-face-au-big-data">Les limites des bases relationnelles face au Big Data</h3>
 <pre><code>┌─────────────────────────────────────────────────────────────────┐
 │              PROBLÈMES DES BASES SQL CLASSIQUES                 │
 ├─────────────────────────────────────────────────────────────────┤
 │                                                                 │
-│  ❌ Schéma rigide → Difficile de changer la structure           │
-│  ❌ Scale-up only → Un seul serveur (coûteux)                   │
-│  ❌ Jointures → Lentes sur des milliards de lignes              │
-│  ❌ ACID strict → Latence élevée                                │
-│  ❌ Données variées → JSON, graphes mal gérés                   │
+│     Schéma rigide → Difficile de changer la structure           │
+│     Scale-up only → Un seul serveur (coûteux)                   │
+│     Jointures → Lentes sur des milliards de lignes              │
+│     ACID strict → Latence élevée                                │
+│     Données variées → JSON, graphes mal gérés                   │
 │                                                                 │
 └─────────────────────────────────────────────────────────────────┘</code></pre>
 </section>
@@ -2705,11 +2673,11 @@ Kappa  : Rejoue le log Kafka (même vitesse que le streaming)
 │                    AVANTAGES NoSQL                              │
 ├─────────────────────────────────────────────────────────────────┤
 │                                                                 │
-│  ✅ Schéma flexible → S'adapte aux données                      │
-│  ✅ Scale-out natif → Ajout de serveurs facile                  │
-│  ✅ Pas de jointures → Données dénormalisées, rapides           │
-│  ✅ Haute disponibilité → Tolérance aux pannes                  │
-│  ✅ Modèles variés → Document, clé-valeur, graphe...            │
+│     Schéma flexible → S'adapte aux données                      │
+│     Scale-out natif → Ajout de serveurs facile                  │
+│     Pas de jointures → Données dénormalisées, rapides           │
+│     Haute disponibilité → Tolérance aux pannes                  │
+│     Modèles variés → Document, clé-valeur, graphe...            │
 │                                                                 │
 └─────────────────────────────────────────────────────────────────┘</code></pre>
 <blockquote class="blockquote">
@@ -2719,7 +2687,7 @@ Kappa  : Rejoue le log Kafka (même vitesse que le streaming)
 </section>
 </section>
 <section id="les-4-types-de-bases-nosql" class="level2">
-<h2 class="anchored" data-anchor-id="les-4-types-de-bases-nosql">📊 Les 4 types de bases NoSQL</h2>
+<h2 class="anchored" data-anchor-id="les-4-types-de-bases-nosql">Les 4 types de bases NoSQL</h2>
 <pre><code>┌─────────────────────────────────────────────────────────────────────────────┐
 │                         TYPES DE BASES NoSQL                                │
 ├─────────────────────┬─────────────────────┬─────────────────────┬───────────┤
@@ -2738,7 +2706,7 @@ Kappa  : Rejoue le log Kafka (même vitesse que le streaming)
 └─────────────────────┴─────────────────────┴─────────────────────┴───────────┘</code></pre>
 <hr>
 <section id="bases-document-mongodb-couchbase" class="level3">
-<h3 class="anchored" data-anchor-id="bases-document-mongodb-couchbase">📄 1. Bases Document (MongoDB, Couchbase)</h3>
+<h3 class="anchored" data-anchor-id="bases-document-mongodb-couchbase">1. Bases Document (MongoDB, Couchbase)</h3>
 <p>Stockent des <strong>documents JSON/BSON</strong> avec un schéma flexible.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="er">//</span> <span class="er">Document</span> <span class="er">MongoDB</span></span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
@@ -2776,7 +2744,7 @@ Kappa  : Rejoue le log Kafka (même vitesse que le streaming)
 <hr>
 </section>
 <section id="bases-clé-valeur-redis-memcached" class="level3">
-<h3 class="anchored" data-anchor-id="bases-clé-valeur-redis-memcached">🔑 2. Bases Clé-Valeur (Redis, Memcached)</h3>
+<h3 class="anchored" data-anchor-id="bases-clé-valeur-redis-memcached">2. Bases Clé-Valeur (Redis, Memcached)</h3>
 <p>Stockage ultra-simple : une <strong>clé</strong> → une <strong>valeur</strong>.</p>
 <pre><code>┌─────────────────┬────────────────────────────┐
 │      CLÉ        │          VALEUR            │
@@ -2789,13 +2757,13 @@ Kappa  : Rejoue le log Kafka (même vitesse que le streaming)
 <hr>
 </section>
 <section id="bases-colonnes-cassandra-hbase" class="level3">
-<h3 class="anchored" data-anchor-id="bases-colonnes-cassandra-hbase">📊 3. Bases Colonnes (Cassandra, HBase)</h3>
+<h3 class="anchored" data-anchor-id="bases-colonnes-cassandra-hbase">3. Bases Colonnes (Cassandra, HBase)</h3>
 <p>Optimisées pour les <strong>écritures massives</strong> et les <strong>requêtes analytiques</strong>.</p>
 <p><strong>Cas d’usage</strong> : IoT, time-series, logs, analytics</p>
 <hr>
 </section>
 <section id="bases-graphe-neo4j-amazon-neptune" class="level3">
-<h3 class="anchored" data-anchor-id="bases-graphe-neo4j-amazon-neptune">🔗 4. Bases Graphe (Neo4j, Amazon Neptune)</h3>
+<h3 class="anchored" data-anchor-id="bases-graphe-neo4j-amazon-neptune">4. Bases Graphe (Neo4j, Amazon Neptune)</h3>
 <p>Optimisées pour les <strong>relations complexes</strong> entre entités.</p>
 <pre><code>         ┌─────────┐
          │  Alice  │
@@ -2810,7 +2778,7 @@ Kappa  : Rejoue le log Kafka (même vitesse que le streaming)
 </section>
 </section>
 <section id="le-théorème-cap" class="level2">
-<h2 class="anchored" data-anchor-id="le-théorème-cap">🔺 Le théorème CAP</h2>
+<h2 class="anchored" data-anchor-id="le-théorème-cap">Le théorème CAP</h2>
 <p>Le <strong>théorème CAP</strong> (Eric Brewer, 2000) est fondamental pour comprendre les choix de design des bases distribuées.</p>
 <pre><code>                         C
                     Consistency
@@ -2828,7 +2796,7 @@ Kappa  : Rejoue le log Kafka (même vitesse que le streaming)
           Availability          Partition
          (Disponibilité)        Tolerance</code></pre>
 <section id="les-3-propriétés" class="level3">
-<h3 class="anchored" data-anchor-id="les-3-propriétés">📖 Les 3 propriétés</h3>
+<h3 class="anchored" data-anchor-id="les-3-propriétés">Les 3 propriétés</h3>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -2853,7 +2821,7 @@ Kappa  : Rejoue le log Kafka (même vitesse que le streaming)
 </table>
 </section>
 <section id="le-théorème-dit" class="level3">
-<h3 class="anchored" data-anchor-id="le-théorème-dit">⚠️ Le théorème dit :</h3>
+<h3 class="anchored" data-anchor-id="le-théorème-dit">Le théorème dit :</h3>
 <blockquote class="blockquote">
 <p><strong>En cas de partition réseau, tu dois choisir entre Cohérence et Disponibilité.</strong></p>
 </blockquote>
@@ -2861,7 +2829,7 @@ Kappa  : Rejoue le log Kafka (même vitesse que le streaming)
 <hr>
 </section>
 <section id="classification-des-bases-selon-cap" class="level3">
-<h3 class="anchored" data-anchor-id="classification-des-bases-selon-cap">🗂️ Classification des bases selon CAP</h3>
+<h3 class="anchored" data-anchor-id="classification-des-bases-selon-cap">Classification des bases selon CAP</h3>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 16%">
@@ -2902,9 +2870,9 @@ Kappa  : Rejoue le log Kafka (même vitesse que le streaming)
 </section>
 </section>
 <section id="sql-vs-nosql-quand-utiliser-quoi" class="level2">
-<h2 class="anchored" data-anchor-id="sql-vs-nosql-quand-utiliser-quoi">⚖️ SQL vs NoSQL — Quand utiliser quoi ?</h2>
+<h2 class="anchored" data-anchor-id="sql-vs-nosql-quand-utiliser-quoi">SQL vs NoSQL — Quand utiliser quoi ?</h2>
 <section id="tableau-comparatif" class="level3">
-<h3 class="anchored" data-anchor-id="tableau-comparatif">📊 Tableau comparatif</h3>
+<h3 class="anchored" data-anchor-id="tableau-comparatif">Tableau comparatif</h3>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -2944,7 +2912,7 @@ Kappa  : Rejoue le log Kafka (même vitesse que le streaming)
 <hr>
 </section>
 <section id="utilise-sql-quand" class="level3">
-<h3 class="anchored" data-anchor-id="utilise-sql-quand">✅ Utilise SQL quand…</h3>
+<h3 class="anchored" data-anchor-id="utilise-sql-quand">Utilise SQL quand…</h3>
 <ul>
 <li>Données très structurées (comptabilité, RH)</li>
 <li>Relations complexes (ERP, CRM)</li>
@@ -2952,7 +2920,7 @@ Kappa  : Rejoue le log Kafka (même vitesse que le streaming)
 </ul>
 </section>
 <section id="utilise-nosql-quand" class="level3">
-<h3 class="anchored" data-anchor-id="utilise-nosql-quand">✅ Utilise NoSQL quand…</h3>
+<h3 class="anchored" data-anchor-id="utilise-nosql-quand">Utilise NoSQL quand…</h3>
 <ul>
 <li>Schéma variable (catalogues, profils)</li>
 <li>Cache haute performance (sessions)</li>
@@ -2961,7 +2929,7 @@ Kappa  : Rejoue le log Kafka (même vitesse que le streaming)
 </ul>
 </section>
 <section id="en-réalité-on-utilise-les-deux" class="level3">
-<h3 class="anchored" data-anchor-id="en-réalité-on-utilise-les-deux">🎯 En réalité : on utilise les deux !</h3>
+<h3 class="anchored" data-anchor-id="en-réalité-on-utilise-les-deux">En réalité : on utilise les deux !</h3>
 <blockquote class="blockquote">
 <p>💡 <strong>Polyglot Persistence</strong> : Utiliser la bonne base pour le bon cas d’usage !</p>
 </blockquote>
@@ -2969,7 +2937,7 @@ Kappa  : Rejoue le log Kafka (même vitesse que le streaming)
 </section>
 </section>
 <section id="résumé" class="level2">
-<h2 class="anchored" data-anchor-id="résumé">📋 Résumé</h2>
+<h2 class="anchored" data-anchor-id="résumé">Résumé</h2>
 <section id="les-5v-du-big-data-1" class="level3">
 <h3 class="anchored" data-anchor-id="les-5v-du-big-data-1">Les 5V du Big Data</h3>
 <table class="caption-top table">
@@ -3135,7 +3103,7 @@ Kappa  : Rejoue le log Kafka (même vitesse que le streaming)
 </section>
 </section>
 <section id="quiz" class="level2">
-<h2 class="anchored" data-anchor-id="quiz">🧠 Quiz</h2>
+<h2 class="anchored" data-anchor-id="quiz">Quiz</h2>
 <hr>
 <section id="q1.-quels-sont-les-3v-originaux-du-big-data" class="level3">
 <h3 class="anchored" data-anchor-id="q1.-quels-sont-les-3v-originaux-du-big-data">❓ Q1. Quels sont les 3V originaux du Big Data ?</h3>
@@ -3439,7 +3407,7 @@ Kappa  : Rejoue le log Kafka (même vitesse que le streaming)
 <section id="prochaine-étape" class="level2">
 <h2 class="anchored" data-anchor-id="prochaine-étape">➡️ Prochaine étape</h2>
 <p>Tu as maintenant les bases théoriques du Big Data, du traitement distribué, des architectures modernes et du NoSQL. Place à la pratique avec MongoDB !</p>
-<p>👉 <strong>Module suivant : <code>09_mongodb_for_data_engineers.ipynb</code></strong> — MongoDB pour les Data Engineers</p>
+<p>👉 <strong>Module suivant : <code>09_mongodb_for_data_engineers</code></strong> — MongoDB pour les Data Engineers</p>
 <p>Tu apprendras à : - Installer et utiliser MongoDB - Créer des collections et documents - Écrire des requêtes MQL (MongoDB Query Language) - Utiliser PyMongo depuis Python - Modéliser des données pour MongoDB</p>
 <hr>
 <p>🎉 <strong>Félicitations !</strong> Tu comprends maintenant le Big Data, les systèmes distribués, les architectures modernes et le NoSQL.</p>
@@ -3472,7 +3440,7 @@ Kappa  : Rejoue le log Kafka (même vitesse que le streaming)
 </style>
 
 <div id="pdf-button" onclick="downloadPDF()">
-  📄 Télécharger ce module en PDF
+  📄 Télécharger la version PDF
 </div>
 
 <script>

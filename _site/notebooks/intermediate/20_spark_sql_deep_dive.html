@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>🔍 Spark SQL Deep Dive &amp; Optimisation – Bootcamp Data Engineering</title>
+<title>Spark SQL Deep Dive &amp; Optimisation – Bootcamp Data Engineering</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -77,9 +77,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-fc8d3d93f0a84b7619e1f8ff6eb63d42.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-a5e5c9297d81242f794464007003a45f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-7ce12bcd0277d468432a98ebc2064ff0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-a5e5c9297d81242f794464007003a45f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-1ded37139ab960446759ac96e383a6c7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-0c5e4731d53392a4fe54074a744a0e14.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-1ded37139ab960446759ac96e383a6c7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": true,
@@ -114,11 +114,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="keywords" content="data engineering, spark, kafka, python, kubernetes, lakehouse, delta lake, bootcamp">
 
 
-<meta property="og:title" content="🔍 Spark SQL Deep Dive &amp; Optimisation – Bootcamp Data Engineering">
+<meta property="og:title" content="Spark SQL Deep Dive &amp; Optimisation – Bootcamp Data Engineering">
 <meta property="og:description" content="Programme complet Data Engineering — Du débutant au Senior Engineer">
 <meta property="og:site_name" content="Bootcamp Data Engineering">
 <meta property="og:locale" content="fr_FR">
-<meta name="twitter:title" content="🔍 Spark SQL Deep Dive &amp; Optimisation – Bootcamp Data Engineering">
+<meta name="twitter:title" content="Spark SQL Deep Dive &amp; Optimisation – Bootcamp Data Engineering">
 <meta name="twitter:description" content="Programme complet Data Engineering — Du débutant au Senior Engineer">
 <meta name="twitter:creator" content="@diakite_data">
 <meta name="twitter:site" content="@diakite_data">
@@ -703,42 +703,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <span class="sidebar-item-text sidebar-link text-start">
  <span class="menu-text">🟥 Niveau 3 : Avancé</span></span>
   </li>
-        <li class="px-0"><hr class="sidebar-divider hi "></li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false">
- <span class="menu-text">📚 Ressources</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../resources/setup.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">🔧 Setup Environnement</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../resources/documentation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">📖 Documentation</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../resources/faq.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">❓ FAQ</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../resources/links.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">🔗 Liens Utiles</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
     </ul>
     </div>
 </nav>
@@ -749,55 +713,55 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">📑 Sommaire</h2>
    
   <ul>
-  <li><a href="#prérequis" id="toc-prérequis" class="nav-link active" data-scroll-target="#prérequis">📋 Prérequis</a></li>
-  <li><a href="#objectifs-du-module" id="toc-objectifs-du-module" class="nav-link" data-scroll-target="#objectifs-du-module">🎯 Objectifs du module</a></li>
-  <li><a href="#sql-dans-spark-rappels-fondamentaux" id="toc-sql-dans-spark-rappels-fondamentaux" class="nav-link" data-scroll-target="#sql-dans-spark-rappels-fondamentaux">📚 1. SQL dans Spark : Rappels &amp; Fondamentaux</a>
+  <li><a href="#prérequis" id="toc-prérequis" class="nav-link active" data-scroll-target="#prérequis">Prérequis</a></li>
+  <li><a href="#objectifs-du-module" id="toc-objectifs-du-module" class="nav-link" data-scroll-target="#objectifs-du-module">Objectifs du module</a></li>
+  <li><a href="#sql-dans-spark-rappels-fondamentaux" id="toc-sql-dans-spark-rappels-fondamentaux" class="nav-link" data-scroll-target="#sql-dans-spark-rappels-fondamentaux">1. SQL dans Spark : Rappels &amp; Fondamentaux</a>
   <ul class="collapse">
   <li><a href="#créer-et-utiliser-des-vues" id="toc-créer-et-utiliser-des-vues" class="nav-link" data-scroll-target="#créer-et-utiliser-des-vues">1.1 Créer et utiliser des vues</a></li>
   <li><a href="#dataframe-api-vs-sql" id="toc-dataframe-api-vs-sql" class="nav-link" data-scroll-target="#dataframe-api-vs-sql">1.2 DataFrame API vs SQL</a></li>
   <li><a href="#lire-un-plan-dexécution-sql" id="toc-lire-un-plan-dexécution-sql" class="nav-link" data-scroll-target="#lire-un-plan-dexécution-sql">1.3 Lire un plan d’exécution SQL</a></li>
   </ul></li>
-  <li><a href="#window-functions-le-cœur-analytique" id="toc-window-functions-le-cœur-analytique" class="nav-link" data-scroll-target="#window-functions-le-cœur-analytique">🪟 2. Window Functions — Le cœur analytique</a>
+  <li><a href="#window-functions-le-cœur-analytique" id="toc-window-functions-le-cœur-analytique" class="nav-link" data-scroll-target="#window-functions-le-cœur-analytique">2. Window Functions — Le cœur analytique</a>
   <ul class="collapse">
   <li><a href="#syntaxe-et-concepts" id="toc-syntaxe-et-concepts" class="nav-link" data-scroll-target="#syntaxe-et-concepts">2.1 Syntaxe et concepts</a></li>
   <li><a href="#fonctions-de-ranking" id="toc-fonctions-de-ranking" class="nav-link" data-scroll-target="#fonctions-de-ranking">2.2 Fonctions de Ranking</a></li>
   <li><a href="#fonctions-de-décalage-laglead" id="toc-fonctions-de-décalage-laglead" class="nav-link" data-scroll-target="#fonctions-de-décalage-laglead">2.3 Fonctions de décalage (LAG/LEAD)</a></li>
   <li><a href="#agrégations-dans-une-fenêtre" id="toc-agrégations-dans-une-fenêtre" class="nav-link" data-scroll-target="#agrégations-dans-une-fenêtre">2.4 Agrégations dans une fenêtre</a></li>
-  <li><a href="#window-frames-pièges-spark" id="toc-window-frames-pièges-spark" class="nav-link" data-scroll-target="#window-frames-pièges-spark">2.5 Window Frames (⚠️ Pièges Spark)</a></li>
+  <li><a href="#window-frames-pièges-spark" id="toc-window-frames-pièges-spark" class="nav-link" data-scroll-target="#window-frames-pièges-spark">2.5 Window Frames (Pièges Spark)</a></li>
   </ul></li>
-  <li><a href="#pivot-unpivot-reshaping-des-données" id="toc-pivot-unpivot-reshaping-des-données" class="nav-link" data-scroll-target="#pivot-unpivot-reshaping-des-données">🔄 3. PIVOT &amp; UNPIVOT — Reshaping des données</a>
+  <li><a href="#pivot-unpivot-reshaping-des-données" id="toc-pivot-unpivot-reshaping-des-données" class="nav-link" data-scroll-target="#pivot-unpivot-reshaping-des-données">3. PIVOT &amp; UNPIVOT — Reshaping des données</a>
   <ul class="collapse">
   <li><a href="#pivot-lignes-colonnes" id="toc-pivot-lignes-colonnes" class="nav-link" data-scroll-target="#pivot-lignes-colonnes">3.1 PIVOT : lignes → colonnes</a></li>
   <li><a href="#unpivot-colonnes-lignes" id="toc-unpivot-colonnes-lignes" class="nav-link" data-scroll-target="#unpivot-colonnes-lignes">3.2 UNPIVOT : colonnes → lignes</a></li>
   </ul></li>
-  <li><a href="#agrégations-avancées-grouping-sets-cube-rollup" id="toc-agrégations-avancées-grouping-sets-cube-rollup" class="nav-link" data-scroll-target="#agrégations-avancées-grouping-sets-cube-rollup">📊 4. Agrégations Avancées — GROUPING SETS, CUBE, ROLLUP</a>
+  <li><a href="#agrégations-avancées-grouping-sets-cube-rollup" id="toc-agrégations-avancées-grouping-sets-cube-rollup" class="nav-link" data-scroll-target="#agrégations-avancées-grouping-sets-cube-rollup">4. Agrégations Avancées — GROUPING SETS, CUBE, ROLLUP</a>
   <ul class="collapse">
   <li><a href="#grouping-sets-agrégations-multiples" id="toc-grouping-sets-agrégations-multiples" class="nav-link" data-scroll-target="#grouping-sets-agrégations-multiples">4.1 GROUPING SETS : agrégations multiples</a></li>
   <li><a href="#rollup-hiérarchie-dagrégations" id="toc-rollup-hiérarchie-dagrégations" class="nav-link" data-scroll-target="#rollup-hiérarchie-dagrégations">4.2 ROLLUP : hiérarchie d’agrégations</a></li>
   <li><a href="#cube-toutes-les-combinaisons" id="toc-cube-toutes-les-combinaisons" class="nav-link" data-scroll-target="#cube-toutes-les-combinaisons">4.3 CUBE : toutes les combinaisons</a></li>
   </ul></li>
-  <li><a href="#données-semi-structurées-explode-json" id="toc-données-semi-structurées-explode-json" class="nav-link" data-scroll-target="#données-semi-structurées-explode-json">🧩 5. Données Semi-Structurées — EXPLODE &amp; JSON</a>
+  <li><a href="#données-semi-structurées-explode-json" id="toc-données-semi-structurées-explode-json" class="nav-link" data-scroll-target="#données-semi-structurées-explode-json">5. Données Semi-Structurées — EXPLODE &amp; JSON</a>
   <ul class="collapse">
   <li><a href="#explode-éclater-arrays-et-maps" id="toc-explode-éclater-arrays-et-maps" class="nav-link" data-scroll-target="#explode-éclater-arrays-et-maps">5.1 EXPLODE : éclater arrays et maps</a></li>
   <li><a href="#accès-json" id="toc-accès-json" class="nav-link" data-scroll-target="#accès-json">5.2 Accès JSON</a></li>
   </ul></li>
-  <li><a href="#ctes-subqueries-structurer-ses-requêtes" id="toc-ctes-subqueries-structurer-ses-requêtes" class="nav-link" data-scroll-target="#ctes-subqueries-structurer-ses-requêtes">📝 6. CTEs &amp; Subqueries — Structurer ses requêtes</a>
+  <li><a href="#ctes-subqueries-structurer-ses-requêtes" id="toc-ctes-subqueries-structurer-ses-requêtes" class="nav-link" data-scroll-target="#ctes-subqueries-structurer-ses-requêtes">6. CTEs &amp; Subqueries — Structurer ses requêtes</a>
   <ul class="collapse">
   <li><a href="#common-table-expressions-ctes" id="toc-common-table-expressions-ctes" class="nav-link" data-scroll-target="#common-table-expressions-ctes">6.1 Common Table Expressions (CTEs)</a></li>
   <li><a href="#ctes-vs-subqueries" id="toc-ctes-vs-subqueries" class="nav-link" data-scroll-target="#ctes-vs-subqueries">6.2 CTEs vs Subqueries</a></li>
   </ul></li>
-  <li><a href="#optimisation-sql-dans-spark" id="toc-optimisation-sql-dans-spark" class="nav-link" data-scroll-target="#optimisation-sql-dans-spark">⚡ 7. Optimisation SQL dans Spark</a>
+  <li><a href="#optimisation-sql-dans-spark" id="toc-optimisation-sql-dans-spark" class="nav-link" data-scroll-target="#optimisation-sql-dans-spark">7. Optimisation SQL dans Spark</a>
   <ul class="collapse">
   <li><a href="#join-hints" id="toc-join-hints" class="nav-link" data-scroll-target="#join-hints">7.1 Join Hints</a></li>
   <li><a href="#anti-patterns-sql" id="toc-anti-patterns-sql" class="nav-link" data-scroll-target="#anti-patterns-sql">7.2 Anti-patterns SQL</a></li>
   </ul></li>
-  <li><a href="#mini-projet-datamart-customer-analytics" id="toc-mini-projet-datamart-customer-analytics" class="nav-link" data-scroll-target="#mini-projet-datamart-customer-analytics">🚀 Mini-Projet : Datamart Customer Analytics</a>
+  <li><a href="#mini-projet-datamart-customer-analytics" id="toc-mini-projet-datamart-customer-analytics" class="nav-link" data-scroll-target="#mini-projet-datamart-customer-analytics">Mini-Projet : Datamart Customer Analytics</a>
   <ul class="collapse">
-  <li><a href="#objectif" id="toc-objectif" class="nav-link" data-scroll-target="#objectif">🎯 Objectif</a></li>
+  <li><a href="#objectif" id="toc-objectif" class="nav-link" data-scroll-target="#objectif">Objectif</a></li>
   <li><a href="#métriques-à-calculer" id="toc-métriques-à-calculer" class="nav-link" data-scroll-target="#métriques-à-calculer">Métriques à calculer</a></li>
   <li><a href="#architecture" id="toc-architecture" class="nav-link" data-scroll-target="#architecture">Architecture</a></li>
   </ul></li>
-  <li><a href="#quiz-de-fin-de-module" id="toc-quiz-de-fin-de-module" class="nav-link" data-scroll-target="#quiz-de-fin-de-module">🧪 Quiz de fin de module</a>
+  <li><a href="#quiz-de-fin-de-module" id="toc-quiz-de-fin-de-module" class="nav-link" data-scroll-target="#quiz-de-fin-de-module">Quiz de fin de module</a>
   <ul class="collapse">
   <li><a href="#q1.-quelle-est-la-différence-entre-row_number-et-rank" id="toc-q1.-quelle-est-la-différence-entre-row_number-et-rank" class="nav-link" data-scroll-target="#q1.-quelle-est-la-différence-entre-row_number-et-rank">❓ Q1. Quelle est la différence entre ROW_NUMBER() et RANK() ?</a></li>
   <li><a href="#q2.-quelle-est-la-différence-entre-rows-et-range-dans-une-window-frame" id="toc-q2.-quelle-est-la-différence-entre-rows-et-range-dans-une-window-frame" class="nav-link" data-scroll-target="#q2.-quelle-est-la-différence-entre-rows-et-range-dans-une-window-frame">❓ Q2. Quelle est la différence entre ROWS et RANGE dans une window frame ?</a></li>
@@ -828,7 +792,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">🟩 Niveau 2 : Intermédiaire</li><li class="breadcrumb-item"><a href="../../notebooks/intermediate/19_pyspark_advanced.html">⚡ Spark Avancé</a></li><li class="breadcrumb-item"><a href="../../notebooks/intermediate/20_spark_sql_deep_dive.html">20 · Spark SQL Deep Dive</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">🔍 Spark SQL Deep Dive &amp; Optimisation</h1>
+<h1 class="title">Spark SQL Deep Dive &amp; Optimisation</h1>
 </div>
 
 
@@ -848,7 +812,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Bienvenue dans ce module où tu vas maîtriser <strong>Spark SQL</strong> en profondeur. Tu découvriras les Window Functions, les agrégations avancées, le reshaping de données, et comment optimiser tes requêtes SQL.</p>
 <hr>
 <section id="prérequis" class="level2">
-<h2 class="anchored" data-anchor-id="prérequis">📋 Prérequis</h2>
+<h2 class="anchored" data-anchor-id="prérequis">Prérequis</h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -873,7 +837,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 </section>
 <section id="objectifs-du-module" class="level2">
-<h2 class="anchored" data-anchor-id="objectifs-du-module">🎯 Objectifs du module</h2>
+<h2 class="anchored" data-anchor-id="objectifs-du-module">Objectifs du module</h2>
 <p>À la fin de ce module, tu seras capable de :</p>
 <ul>
 <li>Maîtriser les <strong>Window Functions</strong> (ranking, lag/lead, frames)</li>
@@ -884,6 +848,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Optimiser</strong> les requêtes SQL (hints, statistiques)</li>
 <li>Construire un <strong>datamart analytique</strong> complet</li>
 </ul>
+<p><a href="https://colab.research.google.com/github/diakite-data/data-engineering-bootcamp/blob/main/notebooks/intermediate/20_spark_sql_deep_dive.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a></p>
+<blockquote class="blockquote">
+<p>💡 <strong>Conseil</strong> : Cliquez sur le badge ci-dessus pour exécuter ce notebook directement dans Google Colab (aucune installation requise).</p>
+</blockquote>
 <div id="spark_setup" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
@@ -905,7 +873,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 <section id="sql-dans-spark-rappels-fondamentaux" class="level2">
-<h2 class="anchored" data-anchor-id="sql-dans-spark-rappels-fondamentaux">📚 1. SQL dans Spark : Rappels &amp; Fondamentaux</h2>
+<h2 class="anchored" data-anchor-id="sql-dans-spark-rappels-fondamentaux">1. SQL dans Spark : Rappels &amp; Fondamentaux</h2>
 <blockquote class="blockquote">
 <p>⚡ <strong>Rappel rapide</strong> — Les détails sur Catalyst et l’architecture sont dans le module 19.</p>
 </blockquote>
@@ -1081,7 +1049,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 </section>
 <section id="window-functions-le-cœur-analytique" class="level2">
-<h2 class="anchored" data-anchor-id="window-functions-le-cœur-analytique">🪟 2. Window Functions — Le cœur analytique</h2>
+<h2 class="anchored" data-anchor-id="window-functions-le-cœur-analytique">2. Window Functions — Le cœur analytique</h2>
 <blockquote class="blockquote">
 <p>🔥 <strong>Section la plus importante du module.</strong> Les Window Functions sont essentielles pour l’analytics.</p>
 </blockquote>
@@ -1332,7 +1300,7 @@ Données originales          PARTITION BY category    ORDER BY date       Calcul
 </div>
 </section>
 <section id="window-frames-pièges-spark" class="level3">
-<h3 class="anchored" data-anchor-id="window-frames-pièges-spark">2.5 Window Frames (⚠️ Pièges Spark)</h3>
+<h3 class="anchored" data-anchor-id="window-frames-pièges-spark">2.5 Window Frames (Pièges Spark)</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">ROWS</span> <span class="kw">BETWEEN</span> <span class="kw">UNBOUNDED</span> <span class="kw">PRECEDING</span> <span class="kw">AND</span> <span class="kw">CURRENT</span> <span class="kw">ROW</span>  <span class="co">-- Du début jusqu'à maintenant</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="kw">ROWS</span> <span class="kw">BETWEEN</span> <span class="dv">6</span> <span class="kw">PRECEDING</span> <span class="kw">AND</span> <span class="kw">CURRENT</span> <span class="kw">ROW</span>          <span class="co">-- 7 dernières lignes (rolling)</span></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="kw">ROWS</span> <span class="kw">BETWEEN</span> <span class="kw">CURRENT</span> <span class="kw">ROW</span> <span class="kw">AND</span> <span class="kw">UNBOUNDED</span> <span class="kw">FOLLOWING</span>  <span class="co">-- De maintenant jusqu'à la fin</span></span>
@@ -1404,7 +1372,7 @@ Données originales          PARTITION BY category    ORDER BY date       Calcul
 </section>
 </section>
 <section id="pivot-unpivot-reshaping-des-données" class="level2">
-<h2 class="anchored" data-anchor-id="pivot-unpivot-reshaping-des-données">🔄 3. PIVOT &amp; UNPIVOT — Reshaping des données</h2>
+<h2 class="anchored" data-anchor-id="pivot-unpivot-reshaping-des-données">3. PIVOT &amp; UNPIVOT — Reshaping des données</h2>
 <section id="pivot-lignes-colonnes" class="level3">
 <h3 class="anchored" data-anchor-id="pivot-lignes-colonnes">3.1 PIVOT : lignes → colonnes</h3>
 <p>Transforme les valeurs d’une colonne en colonnes distinctes.</p>
@@ -1477,7 +1445,7 @@ Données originales          PARTITION BY category    ORDER BY date       Calcul
 </section>
 </section>
 <section id="agrégations-avancées-grouping-sets-cube-rollup" class="level2">
-<h2 class="anchored" data-anchor-id="agrégations-avancées-grouping-sets-cube-rollup">📊 4. Agrégations Avancées — GROUPING SETS, CUBE, ROLLUP</h2>
+<h2 class="anchored" data-anchor-id="agrégations-avancées-grouping-sets-cube-rollup">4. Agrégations Avancées — GROUPING SETS, CUBE, ROLLUP</h2>
 <p>Ces fonctions permettent de calculer <strong>plusieurs niveaux d’agrégation</strong> en une seule requête.</p>
 <section id="grouping-sets-agrégations-multiples" class="level3">
 <h3 class="anchored" data-anchor-id="grouping-sets-agrégations-multiples">4.1 GROUPING SETS : agrégations multiples</h3>
@@ -1579,7 +1547,7 @@ Données originales          PARTITION BY category    ORDER BY date       Calcul
 </section>
 </section>
 <section id="données-semi-structurées-explode-json" class="level2">
-<h2 class="anchored" data-anchor-id="données-semi-structurées-explode-json">🧩 5. Données Semi-Structurées — EXPLODE &amp; JSON</h2>
+<h2 class="anchored" data-anchor-id="données-semi-structurées-explode-json">5. Données Semi-Structurées — EXPLODE &amp; JSON</h2>
 <section id="explode-éclater-arrays-et-maps" class="level3">
 <h3 class="anchored" data-anchor-id="explode-éclater-arrays-et-maps">5.1 EXPLODE : éclater arrays et maps</h3>
 <div id="explode_demo" class="cell">
@@ -1701,7 +1669,7 @@ Données originales          PARTITION BY category    ORDER BY date       Calcul
 </section>
 </section>
 <section id="ctes-subqueries-structurer-ses-requêtes" class="level2">
-<h2 class="anchored" data-anchor-id="ctes-subqueries-structurer-ses-requêtes">📝 6. CTEs &amp; Subqueries — Structurer ses requêtes</h2>
+<h2 class="anchored" data-anchor-id="ctes-subqueries-structurer-ses-requêtes">6. CTEs &amp; Subqueries — Structurer ses requêtes</h2>
 <section id="common-table-expressions-ctes" class="level3">
 <h3 class="anchored" data-anchor-id="common-table-expressions-ctes">6.1 Common Table Expressions (CTEs)</h3>
 <div id="cte_demo" class="cell">
@@ -1804,7 +1772,7 @@ Données originales          PARTITION BY category    ORDER BY date       Calcul
 </section>
 </section>
 <section id="optimisation-sql-dans-spark" class="level2">
-<h2 class="anchored" data-anchor-id="optimisation-sql-dans-spark">⚡ 7. Optimisation SQL dans Spark</h2>
+<h2 class="anchored" data-anchor-id="optimisation-sql-dans-spark">7. Optimisation SQL dans Spark</h2>
 <section id="join-hints" class="level3">
 <h3 class="anchored" data-anchor-id="join-hints">7.1 Join Hints</h3>
 <div id="join_hints_demo" class="cell">
@@ -1953,9 +1921,9 @@ Données originales          PARTITION BY category    ORDER BY date       Calcul
 </section>
 </section>
 <section id="mini-projet-datamart-customer-analytics" class="level2">
-<h2 class="anchored" data-anchor-id="mini-projet-datamart-customer-analytics">🚀 Mini-Projet : Datamart Customer Analytics</h2>
+<h2 class="anchored" data-anchor-id="mini-projet-datamart-customer-analytics">Mini-Projet : Datamart Customer Analytics</h2>
 <section id="objectif" class="level3">
-<h3 class="anchored" data-anchor-id="objectif">🎯 Objectif</h3>
+<h3 class="anchored" data-anchor-id="objectif">Objectif</h3>
 <p>Construire un datamart analytique client complet en utilisant toutes les techniques apprises.</p>
 </section>
 <section id="métriques-à-calculer" class="level3">
@@ -2177,7 +2145,7 @@ Données originales          PARTITION BY category    ORDER BY date       Calcul
 </section>
 </section>
 <section id="quiz-de-fin-de-module" class="level2">
-<h2 class="anchored" data-anchor-id="quiz-de-fin-de-module">🧪 Quiz de fin de module</h2>
+<h2 class="anchored" data-anchor-id="quiz-de-fin-de-module">Quiz de fin de module</h2>
 <hr>
 <section id="q1.-quelle-est-la-différence-entre-row_number-et-rank" class="level3">
 <h3 class="anchored" data-anchor-id="q1.-quelle-est-la-différence-entre-row_number-et-rank">❓ Q1. Quelle est la différence entre ROW_NUMBER() et RANK() ?</h3>
@@ -2392,7 +2360,7 @@ Données originales          PARTITION BY category    ORDER BY date       Calcul
 <section id="prochaine-étape" class="level2">
 <h2 class="anchored" data-anchor-id="prochaine-étape">➡️ Prochaine étape</h2>
 <p>Maintenant que tu maîtrises Spark SQL, passons à spark sur K8S !</p>
-<p>👉 <strong>Module suivant : <code>21_spark_on_kubernetes.ipynb</code></strong> - Spark &amp; Kubernetes</p>
+<p>👉 <strong>Module suivant : <code>21_spark_on_kubernetes</code></strong> - Spark &amp; Kubernetes</p>
 <hr>
 <section id="récapitulatif-de-ce-module" class="level3">
 <h3 class="anchored" data-anchor-id="récapitulatif-de-ce-module">📝 Récapitulatif de ce module</h3>
@@ -2479,7 +2447,7 @@ Données originales          PARTITION BY category    ORDER BY date       Calcul
 </style>
 
 <div id="pdf-button" onclick="downloadPDF()">
-  📄 Télécharger ce module en PDF
+  📄 Télécharger la version PDF
 </div>
 
 <script>

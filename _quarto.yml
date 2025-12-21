@@ -259,17 +259,17 @@ website:
       # =========================================================================
       # 📚 RESSOURCES
       # =========================================================================
-      - text: "---"
-      - section: "📚 Ressources"
-        contents:
-           - text: "🔧 Setup Environnement"
-             href: resources/setup.qmd
-           - text: "📖 Documentation"
-             href: resources/documentation.qmd
-           - text: "❓ FAQ"
-             href: resources/faq.qmd
-           - text: "🔗 Liens Utiles"
-             href: resources/links.qmd
+      # - text: "---"
+      # - section: "📚 Ressources"
+      #   contents:
+      #      - text: "🔧 Setup Environnement"
+      #        href: resources/setup.qmd
+      #      - text: "📖 Documentation"
+      #        href: resources/documentation.qmd
+      #      - text: "❓ FAQ"
+      #        href: resources/faq.qmd
+      #      - text: "🔗 Liens Utiles"
+      #        href: resources/links.qmd
 
 
   # ---------------------------------------------------------------------------

@@ -2,31 +2,23 @@
 
 /* ==================================================
    🚀 BOOTCAMP DATA ENGINEERING - PREMIUM STYLESHEET
-   From Zero to Hero - Modern & Professional Design
+   From Zero to Hero - Orange & Sky Blue Theme
    ================================================== */
 
-/* Primary Colors */
-$primary-900: #0b132b;
-$primary-800: #1c2541;
-$primary-700: #3a506b;
-$primary-600: #5bc0be;
-$primary-500: #6fffe9;
-
-/* Accent Colors */
-$accent-blue: #4e89ff;
-$accent-purple: #a855f7;
-$accent-pink: #ec4899;
-$accent-cyan: #22d3ee;
-$accent-green: #10b981;
-$accent-orange: #f97316;
-$accent-yellow: #fbbf24;
+/* Primary Colors - Orange & Sky Blue */
+$primary-orange: #f97316;
+$primary-orange-light: #fb923c;
+$primary-orange-dark: #ea580c;
+$primary-sky: #0ea5e9;
+$primary-sky-light: #38bdf8;
+$primary-sky-dark: #0284c7;
 
 /* Code Colors (Dracula-inspired) */
 $code-bg: #1e1e2e;
 $code-text: #cdd6f4;
-$code-keyword: #cba6f7;
-$code-string: #a6e3a1;
-$code-function: #89b4fa;
+$code-keyword: #fb923c;
+$code-string: #38bdf8;
+$code-function: #0ea5e9;
 $code-comment: #6c7086;
 
 /*-- scss:rules --*/
@@ -36,21 +28,29 @@ $code-comment: #6c7086;
 -------------------------------------------------- */
 
 :root {
-  /* Primary Colors */
-  --primary-900: #0b132b;
-  --primary-800: #1c2541;
-  --primary-700: #3a506b;
-  --primary-600: #5bc0be;
-  --primary-500: #6fffe9;
+  /* Primary Colors - Orange */
+  --orange-50: #fff7ed;
+  --orange-100: #ffedd5;
+  --orange-200: #fed7aa;
+  --orange-300: #fdba74;
+  --orange-400: #fb923c;
+  --orange-500: #f97316;
+  --orange-600: #ea580c;
+  --orange-700: #c2410c;
+  --orange-800: #9a3412;
+  --orange-900: #7c2d12;
   
-  /* Accent Colors */
-  --accent-blue: #4e89ff;
-  --accent-purple: #a855f7;
-  --accent-pink: #ec4899;
-  --accent-cyan: #22d3ee;
-  --accent-green: #10b981;
-  --accent-orange: #f97316;
-  --accent-yellow: #fbbf24;
+  /* Primary Colors - Sky Blue */
+  --sky-50: #f0f9ff;
+  --sky-100: #e0f2fe;
+  --sky-200: #bae6fd;
+  --sky-300: #7dd3fc;
+  --sky-400: #38bdf8;
+  --sky-500: #0ea5e9;
+  --sky-600: #0284c7;
+  --sky-700: #0369a1;
+  --sky-800: #075985;
+  --sky-900: #0c4a6e;
   
   /* Neutral Colors */
   --gray-50: #f9fafb;
@@ -67,16 +67,17 @@ $code-comment: #6c7086;
   /* Code Colors */
   --code-bg: #1e1e2e;
   --code-text: #cdd6f4;
-  --code-keyword: #cba6f7;
-  --code-string: #a6e3a1;
-  --code-function: #89b4fa;
+  --code-keyword: #fb923c;
+  --code-string: #38bdf8;
+  --code-function: #0ea5e9;
   --code-comment: #6c7086;
   
   /* Gradients */
-  --gradient-primary: linear-gradient(135deg, #0b132b 0%, #1c2541 50%, #3a506b 100%);
-  --gradient-accent: linear-gradient(135deg, #4e89ff 0%, #a855f7 100%);
-  --gradient-warm: linear-gradient(135deg, #f97316 0%, #ec4899 100%);
-  --gradient-cool: linear-gradient(135deg, #22d3ee 0%, #6fffe9 100%);
+  --gradient-primary: linear-gradient(135deg, var(--orange-500) 0%, var(--sky-500) 100%);
+  --gradient-orange: linear-gradient(135deg, var(--orange-400) 0%, var(--orange-600) 100%);
+  --gradient-sky: linear-gradient(135deg, var(--sky-400) 0%, var(--sky-600) 100%);
+  --gradient-warm: linear-gradient(135deg, var(--orange-500) 0%, var(--orange-300) 100%);
+  --gradient-cool: linear-gradient(135deg, var(--sky-400) 0%, var(--sky-300) 100%);
   
   /* Shadows */
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
@@ -84,7 +85,8 @@ $code-comment: #6c7086;
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
   --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  --shadow-glow: 0 0 40px rgba(78, 137, 255, 0.3);
+  --shadow-orange: 0 0 40px rgba(249, 115, 22, 0.3);
+  --shadow-sky: 0 0 40px rgba(14, 165, 233, 0.3);
   
   /* Typography */
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
@@ -114,7 +116,7 @@ $code-comment: #6c7086;
 }
 
 /* --------------------------------------------------
-   GLOBAL BASE STYLES
+   GLOBAL BASE STYLES - WHITE BACKGROUND
 -------------------------------------------------- */
 
 html {
@@ -126,14 +128,26 @@ html {
 body {
   font-family: var(--font-sans);
   line-height: 1.7;
+  background-color: #ffffff !important;
+  color: var(--gray-800);
+}
+
+.quarto-container {
+  background-color: #ffffff !important;
+}
+
+main,
+.content,
+#quarto-content {
+  background-color: #ffffff !important;
 }
 
 ::selection {
-  background-color: var(--accent-blue);
+  background-color: var(--orange-500);
   color: white;
 }
 
-/* Custom Scrollbar */
+/* Custom Scrollbar - Orange/Sky */
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
@@ -145,13 +159,13 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, var(--accent-blue), var(--accent-purple));
+  background: linear-gradient(180deg, var(--orange-500), var(--sky-500));
   border-radius: var(--radius-full);
   border: 2px solid var(--gray-100);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, var(--accent-purple), var(--accent-pink));
+  background: linear-gradient(180deg, var(--orange-400), var(--sky-400));
 }
 
 /* --------------------------------------------------
@@ -163,13 +177,13 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 800;
   letter-spacing: -0.025em;
   line-height: 1.2;
-  color: var(--primary-900);
+  color: var(--gray-900);
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
 }
 
 h1 {
-  background: var(--gradient-accent);
+  background: var(--gradient-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -181,6 +195,7 @@ h2 {
   display: inline-block;
   margin-top: 1.75rem;
   margin-bottom: 0.75rem;
+  color: var(--gray-800);
 }
 
 h2::after {
@@ -190,27 +205,31 @@ h2::after {
   left: 0;
   width: 60px;
   height: 4px;
-  background: var(--gradient-accent);
+  background: var(--gradient-primary);
   border-radius: var(--radius-full);
 }
 
 h3 {
-  color: var(--primary-700);
+  color: var(--sky-700);
+}
+
+h4 {
+  color: var(--orange-700);
 }
 
 /* --------------------------------------------------
-   HERO BANNER
+   HERO BANNER - Orange/Sky Gradient
 -------------------------------------------------- */
 
 .hero {
   position: relative;
   padding: 100px 40px;
-  background: var(--gradient-primary);
+  background: linear-gradient(135deg, var(--orange-500) 0%, var(--sky-500) 100%);
   color: white;
   text-align: center;
   border-radius: var(--radius-2xl);
   margin-bottom: var(--spacing-3xl);
-  box-shadow: var(--shadow-2xl), var(--shadow-glow);
+  box-shadow: var(--shadow-2xl), var(--shadow-orange);
   overflow: hidden;
 }
 
@@ -222,9 +241,9 @@ h3 {
   width: 200%;
   height: 200%;
   background: 
-    radial-gradient(circle at 20% 80%, rgba(78, 137, 255, 0.3) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(168, 85, 247, 0.3) 0%, transparent 50%),
-    radial-gradient(circle at 40% 40%, rgba(34, 211, 238, 0.2) 0%, transparent 40%);
+    radial-gradient(circle at 20% 80%, rgba(251, 146, 60, 0.4) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(56, 189, 248, 0.4) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(255, 255, 255, 0.2) 0%, transparent 40%);
   animation: heroFloat 20s ease-in-out infinite;
   pointer-events: none;
 }
@@ -244,8 +263,8 @@ h3 {
   right: 0;
   bottom: 0;
   background-image: 
-    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
   background-size: 50px 50px;
   pointer-events: none;
 }
@@ -256,7 +275,7 @@ h3 {
   font-size: clamp(2.5rem, 6vw, 4rem);
   font-weight: 900;
   margin-bottom: var(--spacing-md);
-  background: linear-gradient(135deg, #ffffff 0%, #e0e7ff 50%, #c7d2fe 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #fff7ed 50%, #e0f2fe 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -273,31 +292,31 @@ h3 {
   z-index: 1;
   font-weight: 400;
   font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-  opacity: 0.9;
+  opacity: 0.95;
   margin-bottom: 0;
-  color: #e5e7eb;
+  color: #ffffff;
 }
 
 /* --------------------------------------------------
-   INLINE CODE
+   INLINE CODE - Orange accent
 -------------------------------------------------- */
 
 code:not(pre code) {
   background: linear-gradient(135deg, var(--code-bg) 0%, #2a2a3e 100%);
-  color: var(--code-keyword);
+  color: var(--orange-400);
   padding: 3px 10px;
   border-radius: var(--radius-sm);
   font-family: var(--font-mono);
   font-weight: 500;
   font-size: 0.875em;
-  border: 1px solid rgba(203, 166, 247, 0.2);
+  border: 1px solid rgba(251, 146, 60, 0.2);
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   transition: var(--transition-fast);
   white-space: nowrap;
 }
 
 code:not(pre code):hover {
-  border-color: rgba(203, 166, 247, 0.4);
+  border-color: rgba(251, 146, 60, 0.4);
   box-shadow: 0 4px 8px rgba(0,0,0,0.15);
   transform: translateY(-1px);
 }
@@ -311,7 +330,7 @@ pre {
   background: var(--code-bg) !important;
   border-radius: var(--radius-lg) !important;
   box-shadow: var(--shadow-xl);
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid rgba(249, 115, 22, 0.2);
   margin: var(--spacing-xl) 0 !important;
   overflow: hidden;
 }
@@ -328,28 +347,26 @@ pre code {
 }
 
 /* --------------------------------------------------
-   NAVBAR
+   NAVBAR - Orange/Sky theme
 -------------------------------------------------- */
 
 .navbar {
-  background: rgba(13, 27, 42, 0.95) !important;
+  background: linear-gradient(135deg, var(--orange-600) 0%, var(--sky-600) 100%) !important;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-  box-shadow: 0 4px 30px rgba(0,0,0,0.2);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 4px 30px rgba(0,0,0,0.15);
 }
 
 .navbar .navbar-brand {
   font-weight: 800;
   font-size: 1.25rem;
-  background: var(--gradient-cool);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: white !important;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .navbar .nav-link {
-  color: #d1d5db !important;
+  color: rgba(255,255,255,0.9) !important;
   font-weight: 500;
   padding: 8px 16px !important;
   border-radius: var(--radius-md);
@@ -358,15 +375,15 @@ pre code {
 
 .navbar .nav-link:hover {
   color: white !important;
-  background: rgba(255,255,255,0.05);
+  background: rgba(255,255,255,0.15);
 }
 
 /* --------------------------------------------------
-   SIDEBAR
+   SIDEBAR - White background with orange/sky accents
 -------------------------------------------------- */
 
 .sidebar {
-  background: linear-gradient(180deg, var(--gray-50) 0%, white 100%);
+  background: #ffffff;
   border-right: 1px solid var(--gray-200);
 }
 
@@ -384,35 +401,35 @@ pre code {
 }
 
 .sidebar-item a:hover {
-  background: var(--gray-100);
-  color: var(--accent-blue);
+  background: var(--orange-50);
+  color: var(--orange-600);
   transform: translateX(4px);
 }
 
 .sidebar-item a.active {
-  background: linear-gradient(135deg, rgba(78, 137, 255, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);
-  color: var(--accent-blue);
+  background: linear-gradient(135deg, rgba(249, 115, 22, 0.1) 0%, rgba(14, 165, 233, 0.1) 100%);
+  color: var(--orange-600);
   font-weight: 600;
-  border-left: 3px solid var(--accent-blue);
+  border-left: 3px solid var(--orange-500);
 }
 
 /* --------------------------------------------------
-   LINKS
+   LINKS - Sky blue primary, orange on hover
 -------------------------------------------------- */
 
 a {
-  color: var(--accent-blue);
+  color: var(--sky-600);
   text-decoration: none;
   font-weight: 500;
   transition: var(--transition-fast);
 }
 
 a:hover {
-  color: var(--accent-purple);
+  color: var(--orange-500);
 }
 
 /* --------------------------------------------------
-   TABLES
+   TABLES - Orange/Sky header
 -------------------------------------------------- */
 
 table {
@@ -423,10 +440,11 @@ table {
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
+  background: white;
 }
 
 thead {
-  background: var(--gradient-primary);
+  background: linear-gradient(135deg, var(--orange-500) 0%, var(--sky-500) 100%);
 }
 
 th {
@@ -443,6 +461,7 @@ td {
   padding: 14px 20px;
   border-bottom: 1px solid var(--gray-200);
   color: var(--gray-700);
+  background: white;
 }
 
 tbody tr {
@@ -455,7 +474,7 @@ tbody tr:nth-child(even) {
 }
 
 tbody tr:hover {
-  background: linear-gradient(90deg, rgba(78, 137, 255, 0.05) 0%, rgba(168, 85, 247, 0.05) 100%);
+  background: linear-gradient(90deg, rgba(249, 115, 22, 0.05) 0%, rgba(14, 165, 233, 0.05) 100%);
 }
 
 tbody tr:last-child td {
@@ -463,7 +482,7 @@ tbody tr:last-child td {
 }
 
 /* --------------------------------------------------
-   BUTTONS
+   BUTTONS - Orange primary
 -------------------------------------------------- */
 
 .btn {
@@ -476,7 +495,7 @@ tbody tr:last-child td {
   font-weight: 600;
   font-size: 1rem;
   color: white;
-  background: var(--gradient-accent);
+  background: var(--gradient-orange);
   border: none;
   border-radius: var(--radius-lg);
   cursor: pointer;
@@ -487,12 +506,20 @@ tbody tr:last-child td {
 
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: var(--shadow-xl), 0 0 30px rgba(78, 137, 255, 0.4);
+  box-shadow: var(--shadow-xl), var(--shadow-orange);
   color: white;
 }
 
+.btn-secondary {
+  background: var(--gradient-sky);
+}
+
+.btn-secondary:hover {
+  box-shadow: var(--shadow-xl), var(--shadow-sky);
+}
+
 /* --------------------------------------------------
-   CALLOUTS
+   CALLOUTS - Orange/Sky accents
 -------------------------------------------------- */
 
 .callout,
@@ -502,13 +529,13 @@ blockquote {
   padding: var(--spacing-xl);
   margin: var(--spacing-xl) 0;
   box-shadow: var(--shadow-md);
-  border-left: 4px solid var(--accent-blue);
+  border-left: 4px solid var(--sky-500);
 }
 
 blockquote {
   font-style: italic;
   color: var(--gray-600);
-  border-left-color: var(--accent-purple);
+  border-left-color: var(--orange-500);
 }
 
 blockquote p {
@@ -516,27 +543,27 @@ blockquote p {
 }
 
 .callout-note {
-  border-left-color: var(--accent-cyan);
-  background: linear-gradient(135deg, rgba(34, 211, 238, 0.05) 0%, white 100%);
+  border-left-color: var(--sky-500);
+  background: linear-gradient(135deg, var(--sky-50) 0%, white 100%);
 }
 
 .callout-warning {
-  border-left-color: var(--accent-orange);
-  background: linear-gradient(135deg, rgba(249, 115, 22, 0.05) 0%, white 100%);
+  border-left-color: var(--orange-500);
+  background: linear-gradient(135deg, var(--orange-50) 0%, white 100%);
 }
 
 .callout-tip {
-  border-left-color: var(--accent-green);
+  border-left-color: #10b981;
   background: linear-gradient(135deg, rgba(16, 185, 129, 0.05) 0%, white 100%);
 }
 
 .callout-important {
-  border-left-color: var(--accent-purple);
-  background: linear-gradient(135deg, rgba(168, 85, 247, 0.05) 0%, white 100%);
+  border-left-color: var(--orange-600);
+  background: linear-gradient(135deg, var(--orange-50) 0%, white 100%);
 }
 
 /* --------------------------------------------------
-   LISTS
+   LISTS - Orange/Sky markers
 -------------------------------------------------- */
 
 ul, ol {
@@ -550,11 +577,11 @@ li {
 }
 
 ul li::marker {
-  color: var(--accent-blue);
+  color: var(--orange-500);
 }
 
 ol li::marker {
-  color: var(--accent-purple);
+  color: var(--sky-600);
   font-weight: 700;
 }
 
@@ -565,23 +592,23 @@ ol li::marker {
 hr {
   border: none;
   height: 2px;
-  background: linear-gradient(90deg, transparent, var(--gray-300), transparent);
+  background: linear-gradient(90deg, transparent, var(--orange-300), var(--sky-300), transparent);
   margin: var(--spacing-3xl) 0;
 }
 
 /* --------------------------------------------------
-   FOOTER
+   FOOTER - Orange/Sky gradient
 -------------------------------------------------- */
 
 .page-footer,
 footer {
-  background: var(--gradient-primary);
-  color: #d1d5db;
+  background: linear-gradient(135deg, var(--orange-600) 0%, var(--sky-600) 100%);
+  color: white;
 }
 
 .page-footer a,
 footer a {
-  color: var(--accent-cyan);
+  color: var(--orange-100);
 }
 
 .page-footer a:hover,
@@ -590,12 +617,13 @@ footer a:hover {
 }
 
 /* --------------------------------------------------
-   TOC
+   TOC - Sky blue accents
 -------------------------------------------------- */
 
 #TOC {
   border-left: 2px solid var(--gray-200);
   padding-left: var(--spacing-md);
+  background: white;
 }
 
 #TOC a {
@@ -604,12 +632,37 @@ footer a:hover {
 }
 
 #TOC a:hover {
-  color: var(--accent-blue);
+  color: var(--sky-600);
 }
 
 #TOC .active {
-  color: var(--accent-blue);
+  color: var(--orange-500);
   font-weight: 600;
+}
+
+/* --------------------------------------------------
+   BADGES & TAGS
+-------------------------------------------------- */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge-orange {
+  background: var(--orange-100);
+  color: var(--orange-700);
+}
+
+.badge-sky {
+  background: var(--sky-100);
+  color: var(--sky-700);
 }
 
 /* --------------------------------------------------
@@ -634,8 +687,9 @@ footer a:hover {
 }
 
 .code-fold-btn:hover {
-  background: var(--gray-200);
-  color: var(--gray-800);
+  background: var(--orange-50);
+  color: var(--orange-600);
+  border-color: var(--orange-200);
 }
 
 .code-copy-button {
@@ -647,8 +701,56 @@ footer a:hover {
 }
 
 .code-copy-button:hover {
-  background: rgba(255,255,255,0.2);
+  background: rgba(249, 115, 22, 0.3);
   color: white;
+}
+
+/* --------------------------------------------------
+   CARDS (if used)
+-------------------------------------------------- */
+
+.card {
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--gray-200);
+  transition: var(--transition-base);
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--orange-200);
+}
+
+.card-header {
+  background: linear-gradient(135deg, var(--orange-500) 0%, var(--sky-500) 100%);
+  color: white;
+  padding: var(--spacing-lg);
+  font-weight: 700;
+}
+
+.card-body {
+  padding: var(--spacing-xl);
+}
+
+/* --------------------------------------------------
+   PROGRESS INDICATORS
+-------------------------------------------------- */
+
+.progress {
+  height: 8px;
+  background: var(--gray-200);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.progress-bar {
+  background: linear-gradient(90deg, var(--orange-500), var(--sky-500));
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width 0.5s ease;
 }
 
 /* --------------------------------------------------
@@ -676,5 +778,30 @@ footer a:hover {
   
   pre code {
     font-size: 0.85rem !important;
+  }
+}
+
+/* --------------------------------------------------
+   PRINT STYLES
+-------------------------------------------------- */
+
+@media print {
+  body {
+    background: white !important;
+  }
+  
+  .hero {
+    background: var(--gray-100) !important;
+    box-shadow: none !important;
+  }
+  
+  .navbar,
+  .sidebar {
+    display: none !important;
+  }
+  
+  pre {
+    border: 1px solid var(--gray-300) !important;
+    box-shadow: none !important;
   }
 }
