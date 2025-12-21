@@ -1,8 +1,15 @@
+/*-- scss:defaults --*/
+
 /* ==================================================
    🚀 BOOTCAMP DATA ENGINEERING - PREMIUM STYLESHEET
    From Zero to Hero - Orange & Sky Blue Theme
-   Pure CSS Version (no SCSS)
    ================================================== */
+
+/*-- scss:rules --*/
+
+/* --------------------------------------------------
+   CSS CUSTOM PROPERTIES (Design Tokens)
+-------------------------------------------------- */
 
 :root {
   /* Primary Colors - Orange */
@@ -739,8 +746,6 @@ footer a:hover {
 -------------------------------------------------- */
 
 @media (max-width: 991px) {
-  /* Sidebar se cache automatiquement via Quarto */
-  
   #quarto-content {
     padding: 0 20px;
   }
@@ -750,7 +755,6 @@ footer a:hover {
     margin: 0 -10px var(--spacing-2xl) -10px;
   }
   
-  /* Tables moins larges */
   th, td {
     padding: 12px 16px;
   }
@@ -761,7 +765,6 @@ footer a:hover {
 -------------------------------------------------- */
 
 @media (max-width: 768px) {
-  /* === LAYOUT === */
   body {
     font-size: 15px;
   }
@@ -770,7 +773,6 @@ footer a:hover {
     padding: 0 15px;
   }
   
-  /* === HERO === */
   .hero {
     padding: 50px 20px;
     border-radius: var(--radius-lg);
@@ -786,12 +788,10 @@ footer a:hover {
     font-size: 0.95rem;
   }
   
-  /* Désactiver l'animation sur mobile (performance) */
   .hero::before {
     animation: none;
   }
   
-  /* === TYPOGRAPHIE === */
   h1 { font-size: 1.75rem; }
   h2 { font-size: 1.4rem; }
   h3 { font-size: 1.2rem; }
@@ -802,7 +802,6 @@ footer a:hover {
     height: 3px;
   }
   
-  /* === TABLES === */
   table {
     display: block;
     overflow-x: auto;
@@ -819,7 +818,6 @@ footer a:hover {
     font-size: 0.75rem;
   }
   
-  /* === CODE === */
   pre {
     border-radius: var(--radius-md) !important;
     margin: var(--spacing-lg) -15px !important;
@@ -838,34 +836,28 @@ footer a:hover {
     padding: 2px 6px;
   }
   
-  /* === BOUTONS === */
   .btn {
     width: 100%;
     padding: 12px 20px;
     font-size: 0.95rem;
-    /* Zone tactile minimum 44px */
     min-height: 44px;
   }
   
-  /* === CALLOUTS === */
   .callout, blockquote {
     padding: 15px;
     margin: var(--spacing-lg) -5px;
     border-radius: var(--radius-md);
   }
   
-  /* === LISTES === */
   ul, ol {
     padding-left: 1.25rem;
   }
   
-  /* === TOC caché sur mobile === */
   #TOC,
   .toc-actions {
     display: none !important;
   }
   
-  /* === NAVBAR === */
   .navbar {
     padding: 8px 10px;
   }
@@ -874,19 +866,16 @@ footer a:hover {
     font-size: 1.1rem;
   }
   
-  /* === FOOTER === */
   .page-footer, footer {
     padding: 20px 15px;
     font-size: 0.85rem;
   }
   
-  /* === IMAGES === */
   img {
     max-width: 100%;
     height: auto;
   }
   
-  /* === SPACING GÉNÉRAL === */
   p {
     margin-bottom: 0.875rem;
   }
@@ -940,7 +929,6 @@ footer a:hover {
    PRÉFÉRENCES UTILISATEUR
 -------------------------------------------------- */
 
-/* Réduire les animations si l'utilisateur préfère */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -953,11 +941,6 @@ footer a:hover {
   html {
     scroll-behavior: auto;
   }
-}
-
-/* Mode sombre automatique (si supporté par Quarto) */
-@media (prefers-color-scheme: dark) {
-  /* Optionnel: ajouter des règles dark mode ici si besoin */
 }
 
 /* --------------------------------------------------
