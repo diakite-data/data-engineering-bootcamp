@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>⚡ PySpark for Data Engineering – Bootcamp Data Engineering</title>
+<title>PySpark for Data Engineering – Bootcamp Data Engineering</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -77,9 +77,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-fc8d3d93f0a84b7619e1f8ff6eb63d42.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-a5e5c9297d81242f794464007003a45f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-7ce12bcd0277d468432a98ebc2064ff0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-a5e5c9297d81242f794464007003a45f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-1ded37139ab960446759ac96e383a6c7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-0c5e4731d53392a4fe54074a744a0e14.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-1ded37139ab960446759ac96e383a6c7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": true,
@@ -114,11 +114,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="keywords" content="data engineering, spark, kafka, python, kubernetes, lakehouse, delta lake, bootcamp">
 
 
-<meta property="og:title" content="⚡ PySpark for Data Engineering – Bootcamp Data Engineering">
+<meta property="og:title" content="PySpark for Data Engineering – Bootcamp Data Engineering">
 <meta property="og:description" content="Programme complet Data Engineering — Du débutant au Senior Engineer">
 <meta property="og:site_name" content="Bootcamp Data Engineering">
 <meta property="og:locale" content="fr_FR">
-<meta name="twitter:title" content="⚡ PySpark for Data Engineering – Bootcamp Data Engineering">
+<meta name="twitter:title" content="PySpark for Data Engineering – Bootcamp Data Engineering">
 <meta name="twitter:description" content="Programme complet Data Engineering — Du débutant au Senior Engineer">
 <meta name="twitter:creator" content="@diakite_data">
 <meta name="twitter:site" content="@diakite_data">
@@ -703,42 +703,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <span class="sidebar-item-text sidebar-link text-start">
  <span class="menu-text">🟥 Niveau 3 : Avancé</span></span>
   </li>
-        <li class="px-0"><hr class="sidebar-divider hi "></li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false">
- <span class="menu-text">📚 Ressources</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../resources/setup.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">🔧 Setup Environnement</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../resources/documentation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">📖 Documentation</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../resources/faq.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">❓ FAQ</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../resources/links.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">🔗 Liens Utiles</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
     </ul>
     </div>
 </nav>
@@ -749,21 +713,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">📑 Sommaire</h2>
    
   <ul>
-  <li><a href="#prérequis" id="toc-prérequis" class="nav-link active" data-scroll-target="#prérequis">📋 Prérequis</a></li>
-  <li><a href="#objectifs-du-module" id="toc-objectifs-du-module" class="nav-link" data-scroll-target="#objectifs-du-module">🎯 Objectifs du module</a></li>
-  <li><a href="#pyspark-dans-lécosystème-big-data" id="toc-pyspark-dans-lécosystème-big-data" class="nav-link" data-scroll-target="#pyspark-dans-lécosystème-big-data">🎯 PySpark dans l’écosystème Big Data</a>
+  <li><a href="#prérequis" id="toc-prérequis" class="nav-link active" data-scroll-target="#prérequis">Prérequis</a></li>
+  <li><a href="#objectifs-du-module" id="toc-objectifs-du-module" class="nav-link" data-scroll-target="#objectifs-du-module">Objectifs du module</a></li>
+  <li><a href="#pyspark-dans-lécosystème-big-data" id="toc-pyspark-dans-lécosystème-big-data" class="nav-link" data-scroll-target="#pyspark-dans-lécosystème-big-data">PySpark dans l’écosystème Big Data</a>
   <ul class="collapse">
   <li><a href="#rappel-mapreduce-vs-spark" id="toc-rappel-mapreduce-vs-spark" class="nav-link" data-scroll-target="#rappel-mapreduce-vs-spark">Rappel : MapReduce vs Spark</a></li>
   <li><a href="#rappel-les-5v-et-spark" id="toc-rappel-les-5v-et-spark" class="nav-link" data-scroll-target="#rappel-les-5v-et-spark">Rappel : Les 5V et Spark</a></li>
   <li><a href="#position-dans-lécosystème" id="toc-position-dans-lécosystème" class="nav-link" data-scroll-target="#position-dans-lécosystème">Position dans l’écosystème</a></li>
   </ul></li>
-  <li><a href="#installation-et-setup" id="toc-installation-et-setup" class="nav-link" data-scroll-target="#installation-et-setup">📦 Installation et Setup</a></li>
+  <li><a href="#installation-et-setup" id="toc-installation-et-setup" class="nav-link" data-scroll-target="#installation-et-setup">Installation et Setup</a></li>
   <li><a href="#introduction-à-spark" id="toc-introduction-à-spark" class="nav-link" data-scroll-target="#introduction-à-spark">1️⃣ Introduction à Spark</a>
   <ul class="collapse">
   <li><a href="#quest-ce-que-spark" id="toc-quest-ce-que-spark" class="nav-link" data-scroll-target="#quest-ce-que-spark">Qu’est-ce que Spark ?</a>
   <ul class="collapse">
-  <li><a href="#concepts-clés" id="toc-concepts-clés" class="nav-link" data-scroll-target="#concepts-clés">🔑 Concepts clés</a></li>
-  <li><a href="#avantages-de-spark" id="toc-avantages-de-spark" class="nav-link" data-scroll-target="#avantages-de-spark">🚀 Avantages de Spark</a></li>
+  <li><a href="#concepts-clés" id="toc-concepts-clés" class="nav-link" data-scroll-target="#concepts-clés">Concepts clés</a></li>
+  <li><a href="#avantages-de-spark" id="toc-avantages-de-spark" class="nav-link" data-scroll-target="#avantages-de-spark">Avantages de Spark</a></li>
   </ul></li>
   <li><a href="#créer-une-sparksession" id="toc-créer-une-sparksession" class="nav-link" data-scroll-target="#créer-une-sparksession">1.1 Créer une SparkSession</a></li>
   <li><a href="#premiers-dataframes" id="toc-premiers-dataframes" class="nav-link" data-scroll-target="#premiers-dataframes">1.2 Premiers DataFrames</a></li>
@@ -819,15 +783,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#load" id="toc-load" class="nav-link" data-scroll-target="#load">11.4 Load</a></li>
   <li><a href="#pipeline-complet-orchestré" id="toc-pipeline-complet-orchestré" class="nav-link" data-scroll-target="#pipeline-complet-orchestré">11.5 Pipeline complet orchestré</a></li>
   </ul></li>
-  <li><a href="#résumé-et-prochaines-étapes" id="toc-résumé-et-prochaines-étapes" class="nav-link" data-scroll-target="#résumé-et-prochaines-étapes">🎓 Résumé et Prochaines Étapes</a>
+  <li><a href="#résumé-et-prochaines-étapes" id="toc-résumé-et-prochaines-étapes" class="nav-link" data-scroll-target="#résumé-et-prochaines-étapes">Résumé et Prochaines Étapes</a>
   <ul class="collapse">
-  <li><a href="#ce-que-vous-avez-appris" id="toc-ce-que-vous-avez-appris" class="nav-link" data-scroll-target="#ce-que-vous-avez-appris">Ce que vous avez appris ✅</a></li>
-  <li><a href="#différences-clés-pandas-vs-pyspark" id="toc-différences-clés-pandas-vs-pyspark" class="nav-link" data-scroll-target="#différences-clés-pandas-vs-pyspark">Différences clés Pandas vs PySpark 🔄</a></li>
-  <li><a href="#quand-utiliser-pyspark" id="toc-quand-utiliser-pyspark" class="nav-link" data-scroll-target="#quand-utiliser-pyspark">Quand utiliser PySpark ? 🤔</a></li>
-  <li><a href="#prochaines-étapes" id="toc-prochaines-étapes" class="nav-link" data-scroll-target="#prochaines-étapes">Prochaines étapes 🚀</a></li>
+  <li><a href="#ce-que-vous-avez-appris" id="toc-ce-que-vous-avez-appris" class="nav-link" data-scroll-target="#ce-que-vous-avez-appris">Ce que vous avez appris</a></li>
+  <li><a href="#différences-clés-pandas-vs-pyspark" id="toc-différences-clés-pandas-vs-pyspark" class="nav-link" data-scroll-target="#différences-clés-pandas-vs-pyspark">Différences clés Pandas vs PySpark</a></li>
+  <li><a href="#quand-utiliser-pyspark" id="toc-quand-utiliser-pyspark" class="nav-link" data-scroll-target="#quand-utiliser-pyspark">Quand utiliser PySpark ?</a></li>
+  <li><a href="#prochaines-étapes" id="toc-prochaines-étapes" class="nav-link" data-scroll-target="#prochaines-étapes">Prochaines étapes</a></li>
   <li><a href="#ressources" id="toc-ressources" class="nav-link" data-scroll-target="#ressources">Ressources 📚</a></li>
   </ul></li>
-  <li><a href="#quiz-final" id="toc-quiz-final" class="nav-link" data-scroll-target="#quiz-final">🧪 Quiz Final</a>
+  <li><a href="#quiz-final" id="toc-quiz-final" class="nav-link" data-scroll-target="#quiz-final">Quiz Final</a>
   <ul class="collapse">
   <li><a href="#q1.-quelle-est-la-différence-principale-entre-une-transformation-et-une-action-dans-spark" id="toc-q1.-quelle-est-la-différence-principale-entre-une-transformation-et-une-action-dans-spark" class="nav-link" data-scroll-target="#q1.-quelle-est-la-différence-principale-entre-une-transformation-et-une-action-dans-spark">❓ Q1. Quelle est la différence principale entre une <strong>transformation</strong> et une <strong>action</strong> dans Spark ?</a></li>
   <li><a href="#q2.-quel-format-de-fichier-est-recommandé-pour-stocker-des-données-dans-un-data-lake-avec-spark" id="toc-q2.-quel-format-de-fichier-est-recommandé-pour-stocker-des-données-dans-un-data-lake-avec-spark" class="nav-link" data-scroll-target="#q2.-quel-format-de-fichier-est-recommandé-pour-stocker-des-données-dans-un-data-lake-avec-spark">❓ Q2. Quel format de fichier est <strong>recommandé</strong> pour stocker des données dans un data lake avec Spark ?</a></li>
@@ -839,7 +803,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#q8.-comment-exécuter-une-requête-sql-dans-pyspark" id="toc-q8.-comment-exécuter-une-requête-sql-dans-pyspark" class="nav-link" data-scroll-target="#q8.-comment-exécuter-une-requête-sql-dans-pyspark">❓ Q8. Comment exécuter une requête SQL dans PySpark ?</a></li>
   <li><a href="#q9.-quelle-est-la-meilleure-stratégie-pour-écrire-des-données-parquet-partitionnées" id="toc-q9.-quelle-est-la-meilleure-stratégie-pour-écrire-des-données-parquet-partitionnées" class="nav-link" data-scroll-target="#q9.-quelle-est-la-meilleure-stratégie-pour-écrire-des-données-parquet-partitionnées">❓ Q9. Quelle est la meilleure stratégie pour écrire des données Parquet partitionnées ?</a></li>
   <li><a href="#q10.-quand-devriez-vous-utiliser-pyspark-plutôt-que-pandas" id="toc-q10.-quand-devriez-vous-utiliser-pyspark-plutôt-que-pandas" class="nav-link" data-scroll-target="#q10.-quand-devriez-vous-utiliser-pyspark-plutôt-que-pandas">❓ Q10. Quand devriez-vous utiliser PySpark plutôt que Pandas ?</a></li>
-  <li><a href="#votre-score" id="toc-votre-score" class="nav-link" data-scroll-target="#votre-score">📊 Votre score</a></li>
   <li><a href="#ressources-1" id="toc-ressources-1" class="nav-link" data-scroll-target="#ressources-1">📚 Ressources</a>
   <ul class="collapse">
   <li><a href="#plateformes-cloud" id="toc-plateformes-cloud" class="nav-link" data-scroll-target="#plateformes-cloud">🏭 Plateformes Cloud</a></li>
@@ -855,7 +818,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">🟦 Niveau 1 : Débutant</li><li class="breadcrumb-item"><a href="../../notebooks/beginner/11_pyspark_for_data_engineering.html">⚡ Spark &amp; Orchestration</a></li><li class="breadcrumb-item"><a href="../../notebooks/beginner/11_pyspark_for_data_engineering.html">11 · Introduction PySpark</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">⚡ PySpark for Data Engineering</h1>
+<h1 class="title">PySpark for Data Engineering</h1>
 </div>
 
 
@@ -875,7 +838,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Ce module présente <strong>PySpark</strong>, l’API Python pour Apache Spark — le moteur de traitement distribué le plus utilisé en Big Data.</p>
 <hr>
 <section id="prérequis" class="level2">
-<h2 class="anchored" data-anchor-id="prérequis">📋 Prérequis</h2>
+<h2 class="anchored" data-anchor-id="prérequis">Prérequis</h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -908,21 +871,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 </section>
 <section id="objectifs-du-module" class="level2">
-<h2 class="anchored" data-anchor-id="objectifs-du-module">🎯 Objectifs du module</h2>
+<h2 class="anchored" data-anchor-id="objectifs-du-module">Objectifs du module</h2>
 <p>À la fin de ce notebook, tu seras capable de :</p>
 <ul>
-<li>✅ Comprendre l’architecture Spark (Driver, Executors, Cluster Manager)</li>
-<li>✅ Créer et manipuler des DataFrames distribués</li>
-<li>✅ Écrire des transformations et actions</li>
-<li>✅ Utiliser Spark SQL</li>
-<li>✅ Optimiser les performances (partitioning, caching, broadcast)</li>
-<li>✅ Lire/écrire des fichiers (CSV, JSON, Parquet)</li>
-<li>✅ Découvrir le streaming temps réel</li>
+<li>Comprendre l’architecture Spark (Driver, Executors, Cluster Manager)</li>
+<li>Créer et manipuler des DataFrames distribués</li>
+<li>Écrire des transformations et actions</li>
+<li>Utiliser Spark SQL</li>
+<li>Optimiser les performances (partitioning, caching, broadcast)</li>
+<li>Lire/écrire des fichiers (CSV, JSON, Parquet)</li>
+<li>Découvrir le streaming temps réel</li>
 </ul>
 <hr>
 </section>
 <section id="pyspark-dans-lécosystème-big-data" class="level2">
-<h2 class="anchored" data-anchor-id="pyspark-dans-lécosystème-big-data">🎯 PySpark dans l’écosystème Big Data</h2>
+<h2 class="anchored" data-anchor-id="pyspark-dans-lécosystème-big-data">PySpark dans l’écosystème Big Data</h2>
 <p>Tu as vu dans le module 08 que <strong>Spark a remplacé MapReduce</strong> comme moteur de traitement Big Data. Voici pourquoi :</p>
 <section id="rappel-mapreduce-vs-spark" class="level3">
 <h3 class="anchored" data-anchor-id="rappel-mapreduce-vs-spark">Rappel : MapReduce vs Spark</h3>
@@ -978,36 +941,40 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 │   Sources           Traitement              Stockage            │
 │   ────────          ──────────              ────────            │
 │                                                                 │
-│   Kafka    ─┐                         ┌─►  Data Lake (S3)      │
-│   Fichiers ─┼──►  ⚡ SPARK ⚡  ──────┼─►  Data Warehouse       │
-│   JDBC     ─┤     (PySpark)          ├─►  NoSQL (MongoDB)     │
-│   APIs     ─┘                         └─►  Elasticsearch       │
+│   Kafka    ─┐                         ┌─►  Data Lake (S3)       │
+│   Fichiers ─┼──►  ⚡ SPARK ⚡  ──────┼─►  Data Warehouse          │
+│   JDBC     ─┤     (PySpark)          ├─►  NoSQL (MongoDB)       │
+│   APIs     ─┘                         └─►  Elasticsearch        │
 │                                                                 │
 └─────────────────────────────────────────────────────────────────┘</code></pre>
 <hr>
 <blockquote class="blockquote">
 <p>💡 <strong>Ce notebook est interactif</strong> : tu peux exécuter toutes les cellules de code !</p>
 </blockquote>
+<p><a href="https://colab.research.google.com/github/diakite-data/data-engineering-bootcamp/blob/main/notebooks/beginner/11_pyspark_for_data_engineering.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a></p>
+<blockquote class="blockquote">
+<p>💡 <strong>Conseil</strong> : Cliquez sur le badge ci-dessus pour exécuter ce notebook directement dans Google Colab (aucune installation requise).</p>
+</blockquote>
 </section>
 </section>
 <section id="installation-et-setup" class="level2">
-<h2 class="anchored" data-anchor-id="installation-et-setup">📦 Installation et Setup</h2>
+<h2 class="anchored" data-anchor-id="installation-et-setup">Installation et Setup</h2>
 <p>PySpark nécessite Java. Vérifions d’abord l’installation.</p>
-<div id="cell-3" class="cell">
+<div id="cell-4" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Installation de PySpark</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install pyspark pandas numpy pyarrow</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-4" class="cell">
+<div id="cell-5" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérifier Java</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>java <span class="op">-</span>version</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-5" class="cell">
+<div id="cell-6" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Imports de base</span></span>
@@ -1030,7 +997,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <h2 class="anchored" data-anchor-id="quest-ce-que-spark">Qu’est-ce que Spark ?</h2>
 <p>Apache Spark est un moteur de traitement distribué ultra-rapide pour le Big Data.</p>
 <section id="concepts-clés" class="level3">
-<h3 class="anchored" data-anchor-id="concepts-clés">🔑 Concepts clés</h3>
+<h3 class="anchored" data-anchor-id="concepts-clés">Concepts clés</h3>
 <ul>
 <li><strong>SparkSession</strong> : Point d’entrée de toute application Spark</li>
 <li><strong>DataFrame</strong> : Collection distribuée de données organisées en colonnes</li>
@@ -1040,7 +1007,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </ul>
 </section>
 <section id="avantages-de-spark" class="level3">
-<h3 class="anchored" data-anchor-id="avantages-de-spark">🚀 Avantages de Spark</h3>
+<h3 class="anchored" data-anchor-id="avantages-de-spark">Avantages de Spark</h3>
 <ul>
 <li><strong>Vitesse</strong> : 100x plus rapide que MapReduce</li>
 <li><strong>Scalabilité</strong> : De quelques MB à plusieurs PB</li>
@@ -1051,7 +1018,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </section>
 <section id="créer-une-sparksession" class="level2">
 <h2 class="anchored" data-anchor-id="créer-une-sparksession">1.1 Créer une SparkSession</h2>
-<div id="cell-8" class="cell">
+<div id="cell-9" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Créer une SparkSession</span></span>
@@ -1062,24 +1029,24 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    .config(<span class="st">"spark.sql.shuffle.partitions"</span>, <span class="st">"4"</span>) <span class="op">\</span></span>
 <span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    .getOrCreate()</span>
 <span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"✅ SparkSession créée"</span>)</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" SparkSession créée"</span>)</span>
 <span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Version Spark : </span><span class="sc">{</span>spark<span class="sc">.</span>version<span class="sc">}</span><span class="ss">"</span>)</span>
 <span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Application : </span><span class="sc">{</span>spark<span class="sc">.</span>sparkContext<span class="sc">.</span>appName<span class="sc">}</span><span class="ss">"</span>)</span>
 <span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Master : </span><span class="sc">{</span>spark<span class="sc">.</span>sparkContext<span class="sc">.</span>master<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-9" class="cell">
+<div id="cell-10" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Configuration du logging</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>spark.sparkContext.setLogLevel(<span class="st">"ERROR"</span>)</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"✅ Logging configuré sur ERROR"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" Logging configuré sur ERROR"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 </section>
 <section id="premiers-dataframes" class="level2">
 <h2 class="anchored" data-anchor-id="premiers-dataframes">1.2 Premiers DataFrames</h2>
-<div id="cell-11" class="cell">
+<div id="cell-12" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Méthode 1 : Depuis une liste Python</span></span>
@@ -1095,11 +1062,11 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> spark.createDataFrame(data, columns)</span>
 <span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"📊 Premier DataFrame créé :"</span>)</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" Premier DataFrame créé :"</span>)</span>
 <span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>df.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-12" class="cell">
+<div id="cell-13" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Méthode 2 : Depuis un Pandas DataFrame</span></span>
@@ -1111,11 +1078,11 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>spark_df <span class="op">=</span> spark.createDataFrame(pandas_df)</span>
 <span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"📊 DataFrame depuis Pandas :"</span>)</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" DataFrame depuis Pandas :"</span>)</span>
 <span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>spark_df.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-13" class="cell">
+<div id="cell-14" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Méthode 3 : Avec un schéma explicite</span></span>
@@ -1129,44 +1096,44 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>df_with_schema <span class="op">=</span> spark.createDataFrame(data, schema)</span>
 <span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"📊 DataFrame avec schéma explicite :"</span>)</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" DataFrame avec schéma explicite :"</span>)</span>
 <span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>df_with_schema.printSchema()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 </section>
 <section id="explorer-un-dataframe" class="level2">
 <h2 class="anchored" data-anchor-id="explorer-un-dataframe">1.3 Explorer un DataFrame</h2>
-<div id="cell-15" class="cell">
-<details class="code-fold">
-<summary>Voir le code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Afficher le schéma</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"📋 Schéma du DataFrame :"</span>)</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>df.printSchema()</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Afficher les premières lignes</span></span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">🔝 Premières lignes :"</span>)</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>df.show(<span class="dv">3</span>)</span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Compter les lignes</span></span>
-<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">📏 Nombre de lignes : </span><span class="sc">{</span>df<span class="sc">.</span>count()<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Colonnes</span></span>
-<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">📋 Colonnes : </span><span class="sc">{</span>df<span class="sc">.</span>columns<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Types de données</span></span>
-<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">🔤 Types de données :"</span>)</span>
-<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.dtypes)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-</div>
 <div id="cell-16" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Afficher le schéma</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" Schéma du DataFrame :"</span>)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>df.printSchema()</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Afficher les premières lignes</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st"> Premières lignes :"</span>)</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>df.show(<span class="dv">3</span>)</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Compter les lignes</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss"> Nombre de lignes : </span><span class="sc">{</span>df<span class="sc">.</span>count()<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Colonnes</span></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss"> Colonnes : </span><span class="sc">{</span>df<span class="sc">.</span>columns<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Types de données</span></span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st"> Types de données :"</span>)</span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.dtypes)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<div id="cell-17" class="cell">
+<details class="code-fold">
+<summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Statistiques descriptives</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"📊 Statistiques descriptives :"</span>)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" Statistiques descriptives :"</span>)</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>df.describe().show()</span>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Statistiques sur colonnes spécifiques</span></span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">📊 Statistiques sur 'age' et 'salaire' :"</span>)</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st"> Statistiques sur 'age' et 'salaire' :"</span>)</span>
 <span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>df.select(<span class="st">'age'</span>, <span class="st">'salaire'</span>).describe().show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
@@ -1178,22 +1145,22 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <p>Les transformations sont <strong>lazy</strong> : elles ne s’exécutent que lorsqu’une action est appelée.</p>
 <section id="sélection-de-colonnes" class="level2">
 <h2 class="anchored" data-anchor-id="sélection-de-colonnes">2.1 Sélection de colonnes</h2>
-<div id="cell-19" class="cell">
+<div id="cell-20" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Sélectionner des colonnes</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"📌 Sélection de colonnes :"</span>)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" Sélection de colonnes :"</span>)</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>df.select(<span class="st">"nom"</span>, <span class="st">"ville"</span>).show()</span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Avec alias</span></span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">📌 Avec alias :"</span>)</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st"> Avec alias :"</span>)</span>
 <span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>df.select(</span>
 <span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>    F.col(<span class="st">"nom"</span>).alias(<span class="st">"employee_name"</span>),</span>
 <span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>    F.col(<span class="st">"salaire"</span>).alias(<span class="st">"salary"</span>)</span>
 <span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>).show()</span>
 <span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Sélectionner avec expressions</span></span>
-<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">📌 Avec expressions :"</span>)</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st"> Avec expressions :"</span>)</span>
 <span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>df.select(</span>
 <span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">"nom"</span>,</span>
 <span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>    (F.col(<span class="st">"salaire"</span>) <span class="op">*</span> <span class="dv">12</span>).alias(<span class="st">"salaire_annuel"</span>)</span>
@@ -1203,50 +1170,50 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </section>
 <section id="filtrage" class="level2">
 <h2 class="anchored" data-anchor-id="filtrage">2.2 Filtrage</h2>
-<div id="cell-21" class="cell">
+<div id="cell-22" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Filtrer les lignes</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"🔍 Employés de Paris :"</span>)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" Employés de Paris :"</span>)</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>df.<span class="bu">filter</span>(F.col(<span class="st">"ville"</span>) <span class="op">==</span> <span class="st">"Paris"</span>).show()</span>
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Filtres multiples avec AND</span></span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">🔍 Employés de Paris avec salaire &gt; 50000 :"</span>)</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st"> Employés de Paris avec salaire &gt; 50000 :"</span>)</span>
 <span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>df.<span class="bu">filter</span>(</span>
 <span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>    (F.col(<span class="st">"ville"</span>) <span class="op">==</span> <span class="st">"Paris"</span>) <span class="op">&amp;</span> </span>
 <span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>    (F.col(<span class="st">"salaire"</span>) <span class="op">&gt;</span> <span class="dv">50000</span>)</span>
 <span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>).show()</span>
 <span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Filtres avec OR</span></span>
-<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">🔍 Employés de Paris OU Lyon :"</span>)</span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st"> Employés de Paris OU Lyon :"</span>)</span>
 <span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>df.<span class="bu">filter</span>(</span>
 <span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>    (F.col(<span class="st">"ville"</span>) <span class="op">==</span> <span class="st">"Paris"</span>) <span class="op">|</span> </span>
 <span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>    (F.col(<span class="st">"ville"</span>) <span class="op">==</span> <span class="st">"Lyon"</span>)</span>
 <span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>).show()</span>
 <span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Filtrer avec IN</span></span>
-<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">🔍 Villes avec IN :"</span>)</span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st"> Villes avec IN :"</span>)</span>
 <span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>df.<span class="bu">filter</span>(F.col(<span class="st">"ville"</span>).isin([<span class="st">"Paris"</span>, <span class="st">"Lyon"</span>])).show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-22" class="cell">
+<div id="cell-23" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Filtres avancés</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"🔍 Noms commençant par 'A' :"</span>)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" Noms commençant par 'A' :"</span>)</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>df.<span class="bu">filter</span>(F.col(<span class="st">"nom"</span>).startswith(<span class="st">"A"</span>)).show()</span>
 <span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">🔍 Noms contenant 'li' :"</span>)</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st"> Noms contenant 'li' :"</span>)</span>
 <span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>df.<span class="bu">filter</span>(F.col(<span class="st">"nom"</span>).contains(<span class="st">"li"</span>)).show()</span>
 <span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">🔍 Age entre 25 et 30 :"</span>)</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st"> Age entre 25 et 30 :"</span>)</span>
 <span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>df.<span class="bu">filter</span>(F.col(<span class="st">"age"</span>).between(<span class="dv">25</span>, <span class="dv">30</span>)).show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 </section>
 <section id="ajouter-et-modifier-des-colonnes" class="level2">
 <h2 class="anchored" data-anchor-id="ajouter-et-modifier-des-colonnes">2.3 Ajouter et modifier des colonnes</h2>
-<div id="cell-24" class="cell">
+<div id="cell-25" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ajouter une nouvelle colonne</span></span>
@@ -1255,7 +1222,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    F.col(<span class="st">"salaire"</span>) <span class="op">*</span> <span class="fl">0.1</span></span>
 <span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"➕ Ajout de la colonne 'bonus' :"</span>)</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" Ajout de la colonne 'bonus' :"</span>)</span>
 <span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>df_with_bonus.show()</span>
 <span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Modifier une colonne existante</span></span>
@@ -1264,11 +1231,11 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>    F.col(<span class="st">"salaire"</span>) <span class="op">*</span> <span class="fl">1.05</span>  <span class="co"># Augmentation de 5%</span></span>
 <span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">✏️ Salaire augmenté de 5% :"</span>)</span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st"> Salaire augmenté de 5% :"</span>)</span>
 <span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>df_modified.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-25" class="cell">
+<div id="cell-26" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ajouter plusieurs colonnes</span></span>
@@ -1278,43 +1245,43 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>    .withColumn(<span class="st">"bonus"</span>, F.col(<span class="st">"salaire"</span>) <span class="op">*</span> <span class="fl">0.1</span>) <span class="op">\</span></span>
 <span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>    .withColumn(<span class="st">"total_annuel"</span>, F.col(<span class="st">"salaire_annuel"</span>) <span class="op">+</span> F.col(<span class="st">"bonus"</span>))</span>
 <span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"📊 DataFrame enrichi :"</span>)</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" DataFrame enrichi :"</span>)</span>
 <span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>df_enriched.select(<span class="st">"nom"</span>, <span class="st">"salaire_mensuel"</span>, <span class="st">"salaire_annuel"</span>, <span class="st">"bonus"</span>, <span class="st">"total_annuel"</span>).show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 </section>
 <section id="renommer-et-supprimer-des-colonnes" class="level2">
 <h2 class="anchored" data-anchor-id="renommer-et-supprimer-des-colonnes">2.4 Renommer et supprimer des colonnes</h2>
-<div id="cell-27" class="cell">
+<div id="cell-28" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Renommer une colonne</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>df_renamed <span class="op">=</span> df.withColumnRenamed(<span class="st">"nom"</span>, <span class="st">"employee_name"</span>)</span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"✏️ Colonne renommée :"</span>)</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" Colonne renommée :"</span>)</span>
 <span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>df_renamed.show(<span class="dv">3</span>)</span>
 <span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Supprimer des colonnes</span></span>
 <span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>df_dropped <span class="op">=</span> df.drop(<span class="st">"age"</span>, <span class="st">"ville"</span>)</span>
-<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">🗑️ Colonnes supprimées :"</span>)</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st"> Colonnes supprimées :"</span>)</span>
 <span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>df_dropped.show(<span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 </section>
 <section id="tri" class="level2">
 <h2 class="anchored" data-anchor-id="tri">2.5 Tri</h2>
-<div id="cell-29" class="cell">
+<div id="cell-30" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Trier par salaire (ascendant)</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"📊 Tri par salaire (croissant) :"</span>)</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" Tri par salaire (croissant) :"</span>)</span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>df.orderBy(<span class="st">"salaire"</span>).show()</span>
 <span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Trier par salaire (descendant)</span></span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">📊 Tri par salaire (décroissant) :"</span>)</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st"> Tri par salaire (décroissant) :"</span>)</span>
 <span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>df.orderBy(F.col(<span class="st">"salaire"</span>).desc()).show()</span>
 <span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Tri multiple</span></span>
-<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">📊 Tri par ville puis salaire :"</span>)</span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st"> Tri par ville puis salaire :"</span>)</span>
 <span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>df.orderBy(<span class="st">"ville"</span>, F.col(<span class="st">"salaire"</span>).desc()).show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
@@ -1326,11 +1293,11 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <p>Les agrégations permettent de calculer des statistiques sur les données.</p>
 <section id="agrégations-simples" class="level2">
 <h2 class="anchored" data-anchor-id="agrégations-simples">3.1 Agrégations simples</h2>
-<div id="cell-32" class="cell">
+<div id="cell-33" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Statistiques de base</span></span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"📊 Statistiques simples :"</span>)</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" Statistiques simples :"</span>)</span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>df.select(</span>
 <span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>    F.count(<span class="st">"*"</span>).alias(<span class="st">"total"</span>),</span>
 <span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>    F.avg(<span class="st">"salaire"</span>).alias(<span class="st">"salaire_moyen"</span>),</span>
@@ -1340,13 +1307,13 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>).show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-33" class="cell">
+<div id="cell-34" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Agrégations multiples</span></span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pyspark.sql.functions <span class="im">import</span> stddev, variance</span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"📊 Statistiques avancées :"</span>)</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" Statistiques avancées :"</span>)</span>
 <span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>df.agg(</span>
 <span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>    F.count(<span class="st">"*"</span>).alias(<span class="st">"count"</span>),</span>
 <span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>    F.avg(<span class="st">"age"</span>).alias(<span class="st">"age_moyen"</span>),</span>
@@ -1358,11 +1325,11 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </section>
 <section id="groupby" class="level2">
 <h2 class="anchored" data-anchor-id="groupby">3.2 GroupBy</h2>
-<div id="cell-35" class="cell">
+<div id="cell-36" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Grouper par ville</span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"📊 Statistiques par ville :"</span>)</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" Statistiques par ville :"</span>)</span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>df.groupBy(<span class="st">"ville"</span>).agg(</span>
 <span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>    F.count(<span class="st">"*"</span>).alias(<span class="st">"nb_employes"</span>),</span>
 <span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>    F.avg(<span class="st">"salaire"</span>).alias(<span class="st">"salaire_moyen"</span>),</span>
@@ -1371,7 +1338,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>).orderBy(<span class="st">"ville"</span>).show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-36" class="cell">
+<div id="cell-37" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Créer un DataFrame plus complexe pour les exemples</span></span>
@@ -1387,15 +1354,15 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>columns_ventes <span class="op">=</span> [<span class="st">"mois"</span>, <span class="st">"ville"</span>, <span class="st">"produit"</span>, <span class="st">"quantite"</span>, <span class="st">"montant"</span>]</span>
 <span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>df_ventes <span class="op">=</span> spark.createDataFrame(data_ventes, columns_ventes)</span>
 <span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"📊 Données de ventes :"</span>)</span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" Données de ventes :"</span>)</span>
 <span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a>df_ventes.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-37" class="cell">
+<div id="cell-38" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># GroupBy multiple</span></span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"📊 Ventes par mois et ville :"</span>)</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" Ventes par mois et ville :"</span>)</span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>df_ventes.groupBy(<span class="st">"mois"</span>, <span class="st">"ville"</span>).agg(</span>
 <span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>    F.<span class="bu">sum</span>(<span class="st">"quantite"</span>).alias(<span class="st">"total_quantite"</span>),</span>
 <span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>    F.<span class="bu">sum</span>(<span class="st">"montant"</span>).alias(<span class="st">"total_montant"</span>),</span>
@@ -1403,11 +1370,11 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>).orderBy(<span class="st">"mois"</span>, <span class="st">"ville"</span>).show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-38" class="cell">
+<div id="cell-39" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Agrégations conditionnelles</span></span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"📊 Agrégations conditionnelles :"</span>)</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" Agrégations conditionnelles :"</span>)</span>
 <span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>df_ventes.groupBy(<span class="st">"ville"</span>).agg(</span>
 <span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>    F.<span class="bu">sum</span>(<span class="st">"montant"</span>).alias(<span class="st">"total"</span>),</span>
 <span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>    F.<span class="bu">sum</span>(F.when(F.col(<span class="st">"produit"</span>) <span class="op">==</span> <span class="st">"Produit A"</span>, F.col(<span class="st">"montant"</span>)).otherwise(<span class="dv">0</span>)).alias(<span class="st">"total_produit_a"</span>),</span>
@@ -1418,7 +1385,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </section>
 <section id="window-functions" class="level2">
 <h2 class="anchored" data-anchor-id="window-functions">3.3 Window Functions</h2>
-<div id="cell-40" class="cell">
+<div id="cell-41" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ranking dans chaque ville</span></span>
@@ -1435,7 +1402,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a>df_ranked.orderBy(<span class="st">"ville"</span>, <span class="st">"rank"</span>).show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-41" class="cell">
+<div id="cell-42" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculs cumulatifs</span></span>
@@ -1446,11 +1413,11 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>    F.<span class="bu">sum</span>(<span class="st">"salaire"</span>).over(window_cumul)</span>
 <span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"📈 Salaire cumulé par ville :"</span>)</span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" Salaire cumulé par ville :"</span>)</span>
 <span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a>df_cumul.select(<span class="st">"id"</span>, <span class="st">"nom"</span>, <span class="st">"ville"</span>, <span class="st">"salaire"</span>, <span class="st">"salaire_cumul"</span>).orderBy(<span class="st">"ville"</span>, <span class="st">"id"</span>).show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-42" class="cell">
+<div id="cell-43" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calcul de moyennes mobiles</span></span>
@@ -1461,7 +1428,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>    F.avg(<span class="st">"salaire"</span>).over(window_rolling)</span>
 <span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"📊 Moyenne mobile sur 3 lignes :"</span>)</span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" Moyenne mobile sur 3 lignes :"</span>)</span>
 <span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a>df_rolling.select(<span class="st">"id"</span>, <span class="st">"nom"</span>, <span class="st">"ville"</span>, <span class="st">"salaire"</span>, <span class="st">"salaire_avg_3"</span>).orderBy(<span class="st">"ville"</span>, <span class="st">"id"</span>).show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
@@ -1473,7 +1440,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <p>Les jointures permettent de combiner plusieurs DataFrames.</p>
 <section id="créer-des-dataframes-pour-les-exemples" class="level2">
 <h2 class="anchored" data-anchor-id="créer-des-dataframes-pour-les-exemples">4.1 Créer des DataFrames pour les exemples</h2>
-<div id="cell-45" class="cell">
+<div id="cell-46" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># DataFrame employés</span></span>
@@ -1502,7 +1469,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </section>
 <section id="types-de-jointures" class="level2">
 <h2 class="anchored" data-anchor-id="types-de-jointures">4.2 Types de jointures</h2>
-<div id="cell-47" class="cell">
+<div id="cell-48" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># INNER JOIN (par défaut)</span></span>
@@ -1522,13 +1489,13 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb30-15"><a href="#cb30-15" aria-hidden="true" tabindex="-1"></a>employes.join(departements, <span class="st">"dept_id"</span>, <span class="st">"outer"</span>).show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-48" class="cell">
+<div id="cell-49" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Jointure avec colonnes différentes</span></span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>employes_alt <span class="op">=</span> employes.withColumnRenamed(<span class="st">"dept_id"</span>, <span class="st">"department"</span>)</span>
 <span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"🔗 Jointure avec colonnes différentes :"</span>)</span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" Jointure avec colonnes différentes :"</span>)</span>
 <span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>employes_alt.join(</span>
 <span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>    departements,</span>
 <span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>    employes_alt.department <span class="op">==</span> departements.dept_id,</span>
@@ -1540,7 +1507,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a>).show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-49" class="cell">
+<div id="cell-50" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Jointures multiples</span></span>
@@ -1567,7 +1534,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <p>Spark supporte de nombreux formats de fichiers.</p>
 <section id="csv" class="level2">
 <h2 class="anchored" data-anchor-id="csv">5.1 CSV</h2>
-<div id="cell-52" class="cell">
+<div id="cell-53" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Créer des données de test</span></span>
@@ -1580,7 +1547,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a>    .option(<span class="st">"header"</span>, <span class="st">"true"</span>) <span class="op">\</span></span>
 <span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a>    .csv(<span class="st">"data/employes.csv"</span>)</span>
 <span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-11"><a href="#cb33-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"✅ CSV écrit"</span>)</span>
+<span id="cb33-11"><a href="#cb33-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" CSV écrit"</span>)</span>
 <span id="cb33-12"><a href="#cb33-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-13"><a href="#cb33-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Lire le CSV</span></span>
 <span id="cb33-14"><a href="#cb33-14" aria-hidden="true" tabindex="-1"></a>df_from_csv <span class="op">=</span> spark.read <span class="op">\</span></span>
@@ -1588,7 +1555,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb33-16"><a href="#cb33-16" aria-hidden="true" tabindex="-1"></a>    .option(<span class="st">"inferSchema"</span>, <span class="st">"true"</span>) <span class="op">\</span></span>
 <span id="cb33-17"><a href="#cb33-17" aria-hidden="true" tabindex="-1"></a>    .csv(<span class="st">"data/employes.csv"</span>)</span>
 <span id="cb33-18"><a href="#cb33-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-19"><a href="#cb33-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">📂 CSV lu :"</span>)</span>
+<span id="cb33-19"><a href="#cb33-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st"> CSV lu :"</span>)</span>
 <span id="cb33-20"><a href="#cb33-20" aria-hidden="true" tabindex="-1"></a>df_from_csv.show(<span class="dv">3</span>)</span>
 <span id="cb33-21"><a href="#cb33-21" aria-hidden="true" tabindex="-1"></a>df_from_csv.printSchema()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
@@ -1596,7 +1563,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </section>
 <section id="json" class="level2">
 <h2 class="anchored" data-anchor-id="json">5.2 JSON</h2>
-<div id="cell-54" class="cell">
+<div id="cell-55" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Écrire en JSON</span></span>
@@ -1604,12 +1571,12 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>    .mode(<span class="st">"overwrite"</span>) <span class="op">\</span></span>
 <span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>    .json(<span class="st">"data/employes.json"</span>)</span>
 <span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"✅ JSON écrit"</span>)</span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" JSON écrit"</span>)</span>
 <span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Lire le JSON</span></span>
 <span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a>df_from_json <span class="op">=</span> spark.read.json(<span class="st">"data/employes.json"</span>)</span>
 <span id="cb34-10"><a href="#cb34-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb34-11"><a href="#cb34-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">📂 JSON lu :"</span>)</span>
+<span id="cb34-11"><a href="#cb34-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st"> JSON lu :"</span>)</span>
 <span id="cb34-12"><a href="#cb34-12" aria-hidden="true" tabindex="-1"></a>df_from_json.show(<span class="dv">3</span>)</span>
 <span id="cb34-13"><a href="#cb34-13" aria-hidden="true" tabindex="-1"></a>df_from_json.printSchema()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
@@ -1617,7 +1584,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </section>
 <section id="parquet-format-recommandé" class="level2">
 <h2 class="anchored" data-anchor-id="parquet-format-recommandé">5.3 Parquet (Format recommandé)</h2>
-<div id="cell-56" class="cell">
+<div id="cell-57" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Écrire en Parquet</span></span>
@@ -1625,17 +1592,17 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>    .mode(<span class="st">"overwrite"</span>) <span class="op">\</span></span>
 <span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>    .parquet(<span class="st">"data/employes.parquet"</span>)</span>
 <span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"✅ Parquet écrit"</span>)</span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" Parquet écrit"</span>)</span>
 <span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Lire le Parquet</span></span>
 <span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a>df_from_parquet <span class="op">=</span> spark.read.parquet(<span class="st">"data/employes.parquet"</span>)</span>
 <span id="cb35-10"><a href="#cb35-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-11"><a href="#cb35-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">📂 Parquet lu :"</span>)</span>
+<span id="cb35-11"><a href="#cb35-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st"> Parquet lu :"</span>)</span>
 <span id="cb35-12"><a href="#cb35-12" aria-hidden="true" tabindex="-1"></a>df_from_parquet.show(<span class="dv">3</span>)</span>
 <span id="cb35-13"><a href="#cb35-13" aria-hidden="true" tabindex="-1"></a>df_from_parquet.printSchema()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-57" class="cell">
+<div id="cell-58" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Parquet avec partitionnement</span></span>
@@ -1644,21 +1611,21 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>    .partitionBy(<span class="st">"ville"</span>) <span class="op">\</span></span>
 <span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>    .parquet(<span class="st">"data/employes_partitioned.parquet"</span>)</span>
 <span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"✅ Parquet partitionné écrit"</span>)</span>
+<span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" Parquet partitionné écrit"</span>)</span>
 <span id="cb36-8"><a href="#cb36-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb36-9"><a href="#cb36-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Lire avec filtre de partition (très performant)</span></span>
 <span id="cb36-10"><a href="#cb36-10" aria-hidden="true" tabindex="-1"></a>df_paris <span class="op">=</span> spark.read <span class="op">\</span></span>
 <span id="cb36-11"><a href="#cb36-11" aria-hidden="true" tabindex="-1"></a>    .parquet(<span class="st">"data/employes_partitioned.parquet"</span>) <span class="op">\</span></span>
 <span id="cb36-12"><a href="#cb36-12" aria-hidden="true" tabindex="-1"></a>    .<span class="bu">filter</span>(F.col(<span class="st">"ville"</span>) <span class="op">==</span> <span class="st">"Paris"</span>)</span>
 <span id="cb36-13"><a href="#cb36-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb36-14"><a href="#cb36-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">📂 Parquet partitionné lu (ville=Paris) :"</span>)</span>
+<span id="cb36-14"><a href="#cb36-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st"> Parquet partitionné lu (ville=Paris) :"</span>)</span>
 <span id="cb36-15"><a href="#cb36-15" aria-hidden="true" tabindex="-1"></a>df_paris.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 </section>
 <section id="options-décriture" class="level2">
 <h2 class="anchored" data-anchor-id="options-décriture">5.4 Options d’écriture</h2>
-<div id="cell-59" class="cell">
+<div id="cell-60" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Mode d'écriture</span></span>
@@ -1673,14 +1640,14 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb37-10"><a href="#cb37-10" aria-hidden="true" tabindex="-1"></a>    .option(<span class="st">"compression"</span>, <span class="st">"snappy"</span>) <span class="op">\</span></span>
 <span id="cb37-11"><a href="#cb37-11" aria-hidden="true" tabindex="-1"></a>    .parquet(<span class="st">"data/employes_compressed.parquet"</span>)</span>
 <span id="cb37-12"><a href="#cb37-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-13"><a href="#cb37-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"✅ Parquet compressé écrit"</span>)</span>
+<span id="cb37-13"><a href="#cb37-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" Parquet compressé écrit"</span>)</span>
 <span id="cb37-14"><a href="#cb37-14" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb37-15"><a href="#cb37-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Contrôler le nombre de fichiers</span></span>
 <span id="cb37-16"><a href="#cb37-16" aria-hidden="true" tabindex="-1"></a>df.coalesce(<span class="dv">1</span>).write <span class="op">\</span></span>
 <span id="cb37-17"><a href="#cb37-17" aria-hidden="true" tabindex="-1"></a>    .mode(<span class="st">"overwrite"</span>) <span class="op">\</span></span>
 <span id="cb37-18"><a href="#cb37-18" aria-hidden="true" tabindex="-1"></a>    .csv(<span class="st">"data/employes_single_file.csv"</span>)</span>
 <span id="cb37-19"><a href="#cb37-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-20"><a href="#cb37-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"✅ CSV en un seul fichier écrit"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb37-20"><a href="#cb37-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" CSV en un seul fichier écrit"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <hr>
@@ -1691,20 +1658,20 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <p>Spark permet d’exécuter des requêtes SQL sur les DataFrames.</p>
 <section id="créer-des-vues-temporaires" class="level2">
 <h2 class="anchored" data-anchor-id="créer-des-vues-temporaires">6.1 Créer des vues temporaires</h2>
-<div id="cell-62" class="cell">
+<div id="cell-63" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Créer une vue temporaire</span></span>
 <span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>df.createOrReplaceTempView(<span class="st">"employes"</span>)</span>
 <span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>df_ventes.createOrReplaceTempView(<span class="st">"ventes"</span>)</span>
 <span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"✅ Vues temporaires créées"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" Vues temporaires créées"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 </section>
 <section id="requêtes-sql" class="level2">
 <h2 class="anchored" data-anchor-id="requêtes-sql">6.2 Requêtes SQL</h2>
-<div id="cell-64" class="cell">
+<div id="cell-65" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Requête SQL simple</span></span>
@@ -1715,11 +1682,11 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a><span class="st">    ORDER BY salaire DESC</span></span>
 <span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span>)</span>
 <span id="cb39-8"><a href="#cb39-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-9"><a href="#cb39-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"📊 Employés avec salaire &gt; 50000 :"</span>)</span>
+<span id="cb39-9"><a href="#cb39-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" Employés avec salaire &gt; 50000 :"</span>)</span>
 <span id="cb39-10"><a href="#cb39-10" aria-hidden="true" tabindex="-1"></a>result.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-65" class="cell">
+<div id="cell-66" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Agrégation avec SQL</span></span>
@@ -1735,11 +1702,11 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb40-11"><a href="#cb40-11" aria-hidden="true" tabindex="-1"></a><span class="st">    ORDER BY salaire_moyen DESC</span></span>
 <span id="cb40-12"><a href="#cb40-12" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span>)</span>
 <span id="cb40-13"><a href="#cb40-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-14"><a href="#cb40-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"📊 Statistiques par ville :"</span>)</span>
+<span id="cb40-14"><a href="#cb40-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" Statistiques par ville :"</span>)</span>
 <span id="cb40-15"><a href="#cb40-15" aria-hidden="true" tabindex="-1"></a>result.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-66" class="cell">
+<div id="cell-67" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Window functions en SQL</span></span>
@@ -1754,11 +1721,11 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb41-10"><a href="#cb41-10" aria-hidden="true" tabindex="-1"></a><span class="st">    ORDER BY ville, rank_ville</span></span>
 <span id="cb41-11"><a href="#cb41-11" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span>)</span>
 <span id="cb41-12"><a href="#cb41-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-13"><a href="#cb41-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"🏆 Ranking avec SQL :"</span>)</span>
+<span id="cb41-13"><a href="#cb41-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" Ranking avec SQL :"</span>)</span>
 <span id="cb41-14"><a href="#cb41-14" aria-hidden="true" tabindex="-1"></a>result.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-67" class="cell">
+<div id="cell-68" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co"># CTE (Common Table Expression)</span></span>
@@ -1781,7 +1748,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb42-18"><a href="#cb42-18" aria-hidden="true" tabindex="-1"></a><span class="st">    ORDER BY e.ville, e.salaire DESC</span></span>
 <span id="cb42-19"><a href="#cb42-19" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span>)</span>
 <span id="cb42-20"><a href="#cb42-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-21"><a href="#cb42-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"📊 Comparaison à la moyenne :"</span>)</span>
+<span id="cb42-21"><a href="#cb42-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" Comparaison à la moyenne :"</span>)</span>
 <span id="cb42-22"><a href="#cb42-22" aria-hidden="true" tabindex="-1"></a>result.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
@@ -1791,7 +1758,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <section id="gestion-des-données-manquantes" class="level1">
 <h1>7️⃣ Gestion des données manquantes</h1>
 <p>PySpark offre plusieurs méthodes pour gérer les nulls.</p>
-<div id="cell-69" class="cell">
+<div id="cell-70" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Créer un DataFrame avec des nulls</span></span>
@@ -1805,27 +1772,27 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb43-9"><a href="#cb43-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb43-10"><a href="#cb43-10" aria-hidden="true" tabindex="-1"></a>df_nulls <span class="op">=</span> spark.createDataFrame(data_with_nulls, [<span class="st">"id"</span>, <span class="st">"nom"</span>, <span class="st">"age"</span>, <span class="st">"ville"</span>, <span class="st">"salaire"</span>])</span>
 <span id="cb43-11"><a href="#cb43-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-12"><a href="#cb43-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"📊 DataFrame avec nulls :"</span>)</span>
+<span id="cb43-12"><a href="#cb43-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" DataFrame avec nulls :"</span>)</span>
 <span id="cb43-13"><a href="#cb43-13" aria-hidden="true" tabindex="-1"></a>df_nulls.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-70" class="cell">
+<div id="cell-71" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Supprimer les lignes avec des nulls</span></span>
-<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"🗑️ Suppression de toutes les lignes avec nulls :"</span>)</span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" Suppression de toutes les lignes avec nulls :"</span>)</span>
 <span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>df_nulls.dropna().show()</span>
 <span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Supprimer seulement si toutes les colonnes sont nulles</span></span>
-<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">🗑️ Suppression si toutes les colonnes sont nulles :"</span>)</span>
+<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st"> Suppression si toutes les colonnes sont nulles :"</span>)</span>
 <span id="cb44-7"><a href="#cb44-7" aria-hidden="true" tabindex="-1"></a>df_nulls.dropna(how<span class="op">=</span><span class="st">'all'</span>).show()</span>
 <span id="cb44-8"><a href="#cb44-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb44-9"><a href="#cb44-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Supprimer les nulls sur des colonnes spécifiques</span></span>
-<span id="cb44-10"><a href="#cb44-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">🗑️ Suppression des nulls sur 'nom' et 'ville' :"</span>)</span>
+<span id="cb44-10"><a href="#cb44-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st"> Suppression des nulls sur 'nom' et 'ville' :"</span>)</span>
 <span id="cb44-11"><a href="#cb44-11" aria-hidden="true" tabindex="-1"></a>df_nulls.dropna(subset<span class="op">=</span>[<span class="st">"nom"</span>, <span class="st">"ville"</span>]).show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-71" class="cell">
+<div id="cell-72" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Remplir les nulls avec des valeurs par défaut</span></span>
@@ -1842,7 +1809,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb45-12"><a href="#cb45-12" aria-hidden="true" tabindex="-1"></a>}).show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-72" class="cell">
+<div id="cell-73" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Remplacer les nulls par la moyenne/médiane</span></span>
@@ -1870,7 +1837,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <section id="udfs-user-defined-functions" class="level1">
 <h1>8️⃣ UDFs (User Defined Functions)</h1>
 <p>Les UDFs permettent d’appliquer des fonctions Python personnalisées.</p>
-<div id="cell-74" class="cell">
+<div id="cell-75" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pyspark.sql.functions <span class="im">import</span> udf</span>
@@ -1900,7 +1867,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb47-25"><a href="#cb47-25" aria-hidden="true" tabindex="-1"></a>df_with_category.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-75" class="cell">
+<div id="cell-76" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="co"># UDF avec plusieurs paramètres</span></span>
@@ -1924,7 +1891,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb48-19"><a href="#cb48-19" aria-hidden="true" tabindex="-1"></a>df_with_bonus.select(<span class="st">"nom"</span>, <span class="st">"salaire"</span>, <span class="st">"performance"</span>, <span class="st">"bonus"</span>).show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-76" class="cell">
+<div id="cell-77" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ⚠️ Attention : Les UDFs sont moins performantes que les fonctions natives</span></span>
@@ -1947,7 +1914,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <p>Quelques techniques pour optimiser vos jobs Spark.</p>
 <section id="partitionnement" class="level2">
 <h2 class="anchored" data-anchor-id="partitionnement">9.1 Partitionnement</h2>
-<div id="cell-79" class="cell">
+<div id="cell-80" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérifier le nombre de partitions</span></span>
@@ -1962,7 +1929,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb50-10"><a href="#cb50-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Après coalesce : </span><span class="sc">{</span>df_coalesced<span class="sc">.</span>rdd<span class="sc">.</span>getNumPartitions()<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-80" class="cell">
+<div id="cell-81" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb51"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Repartitionner par colonne (utile avant les groupBy)</span></span>
@@ -1975,7 +1942,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </section>
 <section id="caching" class="level2">
 <h2 class="anchored" data-anchor-id="caching">9.2 Caching</h2>
-<div id="cell-82" class="cell">
+<div id="cell-83" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb52"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cache un DataFrame en mémoire</span></span>
@@ -1991,10 +1958,10 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb52-11"><a href="#cb52-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb52-12"><a href="#cb52-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Libérer le cache</span></span>
 <span id="cb52-13"><a href="#cb52-13" aria-hidden="true" tabindex="-1"></a>df_cached.unpersist()</span>
-<span id="cb52-14"><a href="#cb52-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">✅ Cache libéré"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb52-14"><a href="#cb52-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st"> Cache libéré"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-83" class="cell">
+<div id="cell-84" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb53"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Persist avec différents niveaux de stockage</span></span>
@@ -2009,13 +1976,13 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb53-10"><a href="#cb53-10" aria-hidden="true" tabindex="-1"></a><span class="co"># DISK_ONLY : Disque uniquement</span></span>
 <span id="cb53-11"><a href="#cb53-11" aria-hidden="true" tabindex="-1"></a>df.persist(StorageLevel.DISK_ONLY)</span>
 <span id="cb53-12"><a href="#cb53-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-13"><a href="#cb53-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"✅ Différents niveaux de persistance disponibles"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb53-13"><a href="#cb53-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" Différents niveaux de persistance disponibles"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 </section>
 <section id="broadcast-joins" class="level2">
 <h2 class="anchored" data-anchor-id="broadcast-joins">9.3 Broadcast Joins</h2>
-<div id="cell-85" class="cell">
+<div id="cell-86" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb54"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Pour les petits DataFrames (&lt; 10MB), utilisez broadcast</span></span>
@@ -2028,7 +1995,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb54-8"><a href="#cb54-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"inner"</span></span>
 <span id="cb54-9"><a href="#cb54-9" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb54-10"><a href="#cb54-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb54-11"><a href="#cb54-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"🚀 Broadcast join :"</span>)</span>
+<span id="cb54-11"><a href="#cb54-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" Broadcast join :"</span>)</span>
 <span id="cb54-12"><a href="#cb54-12" aria-hidden="true" tabindex="-1"></a>result.show()</span>
 <span id="cb54-13"><a href="#cb54-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb54-14"><a href="#cb54-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Évite le shuffle, beaucoup plus rapide !</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -2037,7 +2004,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </section>
 <section id="éviter-les-udfs-quand-possible" class="level2">
 <h2 class="anchored" data-anchor-id="éviter-les-udfs-quand-possible">9.4 Éviter les UDFs quand possible</h2>
-<div id="cell-87" class="cell">
+<div id="cell-88" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb55"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ❌ Avec UDF (lent)</span></span>
@@ -2050,21 +2017,21 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb55-8"><a href="#cb55-8" aria-hidden="true" tabindex="-1"></a><span class="co"># ✅ Avec fonction native (rapide)</span></span>
 <span id="cb55-9"><a href="#cb55-9" aria-hidden="true" tabindex="-1"></a>df.withColumn(<span class="st">"salaire_plus_10"</span>, F.col(<span class="st">"salaire"</span>) <span class="op">+</span> <span class="dv">10</span>)</span>
 <span id="cb55-10"><a href="#cb55-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-11"><a href="#cb55-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"✅ Les fonctions natives sont toujours plus rapides !"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb55-11"><a href="#cb55-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" Les fonctions natives sont toujours plus rapides !"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 </section>
 <section id="explain-plans" class="level2">
 <h2 class="anchored" data-anchor-id="explain-plans">9.5 Explain Plans</h2>
-<div id="cell-89" class="cell">
+<div id="cell-90" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb56"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Voir le plan d'exécution</span></span>
-<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"📊 Plan d'exécution :"</span>)</span>
+<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" Plan d'exécution :"</span>)</span>
 <span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a>df.<span class="bu">filter</span>(F.col(<span class="st">"salaire"</span>) <span class="op">&gt;</span> <span class="dv">50000</span>).explain()</span>
 <span id="cb56-4"><a href="#cb56-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb56-5"><a href="#cb56-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Plan détaillé</span></span>
-<span id="cb56-6"><a href="#cb56-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">📊 Plan d'exécution détaillé :"</span>)</span>
+<span id="cb56-6"><a href="#cb56-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st"> Plan d'exécution détaillé :"</span>)</span>
 <span id="cb56-7"><a href="#cb56-7" aria-hidden="true" tabindex="-1"></a>df.<span class="bu">filter</span>(F.col(<span class="st">"salaire"</span>) <span class="op">&gt;</span> <span class="dv">50000</span>).explain(extended<span class="op">=</span><span class="va">True</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
@@ -2074,7 +2041,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <section id="structured-streaming-bonus" class="level1">
 <h1>🔟 Structured Streaming (Bonus)</h1>
 <p>Traitement de données en temps réel avec Spark.</p>
-<div id="cell-91" class="cell">
+<div id="cell-92" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb57"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Créer un streaming DataFrame depuis un dossier</span></span>
@@ -2092,11 +2059,11 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb57-13"><a href="#cb57-13" aria-hidden="true" tabindex="-1"></a>    .schema(schema_stream) <span class="op">\</span></span>
 <span id="cb57-14"><a href="#cb57-14" aria-hidden="true" tabindex="-1"></a>    .json(<span class="st">"data/stream_input/"</span>)</span>
 <span id="cb57-15"><a href="#cb57-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb57-16"><a href="#cb57-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"✅ Stream créé"</span>)</span>
+<span id="cb57-16"><a href="#cb57-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" Stream créé"</span>)</span>
 <span id="cb57-17"><a href="#cb57-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Is streaming: </span><span class="sc">{</span>stream_df<span class="sc">.</span>isStreaming<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-92" class="cell">
+<div id="cell-93" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb58"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Transformations sur le stream (comme un DataFrame normal)</span></span>
@@ -2105,10 +2072,10 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb58-4"><a href="#cb58-4" aria-hidden="true" tabindex="-1"></a>    .groupBy(<span class="st">"user_id"</span>, <span class="st">"action"</span>) <span class="op">\</span></span>
 <span id="cb58-5"><a href="#cb58-5" aria-hidden="true" tabindex="-1"></a>    .count()</span>
 <span id="cb58-6"><a href="#cb58-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb58-7"><a href="#cb58-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"✅ Transformations appliquées"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb58-7"><a href="#cb58-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" Transformations appliquées"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-93" class="cell">
+<div id="cell-94" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb59"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Écrire le stream vers un sink</span></span>
@@ -2130,7 +2097,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <section id="pipeline-etl-complet-avec-pyspark" class="level1">
 <h1>1️⃣1️⃣ Pipeline ETL Complet avec PySpark</h1>
 <p>Construisons un pipeline ETL complet.</p>
-<div id="cell-95" class="cell">
+<div id="cell-96" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb60"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
@@ -2147,7 +2114,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </div>
 <section id="extract" class="level2">
 <h2 class="anchored" data-anchor-id="extract">11.1 Extract</h2>
-<div id="cell-97" class="cell">
+<div id="cell-98" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb61"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> extract_data(spark, path):</span>
@@ -2170,7 +2137,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb61-18"><a href="#cb61-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Sauvegarder les données brutes</span></span>
 <span id="cb61-19"><a href="#cb61-19" aria-hidden="true" tabindex="-1"></a>    df.write.mode(<span class="st">"overwrite"</span>).parquet(<span class="ss">f"</span><span class="sc">{</span>path<span class="sc">}</span><span class="ss">/ventes_raw.parquet"</span>)</span>
 <span id="cb61-20"><a href="#cb61-20" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb61-21"><a href="#cb61-21" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"✅ </span><span class="sc">{</span>df<span class="sc">.</span>count()<span class="sc">}</span><span class="ss"> lignes extraites"</span>)</span>
+<span id="cb61-21"><a href="#cb61-21" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f" </span><span class="sc">{</span>df<span class="sc">.</span>count()<span class="sc">}</span><span class="ss"> lignes extraites"</span>)</span>
 <span id="cb61-22"><a href="#cb61-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> df</span>
 <span id="cb61-23"><a href="#cb61-23" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb61-24"><a href="#cb61-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Test</span></span>
@@ -2181,12 +2148,12 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </section>
 <section id="transform" class="level2">
 <h2 class="anchored" data-anchor-id="transform">11.2 Transform</h2>
-<div id="cell-99" class="cell">
+<div id="cell-100" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb62"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> transform_data(df):</span>
 <span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Transforme et nettoie les données"""</span></span>
-<span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"🔄 Transformation des données"</span>)</span>
+<span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">" Transformation des données"</span>)</span>
 <span id="cb62-4"><a href="#cb62-4" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb62-5"><a href="#cb62-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 1. Convertir la date</span></span>
 <span id="cb62-6"><a href="#cb62-6" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> df.withColumn(<span class="st">"date"</span>, F.to_date(F.col(<span class="st">"date"</span>)))</span>
@@ -2235,7 +2202,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb62-49"><a href="#cb62-49" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 6. Ajouter metadata</span></span>
 <span id="cb62-50"><a href="#cb62-50" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> df.withColumn(<span class="st">"processed_at"</span>, F.current_timestamp())</span>
 <span id="cb62-51"><a href="#cb62-51" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb62-52"><a href="#cb62-52" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"✅ </span><span class="sc">{</span>df<span class="sc">.</span>count()<span class="sc">}</span><span class="ss"> lignes transformées"</span>)</span>
+<span id="cb62-52"><a href="#cb62-52" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f" </span><span class="sc">{</span>df<span class="sc">.</span>count()<span class="sc">}</span><span class="ss"> lignes transformées"</span>)</span>
 <span id="cb62-53"><a href="#cb62-53" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> df</span>
 <span id="cb62-54"><a href="#cb62-54" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb62-55"><a href="#cb62-55" aria-hidden="true" tabindex="-1"></a><span class="co"># Test</span></span>
@@ -2246,12 +2213,12 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </section>
 <section id="aggregate" class="level2">
 <h2 class="anchored" data-anchor-id="aggregate">11.3 Aggregate</h2>
-<div id="cell-101" class="cell">
+<div id="cell-102" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb63"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> aggregate_data(df):</span>
 <span id="cb63-2"><a href="#cb63-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Crée des agrégations métier"""</span></span>
-<span id="cb63-3"><a href="#cb63-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"📊 Agrégation des données"</span>)</span>
+<span id="cb63-3"><a href="#cb63-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">" Agrégation des données"</span>)</span>
 <span id="cb63-4"><a href="#cb63-4" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb63-5"><a href="#cb63-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Agrégation par ville et produit</span></span>
 <span id="cb63-6"><a href="#cb63-6" aria-hidden="true" tabindex="-1"></a>    agg_ville_produit <span class="op">=</span> df.groupBy(<span class="st">"ville"</span>, <span class="st">"produit"</span>).agg(</span>
@@ -2261,7 +2228,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb63-10"><a href="#cb63-10" aria-hidden="true" tabindex="-1"></a>        F.count(<span class="st">"*"</span>).alias(<span class="st">"nb_transactions"</span>)</span>
 <span id="cb63-11"><a href="#cb63-11" aria-hidden="true" tabindex="-1"></a>    ).orderBy(<span class="st">"ville"</span>, <span class="st">"produit"</span>)</span>
 <span id="cb63-12"><a href="#cb63-12" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb63-13"><a href="#cb63-13" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">📊 Agrégation par ville et produit :"</span>)</span>
+<span id="cb63-13"><a href="#cb63-13" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st"> Agrégation par ville et produit :"</span>)</span>
 <span id="cb63-14"><a href="#cb63-14" aria-hidden="true" tabindex="-1"></a>    agg_ville_produit.show()</span>
 <span id="cb63-15"><a href="#cb63-15" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb63-16"><a href="#cb63-16" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Agrégation par canal</span></span>
@@ -2271,7 +2238,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb63-20"><a href="#cb63-20" aria-hidden="true" tabindex="-1"></a>        F.avg(<span class="st">"montant"</span>).alias(<span class="st">"montant_moyen"</span>)</span>
 <span id="cb63-21"><a href="#cb63-21" aria-hidden="true" tabindex="-1"></a>    )</span>
 <span id="cb63-22"><a href="#cb63-22" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb63-23"><a href="#cb63-23" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">📊 Agrégation par canal :"</span>)</span>
+<span id="cb63-23"><a href="#cb63-23" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st"> Agrégation par canal :"</span>)</span>
 <span id="cb63-24"><a href="#cb63-24" aria-hidden="true" tabindex="-1"></a>    agg_canal.show()</span>
 <span id="cb63-25"><a href="#cb63-25" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb63-26"><a href="#cb63-26" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Agrégation temporelle</span></span>
@@ -2280,7 +2247,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb63-29"><a href="#cb63-29" aria-hidden="true" tabindex="-1"></a>        F.count(<span class="st">"*"</span>).alias(<span class="st">"nb_transactions"</span>)</span>
 <span id="cb63-30"><a href="#cb63-30" aria-hidden="true" tabindex="-1"></a>    ).orderBy(<span class="st">"annee"</span>, <span class="st">"mois"</span>)</span>
 <span id="cb63-31"><a href="#cb63-31" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb63-32"><a href="#cb63-32" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">📊 Agrégation temporelle :"</span>)</span>
+<span id="cb63-32"><a href="#cb63-32" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st"> Agrégation temporelle :"</span>)</span>
 <span id="cb63-33"><a href="#cb63-33" aria-hidden="true" tabindex="-1"></a>    agg_temporelle.show()</span>
 <span id="cb63-34"><a href="#cb63-34" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb63-35"><a href="#cb63-35" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> {</span>
@@ -2296,33 +2263,33 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </section>
 <section id="load" class="level2">
 <h2 class="anchored" data-anchor-id="load">11.4 Load</h2>
-<div id="cell-103" class="cell">
+<div id="cell-104" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb64"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> load_data(df, aggregations, output_path):</span>
 <span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Charge les données dans le datalake"""</span></span>
-<span id="cb64-3"><a href="#cb64-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"💾 Chargement des données"</span>)</span>
+<span id="cb64-3"><a href="#cb64-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">" Chargement des données"</span>)</span>
 <span id="cb64-4"><a href="#cb64-4" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb64-5"><a href="#cb64-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 1. Données transformées (partitionnées par date)</span></span>
 <span id="cb64-6"><a href="#cb64-6" aria-hidden="true" tabindex="-1"></a>    df.write <span class="op">\</span></span>
 <span id="cb64-7"><a href="#cb64-7" aria-hidden="true" tabindex="-1"></a>        .mode(<span class="st">"overwrite"</span>) <span class="op">\</span></span>
 <span id="cb64-8"><a href="#cb64-8" aria-hidden="true" tabindex="-1"></a>        .partitionBy(<span class="st">"annee"</span>, <span class="st">"mois"</span>) <span class="op">\</span></span>
 <span id="cb64-9"><a href="#cb64-9" aria-hidden="true" tabindex="-1"></a>        .parquet(<span class="ss">f"</span><span class="sc">{</span>output_path<span class="sc">}</span><span class="ss">/ventes_transformed"</span>)</span>
-<span id="cb64-10"><a href="#cb64-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"✅ Données transformées sauvegardées"</span>)</span>
+<span id="cb64-10"><a href="#cb64-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">" Données transformées sauvegardées"</span>)</span>
 <span id="cb64-11"><a href="#cb64-11" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb64-12"><a href="#cb64-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 2. Agrégations</span></span>
 <span id="cb64-13"><a href="#cb64-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> name, agg_df <span class="kw">in</span> aggregations.items():</span>
 <span id="cb64-14"><a href="#cb64-14" aria-hidden="true" tabindex="-1"></a>        agg_df.write <span class="op">\</span></span>
 <span id="cb64-15"><a href="#cb64-15" aria-hidden="true" tabindex="-1"></a>            .mode(<span class="st">"overwrite"</span>) <span class="op">\</span></span>
 <span id="cb64-16"><a href="#cb64-16" aria-hidden="true" tabindex="-1"></a>            .parquet(<span class="ss">f"</span><span class="sc">{</span>output_path<span class="sc">}</span><span class="ss">/agg_</span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb64-17"><a href="#cb64-17" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"✅ Agrégation '</span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">' sauvegardée"</span>)</span>
+<span id="cb64-17"><a href="#cb64-17" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f" Agrégation '</span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">' sauvegardée"</span>)</span>
 <span id="cb64-18"><a href="#cb64-18" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb64-19"><a href="#cb64-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 3. Export CSV pour l'analyse</span></span>
 <span id="cb64-20"><a href="#cb64-20" aria-hidden="true" tabindex="-1"></a>    df.coalesce(<span class="dv">1</span>).write <span class="op">\</span></span>
 <span id="cb64-21"><a href="#cb64-21" aria-hidden="true" tabindex="-1"></a>        .mode(<span class="st">"overwrite"</span>) <span class="op">\</span></span>
 <span id="cb64-22"><a href="#cb64-22" aria-hidden="true" tabindex="-1"></a>        .option(<span class="st">"header"</span>, <span class="st">"true"</span>) <span class="op">\</span></span>
 <span id="cb64-23"><a href="#cb64-23" aria-hidden="true" tabindex="-1"></a>        .csv(<span class="ss">f"</span><span class="sc">{</span>output_path<span class="sc">}</span><span class="ss">/ventes_export.csv"</span>)</span>
-<span id="cb64-24"><a href="#cb64-24" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"✅ Export CSV créé"</span>)</span>
+<span id="cb64-24"><a href="#cb64-24" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">" Export CSV créé"</span>)</span>
 <span id="cb64-25"><a href="#cb64-25" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb64-26"><a href="#cb64-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Test</span></span>
 <span id="cb64-27"><a href="#cb64-27" aria-hidden="true" tabindex="-1"></a>load_data(df_transformed, aggregations, <span class="st">"spark_pipeline/output"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -2331,7 +2298,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </section>
 <section id="pipeline-complet-orchestré" class="level2">
 <h2 class="anchored" data-anchor-id="pipeline-complet-orchestré">11.5 Pipeline complet orchestré</h2>
-<div id="cell-105" class="cell">
+<div id="cell-106" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb65"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> run_pipeline(spark):</span>
@@ -2345,34 +2312,34 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb65-9"><a href="#cb65-9" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb65-10"><a href="#cb65-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>:</span>
 <span id="cb65-11"><a href="#cb65-11" aria-hidden="true" tabindex="-1"></a>        <span class="co"># EXTRACT</span></span>
-<span id="cb65-12"><a href="#cb65-12" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">📥 PHASE 1: EXTRACTION"</span>)</span>
+<span id="cb65-12"><a href="#cb65-12" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st"> PHASE 1: EXTRACTION"</span>)</span>
 <span id="cb65-13"><a href="#cb65-13" aria-hidden="true" tabindex="-1"></a>        df_raw <span class="op">=</span> extract_data(spark, <span class="st">"spark_pipeline/raw"</span>)</span>
 <span id="cb65-14"><a href="#cb65-14" aria-hidden="true" tabindex="-1"></a>        </span>
 <span id="cb65-15"><a href="#cb65-15" aria-hidden="true" tabindex="-1"></a>        <span class="co"># TRANSFORM</span></span>
-<span id="cb65-16"><a href="#cb65-16" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">🔄 PHASE 2: TRANSFORMATION"</span>)</span>
+<span id="cb65-16"><a href="#cb65-16" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st"> PHASE 2: TRANSFORMATION"</span>)</span>
 <span id="cb65-17"><a href="#cb65-17" aria-hidden="true" tabindex="-1"></a>        df_transformed <span class="op">=</span> transform_data(df_raw)</span>
 <span id="cb65-18"><a href="#cb65-18" aria-hidden="true" tabindex="-1"></a>        </span>
 <span id="cb65-19"><a href="#cb65-19" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Cache pour les performances</span></span>
 <span id="cb65-20"><a href="#cb65-20" aria-hidden="true" tabindex="-1"></a>        df_transformed.cache()</span>
 <span id="cb65-21"><a href="#cb65-21" aria-hidden="true" tabindex="-1"></a>        </span>
 <span id="cb65-22"><a href="#cb65-22" aria-hidden="true" tabindex="-1"></a>        <span class="co"># AGGREGATE</span></span>
-<span id="cb65-23"><a href="#cb65-23" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">📊 PHASE 3: AGRÉGATION"</span>)</span>
+<span id="cb65-23"><a href="#cb65-23" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st"> PHASE 3: AGRÉGATION"</span>)</span>
 <span id="cb65-24"><a href="#cb65-24" aria-hidden="true" tabindex="-1"></a>        aggregations <span class="op">=</span> aggregate_data(df_transformed)</span>
 <span id="cb65-25"><a href="#cb65-25" aria-hidden="true" tabindex="-1"></a>        </span>
 <span id="cb65-26"><a href="#cb65-26" aria-hidden="true" tabindex="-1"></a>        <span class="co"># LOAD</span></span>
-<span id="cb65-27"><a href="#cb65-27" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">💾 PHASE 4: CHARGEMENT"</span>)</span>
+<span id="cb65-27"><a href="#cb65-27" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st"> PHASE 4: CHARGEMENT"</span>)</span>
 <span id="cb65-28"><a href="#cb65-28" aria-hidden="true" tabindex="-1"></a>        load_data(df_transformed, aggregations, <span class="st">"spark_pipeline/output"</span>)</span>
 <span id="cb65-29"><a href="#cb65-29" aria-hidden="true" tabindex="-1"></a>        </span>
 <span id="cb65-30"><a href="#cb65-30" aria-hidden="true" tabindex="-1"></a>        <span class="co"># STATISTICS</span></span>
 <span id="cb65-31"><a href="#cb65-31" aria-hidden="true" tabindex="-1"></a>        duration <span class="op">=</span> time.time() <span class="op">-</span> start_time</span>
 <span id="cb65-32"><a href="#cb65-32" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">"</span> <span class="op">+</span> <span class="st">"="</span><span class="op">*</span><span class="dv">60</span>)</span>
-<span id="cb65-33"><a href="#cb65-33" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"📊 STATISTIQUES DU PIPELINE"</span>)</span>
+<span id="cb65-33"><a href="#cb65-33" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"STATISTIQUES DU PIPELINE"</span>)</span>
 <span id="cb65-34"><a href="#cb65-34" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"="</span><span class="op">*</span><span class="dv">60</span>)</span>
 <span id="cb65-35"><a href="#cb65-35" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"Durée totale: </span><span class="sc">{</span>duration<span class="sc">:.2f}</span><span class="ss">s"</span>)</span>
 <span id="cb65-36"><a href="#cb65-36" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"Lignes traitées: </span><span class="sc">{</span>df_transformed<span class="sc">.</span>count()<span class="sc">}</span><span class="ss">"</span>)</span>
 <span id="cb65-37"><a href="#cb65-37" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"Partitions: </span><span class="sc">{</span>df_transformed<span class="sc">.</span>rdd<span class="sc">.</span>getNumPartitions()<span class="sc">}</span><span class="ss">"</span>)</span>
 <span id="cb65-38"><a href="#cb65-38" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"="</span><span class="op">*</span><span class="dv">60</span>)</span>
-<span id="cb65-39"><a href="#cb65-39" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"✅ PIPELINE TERMINÉ AVEC SUCCÈS"</span>)</span>
+<span id="cb65-39"><a href="#cb65-39" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"PIPELINE TERMINÉ AVEC SUCCÈS"</span>)</span>
 <span id="cb65-40"><a href="#cb65-40" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"="</span><span class="op">*</span><span class="dv">60</span>)</span>
 <span id="cb65-41"><a href="#cb65-41" aria-hidden="true" tabindex="-1"></a>        </span>
 <span id="cb65-42"><a href="#cb65-42" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Libérer le cache</span></span>
@@ -2381,7 +2348,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb65-45"><a href="#cb65-45" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">True</span></span>
 <span id="cb65-46"><a href="#cb65-46" aria-hidden="true" tabindex="-1"></a>        </span>
 <span id="cb65-47"><a href="#cb65-47" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
-<span id="cb65-48"><a href="#cb65-48" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">❌ ERREUR: </span><span class="sc">{</span>e<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb65-48"><a href="#cb65-48" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss"> ERREUR: </span><span class="sc">{</span>e<span class="sc">}</span><span class="ss">"</span>)</span>
 <span id="cb65-49"><a href="#cb65-49" aria-hidden="true" tabindex="-1"></a>        <span class="im">import</span> traceback</span>
 <span id="cb65-50"><a href="#cb65-50" aria-hidden="true" tabindex="-1"></a>        traceback.print_exc()</span>
 <span id="cb65-51"><a href="#cb65-51" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">False</span></span>
@@ -2394,9 +2361,9 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </section>
 </section>
 <section id="résumé-et-prochaines-étapes" class="level1">
-<h1>🎓 Résumé et Prochaines Étapes</h1>
+<h1>Résumé et Prochaines Étapes</h1>
 <section id="ce-que-vous-avez-appris" class="level2">
-<h2 class="anchored" data-anchor-id="ce-que-vous-avez-appris">Ce que vous avez appris ✅</h2>
+<h2 class="anchored" data-anchor-id="ce-que-vous-avez-appris">Ce que vous avez appris</h2>
 <ol type="1">
 <li><strong>Fondamentaux Spark</strong> : Architecture, concepts, SparkSession</li>
 <li><strong>DataFrames</strong> : Création, transformations, actions</li>
@@ -2412,7 +2379,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </ol>
 </section>
 <section id="différences-clés-pandas-vs-pyspark" class="level2">
-<h2 class="anchored" data-anchor-id="différences-clés-pandas-vs-pyspark">Différences clés Pandas vs PySpark 🔄</h2>
+<h2 class="anchored" data-anchor-id="différences-clés-pandas-vs-pyspark">Différences clés Pandas vs PySpark</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 30%">
@@ -2456,12 +2423,12 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </table>
 </section>
 <section id="quand-utiliser-pyspark" class="level2">
-<h2 class="anchored" data-anchor-id="quand-utiliser-pyspark">Quand utiliser PySpark ? 🤔</h2>
+<h2 class="anchored" data-anchor-id="quand-utiliser-pyspark">Quand utiliser PySpark ?</h2>
 <p>✅ <strong>Utilisez PySpark si :</strong> - Données &gt; 10 GB - Besoin de parallélisation - Traitement distribué nécessaire - Streaming en temps réel</p>
 <p>❌ <strong>Utilisez Pandas si :</strong> - Données &lt; 10 GB - Prototypage rapide - Analyses exploratoires - Machine learning local</p>
 </section>
 <section id="prochaines-étapes" class="level2">
-<h2 class="anchored" data-anchor-id="prochaines-étapes">Prochaines étapes 🚀</h2>
+<h2 class="anchored" data-anchor-id="prochaines-étapes">Prochaines étapes</h2>
 <ol type="1">
 <li><strong>Pratiquer</strong> : Créer des pipelines avec vos propres données</li>
 <li><strong>Approfondir</strong> :
@@ -2499,7 +2466,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </section>
 </section>
 <section id="quiz-final" class="level1">
-<h1>🧪 Quiz Final</h1>
+<h1>Quiz Final</h1>
 <p>Testez vos connaissances PySpark !</p>
 <section id="q1.-quelle-est-la-différence-principale-entre-une-transformation-et-une-action-dans-spark" class="level3">
 <h3 class="anchored" data-anchor-id="q1.-quelle-est-la-différence-principale-entre-une-transformation-et-une-action-dans-spark">❓ Q1. Quelle est la différence principale entre une <strong>transformation</strong> et une <strong>action</strong> dans Spark ?</h3>
@@ -2690,16 +2657,6 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 ✅ <strong>Réponse : b</strong> – Utilisez <strong>PySpark</strong> quand vos données sont <strong>trop volumineuses</strong> pour tenir en mémoire sur une seule machine (généralement &gt; 100 GB), ou quand vous avez besoin de <strong>traitement distribué</strong> et de <strong>parallélisation</strong>. Pour les petits datasets (&lt; 10 GB), <strong>Pandas</strong> est plus simple et souvent plus rapide.
 </details>
 <hr>
-</section>
-<section id="votre-score" class="level2">
-<h2 class="anchored" data-anchor-id="votre-score">📊 Votre score</h2>
-<ul>
-<li><strong>10/10</strong> : 🏆 Expert PySpark ! Prêt pour la production</li>
-<li><strong>8-9/10</strong> : 🌟 Excellent ! Pratiquez les concepts avancés</li>
-<li><strong>6-7/10</strong> : 💪 Bon niveau ! Revoyez les optimisations</li>
-<li><strong>&lt; 6/10</strong> : 📚 Relisez le notebook et pratiquez les exemples</li>
-</ul>
-<hr>
 <hr>
 </section>
 <section id="ressources-1" class="level2">
@@ -2745,10 +2702,10 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <h2 class="anchored" data-anchor-id="prochaine-étape">➡️ Prochaine étape</h2>
 <p>Tu maîtrises maintenant le traitement Big Data avec PySpark !</p>
 <p>Pour continuer ton parcours Data Engineering,</p>
-<p>👉 <strong>Module suivant : <code>12_orchestration_pipelines.ipynb</code></strong> — Orchestration de pipelines</p>
+<p>👉 <strong>Module suivant : <code>12_orchestration_pipelines</code></strong> — Orchestration de pipelines</p>
 <hr>
 <p>🎉 <strong>Félicitations !</strong> Tu as terminé le module PySpark et le parcours sur les bases de données et le Big Data !</p>
-<div id="cell-109" class="cell">
+<div id="cell-110" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb66"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Fermer la SparkSession</span></span>
@@ -2785,7 +2742,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </style>
 
 <div id="pdf-button" onclick="downloadPDF()">
-  📄 Télécharger ce module en PDF
+  📄 Télécharger la version PDF
 </div>
 
 <script>

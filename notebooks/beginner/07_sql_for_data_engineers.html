@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>🐘 SQL for Data Engineers – Bootcamp Data Engineering</title>
+<title>SQL for Data Engineers – Bootcamp Data Engineering</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -77,9 +77,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-fc8d3d93f0a84b7619e1f8ff6eb63d42.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-a5e5c9297d81242f794464007003a45f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-7ce12bcd0277d468432a98ebc2064ff0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-a5e5c9297d81242f794464007003a45f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-1ded37139ab960446759ac96e383a6c7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-0c5e4731d53392a4fe54074a744a0e14.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-1ded37139ab960446759ac96e383a6c7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": true,
@@ -114,11 +114,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="keywords" content="data engineering, spark, kafka, python, kubernetes, lakehouse, delta lake, bootcamp">
 
 
-<meta property="og:title" content="🐘 SQL for Data Engineers – Bootcamp Data Engineering">
+<meta property="og:title" content="SQL for Data Engineers – Bootcamp Data Engineering">
 <meta property="og:description" content="Programme complet Data Engineering — Du débutant au Senior Engineer">
 <meta property="og:site_name" content="Bootcamp Data Engineering">
 <meta property="og:locale" content="fr_FR">
-<meta name="twitter:title" content="🐘 SQL for Data Engineers – Bootcamp Data Engineering">
+<meta name="twitter:title" content="SQL for Data Engineers – Bootcamp Data Engineering">
 <meta name="twitter:description" content="Programme complet Data Engineering — Du débutant au Senior Engineer">
 <meta name="twitter:creator" content="@diakite_data">
 <meta name="twitter:site" content="@diakite_data">
@@ -703,42 +703,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <span class="sidebar-item-text sidebar-link text-start">
  <span class="menu-text">🟥 Niveau 3 : Avancé</span></span>
   </li>
-        <li class="px-0"><hr class="sidebar-divider hi "></li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false">
- <span class="menu-text">📚 Ressources</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../resources/setup.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">🔧 Setup Environnement</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../resources/documentation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">📖 Documentation</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../resources/faq.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">❓ FAQ</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../resources/links.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">🔗 Liens Utiles</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
     </ul>
     </div>
 </nav>
@@ -749,45 +713,45 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">📑 Sommaire</h2>
    
   <ul>
-  <li><a href="#approche-de-ce-cours" id="toc-approche-de-ce-cours" class="nav-link active" data-scroll-target="#approche-de-ce-cours">⚙️ Approche de ce cours</a></li>
-  <li><a href="#prérequis" id="toc-prérequis" class="nav-link" data-scroll-target="#prérequis">📋 Prérequis</a></li>
-  <li><a href="#objectifs-du-module" id="toc-objectifs-du-module" class="nav-link" data-scroll-target="#objectifs-du-module">🎯 Objectifs du module</a></li>
-  <li><a href="#cest-quoi-sql" id="toc-cest-quoi-sql" class="nav-link" data-scroll-target="#cest-quoi-sql">🧠 C’est quoi SQL ?</a></li>
-  <li><a href="#pourquoi-cest-essentiel-pour-un-data-engineer" id="toc-pourquoi-cest-essentiel-pour-un-data-engineer" class="nav-link" data-scroll-target="#pourquoi-cest-essentiel-pour-un-data-engineer">🧰 Pourquoi c’est essentiel pour un Data Engineer ?</a></li>
-  <li><a href="#outils-en-ligne-pour-tester-du-sql" id="toc-outils-en-ligne-pour-tester-du-sql" class="nav-link" data-scroll-target="#outils-en-ligne-pour-tester-du-sql">🌐 Outils en ligne pour tester du SQL</a>
+  <li><a href="#approche-de-ce-cours" id="toc-approche-de-ce-cours" class="nav-link active" data-scroll-target="#approche-de-ce-cours">Approche de ce cours</a></li>
+  <li><a href="#prérequis" id="toc-prérequis" class="nav-link" data-scroll-target="#prérequis">Prérequis</a></li>
+  <li><a href="#objectifs-du-module" id="toc-objectifs-du-module" class="nav-link" data-scroll-target="#objectifs-du-module">Objectifs du module</a></li>
+  <li><a href="#cest-quoi-sql" id="toc-cest-quoi-sql" class="nav-link" data-scroll-target="#cest-quoi-sql">C’est quoi SQL ?</a></li>
+  <li><a href="#pourquoi-cest-essentiel-pour-un-data-engineer" id="toc-pourquoi-cest-essentiel-pour-un-data-engineer" class="nav-link" data-scroll-target="#pourquoi-cest-essentiel-pour-un-data-engineer">Pourquoi c’est essentiel pour un Data Engineer ?</a></li>
+  <li><a href="#outils-en-ligne-pour-tester-du-sql" id="toc-outils-en-ligne-pour-tester-du-sql" class="nav-link" data-scroll-target="#outils-en-ligne-pour-tester-du-sql">Outils en ligne pour tester du SQL</a>
   <ul class="collapse">
-  <li><a href="#outils-recommandés" id="toc-outils-recommandés" class="nav-link" data-scroll-target="#outils-recommandés">🛠️ Outils recommandés</a></li>
+  <li><a href="#outils-recommandés" id="toc-outils-recommandés" class="nav-link" data-scroll-target="#outils-recommandés">Outils recommandés</a></li>
   <li><a href="#exemple-avec-db-fiddle" id="toc-exemple-avec-db-fiddle" class="nav-link" data-scroll-target="#exemple-avec-db-fiddle">💡 Exemple avec DB Fiddle</a></li>
   <li><a href="#différences-entre-sgbd" id="toc-différences-entre-sgbd" class="nav-link" data-scroll-target="#différences-entre-sgbd">⚠️ Différences entre SGBD</a></li>
   <li><a href="#pourquoi-on-utilise-python-duckdb-dans-ce-cours" id="toc-pourquoi-on-utilise-python-duckdb-dans-ce-cours" class="nav-link" data-scroll-target="#pourquoi-on-utilise-python-duckdb-dans-ce-cours">🎯 Pourquoi on utilise Python + DuckDB dans ce cours ?</a></li>
   </ul></li>
-  <li><a href="#python-duckdb-sql-dans-ton-notebook" id="toc-python-duckdb-sql-dans-ton-notebook" class="nav-link" data-scroll-target="#python-duckdb-sql-dans-ton-notebook">🦆 Python + DuckDB — SQL dans ton notebook !</a>
+  <li><a href="#python-duckdb-sql-dans-ton-notebook" id="toc-python-duckdb-sql-dans-ton-notebook" class="nav-link" data-scroll-target="#python-duckdb-sql-dans-ton-notebook">Python + DuckDB — SQL dans ton notebook !</a>
   <ul class="collapse">
   <li><a href="#quest-ce-que-duckdb" id="toc-quest-ce-que-duckdb" class="nav-link" data-scroll-target="#quest-ce-que-duckdb">Qu’est-ce que DuckDB ?</a></li>
-  <li><a href="#duckdb-vs-autres-bases" id="toc-duckdb-vs-autres-bases" class="nav-link" data-scroll-target="#duckdb-vs-autres-bases">📊 DuckDB vs autres bases</a></li>
+  <li><a href="#duckdb-vs-autres-bases" id="toc-duckdb-vs-autres-bases" class="nav-link" data-scroll-target="#duckdb-vs-autres-bases">DuckDB vs autres bases</a></li>
   </ul></li>
-  <li><a href="#cheatsheet-sql-commandes-essentielles" id="toc-cheatsheet-sql-commandes-essentielles" class="nav-link" data-scroll-target="#cheatsheet-sql-commandes-essentielles">📋 Cheatsheet SQL — Commandes essentielles</a></li>
-  <li><a href="#select-sélectionner-des-données" id="toc-select-sélectionner-des-données" class="nav-link" data-scroll-target="#select-sélectionner-des-données">🔍 1. SELECT — Sélectionner des données</a>
+  <li><a href="#cheatsheet-sql-commandes-essentielles" id="toc-cheatsheet-sql-commandes-essentielles" class="nav-link" data-scroll-target="#cheatsheet-sql-commandes-essentielles">Cheatsheet SQL — Commandes essentielles</a></li>
+  <li><a href="#select-sélectionner-des-données" id="toc-select-sélectionner-des-données" class="nav-link" data-scroll-target="#select-sélectionner-des-données">1. SELECT — Sélectionner des données</a>
   <ul class="collapse">
   <li><a href="#syntaxe-de-base" id="toc-syntaxe-de-base" class="nav-link" data-scroll-target="#syntaxe-de-base">Syntaxe de base</a></li>
   </ul></li>
-  <li><a href="#agrégations-count-sum-avg-min-max" id="toc-agrégations-count-sum-avg-min-max" class="nav-link" data-scroll-target="#agrégations-count-sum-avg-min-max">📊 2. Agrégations — COUNT, SUM, AVG, MIN, MAX</a></li>
-  <li><a href="#group-by-regrouper-les-données" id="toc-group-by-regrouper-les-données" class="nav-link" data-scroll-target="#group-by-regrouper-les-données">📦 3. GROUP BY — Regrouper les données</a></li>
-  <li><a href="#join-combiner-les-tables" id="toc-join-combiner-les-tables" class="nav-link" data-scroll-target="#join-combiner-les-tables">🔗 4. JOIN — Combiner les tables</a></li>
-  <li><a href="#fonctions-de-date" id="toc-fonctions-de-date" class="nav-link" data-scroll-target="#fonctions-de-date">📅 5. Fonctions de date</a></li>
-  <li><a href="#case-conditions-dans-les-requêtes" id="toc-case-conditions-dans-les-requêtes" class="nav-link" data-scroll-target="#case-conditions-dans-les-requêtes">🔀 6. CASE — Conditions dans les requêtes</a></li>
-  <li><a href="#cte-common-table-expression-requêtes-lisibles" id="toc-cte-common-table-expression-requêtes-lisibles" class="nav-link" data-scroll-target="#cte-common-table-expression-requêtes-lisibles">📦 7. CTE (Common Table Expression) — Requêtes lisibles</a></li>
-  <li><a href="#window-functions-calculs-avancés" id="toc-window-functions-calculs-avancés" class="nav-link" data-scroll-target="#window-functions-calculs-avancés">🪟 8. Window Functions — Calculs avancés</a></li>
-  <li><a href="#intégration-avec-pandas" id="toc-intégration-avec-pandas" class="nav-link" data-scroll-target="#intégration-avec-pandas">🐼 9. Intégration avec Pandas</a></li>
-  <li><a href="#exercices-pratiques" id="toc-exercices-pratiques" class="nav-link" data-scroll-target="#exercices-pratiques">🎯 10. Exercices pratiques</a>
+  <li><a href="#agrégations-count-sum-avg-min-max" id="toc-agrégations-count-sum-avg-min-max" class="nav-link" data-scroll-target="#agrégations-count-sum-avg-min-max">2. Agrégations — COUNT, SUM, AVG, MIN, MAX</a></li>
+  <li><a href="#group-by-regrouper-les-données" id="toc-group-by-regrouper-les-données" class="nav-link" data-scroll-target="#group-by-regrouper-les-données">3. GROUP BY — Regrouper les données</a></li>
+  <li><a href="#join-combiner-les-tables" id="toc-join-combiner-les-tables" class="nav-link" data-scroll-target="#join-combiner-les-tables">4. JOIN — Combiner les tables</a></li>
+  <li><a href="#fonctions-de-date" id="toc-fonctions-de-date" class="nav-link" data-scroll-target="#fonctions-de-date">5. Fonctions de date</a></li>
+  <li><a href="#case-conditions-dans-les-requêtes" id="toc-case-conditions-dans-les-requêtes" class="nav-link" data-scroll-target="#case-conditions-dans-les-requêtes">6. CASE — Conditions dans les requêtes</a></li>
+  <li><a href="#cte-common-table-expression-requêtes-lisibles" id="toc-cte-common-table-expression-requêtes-lisibles" class="nav-link" data-scroll-target="#cte-common-table-expression-requêtes-lisibles">7. CTE (Common Table Expression) — Requêtes lisibles</a></li>
+  <li><a href="#window-functions-calculs-avancés" id="toc-window-functions-calculs-avancés" class="nav-link" data-scroll-target="#window-functions-calculs-avancés">8. Window Functions — Calculs avancés</a></li>
+  <li><a href="#intégration-avec-pandas" id="toc-intégration-avec-pandas" class="nav-link" data-scroll-target="#intégration-avec-pandas">9. Intégration avec Pandas</a></li>
+  <li><a href="#exercices-pratiques" id="toc-exercices-pratiques" class="nav-link" data-scroll-target="#exercices-pratiques">10. Exercices pratiques</a>
   <ul class="collapse">
-  <li><a href="#exercice-1-facile" id="toc-exercice-1-facile" class="nav-link" data-scroll-target="#exercice-1-facile">🏋️ Exercice 1 — Facile</a></li>
-  <li><a href="#exercice-2-facile" id="toc-exercice-2-facile" class="nav-link" data-scroll-target="#exercice-2-facile">🏋️ Exercice 2 — Facile</a></li>
-  <li><a href="#exercice-3-intermédiaire" id="toc-exercice-3-intermédiaire" class="nav-link" data-scroll-target="#exercice-3-intermédiaire">🏋️ Exercice 3 — Intermédiaire</a></li>
-  <li><a href="#exercice-4-intermédiaire" id="toc-exercice-4-intermédiaire" class="nav-link" data-scroll-target="#exercice-4-intermédiaire">🏋️ Exercice 4 — Intermédiaire</a></li>
-  <li><a href="#exercice-5-avancé" id="toc-exercice-5-avancé" class="nav-link" data-scroll-target="#exercice-5-avancé">🏋️ Exercice 5 — Avancé</a></li>
+  <li><a href="#exercice-1-facile" id="toc-exercice-1-facile" class="nav-link" data-scroll-target="#exercice-1-facile">Exercice 1 — Facile</a></li>
+  <li><a href="#exercice-2-facile" id="toc-exercice-2-facile" class="nav-link" data-scroll-target="#exercice-2-facile">Exercice 2 — Facile</a></li>
+  <li><a href="#exercice-3-intermédiaire" id="toc-exercice-3-intermédiaire" class="nav-link" data-scroll-target="#exercice-3-intermédiaire">Exercice 3 — Intermédiaire</a></li>
+  <li><a href="#exercice-4-intermédiaire" id="toc-exercice-4-intermédiaire" class="nav-link" data-scroll-target="#exercice-4-intermédiaire">Exercice 4 — Intermédiaire</a></li>
+  <li><a href="#exercice-5-avancé" id="toc-exercice-5-avancé" class="nav-link" data-scroll-target="#exercice-5-avancé">Exercice 5 — Avancé</a></li>
   </ul></li>
-  <li><a href="#quiz" id="toc-quiz" class="nav-link" data-scroll-target="#quiz">🧠 Quiz</a>
+  <li><a href="#quiz" id="toc-quiz" class="nav-link" data-scroll-target="#quiz">Quiz</a>
   <ul class="collapse">
   <li><a href="#q1.-quelle-commande-affiche-toutes-les-colonnes-dune-table-clients" id="toc-q1.-quelle-commande-affiche-toutes-les-colonnes-dune-table-clients" class="nav-link" data-scroll-target="#q1.-quelle-commande-affiche-toutes-les-colonnes-dune-table-clients">❓ Q1. Quelle commande affiche toutes les colonnes d’une table <code>clients</code> ?</a></li>
   <li><a href="#q2.-quelle-est-la-différence-entre-where-et-having" id="toc-q2.-quelle-est-la-différence-entre-where-et-having" class="nav-link" data-scroll-target="#q2.-quelle-est-la-différence-entre-where-et-having">❓ Q2. Quelle est la différence entre <code>WHERE</code> et <code>HAVING</code> ?</a></li>
@@ -812,7 +776,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">🟦 Niveau 1 : Débutant</li><li class="breadcrumb-item"><a href="../../notebooks/beginner/06_intro_relational_databases.html">🗄️ Bases de Données</a></li><li class="breadcrumb-item"><a href="../../notebooks/beginner/07_sql_for_data_engineers.html">07 · SQL pour Data Engineers</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">🐘 SQL for Data Engineers</h1>
+<h1 class="title">SQL for Data Engineers</h1>
 </div>
 
 
@@ -832,12 +796,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Ce module couvre les <strong>fondamentaux et concepts avancés de SQL</strong>, avec une pratique directe via <strong>Python + DuckDB</strong>.</p>
 <hr>
 <section id="approche-de-ce-cours" class="level2">
-<h2 class="anchored" data-anchor-id="approche-de-ce-cours">⚙️ Approche de ce cours</h2>
+<h2 class="anchored" data-anchor-id="approche-de-ce-cours">Approche de ce cours</h2>
 <pre><code>┌─────────────────────────────────────────────────────────────────┐
-│                    🎯 FOCUS DU COURS                            │
+│                       FOCUS DU COURS                            │
 ├─────────────────────────────────────────────────────────────────┤
 │                                                                 │
-│   Ce cours utilise Python + DuckDB pour apprendre SQL          │
+│   Ce cours utilise Python + DuckDB pour apprendre SQL           │
 │                                                                 │
 │   ✅ SQL standard (compatible PostgreSQL, MySQL, etc.)          │
 │   ✅ Exécution directe dans Jupyter (pas de serveur)            │
@@ -851,7 +815,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 <section id="prérequis" class="level2">
-<h2 class="anchored" data-anchor-id="prérequis">📋 Prérequis</h2>
+<h2 class="anchored" data-anchor-id="prérequis">Prérequis</h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -876,25 +840,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 </section>
 <section id="objectifs-du-module" class="level2">
-<h2 class="anchored" data-anchor-id="objectifs-du-module">🎯 Objectifs du module</h2>
+<h2 class="anchored" data-anchor-id="objectifs-du-module">Objectifs du module</h2>
 <p>À la fin de ce notebook, tu seras capable de :</p>
 <ul>
-<li>✅ Écrire des requêtes <code>SELECT</code>, <code>WHERE</code>, <code>ORDER BY</code></li>
-<li>✅ Utiliser les fonctions d’agrégation (<code>COUNT</code>, <code>SUM</code>, <code>AVG</code>)</li>
-<li>✅ Maîtriser <code>GROUP BY</code> et <code>HAVING</code></li>
-<li>✅ Faire des jointures (<code>JOIN</code>, <code>LEFT JOIN</code>)</li>
-<li>✅ Utiliser les fonctions de date (<code>DATE_TRUNC</code>, <code>EXTRACT</code>)</li>
-<li>✅ Utiliser <code>CASE</code>, les CTEs et les Window Functions</li>
-<li>✅ <strong>Exécuter du SQL depuis Python avec DuckDB</strong></li>
+<li>Écrire des requêtes <code>SELECT</code>, <code>WHERE</code>, <code>ORDER BY</code></li>
+<li>Utiliser les fonctions d’agrégation (<code>COUNT</code>, <code>SUM</code>, <code>AVG</code>)</li>
+<li>Maîtriser <code>GROUP BY</code> et <code>HAVING</code></li>
+<li>Faire des jointures (<code>JOIN</code>, <code>LEFT JOIN</code>)</li>
+<li>Utiliser les fonctions de date (<code>DATE_TRUNC</code>, <code>EXTRACT</code>)</li>
+<li>Utiliser <code>CASE</code>, les CTEs et les Window Functions</li>
+<li><strong>Exécuter du SQL depuis Python avec DuckDB</strong></li>
 </ul>
 <hr>
 <blockquote class="blockquote">
 <p>💡 <strong>Ce notebook est interactif</strong> : tu peux exécuter les cellules de code directement !</p>
 </blockquote>
+<p><a href="https://colab.research.google.com/github/diakite-data/data-engineering-bootcamp/blob/main/notebooks/beginner/07_sql_for_data_engineers.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a></p>
+<blockquote class="blockquote">
+<p>💡 <strong>Conseil</strong> : Cliquez sur le badge ci-dessus pour exécuter ce notebook directement dans Google Colab (aucune installation requise).</p>
+</blockquote>
 <hr>
 </section>
 <section id="cest-quoi-sql" class="level2">
-<h2 class="anchored" data-anchor-id="cest-quoi-sql">🧠 C’est quoi SQL ?</h2>
+<h2 class="anchored" data-anchor-id="cest-quoi-sql">C’est quoi SQL ?</h2>
 <p><strong>SQL</strong> (Structured Query Language) est un <strong>langage de requêtes</strong> pour interagir avec des bases de données relationnelles.</p>
 <table class="caption-top table">
 <thead>
@@ -933,7 +901,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 <section id="pourquoi-cest-essentiel-pour-un-data-engineer" class="level2">
-<h2 class="anchored" data-anchor-id="pourquoi-cest-essentiel-pour-un-data-engineer">🧰 Pourquoi c’est essentiel pour un Data Engineer ?</h2>
+<h2 class="anchored" data-anchor-id="pourquoi-cest-essentiel-pour-un-data-engineer">Pourquoi c’est essentiel pour un Data Engineer ?</h2>
 <ul>
 <li>Interroger les <strong>data warehouses</strong> (BigQuery, Snowflake, Redshift…)</li>
 <li>Extraire / filtrer les données pour les pipelines</li>
@@ -943,16 +911,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 <section id="outils-en-ligne-pour-tester-du-sql" class="level2">
-<h2 class="anchored" data-anchor-id="outils-en-ligne-pour-tester-du-sql">🌐 Outils en ligne pour tester du SQL</h2>
+<h2 class="anchored" data-anchor-id="outils-en-ligne-pour-tester-du-sql">Outils en ligne pour tester du SQL</h2>
 <p>Avant de plonger dans Python + DuckDB, sache qu’il existe de nombreux <strong>outils en ligne gratuits</strong> pour tester des requêtes SQL sur différents SGBD. C’est utile pour :</p>
 <ul>
-<li>🧪 Tester rapidement une requête</li>
-<li>🔄 Vérifier la compatibilité entre SGBD</li>
-<li>📚 S’entraîner sans rien installer</li>
-<li>🤝 Partager des exemples avec des collègues</li>
+<li>Tester rapidement une requête</li>
+<li>Vérifier la compatibilité entre SGBD</li>
+<li>S’entraîner sans rien installer</li>
+<li>Partager des exemples avec des collègues</li>
 </ul>
 <section id="outils-recommandés" class="level3">
-<h3 class="anchored" data-anchor-id="outils-recommandés">🛠️ Outils recommandés</h3>
+<h3 class="anchored" data-anchor-id="outils-recommandés">Outils recommandés</h3>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -1131,13 +1099,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Exemple : SQL → DataFrame en 1 ligne</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> con.execute(<span class="st">"SELECT * FROM clients WHERE pays = 'France'"</span>).df()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <blockquote class="blockquote">
-<p>🎓 <strong>Les compétences SQL apprises ici sont directement applicables</strong> à PostgreSQL, BigQuery, Snowflake, Redshift, et tout autre SGBD en production.</p>
+<p><strong>Les compétences SQL apprises ici sont directement applicables</strong> à PostgreSQL, BigQuery, Snowflake, Redshift, et tout autre SGBD en production.</p>
 </blockquote>
 <hr>
 </section>
 </section>
 <section id="python-duckdb-sql-dans-ton-notebook" class="level2">
-<h2 class="anchored" data-anchor-id="python-duckdb-sql-dans-ton-notebook">🦆 Python + DuckDB — SQL dans ton notebook !</h2>
+<h2 class="anchored" data-anchor-id="python-duckdb-sql-dans-ton-notebook">Python + DuckDB — SQL dans ton notebook !</h2>
 <section id="quest-ce-que-duckdb" class="level3">
 <h3 class="anchored" data-anchor-id="quest-ce-que-duckdb">Qu’est-ce que DuckDB ?</h3>
 <p><strong>DuckDB</strong> est une base de données analytique <strong>embarquée</strong> (comme SQLite, mais optimisée pour l’analytics).</p>
@@ -1155,7 +1123,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 └─────────────────────────────────────────────────────────────┘</code></pre>
 </section>
 <section id="duckdb-vs-autres-bases" class="level3">
-<h3 class="anchored" data-anchor-id="duckdb-vs-autres-bases">📊 DuckDB vs autres bases</h3>
+<h3 class="anchored" data-anchor-id="duckdb-vs-autres-bases">DuckDB vs autres bases</h3>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 24%">
@@ -1204,16 +1172,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<div id="cell-5" class="cell">
+<div id="cell-6" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 📦 Installation de DuckDB</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Installation de DuckDB</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install duckdb <span class="op">--</span>quiet</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"✅ DuckDB installé !"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-6" class="cell">
+<div id="cell-7" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> duckdb</span>
@@ -1225,10 +1193,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Version : </span><span class="sc">{</span>duckdb<span class="sc">.</span>__version__<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-7" class="cell">
+<div id="cell-8" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 📊 Création des tables de démonstration</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Création des tables de démonstration</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Table clients</span></span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>con.execute(<span class="st">"""</span></span>
@@ -1277,14 +1245,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb8-47"><a href="#cb8-47" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"✅ Tables créées : clients (5 lignes), commandes (8 lignes)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-8" class="cell">
+<div id="cell-9" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 👀 Vérifier les données</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"📋 Table clients :"</span>)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérifier les données</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" Table clients :"</span>)</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(con.execute(<span class="st">"SELECT * FROM clients"</span>).fetchdf())</span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">📋 Table commandes :"</span>)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st"> Table commandes :"</span>)</span>
 <span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(con.execute(<span class="st">"SELECT * FROM commandes"</span>).fetchdf())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
@@ -1292,7 +1260,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 </section>
 <section id="cheatsheet-sql-commandes-essentielles" class="level2">
-<h2 class="anchored" data-anchor-id="cheatsheet-sql-commandes-essentielles">📋 Cheatsheet SQL — Commandes essentielles</h2>
+<h2 class="anchored" data-anchor-id="cheatsheet-sql-commandes-essentielles">Cheatsheet SQL — Commandes essentielles</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 26%">
@@ -1428,33 +1396,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 <section id="select-sélectionner-des-données" class="level2">
-<h2 class="anchored" data-anchor-id="select-sélectionner-des-données">🔍 1. SELECT — Sélectionner des données</h2>
+<h2 class="anchored" data-anchor-id="select-sélectionner-des-données">1. SELECT — Sélectionner des données</h2>
 <section id="syntaxe-de-base" class="level3">
 <h3 class="anchored" data-anchor-id="syntaxe-de-base">Syntaxe de base</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> colonne1, colonne2</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> <span class="kw">table</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> condition</span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> colonne;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="cell-11" class="cell">
-<details class="code-fold">
-<summary>Voir le code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 🔍 SELECT * — Toutes les colonnes</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"SELECT * FROM clients"</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>con.execute(query).fetchdf()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-</div>
 <div id="cell-12" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 🔍 SELECT colonnes spécifiques</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"SELECT nom, email, pays FROM clients"</span></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>con.execute(query).fetchdf()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># SELECT * — Toutes les colonnes</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"SELECT * FROM clients"</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>con.execute(query).fetchdf()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <div id="cell-13" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 🔍 WHERE — Filtrer les lignes</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># SELECT colonnes spécifiques</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"SELECT nom, email, pays FROM clients"</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>con.execute(query).fetchdf()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<div id="cell-14" class="cell">
+<details class="code-fold">
+<summary>Voir le code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># WHERE — Filtrer les lignes</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"""</span></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="st">SELECT nom, email, pays</span></span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="st">FROM clients</span></span>
@@ -1463,10 +1431,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>con.execute(query).fetchdf()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-14" class="cell">
+<div id="cell-15" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 🔍 ORDER BY + LIMIT</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ORDER BY + LIMIT</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"""</span></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="st">SELECT nom, montant, date_commande</span></span>
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="st">FROM commandes</span></span>
@@ -1474,7 +1442,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="st">ORDER BY montant DESC</span></span>
 <span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="st">LIMIT 3</span></span>
 <span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"🏆 Top 3 des commandes les plus chères :"</span>)</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" Top 3 des commandes les plus chères :"</span>)</span>
 <span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>con.execute(query).fetchdf()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
@@ -1482,19 +1450,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 </section>
 <section id="agrégations-count-sum-avg-min-max" class="level2">
-<h2 class="anchored" data-anchor-id="agrégations-count-sum-avg-min-max">📊 2. Agrégations — COUNT, SUM, AVG, MIN, MAX</h2>
-<div id="cell-16" class="cell">
+<h2 class="anchored" data-anchor-id="agrégations-count-sum-avg-min-max">2. Agrégations — COUNT, SUM, AVG, MIN, MAX</h2>
+<div id="cell-17" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 📊 COUNT — Compter les lignes</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># COUNT — Compter les lignes</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"SELECT COUNT(*) AS nb_clients FROM clients"</span></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>con.execute(query).fetchdf()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-17" class="cell">
+<div id="cell-18" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 📊 SUM, AVG, MIN, MAX</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># SUM, AVG, MIN, MAX</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"""</span></span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="st">SELECT </span></span>
 <span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="st">    COUNT(*) AS nb_commandes,</span></span>
@@ -1510,11 +1478,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 <section id="group-by-regrouper-les-données" class="level2">
-<h2 class="anchored" data-anchor-id="group-by-regrouper-les-données">📦 3. GROUP BY — Regrouper les données</h2>
-<div id="cell-19" class="cell">
+<h2 class="anchored" data-anchor-id="group-by-regrouper-les-données">3. GROUP BY — Regrouper les données</h2>
+<div id="cell-20" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 📦 GROUP BY — Nombre de clients par pays</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># GROUP BY — Nombre de clients par pays</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"""</span></span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="st">SELECT pays, COUNT(*) AS nb_clients</span></span>
 <span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="st">FROM clients</span></span>
@@ -1524,10 +1492,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>con.execute(query).fetchdf()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-20" class="cell">
+<div id="cell-21" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 📦 Total des achats par client</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Total des achats par client</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"""</span></span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="st">SELECT c.nom, SUM(cmd.montant) AS total_achats</span></span>
 <span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="st">FROM clients c</span></span>
@@ -1538,10 +1506,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>con.execute(query).fetchdf()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-21" class="cell">
+<div id="cell-22" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 📦 HAVING — Filtrer après agrégation</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># HAVING — Filtrer après agrégation</span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Clients ayant dépensé plus de 100€</span></span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"""</span></span>
 <span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="st">SELECT c.nom, SUM(cmd.montant) AS total_achats</span></span>
@@ -1558,7 +1526,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 <section id="join-combiner-les-tables" class="level2">
-<h2 class="anchored" data-anchor-id="join-combiner-les-tables">🔗 4. JOIN — Combiner les tables</h2>
+<h2 class="anchored" data-anchor-id="join-combiner-les-tables">4. JOIN — Combiner les tables</h2>
 <pre><code>┌──────────────────────────────────────────────────────────────────┐
 │ INNER JOIN (JOIN)         │ Seulement les correspondances      │
 │ A ∩ B                      │                                    │
@@ -1572,10 +1540,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 │ FULL OUTER JOIN           │ Tout A + Tout B                    │
 │ A ∪ B                      │                                    │
 └──────────────────────────────────────────────────────────────────┘</code></pre>
-<div id="cell-23" class="cell">
+<div id="cell-24" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 🔗 INNER JOIN — Clients avec leurs commandes</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># INNER JOIN — Clients avec leurs commandes</span></span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"""</span></span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="st">SELECT c.nom, cmd.produit, cmd.montant</span></span>
 <span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="st">FROM clients c</span></span>
@@ -1585,10 +1553,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>con.execute(query).fetchdf()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-24" class="cell">
+<div id="cell-25" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 🔗 LEFT JOIN — Tous les clients, même sans commande</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># LEFT JOIN — Tous les clients, même sans commande</span></span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"""</span></span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="st">SELECT c.nom, cmd.produit, cmd.montant</span></span>
 <span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="st">FROM clients c</span></span>
@@ -1599,10 +1567,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>con.execute(query).fetchdf()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-25" class="cell">
+<div id="cell-26" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 🔍 Trouver les clients sans commande</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Trouver les clients sans commande</span></span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"""</span></span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="st">SELECT c.nom, c.email</span></span>
 <span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="st">FROM clients c</span></span>
@@ -1616,7 +1584,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 <section id="fonctions-de-date" class="level2">
-<h2 class="anchored" data-anchor-id="fonctions-de-date">📅 5. Fonctions de date</h2>
+<h2 class="anchored" data-anchor-id="fonctions-de-date">5. Fonctions de date</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 32%">
@@ -1653,10 +1621,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<div id="cell-27" class="cell">
+<div id="cell-28" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 📅 Ventes par mois</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ventes par mois</span></span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"""</span></span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="st">SELECT </span></span>
 <span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="st">    DATE_TRUNC('month', date_commande) AS mois,</span></span>
@@ -1666,14 +1634,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a><span class="st">GROUP BY DATE_TRUNC('month', date_commande)</span></span>
 <span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a><span class="st">ORDER BY mois</span></span>
 <span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
-<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"📊 Ventes mensuelles :"</span>)</span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" Ventes mensuelles :"</span>)</span>
 <span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a>con.execute(query).fetchdf()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-28" class="cell">
+<div id="cell-29" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 📅 Commandes par jour de la semaine</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Commandes par jour de la semaine</span></span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"""</span></span>
 <span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="st">SELECT </span></span>
 <span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="st">    EXTRACT(DOW FROM date_commande) AS jour_num,</span></span>
@@ -1697,11 +1665,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 <section id="case-conditions-dans-les-requêtes" class="level2">
-<h2 class="anchored" data-anchor-id="case-conditions-dans-les-requêtes">🔀 6. CASE — Conditions dans les requêtes</h2>
-<div id="cell-30" class="cell">
+<h2 class="anchored" data-anchor-id="case-conditions-dans-les-requêtes">6. CASE — Conditions dans les requêtes</h2>
+<div id="cell-31" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 🔀 CASE — Catégoriser les clients</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># CASE — Catégoriser les clients</span></span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"""</span></span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="st">SELECT </span></span>
 <span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="st">    c.nom,</span></span>
@@ -1722,16 +1690,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 <section id="cte-common-table-expression-requêtes-lisibles" class="level2">
-<h2 class="anchored" data-anchor-id="cte-common-table-expression-requêtes-lisibles">📦 7. CTE (Common Table Expression) — Requêtes lisibles</h2>
+<h2 class="anchored" data-anchor-id="cte-common-table-expression-requêtes-lisibles">7. CTE (Common Table Expression) — Requêtes lisibles</h2>
 <p>Les <strong>CTEs</strong> permettent de créer des “tables temporaires” pour clarifier les requêtes complexes.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="kw">WITH</span> nom_cte <span class="kw">AS</span> (</span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">SELECT</span> <span class="op">..</span>.</span>
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> nom_cte;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="cell-32" class="cell">
+<div id="cell-33" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 📦 CTE — Calcul intermédiaire réutilisable</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># CTE — Calcul intermédiaire réutilisable</span></span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"""</span></span>
 <span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="st">WITH total_par_client AS (</span></span>
 <span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="st">    SELECT </span></span>
@@ -1757,7 +1725,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 <section id="window-functions-calculs-avancés" class="level2">
-<h2 class="anchored" data-anchor-id="window-functions-calculs-avancés">🪟 8. Window Functions — Calculs avancés</h2>
+<h2 class="anchored" data-anchor-id="window-functions-calculs-avancés">8. Window Functions — Calculs avancés</h2>
 <p>Les <strong>Window Functions</strong> permettent de faire des calculs sur un groupe de lignes <strong>sans les regrouper</strong>.</p>
 <table class="caption-top table">
 <thead>
@@ -1793,10 +1761,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<div id="cell-34" class="cell">
+<div id="cell-35" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 🏆 RANK — Classement des clients par total d'achats</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># RANK — Classement des clients par total d'achats</span></span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"""</span></span>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="st">SELECT </span></span>
 <span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="st">    c.nom,</span></span>
@@ -1809,10 +1777,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a>con.execute(query).fetchdf()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-35" class="cell">
+<div id="cell-36" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 📈 SUM OVER — Total cumulatif</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># SUM OVER — Total cumulatif</span></span>
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"""</span></span>
 <span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="st">SELECT </span></span>
 <span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="st">    date_commande,</span></span>
@@ -1821,14 +1789,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a><span class="st">FROM commandes</span></span>
 <span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a><span class="st">ORDER BY date_commande</span></span>
 <span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
-<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"📈 Évolution cumulative des ventes :"</span>)</span>
+<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" Évolution cumulative des ventes :"</span>)</span>
 <span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a>con.execute(query).fetchdf()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-36" class="cell">
+<div id="cell-37" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 📊 LAG — Comparer avec la période précédente</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># LAG — Comparer avec la période précédente</span></span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"""</span></span>
 <span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="st">WITH mensuel AS (</span></span>
 <span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="st">    SELECT </span></span>
@@ -1845,21 +1813,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb31-15"><a href="#cb31-15" aria-hidden="true" tabindex="-1"></a><span class="st">FROM mensuel</span></span>
 <span id="cb31-16"><a href="#cb31-16" aria-hidden="true" tabindex="-1"></a><span class="st">ORDER BY mois</span></span>
 <span id="cb31-17"><a href="#cb31-17" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
-<span id="cb31-18"><a href="#cb31-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"📊 Évolution mensuelle :"</span>)</span>
+<span id="cb31-18"><a href="#cb31-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" Évolution mensuelle :"</span>)</span>
 <span id="cb31-19"><a href="#cb31-19" aria-hidden="true" tabindex="-1"></a>con.execute(query).fetchdf()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <hr>
 </section>
 <section id="intégration-avec-pandas" class="level2">
-<h2 class="anchored" data-anchor-id="intégration-avec-pandas">🐼 9. Intégration avec Pandas</h2>
+<h2 class="anchored" data-anchor-id="intégration-avec-pandas">9. Intégration avec Pandas</h2>
 <p>DuckDB s’intègre parfaitement avec Pandas !</p>
-<div id="cell-38" class="cell">
+<div id="cell-39" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 🐼 Récupérer le résultat en DataFrame Pandas</span></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Récupérer le résultat en DataFrame Pandas</span></span>
 <span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"""</span></span>
 <span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a><span class="st">SELECT c.nom, c.pays, SUM(cmd.montant) AS total</span></span>
 <span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a><span class="st">FROM clients c</span></span>
@@ -1873,10 +1841,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb32-14"><a href="#cb32-14" aria-hidden="true" tabindex="-1"></a>df</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-39" class="cell">
+<div id="cell-40" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 🦆 Requêter directement un DataFrame Pandas avec SQL !</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Requêter directement un DataFrame Pandas avec SQL !</span></span>
 <span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>df_exemple <span class="op">=</span> pd.DataFrame({</span>
 <span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'produit'</span>: [<span class="st">'A'</span>, <span class="st">'B'</span>, <span class="st">'C'</span>, <span class="st">'A'</span>, <span class="st">'B'</span>],</span>
 <span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'ventes'</span>: [<span class="dv">100</span>, <span class="dv">200</span>, <span class="dv">150</span>, <span class="dv">120</span>, <span class="dv">180</span>]</span>
@@ -1890,14 +1858,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb33-12"><a href="#cb33-12" aria-hidden="true" tabindex="-1"></a><span class="st">    ORDER BY total DESC</span></span>
 <span id="cb33-13"><a href="#cb33-13" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span>).fetchdf()</span>
 <span id="cb33-14"><a href="#cb33-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-15"><a href="#cb33-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"🔥 SQL directement sur un DataFrame Pandas :"</span>)</span>
+<span id="cb33-15"><a href="#cb33-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"SQL directement sur un DataFrame Pandas :"</span>)</span>
 <span id="cb33-16"><a href="#cb33-16" aria-hidden="true" tabindex="-1"></a>result</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-40" class="cell">
+<div id="cell-41" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 📁 DuckDB peut aussi lire directement des fichiers CSV/Parquet</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># DuckDB peut aussi lire directement des fichiers CSV/Parquet</span></span>
 <span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Exemple (si tu as un fichier) :</span></span>
 <span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="co"># duckdb.query("SELECT * FROM 'mon_fichier.csv' LIMIT 10")</span></span>
 <span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a><span class="co"># duckdb.query("SELECT * FROM 'data.parquet' WHERE date &gt; '2024-01-01'")</span></span>
@@ -1911,11 +1879,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 <section id="exercices-pratiques" class="level2">
-<h2 class="anchored" data-anchor-id="exercices-pratiques">🎯 10. Exercices pratiques</h2>
+<h2 class="anchored" data-anchor-id="exercices-pratiques">10. Exercices pratiques</h2>
 <p>Essaie de résoudre ces exercices dans les cellules de code ci-dessous !</p>
 <hr>
 <section id="exercice-1-facile" class="level3">
-<h3 class="anchored" data-anchor-id="exercice-1-facile">🏋️ Exercice 1 — Facile</h3>
+<h3 class="anchored" data-anchor-id="exercice-1-facile">Exercice 1 — Facile</h3>
 <p>Afficher tous les clients de France, triés par nom.</p>
 <details>
 <summary>
@@ -1926,7 +1894,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 <section id="exercice-2-facile" class="level3">
-<h3 class="anchored" data-anchor-id="exercice-2-facile">🏋️ Exercice 2 — Facile</h3>
+<h3 class="anchored" data-anchor-id="exercice-2-facile">Exercice 2 — Facile</h3>
 <p>Calculer le montant moyen des commandes.</p>
 <details>
 <summary>
@@ -1937,7 +1905,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 <section id="exercice-3-intermédiaire" class="level3">
-<h3 class="anchored" data-anchor-id="exercice-3-intermédiaire">🏋️ Exercice 3 — Intermédiaire</h3>
+<h3 class="anchored" data-anchor-id="exercice-3-intermédiaire">Exercice 3 — Intermédiaire</h3>
 <p>Afficher le total des achats par client, y compris ceux sans commande (afficher 0).</p>
 <details>
 <summary>
@@ -1952,7 +1920,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 <section id="exercice-4-intermédiaire" class="level3">
-<h3 class="anchored" data-anchor-id="exercice-4-intermédiaire">🏋️ Exercice 4 — Intermédiaire</h3>
+<h3 class="anchored" data-anchor-id="exercice-4-intermédiaire">Exercice 4 — Intermédiaire</h3>
 <p>Calculer les ventes par mois avec <code>DATE_TRUNC</code>.</p>
 <details>
 <summary>
@@ -1966,7 +1934,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 <section id="exercice-5-avancé" class="level3">
-<h3 class="anchored" data-anchor-id="exercice-5-avancé">🏋️ Exercice 5 — Avancé</h3>
+<h3 class="anchored" data-anchor-id="exercice-5-avancé">Exercice 5 — Avancé</h3>
 <p>Pour chaque client, afficher sa dernière commande (produit et date). <em>Indice : ROW_NUMBER()</em></p>
 <details>
 <summary>
@@ -1980,7 +1948,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> nom, produit, date_commande <span class="kw">FROM</span> derniere <span class="kw">WHERE</span> rn <span class="op">=</span> <span class="dv">1</span>;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-<div id="cell-42" class="cell">
+<div id="cell-43" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ✏️ Espace pour tes exercices</span></span>
@@ -1995,7 +1963,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 </section>
 <section id="quiz" class="level2">
-<h2 class="anchored" data-anchor-id="quiz">🧠 Quiz</h2>
+<h2 class="anchored" data-anchor-id="quiz">Quiz</h2>
 <hr>
 <section id="q1.-quelle-commande-affiche-toutes-les-colonnes-dune-table-clients" class="level3">
 <h3 class="anchored" data-anchor-id="q1.-quelle-commande-affiche-toutes-les-colonnes-dune-table-clients">❓ Q1. Quelle commande affiche toutes les colonnes d’une table <code>clients</code> ?</h3>
@@ -2142,7 +2110,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="prochaine-étape" class="level2">
 <h2 class="anchored" data-anchor-id="prochaine-étape">➡️ Prochaine étape</h2>
 <p>Tu maîtrises maintenant SQL et sais l’exécuter depuis Python ! Découvrons les concepts du <strong>Big Data</strong> et les bases <strong>NoSQL</strong>.</p>
-<p>👉 <strong>Module suivant : <code>08_intro_big_data_nosql.ipynb</code></strong> — Big Data, traitement distribué et NoSQL</p>
+<p>👉 <strong>Module suivant : <code>08_intro_big_data_nosql</code></strong> — Big Data, traitement distribué et NoSQL</p>
 <hr>
 <p>🎉 <strong>Félicitations !</strong> Tu as terminé le module SQL pour Data Engineers.</p>
 
@@ -2173,7 +2141,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 <div id="pdf-button" onclick="downloadPDF()">
-  📄 Télécharger ce module en PDF
+  📄 Télécharger la version PDF
 </div>
 
 <script>

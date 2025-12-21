@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>🐻‍❄️ Polars pour Data Engineers – Bootcamp Data Engineering</title>
+<title>Polars pour Data Engineers – Bootcamp Data Engineering</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -77,9 +77,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-fc8d3d93f0a84b7619e1f8ff6eb63d42.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-a5e5c9297d81242f794464007003a45f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-7ce12bcd0277d468432a98ebc2064ff0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-a5e5c9297d81242f794464007003a45f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-1ded37139ab960446759ac96e383a6c7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-0c5e4731d53392a4fe54074a744a0e14.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-1ded37139ab960446759ac96e383a6c7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": true,
@@ -114,11 +114,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="keywords" content="data engineering, spark, kafka, python, kubernetes, lakehouse, delta lake, bootcamp">
 
 
-<meta property="og:title" content="🐻‍❄️ Polars pour Data Engineers – Bootcamp Data Engineering">
+<meta property="og:title" content="Polars pour Data Engineers – Bootcamp Data Engineering">
 <meta property="og:description" content="Programme complet Data Engineering — Du débutant au Senior Engineer">
 <meta property="og:site_name" content="Bootcamp Data Engineering">
 <meta property="og:locale" content="fr_FR">
-<meta name="twitter:title" content="🐻‍❄️ Polars pour Data Engineers – Bootcamp Data Engineering">
+<meta name="twitter:title" content="Polars pour Data Engineers – Bootcamp Data Engineering">
 <meta name="twitter:description" content="Programme complet Data Engineering — Du débutant au Senior Engineer">
 <meta name="twitter:creator" content="@diakite_data">
 <meta name="twitter:site" content="@diakite_data">
@@ -703,42 +703,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <span class="sidebar-item-text sidebar-link text-start">
  <span class="menu-text">🟥 Niveau 3 : Avancé</span></span>
   </li>
-        <li class="px-0"><hr class="sidebar-divider hi "></li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false">
- <span class="menu-text">📚 Ressources</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../resources/setup.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">🔧 Setup Environnement</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../resources/documentation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">📖 Documentation</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../resources/faq.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">❓ FAQ</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../resources/links.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">🔗 Liens Utiles</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
     </ul>
     </div>
 </nav>
@@ -749,37 +713,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">📑 Sommaire</h2>
    
   <ul>
-  <li><a href="#prérequis" id="toc-prérequis" class="nav-link active" data-scroll-target="#prérequis">📋 Prérequis</a></li>
-  <li><a href="#objectifs-du-module" id="toc-objectifs-du-module" class="nav-link" data-scroll-target="#objectifs-du-module">🎯 Objectifs du module</a></li>
-  <li><a href="#polars-vs-pandas-pourquoi-changer" id="toc-polars-vs-pandas-pourquoi-changer" class="nav-link" data-scroll-target="#polars-vs-pandas-pourquoi-changer">🚀 1. Polars vs Pandas : Pourquoi changer ?</a>
+  <li><a href="#prérequis" id="toc-prérequis" class="nav-link active" data-scroll-target="#prérequis">Prérequis</a></li>
+  <li><a href="#objectifs-du-module" id="toc-objectifs-du-module" class="nav-link" data-scroll-target="#objectifs-du-module">Objectifs du module</a></li>
+  <li><a href="#polars-vs-pandas-pourquoi-changer" id="toc-polars-vs-pandas-pourquoi-changer" class="nav-link" data-scroll-target="#polars-vs-pandas-pourquoi-changer">1. Polars vs Pandas : Pourquoi changer ?</a>
   <ul class="collapse">
   <li><a href="#les-limitations-de-pandas" id="toc-les-limitations-de-pandas" class="nav-link" data-scroll-target="#les-limitations-de-pandas">1.1 Les limitations de Pandas</a></li>
   <li><a href="#les-forces-de-polars" id="toc-les-forces-de-polars" class="nav-link" data-scroll-target="#les-forces-de-polars">1.2 Les forces de Polars</a></li>
   <li><a href="#benchmark-concret" id="toc-benchmark-concret" class="nav-link" data-scroll-target="#benchmark-concret">1.3 Benchmark concret</a></li>
   </ul></li>
-  <li><a href="#comprendre-larchitecture-de-polars" id="toc-comprendre-larchitecture-de-polars" class="nav-link" data-scroll-target="#comprendre-larchitecture-de-polars">🏗️ 2. Comprendre l’architecture de Polars</a>
+  <li><a href="#comprendre-larchitecture-de-polars" id="toc-comprendre-larchitecture-de-polars" class="nav-link" data-scroll-target="#comprendre-larchitecture-de-polars">2. Comprendre l’architecture de Polars</a>
   <ul class="collapse">
   <li><a href="#columnar-vs-row-based" id="toc-columnar-vs-row-based" class="nav-link" data-scroll-target="#columnar-vs-row-based">2.1 Columnar vs Row-based</a></li>
   <li><a href="#apache-arrow-le-format-sous-jacent" id="toc-apache-arrow-le-format-sous-jacent" class="nav-link" data-scroll-target="#apache-arrow-le-format-sous-jacent">2.2 Apache Arrow : le format sous-jacent</a></li>
   <li><a href="#eager-vs-lazy-execution" id="toc-eager-vs-lazy-execution" class="nav-link" data-scroll-target="#eager-vs-lazy-execution">2.3 Eager vs Lazy execution</a></li>
   <li><a href="#query-optimizer" id="toc-query-optimizer" class="nav-link" data-scroll-target="#query-optimizer">2.4 Query Optimizer</a></li>
   </ul></li>
-  <li><a href="#installation-configuration" id="toc-installation-configuration" class="nav-link" data-scroll-target="#installation-configuration">💻 3. Installation &amp; Configuration</a>
+  <li><a href="#installation-configuration" id="toc-installation-configuration" class="nav-link" data-scroll-target="#installation-configuration">3. Installation &amp; Configuration</a>
   <ul class="collapse">
   <li><a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation">Installation</a></li>
   <li><a href="#vérification" id="toc-vérification" class="nav-link" data-scroll-target="#vérification">Vérification</a></li>
   </ul></li>
-  <li><a href="#charger-exporter-des-données" id="toc-charger-exporter-des-données" class="nav-link" data-scroll-target="#charger-exporter-des-données">📂 4. Charger &amp; Exporter des données</a>
+  <li><a href="#charger-exporter-des-données" id="toc-charger-exporter-des-données" class="nav-link" data-scroll-target="#charger-exporter-des-données">4. Charger &amp; Exporter des données</a>
   <ul class="collapse">
   <li><a href="#formats-supportés" id="toc-formats-supportés" class="nav-link" data-scroll-target="#formats-supportés">4.1 Formats supportés</a></li>
   <li><a href="#lecture-eager-vs-lazy" id="toc-lecture-eager-vs-lazy" class="nav-link" data-scroll-target="#lecture-eager-vs-lazy">4.2 Lecture Eager vs Lazy</a></li>
   </ul></li>
-  <li><a href="#expressions-polars-le-cœur-du-moteur" id="toc-expressions-polars-le-cœur-du-moteur" class="nav-link" data-scroll-target="#expressions-polars-le-cœur-du-moteur">🔥 5. Expressions Polars — Le cœur du moteur</a>
+  <li><a href="#expressions-polars-le-cœur-du-moteur" id="toc-expressions-polars-le-cœur-du-moteur" class="nav-link" data-scroll-target="#expressions-polars-le-cœur-du-moteur">5. Expressions Polars — Le cœur du moteur</a>
   <ul class="collapse">
   <li><a href="#philosophie-tout-est-expression" id="toc-philosophie-tout-est-expression" class="nav-link" data-scroll-target="#philosophie-tout-est-expression">5.1 Philosophie : tout est expression</a></li>
   <li><a href="#expressions-de-base" id="toc-expressions-de-base" class="nav-link" data-scroll-target="#expressions-de-base">5.2 Expressions de base</a></li>
   </ul></li>
-  <li><a href="#manipulations-de-données-essentielles" id="toc-manipulations-de-données-essentielles" class="nav-link" data-scroll-target="#manipulations-de-données-essentielles">🛠️ 6. Manipulations de données essentielles</a>
+  <li><a href="#manipulations-de-données-essentielles" id="toc-manipulations-de-données-essentielles" class="nav-link" data-scroll-target="#manipulations-de-données-essentielles">6. Manipulations de données essentielles</a>
   <ul class="collapse">
   <li><a href="#sélection-de-colonnes" id="toc-sélection-de-colonnes" class="nav-link" data-scroll-target="#sélection-de-colonnes">6.1 Sélection de colonnes</a></li>
   <li><a href="#filtrage" id="toc-filtrage" class="nav-link" data-scroll-target="#filtrage">6.2 Filtrage</a></li>
@@ -789,27 +753,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#joins" id="toc-joins" class="nav-link" data-scroll-target="#joins">6.6 Joins</a></li>
   <li><a href="#dates-et-timestamps" id="toc-dates-et-timestamps" class="nav-link" data-scroll-target="#dates-et-timestamps">6.7 Dates et timestamps</a></li>
   </ul></li>
-  <li><a href="#lazy-execution-le-game-changer" id="toc-lazy-execution-le-game-changer" class="nav-link" data-scroll-target="#lazy-execution-le-game-changer">🚀 7. Lazy Execution — Le Game Changer</a>
+  <li><a href="#lazy-execution-le-game-changer" id="toc-lazy-execution-le-game-changer" class="nav-link" data-scroll-target="#lazy-execution-le-game-changer">7. Lazy Execution — Le Game Changer</a>
   <ul class="collapse">
   <li><a href="#créer-un-lazyframe" id="toc-créer-un-lazyframe" class="nav-link" data-scroll-target="#créer-un-lazyframe">7.1 Créer un LazyFrame</a></li>
   <li><a href="#construire-le-pipeline" id="toc-construire-le-pipeline" class="nav-link" data-scroll-target="#construire-le-pipeline">7.2 Construire le pipeline</a></li>
   <li><a href="#exécuter-avec-.collect" id="toc-exécuter-avec-.collect" class="nav-link" data-scroll-target="#exécuter-avec-.collect">7.3 Exécuter avec .collect()</a></li>
   <li><a href="#voir-le-plan-dexécution" id="toc-voir-le-plan-dexécution" class="nav-link" data-scroll-target="#voir-le-plan-dexécution">7.4 Voir le plan d’exécution</a></li>
-  <li><a href="#streaming-pour-fichiers-massifs" id="toc-streaming-pour-fichiers-massifs" class="nav-link" data-scroll-target="#streaming-pour-fichiers-massifs">7.5 Streaming pour fichiers massifs</a></li>
   <li><a href="#schéma-pipeline-lazy" id="toc-schéma-pipeline-lazy" class="nav-link" data-scroll-target="#schéma-pipeline-lazy">🖼️ Schéma : Pipeline Lazy</a></li>
   </ul></li>
-  <li><a href="#migration-pandas-polars" id="toc-migration-pandas-polars" class="nav-link" data-scroll-target="#migration-pandas-polars">🔄 8. Migration Pandas → Polars</a>
+  <li><a href="#migration-pandas-polars" id="toc-migration-pandas-polars" class="nav-link" data-scroll-target="#migration-pandas-polars">8. Migration Pandas → Polars</a>
   <ul class="collapse">
   <li><a href="#tableau-de-correspondance" id="toc-tableau-de-correspondance" class="nav-link" data-scroll-target="#tableau-de-correspondance">8.1 Tableau de correspondance</a></li>
   <li><a href="#interopérabilité" id="toc-interopérabilité" class="nav-link" data-scroll-target="#interopérabilité">8.2 Interopérabilité</a></li>
   <li><a href="#différences-clés-à-retenir" id="toc-différences-clés-à-retenir" class="nav-link" data-scroll-target="#différences-clés-à-retenir">8.3 Différences clés à retenir</a></li>
   </ul></li>
-  <li><a href="#bonnes-pratiques-erreurs-fréquentes" id="toc-bonnes-pratiques-erreurs-fréquentes" class="nav-link" data-scroll-target="#bonnes-pratiques-erreurs-fréquentes">⚠️ 9. Bonnes pratiques &amp; Erreurs fréquentes</a>
+  <li><a href="#bonnes-pratiques-erreurs-fréquentes" id="toc-bonnes-pratiques-erreurs-fréquentes" class="nav-link" data-scroll-target="#bonnes-pratiques-erreurs-fréquentes">9. Bonnes pratiques &amp; Erreurs fréquentes</a>
   <ul class="collapse">
   <li><a href="#erreurs-fréquentes" id="toc-erreurs-fréquentes" class="nav-link" data-scroll-target="#erreurs-fréquentes">❌ Erreurs fréquentes</a></li>
   <li><a href="#bonnes-pratiques" id="toc-bonnes-pratiques" class="nav-link" data-scroll-target="#bonnes-pratiques">✅ Bonnes pratiques</a></li>
   </ul></li>
-  <li><a href="#quiz-de-fin-de-module" id="toc-quiz-de-fin-de-module" class="nav-link" data-scroll-target="#quiz-de-fin-de-module">🧪 Quiz de fin de module</a>
+  <li><a href="#quiz-de-fin-de-module" id="toc-quiz-de-fin-de-module" class="nav-link" data-scroll-target="#quiz-de-fin-de-module">Quiz de fin de module</a>
   <ul class="collapse">
   <li><a href="#q1.-quel-est-le-principal-avantage-de-larchitecture-columnar-de-polars" id="toc-q1.-quel-est-le-principal-avantage-de-larchitecture-columnar-de-polars" class="nav-link" data-scroll-target="#q1.-quel-est-le-principal-avantage-de-larchitecture-columnar-de-polars">❓ Q1. Quel est le principal avantage de l’architecture columnar de Polars ?</a></li>
   <li><a href="#q2.-quelle-est-la-différence-entre-pl.read_csv-et-pl.scan_csv" id="toc-q2.-quelle-est-la-différence-entre-pl.read_csv-et-pl.scan_csv" class="nav-link" data-scroll-target="#q2.-quelle-est-la-différence-entre-pl.read_csv-et-pl.scan_csv">❓ Q2. Quelle est la différence entre <code>pl.read_csv()</code> et <code>pl.scan_csv()</code> ?</a></li>
@@ -820,11 +783,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#q7.-quel-format-de-fichier-est-recommandé-en-production-avec-polars" id="toc-q7.-quel-format-de-fichier-est-recommandé-en-production-avec-polars" class="nav-link" data-scroll-target="#q7.-quel-format-de-fichier-est-recommandé-en-production-avec-polars">❓ Q7. Quel format de fichier est recommandé en production avec Polars ?</a></li>
   <li><a href="#q8.-comment-voir-le-plan-dexécution-optimisé-dun-lazyframe" id="toc-q8.-comment-voir-le-plan-dexécution-optimisé-dun-lazyframe" class="nav-link" data-scroll-target="#q8.-comment-voir-le-plan-dexécution-optimisé-dun-lazyframe">❓ Q8. Comment voir le plan d’exécution optimisé d’un LazyFrame ?</a></li>
   </ul></li>
-  <li><a href="#mini-projet-pipeline-etl-polars" id="toc-mini-projet-pipeline-etl-polars" class="nav-link" data-scroll-target="#mini-projet-pipeline-etl-polars">🚀 Mini-projet : Pipeline ETL Polars</a>
+  <li><a href="#mini-projet-pipeline-etl-polars" id="toc-mini-projet-pipeline-etl-polars" class="nav-link" data-scroll-target="#mini-projet-pipeline-etl-polars">Mini-projet : Pipeline ETL Polars</a>
   <ul class="collapse">
-  <li><a href="#objectif" id="toc-objectif" class="nav-link" data-scroll-target="#objectif">🎯 Objectif</a></li>
-  <li><a href="#architecture" id="toc-architecture" class="nav-link" data-scroll-target="#architecture">🏗️ Architecture</a></li>
-  <li><a href="#structure-projet" id="toc-structure-projet" class="nav-link" data-scroll-target="#structure-projet">📁 Structure projet</a></li>
+  <li><a href="#objectif" id="toc-objectif" class="nav-link" data-scroll-target="#objectif">Objectif</a></li>
+  <li><a href="#architecture" id="toc-architecture" class="nav-link" data-scroll-target="#architecture">Architecture</a></li>
+  <li><a href="#structure-projet" id="toc-structure-projet" class="nav-link" data-scroll-target="#structure-projet">Structure projet</a></li>
   </ul></li>
   <li><a href="#ressources-pour-aller-plus-loin" id="toc-ressources-pour-aller-plus-loin" class="nav-link" data-scroll-target="#ressources-pour-aller-plus-loin">📚 Ressources pour aller plus loin</a>
   <ul class="collapse">
@@ -842,7 +805,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">🟩 Niveau 2 : Intermédiaire</li><li class="breadcrumb-item"><a href="../../notebooks/intermediate/17_polars_for_data_engineering.html">🚀 High Performance Python</a></li><li class="breadcrumb-item"><a href="../../notebooks/intermediate/17_polars_for_data_engineering.html">17 · Polars pour Data Engineering</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">🐻‍❄️ Polars pour Data Engineers</h1>
+<h1 class="title">Polars pour Data Engineers</h1>
 </div>
 
 
@@ -862,7 +825,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Bienvenue dans ce module où tu vas découvrir <strong>Polars</strong>, la bibliothèque DataFrame ultra-rapide qui révolutionne le traitement de données en Python. Tu apprendras pourquoi Polars surpasse Pandas, comment exploiter son moteur d’exécution lazy, et comment construire des pipelines ETL performants !</p>
 <hr>
 <section id="prérequis" class="level2">
-<h2 class="anchored" data-anchor-id="prérequis">📋 Prérequis</h2>
+<h2 class="anchored" data-anchor-id="prérequis">Prérequis</h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -887,7 +850,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 </section>
 <section id="objectifs-du-module" class="level2">
-<h2 class="anchored" data-anchor-id="objectifs-du-module">🎯 Objectifs du module</h2>
+<h2 class="anchored" data-anchor-id="objectifs-du-module">Objectifs du module</h2>
 <p>À la fin de ce module, tu seras capable de :</p>
 <ul>
 <li>Comprendre pourquoi Polars est <strong>5-100x plus rapide</strong> que Pandas</li>
@@ -897,10 +860,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Migrer du code Pandas vers Polars</li>
 <li>Construire des pipelines ETL performants en production</li>
 </ul>
+<p><a href="https://colab.research.google.com/github/diakite-data/data-engineering-bootcamp/blob/main/notebooks/intermediate/17_polars_for_data_engineering.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a></p>
+<blockquote class="blockquote">
+<p>💡 <strong>Conseil</strong> : Cliquez sur le badge ci-dessus pour exécuter ce notebook directement dans Google Colab (aucune installation requise).</p>
+</blockquote>
 <hr>
 </section>
 <section id="polars-vs-pandas-pourquoi-changer" class="level2">
-<h2 class="anchored" data-anchor-id="polars-vs-pandas-pourquoi-changer">🚀 1. Polars vs Pandas : Pourquoi changer ?</h2>
+<h2 class="anchored" data-anchor-id="polars-vs-pandas-pourquoi-changer">1. Polars vs Pandas : Pourquoi changer ?</h2>
 <p>Avant de plonger dans Polars, comprenons <strong>pourquoi</strong> cette bibliothèque existe et ce qu’elle apporte.</p>
 <section id="les-limitations-de-pandas" class="level3">
 <h3 class="anchored" data-anchor-id="les-limitations-de-pandas">1.1 Les limitations de Pandas</h3>
@@ -1109,7 +1076,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 </section>
 <section id="comprendre-larchitecture-de-polars" class="level2">
-<h2 class="anchored" data-anchor-id="comprendre-larchitecture-de-polars">🏗️ 2. Comprendre l’architecture de Polars</h2>
+<h2 class="anchored" data-anchor-id="comprendre-larchitecture-de-polars">2. Comprendre l’architecture de Polars</h2>
 <p>Pour bien utiliser Polars, il faut comprendre <strong>pourquoi</strong> il est si rapide.</p>
 <section id="columnar-vs-row-based" class="level3">
 <h3 class="anchored" data-anchor-id="columnar-vs-row-based">2.1 Columnar vs Row-based</h3>
@@ -1265,7 +1232,7 @@ filter(amount &gt; 100)             with_columns(...)
 </section>
 </section>
 <section id="installation-configuration" class="level2">
-<h2 class="anchored" data-anchor-id="installation-configuration">💻 3. Installation &amp; Configuration</h2>
+<h2 class="anchored" data-anchor-id="installation-configuration">3. Installation &amp; Configuration</h2>
 <section id="installation" class="level3">
 <h3 class="anchored" data-anchor-id="installation">Installation</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Installation de base</span></span>
@@ -1299,7 +1266,7 @@ filter(amount &gt; 100)             with_columns(...)
 </section>
 </section>
 <section id="charger-exporter-des-données" class="level2">
-<h2 class="anchored" data-anchor-id="charger-exporter-des-données">📂 4. Charger &amp; Exporter des données</h2>
+<h2 class="anchored" data-anchor-id="charger-exporter-des-données">4. Charger &amp; Exporter des données</h2>
 <section id="formats-supportés" class="level3">
 <h3 class="anchored" data-anchor-id="formats-supportés">4.1 Formats supportés</h3>
 <table class="caption-top table">
@@ -1427,9 +1394,9 @@ filter(amount &gt; 100)             with_columns(...)
 </section>
 </section>
 <section id="expressions-polars-le-cœur-du-moteur" class="level2">
-<h2 class="anchored" data-anchor-id="expressions-polars-le-cœur-du-moteur">🔥 5. Expressions Polars — Le cœur du moteur</h2>
+<h2 class="anchored" data-anchor-id="expressions-polars-le-cœur-du-moteur">5. Expressions Polars — Le cœur du moteur</h2>
 <blockquote class="blockquote">
-<p>🧠 <strong>Les expressions sont ce qui rend Polars si puissant.</strong> C’est un changement de paradigme par rapport à Pandas.</p>
+<p><strong>Les expressions sont ce qui rend Polars si puissant.</strong> C’est un changement de paradigme par rapport à Pandas.</p>
 </blockquote>
 <section id="philosophie-tout-est-expression" class="level3">
 <h3 class="anchored" data-anchor-id="philosophie-tout-est-expression">5.1 Philosophie : tout est expression</h3>
@@ -1552,7 +1519,7 @@ filter(amount &gt; 100)             with_columns(...)
 </section>
 </section>
 <section id="manipulations-de-données-essentielles" class="level2">
-<h2 class="anchored" data-anchor-id="manipulations-de-données-essentielles">🛠️ 6. Manipulations de données essentielles</h2>
+<h2 class="anchored" data-anchor-id="manipulations-de-données-essentielles">6. Manipulations de données essentielles</h2>
 <section id="sélection-de-colonnes" class="level3">
 <h3 class="anchored" data-anchor-id="sélection-de-colonnes">6.1 Sélection de colonnes</h3>
 <div id="select" class="cell">
@@ -1771,7 +1738,7 @@ filter(amount &gt; 100)             with_columns(...)
 </section>
 </section>
 <section id="lazy-execution-le-game-changer" class="level2">
-<h2 class="anchored" data-anchor-id="lazy-execution-le-game-changer">🚀 7. Lazy Execution — Le Game Changer</h2>
+<h2 class="anchored" data-anchor-id="lazy-execution-le-game-changer">7. Lazy Execution — Le Game Changer</h2>
 <blockquote class="blockquote">
 <p>🎯 <strong>C’est ce qui rend Polars adapté à la production et aux gros volumes.</strong></p>
 </blockquote>
@@ -1856,26 +1823,6 @@ filter(amount &gt; 100)             with_columns(...)
 </details>
 </div>
 </section>
-<section id="streaming-pour-fichiers-massifs" class="level3">
-<h3 class="anchored" data-anchor-id="streaming-pour-fichiers-massifs">7.5 Streaming pour fichiers massifs</h3>
-<p>Le mode <strong>streaming</strong> permet de traiter des fichiers plus grands que la RAM.</p>
-<div id="streaming_example" class="cell">
-<details class="code-fold">
-<summary>Voir le code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Streaming : traite par chunks</span></span>
-<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>result_streaming <span class="op">=</span> (</span>
-<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>    pl.scan_csv(<span class="st">"data/benchmark.csv"</span>)</span>
-<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>    .<span class="bu">filter</span>(pl.col(<span class="st">"category"</span>) <span class="op">==</span> <span class="st">"Electronics"</span>)</span>
-<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>    .group_by(<span class="st">"category"</span>)</span>
-<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>    .agg(pl.col(<span class="st">"amount"</span>).<span class="bu">sum</span>())</span>
-<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>    .collect(streaming<span class="op">=</span><span class="va">True</span>)  <span class="co"># Mode streaming</span></span>
-<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Résultat avec streaming :"</span>)</span>
-<span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result_streaming)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-</div>
-</section>
 <section id="schéma-pipeline-lazy" class="level3">
 <h3 class="anchored" data-anchor-id="schéma-pipeline-lazy">🖼️ Schéma : Pipeline Lazy</h3>
 <pre class="text"><code>┌─────────────┐     ┌─────────────┐     ┌─────────────┐     ┌─────────────┐
@@ -1904,7 +1851,7 @@ filter(amount &gt; 100)             with_columns(...)
 </section>
 </section>
 <section id="migration-pandas-polars" class="level2">
-<h2 class="anchored" data-anchor-id="migration-pandas-polars">🔄 8. Migration Pandas → Polars</h2>
+<h2 class="anchored" data-anchor-id="migration-pandas-polars">8. Migration Pandas → Polars</h2>
 <section id="tableau-de-correspondance" class="level3">
 <h3 class="anchored" data-anchor-id="tableau-de-correspondance">8.1 Tableau de correspondance</h3>
 <table class="caption-top table">
@@ -1989,24 +1936,24 @@ filter(amount &gt; 100)             with_columns(...)
 <div id="interop" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> polars <span class="im">as</span> pl</span>
-<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Créer un DataFrame Pandas</span></span>
-<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>pandas_df <span class="op">=</span> pd.DataFrame({</span>
-<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"name"</span>: [<span class="st">"Alice"</span>, <span class="st">"Bob"</span>],</span>
-<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"age"</span>: [<span class="dv">25</span>, <span class="dv">30</span>]</span>
-<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a>})</span>
-<span id="cb32-9"><a href="#cb32-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-10"><a href="#cb32-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Pandas → Polars</span></span>
-<span id="cb32-11"><a href="#cb32-11" aria-hidden="true" tabindex="-1"></a>polars_df <span class="op">=</span> pl.from_pandas(pandas_df)</span>
-<span id="cb32-12"><a href="#cb32-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Pandas → Polars :"</span>)</span>
-<span id="cb32-13"><a href="#cb32-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(polars_df)</span>
-<span id="cb32-14"><a href="#cb32-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-15"><a href="#cb32-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Polars → Pandas</span></span>
-<span id="cb32-16"><a href="#cb32-16" aria-hidden="true" tabindex="-1"></a>back_to_pandas <span class="op">=</span> polars_df.to_pandas()</span>
-<span id="cb32-17"><a href="#cb32-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Polars → Pandas :"</span>)</span>
-<span id="cb32-18"><a href="#cb32-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(back_to_pandas)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> polars <span class="im">as</span> pl</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Créer un DataFrame Pandas</span></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>pandas_df <span class="op">=</span> pd.DataFrame({</span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"name"</span>: [<span class="st">"Alice"</span>, <span class="st">"Bob"</span>],</span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"age"</span>: [<span class="dv">25</span>, <span class="dv">30</span>]</span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Pandas → Polars</span></span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a>polars_df <span class="op">=</span> pl.from_pandas(pandas_df)</span>
+<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Pandas → Polars :"</span>)</span>
+<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(polars_df)</span>
+<span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-15"><a href="#cb31-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Polars → Pandas</span></span>
+<span id="cb31-16"><a href="#cb31-16" aria-hidden="true" tabindex="-1"></a>back_to_pandas <span class="op">=</span> polars_df.to_pandas()</span>
+<span id="cb31-17"><a href="#cb31-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Polars → Pandas :"</span>)</span>
+<span id="cb31-18"><a href="#cb31-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(back_to_pandas)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 </section>
@@ -2056,46 +2003,46 @@ filter(amount &gt; 100)             with_columns(...)
 <div id="migration_example" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Exemple de migration complète</span></span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="co"># ============ VERSION PANDAS ============</span></span>
-<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="co"># df = pd.read_csv("data.csv")</span></span>
-<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a><span class="co"># df = df[df["amount"] &gt; 100]</span></span>
-<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a><span class="co"># df["total"] = df["amount"] * df["quantity"]</span></span>
-<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a><span class="co"># result = df.groupby("category").agg({"total": "sum"}).reset_index()</span></span>
-<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a><span class="co"># ============ VERSION POLARS (Eager) ============</span></span>
-<span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a>result_eager <span class="op">=</span> (</span>
-<span id="cb33-11"><a href="#cb33-11" aria-hidden="true" tabindex="-1"></a>    pl.read_csv(<span class="st">"data/benchmark.csv"</span>)</span>
-<span id="cb33-12"><a href="#cb33-12" aria-hidden="true" tabindex="-1"></a>    .<span class="bu">filter</span>(pl.col(<span class="st">"amount"</span>) <span class="op">&gt;</span> <span class="dv">100</span>)</span>
-<span id="cb33-13"><a href="#cb33-13" aria-hidden="true" tabindex="-1"></a>    .with_columns(</span>
-<span id="cb33-14"><a href="#cb33-14" aria-hidden="true" tabindex="-1"></a>        (pl.col(<span class="st">"amount"</span>) <span class="op">*</span> pl.col(<span class="st">"quantity"</span>)).alias(<span class="st">"total"</span>)</span>
-<span id="cb33-15"><a href="#cb33-15" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb33-16"><a href="#cb33-16" aria-hidden="true" tabindex="-1"></a>    .group_by(<span class="st">"category"</span>)</span>
-<span id="cb33-17"><a href="#cb33-17" aria-hidden="true" tabindex="-1"></a>    .agg(pl.col(<span class="st">"total"</span>).<span class="bu">sum</span>())</span>
-<span id="cb33-18"><a href="#cb33-18" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb33-19"><a href="#cb33-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-20"><a href="#cb33-20" aria-hidden="true" tabindex="-1"></a><span class="co"># ============ VERSION POLARS (Lazy - recommandé) ============</span></span>
-<span id="cb33-21"><a href="#cb33-21" aria-hidden="true" tabindex="-1"></a>result_lazy <span class="op">=</span> (</span>
-<span id="cb33-22"><a href="#cb33-22" aria-hidden="true" tabindex="-1"></a>    pl.scan_csv(<span class="st">"data/benchmark.csv"</span>)</span>
-<span id="cb33-23"><a href="#cb33-23" aria-hidden="true" tabindex="-1"></a>    .<span class="bu">filter</span>(pl.col(<span class="st">"amount"</span>) <span class="op">&gt;</span> <span class="dv">100</span>)</span>
-<span id="cb33-24"><a href="#cb33-24" aria-hidden="true" tabindex="-1"></a>    .with_columns(</span>
-<span id="cb33-25"><a href="#cb33-25" aria-hidden="true" tabindex="-1"></a>        (pl.col(<span class="st">"amount"</span>) <span class="op">*</span> pl.col(<span class="st">"quantity"</span>)).alias(<span class="st">"total"</span>)</span>
-<span id="cb33-26"><a href="#cb33-26" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb33-27"><a href="#cb33-27" aria-hidden="true" tabindex="-1"></a>    .group_by(<span class="st">"category"</span>)</span>
-<span id="cb33-28"><a href="#cb33-28" aria-hidden="true" tabindex="-1"></a>    .agg(pl.col(<span class="st">"total"</span>).<span class="bu">sum</span>())</span>
-<span id="cb33-29"><a href="#cb33-29" aria-hidden="true" tabindex="-1"></a>    .collect()</span>
-<span id="cb33-30"><a href="#cb33-30" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb33-31"><a href="#cb33-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-32"><a href="#cb33-32" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Résultat :"</span>)</span>
-<span id="cb33-33"><a href="#cb33-33" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result_lazy)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Exemple de migration complète</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="co"># ============ VERSION PANDAS ============</span></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a><span class="co"># df = pd.read_csv("data.csv")</span></span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a><span class="co"># df = df[df["amount"] &gt; 100]</span></span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a><span class="co"># df["total"] = df["amount"] * df["quantity"]</span></span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a><span class="co"># result = df.groupby("category").agg({"total": "sum"}).reset_index()</span></span>
+<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-9"><a href="#cb32-9" aria-hidden="true" tabindex="-1"></a><span class="co"># ============ VERSION POLARS (Eager) ============</span></span>
+<span id="cb32-10"><a href="#cb32-10" aria-hidden="true" tabindex="-1"></a>result_eager <span class="op">=</span> (</span>
+<span id="cb32-11"><a href="#cb32-11" aria-hidden="true" tabindex="-1"></a>    pl.read_csv(<span class="st">"data/benchmark.csv"</span>)</span>
+<span id="cb32-12"><a href="#cb32-12" aria-hidden="true" tabindex="-1"></a>    .<span class="bu">filter</span>(pl.col(<span class="st">"amount"</span>) <span class="op">&gt;</span> <span class="dv">100</span>)</span>
+<span id="cb32-13"><a href="#cb32-13" aria-hidden="true" tabindex="-1"></a>    .with_columns(</span>
+<span id="cb32-14"><a href="#cb32-14" aria-hidden="true" tabindex="-1"></a>        (pl.col(<span class="st">"amount"</span>) <span class="op">*</span> pl.col(<span class="st">"quantity"</span>)).alias(<span class="st">"total"</span>)</span>
+<span id="cb32-15"><a href="#cb32-15" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb32-16"><a href="#cb32-16" aria-hidden="true" tabindex="-1"></a>    .group_by(<span class="st">"category"</span>)</span>
+<span id="cb32-17"><a href="#cb32-17" aria-hidden="true" tabindex="-1"></a>    .agg(pl.col(<span class="st">"total"</span>).<span class="bu">sum</span>())</span>
+<span id="cb32-18"><a href="#cb32-18" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb32-19"><a href="#cb32-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-20"><a href="#cb32-20" aria-hidden="true" tabindex="-1"></a><span class="co"># ============ VERSION POLARS (Lazy - recommandé) ============</span></span>
+<span id="cb32-21"><a href="#cb32-21" aria-hidden="true" tabindex="-1"></a>result_lazy <span class="op">=</span> (</span>
+<span id="cb32-22"><a href="#cb32-22" aria-hidden="true" tabindex="-1"></a>    pl.scan_csv(<span class="st">"data/benchmark.csv"</span>)</span>
+<span id="cb32-23"><a href="#cb32-23" aria-hidden="true" tabindex="-1"></a>    .<span class="bu">filter</span>(pl.col(<span class="st">"amount"</span>) <span class="op">&gt;</span> <span class="dv">100</span>)</span>
+<span id="cb32-24"><a href="#cb32-24" aria-hidden="true" tabindex="-1"></a>    .with_columns(</span>
+<span id="cb32-25"><a href="#cb32-25" aria-hidden="true" tabindex="-1"></a>        (pl.col(<span class="st">"amount"</span>) <span class="op">*</span> pl.col(<span class="st">"quantity"</span>)).alias(<span class="st">"total"</span>)</span>
+<span id="cb32-26"><a href="#cb32-26" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb32-27"><a href="#cb32-27" aria-hidden="true" tabindex="-1"></a>    .group_by(<span class="st">"category"</span>)</span>
+<span id="cb32-28"><a href="#cb32-28" aria-hidden="true" tabindex="-1"></a>    .agg(pl.col(<span class="st">"total"</span>).<span class="bu">sum</span>())</span>
+<span id="cb32-29"><a href="#cb32-29" aria-hidden="true" tabindex="-1"></a>    .collect()</span>
+<span id="cb32-30"><a href="#cb32-30" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb32-31"><a href="#cb32-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-32"><a href="#cb32-32" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Résultat :"</span>)</span>
+<span id="cb32-33"><a href="#cb32-33" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result_lazy)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <hr>
 </section>
 </section>
 <section id="bonnes-pratiques-erreurs-fréquentes" class="level2">
-<h2 class="anchored" data-anchor-id="bonnes-pratiques-erreurs-fréquentes">⚠️ 9. Bonnes pratiques &amp; Erreurs fréquentes</h2>
+<h2 class="anchored" data-anchor-id="bonnes-pratiques-erreurs-fréquentes">9. Bonnes pratiques &amp; Erreurs fréquentes</h2>
 <section id="erreurs-fréquentes" class="level3">
 <h3 class="anchored" data-anchor-id="erreurs-fréquentes">❌ Erreurs fréquentes</h3>
 <table class="caption-top table">
@@ -2147,26 +2094,26 @@ filter(amount &gt; 100)             with_columns(...)
 <div id="bad_vs_good" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ❌ MAUVAIS : apply() ligne par ligne</span></span>
-<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="co"># df.map_rows(lambda row: row[0] * 2)  # TRÈS LENT</span></span>
-<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a><span class="co"># ✅ BON : expression native</span></span>
-<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pl.DataFrame({<span class="st">"x"</span>: [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]})</span>
-<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> df.with_columns((pl.col(<span class="st">"x"</span>) <span class="op">*</span> <span class="dv">2</span>).alias(<span class="st">"x_doubled"</span>))</span>
-<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"✅ Expression native :"</span>)</span>
-<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ❌ MAUVAIS : apply() ligne par ligne</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="co"># df.map_rows(lambda row: row[0] * 2)  # TRÈS LENT</span></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="co"># ✅ BON : expression native</span></span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pl.DataFrame({<span class="st">"x"</span>: [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]})</span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> df.with_columns((pl.col(<span class="st">"x"</span>) <span class="op">*</span> <span class="dv">2</span>).alias(<span class="st">"x_doubled"</span>))</span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"✅ Expression native :"</span>)</span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <div id="good_practices" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ❌ MAUVAIS : read_csv sur plusieurs fichiers séparément</span></span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="co"># dfs = [pl.read_csv(f) for f in files]  # Pas optimisé</span></span>
-<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a><span class="co"># ✅ BON : scan_csv avec glob</span></span>
-<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>lf <span class="op">=</span> pl.scan_csv(<span class="st">"data/multi/*.csv"</span>)</span>
-<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"✅ Scan avec glob :"</span>)</span>
-<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(lf.collect())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ❌ MAUVAIS : read_csv sur plusieurs fichiers séparément</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="co"># dfs = [pl.read_csv(f) for f in files]  # Pas optimisé</span></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a><span class="co"># ✅ BON : scan_csv avec glob</span></span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>lf <span class="op">=</span> pl.scan_csv(<span class="st">"data/multi/*.csv"</span>)</span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"✅ Scan avec glob :"</span>)</span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(lf.collect())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 </section>
@@ -2218,7 +2165,7 @@ filter(amount &gt; 100)             with_columns(...)
 </section>
 </section>
 <section id="quiz-de-fin-de-module" class="level2">
-<h2 class="anchored" data-anchor-id="quiz-de-fin-de-module">🧪 Quiz de fin de module</h2>
+<h2 class="anchored" data-anchor-id="quiz-de-fin-de-module">Quiz de fin de module</h2>
 <p>Réponds aux questions suivantes pour vérifier tes acquis.</p>
 <hr>
 <section id="q1.-quel-est-le-principal-avantage-de-larchitecture-columnar-de-polars" class="level3">
@@ -2375,13 +2322,13 @@ filter(amount &gt; 100)             with_columns(...)
 </section>
 </section>
 <section id="mini-projet-pipeline-etl-polars" class="level2">
-<h2 class="anchored" data-anchor-id="mini-projet-pipeline-etl-polars">🚀 Mini-projet : Pipeline ETL Polars</h2>
+<h2 class="anchored" data-anchor-id="mini-projet-pipeline-etl-polars">Mini-projet : Pipeline ETL Polars</h2>
 <section id="objectif" class="level3">
-<h3 class="anchored" data-anchor-id="objectif">🎯 Objectif</h3>
+<h3 class="anchored" data-anchor-id="objectif">Objectif</h3>
 <p>Construire un pipeline ETL <strong>complet en mode Lazy</strong> qui : - Lit plusieurs fichiers CSV - Nettoie et transforme les données - Agrège par catégorie et période - Exporte en Parquet</p>
 </section>
 <section id="architecture" class="level3">
-<h3 class="anchored" data-anchor-id="architecture">🏗️ Architecture</h3>
+<h3 class="anchored" data-anchor-id="architecture">Architecture</h3>
 <pre class="text"><code>data/raw/*.csv
       │
       ▼
@@ -2413,7 +2360,7 @@ filter(amount &gt; 100)             with_columns(...)
 data/processed/output.parquet</code></pre>
 </section>
 <section id="structure-projet" class="level3">
-<h3 class="anchored" data-anchor-id="structure-projet">📁 Structure projet</h3>
+<h3 class="anchored" data-anchor-id="structure-projet">Structure projet</h3>
 <pre class="text"><code>polars-etl-project/
 ├── data/
 │   ├── raw/
@@ -2428,114 +2375,114 @@ data/processed/output.parquet</code></pre>
 <div id="mini_project_setup" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Setup : créer les données de test</span></span>
-<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> polars <span class="im">as</span> pl</span>
-<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
-<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datetime <span class="im">import</span> datetime, timedelta</span>
-<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
-<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a>os.makedirs(<span class="st">"data/raw"</span>, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a>os.makedirs(<span class="st">"data/processed"</span>, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb38-9"><a href="#cb38-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb38-10"><a href="#cb38-10" aria-hidden="true" tabindex="-1"></a>categories <span class="op">=</span> [<span class="st">"Electronics"</span>, <span class="st">"Clothing"</span>, <span class="st">"Food"</span>, <span class="st">"Books"</span>, <span class="st">"Sports"</span>]</span>
-<span id="cb38-11"><a href="#cb38-11" aria-hidden="true" tabindex="-1"></a>base_date <span class="op">=</span> datetime(<span class="dv">2024</span>, <span class="dv">1</span>, <span class="dv">1</span>)</span>
-<span id="cb38-12"><a href="#cb38-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb38-13"><a href="#cb38-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Générer 3 fichiers CSV</span></span>
-<span id="cb38-14"><a href="#cb38-14" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> file_num <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">4</span>):</span>
-<span id="cb38-15"><a href="#cb38-15" aria-hidden="true" tabindex="-1"></a>    n_rows <span class="op">=</span> <span class="dv">10000</span></span>
-<span id="cb38-16"><a href="#cb38-16" aria-hidden="true" tabindex="-1"></a>    data <span class="op">=</span> {</span>
-<span id="cb38-17"><a href="#cb38-17" aria-hidden="true" tabindex="-1"></a>        <span class="st">"transaction_id"</span>: <span class="bu">range</span>(file_num <span class="op">*</span> <span class="dv">10000</span>, file_num <span class="op">*</span> <span class="dv">10000</span> <span class="op">+</span> n_rows),</span>
-<span id="cb38-18"><a href="#cb38-18" aria-hidden="true" tabindex="-1"></a>        <span class="st">"timestamp"</span>: [base_date <span class="op">+</span> timedelta(days<span class="op">=</span>random.randint(<span class="dv">0</span>, <span class="dv">365</span>)) <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(n_rows)],</span>
-<span id="cb38-19"><a href="#cb38-19" aria-hidden="true" tabindex="-1"></a>        <span class="st">"category"</span>: [random.choice(categories) <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(n_rows)],</span>
-<span id="cb38-20"><a href="#cb38-20" aria-hidden="true" tabindex="-1"></a>        <span class="st">"amount"</span>: [<span class="bu">round</span>(random.uniform(<span class="op">-</span><span class="dv">50</span>, <span class="dv">1000</span>), <span class="dv">2</span>) <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(n_rows)],  <span class="co"># Certains négatifs !</span></span>
-<span id="cb38-21"><a href="#cb38-21" aria-hidden="true" tabindex="-1"></a>        <span class="st">"quantity"</span>: [random.randint(<span class="dv">0</span>, <span class="dv">100</span>) <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(n_rows)],  <span class="co"># Certains à 0 !</span></span>
-<span id="cb38-22"><a href="#cb38-22" aria-hidden="true" tabindex="-1"></a>        <span class="st">"customer_id"</span>: [random.randint(<span class="dv">1000</span>, <span class="dv">9999</span>) <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(n_rows)]</span>
-<span id="cb38-23"><a href="#cb38-23" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb38-24"><a href="#cb38-24" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> pl.DataFrame(data)</span>
-<span id="cb38-25"><a href="#cb38-25" aria-hidden="true" tabindex="-1"></a>    df.write_csv(<span class="ss">f"data/raw/transactions_</span><span class="sc">{</span>file_num<span class="sc">:02d}</span><span class="ss">.csv"</span>)</span>
-<span id="cb38-26"><a href="#cb38-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb38-27"><a href="#cb38-27" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"✅ Données de test créées (3 fichiers x 10,000 lignes)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Setup : créer les données de test</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> polars <span class="im">as</span> pl</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datetime <span class="im">import</span> datetime, timedelta</span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a>os.makedirs(<span class="st">"data/raw"</span>, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a>os.makedirs(<span class="st">"data/processed"</span>, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-10"><a href="#cb37-10" aria-hidden="true" tabindex="-1"></a>categories <span class="op">=</span> [<span class="st">"Electronics"</span>, <span class="st">"Clothing"</span>, <span class="st">"Food"</span>, <span class="st">"Books"</span>, <span class="st">"Sports"</span>]</span>
+<span id="cb37-11"><a href="#cb37-11" aria-hidden="true" tabindex="-1"></a>base_date <span class="op">=</span> datetime(<span class="dv">2024</span>, <span class="dv">1</span>, <span class="dv">1</span>)</span>
+<span id="cb37-12"><a href="#cb37-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-13"><a href="#cb37-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Générer 3 fichiers CSV</span></span>
+<span id="cb37-14"><a href="#cb37-14" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> file_num <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">4</span>):</span>
+<span id="cb37-15"><a href="#cb37-15" aria-hidden="true" tabindex="-1"></a>    n_rows <span class="op">=</span> <span class="dv">10000</span></span>
+<span id="cb37-16"><a href="#cb37-16" aria-hidden="true" tabindex="-1"></a>    data <span class="op">=</span> {</span>
+<span id="cb37-17"><a href="#cb37-17" aria-hidden="true" tabindex="-1"></a>        <span class="st">"transaction_id"</span>: <span class="bu">range</span>(file_num <span class="op">*</span> <span class="dv">10000</span>, file_num <span class="op">*</span> <span class="dv">10000</span> <span class="op">+</span> n_rows),</span>
+<span id="cb37-18"><a href="#cb37-18" aria-hidden="true" tabindex="-1"></a>        <span class="st">"timestamp"</span>: [base_date <span class="op">+</span> timedelta(days<span class="op">=</span>random.randint(<span class="dv">0</span>, <span class="dv">365</span>)) <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(n_rows)],</span>
+<span id="cb37-19"><a href="#cb37-19" aria-hidden="true" tabindex="-1"></a>        <span class="st">"category"</span>: [random.choice(categories) <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(n_rows)],</span>
+<span id="cb37-20"><a href="#cb37-20" aria-hidden="true" tabindex="-1"></a>        <span class="st">"amount"</span>: [<span class="bu">round</span>(random.uniform(<span class="op">-</span><span class="dv">50</span>, <span class="dv">1000</span>), <span class="dv">2</span>) <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(n_rows)],  <span class="co"># Certains négatifs !</span></span>
+<span id="cb37-21"><a href="#cb37-21" aria-hidden="true" tabindex="-1"></a>        <span class="st">"quantity"</span>: [random.randint(<span class="dv">0</span>, <span class="dv">100</span>) <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(n_rows)],  <span class="co"># Certains à 0 !</span></span>
+<span id="cb37-22"><a href="#cb37-22" aria-hidden="true" tabindex="-1"></a>        <span class="st">"customer_id"</span>: [random.randint(<span class="dv">1000</span>, <span class="dv">9999</span>) <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(n_rows)]</span>
+<span id="cb37-23"><a href="#cb37-23" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb37-24"><a href="#cb37-24" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> pl.DataFrame(data)</span>
+<span id="cb37-25"><a href="#cb37-25" aria-hidden="true" tabindex="-1"></a>    df.write_csv(<span class="ss">f"data/raw/transactions_</span><span class="sc">{</span>file_num<span class="sc">:02d}</span><span class="ss">.csv"</span>)</span>
+<span id="cb37-26"><a href="#cb37-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-27"><a href="#cb37-27" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"✅ Données de test créées (3 fichiers x 10,000 lignes)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <div id="mini_project_solution" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> polars <span class="im">as</span> pl</span>
-<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> time</span>
-<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"🚀 Démarrage du pipeline ETL Polars...</span><span class="ch">\n</span><span class="st">"</span>)</span>
-<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>start <span class="op">=</span> time.time()</span>
-<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a><span class="co"># ============ PIPELINE LAZY ============</span></span>
-<span id="cb39-8"><a href="#cb39-8" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> (</span>
-<span id="cb39-9"><a href="#cb39-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 1. EXTRACT : Lire tous les CSV avec glob pattern</span></span>
-<span id="cb39-10"><a href="#cb39-10" aria-hidden="true" tabindex="-1"></a>    pl.scan_csv(<span class="st">"data/raw/*.csv"</span>)</span>
-<span id="cb39-11"><a href="#cb39-11" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb39-12"><a href="#cb39-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 2. CLEAN : Filtrer les données invalides</span></span>
-<span id="cb39-13"><a href="#cb39-13" aria-hidden="true" tabindex="-1"></a>    .<span class="bu">filter</span>(</span>
-<span id="cb39-14"><a href="#cb39-14" aria-hidden="true" tabindex="-1"></a>        (pl.col(<span class="st">"amount"</span>) <span class="op">&gt;</span> <span class="dv">0</span>) <span class="op">&amp;</span>           <span class="co"># Montants positifs</span></span>
-<span id="cb39-15"><a href="#cb39-15" aria-hidden="true" tabindex="-1"></a>        (pl.col(<span class="st">"quantity"</span>) <span class="op">&gt;</span> <span class="dv">0</span>) <span class="op">&amp;</span>         <span class="co"># Quantités positives</span></span>
-<span id="cb39-16"><a href="#cb39-16" aria-hidden="true" tabindex="-1"></a>        (pl.col(<span class="st">"customer_id"</span>).is_not_null())  <span class="co"># Pas de null</span></span>
-<span id="cb39-17"><a href="#cb39-17" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb39-18"><a href="#cb39-18" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb39-19"><a href="#cb39-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 3. TRANSFORM : Enrichir les données</span></span>
-<span id="cb39-20"><a href="#cb39-20" aria-hidden="true" tabindex="-1"></a>    .with_columns(</span>
-<span id="cb39-21"><a href="#cb39-21" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Calculer le total</span></span>
-<span id="cb39-22"><a href="#cb39-22" aria-hidden="true" tabindex="-1"></a>        (pl.col(<span class="st">"amount"</span>) <span class="op">*</span> pl.col(<span class="st">"quantity"</span>)).alias(<span class="st">"total_revenue"</span>),</span>
-<span id="cb39-23"><a href="#cb39-23" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb39-24"><a href="#cb39-24" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Extraire année et mois</span></span>
-<span id="cb39-25"><a href="#cb39-25" aria-hidden="true" tabindex="-1"></a>        pl.col(<span class="st">"timestamp"</span>).<span class="bu">str</span>.to_datetime().dt.year().alias(<span class="st">"year"</span>),</span>
-<span id="cb39-26"><a href="#cb39-26" aria-hidden="true" tabindex="-1"></a>        pl.col(<span class="st">"timestamp"</span>).<span class="bu">str</span>.to_datetime().dt.month().alias(<span class="st">"month"</span>),</span>
-<span id="cb39-27"><a href="#cb39-27" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb39-28"><a href="#cb39-28" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Catégoriser les montants</span></span>
-<span id="cb39-29"><a href="#cb39-29" aria-hidden="true" tabindex="-1"></a>        pl.when(pl.col(<span class="st">"amount"</span>) <span class="op">&gt;</span> <span class="dv">500</span>)</span>
-<span id="cb39-30"><a href="#cb39-30" aria-hidden="true" tabindex="-1"></a>          .then(pl.lit(<span class="st">"High"</span>))</span>
-<span id="cb39-31"><a href="#cb39-31" aria-hidden="true" tabindex="-1"></a>          .when(pl.col(<span class="st">"amount"</span>) <span class="op">&gt;</span> <span class="dv">100</span>)</span>
-<span id="cb39-32"><a href="#cb39-32" aria-hidden="true" tabindex="-1"></a>          .then(pl.lit(<span class="st">"Medium"</span>))</span>
-<span id="cb39-33"><a href="#cb39-33" aria-hidden="true" tabindex="-1"></a>          .otherwise(pl.lit(<span class="st">"Low"</span>))</span>
-<span id="cb39-34"><a href="#cb39-34" aria-hidden="true" tabindex="-1"></a>          .alias(<span class="st">"amount_tier"</span>),</span>
-<span id="cb39-35"><a href="#cb39-35" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb39-36"><a href="#cb39-36" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Uppercase category</span></span>
-<span id="cb39-37"><a href="#cb39-37" aria-hidden="true" tabindex="-1"></a>        pl.col(<span class="st">"category"</span>).<span class="bu">str</span>.to_uppercase().alias(<span class="st">"category_upper"</span>)</span>
-<span id="cb39-38"><a href="#cb39-38" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb39-39"><a href="#cb39-39" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb39-40"><a href="#cb39-40" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 4. AGGREGATE : Par catégorie et mois</span></span>
-<span id="cb39-41"><a href="#cb39-41" aria-hidden="true" tabindex="-1"></a>    .group_by([<span class="st">"year"</span>, <span class="st">"month"</span>, <span class="st">"category_upper"</span>])</span>
-<span id="cb39-42"><a href="#cb39-42" aria-hidden="true" tabindex="-1"></a>    .agg(</span>
-<span id="cb39-43"><a href="#cb39-43" aria-hidden="true" tabindex="-1"></a>        pl.col(<span class="st">"total_revenue"</span>).<span class="bu">sum</span>().alias(<span class="st">"total_revenue"</span>),</span>
-<span id="cb39-44"><a href="#cb39-44" aria-hidden="true" tabindex="-1"></a>        pl.col(<span class="st">"total_revenue"</span>).mean().alias(<span class="st">"avg_revenue"</span>),</span>
-<span id="cb39-45"><a href="#cb39-45" aria-hidden="true" tabindex="-1"></a>        pl.<span class="bu">len</span>().alias(<span class="st">"transaction_count"</span>),</span>
-<span id="cb39-46"><a href="#cb39-46" aria-hidden="true" tabindex="-1"></a>        pl.col(<span class="st">"customer_id"</span>).n_unique().alias(<span class="st">"unique_customers"</span>),</span>
-<span id="cb39-47"><a href="#cb39-47" aria-hidden="true" tabindex="-1"></a>        (pl.col(<span class="st">"amount_tier"</span>) <span class="op">==</span> <span class="st">"High"</span>).<span class="bu">sum</span>().alias(<span class="st">"high_value_count"</span>)</span>
-<span id="cb39-48"><a href="#cb39-48" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb39-49"><a href="#cb39-49" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb39-50"><a href="#cb39-50" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 5. SORT</span></span>
-<span id="cb39-51"><a href="#cb39-51" aria-hidden="true" tabindex="-1"></a>    .sort([<span class="st">"year"</span>, <span class="st">"month"</span>, <span class="st">"total_revenue"</span>], descending<span class="op">=</span>[<span class="va">False</span>, <span class="va">False</span>, <span class="va">True</span>])</span>
-<span id="cb39-52"><a href="#cb39-52" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb39-53"><a href="#cb39-53" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 6. EXECUTE</span></span>
-<span id="cb39-54"><a href="#cb39-54" aria-hidden="true" tabindex="-1"></a>    .collect()</span>
-<span id="cb39-55"><a href="#cb39-55" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb39-56"><a href="#cb39-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-57"><a href="#cb39-57" aria-hidden="true" tabindex="-1"></a>execution_time <span class="op">=</span> time.time() <span class="op">-</span> start</span>
-<span id="cb39-58"><a href="#cb39-58" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"⏱️ Pipeline exécuté en </span><span class="sc">{</span>execution_time<span class="sc">:.3f}</span><span class="ss"> secondes"</span>)</span>
-<span id="cb39-59"><a href="#cb39-59" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"📊 Résultat : </span><span class="sc">{</span>result<span class="sc">.</span>height<span class="sc">}</span><span class="ss"> lignes, </span><span class="sc">{</span>result<span class="sc">.</span>width<span class="sc">}</span><span class="ss"> colonnes</span><span class="ch">\n</span><span class="ss">"</span>)</span>
-<span id="cb39-60"><a href="#cb39-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-61"><a href="#cb39-61" aria-hidden="true" tabindex="-1"></a><span class="co"># Afficher un aperçu</span></span>
-<span id="cb39-62"><a href="#cb39-62" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Aperçu des résultats :"</span>)</span>
-<span id="cb39-63"><a href="#cb39-63" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result.head(<span class="dv">10</span>))</span>
-<span id="cb39-64"><a href="#cb39-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-65"><a href="#cb39-65" aria-hidden="true" tabindex="-1"></a><span class="co"># 7. EXPORT en Parquet</span></span>
-<span id="cb39-66"><a href="#cb39-66" aria-hidden="true" tabindex="-1"></a>result.write_parquet(<span class="st">"data/processed/monthly_summary.parquet"</span>)</span>
-<span id="cb39-67"><a href="#cb39-67" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">✅ Résultat exporté : data/processed/monthly_summary.parquet"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> polars <span class="im">as</span> pl</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> time</span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"🚀 Démarrage du pipeline ETL Polars...</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a>start <span class="op">=</span> time.time()</span>
+<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a><span class="co"># ============ PIPELINE LAZY ============</span></span>
+<span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> (</span>
+<span id="cb38-9"><a href="#cb38-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 1. EXTRACT : Lire tous les CSV avec glob pattern</span></span>
+<span id="cb38-10"><a href="#cb38-10" aria-hidden="true" tabindex="-1"></a>    pl.scan_csv(<span class="st">"data/raw/*.csv"</span>)</span>
+<span id="cb38-11"><a href="#cb38-11" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb38-12"><a href="#cb38-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 2. CLEAN : Filtrer les données invalides</span></span>
+<span id="cb38-13"><a href="#cb38-13" aria-hidden="true" tabindex="-1"></a>    .<span class="bu">filter</span>(</span>
+<span id="cb38-14"><a href="#cb38-14" aria-hidden="true" tabindex="-1"></a>        (pl.col(<span class="st">"amount"</span>) <span class="op">&gt;</span> <span class="dv">0</span>) <span class="op">&amp;</span>           <span class="co"># Montants positifs</span></span>
+<span id="cb38-15"><a href="#cb38-15" aria-hidden="true" tabindex="-1"></a>        (pl.col(<span class="st">"quantity"</span>) <span class="op">&gt;</span> <span class="dv">0</span>) <span class="op">&amp;</span>         <span class="co"># Quantités positives</span></span>
+<span id="cb38-16"><a href="#cb38-16" aria-hidden="true" tabindex="-1"></a>        (pl.col(<span class="st">"customer_id"</span>).is_not_null())  <span class="co"># Pas de null</span></span>
+<span id="cb38-17"><a href="#cb38-17" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb38-18"><a href="#cb38-18" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb38-19"><a href="#cb38-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 3. TRANSFORM : Enrichir les données</span></span>
+<span id="cb38-20"><a href="#cb38-20" aria-hidden="true" tabindex="-1"></a>    .with_columns(</span>
+<span id="cb38-21"><a href="#cb38-21" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Calculer le total</span></span>
+<span id="cb38-22"><a href="#cb38-22" aria-hidden="true" tabindex="-1"></a>        (pl.col(<span class="st">"amount"</span>) <span class="op">*</span> pl.col(<span class="st">"quantity"</span>)).alias(<span class="st">"total_revenue"</span>),</span>
+<span id="cb38-23"><a href="#cb38-23" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb38-24"><a href="#cb38-24" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Extraire année et mois</span></span>
+<span id="cb38-25"><a href="#cb38-25" aria-hidden="true" tabindex="-1"></a>        pl.col(<span class="st">"timestamp"</span>).<span class="bu">str</span>.to_datetime().dt.year().alias(<span class="st">"year"</span>),</span>
+<span id="cb38-26"><a href="#cb38-26" aria-hidden="true" tabindex="-1"></a>        pl.col(<span class="st">"timestamp"</span>).<span class="bu">str</span>.to_datetime().dt.month().alias(<span class="st">"month"</span>),</span>
+<span id="cb38-27"><a href="#cb38-27" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb38-28"><a href="#cb38-28" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Catégoriser les montants</span></span>
+<span id="cb38-29"><a href="#cb38-29" aria-hidden="true" tabindex="-1"></a>        pl.when(pl.col(<span class="st">"amount"</span>) <span class="op">&gt;</span> <span class="dv">500</span>)</span>
+<span id="cb38-30"><a href="#cb38-30" aria-hidden="true" tabindex="-1"></a>          .then(pl.lit(<span class="st">"High"</span>))</span>
+<span id="cb38-31"><a href="#cb38-31" aria-hidden="true" tabindex="-1"></a>          .when(pl.col(<span class="st">"amount"</span>) <span class="op">&gt;</span> <span class="dv">100</span>)</span>
+<span id="cb38-32"><a href="#cb38-32" aria-hidden="true" tabindex="-1"></a>          .then(pl.lit(<span class="st">"Medium"</span>))</span>
+<span id="cb38-33"><a href="#cb38-33" aria-hidden="true" tabindex="-1"></a>          .otherwise(pl.lit(<span class="st">"Low"</span>))</span>
+<span id="cb38-34"><a href="#cb38-34" aria-hidden="true" tabindex="-1"></a>          .alias(<span class="st">"amount_tier"</span>),</span>
+<span id="cb38-35"><a href="#cb38-35" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb38-36"><a href="#cb38-36" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Uppercase category</span></span>
+<span id="cb38-37"><a href="#cb38-37" aria-hidden="true" tabindex="-1"></a>        pl.col(<span class="st">"category"</span>).<span class="bu">str</span>.to_uppercase().alias(<span class="st">"category_upper"</span>)</span>
+<span id="cb38-38"><a href="#cb38-38" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb38-39"><a href="#cb38-39" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb38-40"><a href="#cb38-40" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 4. AGGREGATE : Par catégorie et mois</span></span>
+<span id="cb38-41"><a href="#cb38-41" aria-hidden="true" tabindex="-1"></a>    .group_by([<span class="st">"year"</span>, <span class="st">"month"</span>, <span class="st">"category_upper"</span>])</span>
+<span id="cb38-42"><a href="#cb38-42" aria-hidden="true" tabindex="-1"></a>    .agg(</span>
+<span id="cb38-43"><a href="#cb38-43" aria-hidden="true" tabindex="-1"></a>        pl.col(<span class="st">"total_revenue"</span>).<span class="bu">sum</span>().alias(<span class="st">"total_revenue"</span>),</span>
+<span id="cb38-44"><a href="#cb38-44" aria-hidden="true" tabindex="-1"></a>        pl.col(<span class="st">"total_revenue"</span>).mean().alias(<span class="st">"avg_revenue"</span>),</span>
+<span id="cb38-45"><a href="#cb38-45" aria-hidden="true" tabindex="-1"></a>        pl.<span class="bu">len</span>().alias(<span class="st">"transaction_count"</span>),</span>
+<span id="cb38-46"><a href="#cb38-46" aria-hidden="true" tabindex="-1"></a>        pl.col(<span class="st">"customer_id"</span>).n_unique().alias(<span class="st">"unique_customers"</span>),</span>
+<span id="cb38-47"><a href="#cb38-47" aria-hidden="true" tabindex="-1"></a>        (pl.col(<span class="st">"amount_tier"</span>) <span class="op">==</span> <span class="st">"High"</span>).<span class="bu">sum</span>().alias(<span class="st">"high_value_count"</span>)</span>
+<span id="cb38-48"><a href="#cb38-48" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb38-49"><a href="#cb38-49" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb38-50"><a href="#cb38-50" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 5. SORT</span></span>
+<span id="cb38-51"><a href="#cb38-51" aria-hidden="true" tabindex="-1"></a>    .sort([<span class="st">"year"</span>, <span class="st">"month"</span>, <span class="st">"total_revenue"</span>], descending<span class="op">=</span>[<span class="va">False</span>, <span class="va">False</span>, <span class="va">True</span>])</span>
+<span id="cb38-52"><a href="#cb38-52" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb38-53"><a href="#cb38-53" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 6. EXECUTE</span></span>
+<span id="cb38-54"><a href="#cb38-54" aria-hidden="true" tabindex="-1"></a>    .collect()</span>
+<span id="cb38-55"><a href="#cb38-55" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb38-56"><a href="#cb38-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-57"><a href="#cb38-57" aria-hidden="true" tabindex="-1"></a>execution_time <span class="op">=</span> time.time() <span class="op">-</span> start</span>
+<span id="cb38-58"><a href="#cb38-58" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Pipeline exécuté en </span><span class="sc">{</span>execution_time<span class="sc">:.3f}</span><span class="ss"> secondes"</span>)</span>
+<span id="cb38-59"><a href="#cb38-59" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Résultat : </span><span class="sc">{</span>result<span class="sc">.</span>height<span class="sc">}</span><span class="ss"> lignes, </span><span class="sc">{</span>result<span class="sc">.</span>width<span class="sc">}</span><span class="ss"> colonnes</span><span class="ch">\n</span><span class="ss">"</span>)</span>
+<span id="cb38-60"><a href="#cb38-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-61"><a href="#cb38-61" aria-hidden="true" tabindex="-1"></a><span class="co"># Afficher un aperçu</span></span>
+<span id="cb38-62"><a href="#cb38-62" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Aperçu des résultats :"</span>)</span>
+<span id="cb38-63"><a href="#cb38-63" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result.head(<span class="dv">10</span>))</span>
+<span id="cb38-64"><a href="#cb38-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-65"><a href="#cb38-65" aria-hidden="true" tabindex="-1"></a><span class="co"># 7. EXPORT en Parquet</span></span>
+<span id="cb38-66"><a href="#cb38-66" aria-hidden="true" tabindex="-1"></a>result.write_parquet(<span class="st">"data/processed/monthly_summary.parquet"</span>)</span>
+<span id="cb38-67"><a href="#cb38-67" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st"> Résultat exporté : data/processed/monthly_summary.parquet"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <div id="verify_output" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérifier le fichier Parquet</span></span>
-<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"📖 Lecture du fichier Parquet exporté :"</span>)</span>
-<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>df_check <span class="op">=</span> pl.read_parquet(<span class="st">"data/processed/monthly_summary.parquet"</span>)</span>
-<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_check.describe())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérifier le fichier Parquet</span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Lecture du fichier Parquet exporté :"</span>)</span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>df_check <span class="op">=</span> pl.read_parquet(<span class="st">"data/processed/monthly_summary.parquet"</span>)</span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_check.describe())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <hr>
@@ -2570,21 +2517,21 @@ data/processed/output.parquet</code></pre>
 <section id="prochaine-étape" class="level2">
 <h2 class="anchored" data-anchor-id="prochaine-étape">➡️ Prochaine étape</h2>
 <p>Maintenant que tu maîtrises Polars, découvrons d’autres outils <strong>haute performance</strong> pour Python !</p>
-<p>👉 <strong>Module suivant : <code>18_high_performance_python.ipynb</code></strong> — Python Haute Performance</p>
+<p>👉 <strong>Module suivant : <code>18_high_performance_python</code></strong> — Python Haute Performance</p>
 <p>Tu vas apprendre : - <strong>Dask</strong> : parallélisation de Pandas/NumPy - <strong>Vaex</strong> : traitement out-of-core - <strong>multiprocessing</strong> : parallélisme CPU - <strong>concurrent.futures</strong> : ThreadPool et ProcessPool - <strong>async/await</strong> : I/O asynchrone</p>
 <hr>
 <p>🎉 <strong>Félicitations !</strong> Tu as terminé le module Polars pour Data Engineers.</p>
 <div id="cleanup" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Nettoyage des fichiers temporaires (optionnel)</span></span>
-<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> shutil</span>
-<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
-<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Décommenter pour nettoyer</span></span>
-<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a><span class="co"># if os.path.exists("data"):</span></span>
-<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a><span class="co">#     shutil.rmtree("data")</span></span>
-<span id="cb41-8"><a href="#cb41-8" aria-hidden="true" tabindex="-1"></a><span class="co">#     print("🧹 Dossier data/ supprimé")</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Nettoyage des fichiers temporaires (optionnel)</span></span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> shutil</span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Décommenter pour nettoyer</span></span>
+<span id="cb40-6"><a href="#cb40-6" aria-hidden="true" tabindex="-1"></a><span class="co"># if os.path.exists("data"):</span></span>
+<span id="cb40-7"><a href="#cb40-7" aria-hidden="true" tabindex="-1"></a><span class="co">#     shutil.rmtree("data")</span></span>
+<span id="cb40-8"><a href="#cb40-8" aria-hidden="true" tabindex="-1"></a><span class="co">#     print("🧹 Dossier data/ supprimé")</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 
@@ -2615,7 +2562,7 @@ data/processed/output.parquet</code></pre>
 </style>
 
 <div id="pdf-button" onclick="downloadPDF()">
-  📄 Télécharger ce module en PDF
+  📄 Télécharger la version PDF
 </div>
 
 <script>

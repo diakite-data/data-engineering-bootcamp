@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>💎 Table Formats : Delta Lake &amp; Apache Iceberg – Bootcamp Data Engineering</title>
+<title>Table Formats : Delta Lake &amp; Apache Iceberg – Bootcamp Data Engineering</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -77,9 +77,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-fc8d3d93f0a84b7619e1f8ff6eb63d42.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-a5e5c9297d81242f794464007003a45f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-7ce12bcd0277d468432a98ebc2064ff0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-a5e5c9297d81242f794464007003a45f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-1ded37139ab960446759ac96e383a6c7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-0c5e4731d53392a4fe54074a744a0e14.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-1ded37139ab960446759ac96e383a6c7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": true,
@@ -114,11 +114,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="keywords" content="data engineering, spark, kafka, python, kubernetes, lakehouse, delta lake, bootcamp">
 
 
-<meta property="og:title" content="💎 Table Formats : Delta Lake &amp; Apache Iceberg – Bootcamp Data Engineering">
+<meta property="og:title" content="Table Formats : Delta Lake &amp; Apache Iceberg – Bootcamp Data Engineering">
 <meta property="og:description" content="Programme complet Data Engineering — Du débutant au Senior Engineer">
 <meta property="og:site_name" content="Bootcamp Data Engineering">
 <meta property="og:locale" content="fr_FR">
-<meta name="twitter:title" content="💎 Table Formats : Delta Lake &amp; Apache Iceberg – Bootcamp Data Engineering">
+<meta name="twitter:title" content="Table Formats : Delta Lake &amp; Apache Iceberg – Bootcamp Data Engineering">
 <meta name="twitter:description" content="Programme complet Data Engineering — Du débutant au Senior Engineer">
 <meta name="twitter:creator" content="@diakite_data">
 <meta name="twitter:site" content="@diakite_data">
@@ -703,42 +703,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <span class="sidebar-item-text sidebar-link text-start">
  <span class="menu-text">🟥 Niveau 3 : Avancé</span></span>
   </li>
-        <li class="px-0"><hr class="sidebar-divider hi "></li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false">
- <span class="menu-text">📚 Ressources</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../resources/setup.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">🔧 Setup Environnement</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../resources/documentation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">📖 Documentation</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../resources/faq.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">❓ FAQ</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../resources/links.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">🔗 Liens Utiles</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
     </ul>
     </div>
 </nav>
@@ -750,65 +714,65 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#du-data-lake-au-data-lakehouse" id="toc-du-data-lake-au-data-lakehouse" class="nav-link active" data-scroll-target="#du-data-lake-au-data-lakehouse">Du Data Lake au Data Lakehouse</a></li>
-  <li><a href="#prérequis" id="toc-prérequis" class="nav-link" data-scroll-target="#prérequis">📋 Prérequis</a></li>
-  <li><a href="#objectifs" id="toc-objectifs" class="nav-link" data-scroll-target="#objectifs">🎯 Objectifs</a></li>
-  <li><a href="#introduction-pourquoi-les-table-formats" id="toc-introduction-pourquoi-les-table-formats" class="nav-link" data-scroll-target="#introduction-pourquoi-les-table-formats">📚 1. Introduction — Pourquoi les Table Formats ?</a>
+  <li><a href="#prérequis" id="toc-prérequis" class="nav-link" data-scroll-target="#prérequis">Prérequis</a></li>
+  <li><a href="#objectifs" id="toc-objectifs" class="nav-link" data-scroll-target="#objectifs">Objectifs</a></li>
+  <li><a href="#introduction-pourquoi-les-table-formats" id="toc-introduction-pourquoi-les-table-formats" class="nav-link" data-scroll-target="#introduction-pourquoi-les-table-formats">1. Introduction — Pourquoi les Table Formats ?</a>
   <ul class="collapse">
   <li><a href="#lévolution-du-stockage" id="toc-lévolution-du-stockage" class="nav-link" data-scroll-target="#lévolution-du-stockage">1.1 L’évolution du stockage</a></li>
   <li><a href="#le-problème-avec-parquet-seul" id="toc-le-problème-avec-parquet-seul" class="nav-link" data-scroll-target="#le-problème-avec-parquet-seul">1.2 Le problème avec Parquet seul</a></li>
   <li><a href="#cest-quoi-un-data-lakehouse" id="toc-cest-quoi-un-data-lakehouse" class="nav-link" data-scroll-target="#cest-quoi-un-data-lakehouse">1.3 C’est quoi un Data Lakehouse ?</a></li>
-  <li><a href="#exercice-1-identifier-les-limites-de-parquet" id="toc-exercice-1-identifier-les-limites-de-parquet" class="nav-link" data-scroll-target="#exercice-1-identifier-les-limites-de-parquet">🏋️ Exercice 1 : Identifier les limites de Parquet</a></li>
+  <li><a href="#exercice-1-identifier-les-limites-de-parquet" id="toc-exercice-1-identifier-les-limites-de-parquet" class="nav-link" data-scroll-target="#exercice-1-identifier-les-limites-de-parquet">Exercice 1 : Identifier les limites de Parquet</a></li>
   </ul></li>
-  <li><a href="#les-limites-du-data-lake-classique" id="toc-les-limites-du-data-lake-classique" class="nav-link" data-scroll-target="#les-limites-du-data-lake-classique">🚫 2. Les Limites du Data Lake Classique</a>
+  <li><a href="#les-limites-du-data-lake-classique" id="toc-les-limites-du-data-lake-classique" class="nav-link" data-scroll-target="#les-limites-du-data-lake-classique">2. Les Limites du Data Lake Classique</a>
   <ul class="collapse">
   <li><a href="#pas-de-transactions-acid" id="toc-pas-de-transactions-acid" class="nav-link" data-scroll-target="#pas-de-transactions-acid">2.1 Pas de transactions ACID</a></li>
   <li><a href="#mutations-coûteuses" id="toc-mutations-coûteuses" class="nav-link" data-scroll-target="#mutations-coûteuses">2.2 Mutations coûteuses</a></li>
   <li><a href="#small-files-problem" id="toc-small-files-problem" class="nav-link" data-scroll-target="#small-files-problem">2.3 Small Files Problem</a></li>
   <li><a href="#schéma-rigide" id="toc-schéma-rigide" class="nav-link" data-scroll-target="#schéma-rigide">2.4 Schéma rigide</a></li>
   </ul></li>
-  <li><a href="#introduction-aux-table-formats" id="toc-introduction-aux-table-formats" class="nav-link" data-scroll-target="#introduction-aux-table-formats">🏗️ 3. Introduction aux Table Formats</a>
+  <li><a href="#introduction-aux-table-formats" id="toc-introduction-aux-table-formats" class="nav-link" data-scroll-target="#introduction-aux-table-formats">3. Introduction aux Table Formats</a>
   <ul class="collapse">
   <li><a href="#architecture" id="toc-architecture" class="nav-link" data-scroll-target="#architecture">3.1 Architecture</a></li>
   <li><a href="#le-transaction-log" id="toc-le-transaction-log" class="nav-link" data-scroll-target="#le-transaction-log">3.2 Le Transaction Log</a></li>
   <li><a href="#comparaison-delta-vs-iceberg-vs-hudi" id="toc-comparaison-delta-vs-iceberg-vs-hudi" class="nav-link" data-scroll-target="#comparaison-delta-vs-iceberg-vs-hudi">3.3 Comparaison Delta vs Iceberg vs Hudi</a></li>
   <li><a href="#lequel-choisir" id="toc-lequel-choisir" class="nav-link" data-scroll-target="#lequel-choisir">3.4 Lequel choisir ?</a></li>
   </ul></li>
-  <li><a href="#delta-lake-deep-dive" id="toc-delta-lake-deep-dive" class="nav-link" data-scroll-target="#delta-lake-deep-dive">🔷 4. Delta Lake — Deep Dive</a>
+  <li><a href="#delta-lake-deep-dive" id="toc-delta-lake-deep-dive" class="nav-link" data-scroll-target="#delta-lake-deep-dive">4. Delta Lake — Deep Dive</a>
   <ul class="collapse">
   <li><a href="#architecture-_delta_log" id="toc-architecture-_delta_log" class="nav-link" data-scroll-target="#architecture-_delta_log">4.1 Architecture : _delta_log/</a></li>
-  <li><a href="#exercice-2-créer-une-table-delta" id="toc-exercice-2-créer-une-table-delta" class="nav-link" data-scroll-target="#exercice-2-créer-une-table-delta">🏋️ Exercice 2 : Créer une table Delta</a></li>
+  <li><a href="#exercice-2-créer-une-table-delta" id="toc-exercice-2-créer-une-table-delta" class="nav-link" data-scroll-target="#exercice-2-créer-une-table-delta">Exercice 2 : Créer une table Delta</a></li>
   <li><a href="#merge-into-cdc-et-upsert" id="toc-merge-into-cdc-et-upsert" class="nav-link" data-scroll-target="#merge-into-cdc-et-upsert">4.4 MERGE INTO : CDC et Upsert</a></li>
-  <li><a href="#exercice-3-cdc-avec-merge-into" id="toc-exercice-3-cdc-avec-merge-into" class="nav-link" data-scroll-target="#exercice-3-cdc-avec-merge-into">🏋️ Exercice 3 : CDC avec MERGE INTO</a></li>
+  <li><a href="#exercice-3-cdc-avec-merge-into" id="toc-exercice-3-cdc-avec-merge-into" class="nav-link" data-scroll-target="#exercice-3-cdc-avec-merge-into">Exercice 3 : CDC avec MERGE INTO</a></li>
   <li><a href="#time-travel" id="toc-time-travel" class="nav-link" data-scroll-target="#time-travel">4.5 Time Travel</a></li>
-  <li><a href="#exercice-4-restaurer-après-erreur" id="toc-exercice-4-restaurer-après-erreur" class="nav-link" data-scroll-target="#exercice-4-restaurer-après-erreur">🏋️ Exercice 4 : Restaurer après erreur</a></li>
+  <li><a href="#exercice-4-restaurer-après-erreur" id="toc-exercice-4-restaurer-après-erreur" class="nav-link" data-scroll-target="#exercice-4-restaurer-après-erreur">Exercice 4 : Restaurer après erreur</a></li>
   <li><a href="#schema-management" id="toc-schema-management" class="nav-link" data-scroll-target="#schema-management">4.6 Schema Management</a></li>
   </ul></li>
-  <li><a href="#apache-iceberg-deep-dive" id="toc-apache-iceberg-deep-dive" class="nav-link" data-scroll-target="#apache-iceberg-deep-dive">🧊 5. Apache Iceberg — Deep Dive</a>
+  <li><a href="#apache-iceberg-deep-dive" id="toc-apache-iceberg-deep-dive" class="nav-link" data-scroll-target="#apache-iceberg-deep-dive">5. Apache Iceberg — Deep Dive</a>
   <ul class="collapse">
   <li><a href="#architecture-1" id="toc-architecture-1" class="nav-link" data-scroll-target="#architecture-1">5.1 Architecture</a></li>
   <li><a href="#hidden-partitioning-killer-feature" id="toc-hidden-partitioning-killer-feature" class="nav-link" data-scroll-target="#hidden-partitioning-killer-feature">5.2 Hidden Partitioning (Killer Feature)</a></li>
-  <li><a href="#exercice-5-table-iceberg-avec-hidden-partitioning" id="toc-exercice-5-table-iceberg-avec-hidden-partitioning" class="nav-link" data-scroll-target="#exercice-5-table-iceberg-avec-hidden-partitioning">🏋️ Exercice 5 : Table Iceberg avec Hidden Partitioning</a></li>
+  <li><a href="#exercice-5-table-iceberg-avec-hidden-partitioning" id="toc-exercice-5-table-iceberg-avec-hidden-partitioning" class="nav-link" data-scroll-target="#exercice-5-table-iceberg-avec-hidden-partitioning">Exercice 5 : Table Iceberg avec Hidden Partitioning</a></li>
   <li><a href="#schema-evolution-avancée" id="toc-schema-evolution-avancée" class="nav-link" data-scroll-target="#schema-evolution-avancée">5.3 Schema Evolution avancée</a></li>
   <li><a href="#catalog-obligatoire" id="toc-catalog-obligatoire" class="nav-link" data-scroll-target="#catalog-obligatoire">5.4 Catalog (obligatoire)</a></li>
   </ul></li>
-  <li><a href="#maintenance-optimisation" id="toc-maintenance-optimisation" class="nav-link" data-scroll-target="#maintenance-optimisation">🔧 7. Maintenance &amp; Optimisation</a>
+  <li><a href="#maintenance-optimisation" id="toc-maintenance-optimisation" class="nav-link" data-scroll-target="#maintenance-optimisation">7. Maintenance &amp; Optimisation</a>
   <ul class="collapse">
   <li><a href="#compaction-optimize" id="toc-compaction-optimize" class="nav-link" data-scroll-target="#compaction-optimize">7.1 Compaction (OPTIMIZE)</a></li>
   <li><a href="#z-ordering" id="toc-z-ordering" class="nav-link" data-scroll-target="#z-ordering">7.2 Z-Ordering</a></li>
   <li><a href="#vacuum" id="toc-vacuum" class="nav-link" data-scroll-target="#vacuum">7.3 VACUUM</a></li>
-  <li><a href="#exercice-7-compacter-une-table" id="toc-exercice-7-compacter-une-table" class="nav-link" data-scroll-target="#exercice-7-compacter-une-table">🏋️ Exercice 7 : Compacter une table</a></li>
+  <li><a href="#exercice-7-compacter-une-table" id="toc-exercice-7-compacter-une-table" class="nav-link" data-scroll-target="#exercice-7-compacter-une-table">Exercice 7 : Compacter une table</a></li>
   </ul></li>
-  <li><a href="#migration-parquet-delta" id="toc-migration-parquet-delta" class="nav-link" data-scroll-target="#migration-parquet-delta">🔄 8. Migration Parquet → Delta</a>
+  <li><a href="#migration-parquet-delta" id="toc-migration-parquet-delta" class="nav-link" data-scroll-target="#migration-parquet-delta">8. Migration Parquet → Delta</a>
   <ul class="collapse">
   <li><a href="#conversion-in-place-sans-copie" id="toc-conversion-in-place-sans-copie" class="nav-link" data-scroll-target="#conversion-in-place-sans-copie">8.1 Conversion in-place (SANS copie !)</a></li>
   <li><a href="#migration-avec-ctas" id="toc-migration-avec-ctas" class="nav-link" data-scroll-target="#migration-avec-ctas">8.2 Migration avec CTAS</a></li>
   </ul></li>
-  <li><a href="#apache-hudi-aperçu" id="toc-apache-hudi-aperçu" class="nav-link" data-scroll-target="#apache-hudi-aperçu">🔶 9. Apache Hudi — Aperçu</a>
+  <li><a href="#apache-hudi-aperçu" id="toc-apache-hudi-aperçu" class="nav-link" data-scroll-target="#apache-hudi-aperçu">9. Apache Hudi — Aperçu</a>
   <ul class="collapse">
   <li><a href="#copy-on-write-vs-merge-on-read" id="toc-copy-on-write-vs-merge-on-read" class="nav-link" data-scroll-target="#copy-on-write-vs-merge-on-read">Copy-on-Write vs Merge-on-Read</a></li>
   </ul></li>
-  <li><a href="#mini-projet-lakehouse-avec-minio" id="toc-mini-projet-lakehouse-avec-minio" class="nav-link" data-scroll-target="#mini-projet-lakehouse-avec-minio">🚀 10. Mini-Projet : Lakehouse avec MinIO</a></li>
-  <li><a href="#quiz" id="toc-quiz" class="nav-link" data-scroll-target="#quiz">🧪 Quiz</a></li>
+  <li><a href="#mini-projet-lakehouse-avec-minio" id="toc-mini-projet-lakehouse-avec-minio" class="nav-link" data-scroll-target="#mini-projet-lakehouse-avec-minio">10. Mini-Projet : Lakehouse avec MinIO</a></li>
+  <li><a href="#quiz" id="toc-quiz" class="nav-link" data-scroll-target="#quiz">Quiz</a></li>
   <li><a href="#ressources" id="toc-ressources" class="nav-link" data-scroll-target="#ressources">📚 Ressources</a></li>
   <li><a href="#prochaine-étape" id="toc-prochaine-étape" class="nav-link" data-scroll-target="#prochaine-étape">➡️ Prochaine étape</a></li>
   <li><a href="#récapitulatif" id="toc-récapitulatif" class="nav-link" data-scroll-target="#récapitulatif">📝 Récapitulatif</a></li>
@@ -821,7 +785,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">🟩 Niveau 2 : Intermédiaire</li><li class="breadcrumb-item"><a href="../../notebooks/intermediate/22_cloud_and_object_storage.html">🏠 Lakehouse &amp; Streaming &amp; Cloud</a></li><li class="breadcrumb-item"><a href="../../notebooks/intermediate/23_table_formats_delta_iceberg.html">23 · Table Formats (Delta, Iceberg)</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">💎 Table Formats : Delta Lake &amp; Apache Iceberg</h1>
+<h1 class="title">Table Formats : Delta Lake &amp; Apache Iceberg</h1>
 </div>
 
 
@@ -844,7 +808,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 <section id="prérequis" class="level2">
-<h2 class="anchored" data-anchor-id="prérequis">📋 Prérequis</h2>
+<h2 class="anchored" data-anchor-id="prérequis">Prérequis</h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -873,7 +837,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 </section>
 <section id="objectifs" class="level2">
-<h2 class="anchored" data-anchor-id="objectifs">🎯 Objectifs</h2>
+<h2 class="anchored" data-anchor-id="objectifs">Objectifs</h2>
 <ul>
 <li>Comprendre pourquoi <strong>Parquet seul ne suffit pas</strong></li>
 <li>Maîtriser <strong>ACID</strong> pour les Data Lakes</li>
@@ -881,10 +845,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Comprendre <strong>Iceberg</strong> : Hidden Partitioning</li>
 <li>Optimiser avec <strong>OPTIMIZE, Z-ORDER, VACUUM</strong></li>
 </ul>
+<p><a href="https://colab.research.google.com/github/diakite-data/data-engineering-bootcamp/blob/main/notebooks/intermediate/23_table_formats_delta_iceberg.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a></p>
+<blockquote class="blockquote">
+<p>💡 <strong>Conseil</strong> : Cliquez sur le badge ci-dessus pour exécuter ce notebook directement dans Google Colab (aucune installation requise).</p>
+</blockquote>
 <hr>
 </section>
 <section id="introduction-pourquoi-les-table-formats" class="level2">
-<h2 class="anchored" data-anchor-id="introduction-pourquoi-les-table-formats">📚 1. Introduction — Pourquoi les Table Formats ?</h2>
+<h2 class="anchored" data-anchor-id="introduction-pourquoi-les-table-formats">1. Introduction — Pourquoi les Table Formats ?</h2>
 <section id="lévolution-du-stockage" class="level3">
 <h3 class="anchored" data-anchor-id="lévolution-du-stockage">1.1 L’évolution du stockage</h3>
 <pre><code>2000s: DATA WAREHOUSE     2010s: DATA LAKE        2020s: LAKEHOUSE
@@ -942,7 +910,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Les Table Formats ajoutent une <strong>couche de métadonnées</strong> (Transaction Log) au-dessus des fichiers Parquet.</p>
 </section>
 <section id="exercice-1-identifier-les-limites-de-parquet" class="level3">
-<h3 class="anchored" data-anchor-id="exercice-1-identifier-les-limites-de-parquet">🏋️ Exercice 1 : Identifier les limites de Parquet</h3>
+<h3 class="anchored" data-anchor-id="exercice-1-identifier-les-limites-de-parquet">Exercice 1 : Identifier les limites de Parquet</h3>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -979,7 +947,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 </section>
 <section id="les-limites-du-data-lake-classique" class="level2">
-<h2 class="anchored" data-anchor-id="les-limites-du-data-lake-classique">🚫 2. Les Limites du Data Lake Classique</h2>
+<h2 class="anchored" data-anchor-id="les-limites-du-data-lake-classique">2. Les Limites du Data Lake Classique</h2>
 <section id="pas-de-transactions-acid" class="level3">
 <h3 class="anchored" data-anchor-id="pas-de-transactions-acid">2.1 Pas de transactions ACID</h3>
 <table class="caption-top table">
@@ -1029,7 +997,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 </section>
 <section id="introduction-aux-table-formats" class="level2">
-<h2 class="anchored" data-anchor-id="introduction-aux-table-formats">🏗️ 3. Introduction aux Table Formats</h2>
+<h2 class="anchored" data-anchor-id="introduction-aux-table-formats">3. Introduction aux Table Formats</h2>
 <section id="architecture" class="level3">
 <h3 class="anchored" data-anchor-id="architecture">3.1 Architecture</h3>
 <pre><code>┌─────────────────────────────────────────────┐
@@ -1136,7 +1104,7 @@ Version 2 : ADD file_003.parquet, REMOVE file_001.parquet
 </section>
 </section>
 <section id="delta-lake-deep-dive" class="level2">
-<h2 class="anchored" data-anchor-id="delta-lake-deep-dive">🔷 4. Delta Lake — Deep Dive</h2>
+<h2 class="anchored" data-anchor-id="delta-lake-deep-dive">4. Delta Lake — Deep Dive</h2>
 <section id="architecture-_delta_log" class="level3">
 <h3 class="anchored" data-anchor-id="architecture-_delta_log">4.1 Architecture : _delta_log/</h3>
 <pre><code>s3://bucket/sales/
@@ -1154,7 +1122,7 @@ Version 2 : ADD file_003.parquet, REMOVE file_001.parquet
 <li><code>commitInfo</code> : métadonnées de l’opération</li>
 <li><code>stats</code> : min/max pour Data Skipping</li>
 </ul>
-<div id="cell-9" class="cell">
+<div id="cell-10" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Configuration Spark avec Delta Lake</span></span>
@@ -1178,7 +1146,7 @@ Version 2 : ADD file_003.parquet, REMOVE file_001.parquet
 <span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(config)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-10" class="cell">
+<div id="cell-11" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Créer une table Delta</span></span>
@@ -1207,7 +1175,7 @@ Version 2 : ADD file_003.parquet, REMOVE file_001.parquet
 </div>
 </section>
 <section id="exercice-2-créer-une-table-delta" class="level3">
-<h3 class="anchored" data-anchor-id="exercice-2-créer-une-table-delta">🏋️ Exercice 2 : Créer une table Delta</h3>
+<h3 class="anchored" data-anchor-id="exercice-2-créer-une-table-delta">Exercice 2 : Créer une table Delta</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Créer DataFrame</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> [(<span class="dv">1</span>, <span class="st">"Laptop"</span>, <span class="fl">1200.0</span>), (<span class="dv">2</span>, <span class="st">"Mouse"</span>, <span class="fl">25.0</span>)]</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> spark.createDataFrame(data, [<span class="st">"id"</span>, <span class="st">"product"</span>, <span class="st">"price"</span>])</span>
@@ -1233,7 +1201,7 @@ Version 2 : ADD file_003.parquet, REMOVE file_001.parquet
 │ 2  │ Bob   │      │ 3  │ New   │ I  │ →  │ 3  │ New   │ Inserted
 └────┴───────┘      │ 2  │ Bob   │ D  │    └────┴───────┘ (Bob deleted)
                     └────┴───────┴────┘</code></pre>
-<div id="cell-13" class="cell">
+<div id="cell-14" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># MERGE INTO - Exemple complet</span></span>
@@ -1271,7 +1239,7 @@ Version 2 : ADD file_003.parquet, REMOVE file_001.parquet
 </div>
 </section>
 <section id="exercice-3-cdc-avec-merge-into" class="level3">
-<h3 class="anchored" data-anchor-id="exercice-3-cdc-avec-merge-into">🏋️ Exercice 3 : CDC avec MERGE INTO</h3>
+<h3 class="anchored" data-anchor-id="exercice-3-cdc-avec-merge-into">Exercice 3 : CDC avec MERGE INTO</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Initial</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>initial <span class="op">=</span> [(<span class="dv">1</span>, <span class="st">"Alice"</span>), (<span class="dv">2</span>, <span class="st">"Bob"</span>)]</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1302,7 +1270,7 @@ Version 2 : ADD file_003.parquet, REMOVE file_001.parquet
 └────────┘   └────────┘   │modified│   └────────┘
 
 Tu peux lire N'IMPORTE quelle version !</code></pre>
-<div id="cell-16" class="cell">
+<div id="cell-17" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Time Travel</span></span>
@@ -1328,7 +1296,7 @@ Tu peux lire N'IMPORTE quelle version !</code></pre>
 </div>
 </section>
 <section id="exercice-4-restaurer-après-erreur" class="level3">
-<h3 class="anchored" data-anchor-id="exercice-4-restaurer-après-erreur">🏋️ Exercice 4 : Restaurer après erreur</h3>
+<h3 class="anchored" data-anchor-id="exercice-4-restaurer-après-erreur">Exercice 4 : Restaurer après erreur</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># OUPS ! DELETE sans WHERE</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>spark.sql(<span class="st">"DELETE FROM sales"</span>)</span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1378,7 +1346,7 @@ Tu peux lire N'IMPORTE quelle version !</code></pre>
 </section>
 </section>
 <section id="apache-iceberg-deep-dive" class="level2">
-<h2 class="anchored" data-anchor-id="apache-iceberg-deep-dive">🧊 5. Apache Iceberg — Deep Dive</h2>
+<h2 class="anchored" data-anchor-id="apache-iceberg-deep-dive">5. Apache Iceberg — Deep Dive</h2>
 <section id="architecture-1" class="level3">
 <h3 class="anchored" data-anchor-id="architecture-1">5.1 Architecture</h3>
 <pre><code>s3://bucket/sales/
@@ -1409,7 +1377,7 @@ Tu peux lire N'IMPORTE quelle version !</code></pre>
 <p><strong>Transforms</strong> : <code>years()</code>, <code>months()</code>, <code>days()</code>, <code>hours()</code>, <code>bucket(N, col)</code>, <code>truncate(L, col)</code></p>
 </section>
 <section id="exercice-5-table-iceberg-avec-hidden-partitioning" class="level3">
-<h3 class="anchored" data-anchor-id="exercice-5-table-iceberg-avec-hidden-partitioning">🏋️ Exercice 5 : Table Iceberg avec Hidden Partitioning</h3>
+<h3 class="anchored" data-anchor-id="exercice-5-table-iceberg-avec-hidden-partitioning">Exercice 5 : Table Iceberg avec Hidden Partitioning</h3>
 <details>
 <summary>
 💡 Solution
@@ -1434,7 +1402,7 @@ Tu peux lire N'IMPORTE quelle version !</code></pre>
 </section>
 </section>
 <section id="maintenance-optimisation" class="level2">
-<h2 class="anchored" data-anchor-id="maintenance-optimisation">🔧 7. Maintenance &amp; Optimisation</h2>
+<h2 class="anchored" data-anchor-id="maintenance-optimisation">7. Maintenance &amp; Optimisation</h2>
 <section id="compaction-optimize" class="level3">
 <h3 class="anchored" data-anchor-id="compaction-optimize">7.1 Compaction (OPTIMIZE)</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Delta</span></span>
@@ -1461,7 +1429,7 @@ Tu peux lire N'IMPORTE quelle version !</code></pre>
 <p>⚠️ <strong>Après VACUUM, Time Travel sur versions supprimées impossible !</strong></p>
 </section>
 <section id="exercice-7-compacter-une-table" class="level3">
-<h3 class="anchored" data-anchor-id="exercice-7-compacter-une-table">🏋️ Exercice 7 : Compacter une table</h3>
+<h3 class="anchored" data-anchor-id="exercice-7-compacter-une-table">Exercice 7 : Compacter une table</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérifier fichiers avant</span></span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>spark.sql(<span class="st">"DESCRIBE DETAIL delta.`path`"</span>).select(<span class="st">"numFiles"</span>).show()</span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1478,7 +1446,7 @@ Tu peux lire N'IMPORTE quelle version !</code></pre>
 </section>
 </section>
 <section id="migration-parquet-delta" class="level2">
-<h2 class="anchored" data-anchor-id="migration-parquet-delta">🔄 8. Migration Parquet → Delta</h2>
+<h2 class="anchored" data-anchor-id="migration-parquet-delta">8. Migration Parquet → Delta</h2>
 <section id="conversion-in-place-sans-copie" class="level3">
 <h3 class="anchored" data-anchor-id="conversion-in-place-sans-copie">8.1 Conversion in-place (SANS copie !)</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">CONVERT</span> <span class="kw">TO</span> DELTA parquet.`s3a:<span class="op">//</span>bronze<span class="op">/</span>old_table<span class="op">/</span>`</span>
@@ -1494,7 +1462,7 @@ Tu peux lire N'IMPORTE quelle version !</code></pre>
 </section>
 </section>
 <section id="apache-hudi-aperçu" class="level2">
-<h2 class="anchored" data-anchor-id="apache-hudi-aperçu">🔶 9. Apache Hudi — Aperçu</h2>
+<h2 class="anchored" data-anchor-id="apache-hudi-aperçu">9. Apache Hudi — Aperçu</h2>
 <section id="copy-on-write-vs-merge-on-read" class="level3">
 <h3 class="anchored" data-anchor-id="copy-on-write-vs-merge-on-read">Copy-on-Write vs Merge-on-Read</h3>
 <table class="caption-top table">
@@ -1528,7 +1496,7 @@ Tu peux lire N'IMPORTE quelle version !</code></pre>
 </section>
 </section>
 <section id="mini-projet-lakehouse-avec-minio" class="level2">
-<h2 class="anchored" data-anchor-id="mini-projet-lakehouse-avec-minio">🚀 10. Mini-Projet : Lakehouse avec MinIO</h2>
+<h2 class="anchored" data-anchor-id="mini-projet-lakehouse-avec-minio">10. Mini-Projet : Lakehouse avec MinIO</h2>
 <pre><code>┌─────────────────────────────────────────────────────┐
 │                    MinIO                            │
 │  bronze/          silver/           gold/           │
@@ -1552,7 +1520,7 @@ Tu peux lire N'IMPORTE quelle version !</code></pre>
 <hr>
 </section>
 <section id="quiz" class="level2">
-<h2 class="anchored" data-anchor-id="quiz">🧪 Quiz</h2>
+<h2 class="anchored" data-anchor-id="quiz">Quiz</h2>
 <strong>Q1.</strong> Pourquoi Parquet seul ne garantit pas ACID ?
 <details>
 <summary>
@@ -1608,7 +1576,7 @@ VACUUM (Delta) ou expire_snapshots (Iceberg).
 </section>
 <section id="prochaine-étape" class="level2">
 <h2 class="anchored" data-anchor-id="prochaine-étape">➡️ Prochaine étape</h2>
-<p>👉 <strong>Module 24 : <code>24_kafka_streaming.ipynb</code></strong> — Kafka &amp; Streaming</p>
+<p>👉 <strong>Module 24 : <code>24_kafka_streaming</code></strong> — Kafka &amp; Streaming</p>
 <hr>
 </section>
 <section id="récapitulatif" class="level2">
@@ -1676,7 +1644,7 @@ VACUUM (Delta) ou expire_snapshots (Iceberg).
 </style>
 
 <div id="pdf-button" onclick="downloadPDF()">
-  📄 Télécharger ce module en PDF
+  📄 Télécharger la version PDF
 </div>
 
 <script>

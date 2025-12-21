@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>🌊 Kafka, Python &amp; Structured Streaming – Bootcamp Data Engineering</title>
+<title>Kafka, Python &amp; Structured Streaming – Bootcamp Data Engineering</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -77,9 +77,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-fc8d3d93f0a84b7619e1f8ff6eb63d42.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-a5e5c9297d81242f794464007003a45f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-7ce12bcd0277d468432a98ebc2064ff0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-a5e5c9297d81242f794464007003a45f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-1ded37139ab960446759ac96e383a6c7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-0c5e4731d53392a4fe54074a744a0e14.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-1ded37139ab960446759ac96e383a6c7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": true,
@@ -114,11 +114,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="keywords" content="data engineering, spark, kafka, python, kubernetes, lakehouse, delta lake, bootcamp">
 
 
-<meta property="og:title" content="🌊 Kafka, Python &amp; Structured Streaming – Bootcamp Data Engineering">
+<meta property="og:title" content="Kafka, Python &amp; Structured Streaming – Bootcamp Data Engineering">
 <meta property="og:description" content="Programme complet Data Engineering — Du débutant au Senior Engineer">
 <meta property="og:site_name" content="Bootcamp Data Engineering">
 <meta property="og:locale" content="fr_FR">
-<meta name="twitter:title" content="🌊 Kafka, Python &amp; Structured Streaming – Bootcamp Data Engineering">
+<meta name="twitter:title" content="Kafka, Python &amp; Structured Streaming – Bootcamp Data Engineering">
 <meta name="twitter:description" content="Programme complet Data Engineering — Du débutant au Senior Engineer">
 <meta name="twitter:creator" content="@diakite_data">
 <meta name="twitter:site" content="@diakite_data">
@@ -703,42 +703,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <span class="sidebar-item-text sidebar-link text-start">
  <span class="menu-text">🟥 Niveau 3 : Avancé</span></span>
   </li>
-        <li class="px-0"><hr class="sidebar-divider hi "></li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false">
- <span class="menu-text">📚 Ressources</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../resources/setup.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">🔧 Setup Environnement</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../resources/documentation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">📖 Documentation</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../resources/faq.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">❓ FAQ</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../resources/links.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">🔗 Liens Utiles</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
     </ul>
     </div>
 </nav>
@@ -750,9 +714,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#le-temps-réel-pour-le-data-engineering" id="toc-le-temps-réel-pour-le-data-engineering" class="nav-link active" data-scroll-target="#le-temps-réel-pour-le-data-engineering">Le Temps Réel pour le Data Engineering</a></li>
-  <li><a href="#prérequis" id="toc-prérequis" class="nav-link" data-scroll-target="#prérequis">📋 Prérequis</a></li>
-  <li><a href="#objectifs" id="toc-objectifs" class="nav-link" data-scroll-target="#objectifs">🎯 Objectifs</a></li>
-  <li><a href="#introduction-pourquoi-le-temps-réel" id="toc-introduction-pourquoi-le-temps-réel" class="nav-link" data-scroll-target="#introduction-pourquoi-le-temps-réel">📚 1. Introduction — Pourquoi le Temps Réel ?</a>
+  <li><a href="#prérequis" id="toc-prérequis" class="nav-link" data-scroll-target="#prérequis">Prérequis</a></li>
+  <li><a href="#objectifs" id="toc-objectifs" class="nav-link" data-scroll-target="#objectifs">Objectifs</a></li>
+  <li><a href="#introduction-pourquoi-le-temps-réel" id="toc-introduction-pourquoi-le-temps-réel" class="nav-link" data-scroll-target="#introduction-pourquoi-le-temps-réel">1. Introduction — Pourquoi le Temps Réel ?</a>
   <ul class="collapse">
   <li><a href="#lévolution-des-architectures-de-données" id="toc-lévolution-des-architectures-de-données" class="nav-link" data-scroll-target="#lévolution-des-architectures-de-données">1.1 L’évolution des architectures de données</a></li>
   <li><a href="#cas-dusage-du-temps-réel" id="toc-cas-dusage-du-temps-réel" class="nav-link" data-scroll-target="#cas-dusage-du-temps-réel">1.2 Cas d’usage du temps réel</a></li>
@@ -760,65 +724,65 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#micro-batch-vs-continuous" id="toc-micro-batch-vs-continuous" class="nav-link" data-scroll-target="#micro-batch-vs-continuous">1.4 Micro-batch vs Continuous</a></li>
   <li><a href="#garanties-de-livraison" id="toc-garanties-de-livraison" class="nav-link" data-scroll-target="#garanties-de-livraison">1.5 Garanties de livraison</a></li>
   </ul></li>
-  <li><a href="#apache-kafka-le-bus-de-messagerie" id="toc-apache-kafka-le-bus-de-messagerie" class="nav-link" data-scroll-target="#apache-kafka-le-bus-de-messagerie">🔶 2. Apache Kafka — Le Bus de Messagerie</a>
+  <li><a href="#apache-kafka-le-bus-de-messagerie" id="toc-apache-kafka-le-bus-de-messagerie" class="nav-link" data-scroll-target="#apache-kafka-le-bus-de-messagerie">2. Apache Kafka — Le Bus de Messagerie</a>
   <ul class="collapse">
   <li><a href="#quest-ce-que-kafka" id="toc-quest-ce-que-kafka" class="nav-link" data-scroll-target="#quest-ce-que-kafka">2.1 Qu’est-ce que Kafka ?</a></li>
   <li><a href="#architecture-de-kafka" id="toc-architecture-de-kafka" class="nav-link" data-scroll-target="#architecture-de-kafka">2.2 Architecture de Kafka</a></li>
   <li><a href="#concepts-clés" id="toc-concepts-clés" class="nav-link" data-scroll-target="#concepts-clés">2.3 Concepts clés</a></li>
   <li><a href="#topics-et-partitions" id="toc-topics-et-partitions" class="nav-link" data-scroll-target="#topics-et-partitions">2.4 Topics et Partitions</a></li>
   <li><a href="#installation-kafka-avec-docker" id="toc-installation-kafka-avec-docker" class="nav-link" data-scroll-target="#installation-kafka-avec-docker">2.5 Installation Kafka avec Docker</a></li>
-  <li><a href="#exercice-1-déployer-kafka-et-créer-un-topic" id="toc-exercice-1-déployer-kafka-et-créer-un-topic" class="nav-link" data-scroll-target="#exercice-1-déployer-kafka-et-créer-un-topic">🏋️ Exercice 1 : Déployer Kafka et créer un topic</a></li>
+  <li><a href="#exercice-1-déployer-kafka-et-créer-un-topic" id="toc-exercice-1-déployer-kafka-et-créer-un-topic" class="nav-link" data-scroll-target="#exercice-1-déployer-kafka-et-créer-un-topic">Exercice 1 : Déployer Kafka et créer un topic</a></li>
   </ul></li>
-  <li><a href="#schema-registry-sérialisation" id="toc-schema-registry-sérialisation" class="nav-link" data-scroll-target="#schema-registry-sérialisation">📜 3. Schema Registry &amp; Sérialisation</a>
+  <li><a href="#schema-registry-sérialisation" id="toc-schema-registry-sérialisation" class="nav-link" data-scroll-target="#schema-registry-sérialisation">3. Schema Registry &amp; Sérialisation</a>
   <ul class="collapse">
   <li><a href="#le-problème-de-la-sérialisation" id="toc-le-problème-de-la-sérialisation" class="nav-link" data-scroll-target="#le-problème-de-la-sérialisation">3.1 Le problème de la sérialisation</a></li>
   <li><a href="#pourquoi-un-schema-registry" id="toc-pourquoi-un-schema-registry" class="nav-link" data-scroll-target="#pourquoi-un-schema-registry">3.2 Pourquoi un Schema Registry ?</a></li>
   <li><a href="#compatibilité-de-schéma" id="toc-compatibilité-de-schéma" class="nav-link" data-scroll-target="#compatibilité-de-schéma">3.3 Compatibilité de schéma</a></li>
   </ul></li>
-  <li><a href="#python-natif-pour-kafka" id="toc-python-natif-pour-kafka" class="nav-link" data-scroll-target="#python-natif-pour-kafka">🐍 4. Python Natif pour Kafka</a>
+  <li><a href="#python-natif-pour-kafka" id="toc-python-natif-pour-kafka" class="nav-link" data-scroll-target="#python-natif-pour-kafka">4. Python Natif pour Kafka</a>
   <ul class="collapse">
   <li><a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation">4.1 Installation</a></li>
   <li><a href="#producteur-python-kafka-python" id="toc-producteur-python-kafka-python" class="nav-link" data-scroll-target="#producteur-python-kafka-python">4.2 Producteur Python (kafka-python)</a></li>
   <li><a href="#consommateur-python-kafka-python" id="toc-consommateur-python-kafka-python" class="nav-link" data-scroll-target="#consommateur-python-kafka-python">4.3 Consommateur Python (kafka-python)</a></li>
   <li><a href="#producteur-avec-avro-et-schema-registry-confluent-kafka" id="toc-producteur-avec-avro-et-schema-registry-confluent-kafka" class="nav-link" data-scroll-target="#producteur-avec-avro-et-schema-registry-confluent-kafka">4.4 Producteur avec Avro et Schema Registry (confluent-kafka)</a></li>
-  <li><a href="#exercice-2-producteur-et-consommateur-python" id="toc-exercice-2-producteur-et-consommateur-python" class="nav-link" data-scroll-target="#exercice-2-producteur-et-consommateur-python">🏋️ Exercice 2 : Producteur et Consommateur Python</a></li>
+  <li><a href="#exercice-2-producteur-et-consommateur-python" id="toc-exercice-2-producteur-et-consommateur-python" class="nav-link" data-scroll-target="#exercice-2-producteur-et-consommateur-python">Exercice 2 : Producteur et Consommateur Python</a></li>
   <li><a href="#aperçu-de-faust-stream-processing-python" id="toc-aperçu-de-faust-stream-processing-python" class="nav-link" data-scroll-target="#aperçu-de-faust-stream-processing-python">4.5 Aperçu de Faust (Stream Processing Python)</a></li>
   </ul></li>
-  <li><a href="#spark-structured-streaming-sss" id="toc-spark-structured-streaming-sss" class="nav-link" data-scroll-target="#spark-structured-streaming-sss">⚡ 5. Spark Structured Streaming (SSS)</a>
+  <li><a href="#spark-structured-streaming-sss" id="toc-spark-structured-streaming-sss" class="nav-link" data-scroll-target="#spark-structured-streaming-sss">5. Spark Structured Streaming (SSS)</a>
   <ul class="collapse">
   <li><a href="#le-modèle-de-programmation" id="toc-le-modèle-de-programmation" class="nav-link" data-scroll-target="#le-modèle-de-programmation">5.1 Le modèle de programmation</a></li>
   <li><a href="#lire-depuis-kafka-avec-readstream" id="toc-lire-depuis-kafka-avec-readstream" class="nav-link" data-scroll-target="#lire-depuis-kafka-avec-readstream">5.2 Lire depuis Kafka avec readStream</a></li>
   <li><a href="#output-modes-et-sinks" id="toc-output-modes-et-sinks" class="nav-link" data-scroll-target="#output-modes-et-sinks">5.3 Output Modes et Sinks</a></li>
-  <li><a href="#exercice-3-pipeline-kafka-spark-sss-console" id="toc-exercice-3-pipeline-kafka-spark-sss-console" class="nav-link" data-scroll-target="#exercice-3-pipeline-kafka-spark-sss-console">🏋️ Exercice 3 : Pipeline Kafka → Spark SSS → Console</a></li>
+  <li><a href="#exercice-3-pipeline-kafka-spark-sss-console" id="toc-exercice-3-pipeline-kafka-spark-sss-console" class="nav-link" data-scroll-target="#exercice-3-pipeline-kafka-spark-sss-console">Exercice 3 : Pipeline Kafka → Spark SSS → Console</a></li>
   </ul></li>
-  <li><a href="#gestion-du-temps-et-de-létat" id="toc-gestion-du-temps-et-de-létat" class="nav-link" data-scroll-target="#gestion-du-temps-et-de-létat">⏰ 6. Gestion du Temps et de l’État</a>
+  <li><a href="#gestion-du-temps-et-de-létat" id="toc-gestion-du-temps-et-de-létat" class="nav-link" data-scroll-target="#gestion-du-temps-et-de-létat">6. Gestion du Temps et de l’État</a>
   <ul class="collapse">
   <li><a href="#le-problème-du-temps-dévénement" id="toc-le-problème-du-temps-dévénement" class="nav-link" data-scroll-target="#le-problème-du-temps-dévénement">6.1 Le problème du temps d’événement</a></li>
   <li><a href="#windowing-fenêtrage-temporel" id="toc-windowing-fenêtrage-temporel" class="nav-link" data-scroll-target="#windowing-fenêtrage-temporel">6.2 Windowing (Fenêtrage temporel)</a></li>
   <li><a href="#watermarks-gérer-les-données-en-retard" id="toc-watermarks-gérer-les-données-en-retard" class="nav-link" data-scroll-target="#watermarks-gérer-les-données-en-retard">6.3 Watermarks : Gérer les données en retard</a></li>
-  <li><a href="#exercice-4-agrégation-avec-watermark" id="toc-exercice-4-agrégation-avec-watermark" class="nav-link" data-scroll-target="#exercice-4-agrégation-avec-watermark">🏋️ Exercice 4 : Agrégation avec Watermark</a></li>
+  <li><a href="#exercice-4-agrégation-avec-watermark" id="toc-exercice-4-agrégation-avec-watermark" class="nav-link" data-scroll-target="#exercice-4-agrégation-avec-watermark">Exercice 4 : Agrégation avec Watermark</a></li>
   </ul></li>
-  <li><a href="#opérations-avancées-et-sinks-transactionnelles" id="toc-opérations-avancées-et-sinks-transactionnelles" class="nav-link" data-scroll-target="#opérations-avancées-et-sinks-transactionnelles">🔗 7. Opérations Avancées et Sinks Transactionnelles</a>
+  <li><a href="#opérations-avancées-et-sinks-transactionnelles" id="toc-opérations-avancées-et-sinks-transactionnelles" class="nav-link" data-scroll-target="#opérations-avancées-et-sinks-transactionnelles">7. Opérations Avancées et Sinks Transactionnelles</a>
   <ul class="collapse">
   <li><a href="#streaming-joins" id="toc-streaming-joins" class="nav-link" data-scroll-target="#streaming-joins">7.1 Streaming Joins</a></li>
   <li><a href="#foreachbatch-le-pont-entre-streaming-et-batch" id="toc-foreachbatch-le-pont-entre-streaming-et-batch" class="nav-link" data-scroll-target="#foreachbatch-le-pont-entre-streaming-et-batch">7.2 foreachBatch : Le pont entre streaming et batch</a></li>
-  <li><a href="#exercice-5-upsert-streaming-avec-foreachbatch" id="toc-exercice-5-upsert-streaming-avec-foreachbatch" class="nav-link" data-scroll-target="#exercice-5-upsert-streaming-avec-foreachbatch">🏋️ Exercice 5 : Upsert streaming avec foreachBatch</a></li>
+  <li><a href="#exercice-5-upsert-streaming-avec-foreachbatch" id="toc-exercice-5-upsert-streaming-avec-foreachbatch" class="nav-link" data-scroll-target="#exercice-5-upsert-streaming-avec-foreachbatch">Exercice 5 : Upsert streaming avec foreachBatch</a></li>
   </ul></li>
-  <li><a href="#kafka-connect-debezium-aperçu" id="toc-kafka-connect-debezium-aperçu" class="nav-link" data-scroll-target="#kafka-connect-debezium-aperçu">🔌 8. Kafka Connect &amp; Debezium (Aperçu)</a>
+  <li><a href="#kafka-connect-debezium-aperçu" id="toc-kafka-connect-debezium-aperçu" class="nav-link" data-scroll-target="#kafka-connect-debezium-aperçu">8. Kafka Connect &amp; Debezium (Aperçu)</a>
   <ul class="collapse">
   <li><a href="#quest-ce-que-kafka-connect" id="toc-quest-ce-que-kafka-connect" class="nav-link" data-scroll-target="#quest-ce-que-kafka-connect">8.1 Qu’est-ce que Kafka Connect ?</a></li>
   <li><a href="#debezium-cdc-temps-réel" id="toc-debezium-cdc-temps-réel" class="nav-link" data-scroll-target="#debezium-cdc-temps-réel">8.2 Debezium : CDC temps réel</a></li>
   </ul></li>
-  <li><a href="#déploiement-observabilité" id="toc-déploiement-observabilité" class="nav-link" data-scroll-target="#déploiement-observabilité">📊 9. Déploiement &amp; Observabilité</a>
+  <li><a href="#déploiement-observabilité" id="toc-déploiement-observabilité" class="nav-link" data-scroll-target="#déploiement-observabilité">9. Déploiement &amp; Observabilité</a>
   <ul class="collapse">
   <li><a href="#déployer-sss-sur-kubernetes" id="toc-déployer-sss-sur-kubernetes" class="nav-link" data-scroll-target="#déployer-sss-sur-kubernetes">9.1 Déployer SSS sur Kubernetes</a></li>
   <li><a href="#métriques-à-surveiller" id="toc-métriques-à-surveiller" class="nav-link" data-scroll-target="#métriques-à-surveiller">9.2 Métriques à surveiller</a></li>
   </ul></li>
-  <li><a href="#mini-projet-pipeline-temps-réel-complet" id="toc-mini-projet-pipeline-temps-réel-complet" class="nav-link" data-scroll-target="#mini-projet-pipeline-temps-réel-complet">🚀 10. Mini-Projet : Pipeline Temps Réel Complet</a>
+  <li><a href="#mini-projet-pipeline-temps-réel-complet" id="toc-mini-projet-pipeline-temps-réel-complet" class="nav-link" data-scroll-target="#mini-projet-pipeline-temps-réel-complet">10. Mini-Projet : Pipeline Temps Réel Complet</a>
   <ul class="collapse">
-  <li><a href="#objectif" id="toc-objectif" class="nav-link" data-scroll-target="#objectif">🎯 Objectif</a></li>
+  <li><a href="#objectif" id="toc-objectif" class="nav-link" data-scroll-target="#objectif">Objectif</a></li>
   </ul></li>
-  <li><a href="#quiz" id="toc-quiz" class="nav-link" data-scroll-target="#quiz">🧪 Quiz</a></li>
+  <li><a href="#quiz" id="toc-quiz" class="nav-link" data-scroll-target="#quiz">Quiz</a></li>
   <li><a href="#ressources" id="toc-ressources" class="nav-link" data-scroll-target="#ressources">📚 Ressources</a></li>
   <li><a href="#prochaine-étape" id="toc-prochaine-étape" class="nav-link" data-scroll-target="#prochaine-étape">➡️ Prochaine étape</a></li>
   <li><a href="#récapitulatif" id="toc-récapitulatif" class="nav-link" data-scroll-target="#récapitulatif">📝 Récapitulatif</a></li>
@@ -831,7 +795,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">🟩 Niveau 2 : Intermédiaire</li><li class="breadcrumb-item"><a href="../../notebooks/intermediate/22_cloud_and_object_storage.html">🏠 Lakehouse &amp; Streaming &amp; Cloud</a></li><li class="breadcrumb-item"><a href="../../notebooks/intermediate/24_kafka_streaming.html">24 · Kafka &amp; Streaming</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">🌊 Kafka, Python &amp; Structured Streaming</h1>
+<h1 class="title">Kafka, Python &amp; Structured Streaming</h1>
 </div>
 
 
@@ -854,7 +818,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 <section id="prérequis" class="level2">
-<h2 class="anchored" data-anchor-id="prérequis">📋 Prérequis</h2>
+<h2 class="anchored" data-anchor-id="prérequis">Prérequis</h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -883,7 +847,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 </section>
 <section id="objectifs" class="level2">
-<h2 class="anchored" data-anchor-id="objectifs">🎯 Objectifs</h2>
+<h2 class="anchored" data-anchor-id="objectifs">Objectifs</h2>
 <p>À la fin de ce module, tu seras capable de :</p>
 <ul>
 <li>Comprendre les <strong>architectures de streaming</strong> (Lambda vs Kappa)</li>
@@ -893,10 +857,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Maîtriser <strong>Watermarks</strong> et <strong>Windowing</strong> pour le temps d’événement</li>
 <li>Utiliser <strong>foreachBatch + MERGE INTO</strong> pour des sinks transactionnels</li>
 </ul>
+<p><a href="https://colab.research.google.com/github/diakite-data/data-engineering-bootcamp/blob/main/notebooks/intermediate/24_kafka_streaming.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a></p>
+<blockquote class="blockquote">
+<p>💡 <strong>Conseil</strong> : Cliquez sur le badge ci-dessus pour exécuter ce notebook directement dans Google Colab (aucune installation requise).</p>
+</blockquote>
 <hr>
 </section>
 <section id="introduction-pourquoi-le-temps-réel" class="level2">
-<h2 class="anchored" data-anchor-id="introduction-pourquoi-le-temps-réel">📚 1. Introduction — Pourquoi le Temps Réel ?</h2>
+<h2 class="anchored" data-anchor-id="introduction-pourquoi-le-temps-réel">1. Introduction — Pourquoi le Temps Réel ?</h2>
 <section id="lévolution-des-architectures-de-données" class="level3">
 <h3 class="anchored" data-anchor-id="lévolution-des-architectures-de-données">1.1 L’évolution des architectures de données</h3>
 <p>Historiquement, le traitement de données était <strong>batch</strong> : on collecte les données pendant X heures, puis on les traite. Mais les besoins modernes exigent une latence plus faible.</p>
@@ -1055,7 +1023,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 </section>
 <section id="apache-kafka-le-bus-de-messagerie" class="level2">
-<h2 class="anchored" data-anchor-id="apache-kafka-le-bus-de-messagerie">🔶 2. Apache Kafka — Le Bus de Messagerie</h2>
+<h2 class="anchored" data-anchor-id="apache-kafka-le-bus-de-messagerie">2. Apache Kafka — Le Bus de Messagerie</h2>
 <section id="quest-ce-que-kafka" class="level3">
 <h3 class="anchored" data-anchor-id="quest-ce-que-kafka">2.1 Qu’est-ce que Kafka ?</h3>
 <p>Apache Kafka est une <strong>plateforme de streaming distribuée</strong> créée par LinkedIn en 2011. C’est devenu le standard de facto pour le streaming de données.</p>
@@ -1158,7 +1126,7 @@ Chaque partition :
 <li><strong>ZooKeeper</strong> : Mode classique (stable)</li>
 <li><strong>KRaft</strong> : Nouveau mode sans ZooKeeper (Kafka 3.3+)</li>
 </ul>
-<div id="cell-8" class="cell">
+<div id="cell-9" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Docker Compose pour Kafka avec ZooKeeper</span></span>
@@ -1210,7 +1178,7 @@ Chaque partition :
 <span id="cb6-47"><a href="#cb6-47" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"# Vérifier : docker-compose ps"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-9" class="cell">
+<div id="cell-10" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Commandes CLI Kafka essentielles</span></span>
@@ -1270,7 +1238,7 @@ Chaque partition :
 </div>
 </section>
 <section id="exercice-1-déployer-kafka-et-créer-un-topic" class="level3">
-<h3 class="anchored" data-anchor-id="exercice-1-déployer-kafka-et-créer-un-topic">🏋️ Exercice 1 : Déployer Kafka et créer un topic</h3>
+<h3 class="anchored" data-anchor-id="exercice-1-déployer-kafka-et-créer-un-topic">Exercice 1 : Déployer Kafka et créer un topic</h3>
 <p><strong>Objectif</strong> : Mettre en place l’infrastructure Kafka.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Créer docker-compose.yml avec le contenu ci-dessus</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -1306,7 +1274,7 @@ Chaque partition :
 </section>
 </section>
 <section id="schema-registry-sérialisation" class="level2">
-<h2 class="anchored" data-anchor-id="schema-registry-sérialisation">📜 3. Schema Registry &amp; Sérialisation</h2>
+<h2 class="anchored" data-anchor-id="schema-registry-sérialisation">3. Schema Registry &amp; Sérialisation</h2>
 <section id="le-problème-de-la-sérialisation" class="level3">
 <h3 class="anchored" data-anchor-id="le-problème-de-la-sérialisation">3.1 Le problème de la sérialisation</h3>
 <p>Kafka transporte des <strong>bytes</strong>. Il faut donc sérialiser/désérialiser les données. Trois formats populaires :</p>
@@ -1398,7 +1366,7 @@ Chaque partition :
 </tr>
 </tbody>
 </table>
-<div id="cell-13" class="cell">
+<div id="cell-14" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Exemple de schéma Avro</span></span>
@@ -1431,7 +1399,7 @@ Chaque partition :
 </section>
 </section>
 <section id="python-natif-pour-kafka" class="level2">
-<h2 class="anchored" data-anchor-id="python-natif-pour-kafka">🐍 4. Python Natif pour Kafka</h2>
+<h2 class="anchored" data-anchor-id="python-natif-pour-kafka">4. Python Natif pour Kafka</h2>
 <p>Avant d’utiliser Spark, apprenons à interagir avec Kafka en <strong>Python pur</strong>. Deux librairies principales :</p>
 <table class="caption-top table">
 <thead>
@@ -1456,7 +1424,7 @@ Chaque partition :
 </table>
 <section id="installation" class="level3">
 <h3 class="anchored" data-anchor-id="installation">4.1 Installation</h3>
-<div id="cell-15" class="cell">
+<div id="cell-16" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Installation des librairies Kafka Python</span></span>
@@ -1471,7 +1439,7 @@ Chaque partition :
 </section>
 <section id="producteur-python-kafka-python" class="level3">
 <h3 class="anchored" data-anchor-id="producteur-python-kafka-python">4.2 Producteur Python (kafka-python)</h3>
-<div id="cell-17" class="cell">
+<div id="cell-18" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Producteur Kafka simple avec kafka-python</span></span>
@@ -1547,7 +1515,7 @@ Chaque partition :
 </section>
 <section id="consommateur-python-kafka-python" class="level3">
 <h3 class="anchored" data-anchor-id="consommateur-python-kafka-python">4.3 Consommateur Python (kafka-python)</h3>
-<div id="cell-19" class="cell">
+<div id="cell-20" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Consommateur Kafka simple avec kafka-python</span></span>
@@ -1615,7 +1583,7 @@ Chaque partition :
 </section>
 <section id="producteur-avec-avro-et-schema-registry-confluent-kafka" class="level3">
 <h3 class="anchored" data-anchor-id="producteur-avec-avro-et-schema-registry-confluent-kafka">4.4 Producteur avec Avro et Schema Registry (confluent-kafka)</h3>
-<div id="cell-21" class="cell">
+<div id="cell-22" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Producteur avec Avro et Schema Registry</span></span>
@@ -1702,7 +1670,7 @@ Chaque partition :
 </div>
 </section>
 <section id="exercice-2-producteur-et-consommateur-python" class="level3">
-<h3 class="anchored" data-anchor-id="exercice-2-producteur-et-consommateur-python">🏋️ Exercice 2 : Producteur et Consommateur Python</h3>
+<h3 class="anchored" data-anchor-id="exercice-2-producteur-et-consommateur-python">Exercice 2 : Producteur et Consommateur Python</h3>
 <p><strong>Objectif</strong> : Créer un système d’alertes en temps réel.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Créer un producteur qui envoie des logs au format:</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="co"># {"level": "INFO|WARN|ERROR|FATAL", "message": "...", "timestamp": "..."}</span></span>
@@ -1739,7 +1707,7 @@ Chaque partition :
 <section id="aperçu-de-faust-stream-processing-python" class="level3">
 <h3 class="anchored" data-anchor-id="aperçu-de-faust-stream-processing-python">4.5 Aperçu de Faust (Stream Processing Python)</h3>
 <p><strong>Faust</strong> est un framework Python pour le traitement de streams, inspiré de Kafka Streams (Java). Idéal pour du traitement léger sans Spark.</p>
-<div id="cell-24" class="cell">
+<div id="cell-25" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Exemple Faust (aperçu)</span></span>
@@ -1797,7 +1765,7 @@ Chaque partition :
 </section>
 </section>
 <section id="spark-structured-streaming-sss" class="level2">
-<h2 class="anchored" data-anchor-id="spark-structured-streaming-sss">⚡ 5. Spark Structured Streaming (SSS)</h2>
+<h2 class="anchored" data-anchor-id="spark-structured-streaming-sss">5. Spark Structured Streaming (SSS)</h2>
 <section id="le-modèle-de-programmation" class="level3">
 <h3 class="anchored" data-anchor-id="le-modèle-de-programmation">5.1 Le modèle de programmation</h3>
 <p>L’idée géniale de Spark Structured Streaming : <strong>traiter un stream comme un DataFrame qui grandit à l’infini</strong>.</p>
@@ -1816,7 +1784,7 @@ Stream d'événements: [e1] [e2] [e3] [e4] [e5] [e6] ...
 │  df.filter().groupBy().agg()                        │
 └─────────────────────────────────────────────────────┘</code></pre>
 <p><strong>Avantage</strong> : Tu utilises la même API DataFrame que tu connais déjà !</p>
-<div id="cell-26" class="cell">
+<div id="cell-27" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Configuration Spark pour le streaming avec Kafka</span></span>
@@ -1843,7 +1811,7 @@ Stream d'événements: [e1] [e2] [e3] [e4] [e5] [e6] ...
 </section>
 <section id="lire-depuis-kafka-avec-readstream" class="level3">
 <h3 class="anchored" data-anchor-id="lire-depuis-kafka-avec-readstream">5.2 Lire depuis Kafka avec readStream</h3>
-<div id="cell-28" class="cell">
+<div id="cell-29" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Lire un stream Kafka</span></span>
@@ -1932,7 +1900,7 @@ Stream d'événements: [e1] [e2] [e3] [e4] [e5] [e6] ...
 </tr>
 </tbody>
 </table>
-<div id="cell-30" class="cell">
+<div id="cell-31" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Écrire le stream (différents sinks)</span></span>
@@ -1985,7 +1953,7 @@ Stream d'événements: [e1] [e2] [e3] [e4] [e5] [e6] ...
 </div>
 </section>
 <section id="exercice-3-pipeline-kafka-spark-sss-console" class="level3">
-<h3 class="anchored" data-anchor-id="exercice-3-pipeline-kafka-spark-sss-console">🏋️ Exercice 3 : Pipeline Kafka → Spark SSS → Console</h3>
+<h3 class="anchored" data-anchor-id="exercice-3-pipeline-kafka-spark-sss-console">Exercice 3 : Pipeline Kafka → Spark SSS → Console</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Lire le topic 'events' créé à l'exercice 1</span></span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Parser le JSON</span></span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Filtrer les events avec level = 'ERROR' ou 'FATAL'</span></span>
@@ -2019,7 +1987,7 @@ Stream d'événements: [e1] [e2] [e3] [e4] [e5] [e6] ...
 </section>
 </section>
 <section id="gestion-du-temps-et-de-létat" class="level2">
-<h2 class="anchored" data-anchor-id="gestion-du-temps-et-de-létat">⏰ 6. Gestion du Temps et de l’État</h2>
+<h2 class="anchored" data-anchor-id="gestion-du-temps-et-de-létat">6. Gestion du Temps et de l’État</h2>
 <section id="le-problème-du-temps-dévénement" class="level3">
 <h3 class="anchored" data-anchor-id="le-problème-du-temps-dévénement">6.1 Le problème du temps d’événement</h3>
 <p>En streaming, il y a <strong>deux temps</strong> différents :</p>
@@ -2072,7 +2040,7 @@ Si tu agrèges par Event Time → résultat correct</code></pre>
                                         
    Chaque event appartient à            Chaque event peut appartenir
    UNE SEULE fenêtre                    à PLUSIEURS fenêtres</code></pre>
-<div id="cell-34" class="cell">
+<div id="cell-35" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Windowing avec Spark SSS</span></span>
@@ -2133,7 +2101,7 @@ Fenêtre 10:00-10:05                 Fenêtre 10:00-10:05
      en attendant les retards            Late data après → ignoré
                                     
 Mémoire : EXPLOSE 💥               Mémoire : Stable ✅</code></pre>
-<div id="cell-36" class="cell">
+<div id="cell-37" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Watermarks avec Spark SSS</span></span>
@@ -2189,7 +2157,7 @@ Mémoire : EXPLOSE 💥               Mémoire : Stable ✅</code></pre>
 </div>
 </section>
 <section id="exercice-4-agrégation-avec-watermark" class="level3">
-<h3 class="anchored" data-anchor-id="exercice-4-agrégation-avec-watermark">🏋️ Exercice 4 : Agrégation avec Watermark</h3>
+<h3 class="anchored" data-anchor-id="exercice-4-agrégation-avec-watermark">Exercice 4 : Agrégation avec Watermark</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculer le nombre d'erreurs par fenêtre de 5 minutes</span></span>
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="co"># avec un watermark de 10 minutes</span></span>
 <span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -2214,7 +2182,7 @@ Mémoire : EXPLOSE 💥               Mémoire : Stable ✅</code></pre>
 </section>
 </section>
 <section id="opérations-avancées-et-sinks-transactionnelles" class="level2">
-<h2 class="anchored" data-anchor-id="opérations-avancées-et-sinks-transactionnelles">🔗 7. Opérations Avancées et Sinks Transactionnelles</h2>
+<h2 class="anchored" data-anchor-id="opérations-avancées-et-sinks-transactionnelles">7. Opérations Avancées et Sinks Transactionnelles</h2>
 <section id="streaming-joins" class="level3">
 <h3 class="anchored" data-anchor-id="streaming-joins">7.1 Streaming Joins</h3>
 <p>Spark SSS supporte plusieurs types de joins :</p>
@@ -2244,7 +2212,7 @@ Mémoire : EXPLOSE 💥               Mémoire : Stable ✅</code></pre>
 </tr>
 </tbody>
 </table>
-<div id="cell-39" class="cell">
+<div id="cell-40" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Streaming Joins</span></span>
@@ -2301,7 +2269,7 @@ Mémoire : EXPLOSE 💥               Mémoire : Stable ✅</code></pre>
 <section id="foreachbatch-le-pont-entre-streaming-et-batch" class="level3">
 <h3 class="anchored" data-anchor-id="foreachbatch-le-pont-entre-streaming-et-batch">7.2 foreachBatch : Le pont entre streaming et batch</h3>
 <p><code>foreachBatch</code> permet d’appliquer n’importe quelle logique batch sur chaque micro-batch. C’est <strong>crucial</strong> pour les upserts avec MERGE INTO.</p>
-<div id="cell-41" class="cell">
+<div id="cell-42" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># foreachBatch avec MERGE INTO Delta</span></span>
@@ -2372,7 +2340,7 @@ Mémoire : EXPLOSE 💥               Mémoire : Stable ✅</code></pre>
 </div>
 </section>
 <section id="exercice-5-upsert-streaming-avec-foreachbatch" class="level3">
-<h3 class="anchored" data-anchor-id="exercice-5-upsert-streaming-avec-foreachbatch">🏋️ Exercice 5 : Upsert streaming avec foreachBatch</h3>
+<h3 class="anchored" data-anchor-id="exercice-5-upsert-streaming-avec-foreachbatch">Exercice 5 : Upsert streaming avec foreachBatch</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Créer un pipeline qui :</span></span>
 <span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Lit des updates de statut de commande depuis Kafka</span></span>
 <span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Fait un MERGE INTO vers une table Delta 'order_status'</span></span>
@@ -2401,7 +2369,7 @@ Mémoire : EXPLOSE 💥               Mémoire : Stable ✅</code></pre>
 </section>
 </section>
 <section id="kafka-connect-debezium-aperçu" class="level2">
-<h2 class="anchored" data-anchor-id="kafka-connect-debezium-aperçu">🔌 8. Kafka Connect &amp; Debezium (Aperçu)</h2>
+<h2 class="anchored" data-anchor-id="kafka-connect-debezium-aperçu">8. Kafka Connect &amp; Debezium (Aperçu)</h2>
 <section id="quest-ce-que-kafka-connect" class="level3">
 <h3 class="anchored" data-anchor-id="quest-ce-que-kafka-connect">8.1 Qu’est-ce que Kafka Connect ?</h3>
 <p><strong>Kafka Connect</strong> est un framework pour connecter Kafka à d’autres systèmes <strong>sans code</strong> :</p>
@@ -2431,7 +2399,7 @@ Mémoire : EXPLOSE 💥               Mémoire : Stable ✅</code></pre>
 └────────────────┘         └──────────────┘         └────────────┘
 
 Chaque INSERT/UPDATE/DELETE → Message Kafka automatique !</code></pre>
-<div id="cell-44" class="cell">
+<div id="cell-45" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Exemple de configuration Debezium</span></span>
@@ -2468,11 +2436,11 @@ Chaque INSERT/UPDATE/DELETE → Message Kafka automatique !</code></pre>
 </section>
 </section>
 <section id="déploiement-observabilité" class="level2">
-<h2 class="anchored" data-anchor-id="déploiement-observabilité">📊 9. Déploiement &amp; Observabilité</h2>
+<h2 class="anchored" data-anchor-id="déploiement-observabilité">9. Déploiement &amp; Observabilité</h2>
 <section id="déployer-sss-sur-kubernetes" class="level3">
 <h3 class="anchored" data-anchor-id="déployer-sss-sur-kubernetes">9.1 Déployer SSS sur Kubernetes</h3>
 <p>Pour la production, on utilise le <strong>Spark Operator</strong> (voir Module 21) :</p>
-<div id="cell-46" class="cell">
+<div id="cell-47" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co"># SparkApplication pour un job streaming</span></span>
@@ -2554,7 +2522,7 @@ Chaque INSERT/UPDATE/DELETE → Message Kafka automatique !</code></pre>
 </tr>
 </tbody>
 </table>
-<div id="cell-48" class="cell">
+<div id="cell-49" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Monitoring du streaming</span></span>
@@ -2616,9 +2584,9 @@ Chaque INSERT/UPDATE/DELETE → Message Kafka automatique !</code></pre>
 </section>
 </section>
 <section id="mini-projet-pipeline-temps-réel-complet" class="level2">
-<h2 class="anchored" data-anchor-id="mini-projet-pipeline-temps-réel-complet">🚀 10. Mini-Projet : Pipeline Temps Réel Complet</h2>
+<h2 class="anchored" data-anchor-id="mini-projet-pipeline-temps-réel-complet">10. Mini-Projet : Pipeline Temps Réel Complet</h2>
 <section id="objectif" class="level3">
-<h3 class="anchored" data-anchor-id="objectif">🎯 Objectif</h3>
+<h3 class="anchored" data-anchor-id="objectif">Objectif</h3>
 <p>Construire un pipeline d’ingestion transactionnel : <strong>Python Producer → Kafka → Spark SSS → Delta Lake</strong></p>
 <pre><code>┌────────────────┐   ┌───────────────┐   ┌──────────────────┐   ┌──────────────┐
 │   Producteur   │   │     Kafka     │   │ Spark Structured │   │    Delta     │
@@ -2627,7 +2595,7 @@ Chaque INSERT/UPDATE/DELETE → Message Kafka automatique !</code></pre>
 │ Simule des     │   │ Topic:        │   │ • Watermark      │   │ • MERGE INTO │
 │ transactions   │   │ transactions  │   │ • Window 5 min   │   │ • Silver     │
 └────────────────┘   └───────────────┘   └──────────────────┘   └──────────────┘</code></pre>
-<div id="cell-50" class="cell">
+<div id="cell-51" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ÉTAPE 1 : Producteur Python</span></span>
@@ -2670,7 +2638,7 @@ Chaque INSERT/UPDATE/DELETE → Message Kafka automatique !</code></pre>
 <span id="cb42-38"><a href="#cb42-38" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(producer_code)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-51" class="cell">
+<div id="cell-52" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ÉTAPE 2 : Job Spark Streaming</span></span>
@@ -2775,7 +2743,7 @@ Chaque INSERT/UPDATE/DELETE → Message Kafka automatique !</code></pre>
 </section>
 </section>
 <section id="quiz" class="level2">
-<h2 class="anchored" data-anchor-id="quiz">🧪 Quiz</h2>
+<h2 class="anchored" data-anchor-id="quiz">Quiz</h2>
 <strong>Q1.</strong> Différence entre Event Time et Processing Time ?
 <details>
 <summary>
@@ -2846,7 +2814,7 @@ Pour du CDC temps réel depuis une base de données vers Kafka.
 </section>
 <section id="prochaine-étape" class="level2">
 <h2 class="anchored" data-anchor-id="prochaine-étape">➡️ Prochaine étape</h2>
-<p>👉 <strong>Module 25 : <code>25_dbt_data_quality.ipynb</code></strong> — dbt + Data Quality</p>
+<p>👉 <strong>Module 25 : <code>25_dbt_data_quality</code></strong> — dbt + Data Quality</p>
 <hr>
 </section>
 <section id="récapitulatif" class="level2">
@@ -2914,7 +2882,7 @@ Pour du CDC temps réel depuis une base de données vers Kafka.
 </style>
 
 <div id="pdf-button" onclick="downloadPDF()">
-  📄 Télécharger ce module en PDF
+  📄 Télécharger la version PDF
 </div>
 
 <script>
