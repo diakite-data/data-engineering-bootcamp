@@ -857,10 +857,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Maîtriser <strong>Watermarks</strong> et <strong>Windowing</strong> pour le temps d’événement</li>
 <li>Utiliser <strong>foreachBatch + MERGE INTO</strong> pour des sinks transactionnels</li>
 </ul>
-<p><a href="https://colab.research.google.com/github/diakite-data/data-engineering-bootcamp/blob/main/notebooks/intermediate/24_kafka_streaming.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a></p>
-<blockquote class="blockquote">
-<p>💡 <strong>Conseil</strong> : Cliquez sur le badge ci-dessus pour exécuter ce notebook directement dans Google Colab (aucune installation requise).</p>
-</blockquote>
 <hr>
 </section>
 <section id="introduction-pourquoi-le-temps-réel" class="level2">
@@ -1126,7 +1122,7 @@ Chaque partition :
 <li><strong>ZooKeeper</strong> : Mode classique (stable)</li>
 <li><strong>KRaft</strong> : Nouveau mode sans ZooKeeper (Kafka 3.3+)</li>
 </ul>
-<div id="cell-9" class="cell">
+<div id="cell-8" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Docker Compose pour Kafka avec ZooKeeper</span></span>
@@ -1178,7 +1174,7 @@ Chaque partition :
 <span id="cb6-47"><a href="#cb6-47" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"# Vérifier : docker-compose ps"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-10" class="cell">
+<div id="cell-9" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Commandes CLI Kafka essentielles</span></span>
@@ -1366,7 +1362,7 @@ Chaque partition :
 </tr>
 </tbody>
 </table>
-<div id="cell-14" class="cell">
+<div id="cell-13" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Exemple de schéma Avro</span></span>
@@ -1424,7 +1420,7 @@ Chaque partition :
 </table>
 <section id="installation" class="level3">
 <h3 class="anchored" data-anchor-id="installation">4.1 Installation</h3>
-<div id="cell-16" class="cell">
+<div id="cell-15" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Installation des librairies Kafka Python</span></span>
@@ -1439,7 +1435,7 @@ Chaque partition :
 </section>
 <section id="producteur-python-kafka-python" class="level3">
 <h3 class="anchored" data-anchor-id="producteur-python-kafka-python">4.2 Producteur Python (kafka-python)</h3>
-<div id="cell-18" class="cell">
+<div id="cell-17" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Producteur Kafka simple avec kafka-python</span></span>
@@ -1515,7 +1511,7 @@ Chaque partition :
 </section>
 <section id="consommateur-python-kafka-python" class="level3">
 <h3 class="anchored" data-anchor-id="consommateur-python-kafka-python">4.3 Consommateur Python (kafka-python)</h3>
-<div id="cell-20" class="cell">
+<div id="cell-19" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Consommateur Kafka simple avec kafka-python</span></span>
@@ -1583,7 +1579,7 @@ Chaque partition :
 </section>
 <section id="producteur-avec-avro-et-schema-registry-confluent-kafka" class="level3">
 <h3 class="anchored" data-anchor-id="producteur-avec-avro-et-schema-registry-confluent-kafka">4.4 Producteur avec Avro et Schema Registry (confluent-kafka)</h3>
-<div id="cell-22" class="cell">
+<div id="cell-21" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Producteur avec Avro et Schema Registry</span></span>
@@ -1707,7 +1703,7 @@ Chaque partition :
 <section id="aperçu-de-faust-stream-processing-python" class="level3">
 <h3 class="anchored" data-anchor-id="aperçu-de-faust-stream-processing-python">4.5 Aperçu de Faust (Stream Processing Python)</h3>
 <p><strong>Faust</strong> est un framework Python pour le traitement de streams, inspiré de Kafka Streams (Java). Idéal pour du traitement léger sans Spark.</p>
-<div id="cell-25" class="cell">
+<div id="cell-24" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Exemple Faust (aperçu)</span></span>
@@ -1784,7 +1780,7 @@ Stream d'événements: [e1] [e2] [e3] [e4] [e5] [e6] ...
 │  df.filter().groupBy().agg()                        │
 └─────────────────────────────────────────────────────┘</code></pre>
 <p><strong>Avantage</strong> : Tu utilises la même API DataFrame que tu connais déjà !</p>
-<div id="cell-27" class="cell">
+<div id="cell-26" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Configuration Spark pour le streaming avec Kafka</span></span>
@@ -1811,7 +1807,7 @@ Stream d'événements: [e1] [e2] [e3] [e4] [e5] [e6] ...
 </section>
 <section id="lire-depuis-kafka-avec-readstream" class="level3">
 <h3 class="anchored" data-anchor-id="lire-depuis-kafka-avec-readstream">5.2 Lire depuis Kafka avec readStream</h3>
-<div id="cell-29" class="cell">
+<div id="cell-28" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Lire un stream Kafka</span></span>
@@ -1900,7 +1896,7 @@ Stream d'événements: [e1] [e2] [e3] [e4] [e5] [e6] ...
 </tr>
 </tbody>
 </table>
-<div id="cell-31" class="cell">
+<div id="cell-30" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Écrire le stream (différents sinks)</span></span>
@@ -2040,7 +2036,7 @@ Si tu agrèges par Event Time → résultat correct</code></pre>
                                         
    Chaque event appartient à            Chaque event peut appartenir
    UNE SEULE fenêtre                    à PLUSIEURS fenêtres</code></pre>
-<div id="cell-35" class="cell">
+<div id="cell-34" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Windowing avec Spark SSS</span></span>
@@ -2101,7 +2097,7 @@ Fenêtre 10:00-10:05                 Fenêtre 10:00-10:05
      en attendant les retards            Late data après → ignoré
                                     
 Mémoire : EXPLOSE 💥               Mémoire : Stable ✅</code></pre>
-<div id="cell-37" class="cell">
+<div id="cell-36" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Watermarks avec Spark SSS</span></span>
@@ -2212,7 +2208,7 @@ Mémoire : EXPLOSE 💥               Mémoire : Stable ✅</code></pre>
 </tr>
 </tbody>
 </table>
-<div id="cell-40" class="cell">
+<div id="cell-39" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Streaming Joins</span></span>
@@ -2269,7 +2265,7 @@ Mémoire : EXPLOSE 💥               Mémoire : Stable ✅</code></pre>
 <section id="foreachbatch-le-pont-entre-streaming-et-batch" class="level3">
 <h3 class="anchored" data-anchor-id="foreachbatch-le-pont-entre-streaming-et-batch">7.2 foreachBatch : Le pont entre streaming et batch</h3>
 <p><code>foreachBatch</code> permet d’appliquer n’importe quelle logique batch sur chaque micro-batch. C’est <strong>crucial</strong> pour les upserts avec MERGE INTO.</p>
-<div id="cell-42" class="cell">
+<div id="cell-41" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># foreachBatch avec MERGE INTO Delta</span></span>
@@ -2399,7 +2395,7 @@ Mémoire : EXPLOSE 💥               Mémoire : Stable ✅</code></pre>
 └────────────────┘         └──────────────┘         └────────────┘
 
 Chaque INSERT/UPDATE/DELETE → Message Kafka automatique !</code></pre>
-<div id="cell-45" class="cell">
+<div id="cell-44" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Exemple de configuration Debezium</span></span>
@@ -2440,7 +2436,7 @@ Chaque INSERT/UPDATE/DELETE → Message Kafka automatique !</code></pre>
 <section id="déployer-sss-sur-kubernetes" class="level3">
 <h3 class="anchored" data-anchor-id="déployer-sss-sur-kubernetes">9.1 Déployer SSS sur Kubernetes</h3>
 <p>Pour la production, on utilise le <strong>Spark Operator</strong> (voir Module 21) :</p>
-<div id="cell-47" class="cell">
+<div id="cell-46" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co"># SparkApplication pour un job streaming</span></span>
@@ -2522,7 +2518,7 @@ Chaque INSERT/UPDATE/DELETE → Message Kafka automatique !</code></pre>
 </tr>
 </tbody>
 </table>
-<div id="cell-49" class="cell">
+<div id="cell-48" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Monitoring du streaming</span></span>
@@ -2595,7 +2591,7 @@ Chaque INSERT/UPDATE/DELETE → Message Kafka automatique !</code></pre>
 │ Simule des     │   │ Topic:        │   │ • Watermark      │   │ • MERGE INTO │
 │ transactions   │   │ transactions  │   │ • Window 5 min   │   │ • Silver     │
 └────────────────┘   └───────────────┘   └──────────────────┘   └──────────────┘</code></pre>
-<div id="cell-51" class="cell">
+<div id="cell-50" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ÉTAPE 1 : Producteur Python</span></span>
@@ -2638,7 +2634,7 @@ Chaque INSERT/UPDATE/DELETE → Message Kafka automatique !</code></pre>
 <span id="cb42-38"><a href="#cb42-38" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(producer_code)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-52" class="cell">
+<div id="cell-51" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ÉTAPE 2 : Job Spark Streaming</span></span>

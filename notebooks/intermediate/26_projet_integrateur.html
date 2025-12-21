@@ -898,10 +898,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 └──────────────┘            │ product_id (FK)  │             └──────────────┘
                             │ seller_id (FK)   │
                             └──────────────────┘</code></pre>
-<p><a href="https://colab.research.google.com/github/diakite-data/data-engineering-bootcamp/blob/main/notebooks/intermediate/26_projet_integrateur.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a></p>
-<blockquote class="blockquote">
-<p>💡 <strong>Conseil</strong> : Cliquez sur le badge ci-dessus pour exécuter ce notebook directement dans Google Colab (aucune installation requise).</p>
-</blockquote>
 <hr>
 </section>
 </section>
@@ -1529,7 +1525,7 @@ s3a://lakehouse/bronze/sellers/</code></pre>
 </tr>
 </tbody>
 </table>
-<div id="cell-14" class="cell">
+<div id="cell-13" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Hint 1 : Structure du producteur Kafka</span></span>
@@ -1576,7 +1572,7 @@ s3a://lakehouse/bronze/sellers/</code></pre>
 <span id="cb10-42"><a href="#cb10-42" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(producer_template)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-15" class="cell">
+<div id="cell-14" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Hint 2 : Pattern MERGE INTO pour Silver</span></span>
@@ -1631,7 +1627,7 @@ s3a://lakehouse/bronze/sellers/</code></pre>
 <span id="cb11-50"><a href="#cb11-50" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(merge_pattern)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-16" class="cell">
+<div id="cell-15" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Hint 3 : Model dbt incremental</span></span>
@@ -1672,7 +1668,7 @@ s3a://lakehouse/bronze/sellers/</code></pre>
 <span id="cb12-36"><a href="#cb12-36" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(dbt_incremental)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-17" class="cell">
+<div id="cell-16" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Hint 4 : Macro RFM pour dbt</span></span>
@@ -1715,7 +1711,7 @@ s3a://lakehouse/bronze/sellers/</code></pre>
 <span id="cb13-38"><a href="#cb13-38" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(rfm_macro)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-18" class="cell">
+<div id="cell-17" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Hint 5 : DAG Airflow</span></span>

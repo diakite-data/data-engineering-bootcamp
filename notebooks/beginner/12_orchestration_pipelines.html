@@ -1035,10 +1035,6 @@ Avec orchestration :
 </tr>
 </tbody>
 </table>
-<p><a href="https://colab.research.google.com/github/diakite-data/data-engineering-bootcamp/blob/main/notebooks/beginner/12_orchestration_pipelines.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a></p>
-<blockquote class="blockquote">
-<p>💡 <strong>Conseil</strong> : Cliquez sur le badge ci-dessus pour exécuter ce notebook directement dans Google Colab (aucune installation requise).</p>
-</blockquote>
 <hr>
 </section>
 <section id="niveau-1-planificateur-windows" class="level1">
@@ -1415,7 +1411,7 @@ Avec orchestration :
 <section id="ton-premier-dag" class="level2">
 <h2 class="anchored" data-anchor-id="ton-premier-dag">Ton premier DAG</h2>
 <p>Créer le fichier <code>~/airflow/dags/mon_premier_dag.py</code> :</p>
-<div id="cell-10" class="cell">
+<div id="cell-9" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ~/airflow/dags/mon_premier_dag.py</span></span>
@@ -1661,7 +1657,7 @@ Avec orchestration :
 └──────────┘                       └───────────┘</code></pre>
 <section id="méthode-1-return-automatique" class="level3">
 <h3 class="anchored" data-anchor-id="méthode-1-return-automatique">Méthode 1 : Return (automatique)</h3>
-<div id="cell-14" class="cell">
+<div id="cell-13" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># XCom avec return (automatique)</span></span>
@@ -1732,7 +1728,7 @@ Avec orchestration :
 <section id="taskflow-api-airflow-2.0" class="level2">
 <h2 class="anchored" data-anchor-id="taskflow-api-airflow-2.0">TaskFlow API (Airflow 2.0+)</h2>
 <p>Syntaxe moderne et plus <strong>Pythonic</strong> avec des décorateurs :</p>
-<div id="cell-17" class="cell">
+<div id="cell-16" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># TaskFlow API - Syntaxe moderne (Airflow 2.0+)</span></span>
@@ -1824,7 +1820,7 @@ Avec orchestration :
 └──────────────────────────────────────────────────────────────┘</code></pre>
 <section id="filesensor" class="level3">
 <h3 class="anchored" data-anchor-id="filesensor">FileSensor</h3>
-<div id="cell-20" class="cell">
+<div id="cell-19" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># FileSensor - Attendre qu'un fichier existe</span></span>
@@ -1915,7 +1911,7 @@ Avec orchestration :
          ┌────────┐ ┌────────┐ ┌────────┐
          │ Path A │ │ Path B │ │ Path C │
          └────────┘ └────────┘ └────────┘</code></pre>
-<div id="cell-23" class="cell">
+<div id="cell-22" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Branching - Exécution conditionnelle</span></span>

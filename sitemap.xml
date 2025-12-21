@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/intermediate/17_polars_for_data_engineering.html</loc>
-    <lastmod>2025-12-20T17:50:26.352Z</lastmod>
+    <lastmod>2025-12-21T17:56:49.253Z</lastmod>
   </url>
   <url>
     <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/intermediate/15_kubernetes_fundamentals.html</loc>
@@ -10,51 +10,51 @@
   </url>
   <url>
     <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/intermediate/19_pyspark_advanced.html</loc>
-    <lastmod>2025-12-20T18:03:36.505Z</lastmod>
+    <lastmod>2025-12-21T17:56:49.256Z</lastmod>
   </url>
   <url>
     <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/intermediate/24_kafka_streaming.html</loc>
-    <lastmod>2025-12-21T12:39:31.900Z</lastmod>
+    <lastmod>2025-12-21T17:56:49.263Z</lastmod>
   </url>
   <url>
     <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/intermediate/26_projet_integrateur.html</loc>
-    <lastmod>2025-12-21T13:23:05.973Z</lastmod>
+    <lastmod>2025-12-21T17:56:49.266Z</lastmod>
   </url>
   <url>
     <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/intermediate/25_dbt_data_quality.html</loc>
-    <lastmod>2025-12-21T13:23:01.615Z</lastmod>
+    <lastmod>2025-12-21T17:56:49.265Z</lastmod>
   </url>
   <url>
     <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/intermediate/23_table_formats_delta_iceberg.html</loc>
-    <lastmod>2025-12-21T12:36:47.182Z</lastmod>
+    <lastmod>2025-12-21T17:56:49.261Z</lastmod>
   </url>
   <url>
     <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/beginner/11_pyspark_for_data_engineering.html</loc>
-    <lastmod>2025-12-20T15:22:33.199Z</lastmod>
+    <lastmod>2025-12-21T17:56:49.247Z</lastmod>
   </url>
   <url>
     <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/beginner/04_python_basics_for_data_engineers.html</loc>
-    <lastmod>2025-12-20T13:31:49.341Z</lastmod>
+    <lastmod>2025-12-21T17:56:49.236Z</lastmod>
   </url>
   <url>
     <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/beginner/03_git_for_data_engineers.html</loc>
-    <lastmod>2025-12-20T13:12:11.025Z</lastmod>
+    <lastmod>2025-12-21T17:56:49.233Z</lastmod>
   </url>
   <url>
     <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/beginner/06_intro_relational_databases.html</loc>
-    <lastmod>2025-12-20T14:21:27.359Z</lastmod>
+    <lastmod>2025-12-21T17:56:49.241Z</lastmod>
   </url>
   <url>
     <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/beginner/05_python_data_processing_for_data_engineers.html</loc>
-    <lastmod>2025-12-21T16:50:26.131Z</lastmod>
+    <lastmod>2025-12-21T17:56:49.238Z</lastmod>
   </url>
   <url>
     <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/beginner/07_sql_for_data_engineers.html</loc>
-    <lastmod>2025-12-20T14:27:16.699Z</lastmod>
+    <lastmod>2025-12-21T17:56:49.242Z</lastmod>
   </url>
   <url>
     <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/beginner/08_intro_big_data_distributed.html</loc>
-    <lastmod>2025-12-20T14:50:53.683Z</lastmod>
+    <lastmod>2025-12-21T17:56:49.243Z</lastmod>
   </url>
   <url>
     <loc>https://diakite-data.github.io/data-engineering-bootcamp/index.html</loc>
@@ -82,31 +82,31 @@
   </url>
   <url>
     <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/beginner/09_mongodb_for_data_engineers.html</loc>
-    <lastmod>2025-12-20T15:00:38.770Z</lastmod>
+    <lastmod>2025-12-21T17:56:49.245Z</lastmod>
   </url>
   <url>
     <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html</loc>
-    <lastmod>2025-12-20T15:45:46.751Z</lastmod>
+    <lastmod>2025-12-21T17:56:49.250Z</lastmod>
   </url>
   <url>
     <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/beginner/01_intro_data_engineering.html</loc>
-    <lastmod>2025-12-20T13:06:40.894Z</lastmod>
+    <lastmod>2025-12-21T17:56:49.231Z</lastmod>
   </url>
   <url>
     <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/beginner/12_orchestration_pipelines.html</loc>
-    <lastmod>2025-12-20T15:38:20.201Z</lastmod>
+    <lastmod>2025-12-21T17:56:49.248Z</lastmod>
   </url>
   <url>
     <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/beginner/10_elasticsearch_for_data_engineers.html</loc>
-    <lastmod>2025-12-20T15:13:27.690Z</lastmod>
+    <lastmod>2025-12-21T17:56:49.246Z</lastmod>
   </url>
   <url>
     <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/beginner/tmp.html</loc>
-    <lastmod>2025-12-17T11:26:37.860Z</lastmod>
+    <lastmod>2025-12-21T17:56:49.250Z</lastmod>
   </url>
   <url>
     <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/beginner/02_bash_for_data_engineers.html</loc>
-    <lastmod>2025-12-20T13:06:43.439Z</lastmod>
+    <lastmod>2025-12-21T17:56:49.232Z</lastmod>
   </url>
   <url>
     <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/intermediate/21_spark_on_kubernetes.html</loc>
@@ -122,14 +122,14 @@
   </url>
   <url>
     <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/intermediate/20_spark_sql_deep_dive.html</loc>
-    <lastmod>2025-12-21T12:24:16.127Z</lastmod>
+    <lastmod>2025-12-21T17:56:49.258Z</lastmod>
   </url>
   <url>
     <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/intermediate/18_high_performance_python.html</loc>
-    <lastmod>2025-12-20T17:59:43.673Z</lastmod>
+    <lastmod>2025-12-21T17:56:49.255Z</lastmod>
   </url>
   <url>
     <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/intermediate/22_cloud_and_object_storage.html</loc>
-    <lastmod>2025-12-21T12:32:06.849Z</lastmod>
+    <lastmod>2025-12-21T17:56:49.261Z</lastmod>
   </url>
 </urlset>

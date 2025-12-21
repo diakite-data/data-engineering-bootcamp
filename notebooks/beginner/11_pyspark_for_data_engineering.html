@@ -951,30 +951,26 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <blockquote class="blockquote">
 <p>💡 <strong>Ce notebook est interactif</strong> : tu peux exécuter toutes les cellules de code !</p>
 </blockquote>
-<p><a href="https://colab.research.google.com/github/diakite-data/data-engineering-bootcamp/blob/main/notebooks/beginner/11_pyspark_for_data_engineering.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a></p>
-<blockquote class="blockquote">
-<p>💡 <strong>Conseil</strong> : Cliquez sur le badge ci-dessus pour exécuter ce notebook directement dans Google Colab (aucune installation requise).</p>
-</blockquote>
 </section>
 </section>
 <section id="installation-et-setup" class="level2">
 <h2 class="anchored" data-anchor-id="installation-et-setup">Installation et Setup</h2>
 <p>PySpark nécessite Java. Vérifions d’abord l’installation.</p>
-<div id="cell-4" class="cell">
+<div id="cell-3" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Installation de PySpark</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install pyspark pandas numpy pyarrow</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-5" class="cell">
+<div id="cell-4" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérifier Java</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>java <span class="op">-</span>version</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-6" class="cell">
+<div id="cell-5" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Imports de base</span></span>
@@ -1018,7 +1014,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </section>
 <section id="créer-une-sparksession" class="level2">
 <h2 class="anchored" data-anchor-id="créer-une-sparksession">1.1 Créer une SparkSession</h2>
-<div id="cell-9" class="cell">
+<div id="cell-8" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Créer une SparkSession</span></span>
@@ -1035,7 +1031,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Master : </span><span class="sc">{</span>spark<span class="sc">.</span>sparkContext<span class="sc">.</span>master<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-10" class="cell">
+<div id="cell-9" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Configuration du logging</span></span>
@@ -1046,7 +1042,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </section>
 <section id="premiers-dataframes" class="level2">
 <h2 class="anchored" data-anchor-id="premiers-dataframes">1.2 Premiers DataFrames</h2>
-<div id="cell-12" class="cell">
+<div id="cell-11" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Méthode 1 : Depuis une liste Python</span></span>
@@ -1066,7 +1062,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>df.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-13" class="cell">
+<div id="cell-12" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Méthode 2 : Depuis un Pandas DataFrame</span></span>
@@ -1082,7 +1078,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>spark_df.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-14" class="cell">
+<div id="cell-13" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Méthode 3 : Avec un schéma explicite</span></span>
@@ -1103,7 +1099,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </section>
 <section id="explorer-un-dataframe" class="level2">
 <h2 class="anchored" data-anchor-id="explorer-un-dataframe">1.3 Explorer un DataFrame</h2>
-<div id="cell-16" class="cell">
+<div id="cell-15" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Afficher le schéma</span></span>
@@ -1125,7 +1121,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.dtypes)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-17" class="cell">
+<div id="cell-16" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Statistiques descriptives</span></span>
@@ -1145,7 +1141,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <p>Les transformations sont <strong>lazy</strong> : elles ne s’exécutent que lorsqu’une action est appelée.</p>
 <section id="sélection-de-colonnes" class="level2">
 <h2 class="anchored" data-anchor-id="sélection-de-colonnes">2.1 Sélection de colonnes</h2>
-<div id="cell-20" class="cell">
+<div id="cell-19" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Sélectionner des colonnes</span></span>
@@ -1170,7 +1166,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </section>
 <section id="filtrage" class="level2">
 <h2 class="anchored" data-anchor-id="filtrage">2.2 Filtrage</h2>
-<div id="cell-22" class="cell">
+<div id="cell-21" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Filtrer les lignes</span></span>
@@ -1196,7 +1192,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>df.<span class="bu">filter</span>(F.col(<span class="st">"ville"</span>).isin([<span class="st">"Paris"</span>, <span class="st">"Lyon"</span>])).show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-23" class="cell">
+<div id="cell-22" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Filtres avancés</span></span>
@@ -1213,7 +1209,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </section>
 <section id="ajouter-et-modifier-des-colonnes" class="level2">
 <h2 class="anchored" data-anchor-id="ajouter-et-modifier-des-colonnes">2.3 Ajouter et modifier des colonnes</h2>
-<div id="cell-25" class="cell">
+<div id="cell-24" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ajouter une nouvelle colonne</span></span>
@@ -1235,7 +1231,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>df_modified.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-26" class="cell">
+<div id="cell-25" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ajouter plusieurs colonnes</span></span>
@@ -1252,7 +1248,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </section>
 <section id="renommer-et-supprimer-des-colonnes" class="level2">
 <h2 class="anchored" data-anchor-id="renommer-et-supprimer-des-colonnes">2.4 Renommer et supprimer des colonnes</h2>
-<div id="cell-28" class="cell">
+<div id="cell-27" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Renommer une colonne</span></span>
@@ -1269,7 +1265,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </section>
 <section id="tri" class="level2">
 <h2 class="anchored" data-anchor-id="tri">2.5 Tri</h2>
-<div id="cell-30" class="cell">
+<div id="cell-29" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Trier par salaire (ascendant)</span></span>
@@ -1293,7 +1289,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <p>Les agrégations permettent de calculer des statistiques sur les données.</p>
 <section id="agrégations-simples" class="level2">
 <h2 class="anchored" data-anchor-id="agrégations-simples">3.1 Agrégations simples</h2>
-<div id="cell-33" class="cell">
+<div id="cell-32" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Statistiques de base</span></span>
@@ -1307,7 +1303,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>).show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-34" class="cell">
+<div id="cell-33" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Agrégations multiples</span></span>
@@ -1325,7 +1321,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </section>
 <section id="groupby" class="level2">
 <h2 class="anchored" data-anchor-id="groupby">3.2 GroupBy</h2>
-<div id="cell-36" class="cell">
+<div id="cell-35" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Grouper par ville</span></span>
@@ -1338,7 +1334,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>).orderBy(<span class="st">"ville"</span>).show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-37" class="cell">
+<div id="cell-36" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Créer un DataFrame plus complexe pour les exemples</span></span>
@@ -1358,7 +1354,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a>df_ventes.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-38" class="cell">
+<div id="cell-37" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># GroupBy multiple</span></span>
@@ -1370,7 +1366,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>).orderBy(<span class="st">"mois"</span>, <span class="st">"ville"</span>).show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-39" class="cell">
+<div id="cell-38" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Agrégations conditionnelles</span></span>
@@ -1385,7 +1381,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </section>
 <section id="window-functions" class="level2">
 <h2 class="anchored" data-anchor-id="window-functions">3.3 Window Functions</h2>
-<div id="cell-41" class="cell">
+<div id="cell-40" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ranking dans chaque ville</span></span>
@@ -1402,7 +1398,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a>df_ranked.orderBy(<span class="st">"ville"</span>, <span class="st">"rank"</span>).show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-42" class="cell">
+<div id="cell-41" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculs cumulatifs</span></span>
@@ -1417,7 +1413,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a>df_cumul.select(<span class="st">"id"</span>, <span class="st">"nom"</span>, <span class="st">"ville"</span>, <span class="st">"salaire"</span>, <span class="st">"salaire_cumul"</span>).orderBy(<span class="st">"ville"</span>, <span class="st">"id"</span>).show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-43" class="cell">
+<div id="cell-42" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calcul de moyennes mobiles</span></span>
@@ -1440,7 +1436,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <p>Les jointures permettent de combiner plusieurs DataFrames.</p>
 <section id="créer-des-dataframes-pour-les-exemples" class="level2">
 <h2 class="anchored" data-anchor-id="créer-des-dataframes-pour-les-exemples">4.1 Créer des DataFrames pour les exemples</h2>
-<div id="cell-46" class="cell">
+<div id="cell-45" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># DataFrame employés</span></span>
@@ -1469,7 +1465,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </section>
 <section id="types-de-jointures" class="level2">
 <h2 class="anchored" data-anchor-id="types-de-jointures">4.2 Types de jointures</h2>
-<div id="cell-48" class="cell">
+<div id="cell-47" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># INNER JOIN (par défaut)</span></span>
@@ -1489,7 +1485,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb30-15"><a href="#cb30-15" aria-hidden="true" tabindex="-1"></a>employes.join(departements, <span class="st">"dept_id"</span>, <span class="st">"outer"</span>).show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-49" class="cell">
+<div id="cell-48" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Jointure avec colonnes différentes</span></span>
@@ -1507,7 +1503,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a>).show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-50" class="cell">
+<div id="cell-49" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Jointures multiples</span></span>
@@ -1534,7 +1530,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <p>Spark supporte de nombreux formats de fichiers.</p>
 <section id="csv" class="level2">
 <h2 class="anchored" data-anchor-id="csv">5.1 CSV</h2>
-<div id="cell-53" class="cell">
+<div id="cell-52" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Créer des données de test</span></span>
@@ -1563,7 +1559,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </section>
 <section id="json" class="level2">
 <h2 class="anchored" data-anchor-id="json">5.2 JSON</h2>
-<div id="cell-55" class="cell">
+<div id="cell-54" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Écrire en JSON</span></span>
@@ -1584,7 +1580,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </section>
 <section id="parquet-format-recommandé" class="level2">
 <h2 class="anchored" data-anchor-id="parquet-format-recommandé">5.3 Parquet (Format recommandé)</h2>
-<div id="cell-57" class="cell">
+<div id="cell-56" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Écrire en Parquet</span></span>
@@ -1602,7 +1598,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb35-13"><a href="#cb35-13" aria-hidden="true" tabindex="-1"></a>df_from_parquet.printSchema()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-58" class="cell">
+<div id="cell-57" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Parquet avec partitionnement</span></span>
@@ -1625,7 +1621,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </section>
 <section id="options-décriture" class="level2">
 <h2 class="anchored" data-anchor-id="options-décriture">5.4 Options d’écriture</h2>
-<div id="cell-60" class="cell">
+<div id="cell-59" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Mode d'écriture</span></span>
@@ -1658,7 +1654,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <p>Spark permet d’exécuter des requêtes SQL sur les DataFrames.</p>
 <section id="créer-des-vues-temporaires" class="level2">
 <h2 class="anchored" data-anchor-id="créer-des-vues-temporaires">6.1 Créer des vues temporaires</h2>
-<div id="cell-63" class="cell">
+<div id="cell-62" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Créer une vue temporaire</span></span>
@@ -1671,7 +1667,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </section>
 <section id="requêtes-sql" class="level2">
 <h2 class="anchored" data-anchor-id="requêtes-sql">6.2 Requêtes SQL</h2>
-<div id="cell-65" class="cell">
+<div id="cell-64" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Requête SQL simple</span></span>
@@ -1686,7 +1682,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb39-10"><a href="#cb39-10" aria-hidden="true" tabindex="-1"></a>result.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-66" class="cell">
+<div id="cell-65" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Agrégation avec SQL</span></span>
@@ -1706,7 +1702,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb40-15"><a href="#cb40-15" aria-hidden="true" tabindex="-1"></a>result.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-67" class="cell">
+<div id="cell-66" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Window functions en SQL</span></span>
@@ -1725,7 +1721,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb41-14"><a href="#cb41-14" aria-hidden="true" tabindex="-1"></a>result.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-68" class="cell">
+<div id="cell-67" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co"># CTE (Common Table Expression)</span></span>
@@ -1758,7 +1754,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <section id="gestion-des-données-manquantes" class="level1">
 <h1>7️⃣ Gestion des données manquantes</h1>
 <p>PySpark offre plusieurs méthodes pour gérer les nulls.</p>
-<div id="cell-70" class="cell">
+<div id="cell-69" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Créer un DataFrame avec des nulls</span></span>
@@ -1776,7 +1772,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb43-13"><a href="#cb43-13" aria-hidden="true" tabindex="-1"></a>df_nulls.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-71" class="cell">
+<div id="cell-70" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Supprimer les lignes avec des nulls</span></span>
@@ -1792,7 +1788,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb44-11"><a href="#cb44-11" aria-hidden="true" tabindex="-1"></a>df_nulls.dropna(subset<span class="op">=</span>[<span class="st">"nom"</span>, <span class="st">"ville"</span>]).show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-72" class="cell">
+<div id="cell-71" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Remplir les nulls avec des valeurs par défaut</span></span>
@@ -1809,7 +1805,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb45-12"><a href="#cb45-12" aria-hidden="true" tabindex="-1"></a>}).show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-73" class="cell">
+<div id="cell-72" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Remplacer les nulls par la moyenne/médiane</span></span>
@@ -1837,7 +1833,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <section id="udfs-user-defined-functions" class="level1">
 <h1>8️⃣ UDFs (User Defined Functions)</h1>
 <p>Les UDFs permettent d’appliquer des fonctions Python personnalisées.</p>
-<div id="cell-75" class="cell">
+<div id="cell-74" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pyspark.sql.functions <span class="im">import</span> udf</span>
@@ -1867,7 +1863,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb47-25"><a href="#cb47-25" aria-hidden="true" tabindex="-1"></a>df_with_category.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-76" class="cell">
+<div id="cell-75" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="co"># UDF avec plusieurs paramètres</span></span>
@@ -1891,7 +1887,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb48-19"><a href="#cb48-19" aria-hidden="true" tabindex="-1"></a>df_with_bonus.select(<span class="st">"nom"</span>, <span class="st">"salaire"</span>, <span class="st">"performance"</span>, <span class="st">"bonus"</span>).show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-77" class="cell">
+<div id="cell-76" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ⚠️ Attention : Les UDFs sont moins performantes que les fonctions natives</span></span>
@@ -1914,7 +1910,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <p>Quelques techniques pour optimiser vos jobs Spark.</p>
 <section id="partitionnement" class="level2">
 <h2 class="anchored" data-anchor-id="partitionnement">9.1 Partitionnement</h2>
-<div id="cell-80" class="cell">
+<div id="cell-79" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérifier le nombre de partitions</span></span>
@@ -1929,7 +1925,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb50-10"><a href="#cb50-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Après coalesce : </span><span class="sc">{</span>df_coalesced<span class="sc">.</span>rdd<span class="sc">.</span>getNumPartitions()<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-81" class="cell">
+<div id="cell-80" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb51"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Repartitionner par colonne (utile avant les groupBy)</span></span>
@@ -1942,7 +1938,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </section>
 <section id="caching" class="level2">
 <h2 class="anchored" data-anchor-id="caching">9.2 Caching</h2>
-<div id="cell-83" class="cell">
+<div id="cell-82" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb52"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cache un DataFrame en mémoire</span></span>
@@ -1961,7 +1957,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb52-14"><a href="#cb52-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st"> Cache libéré"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-84" class="cell">
+<div id="cell-83" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb53"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Persist avec différents niveaux de stockage</span></span>
@@ -1982,7 +1978,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </section>
 <section id="broadcast-joins" class="level2">
 <h2 class="anchored" data-anchor-id="broadcast-joins">9.3 Broadcast Joins</h2>
-<div id="cell-86" class="cell">
+<div id="cell-85" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb54"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Pour les petits DataFrames (&lt; 10MB), utilisez broadcast</span></span>
@@ -2004,7 +2000,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </section>
 <section id="éviter-les-udfs-quand-possible" class="level2">
 <h2 class="anchored" data-anchor-id="éviter-les-udfs-quand-possible">9.4 Éviter les UDFs quand possible</h2>
-<div id="cell-88" class="cell">
+<div id="cell-87" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb55"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ❌ Avec UDF (lent)</span></span>
@@ -2023,7 +2019,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </section>
 <section id="explain-plans" class="level2">
 <h2 class="anchored" data-anchor-id="explain-plans">9.5 Explain Plans</h2>
-<div id="cell-90" class="cell">
+<div id="cell-89" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb56"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Voir le plan d'exécution</span></span>
@@ -2041,7 +2037,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <section id="structured-streaming-bonus" class="level1">
 <h1>🔟 Structured Streaming (Bonus)</h1>
 <p>Traitement de données en temps réel avec Spark.</p>
-<div id="cell-92" class="cell">
+<div id="cell-91" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb57"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Créer un streaming DataFrame depuis un dossier</span></span>
@@ -2063,7 +2059,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb57-17"><a href="#cb57-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Is streaming: </span><span class="sc">{</span>stream_df<span class="sc">.</span>isStreaming<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-93" class="cell">
+<div id="cell-92" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb58"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Transformations sur le stream (comme un DataFrame normal)</span></span>
@@ -2075,7 +2071,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <span id="cb58-7"><a href="#cb58-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" Transformations appliquées"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-94" class="cell">
+<div id="cell-93" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb59"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Écrire le stream vers un sink</span></span>
@@ -2097,7 +2093,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <section id="pipeline-etl-complet-avec-pyspark" class="level1">
 <h1>1️⃣1️⃣ Pipeline ETL Complet avec PySpark</h1>
 <p>Construisons un pipeline ETL complet.</p>
-<div id="cell-96" class="cell">
+<div id="cell-95" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb60"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
@@ -2114,7 +2110,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </div>
 <section id="extract" class="level2">
 <h2 class="anchored" data-anchor-id="extract">11.1 Extract</h2>
-<div id="cell-98" class="cell">
+<div id="cell-97" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb61"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> extract_data(spark, path):</span>
@@ -2148,7 +2144,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </section>
 <section id="transform" class="level2">
 <h2 class="anchored" data-anchor-id="transform">11.2 Transform</h2>
-<div id="cell-100" class="cell">
+<div id="cell-99" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb62"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> transform_data(df):</span>
@@ -2213,7 +2209,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </section>
 <section id="aggregate" class="level2">
 <h2 class="anchored" data-anchor-id="aggregate">11.3 Aggregate</h2>
-<div id="cell-102" class="cell">
+<div id="cell-101" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb63"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> aggregate_data(df):</span>
@@ -2263,7 +2259,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </section>
 <section id="load" class="level2">
 <h2 class="anchored" data-anchor-id="load">11.4 Load</h2>
-<div id="cell-104" class="cell">
+<div id="cell-103" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb64"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> load_data(df, aggregations, output_path):</span>
@@ -2298,7 +2294,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 </section>
 <section id="pipeline-complet-orchestré" class="level2">
 <h2 class="anchored" data-anchor-id="pipeline-complet-orchestré">11.5 Pipeline complet orchestré</h2>
-<div id="cell-106" class="cell">
+<div id="cell-105" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb65"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> run_pipeline(spark):</span>
@@ -2705,7 +2701,7 @@ Spark :      DISQUE → Transformations → MÉMOIRE → ... → MÉMOIRE → Ac
 <p>👉 <strong>Module suivant : <code>12_orchestration_pipelines</code></strong> — Orchestration de pipelines</p>
 <hr>
 <p>🎉 <strong>Félicitations !</strong> Tu as terminé le module PySpark et le parcours sur les bases de données et le Big Data !</p>
-<div id="cell-110" class="cell">
+<div id="cell-109" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb66"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Fermer la SparkSession</span></span>

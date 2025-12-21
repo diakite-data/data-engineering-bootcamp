@@ -845,10 +845,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Comprendre <strong>Iceberg</strong> : Hidden Partitioning</li>
 <li>Optimiser avec <strong>OPTIMIZE, Z-ORDER, VACUUM</strong></li>
 </ul>
-<p><a href="https://colab.research.google.com/github/diakite-data/data-engineering-bootcamp/blob/main/notebooks/intermediate/23_table_formats_delta_iceberg.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a></p>
-<blockquote class="blockquote">
-<p>💡 <strong>Conseil</strong> : Cliquez sur le badge ci-dessus pour exécuter ce notebook directement dans Google Colab (aucune installation requise).</p>
-</blockquote>
 <hr>
 </section>
 <section id="introduction-pourquoi-les-table-formats" class="level2">
@@ -1122,7 +1118,7 @@ Version 2 : ADD file_003.parquet, REMOVE file_001.parquet
 <li><code>commitInfo</code> : métadonnées de l’opération</li>
 <li><code>stats</code> : min/max pour Data Skipping</li>
 </ul>
-<div id="cell-10" class="cell">
+<div id="cell-9" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Configuration Spark avec Delta Lake</span></span>
@@ -1146,7 +1142,7 @@ Version 2 : ADD file_003.parquet, REMOVE file_001.parquet
 <span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(config)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-11" class="cell">
+<div id="cell-10" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Créer une table Delta</span></span>
@@ -1201,7 +1197,7 @@ Version 2 : ADD file_003.parquet, REMOVE file_001.parquet
 │ 2  │ Bob   │      │ 3  │ New   │ I  │ →  │ 3  │ New   │ Inserted
 └────┴───────┘      │ 2  │ Bob   │ D  │    └────┴───────┘ (Bob deleted)
                     └────┴───────┴────┘</code></pre>
-<div id="cell-14" class="cell">
+<div id="cell-13" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># MERGE INTO - Exemple complet</span></span>
@@ -1270,7 +1266,7 @@ Version 2 : ADD file_003.parquet, REMOVE file_001.parquet
 └────────┘   └────────┘   │modified│   └────────┘
 
 Tu peux lire N'IMPORTE quelle version !</code></pre>
-<div id="cell-17" class="cell">
+<div id="cell-16" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Time Travel</span></span>

@@ -851,10 +851,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Créer des <strong>modèles incrémentaux</strong> performants</li>
 <li>Déployer dbt dans un <strong>pipeline CI/CD</strong></li>
 </ul>
-<p><a href="https://colab.research.google.com/github/diakite-data/data-engineering-bootcamp/blob/main/notebooks/intermediate/25_dbt_data_quality.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a></p>
-<blockquote class="blockquote">
-<p>💡 <strong>Conseil</strong> : Cliquez sur le badge ci-dessus pour exécuter ce notebook directement dans Google Colab (aucune installation requise).</p>
-</blockquote>
 <hr>
 </section>
 <section id="introduction-le-problème-à-résoudre" class="level2">
@@ -1040,7 +1036,7 @@ PROBLÈMES :
 <section id="installation" class="level3">
 <h3 class="anchored" data-anchor-id="installation">2.1 Installation</h3>
 <p>dbt s’installe via pip avec un <strong>adapter</strong> spécifique à ta base de données :</p>
-<div id="cell-8" class="cell">
+<div id="cell-7" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Installation de dbt</span></span>
@@ -1070,7 +1066,7 @@ PROBLÈMES :
 <section id="initialisation-dun-projet" class="level3">
 <h3 class="anchored" data-anchor-id="initialisation-dun-projet">2.2 Initialisation d’un projet</h3>
 <p>La commande <code>dbt init</code> crée la structure de base :</p>
-<div id="cell-10" class="cell">
+<div id="cell-9" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Créer un nouveau projet dbt</span></span>
@@ -1110,7 +1106,7 @@ PROBLÈMES :
 <section id="le-fichier-dbt_project.yml" class="level3">
 <h3 class="anchored" data-anchor-id="le-fichier-dbt_project.yml">2.3 Le fichier dbt_project.yml</h3>
 <p>C’est le <strong>fichier de configuration principal</strong> de ton projet. Il définit le nom, la version, et les paramètres par défaut.</p>
-<div id="cell-12" class="cell">
+<div id="cell-11" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># dbt_project.yml - Configuration principale</span></span>
@@ -1166,7 +1162,7 @@ PROBLÈMES :
 <section id="le-fichier-profiles.yml" class="level3">
 <h3 class="anchored" data-anchor-id="le-fichier-profiles.yml">2.4 Le fichier profiles.yml</h3>
 <p>Ce fichier contient les <strong>informations de connexion</strong> à ta base de données. Il est généralement stocké dans <code>~/.dbt/profiles.yml</code> (pas dans le repo Git pour des raisons de sécurité).</p>
-<div id="cell-14" class="cell">
+<div id="cell-13" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># profiles.yml - Connexions aux bases de données</span></span>
@@ -1237,7 +1233,7 @@ PROBLÈMES :
 └─────────────────────────┘          └─────────────────────────┘
 
 Tu écris le SELECT, dbt gère le CREATE/INSERT !</code></pre>
-<div id="cell-16" class="cell">
+<div id="cell-15" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Exemple de model simple</span></span>
@@ -1283,7 +1279,7 @@ Tu écris le SELECT, dbt gère le CREATE/INSERT !</code></pre>
 │ ❌ Pas de dépendance    │         │ ✅ Dépendance trackée   │
 │ ❌ Pas de lineage       │         │ ✅ Lineage automatique  │
 └─────────────────────────┘         └─────────────────────────┘</code></pre>
-<div id="cell-18" class="cell">
+<div id="cell-17" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Exemple avec ref()</span></span>
@@ -1322,7 +1318,7 @@ Tu écris le SELECT, dbt gère le CREATE/INSERT !</code></pre>
 <h3 class="anchored" data-anchor-id="les-sources-référencer-les-données-externes">3.3 Les Sources — Référencer les données externes</h3>
 <p>Les <strong>sources</strong> représentent les données qui existent AVANT dbt (tables raw, données ingérées par Kafka/Spark, etc.).</p>
 <p>On les définit dans un fichier <code>schema.yml</code> :</p>
-<div id="cell-20" class="cell">
+<div id="cell-19" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Définition des sources</span></span>
@@ -1442,7 +1438,7 @@ Tu écris le SELECT, dbt gère le CREATE/INSERT !</code></pre>
 </tr>
 </tbody>
 </table>
-<div id="cell-23" class="cell">
+<div id="cell-22" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Comparaison des matérialisations</span></span>
@@ -1590,7 +1586,7 @@ ecommerce_dbt/
 <section id="tests-génériques-built-in" class="level3">
 <h3 class="anchored" data-anchor-id="tests-génériques-built-in">4.2 Tests Génériques (built-in)</h3>
 <p>dbt fournit 4 tests de base, définis dans <code>schema.yml</code> :</p>
-<div id="cell-26" class="cell">
+<div id="cell-25" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Tests génériques dans schema.yml</span></span>
@@ -1641,7 +1637,7 @@ ecommerce_dbt/
 <section id="tests-singuliers-custom" class="level3">
 <h3 class="anchored" data-anchor-id="tests-singuliers-custom">4.3 Tests Singuliers (custom)</h3>
 <p>Pour des validations complexes, tu peux écrire des <strong>tests SQL custom</strong>. Un test réussit s’il retourne <strong>0 lignes</strong>.</p>
-<div id="cell-28" class="cell">
+<div id="cell-27" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Tests singuliers (custom SQL)</span></span>
@@ -1722,7 +1718,7 @@ ecommerce_dbt/
 </tr>
 </tbody>
 </table>
-<div id="cell-30" class="cell">
+<div id="cell-29" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Installation et utilisation des packages dbt</span></span>
@@ -1819,7 +1815,7 @@ ecommerce_dbt/
 <section id="documentation-auto-générée" class="level3">
 <h3 class="anchored" data-anchor-id="documentation-auto-générée">5.1 Documentation auto-générée</h3>
 <p>dbt génère automatiquement un <strong>site de documentation</strong> à partir des fichiers <code>schema.yml</code> :</p>
-<div id="cell-33" class="cell">
+<div id="cell-32" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Documentation complète dans schema.yml</span></span>
@@ -1946,7 +1942,7 @@ Tu peux voir :
 │                                                                 │
 │   DATA DOCS : Site web avec tous les rapports de validation    │
 └─────────────────────────────────────────────────────────────────┘</code></pre>
-<div id="cell-36" class="cell">
+<div id="cell-35" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Installation et setup de Great Expectations</span></span>
@@ -1971,7 +1967,7 @@ Tu peux voir :
 <span id="cb26-20"><a href="#cb26-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(ge_setup)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-37" class="cell">
+<div id="cell-36" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Utilisation de Great Expectations avec Python</span></span>
@@ -2071,7 +2067,7 @@ Tu peux voir :
 <section id="data-profiling-automatique" class="level3">
 <h3 class="anchored" data-anchor-id="data-profiling-automatique">6.3 Data Profiling automatique</h3>
 <p>GE peut <strong>analyser tes données</strong> et générer automatiquement des expectations :</p>
-<div id="cell-39" class="cell">
+<div id="cell-38" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Profiling automatique avec Great Expectations</span></span>
@@ -2159,7 +2155,7 @@ Tu peux voir :
 <section id="configuration-dbt-spark" class="level3">
 <h3 class="anchored" data-anchor-id="configuration-dbt-spark">7.1 Configuration dbt-spark</h3>
 <p>Pour utiliser dbt avec Spark (Databricks, EMR, local) :</p>
-<div id="cell-42" class="cell">
+<div id="cell-41" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Configuration dbt-spark</span></span>
@@ -2212,7 +2208,7 @@ Tu peux voir :
 <section id="matérialisation-incrémentale-avec-delta-lake" class="level3">
 <h3 class="anchored" data-anchor-id="matérialisation-incrémentale-avec-delta-lake">7.2 Matérialisation incrémentale avec Delta Lake</h3>
 <p>L’<strong>incrémental</strong> est crucial pour les gros volumes. Voici comment l’implémenter proprement :</p>
-<div id="cell-44" class="cell">
+<div id="cell-43" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Model incrémental avec Delta Lake</span></span>
@@ -2269,7 +2265,7 @@ Tu peux voir :
 <section id="macros-jinja" class="level3">
 <h3 class="anchored" data-anchor-id="macros-jinja">7.3 Macros Jinja</h3>
 <p>Les <strong>macros</strong> sont des fonctions réutilisables écrites en Jinja. Très utiles pour éviter la duplication de code.</p>
-<div id="cell-46" class="cell">
+<div id="cell-45" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Macros Jinja réutilisables</span></span>
@@ -2406,7 +2402,7 @@ Tu peux voir :
 3. DEPLOY (main branch)
    └─▶ CD automatique : dbt run --target prod
    └─▶ dbt test --target prod</code></pre>
-<div id="cell-49" class="cell">
+<div id="cell-48" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># GitHub Actions pour dbt CI/CD</span></span>
@@ -2495,7 +2491,7 @@ Tu peux voir :
 </section>
 <section id="orchestration-avec-airflow" class="level3">
 <h3 class="anchored" data-anchor-id="orchestration-avec-airflow">8.2 Orchestration avec Airflow</h3>
-<div id="cell-51" class="cell">
+<div id="cell-50" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># DAG Airflow pour dbt</span></span>
@@ -2587,7 +2583,7 @@ Tu peux voir :
 │  + Documentation complète                                        │
 │  + Great Expectations pour validation finale                     │
 └──────────────────────────────────────────────────────────────────┘</code></pre>
-<div id="cell-53" class="cell">
+<div id="cell-52" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Structure complète du mini-projet</span></span>
@@ -2627,7 +2623,7 @@ Tu peux voir :
 <span id="cb40-35"><a href="#cb40-35" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(project_structure)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-54" class="cell">
+<div id="cell-53" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Models du mini-projet</span></span>
