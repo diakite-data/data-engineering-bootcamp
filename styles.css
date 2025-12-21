@@ -1,31 +1,8 @@
-/*-- scss:defaults --*/
-
 /* ==================================================
    🚀 BOOTCAMP DATA ENGINEERING - PREMIUM STYLESHEET
    From Zero to Hero - Orange & Sky Blue Theme
+   Pure CSS Version (no SCSS)
    ================================================== */
-
-/* Primary Colors - Orange & Sky Blue */
-$primary-orange: #f97316;
-$primary-orange-light: #fb923c;
-$primary-orange-dark: #ea580c;
-$primary-sky: #0ea5e9;
-$primary-sky-light: #38bdf8;
-$primary-sky-dark: #0284c7;
-
-/* Code Colors (Dracula-inspired) */
-$code-bg: #1e1e2e;
-$code-text: #cdd6f4;
-$code-keyword: #fb923c;
-$code-string: #38bdf8;
-$code-function: #0ea5e9;
-$code-comment: #6c7086;
-
-/*-- scss:rules --*/
-
-/* --------------------------------------------------
-   CSS CUSTOM PROPERTIES (Design Tokens)
--------------------------------------------------- */
 
 :root {
   /* Primary Colors - Orange */
@@ -753,32 +730,234 @@ footer a:hover {
   transition: width 0.5s ease;
 }
 
+/* ==================================================
+   📱 RESPONSIVE - MOBILE OPTIMIZATIONS
+   ================================================== */
+
 /* --------------------------------------------------
-   RESPONSIVE
+   TABLETTE (768px - 991px)
+-------------------------------------------------- */
+
+@media (max-width: 991px) {
+  /* Sidebar se cache automatiquement via Quarto */
+  
+  #quarto-content {
+    padding: 0 20px;
+  }
+  
+  .hero {
+    padding: 80px 30px;
+    margin: 0 -10px var(--spacing-2xl) -10px;
+  }
+  
+  /* Tables moins larges */
+  th, td {
+    padding: 12px 16px;
+  }
+}
+
+/* --------------------------------------------------
+   MOBILE (< 768px)
 -------------------------------------------------- */
 
 @media (max-width: 768px) {
+  /* === LAYOUT === */
+  body {
+    font-size: 15px;
+  }
+  
+  #quarto-content {
+    padding: 0 15px;
+  }
+  
+  /* === HERO === */
   .hero {
-    padding: 60px 20px;
+    padding: 50px 20px;
     border-radius: var(--radius-lg);
+    margin: 0 -5px var(--spacing-xl) -5px;
   }
   
   .hero h1 {
-    font-size: 2rem;
+    font-size: 1.75rem;
+    line-height: 1.3;
   }
   
   .hero h3 {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
   
+  /* Désactiver l'animation sur mobile (performance) */
+  .hero::before {
+    animation: none;
+  }
+  
+  /* === TYPOGRAPHIE === */
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.4rem; }
+  h3 { font-size: 1.2rem; }
+  h4 { font-size: 1.1rem; }
+  
+  h2::after {
+    width: 40px;
+    height: 3px;
+  }
+  
+  /* === TABLES === */
   table {
     display: block;
     overflow-x: auto;
+    white-space: nowrap;
+    font-size: 0.85rem;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  th, td {
+    padding: 10px 12px;
+  }
+  
+  th {
+    font-size: 0.75rem;
+  }
+  
+  /* === CODE === */
+  pre {
+    border-radius: var(--radius-md) !important;
+    margin: var(--spacing-lg) -15px !important;
+    border-left: none;
+    border-right: none;
   }
   
   pre code {
-    font-size: 0.85rem !important;
+    font-size: 0.8rem !important;
+    padding: 15px !important;
+    line-height: 1.6 !important;
   }
+  
+  code:not(pre code) {
+    font-size: 0.8em;
+    padding: 2px 6px;
+  }
+  
+  /* === BOUTONS === */
+  .btn {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    /* Zone tactile minimum 44px */
+    min-height: 44px;
+  }
+  
+  /* === CALLOUTS === */
+  .callout, blockquote {
+    padding: 15px;
+    margin: var(--spacing-lg) -5px;
+    border-radius: var(--radius-md);
+  }
+  
+  /* === LISTES === */
+  ul, ol {
+    padding-left: 1.25rem;
+  }
+  
+  /* === TOC caché sur mobile === */
+  #TOC,
+  .toc-actions {
+    display: none !important;
+  }
+  
+  /* === NAVBAR === */
+  .navbar {
+    padding: 8px 10px;
+  }
+  
+  .navbar .navbar-brand {
+    font-size: 1.1rem;
+  }
+  
+  /* === FOOTER === */
+  .page-footer, footer {
+    padding: 20px 15px;
+    font-size: 0.85rem;
+  }
+  
+  /* === IMAGES === */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* === SPACING GÉNÉRAL === */
+  p {
+    margin-bottom: 0.875rem;
+  }
+  
+  section {
+    margin-bottom: var(--spacing-xl);
+  }
+}
+
+/* --------------------------------------------------
+   PETIT MOBILE (< 375px) - iPhone SE, etc.
+-------------------------------------------------- */
+
+@media (max-width: 375px) {
+  body {
+    font-size: 14px;
+  }
+  
+  .hero {
+    padding: 40px 15px;
+  }
+  
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+  
+  .hero h3 {
+    font-size: 0.875rem;
+  }
+  
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.25rem; }
+  h3 { font-size: 1.1rem; }
+  
+  pre code {
+    font-size: 0.75rem !important;
+    padding: 12px !important;
+  }
+  
+  th, td {
+    padding: 8px 10px;
+    font-size: 0.8rem;
+  }
+  
+  .callout, blockquote {
+    padding: 12px;
+  }
+}
+
+/* --------------------------------------------------
+   PRÉFÉRENCES UTILISATEUR
+-------------------------------------------------- */
+
+/* Réduire les animations si l'utilisateur préfère */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Mode sombre automatique (si supporté par Quarto) */
+@media (prefers-color-scheme: dark) {
+  /* Optionnel: ajouter des règles dark mode ici si besoin */
 }
 
 /* --------------------------------------------------
@@ -788,20 +967,58 @@ footer a:hover {
 @media print {
   body {
     background: white !important;
+    color: black !important;
+    font-size: 12pt;
   }
   
   .hero {
-    background: var(--gray-100) !important;
+    background: var(--gray-200) !important;
     box-shadow: none !important;
+    color: black !important;
+    padding: 30px !important;
+  }
+  
+  .hero h1,
+  .hero h3 {
+    -webkit-text-fill-color: black !important;
+    color: black !important;
   }
   
   .navbar,
-  .sidebar {
+  .sidebar,
+  #TOC,
+  .code-copy-button,
+  .code-fold-btn {
     display: none !important;
   }
   
   pre {
     border: 1px solid var(--gray-300) !important;
     box-shadow: none !important;
+    page-break-inside: avoid;
+  }
+  
+  table {
+    box-shadow: none !important;
+    page-break-inside: avoid;
+  }
+  
+  thead {
+    background: var(--gray-200) !important;
+  }
+  
+  th {
+    color: black !important;
+  }
+  
+  a {
+    color: black !important;
+    text-decoration: underline;
+  }
+  
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: var(--gray-500);
   }
 }
