@@ -1,0 +1,3344 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Introduction aux Bases de Données Relationnelles – Bootcamp Data Engineering</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../assets/images/favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-fc8d3d93f0a84b7619e1f8ff6eb63d42.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-fc8d3d93f0a84b7619e1f8ff6eb63d42.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-fc8d3d93f0a84b7619e1f8ff6eb63d42.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-f0414948b4c63f1f2858a00d85a9deb4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-25a581b3349c80a073d3aa91db156dab.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-f0414948b4c63f1f2858a00d85a9deb4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": true,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<meta name="author" content="Diakite Data">
+<meta name="keywords" content="data engineering, spark, kafka, python, kubernetes, lakehouse, delta lake, bootcamp">
+
+
+<meta property="og:title" content="Introduction aux Bases de Données Relationnelles – Bootcamp Data Engineering">
+<meta property="og:description" content="Programme complet Data Engineering — Du débutant au Senior Engineer">
+<meta property="og:site_name" content="Bootcamp Data Engineering">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:title" content="Introduction aux Bases de Données Relationnelles – Bootcamp Data Engineering">
+<meta name="twitter:description" content="Programme complet Data Engineering — Du débutant au Senior Engineer">
+<meta name="twitter:creator" content="@diakite_data">
+<meta name="twitter:site" content="@diakite_data">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../assets/images/logo.svg" alt="Data Engineering Bootcamp" class="navbar-logo light-content">
+    <img src="../../assets/images/logo.svg" alt="Data Engineering Bootcamp" class="navbar-logo dark-content">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">🏠 Accueil</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-programme" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">📘 Programme</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-programme">    
+        <li>
+    <a class="dropdown-item" href="../../notebooks/beginner/01_intro_data_engineering.html">
+ <span class="dropdown-text">🟦 Niveau Débutant</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../notebooks/intermediate/14_docker_for_data_engineers.html">
+ <span class="dropdown-text">🟩 Niveau Intermédiaire</span></a>
+  </li>  
+        <li class="dropdown-header">🟥 Niveau Avancé</li>
+        <li><hr class="dropdown-divider"></li>
+        <li>
+    <a class="dropdown-item" href="../../curriculum.html">
+ <span class="dropdown-text">📊 Vue d’ensemble</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-ressources" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">🛠️ Ressources</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-ressources">    
+        <li>
+    <a class="dropdown-item" href="../../resources/documentation.html">
+ <span class="dropdown-text">📚 Documentation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../resources/setup.html">
+ <span class="dropdown-text">🔧 Setup Environnement</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../resources/faq.html">
+ <span class="dropdown-text">❓ FAQ</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li>
+    <a class="dropdown-item" href="../../resources/links.html">
+ <span class="dropdown-text">🔗 Liens Utiles</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/diakite-data/data-engineering-bootcamp"> <i class="bi bi-github" role="img" aria-label="GitHub Repository">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">🟦 Niveau 1 : Débutant</li><li class="breadcrumb-item"><a href="../../notebooks/beginner/06_intro_relational_databases.html">🗄️ Bases de Données</a></li><li class="breadcrumb-item"><a href="../../notebooks/beginner/06_intro_relational_databases.html">06 · Introduction aux BDD Relationnelles</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">🟦 Niveau 1 : Débutant</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="px-0"><hr class="sidebar-divider hi "></li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">📌 Fondations</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/01_intro_data_engineering.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">01 · Introduction au Data Engineering</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/02_bash_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">02 · Linux &amp; Bash</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/03_git_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">03 · Git &amp; Versioning</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">🐍 Python</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/04_python_basics_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">04 · Python Fondamental</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/05_python_data_processing_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">05 · Python Data Processing</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">🗄️ Bases de Données</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/06_intro_relational_databases.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">06 · Introduction aux BDD Relationnelles</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/07_sql_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">07 · SQL pour Data Engineers</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">📊 Big Data &amp; NoSQL</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/08_intro_big_data_distributed.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">08 · Introduction Big Data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/09_mongodb_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">09 · MongoDB</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/10_elasticsearch_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">10 · Elasticsearch</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">⚡ Spark &amp; Orchestration</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/11_pyspark_for_data_engineering.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">11 · Introduction PySpark</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/12_orchestration_pipelines.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">12 · Orchestration de Pipelines</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">🎁 Bonus</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">13 · FastAPI pour Data Engineers</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="px-0"><hr class="sidebar-divider hi "></li>
+          <li class="sidebar-item">
+ <span class="menu-text">📦 **Projet Débutant**</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
+ <span class="menu-text">🟩 Niveau 2 : Intermédiaire</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="px-0"><hr class="sidebar-divider hi "></li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
+ <span class="menu-text">🐳 Containers &amp; Cloud</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/14_docker_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">14 · Docker pour Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/15_kubernetes_fundamentals.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">15 · Kubernetes Fondamentaux</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/16_k8s_for_data_workloads.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">16 · K8s pour Data Workloads</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false">
+ <span class="menu-text">🚀 High Performance Python</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/17_polars_for_data_engineering.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">17 · Polars pour Data Engineering</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/18_high_performance_python.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">18 · High Performance Python</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false">
+ <span class="menu-text">⚡ Spark Avancé</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/19_pyspark_advanced.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">19 · PySpark Avancé</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/20_spark_sql_deep_dive.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">20 · Spark SQL Deep Dive</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/21_spark_on_kubernetes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">21 · Spark on Kubernetes</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false">
+ <span class="menu-text">🏠 Lakehouse &amp; Streaming &amp; Cloud</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/22_cloud_and_object_storage.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">22 · Cloud Object Storage</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/23_table_formats_delta_iceberg.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">23 · Table Formats (Delta, Iceberg)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/24_kafka_streaming.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">24 · Kafka &amp; Streaming</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false">
+ <span class="menu-text">🔧 Industrialisation</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/25_dbt_data_quality.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">25 · dbt &amp; Data Quality</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="px-0"><hr class="sidebar-divider hi "></li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/26_projet_integrateur.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">📦 <strong>Projet Intermédiaire</strong> (Olist)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">🟥 Niveau 3 : Avancé</span></span>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="2">
+    <h2 id="toc-title">📑 Sommaire</h2>
+   
+  <ul>
+  <li><a href="#prérequis" id="toc-prérequis" class="nav-link active" data-scroll-target="#prérequis">Prérequis</a></li>
+  <li><a href="#objectifs-du-module" id="toc-objectifs-du-module" class="nav-link" data-scroll-target="#objectifs-du-module">Objectifs du module</a></li>
+  <li><a href="#cest-quoi-une-base-de-données" id="toc-cest-quoi-une-base-de-données" class="nav-link" data-scroll-target="#cest-quoi-une-base-de-données">1. C’est quoi une Base de Données ?</a>
+  <ul class="collapse">
+  <li><a href="#définition" id="toc-définition" class="nav-link" data-scroll-target="#définition">Définition</a></li>
+  <li><a href="#en-une-phrase" id="toc-en-une-phrase" class="nav-link" data-scroll-target="#en-une-phrase">En une phrase</a></li>
+  <li><a href="#fichiers-vs-base-de-données" id="toc-fichiers-vs-base-de-données" class="nav-link" data-scroll-target="#fichiers-vs-base-de-données">Fichiers vs Base de données</a></li>
+  </ul></li>
+  <li><a href="#le-sgbd-système-de-gestion-de-base-de-données" id="toc-le-sgbd-système-de-gestion-de-base-de-données" class="nav-link" data-scroll-target="#le-sgbd-système-de-gestion-de-base-de-données">2. Le SGBD — Système de Gestion de Base de Données</a>
+  <ul class="collapse">
+  <li><a href="#sgbd-relationnels-populaires" id="toc-sgbd-relationnels-populaires" class="nav-link" data-scroll-target="#sgbd-relationnels-populaires">SGBD Relationnels populaires</a></li>
+  </ul></li>
+  <li><a href="#le-modèle-relationnel" id="toc-le-modèle-relationnel" class="nav-link" data-scroll-target="#le-modèle-relationnel">3. Le Modèle Relationnel</a>
+  <ul class="collapse">
+  <li><a href="#vocabulaire-de-base" id="toc-vocabulaire-de-base" class="nav-link" data-scroll-target="#vocabulaire-de-base">Vocabulaire de base</a></li>
+  <li><a href="#terminologie" id="toc-terminologie" class="nav-link" data-scroll-target="#terminologie">Terminologie</a></li>
+  </ul></li>
+  <li><a href="#types-de-données" id="toc-types-de-données" class="nav-link" data-scroll-target="#types-de-données">4. Types de données</a>
+  <ul class="collapse">
+  <li><a href="#types-courants-postgresql" id="toc-types-courants-postgresql" class="nav-link" data-scroll-target="#types-courants-postgresql">Types courants (PostgreSQL)</a></li>
+  <li><a href="#bonnes-pratiques" id="toc-bonnes-pratiques" class="nav-link" data-scroll-target="#bonnes-pratiques">💡 Bonnes pratiques</a></li>
+  </ul></li>
+  <li><a href="#clé-primaire-primary-key" id="toc-clé-primaire-primary-key" class="nav-link" data-scroll-target="#clé-primaire-primary-key">5. Clé Primaire (Primary Key)</a>
+  <ul class="collapse">
+  <li><a href="#règles" id="toc-règles" class="nav-link" data-scroll-target="#règles">Règles</a></li>
+  <li><a href="#exemple" id="toc-exemple" class="nav-link" data-scroll-target="#exemple">Exemple</a></li>
+  <li><a href="#types-de-clés-primaires" id="toc-types-de-clés-primaires" class="nav-link" data-scroll-target="#types-de-clés-primaires">Types de clés primaires</a></li>
+  </ul></li>
+  <li><a href="#clé-étrangère-foreign-key" id="toc-clé-étrangère-foreign-key" class="nav-link" data-scroll-target="#clé-étrangère-foreign-key">6. Clé Étrangère (Foreign Key)</a>
+  <ul class="collapse">
+  <li><a href="#principe" id="toc-principe" class="nav-link" data-scroll-target="#principe">Principe</a></li>
+  <li><a href="#ce-que-garantit-la-fk" id="toc-ce-que-garantit-la-fk" class="nav-link" data-scroll-target="#ce-que-garantit-la-fk">Ce que garantit la FK</a></li>
+  <li><a href="#actions-en-cascade" id="toc-actions-en-cascade" class="nav-link" data-scroll-target="#actions-en-cascade">Actions en cascade</a></li>
+  </ul></li>
+  <li><a href="#types-de-relations" id="toc-types-de-relations" class="nav-link" data-scroll-target="#types-de-relations">7. Types de Relations</a>
+  <ul class="collapse">
+  <li><a href="#relation-un-à-un-11" id="toc-relation-un-à-un-11" class="nav-link" data-scroll-target="#relation-un-à-un-11">1️⃣ Relation Un-à-Un (1:1)</a></li>
+  <li><a href="#relation-un-à-plusieurs-1n" id="toc-relation-un-à-plusieurs-1n" class="nav-link" data-scroll-target="#relation-un-à-plusieurs-1n">1️⃣➡️🔢 Relation Un-à-Plusieurs (1:N)</a></li>
+  <li><a href="#relation-plusieurs-à-plusieurs-nn" id="toc-relation-plusieurs-à-plusieurs-nn" class="nav-link" data-scroll-target="#relation-plusieurs-à-plusieurs-nn">🔢↔︎️🔢 Relation Plusieurs-à-Plusieurs (N:N)</a></li>
+  </ul></li>
+  <li><a href="#normalisation" id="toc-normalisation" class="nav-link" data-scroll-target="#normalisation">8. Normalisation</a>
+  <ul class="collapse">
+  <li><a href="#exemple-non-normalisé" id="toc-exemple-non-normalisé" class="nav-link" data-scroll-target="#exemple-non-normalisé">Exemple NON normalisé</a></li>
+  <li><a href="#exemple-normalisé" id="toc-exemple-normalisé" class="nav-link" data-scroll-target="#exemple-normalisé">✅ Exemple normalisé</a></li>
+  <li><a href="#formes-normales-résumé" id="toc-formes-normales-résumé" class="nav-link" data-scroll-target="#formes-normales-résumé">Formes normales (résumé)</a></li>
+  </ul></li>
+  <li><a href="#propriétés-acid" id="toc-propriétés-acid" class="nav-link" data-scroll-target="#propriétés-acid">9. Propriétés ACID</a>
+  <ul class="collapse">
+  <li><a href="#les-4-propriétés" id="toc-les-4-propriétés" class="nav-link" data-scroll-target="#les-4-propriétés">Les 4 propriétés</a></li>
+  <li><a href="#détail-de-chaque-propriété" id="toc-détail-de-chaque-propriété" class="nav-link" data-scroll-target="#détail-de-chaque-propriété">Détail de chaque propriété</a></li>
+  <li><a href="#exemple-virement-bancaire" id="toc-exemple-virement-bancaire" class="nav-link" data-scroll-target="#exemple-virement-bancaire">Exemple : Virement bancaire</a></li>
+  </ul></li>
+  <li><a href="#oltp-vs-olap-deux-mondes-différents" id="toc-oltp-vs-olap-deux-mondes-différents" class="nav-link" data-scroll-target="#oltp-vs-olap-deux-mondes-différents">10. OLTP vs OLAP — Deux mondes différents</a>
+  <ul class="collapse">
+  <li><a href="#oltp-online-transaction-processing" id="toc-oltp-online-transaction-processing" class="nav-link" data-scroll-target="#oltp-online-transaction-processing">10.1 OLTP — Online Transaction Processing</a></li>
+  <li><a href="#olap-online-analytical-processing" id="toc-olap-online-analytical-processing" class="nav-link" data-scroll-target="#olap-online-analytical-processing">10.2 OLAP — Online Analytical Processing</a></li>
+  <li><a href="#comparaison-oltp-vs-olap" id="toc-comparaison-oltp-vs-olap" class="nav-link" data-scroll-target="#comparaison-oltp-vs-olap">10.3 Comparaison OLTP vs OLAP</a></li>
+  <li><a href="#data-warehouse-lentrepôt-de-données" id="toc-data-warehouse-lentrepôt-de-données" class="nav-link" data-scroll-target="#data-warehouse-lentrepôt-de-données">10.4 Data Warehouse — L’entrepôt de données</a></li>
+  <li><a href="#data-mart-le-magasin-spécialisé" id="toc-data-mart-le-magasin-spécialisé" class="nav-link" data-scroll-target="#data-mart-le-magasin-spécialisé">10.5 Data Mart — Le magasin spécialisé</a></li>
+  <li><a href="#architecture-globale" id="toc-architecture-globale" class="nav-link" data-scroll-target="#architecture-globale">10.6 Architecture globale</a></li>
+  <li><a href="#résumé-oltp-olap-dwh-data-mart" id="toc-résumé-oltp-olap-dwh-data-mart" class="nav-link" data-scroll-target="#résumé-oltp-olap-dwh-data-mart">💡 Résumé OLTP / OLAP / DWH / Data Mart</a></li>
+  </ul></li>
+  <li><a href="#modélisation-dimensionnelle-star-snowflake-schema" id="toc-modélisation-dimensionnelle-star-snowflake-schema" class="nav-link" data-scroll-target="#modélisation-dimensionnelle-star-snowflake-schema">11. Modélisation Dimensionnelle — Star &amp; Snowflake Schema</a>
+  <ul class="collapse">
+  <li><a href="#tables-de-faits-fact-tables" id="toc-tables-de-faits-fact-tables" class="nav-link" data-scroll-target="#tables-de-faits-fact-tables">11.1 Tables de Faits (Fact Tables)</a></li>
+  <li><a href="#tables-de-dimensions-dimension-tables" id="toc-tables-de-dimensions-dimension-tables" class="nav-link" data-scroll-target="#tables-de-dimensions-dimension-tables">11.2 Tables de Dimensions (Dimension Tables)</a></li>
+  <li><a href="#star-schema-schéma-en-étoile" id="toc-star-schema-schéma-en-étoile" class="nav-link" data-scroll-target="#star-schema-schéma-en-étoile">11.3 Star Schema (Schéma en étoile)</a></li>
+  <li><a href="#snowflake-schema-schéma-en-flocon" id="toc-snowflake-schema-schéma-en-flocon" class="nav-link" data-scroll-target="#snowflake-schema-schéma-en-flocon">11.4 Snowflake Schema (Schéma en flocon)</a></li>
+  <li><a href="#star-vs-snowflake-quand-utiliser-quoi" id="toc-star-vs-snowflake-quand-utiliser-quoi" class="nav-link" data-scroll-target="#star-vs-snowflake-quand-utiliser-quoi">11.5 Star vs Snowflake — Quand utiliser quoi ?</a></li>
+  <li><a href="#exemple-de-requête-analytique" id="toc-exemple-de-requête-analytique" class="nav-link" data-scroll-target="#exemple-de-requête-analytique">11.6 Exemple de requête analytique</a></li>
+  </ul></li>
+  <li><a href="#exemple-complet-schéma-dune-boutique-en-ligne-oltp" id="toc-exemple-complet-schéma-dune-boutique-en-ligne-oltp" class="nav-link" data-scroll-target="#exemple-complet-schéma-dune-boutique-en-ligne-oltp">12. Exemple complet : Schéma d’une boutique en ligne (OLTP)</a></li>
+  <li><a href="#résumé" id="toc-résumé" class="nav-link" data-scroll-target="#résumé">Résumé</a>
+  <ul class="collapse">
+  <li><a href="#vocabulaire-relationnel" id="toc-vocabulaire-relationnel" class="nav-link" data-scroll-target="#vocabulaire-relationnel">Vocabulaire relationnel</a></li>
+  <li><a href="#relations" id="toc-relations" class="nav-link" data-scroll-target="#relations">Relations</a></li>
+  <li><a href="#acid" id="toc-acid" class="nav-link" data-scroll-target="#acid">ACID</a></li>
+  <li><a href="#oltp-vs-olap" id="toc-oltp-vs-olap" class="nav-link" data-scroll-target="#oltp-vs-olap">OLTP vs OLAP</a></li>
+  <li><a href="#data-warehouse-data-mart" id="toc-data-warehouse-data-mart" class="nav-link" data-scroll-target="#data-warehouse-data-mart">Data Warehouse &amp; Data Mart</a></li>
+  <li><a href="#modélisation-dimensionnelle" id="toc-modélisation-dimensionnelle" class="nav-link" data-scroll-target="#modélisation-dimensionnelle">Modélisation dimensionnelle</a></li>
+  </ul></li>
+  <li><a href="#quiz" id="toc-quiz" class="nav-link" data-scroll-target="#quiz">Quiz</a>
+  <ul class="collapse">
+  <li><a href="#q1.-quest-ce-quune-clé-primaire" id="toc-q1.-quest-ce-quune-clé-primaire" class="nav-link" data-scroll-target="#q1.-quest-ce-quune-clé-primaire">❓ Q1. Qu’est-ce qu’une clé primaire ?</a></li>
+  <li><a href="#q2.-à-quoi-sert-une-clé-étrangère" id="toc-q2.-à-quoi-sert-une-clé-étrangère" class="nav-link" data-scroll-target="#q2.-à-quoi-sert-une-clé-étrangère">❓ Q2. À quoi sert une clé étrangère ?</a></li>
+  <li><a href="#q3.-quelle-relation-nécessite-une-table-de-jonction" id="toc-q3.-quelle-relation-nécessite-une-table-de-jonction" class="nav-link" data-scroll-target="#q3.-quelle-relation-nécessite-une-table-de-jonction">❓ Q3. Quelle relation nécessite une table de jonction ?</a></li>
+  <li><a href="#q4.-que-signifie-le-a-de-acid" id="toc-q4.-que-signifie-le-a-de-acid" class="nav-link" data-scroll-target="#q4.-que-signifie-le-a-de-acid">❓ Q4. Que signifie le A de ACID ?</a></li>
+  <li><a href="#q5.-pourquoi-normaliser-une-base-de-données" id="toc-q5.-pourquoi-normaliser-une-base-de-données" class="nav-link" data-scroll-target="#q5.-pourquoi-normaliser-une-base-de-données">❓ Q5. Pourquoi normaliser une base de données ?</a></li>
+  <li><a href="#q6.-quel-sgbd-est-open-source-et-très-complet" id="toc-q6.-quel-sgbd-est-open-source-et-très-complet" class="nav-link" data-scroll-target="#q6.-quel-sgbd-est-open-source-et-très-complet">❓ Q6. Quel SGBD est open source ET très complet ?</a></li>
+  <li><a href="#q7.-quel-type-utiliser-pour-stocker-des-montants-en-euros" id="toc-q7.-quel-type-utiliser-pour-stocker-des-montants-en-euros" class="nav-link" data-scroll-target="#q7.-quel-type-utiliser-pour-stocker-des-montants-en-euros">❓ Q7. Quel type utiliser pour stocker des montants en euros ?</a></li>
+  <li><a href="#q8.-quelle-est-la-différence-principale-entre-oltp-et-olap" id="toc-q8.-quelle-est-la-différence-principale-entre-oltp-et-olap" class="nav-link" data-scroll-target="#q8.-quelle-est-la-différence-principale-entre-oltp-et-olap">❓ Q8. Quelle est la différence principale entre OLTP et OLAP ?</a></li>
+  <li><a href="#q9.-quest-ce-quun-data-warehouse" id="toc-q9.-quest-ce-quun-data-warehouse" class="nav-link" data-scroll-target="#q9.-quest-ce-quun-data-warehouse">❓ Q9. Qu’est-ce qu’un Data Warehouse ?</a></li>
+  <li><a href="#q10.-quest-ce-quun-data-mart" id="toc-q10.-quest-ce-quun-data-mart" class="nav-link" data-scroll-target="#q10.-quest-ce-quun-data-mart">❓ Q10. Qu’est-ce qu’un Data Mart ?</a></li>
+  <li><a href="#q11.-dans-un-star-schema-que-contient-la-table-de-faits" id="toc-q11.-dans-un-star-schema-que-contient-la-table-de-faits" class="nav-link" data-scroll-target="#q11.-dans-un-star-schema-que-contient-la-table-de-faits">❓ Q11. Dans un Star Schema, que contient la table de faits ?</a></li>
+  <li><a href="#q12.-quelle-est-la-différence-entre-star-schema-et-snowflake-schema" id="toc-q12.-quelle-est-la-différence-entre-star-schema-et-snowflake-schema" class="nav-link" data-scroll-target="#q12.-quelle-est-la-différence-entre-star-schema-et-snowflake-schema">❓ Q12. Quelle est la différence entre Star Schema et Snowflake Schema ?</a></li>
+  <li><a href="#q13.-une-table-de-dimension-contient" id="toc-q13.-une-table-de-dimension-contient" class="nav-link" data-scroll-target="#q13.-une-table-de-dimension-contient">❓ Q13. Une table de dimension contient…</a></li>
+  </ul></li>
+  <li><a href="#ressources" id="toc-ressources" class="nav-link" data-scroll-target="#ressources">📚 Ressources</a>
+  <ul class="collapse">
+  <li><a href="#bases-de-données-relationnelles" id="toc-bases-de-données-relationnelles" class="nav-link" data-scroll-target="#bases-de-données-relationnelles">Bases de données relationnelles</a></li>
+  <li><a href="#oltp-olap-et-data-warehousing" id="toc-oltp-olap-et-data-warehousing" class="nav-link" data-scroll-target="#oltp-olap-et-data-warehousing">OLTP, OLAP et Data Warehousing</a></li>
+  <li><a href="#modélisation-dimensionnelle-1" id="toc-modélisation-dimensionnelle-1" class="nav-link" data-scroll-target="#modélisation-dimensionnelle-1">Modélisation dimensionnelle</a></li>
+  </ul></li>
+  <li><a href="#prochaine-étape" id="toc-prochaine-étape" class="nav-link" data-scroll-target="#prochaine-étape">➡️ Prochaine étape</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/diakite-data/data-engineering-bootcamp/blob/main/notebooks/beginner/06_intro_relational_databases.ipynb" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/diakite-data/data-engineering-bootcamp/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.dev/diakite-data/data-engineering-bootcamp/blob/main/notebooks/beginner/06_intro_relational_databases.ipynb" class="toc-action"><i class="bi empty"></i>Edit this page</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">🟦 Niveau 1 : Débutant</li><li class="breadcrumb-item"><a href="../../notebooks/beginner/06_intro_relational_databases.html">🗄️ Bases de Données</a></li><li class="breadcrumb-item"><a href="../../notebooks/beginner/06_intro_relational_databases.html">06 · Introduction aux BDD Relationnelles</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Introduction aux Bases de Données Relationnelles</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Ce module présente les <strong>concepts fondamentaux</strong> des bases de données relationnelles.</p>
+<hr>
+<section id="prérequis" class="level2">
+<h2 class="anchored" data-anchor-id="prérequis">Prérequis</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 40%">
+<col style="width: 60%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Niveau</th>
+<th>Compétence</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>✅ Requis</td>
+<td>Avoir suivi le module <code>05_python_data_processing</code></td>
+</tr>
+<tr class="even">
+<td>✅ Requis</td>
+<td>Comprendre les structures de données (listes, dictionnaires)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="objectifs-du-module" class="level2">
+<h2 class="anchored" data-anchor-id="objectifs-du-module">Objectifs du module</h2>
+<p>À la fin de ce notebook, tu seras capable de :</p>
+<ul>
+<li>Expliquer ce qu’est une base de données</li>
+<li>Comprendre le modèle relationnel (tables, colonnes, lignes)</li>
+<li>Définir les clés primaires et étrangères</li>
+<li>Identifier les types de relations (1-1, 1-N, N-N)</li>
+<li>Comprendre les principes de normalisation</li>
+<li>Expliquer les propriétés ACID</li>
+<li>Différencier OLTP et OLAP</li>
+<li>Expliquer ce qu’est un Data Warehouse et un Data Mart</li>
+<li>Comprendre la modélisation dimensionnelle (Star/Snowflake Schema)</li>
+<li>Distinguer tables de faits et tables de dimensions</li>
+</ul>
+<hr>
+<blockquote class="blockquote">
+<p>💡 <strong>Note</strong> : Ce module est théorique. La pratique SQL viendra au module suivant !</p>
+</blockquote>
+<hr>
+</section>
+<section id="cest-quoi-une-base-de-données" class="level2">
+<h2 class="anchored" data-anchor-id="cest-quoi-une-base-de-données">1. C’est quoi une Base de Données ?</h2>
+<section id="définition" class="level3">
+<h3 class="anchored" data-anchor-id="définition">Définition</h3>
+<p>Une <strong>base de données</strong> est un système organisé pour :</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Fonction</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>💾 <strong>Stocker</strong></td>
+<td>Conserver des informations de façon permanente</td>
+</tr>
+<tr class="even">
+<td>🔍 <strong>Rechercher</strong></td>
+<td>Retrouver rapidement n’importe quelle donnée</td>
+</tr>
+<tr class="odd">
+<td>✏️ <strong>Modifier</strong></td>
+<td>Mettre à jour les informations</td>
+</tr>
+<tr class="even">
+<td>🔒 <strong>Sécuriser</strong></td>
+<td>Contrôler l’accès aux données sensibles</td>
+</tr>
+<tr class="odd">
+<td>🔗 <strong>Relier</strong></td>
+<td>Connecter différentes informations entre elles</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="en-une-phrase" class="level3">
+<h3 class="anchored" data-anchor-id="en-une-phrase">En une phrase</h3>
+<blockquote class="blockquote">
+<p>“Une base de données, c’est comme un <strong>classeur numérique géant</strong>, ultra-organisé et intelligent, capable de retrouver n’importe quelle information parmi des milliards de données.”</p>
+</blockquote>
+<hr>
+</section>
+<section id="fichiers-vs-base-de-données" class="level3">
+<h3 class="anchored" data-anchor-id="fichiers-vs-base-de-données">Fichiers vs Base de données</h3>
+<p>Pourquoi ne pas simplement utiliser des fichiers CSV ou Excel ?</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 44%">
+<col style="width: 36%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Critère</th>
+<th>Fichiers (CSV, Excel)</th>
+<th>Base de données</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Accès concurrent</strong></td>
+<td>❌ Conflits si plusieurs utilisateurs</td>
+<td>✅ Géré automatiquement</td>
+</tr>
+<tr class="even">
+<td><strong>Volume</strong></td>
+<td>❌ Lent au-delà de ~100K lignes</td>
+<td>✅ Millions/milliards de lignes</td>
+</tr>
+<tr class="odd">
+<td><strong>Intégrité</strong></td>
+<td>❌ Pas de validation</td>
+<td>✅ Contraintes, types</td>
+</tr>
+<tr class="even">
+<td><strong>Relations</strong></td>
+<td>❌ Difficile à gérer</td>
+<td>✅ Jointures natives</td>
+</tr>
+<tr class="odd">
+<td><strong>Sécurité</strong></td>
+<td>❌ Tout ou rien</td>
+<td>✅ Permissions fines</td>
+</tr>
+<tr class="even">
+<td><strong>Sauvegarde</strong></td>
+<td>❌ Manuelle</td>
+<td>✅ Automatique</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="le-sgbd-système-de-gestion-de-base-de-données" class="level2">
+<h2 class="anchored" data-anchor-id="le-sgbd-système-de-gestion-de-base-de-données">2. Le SGBD — Système de Gestion de Base de Données</h2>
+<p>Un <strong>SGBD</strong> (ou DBMS en anglais) est le logiciel qui gère la base de données.</p>
+<pre><code>┌─────────────────────────────────────────────────────────────┐
+│                        APPLICATION                          │
+│                  (Python, Java, Web...)                     │
+└───────────────────────────┬─────────────────────────────────┘
+                            │ Requêtes SQL
+                            ▼
+┌─────────────────────────────────────────────────────────────┐
+│                          SGBD                               │
+│              (PostgreSQL, MySQL, Oracle...)                 │
+│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐         │
+│  │   Parser    │  │  Optimizer  │  │   Engine    │         │
+│  │   (SQL)     │  │  (requêtes) │  │  (stockage) │         │
+│  └─────────────┘  └─────────────┘  └─────────────┘         │
+└───────────────────────────┬─────────────────────────────────┘
+                            │
+                            ▼
+┌─────────────────────────────────────────────────────────────┐
+│                     FICHIERS DISQUE                         │
+│                   (données stockées)                        │
+└─────────────────────────────────────────────────────────────┘</code></pre>
+<hr>
+<section id="sgbd-relationnels-populaires" class="level3">
+<h3 class="anchored" data-anchor-id="sgbd-relationnels-populaires">SGBD Relationnels populaires</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 35%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>SGBD</th>
+<th>Type</th>
+<th>Points forts</th>
+<th>Cas d’usage</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>PostgreSQL</strong></td>
+<td>Open source</td>
+<td>Puissant, extensible, SQL avancé</td>
+<td>Production, analytics</td>
+</tr>
+<tr class="even">
+<td><strong>MySQL</strong></td>
+<td>Open source</td>
+<td>Simple, rapide, très répandu</td>
+<td>Web, startups</td>
+</tr>
+<tr class="odd">
+<td><strong>SQLite</strong></td>
+<td>Embarqué</td>
+<td>Léger, fichier unique, zéro config</td>
+<td>Mobile, prototypage</td>
+</tr>
+<tr class="even">
+<td><strong>Oracle</strong></td>
+<td>Commercial</td>
+<td>Entreprise, haute disponibilité</td>
+<td>Banques, grandes entreprises</td>
+</tr>
+<tr class="odd">
+<td><strong>SQL Server</strong></td>
+<td>Commercial</td>
+<td>Intégration Microsoft</td>
+<td>Entreprises Windows</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="blockquote">
+<p>💡 Pour ce cours, on utilisera <strong>PostgreSQL</strong> — le plus complet et gratuit.</p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="le-modèle-relationnel" class="level2">
+<h2 class="anchored" data-anchor-id="le-modèle-relationnel">3. Le Modèle Relationnel</h2>
+<p>Le <strong>modèle relationnel</strong> a été inventé par <strong>Edgar F. Codd</strong> (IBM) en 1970. C’est le modèle le plus utilisé depuis 50 ans !</p>
+<section id="vocabulaire-de-base" class="level3">
+<h3 class="anchored" data-anchor-id="vocabulaire-de-base">Vocabulaire de base</h3>
+<pre><code>BASE DE DONNÉES : ma_boutique
+│
+├── TABLE : clients
+│   │
+│   │    COLONNES (attributs)
+│   │    ↓      ↓         ↓
+│   │  ┌─────┬────────┬─────────────────┐
+│   │  │ id  │  nom   │     email       │  ← EN-TÊTE
+│   │  ├─────┼────────┼─────────────────┤
+│   │  │  1  │ Alice  │ alice@mail.com  │  ← LIGNE (tuple)
+│   │  │  2  │ Bob    │ bob@mail.com    │  ← LIGNE (tuple)
+│   │  │  3  │ Charlie│ charlie@mail.com│  ← LIGNE (tuple)
+│   │  └─────┴────────┴─────────────────┘
+│   │    ↑
+│   │    CELLULE (valeur)
+│
+├── TABLE : produits
+│   └── ...
+│
+└── TABLE : commandes
+    └── ...</code></pre>
+<hr>
+</section>
+<section id="terminologie" class="level3">
+<h3 class="anchored" data-anchor-id="terminologie">Terminologie</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Terme technique</th>
+<th>Terme courant</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Relation</strong></td>
+<td>Table</td>
+<td>Ensemble de données du même type</td>
+</tr>
+<tr class="even">
+<td><strong>Tuple</strong></td>
+<td>Ligne / Enregistrement</td>
+<td>Une entrée (ex: un client)</td>
+</tr>
+<tr class="odd">
+<td><strong>Attribut</strong></td>
+<td>Colonne / Champ</td>
+<td>Une propriété (ex: nom, email)</td>
+</tr>
+<tr class="even">
+<td><strong>Domaine</strong></td>
+<td>Type</td>
+<td>Valeurs possibles (INTEGER, VARCHAR…)</td>
+</tr>
+<tr class="odd">
+<td><strong>Schéma</strong></td>
+<td>Structure</td>
+<td>Définition des colonnes et types</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="types-de-données" class="level2">
+<h2 class="anchored" data-anchor-id="types-de-données">4. Types de données</h2>
+<p>Chaque colonne a un <strong>type</strong> qui définit les valeurs autorisées.</p>
+<section id="types-courants-postgresql" class="level3">
+<h3 class="anchored" data-anchor-id="types-courants-postgresql">Types courants (PostgreSQL)</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Catégorie</th>
+<th>Type</th>
+<th>Description</th>
+<th>Exemple</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Entiers</strong></td>
+<td><code>INTEGER</code></td>
+<td>Nombre entier</td>
+<td><code>42</code></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><code>BIGINT</code></td>
+<td>Grand entier</td>
+<td><code>9223372036854775807</code></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><code>SMALLINT</code></td>
+<td>Petit entier</td>
+<td><code>32767</code> max</td>
+</tr>
+<tr class="even">
+<td><strong>Décimaux</strong></td>
+<td><code>DECIMAL(p,s)</code></td>
+<td>Précision exacte</td>
+<td><code>19.99</code></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><code>FLOAT</code></td>
+<td>Approximatif</td>
+<td><code>3.14159</code></td>
+</tr>
+<tr class="even">
+<td><strong>Texte</strong></td>
+<td><code>VARCHAR(n)</code></td>
+<td>Texte variable (max n)</td>
+<td><code>'Alice'</code></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><code>TEXT</code></td>
+<td>Texte illimité</td>
+<td><code>'Long texte...'</code></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><code>CHAR(n)</code></td>
+<td>Texte fixe (n caractères)</td>
+<td><code>'FR'</code></td>
+</tr>
+<tr class="odd">
+<td><strong>Booléen</strong></td>
+<td><code>BOOLEAN</code></td>
+<td>Vrai/Faux</td>
+<td><code>TRUE</code>, <code>FALSE</code></td>
+</tr>
+<tr class="even">
+<td><strong>Date/Heure</strong></td>
+<td><code>DATE</code></td>
+<td>Date seule</td>
+<td><code>'2024-01-15'</code></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><code>TIMESTAMP</code></td>
+<td>Date + heure</td>
+<td><code>'2024-01-15 14:30:00'</code></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><code>TIME</code></td>
+<td>Heure seule</td>
+<td><code>'14:30:00'</code></td>
+</tr>
+<tr class="odd">
+<td><strong>Autres</strong></td>
+<td><code>UUID</code></td>
+<td>Identifiant unique</td>
+<td><code>'a0eebc99-9c0b...'</code></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><code>JSON</code></td>
+<td>Données JSON</td>
+<td><code>'{"key": "value"}'</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="bonnes-pratiques" class="level3">
+<h3 class="anchored" data-anchor-id="bonnes-pratiques">💡 Bonnes pratiques</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>✅ Faire</th>
+<th>❌ Éviter</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>DECIMAL</code> pour l’argent</td>
+<td><code>FLOAT</code> pour l’argent (imprécis)</td>
+</tr>
+<tr class="even">
+<td><code>VARCHAR(255)</code> pour emails</td>
+<td><code>TEXT</code> partout (pas de limite)</td>
+</tr>
+<tr class="odd">
+<td><code>DATE</code> pour les dates</td>
+<td><code>VARCHAR</code> pour les dates</td>
+</tr>
+<tr class="even">
+<td>Types les plus petits possibles</td>
+<td>Types trop grands “au cas où”</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="clé-primaire-primary-key" class="level2">
+<h2 class="anchored" data-anchor-id="clé-primaire-primary-key">5. Clé Primaire (Primary Key)</h2>
+<p>La <strong>clé primaire (PK)</strong> identifie <strong>de façon unique</strong> chaque ligne d’une table.</p>
+<section id="règles" class="level3">
+<h3 class="anchored" data-anchor-id="règles">Règles</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Règle</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Unique</strong></td>
+<td>Deux lignes ne peuvent pas avoir la même valeur</td>
+</tr>
+<tr class="even">
+<td><strong>Non NULL</strong></td>
+<td>La valeur doit toujours être présente</td>
+</tr>
+<tr class="odd">
+<td><strong>Immuable</strong></td>
+<td>Ne devrait jamais changer</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="exemple" class="level3">
+<h3 class="anchored" data-anchor-id="exemple">Exemple</h3>
+<pre><code>Table : clients
+┌─────────┬──────────┬─────────────────┐
+│ id (PK) │   nom    │      email      │
+├─────────┼──────────┼─────────────────┤
+│    1    │  Alice   │ alice@mail.com  │
+│    2    │  Bob     │ bob@mail.com    │
+│    3    │  Charlie │ charlie@mail.com│
+└─────────┴──────────┴─────────────────┘
+     ↑
+     Clé primaire : garantit l'unicité</code></pre>
+<hr>
+</section>
+<section id="types-de-clés-primaires" class="level3">
+<h3 class="anchored" data-anchor-id="types-de-clés-primaires">Types de clés primaires</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 48%">
+<col style="width: 29%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Type</th>
+<th>Description</th>
+<th>Exemple</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Auto-incrémentée</strong></td>
+<td>Générée automatiquement (1, 2, 3…)</td>
+<td><code>SERIAL</code> en PostgreSQL</td>
+</tr>
+<tr class="even">
+<td><strong>UUID</strong></td>
+<td>Identifiant universel unique</td>
+<td><code>a0eebc99-9c0b-4ef8...</code></td>
+</tr>
+<tr class="odd">
+<td><strong>Naturelle</strong></td>
+<td>Donnée existante unique</td>
+<td>Numéro de sécurité sociale</td>
+</tr>
+<tr class="even">
+<td><strong>Composite</strong></td>
+<td>Plusieurs colonnes combinées</td>
+<td><code>(pays, code_postal)</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote class="blockquote">
+<p>💡 <strong>Recommandation</strong> : Utiliser <code>SERIAL</code> (auto-increment) ou <code>UUID</code> plutôt qu’une clé naturelle.</p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="clé-étrangère-foreign-key" class="level2">
+<h2 class="anchored" data-anchor-id="clé-étrangère-foreign-key">6. Clé Étrangère (Foreign Key)</h2>
+<p>La <strong>clé étrangère (FK)</strong> crée un <strong>lien</strong> entre deux tables.</p>
+<section id="principe" class="level3">
+<h3 class="anchored" data-anchor-id="principe">Principe</h3>
+<pre><code>Table : clients                    Table : commandes
+┌─────────┬──────────┐            ┌─────────┬─────────────┬─────────┐
+│ id (PK) │   nom    │            │ id (PK) │ client_id(FK)│ produit │
+├─────────┼──────────┤            ├─────────┼─────────────┼─────────┤
+│    1    │  Alice   │◄───────────│    1    │      1      │ Clavier │
+│    2    │  Bob     │◄───────────│    2    │      2      │ Souris  │
+│    3    │  Charlie │            │    3    │      1      │ Écran   │
+└─────────┴──────────┘            └─────────┴─────────────┴─────────┘
+                                              ↑
+                                    Clé étrangère : référence clients.id</code></pre>
+<hr>
+</section>
+<section id="ce-que-garantit-la-fk" class="level3">
+<h3 class="anchored" data-anchor-id="ce-que-garantit-la-fk">Ce que garantit la FK</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 43%">
+<col style="width: 56%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Garantie</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Intégrité référentielle</strong></td>
+<td>Impossible de référencer un client inexistant</td>
+</tr>
+<tr class="even">
+<td><strong>Cohérence</strong></td>
+<td>Si on supprime un client, que faire des commandes ?</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="actions-en-cascade" class="level3">
+<h3 class="anchored" data-anchor-id="actions-en-cascade">Actions en cascade</h3>
+<p>Que se passe-t-il si on supprime ou modifie la ligne référencée ?</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Action</th>
+<th>Comportement</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>CASCADE</code></td>
+<td>Supprime/modifie aussi les lignes liées</td>
+</tr>
+<tr class="even">
+<td><code>SET NULL</code></td>
+<td>Met la FK à NULL</td>
+</tr>
+<tr class="odd">
+<td><code>SET DEFAULT</code></td>
+<td>Met une valeur par défaut</td>
+</tr>
+<tr class="even">
+<td><code>RESTRICT</code></td>
+<td>Interdit la suppression/modification</td>
+</tr>
+<tr class="odd">
+<td><code>NO ACTION</code></td>
+<td>Comme RESTRICT (vérification différée)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="types-de-relations" class="level2">
+<h2 class="anchored" data-anchor-id="types-de-relations">7. Types de Relations</h2>
+<section id="relation-un-à-un-11" class="level3">
+<h3 class="anchored" data-anchor-id="relation-un-à-un-11">1️⃣ Relation Un-à-Un (1:1)</h3>
+<p>Une ligne dans A correspond à <strong>exactement une</strong> ligne dans B.</p>
+<pre><code>utilisateurs              profils
+┌────┬─────────┐         ┌────┬─────────┬───────────┐
+│ id │  email  │         │ id │ user_id │   bio     │
+├────┼─────────┤         ├────┼─────────┼───────────┤
+│ 1  │ a@m.com │◄────────│ 1  │    1    │ Dev...    │
+│ 2  │ b@m.com │◄────────│ 2  │    2    │ Designer..│
+└────┴─────────┘         └────┴─────────┴───────────┘</code></pre>
+<p><strong>Cas d’usage</strong> : Séparer des données rarement utilisées (optimisation).</p>
+<hr>
+</section>
+<section id="relation-un-à-plusieurs-1n" class="level3">
+<h3 class="anchored" data-anchor-id="relation-un-à-plusieurs-1n">1️⃣➡️🔢 Relation Un-à-Plusieurs (1:N)</h3>
+<p>Une ligne dans A peut correspondre à <strong>plusieurs</strong> lignes dans B.</p>
+<pre><code>clients                   commandes
+┌────┬─────────┐         ┌────┬───────────┬─────────┐
+│ id │   nom   │         │ id │ client_id │ produit │
+├────┼─────────┤         ├────┼───────────┼─────────┤
+│ 1  │  Alice  │◄────┬───│ 1  │     1     │ Clavier │
+│ 2  │  Bob    │◄──┐ └───│ 2  │     1     │ Souris  │
+└────┴─────────┘   └─────│ 3  │     2     │ Écran   │
+                         └────┴───────────┴─────────┘</code></pre>
+<p><strong>Cas d’usage</strong> : Client → Commandes, Auteur → Articles, Pays → Villes.</p>
+<hr>
+</section>
+<section id="relation-plusieurs-à-plusieurs-nn" class="level3">
+<h3 class="anchored" data-anchor-id="relation-plusieurs-à-plusieurs-nn">🔢↔︎️🔢 Relation Plusieurs-à-Plusieurs (N:N)</h3>
+<p>Plusieurs lignes dans A correspondent à plusieurs lignes dans B.</p>
+<p><strong>Nécessite une table de jonction !</strong></p>
+<pre><code>etudiants          inscriptions         cours
+┌────┬───────┐    ┌────────────┬──────────┐    ┌────┬─────────┐
+│ id │  nom  │    │ etudiant_id│ cours_id │    │ id │   nom   │
+├────┼───────┤    ├────────────┼──────────┤    ├────┼─────────┤
+│ 1  │ Alice │◄───│     1      │    1     │───►│ 1  │  Maths  │
+│ 2  │ Bob   │◄─┬─│     1      │    2     │─┬─►│ 2  │ Python  │
+└────┴───────┘  │ │     2      │    1     │ │  └────┴─────────┘
+                └─│     2      │    2     │─┘
+                  └────────────┴──────────┘
+                       Table de jonction</code></pre>
+<p><strong>Cas d’usage</strong> : Étudiants ↔︎ Cours, Produits ↔︎ Tags, Acteurs ↔︎ Films.</p>
+<hr>
+</section>
+</section>
+<section id="normalisation" class="level2">
+<h2 class="anchored" data-anchor-id="normalisation">8. Normalisation</h2>
+<p>La <strong>normalisation</strong> consiste à organiser les données pour :</p>
+<ul>
+<li>Éviter la <strong>redondance</strong> (données dupliquées)</li>
+<li>Éviter les <strong>anomalies</strong> (incohérences lors de modifications)</li>
+<li>Garantir l’<strong>intégrité</strong> des données</li>
+</ul>
+<hr>
+<section id="exemple-non-normalisé" class="level3">
+<h3 class="anchored" data-anchor-id="exemple-non-normalisé">Exemple NON normalisé</h3>
+<pre><code>Table : commandes (MAUVAIS)
+┌────┬─────────┬───────────────┬─────────┬──────────────┐
+│ id │ client  │ client_email  │ produit │    ville     │
+├────┼─────────┼───────────────┼─────────┼──────────────┤
+│ 1  │ Alice   │ alice@m.com   │ Clavier │    Paris     │
+│ 2  │ Alice   │ alice@m.com   │ Souris  │    Paris     │  ← Redondance !
+│ 3  │ Bob     │ bob@m.com     │ Écran   │    Lyon      │
+└────┴─────────┴───────────────┴─────────┴──────────────┘
+
+❌ Problèmes :
+  - Si Alice change d'email → modifier TOUTES les lignes
+  - Risque d'incohérence si on oublie une ligne
+  - Espace gaspillé</code></pre>
+<hr>
+</section>
+<section id="exemple-normalisé" class="level3">
+<h3 class="anchored" data-anchor-id="exemple-normalisé">✅ Exemple normalisé</h3>
+<pre><code>Table : clients               Table : commandes
+┌────┬─────────┬─────────────┐   ┌────┬───────────┬─────────┐
+│ id │   nom   │    email    │   │ id │ client_id │ produit │
+├────┼─────────┼─────────────┤   ├────┼───────────┼─────────┤
+│ 1  │ Alice   │ alice@m.com │   │ 1  │     1     │ Clavier │
+│ 2  │ Bob     │ bob@m.com   │   │ 2  │     1     │ Souris  │
+└────┴─────────┴─────────────┘   │ 3  │     2     │ Écran   │
+                                 └────┴───────────┴─────────┘
+
+✅ Avantages :
+  - Email modifié une seule fois
+  - Pas de redondance
+  - Données cohérentes</code></pre>
+<hr>
+</section>
+<section id="formes-normales-résumé" class="level3">
+<h3 class="anchored" data-anchor-id="formes-normales-résumé">Formes normales (résumé)</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Forme</th>
+<th>Règle principale</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>1NF</strong></td>
+<td>Chaque cellule contient une seule valeur (pas de listes)</td>
+</tr>
+<tr class="even">
+<td><strong>2NF</strong></td>
+<td>1NF + chaque colonne dépend de TOUTE la clé primaire</td>
+</tr>
+<tr class="odd">
+<td><strong>3NF</strong></td>
+<td>2NF + pas de dépendance entre colonnes non-clés</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="blockquote">
+<p>💡 En pratique, la <strong>3NF</strong> est généralement suffisante pour les bases OLTP.</p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="propriétés-acid" class="level2">
+<h2 class="anchored" data-anchor-id="propriétés-acid">9. Propriétés ACID</h2>
+<p><strong>ACID</strong> garantit la <strong>fiabilité</strong> des transactions dans une base relationnelle.</p>
+<section id="les-4-propriétés" class="level3">
+<h3 class="anchored" data-anchor-id="les-4-propriétés">Les 4 propriétés</h3>
+<pre><code>                    ┌─────────────────┐
+                    │   TRANSACTION   │
+                    │   (ex: virement │
+                    │    bancaire)    │
+                    └────────┬────────┘
+                             │
+         ┌───────────────────┼───────────────────┐
+         │                   │                   │
+         ▼                   ▼                   ▼
+   ┌───────────┐      ┌───────────┐      ┌───────────┐
+   │ ATOMICITÉ │      │ COHÉRENCE │      │ ISOLATION │
+   │  Tout ou  │      │   État    │      │Transactions│
+   │   rien    │      │  valide   │      │ séparées  │
+   └───────────┘      └───────────┘      └───────────┘
+                             │
+                             ▼
+                      ┌───────────┐
+                      │ DURABILITÉ│
+                      │ Permanent │
+                      └───────────┘</code></pre>
+<hr>
+</section>
+<section id="détail-de-chaque-propriété" class="level3">
+<h3 class="anchored" data-anchor-id="détail-de-chaque-propriété">Détail de chaque propriété</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 27%">
+<col style="width: 32%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Lettre</th>
+<th>Propriété</th>
+<th>Description</th>
+<th>Exemple</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>A</strong></td>
+<td><strong>Atomicité</strong></td>
+<td>Tout ou rien — si une partie échoue, tout est annulé</td>
+<td>Virement : débit ET crédit réussissent ou rien</td>
+</tr>
+<tr class="even">
+<td><strong>C</strong></td>
+<td><strong>Cohérence</strong></td>
+<td>La base reste dans un état valide</td>
+<td>Le solde ne peut pas être négatif</td>
+</tr>
+<tr class="odd">
+<td><strong>I</strong></td>
+<td><strong>Isolation</strong></td>
+<td>Les transactions concurrentes ne s’interfèrent pas</td>
+<td>Deux virements simultanés ne se mélangent pas</td>
+</tr>
+<tr class="even">
+<td><strong>D</strong></td>
+<td><strong>Durabilité</strong></td>
+<td>Une fois validée, la transaction est permanente</td>
+<td>Même après un crash, le virement est enregistré</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="exemple-virement-bancaire" class="level3">
+<h3 class="anchored" data-anchor-id="exemple-virement-bancaire">Exemple : Virement bancaire</h3>
+<pre><code>TRANSACTION : Virer 100€ de Alice vers Bob
+
+  1. Débiter 100€ du compte Alice
+  2. Créditer 100€ sur le compte Bob
+
+ATOMICITÉ :
+  ✅ Les deux opérations réussissent → COMMIT
+  ❌ Une opération échoue → ROLLBACK (rien ne change)
+
+COHÉRENCE :
+  ✅ Alice : 500€ → 400€
+  ✅ Bob   : 200€ → 300€
+  ✅ Total : 700€ → 700€ (inchangé)
+
+ISOLATION :
+  Un autre virement simultané ne voit pas l'état intermédiaire
+
+DURABILITÉ :
+  Même si le serveur crash juste après le COMMIT,
+  le virement sera toujours là au redémarrage</code></pre>
+<hr>
+</section>
+</section>
+<section id="oltp-vs-olap-deux-mondes-différents" class="level2">
+<h2 class="anchored" data-anchor-id="oltp-vs-olap-deux-mondes-différents">10. OLTP vs OLAP — Deux mondes différents</h2>
+<p>Les bases de données relationnelles peuvent servir à <strong>deux usages très différents</strong>. Comprendre cette distinction est <strong>fondamental</strong> en Data Engineering.</p>
+<hr>
+<section id="oltp-online-transaction-processing" class="level3">
+<h3 class="anchored" data-anchor-id="oltp-online-transaction-processing">10.1 OLTP — Online Transaction Processing</h3>
+<p>Les bases <strong>OLTP</strong> gèrent les <strong>opérations quotidiennes</strong> d’une entreprise.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Caractéristique</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>But</strong></td>
+<td>Gérer les transactions courantes</td>
+</tr>
+<tr class="even">
+<td><strong>Opérations</strong></td>
+<td>INSERT, UPDATE, DELETE fréquents</td>
+</tr>
+<tr class="odd">
+<td><strong>Requêtes</strong></td>
+<td>Simples, sur peu de lignes</td>
+</tr>
+<tr class="even">
+<td><strong>Utilisateurs</strong></td>
+<td>Applications, employés</td>
+</tr>
+<tr class="odd">
+<td><strong>Volume par requête</strong></td>
+<td>Quelques lignes</td>
+</tr>
+<tr class="even">
+<td><strong>Priorité</strong></td>
+<td>Rapidité, disponibilité</td>
+</tr>
+<tr class="odd">
+<td><strong>Schéma</strong></td>
+<td>Normalisé (3NF)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exemples :</strong> - Application e-commerce (commandes, paiements) - Système bancaire (virements, retraits) - Gestion de stock (entrées, sorties) - Réservation de billets</p>
+<hr>
+</section>
+<section id="olap-online-analytical-processing" class="level3">
+<h3 class="anchored" data-anchor-id="olap-online-analytical-processing">10.2 OLAP — Online Analytical Processing</h3>
+<p>Les bases <strong>OLAP</strong> sont conçues pour <strong>l’analyse de données</strong> et le <strong>reporting</strong>.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Caractéristique</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>But</strong></td>
+<td>Analyser les données historiques</td>
+</tr>
+<tr class="even">
+<td><strong>Opérations</strong></td>
+<td>SELECT complexes (agrégations, jointures)</td>
+</tr>
+<tr class="odd">
+<td><strong>Requêtes</strong></td>
+<td>Complexes, sur des millions de lignes</td>
+</tr>
+<tr class="even">
+<td><strong>Utilisateurs</strong></td>
+<td>Analystes, Data Scientists, dirigeants</td>
+</tr>
+<tr class="odd">
+<td><strong>Volume par requête</strong></td>
+<td>Des millions/milliards de lignes</td>
+</tr>
+<tr class="even">
+<td><strong>Priorité</strong></td>
+<td>Performance analytique</td>
+</tr>
+<tr class="odd">
+<td><strong>Schéma</strong></td>
+<td>Dénormalisé (Star Schema, Snowflake)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exemples :</strong> - Rapport des ventes par région/mois - Analyse du comportement client - Tableaux de bord (dashboards) - Prévisions et tendances</p>
+<hr>
+</section>
+<section id="comparaison-oltp-vs-olap" class="level3">
+<h3 class="anchored" data-anchor-id="comparaison-oltp-vs-olap">10.3 Comparaison OLTP vs OLAP</h3>
+<pre><code>           OLTP                              OLAP
+    (Transactionnel)                    (Analytique)
+          │                                  │
+    ┌─────▼─────┐                      ┌─────▼─────┐
+    │  INSERT   │                      │  SELECT   │
+    │  UPDATE   │                      │  GROUP BY │
+    │  DELETE   │                      │  JOIN     │
+    │  (CRUD)   │                      │  (Analyse)│
+    └─────┬─────┘                      └─────┬─────┘
+          │                                  │
+    ┌─────▼─────┐                      ┌─────▼─────┐
+    │ Quelques  │                      │ Millions  │
+    │  lignes   │                      │ de lignes │
+    └─────┬─────┘                      └─────┬─────┘
+          │                                  │
+    ┌─────▼─────┐                      ┌─────▼─────┐
+    │   App     │                      │  Rapport  │
+    │   Web     │                      │ Dashboard │
+    └───────────┘                      └───────────┘</code></pre>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Critère</th>
+<th>OLTP</th>
+<th>OLAP</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Objectif</strong></td>
+<td>Opérations quotidiennes</td>
+<td>Analyse, décision</td>
+</tr>
+<tr class="even">
+<td><strong>Données</strong></td>
+<td>Actuelles</td>
+<td>Historiques</td>
+</tr>
+<tr class="odd">
+<td><strong>Requêtes</strong></td>
+<td>Simples, fréquentes</td>
+<td>Complexes, ponctuelles</td>
+</tr>
+<tr class="even">
+<td><strong>Temps de réponse</strong></td>
+<td>Millisecondes</td>
+<td>Secondes à minutes</td>
+</tr>
+<tr class="odd">
+<td><strong>Utilisateurs</strong></td>
+<td>Milliers (applications)</td>
+<td>Dizaines (analystes)</td>
+</tr>
+<tr class="even">
+<td><strong>Schéma</strong></td>
+<td>Normalisé</td>
+<td>Dénormalisé</td>
+</tr>
+<tr class="odd">
+<td><strong>Exemples</strong></td>
+<td>PostgreSQL, MySQL</td>
+<td>Snowflake, BigQuery, Redshift</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="data-warehouse-lentrepôt-de-données" class="level3">
+<h3 class="anchored" data-anchor-id="data-warehouse-lentrepôt-de-données">10.4 Data Warehouse — L’entrepôt de données</h3>
+<p>Un <strong>Data Warehouse (DWH)</strong> est une base de données <strong>OLAP</strong> centralisée qui stocke les données de toute l’entreprise pour l’analyse.</p>
+<section id="définition-1" class="level4">
+<h4 class="anchored" data-anchor-id="définition-1">Définition</h4>
+<blockquote class="blockquote">
+<p>“Un Data Warehouse est une copie des données transactionnelles, structurée spécifiquement pour l’analyse et le reporting.” — Bill Inmon</p>
+</blockquote>
+</section>
+<section id="caractéristiques" class="level4">
+<h4 class="anchored" data-anchor-id="caractéristiques">Caractéristiques</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 56%">
+<col style="width: 43%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Caractéristique</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Orienté sujet</strong></td>
+<td>Organisé par domaine métier (ventes, clients, produits)</td>
+</tr>
+<tr class="even">
+<td><strong>Intégré</strong></td>
+<td>Données de sources multiples, harmonisées</td>
+</tr>
+<tr class="odd">
+<td><strong>Historisé</strong></td>
+<td>Conserve l’historique (pas de suppression)</td>
+</tr>
+<tr class="even">
+<td><strong>Non volatile</strong></td>
+<td>Données en lecture seule (pas de UPDATE)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="exemples-de-data-warehouses" class="level4">
+<h4 class="anchored" data-anchor-id="exemples-de-data-warehouses">Exemples de Data Warehouses</h4>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Produit</th>
+<th>Type</th>
+<th>Particularité</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Snowflake</strong></td>
+<td>Cloud</td>
+<td>Séparation stockage/calcul, très scalable</td>
+</tr>
+<tr class="even">
+<td><strong>Amazon Redshift</strong></td>
+<td>Cloud AWS</td>
+<td>Intégration AWS native</td>
+</tr>
+<tr class="odd">
+<td><strong>Google BigQuery</strong></td>
+<td>Cloud GCP</td>
+<td>Serverless, pay-per-query</td>
+</tr>
+<tr class="even">
+<td><strong>Azure Synapse</strong></td>
+<td>Cloud Azure</td>
+<td>Intégration Microsoft</td>
+</tr>
+<tr class="odd">
+<td><strong>Teradata</strong></td>
+<td>On-premise</td>
+<td>Historique, grandes entreprises</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="data-mart-le-magasin-spécialisé" class="level3">
+<h3 class="anchored" data-anchor-id="data-mart-le-magasin-spécialisé">10.5 Data Mart — Le magasin spécialisé</h3>
+<p>Un <strong>Data Mart</strong> est un <strong>sous-ensemble</strong> du Data Warehouse, focalisé sur un <strong>domaine métier spécifique</strong>.</p>
+<section id="définition-2" class="level4">
+<h4 class="anchored" data-anchor-id="définition-2">Définition</h4>
+<blockquote class="blockquote">
+<p>“Un Data Mart est une vue spécialisée du Data Warehouse, optimisée pour les besoins d’un département ou d’une fonction métier.”</p>
+</blockquote>
+</section>
+<section id="exemples-de-data-marts" class="level4">
+<h4 class="anchored" data-anchor-id="exemples-de-data-marts">Exemples de Data Marts</h4>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Data Mart</th>
+<th>Données</th>
+<th>Utilisateurs</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Marketing</strong></td>
+<td>Campagnes, conversions, segments</td>
+<td>Équipe Marketing</td>
+</tr>
+<tr class="even">
+<td><strong>Finance</strong></td>
+<td>Revenus, coûts, budgets</td>
+<td>Direction financière</td>
+</tr>
+<tr class="odd">
+<td><strong>RH</strong></td>
+<td>Employés, salaires, turnover</td>
+<td>Ressources Humaines</td>
+</tr>
+<tr class="even">
+<td><strong>Ventes</strong></td>
+<td>Commandes, clients, produits</td>
+<td>Équipe commerciale</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="architecture-globale" class="level3">
+<h3 class="anchored" data-anchor-id="architecture-globale">10.6 Architecture globale</h3>
+<pre><code>┌─────────────────────────────────────────────────────────────────────────┐
+│                         SOURCES DE DONNÉES                              │
+│  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐               │
+│  │   ERP    │  │   CRM    │  │  E-comm  │  │   Logs   │  ...          │
+│  │  (OLTP)  │  │  (OLTP)  │  │  (OLTP)  │  │          │               │
+│  └────┬─────┘  └────┬─────┘  └────┬─────┘  └────┬─────┘               │
+└───────┼─────────────┼─────────────┼─────────────┼────────────────────-─┘
+        │             │             │             │
+        └─────────────┴──────┬──────┴─────────────┘
+                             │
+                    ┌────────▼────────┐
+                    │   ETL / ELT     │
+                    │  (Extraction,   │
+                    │  Transformation,│
+                    │  Chargement)    │
+                    └────────┬────────┘
+                             │
+                    ┌────────▼────────┐
+                    │  DATA WAREHOUSE │
+                    │     (OLAP)      │
+                    │                 │
+                    │ ┌─────────────┐ │
+                    │ │  Données    │ │
+                    │ │  intégrées  │ │
+                    │ │  historisées│ │
+                    │ └─────────────┘ │
+                    └────────┬────────┘
+                             │
+         ┌───────────────────┼───────────────────┐
+         │                   │                   │
+         ▼                   ▼                   ▼
+  ┌─────────────┐     ┌─────────────┐     ┌─────────────┐
+  │  DATA MART  │     │  DATA MART  │     │  DATA MART  │
+  │   Ventes    │     │  Marketing  │     │   Finance   │
+  └──────┬──────┘     └──────┬──────┘     └──────┬──────┘
+         │                   │                   │
+         ▼                   ▼                   ▼
+  ┌─────────────┐     ┌─────────────┐     ┌─────────────┐
+  │  Dashboard  │     │  Rapports   │     │    KPIs     │
+  │   Power BI  │     │  Campaigns  │     │  Financiers │
+  └─────────────┘     └─────────────┘     └─────────────┘</code></pre>
+<hr>
+</section>
+<section id="résumé-oltp-olap-dwh-data-mart" class="level3">
+<h3 class="anchored" data-anchor-id="résumé-oltp-olap-dwh-data-mart">💡 Résumé OLTP / OLAP / DWH / Data Mart</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Concept</th>
+<th>Rôle</th>
+<th>Analogie</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>OLTP</strong></td>
+<td>Opérations quotidiennes</td>
+<td>La caisse enregistreuse</td>
+</tr>
+<tr class="even">
+<td><strong>OLAP</strong></td>
+<td>Analyse des données</td>
+<td>Le bureau de l’analyste</td>
+</tr>
+<tr class="odd">
+<td><strong>Data Warehouse</strong></td>
+<td>Entrepôt centralisé</td>
+<td>Le grand entrepôt</td>
+</tr>
+<tr class="even">
+<td><strong>Data Mart</strong></td>
+<td>Vue métier spécialisée</td>
+<td>Le rayon d’un magasin</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="modélisation-dimensionnelle-star-snowflake-schema" class="level2">
+<h2 class="anchored" data-anchor-id="modélisation-dimensionnelle-star-snowflake-schema">11. Modélisation Dimensionnelle — Star &amp; Snowflake Schema</h2>
+<p>La <strong>modélisation dimensionnelle</strong> est la technique utilisée pour structurer les données dans un Data Warehouse. Elle est optimisée pour l’<strong>analyse</strong> (OLAP), pas pour les transactions (OLTP).</p>
+<blockquote class="blockquote">
+<p>💡 Cette approche a été popularisée par <strong>Ralph Kimball</strong> dans les années 1990.</p>
+</blockquote>
+<hr>
+<section id="tables-de-faits-fact-tables" class="level3">
+<h3 class="anchored" data-anchor-id="tables-de-faits-fact-tables">11.1 Tables de Faits (Fact Tables)</h3>
+<p>Une <strong>table de faits</strong> contient les <strong>mesures</strong> (métriques) que l’on veut analyser.</p>
+<pre><code>┌─────────────────────────────────────────────────────────────────┐
+│                      TABLE DE FAITS                             │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│    Contient :                                                  │
+│     • Les MESURES (chiffres à analyser)                        │
+│     • Les CLÉS ÉTRANGÈRES vers les dimensions                  │
+│                                                                 │
+│    Exemples de mesures :                                       │
+│     • Montant de la vente                                      │
+│     • Quantité vendue                                          │
+│     • Coût                                                     │
+│     • Nombre de clics                                          │
+│                                                                 │
+│    Caractéristiques :                                          │
+│     • Très grande (millions/milliards de lignes)               │
+│     • Une ligne = un ÉVÉNEMENT (une vente, un clic, etc.)      │
+│     • Granularité fine (niveau de détail)                      │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘</code></pre>
+<p><strong>Exemple : Table de faits <code>fact_sales</code></strong></p>
+<pre><code>fact_sales
+┌────────────┬─────────────┬────────────────┬────────────────┬──────────┬──────────┐
+│ sale_id(PK)│ date_id(FK) │ product_id(FK) │ customer_id(FK)│ quantity │  amount  │
+├────────────┼─────────────┼────────────────┼────────────────┼──────────┼──────────┤
+│     1      │  20240115   │      101       │      501       │    2     │  199.98  │
+│     2      │  20240115   │      102       │      502       │    1     │   49.99  │
+│     3      │  20240116   │      101       │      501       │    1     │   99.99  │
+│    ...     │    ...      │      ...       │      ...       │   ...    │   ...    │
+└────────────┴─────────────┴────────────────┴────────────────┴──────────┴──────────┘
+                   │              │                │
+                FK vers        FK vers          FK vers
+               dim_date     dim_product      dim_customer</code></pre>
+<hr>
+</section>
+<section id="tables-de-dimensions-dimension-tables" class="level3">
+<h3 class="anchored" data-anchor-id="tables-de-dimensions-dimension-tables">11.2 Tables de Dimensions (Dimension Tables)</h3>
+<p>Une <strong>table de dimension</strong> contient le <strong>contexte descriptif</strong> des mesures.</p>
+<pre><code>┌─────────────────────────────────────────────────────────────────┐
+│                    TABLE DE DIMENSION                           │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│    Contient :                                                  │
+│     • Les ATTRIBUTS descriptifs (le "quoi", "qui", "où", "quand") │
+│     • La clé primaire référencée par la table de faits         │
+│                                                                 │
+│    Exemples de dimensions :                                    │
+│     • dim_date : année, mois, jour, trimestre, jour_semaine    │
+│     • dim_product : nom, catégorie, marque, prix_liste         │
+│     • dim_customer : nom, segment, ville, pays                 │
+│     • dim_store : nom, région, type, surface                   │
+│                                                                 │
+│    Caractéristiques :                                          │
+│     • Relativement petite (milliers à millions de lignes)      │
+│     • Dénormalisée (toutes les infos dans une seule table)     │
+│     • Permet le "slicing &amp; dicing" (filtres et regroupements)  │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘</code></pre>
+<p><strong>Exemples de tables de dimensions</strong> :</p>
+<pre><code>dim_date                                    dim_product
+┌──────────┬──────┬─────┬─────┬──────┐    ┌────────────┬──────────┬───────────┬─────────┐
+│ date_id  │ year │month│ day │quarter│   │ product_id │   name   │  category │  brand  │
+├──────────┼──────┼─────┼─────┼──────┤    ├────────────┼──────────┼───────────┼─────────┤
+│ 20240115 │ 2024 │  1  │ 15  │  Q1  │    │    101     │ iPhone 15│ Smartphone│  Apple  │
+│ 20240116 │ 2024 │  1  │ 16  │  Q1  │    │    102     │Galaxy S24│ Smartphone│ Samsung │
+└──────────┴──────┴─────┴─────┴──────┘    └────────────┴──────────┴───────────┴─────────┘
+
+dim_customer
+┌─────────────┬──────────┬──────────┬─────────┬─────────┐
+│ customer_id │   name   │ segment  │  city   │ country │
+├─────────────┼──────────┼──────────┼─────────┼─────────┤
+│    501      │  Alice   │ Premium  │  Paris  │ France  │
+│    502      │   Bob    │ Standard │  Lyon   │ France  │
+└─────────────┴──────────┴──────────┴─────────┴─────────┘</code></pre>
+<hr>
+</section>
+<section id="star-schema-schéma-en-étoile" class="level3">
+<h3 class="anchored" data-anchor-id="star-schema-schéma-en-étoile">11.3 Star Schema (Schéma en étoile)</h3>
+<p>Le <strong>Star Schema</strong> est le modèle dimensionnel le plus simple et le plus utilisé.</p>
+<pre><code>                            ┌─────────────────┐
+                            │    dim_date     │
+                            │─────────────────│
+                            │ date_id (PK)    │
+                            │ year            │
+                            │ month           │
+                            │ quarter         │
+                            └────────┬────────┘
+                                     │
+┌─────────────────┐         ┌────────▼────────┐         ┌─────────────────┐
+│   dim_customer  │         │   fact_sales    │         │   dim_product   │
+│─────────────────│         │─────────────────│         │─────────────────│
+│ customer_id(PK) │◄────────│ sale_id (PK)    │────────►│ product_id (PK) │
+│ name            │         │ date_id (FK)    │         │ name            │
+│ segment         │         │ product_id (FK) │         │ category        │
+│ city            │         │ customer_id(FK) │         │ brand           │
+│ country         │         │ store_id (FK)   │         │ price           │
+└─────────────────┘         │ quantity        │         └─────────────────┘
+                            │ amount          │
+                            └────────┬────────┘
+                                     │
+                            ┌────────▼────────┐
+                            │   dim_store     │
+                            │─────────────────│
+                            │ store_id (PK)   │
+                            │ name            │
+                            │ region          │
+                            │ type            │
+                            └─────────────────┘</code></pre>
+<p><strong>Pourquoi “étoile” ?</strong> La table de faits est au centre, entourée des dimensions — comme une étoile !</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 43%">
+<col style="width: 56%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>✅ Avantages</th>
+<th>❌ Inconvénients</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Simple à comprendre</td>
+<td>Redondance dans les dimensions</td>
+</tr>
+<tr class="even">
+<td>Requêtes rapides (peu de jointures)</td>
+<td>Dimensions peuvent être grandes</td>
+</tr>
+<tr class="odd">
+<td>Facile à maintenir</td>
+<td>Pas adapté aux hiérarchies très complexes</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="snowflake-schema-schéma-en-flocon" class="level3">
+<h3 class="anchored" data-anchor-id="snowflake-schema-schéma-en-flocon">11.4 Snowflake Schema (Schéma en flocon)</h3>
+<p>Le <strong>Snowflake Schema</strong> est une variante où les dimensions sont <strong>normalisées</strong> (découpées en sous-tables).</p>
+<pre><code>┌───────────────┐     ┌─────────────────┐
+│   dim_year    │     │   dim_month     │
+│───────────────│     │─────────────────│
+│ year_id (PK)  │◄────│ month_id (PK)   │
+│ year          │     │ year_id (FK)    │
+└───────────────┘     │ month           │
+                      │ quarter         │
+                      └────────┬────────┘
+                               │
+                      ┌────────▼────────┐         ┌─────────────────┐
+                      │    dim_date     │         │  dim_category   │
+                      │─────────────────│         │─────────────────│
+                      │ date_id (PK)    │         │ category_id(PK) │
+                      │ month_id (FK)   │         │ category_name   │
+                      │ day             │         └────────┬────────┘
+                      └────────┬────────┘                  │
+                               │                           │
+                      ┌────────▼────────┐         ┌────────▼────────┐
+                      │   fact_sales    │         │   dim_product   │
+                      │─────────────────│         │─────────────────│
+                      │ date_id (FK)    │────────►│ product_id (PK) │
+                      │ product_id (FK) │         │ category_id(FK) │
+                      │ quantity        │         │ name            │
+                      │ amount          │         │ brand           │
+                      └─────────────────┘         └─────────────────┘</code></pre>
+<p><strong>Pourquoi “flocon” ?</strong> Les branches se subdivisent comme un flocon de neige.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>✅ Avantages</th>
+<th>❌ Inconvénients</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Moins de redondance</td>
+<td>Plus de jointures (plus lent)</td>
+</tr>
+<tr class="even">
+<td>Économie d’espace</td>
+<td>Plus complexe à comprendre</td>
+</tr>
+<tr class="odd">
+<td>Meilleur pour hiérarchies</td>
+<td>Maintenance plus difficile</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="star-vs-snowflake-quand-utiliser-quoi" class="level3">
+<h3 class="anchored" data-anchor-id="star-vs-snowflake-quand-utiliser-quoi">11.5 Star vs Snowflake — Quand utiliser quoi ?</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Critère</th>
+<th>Star Schema ⭐</th>
+<th>Snowflake Schema ❄️</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Performance</strong></td>
+<td>⚡ Plus rapide</td>
+<td>🐢 Plus de jointures</td>
+</tr>
+<tr class="even">
+<td><strong>Simplicité</strong></td>
+<td>✅ Simple</td>
+<td>⚠️ Complexe</td>
+</tr>
+<tr class="odd">
+<td><strong>Redondance</strong></td>
+<td>⚠️ Plus de duplication</td>
+<td>✅ Moins de duplication</td>
+</tr>
+<tr class="even">
+<td><strong>Cas d’usage</strong></td>
+<td>Reporting, dashboards</td>
+<td>Hiérarchies complexes</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="blockquote">
+<p>💡 <strong>En pratique</strong> : Le <strong>Star Schema</strong> est recommandé dans 90% des cas. Utilise Snowflake uniquement si tu as des contraintes spécifiques de stockage ou des hiérarchies très profondes.</p>
+</blockquote>
+<hr>
+</section>
+<section id="exemple-de-requête-analytique" class="level3">
+<h3 class="anchored" data-anchor-id="exemple-de-requête-analytique">11.6 Exemple de requête analytique</h3>
+<p>Avec un Star Schema, les requêtes analytiques sont simples et intuitives :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Ventes par catégorie de produit et par trimestre</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> </span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>    d.<span class="dt">year</span>,</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>    d.quarter,</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>    p.<span class="kw">category</span>,</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">SUM</span>(f.amount) <span class="kw">as</span> total_sales,</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">COUNT</span>(<span class="op">*</span>) <span class="kw">as</span> num_transactions</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> fact_sales f</span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a><span class="kw">JOIN</span> dim_date d <span class="kw">ON</span> f.date_id <span class="op">=</span> d.date_id</span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a><span class="kw">JOIN</span> dim_product p <span class="kw">ON</span> f.product_id <span class="op">=</span> p.product_id</span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> d.<span class="dt">year</span> <span class="op">=</span> <span class="dv">2024</span></span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> d.<span class="dt">year</span>, d.quarter, p.<span class="kw">category</span></span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> d.quarter, total_sales <span class="kw">DESC</span>;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>year</th>
+<th>quarter</th>
+<th>category</th>
+<th>total_sales</th>
+<th>num_transactions</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2024</td>
+<td>Q1</td>
+<td>Smartphone</td>
+<td>1,250,000</td>
+<td>8,500</td>
+</tr>
+<tr class="even">
+<td>2024</td>
+<td>Q1</td>
+<td>Laptop</td>
+<td>980,000</td>
+<td>3,200</td>
+</tr>
+<tr class="odd">
+<td>2024</td>
+<td>Q1</td>
+<td>Accessoires</td>
+<td>450,000</td>
+<td>15,000</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="blockquote">
+<p>🔮 <strong>Preview</strong> : Dans le module 08, tu découvriras les concepts de <strong>Data Lake</strong>, <strong>Data Lakehouse</strong>, <strong>Medallion Architecture (Bronze/Silver/Gold)</strong> et les architectures <strong>Lambda/Kappa</strong> pour le Big Data !</p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="exemple-complet-schéma-dune-boutique-en-ligne-oltp" class="level2">
+<h2 class="anchored" data-anchor-id="exemple-complet-schéma-dune-boutique-en-ligne-oltp">12. Exemple complet : Schéma d’une boutique en ligne (OLTP)</h2>
+<p>Voici un exemple de schéma <strong>OLTP normalisé</strong> pour les opérations quotidiennes :</p>
+<pre><code>┌─────────────────────────────────────────────────────────────────────────┐
+│                        BASE DE DONNÉES : ma_boutique                    │
+├─────────────────────────────────────────────────────────────────────────┤
+│                                                                         │
+│  ┌─────────────────┐       ┌─────────────────┐       ┌───────────────┐ │
+│  │    CLIENTS      │       │    COMMANDES    │       │   PRODUITS    │ │
+│  ├─────────────────┤       ├─────────────────┤       ├───────────────┤ │
+│  │ 🔑 id (PK)      │       │ 🔑 id (PK)      │       │ 🔑 id (PK)    │ │
+│  │ nom             │◄──────│ 🔗 client_id(FK)│       │ nom           │ │
+│  │ email           │       │ date            │       │ prix          │ │
+│  │ telephone       │       │ statut          │       │ stock         │ │
+│  │ created_at      │       │ total           │       │ categorie     │ │
+│  └─────────────────┘       └────────┬────────┘       └───────┬───────┘ │
+│                                     │                        │         │
+│                                     │    ┌───────────────────┘         │
+│                                     │    │                             │
+│                                     ▼    ▼                             │
+│                            ┌─────────────────────┐                     │
+│                            │   LIGNES_COMMANDE   │                     │
+│                            ├─────────────────────┤                     │
+│                            │ 🔑 id (PK)          │                     │
+│                            │ 🔗 commande_id (FK) │                     │
+│                            │ 🔗 produit_id (FK)  │                     │
+│                            │ quantite            │                     │
+│                            │ prix_unitaire       │                     │
+│                            └─────────────────────┘                     │
+│                                                                         │
+└─────────────────────────────────────────────────────────────────────────┘
+
+RELATIONS :
+  • clients (1) ───► (N) commandes        : Un client a plusieurs commandes
+  • commandes (1) ───► (N) lignes_commande : Une commande a plusieurs lignes
+  • produits (1) ───► (N) lignes_commande  : Un produit dans plusieurs lignes</code></pre>
+<p>Ce schéma est <strong>normalisé</strong> (3NF) car c’est un système OLTP pour les opérations quotidiennes.</p>
+<hr>
+</section>
+<section id="résumé" class="level2">
+<h2 class="anchored" data-anchor-id="résumé">Résumé</h2>
+<section id="vocabulaire-relationnel" class="level3">
+<h3 class="anchored" data-anchor-id="vocabulaire-relationnel">Vocabulaire relationnel</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Terme</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Table</strong></td>
+<td>Collection de données structurées</td>
+</tr>
+<tr class="even">
+<td><strong>Colonne</strong></td>
+<td>Attribut (nom, email, prix…)</td>
+</tr>
+<tr class="odd">
+<td><strong>Ligne</strong></td>
+<td>Un enregistrement (un client, une commande…)</td>
+</tr>
+<tr class="even">
+<td><strong>Clé Primaire (PK)</strong></td>
+<td>Identifiant unique d’une ligne</td>
+</tr>
+<tr class="odd">
+<td><strong>Clé Étrangère (FK)</strong></td>
+<td>Référence vers une autre table</td>
+</tr>
+<tr class="even">
+<td><strong>SGBD</strong></td>
+<td>Logiciel de gestion (PostgreSQL, MySQL…)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="relations" class="level3">
+<h3 class="anchored" data-anchor-id="relations">Relations</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Type</th>
+<th>Notation</th>
+<th>Exemple</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Un-à-Un</td>
+<td>1:1</td>
+<td>Utilisateur ↔︎ Profil</td>
+</tr>
+<tr class="even">
+<td>Un-à-Plusieurs</td>
+<td>1:N</td>
+<td>Client → Commandes</td>
+</tr>
+<tr class="odd">
+<td>Plusieurs-à-Plusieurs</td>
+<td>N:N</td>
+<td>Étudiants ↔︎ Cours</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="acid" class="level3">
+<h3 class="anchored" data-anchor-id="acid">ACID</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Lettre</th>
+<th>Propriété</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td><strong>Atomicité</strong> — Tout ou rien</td>
+</tr>
+<tr class="even">
+<td>C</td>
+<td><strong>Cohérence</strong> — État valide</td>
+</tr>
+<tr class="odd">
+<td>I</td>
+<td><strong>Isolation</strong> — Transactions séparées</td>
+</tr>
+<tr class="even">
+<td>D</td>
+<td><strong>Durabilité</strong> — Permanent</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="oltp-vs-olap" class="level3">
+<h3 class="anchored" data-anchor-id="oltp-vs-olap">OLTP vs OLAP</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Concept</th>
+<th>OLTP</th>
+<th>OLAP</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Usage</strong></td>
+<td>Transactions</td>
+<td>Analyse</td>
+</tr>
+<tr class="even">
+<td><strong>Requêtes</strong></td>
+<td>Simples, rapides</td>
+<td>Complexes, agrégées</td>
+</tr>
+<tr class="odd">
+<td><strong>Schéma</strong></td>
+<td>Normalisé</td>
+<td>Dénormalisé</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="data-warehouse-data-mart" class="level3">
+<h3 class="anchored" data-anchor-id="data-warehouse-data-mart">Data Warehouse &amp; Data Mart</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Concept</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Data Warehouse</strong></td>
+<td>Entrepôt centralisé pour l’analyse</td>
+</tr>
+<tr class="even">
+<td><strong>Data Mart</strong></td>
+<td>Sous-ensemble orienté métier</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="modélisation-dimensionnelle" class="level3">
+<h3 class="anchored" data-anchor-id="modélisation-dimensionnelle">Modélisation dimensionnelle</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Concept</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Table de faits</strong></td>
+<td>Mesures numériques (ventes, quantités)</td>
+</tr>
+<tr class="even">
+<td><strong>Table de dimension</strong></td>
+<td>Contexte descriptif (date, produit, client)</td>
+</tr>
+<tr class="odd">
+<td><strong>Star Schema</strong></td>
+<td>Faits au centre, dimensions autour</td>
+</tr>
+<tr class="even">
+<td><strong>Snowflake Schema</strong></td>
+<td>Star avec dimensions normalisées</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="quiz" class="level2">
+<h2 class="anchored" data-anchor-id="quiz">Quiz</h2>
+<hr>
+<section id="q1.-quest-ce-quune-clé-primaire" class="level3">
+<h3 class="anchored" data-anchor-id="q1.-quest-ce-quune-clé-primaire">❓ Q1. Qu’est-ce qu’une clé primaire ?</h3>
+<ol type="a">
+<li>Une clé de chiffrement<br>
+</li>
+<li>Un identifiant unique pour chaque ligne<br>
+</li>
+<li>Le nom de la première colonne<br>
+</li>
+<li>Un mot de passe</li>
+</ol>
+<details>
+<summary>
+💡 Réponse
+</summary>
+✅ <strong>b</strong> — La clé primaire identifie de façon unique chaque ligne d’une table.
+</details>
+<hr>
+</section>
+<section id="q2.-à-quoi-sert-une-clé-étrangère" class="level3">
+<h3 class="anchored" data-anchor-id="q2.-à-quoi-sert-une-clé-étrangère">❓ Q2. À quoi sert une clé étrangère ?</h3>
+<ol type="a">
+<li>À chiffrer les données<br>
+</li>
+<li>À créer un lien entre deux tables<br>
+</li>
+<li>À indexer les colonnes<br>
+</li>
+<li>À supprimer des lignes</li>
+</ol>
+<details>
+<summary>
+💡 Réponse
+</summary>
+✅ <strong>b</strong> — La clé étrangère référence la clé primaire d’une autre table pour créer une relation.
+</details>
+<hr>
+</section>
+<section id="q3.-quelle-relation-nécessite-une-table-de-jonction" class="level3">
+<h3 class="anchored" data-anchor-id="q3.-quelle-relation-nécessite-une-table-de-jonction">❓ Q3. Quelle relation nécessite une table de jonction ?</h3>
+<ol type="a">
+<li>Un-à-Un (1:1)<br>
+</li>
+<li>Un-à-Plusieurs (1:N)<br>
+</li>
+<li>Plusieurs-à-Plusieurs (N:N)<br>
+</li>
+<li>Aucune</li>
+</ol>
+<details>
+<summary>
+💡 Réponse
+</summary>
+✅ <strong>c</strong> — Les relations N:N nécessitent une table intermédiaire (jonction) pour stocker les associations.
+</details>
+<hr>
+</section>
+<section id="q4.-que-signifie-le-a-de-acid" class="level3">
+<h3 class="anchored" data-anchor-id="q4.-que-signifie-le-a-de-acid">❓ Q4. Que signifie le A de ACID ?</h3>
+<ol type="a">
+<li>Authentification<br>
+</li>
+<li>Atomicité<br>
+</li>
+<li>Automatisation<br>
+</li>
+<li>Archivage</li>
+</ol>
+<details>
+<summary>
+💡 Réponse
+</summary>
+✅ <strong>b</strong> — Atomicité : une transaction est indivisible (tout réussit ou tout échoue).
+</details>
+<hr>
+</section>
+<section id="q5.-pourquoi-normaliser-une-base-de-données" class="level3">
+<h3 class="anchored" data-anchor-id="q5.-pourquoi-normaliser-une-base-de-données">❓ Q5. Pourquoi normaliser une base de données ?</h3>
+<ol type="a">
+<li>Pour la rendre plus rapide<br>
+</li>
+<li>Pour éviter la redondance et les incohérences<br>
+</li>
+<li>Pour ajouter du chiffrement<br>
+</li>
+<li>Pour compresser les données</li>
+</ol>
+<details>
+<summary>
+💡 Réponse
+</summary>
+✅ <strong>b</strong> — La normalisation évite les données dupliquées et garantit la cohérence.
+</details>
+<hr>
+</section>
+<section id="q6.-quel-sgbd-est-open-source-et-très-complet" class="level3">
+<h3 class="anchored" data-anchor-id="q6.-quel-sgbd-est-open-source-et-très-complet">❓ Q6. Quel SGBD est open source ET très complet ?</h3>
+<ol type="a">
+<li>Oracle<br>
+</li>
+<li>SQL Server<br>
+</li>
+<li>PostgreSQL<br>
+</li>
+<li>Access</li>
+</ol>
+<details>
+<summary>
+💡 Réponse
+</summary>
+✅ <strong>c</strong> — PostgreSQL est open source, gratuit et très complet (le plus recommandé).
+</details>
+<hr>
+</section>
+<section id="q7.-quel-type-utiliser-pour-stocker-des-montants-en-euros" class="level3">
+<h3 class="anchored" data-anchor-id="q7.-quel-type-utiliser-pour-stocker-des-montants-en-euros">❓ Q7. Quel type utiliser pour stocker des montants en euros ?</h3>
+<ol type="a">
+<li>FLOAT<br>
+</li>
+<li>INTEGER<br>
+</li>
+<li>DECIMAL<br>
+</li>
+<li>VARCHAR</li>
+</ol>
+<details>
+<summary>
+💡 Réponse
+</summary>
+✅ <strong>c</strong> — DECIMAL garantit une précision exacte pour les montants financiers (FLOAT est imprécis).
+</details>
+<hr>
+</section>
+<section id="q8.-quelle-est-la-différence-principale-entre-oltp-et-olap" class="level3">
+<h3 class="anchored" data-anchor-id="q8.-quelle-est-la-différence-principale-entre-oltp-et-olap">❓ Q8. Quelle est la différence principale entre OLTP et OLAP ?</h3>
+<ol type="a">
+<li>OLTP est plus récent<br>
+</li>
+<li>OLTP gère les transactions, OLAP l’analyse<br>
+</li>
+<li>OLAP est plus rapide<br>
+</li>
+<li>Aucune différence</li>
+</ol>
+<details>
+<summary>
+💡 Réponse
+</summary>
+✅ <strong>b</strong> — OLTP (Online Transaction Processing) gère les opérations quotidiennes, OLAP (Online Analytical Processing) est optimisé pour l’analyse et le reporting.
+</details>
+<hr>
+</section>
+<section id="q9.-quest-ce-quun-data-warehouse" class="level3">
+<h3 class="anchored" data-anchor-id="q9.-quest-ce-quun-data-warehouse">❓ Q9. Qu’est-ce qu’un Data Warehouse ?</h3>
+<ol type="a">
+<li>Un serveur très puissant<br>
+</li>
+<li>Un entrepôt centralisé pour l’analyse des données<br>
+</li>
+<li>Un type de base de données NoSQL<br>
+</li>
+<li>Un logiciel de visualisation</li>
+</ol>
+<details>
+<summary>
+💡 Réponse
+</summary>
+✅ <strong>b</strong> — Un Data Warehouse est une base de données OLAP centralisée qui stocke les données de l’entreprise pour l’analyse et le reporting.
+</details>
+<hr>
+</section>
+<section id="q10.-quest-ce-quun-data-mart" class="level3">
+<h3 class="anchored" data-anchor-id="q10.-quest-ce-quun-data-mart">❓ Q10. Qu’est-ce qu’un Data Mart ?</h3>
+<ol type="a">
+<li>Un magasin de données brutes<br>
+</li>
+<li>Un sous-ensemble du Data Warehouse orienté métier<br>
+</li>
+<li>Une base de données transactionnelle<br>
+</li>
+<li>Un outil ETL</li>
+</ol>
+<details>
+<summary>
+💡 Réponse
+</summary>
+✅ <strong>b</strong> — Un Data Mart est une vue spécialisée du Data Warehouse, focalisée sur un domaine métier (Marketing, Finance, Ventes…).
+</details>
+<hr>
+</section>
+<section id="q11.-dans-un-star-schema-que-contient-la-table-de-faits" class="level3">
+<h3 class="anchored" data-anchor-id="q11.-dans-un-star-schema-que-contient-la-table-de-faits">❓ Q11. Dans un Star Schema, que contient la table de faits ?</h3>
+<ol type="a">
+<li>Les descriptions des produits<br>
+</li>
+<li>Les mesures (métriques) à analyser<br>
+</li>
+<li>Les informations clients<br>
+</li>
+<li>Les dates uniquement</li>
+</ol>
+<details>
+<summary>
+💡 Réponse
+</summary>
+✅ <strong>b</strong> — La table de faits contient les mesures numériques (montants, quantités, clics…) et les clés étrangères vers les dimensions.
+</details>
+<hr>
+</section>
+<section id="q12.-quelle-est-la-différence-entre-star-schema-et-snowflake-schema" class="level3">
+<h3 class="anchored" data-anchor-id="q12.-quelle-est-la-différence-entre-star-schema-et-snowflake-schema">❓ Q12. Quelle est la différence entre Star Schema et Snowflake Schema ?</h3>
+<ol type="a">
+<li>Star Schema est plus récent<br>
+</li>
+<li>Dans Snowflake, les dimensions sont normalisées (découpées)<br>
+</li>
+<li>Snowflake n’a pas de table de faits<br>
+</li>
+<li>Ils sont identiques</li>
+</ol>
+<details>
+<summary>
+💡 Réponse
+</summary>
+✅ <strong>b</strong> — Dans un Snowflake Schema, les tables de dimensions sont normalisées (découpées en sous-tables), ce qui ressemble à un flocon de neige.
+</details>
+<hr>
+</section>
+<section id="q13.-une-table-de-dimension-contient" class="level3">
+<h3 class="anchored" data-anchor-id="q13.-une-table-de-dimension-contient">❓ Q13. Une table de dimension contient…</h3>
+<ol type="a">
+<li>Les chiffres à analyser<br>
+</li>
+<li>Le contexte descriptif (qui, quoi, où, quand)<br>
+</li>
+<li>Les clés étrangères uniquement<br>
+</li>
+<li>Les données en temps réel</li>
+</ol>
+<details>
+<summary>
+💡 Réponse
+</summary>
+✅ <strong>b</strong> — Une table de dimension contient les attributs descriptifs qui donnent du contexte aux mesures (produit, client, date, magasin…).
+</details>
+<hr>
+</section>
+</section>
+<section id="ressources" class="level2">
+<h2 class="anchored" data-anchor-id="ressources">📚 Ressources</h2>
+<section id="bases-de-données-relationnelles" class="level3">
+<h3 class="anchored" data-anchor-id="bases-de-données-relationnelles">Bases de données relationnelles</h3>
+<ul>
+<li><a href="https://www.postgresql.org/docs/current/">PostgreSQL Documentation</a></li>
+<li><a href="https://sqlbolt.com/">SQLBolt</a> — Tutoriel interactif</li>
+<li><a href="https://dbdiagram.io/">DB Diagram</a> — Créer des schémas visuels</li>
+<li><a href="https://en.wikipedia.org/wiki/Database_normalization">Database Normalization (Wikipedia)</a></li>
+</ul>
+</section>
+<section id="oltp-olap-et-data-warehousing" class="level3">
+<h3 class="anchored" data-anchor-id="oltp-olap-et-data-warehousing">OLTP, OLAP et Data Warehousing</h3>
+<ul>
+<li><a href="https://aws.amazon.com/compare/the-difference-between-olap-and-oltp/">OLTP vs OLAP (AWS)</a></li>
+<li><a href="https://www.snowflake.com/guides/what-data-warehouse">What is a Data Warehouse? (Snowflake)</a></li>
+<li><a href="https://www.ibm.com/think/topics/data-mart">Data Mart vs Data Warehouse (IBM)</a></li>
+</ul>
+</section>
+<section id="modélisation-dimensionnelle-1" class="level3">
+<h3 class="anchored" data-anchor-id="modélisation-dimensionnelle-1">Modélisation dimensionnelle</h3>
+<ul>
+<li><a href="https://www.databricks.com/glossary/star-schema">Star Schema vs Snowflake Schema (Databricks)</a></li>
+<li><a href="https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/books/data-warehouse-dw-toolkit/">The Data Warehouse Toolkit — Ralph Kimball</a></li>
+<li><a href="https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/dimensional-modeling-techniques/">Dimensional Modeling (Kimball Group)</a></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="prochaine-étape" class="level2">
+<h2 class="anchored" data-anchor-id="prochaine-étape">➡️ Prochaine étape</h2>
+<p>Tu connais maintenant la théorie des bases de données relationnelles, OLTP/OLAP, Data Warehouse, et la modélisation dimensionnelle. Passons à la <strong>pratique</strong> !</p>
+<p>👉 <strong>Module suivant : <code>07_sql_for_data_engineers</code></strong> — Écrire des requêtes SQL</p>
+<hr>
+<p>🎉 <strong>Félicitations !</strong> Tu maîtrises les concepts fondamentaux des bases relationnelles et de l’architecture Data.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<!-- ===== Floating PDF Download Button ===== -->
+
+<style>
+#pdf-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #00b4d8;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 9999;
+  transition: 0.2s ease-in-out;
+}
+#pdf-button:hover {
+  background: #0077b6;
+}
+</style>
+
+<div id="pdf-button" onclick="downloadPDF()">
+  📄 Télécharger la version PDF
+</div>
+
+<script>
+function downloadPDF() {
+  window.print(); // fonctionne directement dans Quarto HTML
+}
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/diakite-data\.github\.io\/data-engineering-bootcamp");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<input type="hidden" id="giscus-base-theme" value="preferred_color_scheme">
+<input type="hidden" id="giscus-alt-theme" value="preferred_color_scheme">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      if (authorPrefersDark) {
+          [baseTheme, altTheme] = [altTheme, baseTheme];
+      }
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "diakite-data/data-engineering-bootcamp";
+    script.dataset.repoId = "R_kgDOQjHMsg";
+    script.dataset.category = "General";
+    script.dataset.categoryId = "DIC_kwDOQjHMss4CzeOO";
+    script.dataset.mapping = "pathname";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "top";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "fr";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2025 Bootcamp Data Engineering · From Zero to Hero</p>
+</div>   
+    <div class="nav-footer-center">
+<p>Fait avec ❤️ par DIAKITE M. YOUSSOUF</p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/diakite-data/data-engineering-bootcamp/blob/main/notebooks/beginner/06_intro_relational_databases.ipynb" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/diakite-data/data-engineering-bootcamp/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.dev/diakite-data/data-engineering-bootcamp/blob/main/notebooks/beginner/06_intro_relational_databases.ipynb" class="toc-action"><i class="bi empty"></i>Edit this page</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/diakite-data/data-engineering-bootcamp">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://linkedin.com/in/diakite-data">
+      <i class="bi bi-linkedin" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

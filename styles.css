@@ -3,6 +3,7 @@
 /* ==================================================
    🚀 BOOTCAMP DATA ENGINEERING - PREMIUM STYLESHEET
    From Zero to Hero - Orange & Sky Blue Theme
+   Version 2.0 - Refined Color Balance (60/30/10)
    ================================================== */
 
 /*-- scss:rules --*/
@@ -12,7 +13,7 @@
 -------------------------------------------------- */
 
 :root {
-  /* Primary Colors - Orange */
+  /* Primary Colors - Orange (ACCENT ONLY - 10%) */
   --orange-50: #fff7ed;
   --orange-100: #ffedd5;
   --orange-200: #fed7aa;
@@ -24,7 +25,7 @@
   --orange-800: #9a3412;
   --orange-900: #7c2d12;
   
-  /* Primary Colors - Sky Blue */
+  /* Primary Colors - Sky Blue (STRUCTURE - 30%) */
   --sky-50: #f0f9ff;
   --sky-100: #e0f2fe;
   --sky-200: #bae6fd;
@@ -36,7 +37,7 @@
   --sky-800: #075985;
   --sky-900: #0c4a6e;
   
-  /* Neutral Colors */
+  /* Neutral Colors (BASE - 60%) */
   --gray-50: #f9fafb;
   --gray-100: #f3f4f6;
   --gray-200: #e5e7eb;
@@ -56,10 +57,10 @@
   --code-function: #0ea5e9;
   --code-comment: #6c7086;
   
-  /* Gradients */
+  /* Gradients - Reserved for Hero/Special elements only */
   --gradient-primary: linear-gradient(135deg, var(--orange-500) 0%, var(--sky-500) 100%);
   --gradient-orange: linear-gradient(135deg, var(--orange-400) 0%, var(--orange-600) 100%);
-  --gradient-sky: linear-gradient(135deg, var(--sky-400) 0%, var(--sky-600) 100%);
+  --gradient-sky: linear-gradient(135deg, var(--sky-500) 0%, var(--sky-700) 100%);
   --gradient-warm: linear-gradient(135deg, var(--orange-500) 0%, var(--orange-300) 100%);
   --gradient-cool: linear-gradient(135deg, var(--sky-400) 0%, var(--sky-300) 100%);
   
@@ -127,11 +128,11 @@ main,
 }
 
 ::selection {
-  background-color: var(--orange-500);
+  background-color: var(--sky-500);
   color: white;
 }
 
-/* Custom Scrollbar - Orange/Sky */
+/* Custom Scrollbar - Sky Blue */
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
@@ -143,13 +144,13 @@ main,
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, var(--orange-500), var(--sky-500));
+  background: var(--sky-500);
   border-radius: var(--radius-full);
   border: 2px solid var(--gray-100);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, var(--orange-400), var(--sky-400));
+  background: var(--sky-600);
 }
 
 /* --------------------------------------------------
@@ -189,7 +190,7 @@ h2::after {
   left: 0;
   width: 60px;
   height: 4px;
-  background: var(--gradient-primary);
+  background: var(--sky-500);
   border-radius: var(--radius-full);
 }
 
@@ -198,11 +199,11 @@ h3 {
 }
 
 h4 {
-  color: var(--orange-700);
+  color: var(--sky-800);
 }
 
 /* --------------------------------------------------
-   HERO BANNER - Orange/Sky Gradient
+   HERO BANNER - Orange/Sky Gradient (seul endroit avec dégradé fort)
 -------------------------------------------------- */
 
 .hero {
@@ -282,25 +283,25 @@ h4 {
 }
 
 /* --------------------------------------------------
-   INLINE CODE - Orange accent
+   INLINE CODE - Sky Blue accent (plus discret)
 -------------------------------------------------- */
 
 code:not(pre code) {
   background: linear-gradient(135deg, var(--code-bg) 0%, #2a2a3e 100%);
-  color: var(--orange-400);
+  color: var(--sky-400);
   padding: 3px 10px;
   border-radius: var(--radius-sm);
   font-family: var(--font-mono);
   font-weight: 500;
   font-size: 0.875em;
-  border: 1px solid rgba(251, 146, 60, 0.2);
+  border: 1px solid rgba(14, 165, 233, 0.2);
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   transition: var(--transition-fast);
   white-space: nowrap;
 }
 
 code:not(pre code):hover {
-  border-color: rgba(251, 146, 60, 0.4);
+  border-color: rgba(14, 165, 233, 0.4);
   box-shadow: 0 4px 8px rgba(0,0,0,0.15);
   transform: translateY(-1px);
 }
@@ -314,7 +315,7 @@ pre {
   background: var(--code-bg) !important;
   border-radius: var(--radius-lg) !important;
   box-shadow: var(--shadow-xl);
-  border: 1px solid rgba(249, 115, 22, 0.2);
+  border: 1px solid rgba(14, 165, 233, 0.2);
   margin: var(--spacing-xl) 0 !important;
   overflow: hidden;
 }
@@ -331,11 +332,11 @@ pre code {
 }
 
 /* --------------------------------------------------
-   NAVBAR - Orange/Sky theme
+   NAVBAR - Sky Blue dominant
 -------------------------------------------------- */
 
 .navbar {
-  background: linear-gradient(135deg, var(--orange-600) 0%, var(--sky-600) 100%) !important;
+  background: var(--sky-700) !important;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(255,255,255,0.1);
@@ -363,11 +364,11 @@ pre code {
 }
 
 /* --------------------------------------------------
-   SIDEBAR - White background with orange/sky accents
+   SIDEBAR - Gris clair avec accents BLEU (plus orange)
 -------------------------------------------------- */
 
 .sidebar {
-  background: #ffffff;
+  background: var(--gray-50);
   border-right: 1px solid var(--gray-200);
 }
 
@@ -385,20 +386,21 @@ pre code {
 }
 
 .sidebar-item a:hover {
-  background: var(--orange-50);
-  color: var(--orange-600);
+  background: var(--sky-50);
+  color: var(--sky-700);
   transform: translateX(4px);
 }
 
+/* CHANGEMENT CLÉ : Actif en BLEU, pas orange */
 .sidebar-item a.active {
-  background: linear-gradient(135deg, rgba(249, 115, 22, 0.1) 0%, rgba(14, 165, 233, 0.1) 100%);
-  color: var(--orange-600);
+  background: var(--sky-100);
+  color: var(--sky-700);
   font-weight: 600;
-  border-left: 3px solid var(--orange-500);
+  border-left: 3px solid var(--sky-500);
 }
 
 /* --------------------------------------------------
-   LINKS - Sky blue primary, orange on hover
+   LINKS - Sky blue primary, orange réservé aux CTA
 -------------------------------------------------- */
 
 a {
@@ -409,11 +411,12 @@ a {
 }
 
 a:hover {
-  color: var(--orange-500);
+  color: var(--sky-700);
+  text-decoration: underline;
 }
 
 /* --------------------------------------------------
-   TABLES - Orange/Sky header
+   TABLES - Header BLEU UNI (plus de dégradé)
 -------------------------------------------------- */
 
 table {
@@ -427,8 +430,9 @@ table {
   background: white;
 }
 
+/* CHANGEMENT CLÉ : Header en bleu uni */
 thead {
-  background: linear-gradient(135deg, var(--orange-500) 0%, var(--sky-500) 100%);
+  background: var(--sky-600);
 }
 
 th {
@@ -458,7 +462,7 @@ tbody tr:nth-child(even) {
 }
 
 tbody tr:hover {
-  background: linear-gradient(90deg, rgba(249, 115, 22, 0.05) 0%, rgba(14, 165, 233, 0.05) 100%);
+  background: var(--sky-50);
 }
 
 tbody tr:last-child td {
@@ -466,7 +470,7 @@ tbody tr:last-child td {
 }
 
 /* --------------------------------------------------
-   BUTTONS - Orange primary
+   BUTTONS - Orange = CTA principal (accent fort)
 -------------------------------------------------- */
 
 .btn {
@@ -492,6 +496,7 @@ tbody tr:last-child td {
   transform: translateY(-3px);
   box-shadow: var(--shadow-xl), var(--shadow-orange);
   color: white;
+  text-decoration: none;
 }
 
 .btn-secondary {
@@ -502,8 +507,21 @@ tbody tr:last-child td {
   box-shadow: var(--shadow-xl), var(--shadow-sky);
 }
 
+/* Bouton outline pour moins d'emphase */
+.btn-outline {
+  background: transparent;
+  color: var(--sky-600);
+  border: 2px solid var(--sky-500);
+}
+
+.btn-outline:hover {
+  background: var(--sky-500);
+  color: white;
+  box-shadow: var(--shadow-lg);
+}
+
 /* --------------------------------------------------
-   CALLOUTS - Orange/Sky accents
+   CALLOUTS - Accents subtils
 -------------------------------------------------- */
 
 .callout,
@@ -519,7 +537,7 @@ blockquote {
 blockquote {
   font-style: italic;
   color: var(--gray-600);
-  border-left-color: var(--orange-500);
+  border-left-color: var(--gray-400);
 }
 
 blockquote p {
@@ -528,26 +546,26 @@ blockquote p {
 
 .callout-note {
   border-left-color: var(--sky-500);
-  background: linear-gradient(135deg, var(--sky-50) 0%, white 100%);
+  background: var(--sky-50);
 }
 
 .callout-warning {
   border-left-color: var(--orange-500);
-  background: linear-gradient(135deg, var(--orange-50) 0%, white 100%);
+  background: var(--orange-50);
 }
 
 .callout-tip {
   border-left-color: #10b981;
-  background: linear-gradient(135deg, rgba(16, 185, 129, 0.05) 0%, white 100%);
+  background: rgba(16, 185, 129, 0.05);
 }
 
 .callout-important {
   border-left-color: var(--orange-600);
-  background: linear-gradient(135deg, var(--orange-50) 0%, white 100%);
+  background: var(--orange-50);
 }
 
 /* --------------------------------------------------
-   LISTS - Orange/Sky markers
+   LISTS - Marqueurs bleu (orange plus discret)
 -------------------------------------------------- */
 
 ul, ol {
@@ -561,7 +579,7 @@ li {
 }
 
 ul li::marker {
-  color: var(--orange-500);
+  color: var(--sky-500);
 }
 
 ol li::marker {
@@ -576,23 +594,23 @@ ol li::marker {
 hr {
   border: none;
   height: 2px;
-  background: linear-gradient(90deg, transparent, var(--orange-300), var(--sky-300), transparent);
+  background: linear-gradient(90deg, transparent, var(--sky-300), transparent);
   margin: var(--spacing-3xl) 0;
 }
 
 /* --------------------------------------------------
-   FOOTER - Orange/Sky gradient
+   FOOTER - Sky Blue (cohérent avec navbar)
 -------------------------------------------------- */
 
 .page-footer,
 footer {
-  background: linear-gradient(135deg, var(--orange-600) 0%, var(--sky-600) 100%);
+  background: var(--sky-700);
   color: white;
 }
 
 .page-footer a,
 footer a {
-  color: var(--orange-100);
+  color: var(--sky-200);
 }
 
 .page-footer a:hover,
@@ -620,7 +638,7 @@ footer a:hover {
 }
 
 #TOC .active {
-  color: var(--orange-500);
+  color: var(--sky-600);
   font-weight: 600;
 }
 
@@ -639,7 +657,13 @@ footer a:hover {
   letter-spacing: 0.05em;
 }
 
-.badge-orange {
+.badge-primary {
+  background: var(--sky-100);
+  color: var(--sky-700);
+}
+
+/* Orange réservé aux badges "highlight" / nouveautés */
+.badge-highlight {
   background: var(--orange-100);
   color: var(--orange-700);
 }
@@ -671,9 +695,9 @@ footer a:hover {
 }
 
 .code-fold-btn:hover {
-  background: var(--orange-50);
-  color: var(--orange-600);
-  border-color: var(--orange-200);
+  background: var(--sky-50);
+  color: var(--sky-600);
+  border-color: var(--sky-200);
 }
 
 .code-copy-button {
@@ -685,12 +709,12 @@ footer a:hover {
 }
 
 .code-copy-button:hover {
-  background: rgba(249, 115, 22, 0.3);
+  background: rgba(14, 165, 233, 0.3);
   color: white;
 }
 
 /* --------------------------------------------------
-   CARDS (if used)
+   CARDS
 -------------------------------------------------- */
 
 .card {
@@ -705,11 +729,12 @@ footer a:hover {
 .card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-xl);
-  border-color: var(--orange-200);
+  border-color: var(--sky-200);
 }
 
+/* Card header en bleu uni */
 .card-header {
-  background: linear-gradient(135deg, var(--orange-500) 0%, var(--sky-500) 100%);
+  background: var(--sky-600);
   color: white;
   padding: var(--spacing-lg);
   font-weight: 700;
@@ -731,10 +756,15 @@ footer a:hover {
 }
 
 .progress-bar {
-  background: linear-gradient(90deg, var(--orange-500), var(--sky-500));
+  background: var(--sky-500);
   height: 100%;
   border-radius: var(--radius-full);
   transition: width 0.5s ease;
+}
+
+/* Progress avec accent orange pour les achievements */
+.progress-bar-highlight {
+  background: linear-gradient(90deg, var(--orange-500), var(--orange-400));
 }
 
 /* ==================================================
