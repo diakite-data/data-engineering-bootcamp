@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.8.26">
@@ -64,6 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<link href="../../notebooks/beginner/12_orchestration_pipelines.html" rel="prev">
 <link href="../../assets/images/favicon.svg" rel="icon" type="image/svg+xml">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -77,9 +78,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-fc8d3d93f0a84b7619e1f8ff6eb63d42.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-f0414948b4c63f1f2858a00d85a9deb4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-25a581b3349c80a073d3aa91db156dab.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-f0414948b4c63f1f2858a00d85a9deb4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-e343b3f0bebe96ccb32e8952eba0f815.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-748d9631d2a9cba8c735999f2048c189.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-e343b3f0bebe96ccb32e8952eba0f815.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": true,
@@ -93,17 +94,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "s"
   ],
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
@@ -111,7 +112,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 <meta name="author" content="Diakite Data">
-<meta name="keywords" content="data engineering, spark, kafka, python, kubernetes, lakehouse, delta lake, bootcamp">
+<meta name="keywords" content="data engineering, spark, kafka, python, kubernetes, lakehouse, delta lake, bootcamp, formation, tutoriel">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://diakite-data.github.io/data-engineering-bootcamp">
 
 
 <meta property="og:title" content="BONUS : FastAPI pour Data Engineers – Bootcamp Data Engineering">
@@ -299,8 +302,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <img src="../../assets/images/logo.svg" alt="Data Engineering Bootcamp" class="navbar-logo dark-content">
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Recherche"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Basculer la navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -322,7 +325,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="dropdown-item" href="../../notebooks/intermediate/14_docker_for_data_engineers.html">
  <span class="dropdown-text">🟩 Niveau Intermédiaire</span></a>
   </li>  
-        <li class="dropdown-header">🟥 Niveau Avancé</li>
+        <li>
+    <a class="dropdown-item" href="../../notebooks/advanced/27_kubernetes_deep_dive.html">
+ <span class="dropdown-text">🟥 Niveau Avancé</span></a>
+  </li>  
         <li><hr class="dropdown-divider"></li>
         <li>
     <a class="dropdown-item" href="../../curriculum.html">
@@ -364,19 +370,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Basculer le mode sombre"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Basculer en mode lecteur">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">🟦 Niveau 1 : Débutant</li><li class="breadcrumb-item"><a href="../../notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html">🎁 Bonus</a></li><li class="breadcrumb-item"><a href="../../notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html">13 · FastAPI pour Data Engineers</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">🟦 Niveau 1 : Débutant</li><li class="breadcrumb-item"><a href="../../notebooks/beginner/13_fastapi_for_data_engineers.html">🎁 Bonus</a></li><li class="breadcrumb-item"><a href="../../notebooks/beginner/13_fastapi_for_data_engineers.html">13 · FastAPI pour Data Engineers</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Recherche" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -388,7 +399,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
+        <div id="quarto-search" class="" title="Recherche"></div>
         </div>
         </div>
     <div class="sidebar-menu-container"> 
@@ -397,7 +408,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">🟦 Niveau 1 : Débutant</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -407,7 +418,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
  <span class="menu-text">📌 Fondations</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -436,7 +447,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
  <span class="menu-text">🐍 Python</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -459,7 +470,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
  <span class="menu-text">🗄️ Bases de Données</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -482,7 +493,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
  <span class="menu-text">📊 Big Data &amp; NoSQL</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -511,7 +522,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
  <span class="menu-text">⚡ Spark &amp; Orchestration</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -534,14 +545,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
  <span class="menu-text">🎁 Bonus</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../notebooks/beginner/13_fastapi_for_data_engineers.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">13 · FastAPI pour Data Engineers</span></a>
   </div>
 </li>
@@ -557,7 +568,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
  <span class="menu-text">🟩 Niveau 2 : Intermédiaire</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -567,7 +578,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
  <span class="menu-text">🐳 Containers &amp; Cloud</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -596,7 +607,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false">
  <span class="menu-text">🚀 High Performance Python</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -619,7 +630,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false">
  <span class="menu-text">⚡ Spark Avancé</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -648,7 +659,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false">
  <span class="menu-text">🏠 Lakehouse &amp; Streaming &amp; Cloud</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -677,7 +688,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false">
  <span class="menu-text">🔧 Industrialisation</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -700,8 +711,129 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">
- <span class="menu-text">🟥 Niveau 3 : Avancé</span></span>
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false">
+ <span class="menu-text">🟥 Niveau 3 : Avancé</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="px-0"><hr class="sidebar-divider hi "></li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false">
+ <span class="menu-text">☸️ Infrastructure Avancée</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/advanced/27_kubernetes_deep_dive.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">27 · Kubernetes Deep Dive</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/advanced/28_advanced_orchestration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">28 · Orchestration Avancée</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/advanced/29_distributed_messaging.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">29 · Messaging Distribué (Kafka, Pulsar)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="false">
+ <span class="menu-text">⚡ Processing Avancé</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-16" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/advanced/30_spark_scala_deep_dive.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">30 · Spark &amp; Scala Deep Dive</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" role="navigation" aria-expanded="false">
+ <span class="menu-text">🤖 ML &amp; Analytics</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-17" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/advanced/31_data_engineering_for_ml.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">31 · Data Engineering pour le ML</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/advanced/33_realtime_olap_dashboards.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">33 · Realtime OLAP &amp; Dashboards</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" role="navigation" aria-expanded="false">
+ <span class="menu-text">🏛️ Architecture &amp; Governance</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-18" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/advanced/32_data_mesh_contracts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">32 · Data Mesh &amp; Contracts</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/advanced/34_architecture_patterns_decisions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">34 · Patterns &amp; Décisions d'Architecture</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-19" role="navigation" aria-expanded="false">
+ <span class="menu-text">👔 Leadership</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-19" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-19" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/advanced/35_leadership_tradeoffs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">35 · Leadership &amp; Trade-offs</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="px-0"><hr class="sidebar-divider hi "></li>
+          <li class="sidebar-item">
+ <span class="menu-text">📦 **Projet Avancé**</span>
+  </li>
+      </ul>
   </li>
     </ul>
     </div>
@@ -797,13 +929,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/diakite-data/data-engineering-bootcamp/blob/main/notebooks/beginner/13_BONUS_fastapi_for_data_engineers.ipynb" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/diakite-data/data-engineering-bootcamp/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.dev/diakite-data/data-engineering-bootcamp/blob/main/notebooks/beginner/13_BONUS_fastapi_for_data_engineers.ipynb" class="toc-action"><i class="bi empty"></i>Edit this page</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/diakite-data/data-engineering-bootcamp/blob/main/notebooks/beginner/13_fastapi_for_data_engineers.ipynb" class="toc-action"><i class="bi bi-github"></i>Voir la source</a></li><li><a href="https://github.com/diakite-data/data-engineering-bootcamp/issues/new" class="toc-action"><i class="bi empty"></i>Faire part d'un problème</a></li><li><a href="https://github.dev/diakite-data/data-engineering-bootcamp/blob/main/notebooks/beginner/13_fastapi_for_data_engineers.ipynb" class="toc-action"><i class="bi empty"></i>Modifier cette page</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">🟦 Niveau 1 : Débutant</li><li class="breadcrumb-item"><a href="../../notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html">🎁 Bonus</a></li><li class="breadcrumb-item"><a href="../../notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html">13 · FastAPI pour Data Engineers</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">🟦 Niveau 1 : Débutant</li><li class="breadcrumb-item"><a href="../../notebooks/beginner/13_fastapi_for_data_engineers.html">🎁 Bonus</a></li><li class="breadcrumb-item"><a href="../../notebooks/beginner/13_fastapi_for_data_engineers.html">13 · FastAPI pour Data Engineers</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">BONUS : FastAPI pour Data Engineers</h1>
 </div>
@@ -946,7 +1078,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install fastapi uvicorn</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Avec toutes les dépendances optionnelles</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="st">"fastapi[all]"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="st">"fastapi[all]"</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -975,7 +1107,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Installation</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install fastapi uvicorn pydantic pandas <span class="op">--</span>quiet</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Packages installés !"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Packages installés !"</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <hr>
@@ -998,7 +1130,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="at">@app.get</span>(<span class="st">"/health"</span>)</span>
 <span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> health_check():</span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> {<span class="st">"status"</span>: <span class="st">"healthy"</span>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> {<span class="st">"status"</span>: <span class="st">"healthy"</span>}</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="lancer-le-serveur" class="level2">
 <h2 class="anchored" data-anchor-id="lancer-le-serveur">Lancer le serveur</h2>
@@ -1007,7 +1139,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># main = fichier main.py</span></span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># app = variable FastAPI()</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># --reload = redémarre automatiquement si le code change</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># --reload = redémarre automatiquement si le code change</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Résultat :</strong></p>
 <pre><code>INFO:     Uvicorn running on http://127.0.0.1:8000
 INFO:     Started reloader process</code></pre>
@@ -1073,7 +1205,7 @@ INFO:     Started reloader process</code></pre>
 <span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a><span class="at">@app.delete</span>(<span class="st">"/items/</span><span class="sc">{item_id}</span><span class="st">"</span>)</span>
 <span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> delete_item(item_id: <span class="bu">int</span>):</span>
-<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> {<span class="st">"action"</span>: <span class="ss">f"Suppression de l'item </span><span class="sc">{</span>item_id<span class="sc">}</span><span class="ss">"</span>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> {<span class="st">"action"</span>: <span class="ss">f"Suppression de l'item </span><span class="sc">{</span>item_id<span class="sc">}</span><span class="ss">"</span>}</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 <section id="paramètres-de-chemin-path-parameters" class="level2">
@@ -1094,7 +1226,7 @@ INFO:     Started reloader process</code></pre>
 <span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> {</span>
 <span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>        <span class="st">"user_id"</span>: user_id,</span>
 <span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>        <span class="st">"order_id"</span>: order_id</span>
-<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>    }</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>    }</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <section id="validation-automatique" class="level3">
 <h3 class="anchored" data-anchor-id="validation-automatique">Validation automatique</h3>
 <pre><code>GET /users/42        → {"user_id": 42}       ✅
@@ -1117,7 +1249,7 @@ GET /users/-1        → {"user_id": -1}       ✅ (mais logiquement faux)</code
 <span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>        le<span class="op">=</span><span class="dv">10000</span>  <span class="co"># Less or Equal (&lt;= 10000)</span></span>
 <span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>    )</span>
 <span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>):</span>
-<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> {<span class="st">"user_id"</span>: user_id}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> {<span class="st">"user_id"</span>: user_id}</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 </section>
@@ -1144,7 +1276,7 @@ GET /users/-1        → {"user_id": -1}       ✅ (mais logiquement faux)</code
 <span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>        <span class="st">"limit"</span>: limit,</span>
 <span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>        <span class="st">"active"</span>: active,</span>
 <span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>        <span class="st">"search"</span>: search</span>
-<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>    }</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>    }</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <section id="cas-dusage-data-engineering-pagination" class="level3">
 <h3 class="anchored" data-anchor-id="cas-dusage-data-engineering-pagination">Cas d’usage Data Engineering : Pagination</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="at">@app.get</span>(<span class="st">"/data"</span>)</span>
@@ -1163,7 +1295,7 @@ GET /users/-1        → {"user_id": -1}       ✅ (mais logiquement faux)</code
 <span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>        <span class="st">"offset"</span>: offset,</span>
 <span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>        <span class="st">"sort_by"</span>: sort_by,</span>
 <span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>        <span class="st">"order"</span>: order</span>
-<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>    }</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>    }</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 </section>
@@ -1197,7 +1329,7 @@ GET /users/-1        → {"user_id": -1}       ✅ (mais logiquement faux)</code
 <span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a>                <span class="st">"age"</span>: <span class="dv">30</span>,</span>
 <span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a>                <span class="st">"actif"</span>: <span class="va">True</span></span>
 <span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a>            }</span>
-<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a>        }</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a>        }</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <section id="validateurs-disponibles" class="level3">
 <h3 class="anchored" data-anchor-id="validateurs-disponibles">Validateurs disponibles</h3>
 <table class="caption-top table">
@@ -1283,7 +1415,7 @@ GET /users/-1        → {"user_id": -1}       ✅ (mais logiquement faux)</code
 <span id="cb16-27"><a href="#cb16-27" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Invalide</span></span>
 <span id="cb16-28"><a href="#cb16-28" aria-hidden="true" tabindex="-1"></a>    tx2 <span class="op">=</span> Transaction(montant<span class="op">=-</span><span class="dv">50</span>, devise<span class="op">=</span><span class="st">"EUR"</span>, description<span class="op">=</span><span class="st">"Test"</span>)</span>
 <span id="cb16-29"><a href="#cb16-29" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
-<span id="cb16-30"><a href="#cb16-30" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss"> Erreur de validation : </span><span class="sc">{</span>e<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb16-30"><a href="#cb16-30" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss"> Erreur de validation : </span><span class="sc">{</span>e<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <hr>
@@ -1327,12 +1459,12 @@ GET /users/-1        → {"user_id": -1}       ✅ (mais logiquement faux)</code
 <span id="cb17-33"><a href="#cb17-33" aria-hidden="true" tabindex="-1"></a>    users_db.append(new_user)</span>
 <span id="cb17-34"><a href="#cb17-34" aria-hidden="true" tabindex="-1"></a>    user_id_counter <span class="op">+=</span> <span class="dv">1</span></span>
 <span id="cb17-35"><a href="#cb17-35" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb17-36"><a href="#cb17-36" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> new_user</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb17-36"><a href="#cb17-36" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> new_user</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <section id="requête-avec-curl" class="level3">
 <h3 class="anchored" data-anchor-id="requête-avec-curl">Requête avec curl</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-X</span> POST <span class="st">"http://127.0.0.1:8000/users"</span> <span class="dt">\</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">-H</span> <span class="st">"Content-Type: application/json"</span> <span class="dt">\</span></span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">-d</span> <span class="st">'{"nom": "Alice", "email": "alice@test.com", "age": 30}'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">-d</span> <span class="st">'{"nom": "Alice", "email": "alice@test.com", "age": 30}'</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="requête-avec-python-requests" class="level3">
 <h3 class="anchored" data-anchor-id="requête-avec-python-requests">Requête avec Python requests</h3>
@@ -1342,7 +1474,7 @@ GET /users/-1        → {"user_id": -1}       ✅ (mais logiquement faux)</code
 <span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"http://127.0.0.1:8000/users"</span>,</span>
 <span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>    json<span class="op">=</span>{<span class="st">"nom"</span>: <span class="st">"Alice"</span>, <span class="st">"email"</span>: <span class="st">"alice@test.com"</span>, <span class="st">"age"</span>: <span class="dv">30</span>}</span>
 <span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(response.json())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(response.json())</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 </section>
@@ -1450,7 +1582,7 @@ GET /users/-1        → {"user_id": -1}       ✅ (mais logiquement faux)</code
 <span id="cb20-98"><a href="#cb20-98" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> HTTPException(status_code<span class="op">=</span><span class="dv">404</span>, detail<span class="op">=</span><span class="st">"Pipeline non trouvé"</span>)</span>
 <span id="cb20-99"><a href="#cb20-99" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb20-100"><a href="#cb20-100" aria-hidden="true" tabindex="-1"></a>    <span class="kw">del</span> pipelines_db[pipeline_id]</span>
-<span id="cb20-101"><a href="#cb20-101" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="va">None</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb20-101"><a href="#cb20-101" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="va">None</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 <section id="gestion-des-erreurs" class="level2">
 <h2 class="anchored" data-anchor-id="gestion-des-erreurs">Gestion des erreurs</h2>
@@ -1470,7 +1602,7 @@ GET /users/-1        → {"user_id": -1}       ✅ (mais logiquement faux)</code
 <span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>            headers<span class="op">=</span>{<span class="st">"X-Error"</span>: <span class="st">"User not found"</span>}</span>
 <span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a>        )</span>
 <span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> user</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> user</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <section id="codes-http-courants" class="level3">
 <h3 class="anchored" data-anchor-id="codes-http-courants">Codes HTTP courants</h3>
 <table class="caption-top table">
@@ -1619,7 +1751,7 @@ GET /users/-1        → {"user_id": -1}       ✅ (mais logiquement faux)</code
 <span id="cb22-81"><a href="#cb22-81" aria-hidden="true" tabindex="-1"></a>        }).<span class="bu">round</span>(<span class="dv">2</span>).to_dict(orient<span class="op">=</span><span class="st">"index"</span>)</span>
 <span id="cb22-82"><a href="#cb22-82" aria-hidden="true" tabindex="-1"></a>    }</span>
 <span id="cb22-83"><a href="#cb22-83" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb22-84"><a href="#cb22-84" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> stats</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb22-84"><a href="#cb22-84" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> stats</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <div id="cell-15" class="cell">
 <details class="code-fold">
 <summary>Voir le code</summary>
@@ -1640,7 +1772,7 @@ GET /users/-1        → {"user_id": -1}       ✅ (mais logiquement faux)</code
 <span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.to_dict(orient<span class="op">=</span><span class="st">"records"</span>))</span>
 <span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">📄 to_dict('index') → pour stats par clé:"</span>)</span>
-<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.set_index(<span class="st">'nom'</span>)[<span class="st">'salaire'</span>].to_dict())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.set_index(<span class="st">'nom'</span>)[<span class="st">'salaire'</span>].to_dict())</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <hr>
@@ -1667,7 +1799,7 @@ GET /users/-1        → {"user_id": -1}       ✅ (mais logiquement faux)</code
 <span id="cb24-16"><a href="#cb24-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>:</span>
 <span id="cb24-17"><a href="#cb24-17" aria-hidden="true" tabindex="-1"></a>        <span class="cf">yield</span> db</span>
 <span id="cb24-18"><a href="#cb24-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">finally</span>:</span>
-<span id="cb24-19"><a href="#cb24-19" aria-hidden="true" tabindex="-1"></a>        db.close()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb24-19"><a href="#cb24-19" aria-hidden="true" tabindex="-1"></a>        db.close()</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># models.py</span></span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sqlalchemy <span class="im">import</span> Column, Integer, String, Float, DateTime</span>
 <span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> database <span class="im">import</span> Base</span>
@@ -1680,7 +1812,7 @@ GET /users/-1        → {"user_id": -1}       ✅ (mais logiquement faux)</code
 <span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>    nom <span class="op">=</span> Column(String(<span class="dv">100</span>), nullable<span class="op">=</span><span class="va">False</span>)</span>
 <span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a>    email <span class="op">=</span> Column(String(<span class="dv">100</span>), unique<span class="op">=</span><span class="va">True</span>, index<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a>    age <span class="op">=</span> Column(Integer)</span>
-<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a>    created_at <span class="op">=</span> Column(DateTime, default<span class="op">=</span>datetime.now)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a>    created_at <span class="op">=</span> Column(DateTime, default<span class="op">=</span>datetime.now)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># main.py</span></span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> fastapi <span class="im">import</span> FastAPI, Depends</span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sqlalchemy.orm <span class="im">import</span> Session</span>
@@ -1692,7 +1824,7 @@ GET /users/-1        → {"user_id": -1}       ✅ (mais logiquement faux)</code
 <span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a><span class="at">@app.get</span>(<span class="st">"/users"</span>)</span>
 <span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_users(db: Session <span class="op">=</span> Depends(get_db), skip: <span class="bu">int</span> <span class="op">=</span> <span class="dv">0</span>, limit: <span class="bu">int</span> <span class="op">=</span> <span class="dv">10</span>):</span>
 <span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a>    users <span class="op">=</span> db.query(models.User).offset(skip).limit(limit).<span class="bu">all</span>()</span>
-<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> users</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> users</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 <section id="avec-mongodb-pymongo" class="level2">
@@ -1760,7 +1892,7 @@ GET /users/-1        → {"user_id": -1}       ✅ (mais logiquement faux)</code
 <span id="cb27-61"><a href="#cb27-61" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> collection.delete_one({<span class="st">"_id"</span>: ObjectId(pipeline_id)})</span>
 <span id="cb27-62"><a href="#cb27-62" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> result.deleted_count <span class="op">==</span> <span class="dv">0</span>:</span>
 <span id="cb27-63"><a href="#cb27-63" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> HTTPException(status_code<span class="op">=</span><span class="dv">404</span>, detail<span class="op">=</span><span class="st">"Pipeline non trouvé"</span>)</span>
-<span id="cb27-64"><a href="#cb27-64" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> {<span class="st">"deleted"</span>: <span class="va">True</span>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb27-64"><a href="#cb27-64" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> {<span class="st">"deleted"</span>: <span class="va">True</span>}</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 </section>
@@ -1791,7 +1923,7 @@ GET /users/-1        → {"user_id": -1}       ✅ (mais logiquement faux)</code
 <span id="cb28-20"><a href="#cb28-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> {</span>
 <span id="cb28-21"><a href="#cb28-21" aria-hidden="true" tabindex="-1"></a>        <span class="st">"message"</span>: <span class="ss">f"Pipeline </span><span class="sc">{</span>pipeline_id<span class="sc">}</span><span class="ss"> déclenché"</span>,</span>
 <span id="cb28-22"><a href="#cb28-22" aria-hidden="true" tabindex="-1"></a>        <span class="st">"status"</span>: <span class="st">"running"</span></span>
-<span id="cb28-23"><a href="#cb28-23" aria-hidden="true" tabindex="-1"></a>    }</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb28-23"><a href="#cb28-23" aria-hidden="true" tabindex="-1"></a>    }</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <section id="webhook-pour-déclencher-un-pipeline" class="level3">
 <h3 class="anchored" data-anchor-id="webhook-pour-déclencher-un-pipeline">Webhook pour déclencher un pipeline</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="at">@app.post</span>(<span class="st">"/webhook/data-arrival"</span>)</span>
@@ -1811,7 +1943,7 @@ GET /users/-1        → {"user_id": -1}       ✅ (mais logiquement faux)</code
 <span id="cb29-15"><a href="#cb29-15" aria-hidden="true" tabindex="-1"></a>        file_path<span class="op">=</span>file_path</span>
 <span id="cb29-16"><a href="#cb29-16" aria-hidden="true" tabindex="-1"></a>    )</span>
 <span id="cb29-17"><a href="#cb29-17" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb29-18"><a href="#cb29-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> {<span class="st">"status"</span>: <span class="st">"accepted"</span>, <span class="st">"message"</span>: <span class="st">"Pipeline déclenché"</span>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb29-18"><a href="#cb29-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> {<span class="st">"status"</span>: <span class="st">"accepted"</span>, <span class="st">"message"</span>: <span class="st">"Pipeline déclenché"</span>}</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 </section>
@@ -1857,7 +1989,7 @@ GET /users/-1        → {"user_id": -1}       ✅ (mais logiquement faux)</code
 <span id="cb30-37"><a href="#cb30-37" aria-hidden="true" tabindex="-1"></a>            <span class="st">"size"</span>: <span class="bu">len</span>(<span class="cf">await</span> <span class="bu">file</span>.read())</span>
 <span id="cb30-38"><a href="#cb30-38" aria-hidden="true" tabindex="-1"></a>        })</span>
 <span id="cb30-39"><a href="#cb30-39" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb30-40"><a href="#cb30-40" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> {<span class="st">"uploaded"</span>: <span class="bu">len</span>(files), <span class="st">"files"</span>: results}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb30-40"><a href="#cb30-40" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> {<span class="st">"uploaded"</span>: <span class="bu">len</span>(files), <span class="st">"files"</span>: results}</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 <section id="documentation-automatique" class="level2">
@@ -1928,7 +2060,7 @@ GET /users/-1        → {"user_id": -1}       ✅ (mais logiquement faux)</code
 <span id="cb31-32"><a href="#cb31-32" aria-hidden="true" tabindex="-1"></a>    tags<span class="op">=</span>[<span class="st">"Pipelines"</span>]</span>
 <span id="cb31-33"><a href="#cb31-33" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb31-34"><a href="#cb31-34" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> list_pipelines():</span>
-<span id="cb31-35"><a href="#cb31-35" aria-hidden="true" tabindex="-1"></a>    <span class="cf">pass</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb31-35"><a href="#cb31-35" aria-hidden="true" tabindex="-1"></a>    <span class="cf">pass</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 </section>
@@ -2117,7 +2249,7 @@ GET /users/-1        → {"user_id": -1}       ✅ (mais logiquement faux)</code
 <span id="cb32-179"><a href="#cb32-179" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb32-180"><a href="#cb32-180" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
 <span id="cb32-181"><a href="#cb32-181" aria-hidden="true" tabindex="-1"></a>    <span class="im">import</span> uvicorn</span>
-<span id="cb32-182"><a href="#cb32-182" aria-hidden="true" tabindex="-1"></a>    uvicorn.run(app, host<span class="op">=</span><span class="st">"0.0.0.0"</span>, port<span class="op">=</span><span class="dv">8000</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb32-182"><a href="#cb32-182" aria-hidden="true" tabindex="-1"></a>    uvicorn.run(app, host<span class="op">=</span><span class="st">"0.0.0.0"</span>, port<span class="op">=</span><span class="dv">8000</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <section id="lancer-et-tester" class="level3">
 <h3 class="anchored" data-anchor-id="lancer-et-tester">🚀 Lancer et tester</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Terminal 1 : Lancer le serveur</span></span>
@@ -2137,7 +2269,7 @@ GET /users/-1        → {"user_id": -1}       ✅ (mais logiquement faux)</code
 <span id="cb33-15"><a href="#cb33-15" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-X</span> POST <span class="st">"http://localhost:8000/pipelines/1/run"</span></span>
 <span id="cb33-16"><a href="#cb33-16" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-17"><a href="#cb33-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Voir l'historique</span></span>
-<span id="cb33-18"><a href="#cb33-18" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="st">"http://localhost:8000/pipelines/1/runs"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb33-18"><a href="#cb33-18" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="st">"http://localhost:8000/pipelines/1/runs"</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 </section>
@@ -2181,7 +2313,7 @@ GET /users/-1        → {"user_id": -1}       ✅ (mais logiquement faux)</code
 <span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>load_dotenv()</span>
 <span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a>DATABASE_URL <span class="op">=</span> os.getenv(<span class="st">"DATABASE_URL"</span>)</span>
-<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a>API_KEY <span class="op">=</span> os.getenv(<span class="st">"API_KEY"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a>API_KEY <span class="op">=</span> os.getenv(<span class="st">"API_KEY"</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="checklist-production" class="level2">
 <h2 class="anchored" data-anchor-id="checklist-production">Checklist production</h2>
@@ -2318,7 +2450,7 @@ GET /users/-1        → {"user_id": -1}       ✅ (mais logiquement faux)</code
 <span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a><span class="ex">uvicorn</span> main:app <span class="at">--reload</span></span>
 <span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Lancer en prod</span></span>
-<span id="cb36-8"><a href="#cb36-8" aria-hidden="true" tabindex="-1"></a><span class="ex">uvicorn</span> main:app <span class="at">--host</span> 0.0.0.0 <span class="at">--port</span> 8000 <span class="at">--workers</span> 4</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb36-8"><a href="#cb36-8" aria-hidden="true" tabindex="-1"></a><span class="ex">uvicorn</span> main:app <span class="at">--host</span> 0.0.0.0 <span class="at">--port</span> 8000 <span class="at">--workers</span> 4</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 </section>
@@ -2355,7 +2487,7 @@ GET /users/-1        → {"user_id": -1}       ✅ (mais logiquement faux)</code
 </section>
 </section>
 
-</main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Retour au sommet</a></main> <!-- /main -->
 <!-- ===== Floating PDF Download Button ===== -->
 
 <style>
@@ -2425,12 +2557,12 @@ function downloadPDF() {
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "Copié");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "Copié");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",
@@ -2839,15 +2971,24 @@ function downloadPDF() {
   }
   loadGiscus();
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../notebooks/beginner/12_orchestration_pipelines.html" class="pagination-link" aria-label="12 · Orchestration de Pipelines">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">12 · Orchestration de Pipelines</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>© 2025 Bootcamp Data Engineering · From Zero to Hero</p>
+<p>Fait par Beerus SAMA</p>
 </div>   
     <div class="nav-footer-center">
-<p>Fait avec ❤️ par DIAKITE M. YOUSSOUF</p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/diakite-data/data-engineering-bootcamp/blob/main/notebooks/beginner/13_BONUS_fastapi_for_data_engineers.ipynb" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/diakite-data/data-engineering-bootcamp/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.dev/diakite-data/data-engineering-bootcamp/blob/main/notebooks/beginner/13_BONUS_fastapi_for_data_engineers.ipynb" class="toc-action"><i class="bi empty"></i>Edit this page</a></li></ul></div></div>
+<p>© 2025 Bootcamp Data Engineering · From Zero to Hero</p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/diakite-data/data-engineering-bootcamp/blob/main/notebooks/beginner/13_fastapi_for_data_engineers.ipynb" class="toc-action"><i class="bi bi-github"></i>Voir la source</a></li><li><a href="https://github.com/diakite-data/data-engineering-bootcamp/issues/new" class="toc-action"><i class="bi empty"></i>Faire part d'un problème</a></li><li><a href="https://github.dev/diakite-data/data-engineering-bootcamp/blob/main/notebooks/beginner/13_fastapi_for_data_engineers.ipynb" class="toc-action"><i class="bi empty"></i>Modifier cette page</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
@@ -2866,6 +3007,14 @@ function downloadPDF() {
     </div>
   </div>
 </footer>
+<!-- Reading Progress Indicator -->
+<div class="reading-progress" aria-hidden="true"></div>
+
+<!-- Back to Top Button -->
+<button class="back-to-top" aria-label="Retour en haut de page" title="Retour en haut"></button>
+
+<!-- UI Enhancement Script -->
+<script src="../../bootcamp-ui.js"></script>
 
 
 
