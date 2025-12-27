@@ -3,7 +3,13 @@
 /* ==================================================
    🚀 BOOTCAMP DATA ENGINEERING - PREMIUM STYLESHEET
    From Zero to Hero - Orange & Sky Blue Theme
-   Version 2.0 - Refined Color Balance (60/30/10)
+   Version 3.0 - Enhanced Edition
+   
+   Améliorations v3.0 :
+   ✅ Mode sombre automatique
+   ✅ États de focus accessibles (WCAG 2.1)
+   ✅ Indicateur de progression de lecture
+   ✅ Bouton retour en haut
    ================================================== */
 
 /*-- scss:rules --*/
@@ -49,6 +55,16 @@
   --gray-800: #1f2937;
   --gray-900: #111827;
   
+  /* Semantic Colors - Light Mode */
+  --bg-primary: #ffffff;
+  --bg-secondary: var(--gray-50);
+  --bg-tertiary: var(--gray-100);
+  --text-primary: var(--gray-900);
+  --text-secondary: var(--gray-700);
+  --text-tertiary: var(--gray-500);
+  --border-color: var(--gray-200);
+  --border-color-strong: var(--gray-300);
+  
   /* Code Colors */
   --code-bg: #1e1e2e;
   --code-text: #cdd6f4;
@@ -72,6 +88,10 @@
   --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   --shadow-orange: 0 0 40px rgba(249, 115, 22, 0.3);
   --shadow-sky: 0 0 40px rgba(14, 165, 233, 0.3);
+  
+  /* Focus Ring */
+  --focus-ring: 0 0 0 3px rgba(14, 165, 233, 0.5);
+  --focus-ring-orange: 0 0 0 3px rgba(249, 115, 22, 0.5);
   
   /* Typography */
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
@@ -101,6 +121,214 @@
 }
 
 /* --------------------------------------------------
+   🌙 DARK MODE - Automatic Detection
+-------------------------------------------------- */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Override semantic colors for dark mode */
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-tertiary: #334155;
+    --text-primary: #f1f5f9;
+    --text-secondary: #cbd5e1;
+    --text-tertiary: #94a3b8;
+    --border-color: #334155;
+    --border-color-strong: #475569;
+    
+    /* Adjusted grays for dark mode */
+    --gray-50: #1e293b;
+    --gray-100: #334155;
+    --gray-200: #475569;
+    --gray-300: #64748b;
+    --gray-700: #cbd5e1;
+    --gray-800: #e2e8f0;
+    --gray-900: #f1f5f9;
+    
+    /* Adjusted accent colors for dark mode (more vibrant) */
+    --orange-50: rgba(249, 115, 22, 0.1);
+    --orange-100: rgba(249, 115, 22, 0.15);
+    --sky-50: rgba(14, 165, 233, 0.1);
+    --sky-100: rgba(14, 165, 233, 0.15);
+    
+    /* Shadows for dark mode */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+    --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+    
+    /* Focus rings for dark mode (more visible) */
+    --focus-ring: 0 0 0 3px rgba(56, 189, 248, 0.6);
+    --focus-ring-orange: 0 0 0 3px rgba(251, 146, 60, 0.6);
+  }
+  
+  body {
+    background-color: var(--bg-primary) !important;
+    color: var(--text-primary);
+  }
+  
+  .quarto-container,
+  main,
+  .content,
+  #quarto-content {
+    background-color: var(--bg-primary) !important;
+  }
+  
+  /* Sidebar dark mode */
+  .sidebar {
+    background: var(--bg-secondary) !important;
+    border-right-color: var(--border-color) !important;
+  }
+  
+  .sidebar-item a,
+  .sidebar .sidebar-item-text {
+    color: var(--text-secondary) !important;
+  }
+  
+  .sidebar-item a:hover {
+    background: var(--sky-50) !important;
+    color: var(--sky-400) !important;
+  }
+  
+  .sidebar-item a.active {
+    background: var(--sky-100) !important;
+    color: var(--sky-400) !important;
+    border-left-color: var(--sky-500) !important;
+  }
+  
+  /* Tables dark mode */
+  table {
+    background: var(--bg-secondary) !important;
+  }
+  
+  td {
+    background: var(--bg-secondary) !important;
+    border-bottom-color: var(--border-color) !important;
+    color: var(--text-secondary) !important;
+  }
+  
+  tbody tr:nth-child(even) {
+    background: var(--bg-tertiary) !important;
+  }
+  
+  tbody tr:nth-child(even) td {
+    background: var(--bg-tertiary) !important;
+  }
+  
+  tbody tr:hover {
+    background: var(--sky-50) !important;
+  }
+  
+  tbody tr:hover td {
+    background: var(--sky-50) !important;
+  }
+  
+  /* Cards dark mode */
+  .card {
+    background: var(--bg-secondary) !important;
+    border-color: var(--border-color) !important;
+  }
+  
+  .card:hover {
+    border-color: var(--sky-600) !important;
+  }
+  
+  /* Callouts dark mode */
+  .callout,
+  blockquote {
+    background: var(--bg-secondary) !important;
+  }
+  
+  .callout-note {
+    background: rgba(14, 165, 233, 0.1) !important;
+  }
+  
+  .callout-warning,
+  .callout-important {
+    background: rgba(249, 115, 22, 0.1) !important;
+  }
+  
+  .callout-tip {
+    background: rgba(16, 185, 129, 0.1) !important;
+  }
+  
+  /* TOC dark mode */
+  #TOC {
+    background: var(--bg-secondary) !important;
+    border-left-color: var(--border-color) !important;
+  }
+  
+  #TOC a {
+    color: var(--text-tertiary) !important;
+  }
+  
+  #TOC a:hover {
+    color: var(--sky-400) !important;
+  }
+  
+  #TOC .active {
+    color: var(--sky-400) !important;
+  }
+  
+  /* Links dark mode */
+  a {
+    color: var(--sky-400) !important;
+  }
+  
+  a:hover {
+    color: var(--sky-300) !important;
+  }
+  
+  /* Code blocks - already dark, slight adjustment */
+  pre {
+    border-color: rgba(14, 165, 233, 0.3) !important;
+  }
+  
+  /* Scrollbar dark mode */
+  ::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border-color: var(--bg-secondary);
+  }
+  
+  /* Button outline dark mode */
+  .btn-outline {
+    color: var(--sky-400) !important;
+    border-color: var(--sky-500) !important;
+  }
+  
+  /* Progress bar background */
+  .progress {
+    background: var(--bg-tertiary) !important;
+  }
+  
+  /* Back to top button dark mode */
+  .back-to-top {
+    background: var(--bg-secondary) !important;
+    border-color: var(--border-color) !important;
+  }
+  
+  .back-to-top:hover {
+    background: var(--sky-600) !important;
+    border-color: var(--sky-600) !important;
+  }
+  
+  /* Selection dark mode */
+  ::selection {
+    background-color: var(--sky-600);
+    color: white;
+  }
+  
+  /* HR dark mode */
+  hr {
+    background: linear-gradient(90deg, transparent, var(--sky-700), transparent) !important;
+  }
+}
+
+/* --------------------------------------------------
    GLOBAL BASE STYLES - WHITE BACKGROUND
 -------------------------------------------------- */
 
@@ -113,18 +341,18 @@ html {
 body {
   font-family: var(--font-sans);
   line-height: 1.7;
-  background-color: #ffffff !important;
-  color: var(--gray-800);
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary);
 }
 
 .quarto-container {
-  background-color: #ffffff !important;
+  background-color: var(--bg-primary) !important;
 }
 
 main,
 .content,
 #quarto-content {
-  background-color: #ffffff !important;
+  background-color: var(--bg-primary) !important;
 }
 
 ::selection {
@@ -154,6 +382,197 @@ main,
 }
 
 /* --------------------------------------------------
+   ♿ ACCESSIBILITY - FOCUS STATES (WCAG 2.1 AA)
+-------------------------------------------------- */
+
+/* Global focus reset */
+*:focus {
+  outline: none;
+}
+
+/* Visible focus for keyboard navigation */
+*:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+  border-radius: var(--radius-sm);
+}
+
+/* Links focus */
+a:focus-visible {
+  box-shadow: var(--focus-ring);
+  border-radius: var(--radius-sm);
+  text-decoration: underline;
+}
+
+/* Button focus */
+.btn:focus-visible {
+  box-shadow: var(--shadow-lg), var(--focus-ring-orange);
+  transform: translateY(-2px);
+}
+
+.btn-secondary:focus-visible {
+  box-shadow: var(--shadow-lg), var(--focus-ring);
+}
+
+.btn-outline:focus-visible {
+  box-shadow: var(--focus-ring);
+}
+
+/* Sidebar focus */
+.sidebar-item a:focus-visible {
+  box-shadow: inset var(--focus-ring);
+  background: var(--sky-50);
+}
+
+/* Navbar focus */
+.navbar .nav-link:focus-visible {
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Code buttons focus */
+.code-fold-btn:focus-visible,
+.code-copy-button:focus-visible {
+  box-shadow: var(--focus-ring);
+}
+
+/* Form elements focus (if any) */
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  box-shadow: var(--focus-ring);
+  border-color: var(--sky-500);
+}
+
+/* Card focus (if interactive) */
+.card:focus-visible {
+  box-shadow: var(--shadow-xl), var(--focus-ring);
+}
+
+/* TOC links focus */
+#TOC a:focus-visible {
+  box-shadow: var(--focus-ring);
+  background: var(--sky-50);
+}
+
+/* Skip link for screen readers */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 24px;
+  background: var(--sky-600);
+  color: white;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  z-index: 10000;
+  transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+  top: 10px;
+}
+
+/* --------------------------------------------------
+   📊 READING PROGRESS INDICATOR
+-------------------------------------------------- */
+
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 4px;
+  background: var(--gradient-primary);
+  z-index: 10001;
+  transition: width 50ms linear;
+  box-shadow: 0 0 10px rgba(249, 115, 22, 0.5);
+}
+
+/* Alternative style - with glow effect */
+.reading-progress::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4));
+  animation: progressShine 2s infinite;
+}
+
+@keyframes progressShine {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* --------------------------------------------------
+   ⬆️ BACK TO TOP BUTTON
+-------------------------------------------------- */
+
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: var(--bg-primary);
+  border: 2px solid var(--sky-500);
+  border-radius: var(--radius-full);
+  color: var(--sky-600);
+  font-size: 1.25rem;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all var(--transition-base);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+}
+
+.back-to-top:hover {
+  background: var(--sky-500);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-xl), var(--shadow-sky);
+}
+
+.back-to-top:focus-visible {
+  box-shadow: var(--shadow-lg), var(--focus-ring);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Arrow icon using CSS */
+.back-to-top::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-left: 3px solid currentColor;
+  border-top: 3px solid currentColor;
+  transform: rotate(45deg) translateY(2px);
+}
+
+/* Mobile positioning */
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* --------------------------------------------------
    TYPOGRAPHY
 -------------------------------------------------- */
 
@@ -162,7 +581,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 800;
   letter-spacing: -0.025em;
   line-height: 1.2;
-  color: var(--gray-900);
+  color: var(--text-primary);
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
 }
@@ -180,7 +599,7 @@ h2 {
   display: inline-block;
   margin-top: 1.75rem;
   margin-bottom: 0.75rem;
-  color: var(--gray-800);
+  color: var(--text-primary);
 }
 
 h2::after {
@@ -198,12 +617,22 @@ h3 {
   color: var(--sky-700);
 }
 
+@media (prefers-color-scheme: dark) {
+  h3 {
+    color: var(--sky-400);
+  }
+  
+  h4 {
+    color: var(--sky-300);
+  }
+}
+
 h4 {
   color: var(--sky-800);
 }
 
 /* --------------------------------------------------
-   HERO BANNER - Orange/Sky Gradient (seul endroit avec dégradé fort)
+   HERO BANNER - Orange/Sky Gradient
 -------------------------------------------------- */
 
 .hero {
@@ -283,7 +712,7 @@ h4 {
 }
 
 /* --------------------------------------------------
-   INLINE CODE - Sky Blue accent (plus discret)
+   INLINE CODE - Sky Blue accent
 -------------------------------------------------- */
 
 code:not(pre code) {
@@ -364,12 +793,12 @@ pre code {
 }
 
 /* --------------------------------------------------
-   SIDEBAR - Gris clair avec accents BLEU (plus orange)
+   SIDEBAR - Light gray with SKY BLUE accents
 -------------------------------------------------- */
 
 .sidebar {
-  background: var(--gray-50);
-  border-right: 1px solid var(--gray-200);
+  background: var(--bg-secondary);
+  border-right: 1px solid var(--border-color);
 }
 
 .sidebar-item a,
@@ -377,7 +806,7 @@ pre code {
   display: flex;
   align-items: center;
   padding: 10px 14px;
-  color: var(--gray-700);
+  color: var(--text-secondary);
   text-decoration: none;
   border-radius: var(--radius-md);
   font-weight: 500;
@@ -391,7 +820,7 @@ pre code {
   transform: translateX(4px);
 }
 
-/* CHANGEMENT CLÉ : Actif en BLEU, pas orange */
+/* Active state in SKY BLUE */
 .sidebar-item a.active {
   background: var(--sky-100);
   color: var(--sky-700);
@@ -400,7 +829,7 @@ pre code {
 }
 
 /* --------------------------------------------------
-   LINKS - Sky blue primary, orange réservé aux CTA
+   LINKS - Sky blue primary
 -------------------------------------------------- */
 
 a {
@@ -416,7 +845,7 @@ a:hover {
 }
 
 /* --------------------------------------------------
-   TABLES - Header BLEU UNI (plus de dégradé)
+   TABLES - SOLID BLUE header
 -------------------------------------------------- */
 
 table {
@@ -427,10 +856,9 @@ table {
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
-  background: white;
+  background: var(--bg-primary);
 }
 
-/* CHANGEMENT CLÉ : Header en bleu uni */
 thead {
   background: var(--sky-600);
 }
@@ -447,18 +875,18 @@ th {
 
 td {
   padding: 14px 20px;
-  border-bottom: 1px solid var(--gray-200);
-  color: var(--gray-700);
-  background: white;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  background: var(--bg-primary);
 }
 
 tbody tr {
-  background: white;
+  background: var(--bg-primary);
   transition: var(--transition-fast);
 }
 
 tbody tr:nth-child(even) {
-  background: var(--gray-50);
+  background: var(--bg-secondary);
 }
 
 tbody tr:hover {
@@ -470,7 +898,7 @@ tbody tr:last-child td {
 }
 
 /* --------------------------------------------------
-   BUTTONS - Orange = CTA principal (accent fort)
+   BUTTONS - Orange = Primary CTA
 -------------------------------------------------- */
 
 .btn {
@@ -507,7 +935,7 @@ tbody tr:last-child td {
   box-shadow: var(--shadow-xl), var(--shadow-sky);
 }
 
-/* Bouton outline pour moins d'emphase */
+/* Outline button for less emphasis */
 .btn-outline {
   background: transparent;
   color: var(--sky-600);
@@ -521,12 +949,12 @@ tbody tr:last-child td {
 }
 
 /* --------------------------------------------------
-   CALLOUTS - Accents subtils
+   CALLOUTS - Subtle accents
 -------------------------------------------------- */
 
 .callout,
 blockquote {
-  background: white;
+  background: var(--bg-primary);
   border-radius: var(--radius-lg);
   padding: var(--spacing-xl);
   margin: var(--spacing-xl) 0;
@@ -536,7 +964,7 @@ blockquote {
 
 blockquote {
   font-style: italic;
-  color: var(--gray-600);
+  color: var(--text-tertiary);
   border-left-color: var(--gray-400);
 }
 
@@ -565,7 +993,7 @@ blockquote p {
 }
 
 /* --------------------------------------------------
-   LISTS - Marqueurs bleu (orange plus discret)
+   LISTS - Blue markers
 -------------------------------------------------- */
 
 ul, ol {
@@ -575,7 +1003,7 @@ ul, ol {
 
 li {
   margin: var(--spacing-sm) 0;
-  color: var(--gray-700);
+  color: var(--text-secondary);
 }
 
 ul li::marker {
@@ -599,7 +1027,7 @@ hr {
 }
 
 /* --------------------------------------------------
-   FOOTER - Sky Blue (cohérent avec navbar)
+   FOOTER - Sky Blue (consistent with navbar)
 -------------------------------------------------- */
 
 .page-footer,
@@ -623,13 +1051,13 @@ footer a:hover {
 -------------------------------------------------- */
 
 #TOC {
-  border-left: 2px solid var(--gray-200);
+  border-left: 2px solid var(--border-color);
   padding-left: var(--spacing-md);
-  background: white;
+  background: var(--bg-primary);
 }
 
 #TOC a {
-  color: var(--gray-600);
+  color: var(--text-tertiary);
   font-size: 0.9rem;
 }
 
@@ -662,7 +1090,7 @@ footer a:hover {
   color: var(--sky-700);
 }
 
-/* Orange réservé aux badges "highlight" / nouveautés */
+/* Orange reserved for highlight badges / new features */
 .badge-highlight {
   background: var(--orange-100);
   color: var(--orange-700);
@@ -679,19 +1107,19 @@ footer a:hover {
 
 .quarto-title-meta-heading {
   font-weight: 700;
-  color: var(--gray-500);
+  color: var(--text-tertiary);
   text-transform: uppercase;
   font-size: 0.75rem;
   letter-spacing: 0.1em;
 }
 
 .code-fold-btn {
-  background: var(--gray-100);
-  border: 1px solid var(--gray-200);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
   border-radius: var(--radius-sm);
   padding: 4px 10px;
   font-size: 0.8rem;
-  color: var(--gray-600);
+  color: var(--text-tertiary);
 }
 
 .code-fold-btn:hover {
@@ -718,10 +1146,10 @@ footer a:hover {
 -------------------------------------------------- */
 
 .card {
-  background: white;
+  background: var(--bg-primary);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
-  border: 1px solid var(--gray-200);
+  border: 1px solid var(--border-color);
   transition: var(--transition-base);
   overflow: hidden;
 }
@@ -732,7 +1160,7 @@ footer a:hover {
   border-color: var(--sky-200);
 }
 
-/* Card header en bleu uni */
+/* Solid blue card header */
 .card-header {
   background: var(--sky-600);
   color: white;
@@ -750,7 +1178,7 @@ footer a:hover {
 
 .progress {
   height: 8px;
-  background: var(--gray-200);
+  background: var(--bg-tertiary);
   border-radius: var(--radius-full);
   overflow: hidden;
 }
@@ -762,7 +1190,7 @@ footer a:hover {
   transition: width 0.5s ease;
 }
 
-/* Progress avec accent orange pour les achievements */
+/* Progress with orange accent for achievements */
 .progress-bar-highlight {
   background: linear-gradient(90deg, var(--orange-500), var(--orange-400));
 }
@@ -772,7 +1200,7 @@ footer a:hover {
    ================================================== */
 
 /* --------------------------------------------------
-   TABLETTE (768px - 991px)
+   TABLET (768px - 991px)
 -------------------------------------------------- */
 
 @media (max-width: 991px) {
@@ -913,10 +1341,15 @@ footer a:hover {
   section {
     margin-bottom: var(--spacing-xl);
   }
+  
+  /* Reading progress thinner on mobile */
+  .reading-progress {
+    height: 3px;
+  }
 }
 
 /* --------------------------------------------------
-   PETIT MOBILE (< 375px) - iPhone SE, etc.
+   SMALL MOBILE (< 375px) - iPhone SE, etc.
 -------------------------------------------------- */
 
 @media (max-width: 375px) {
@@ -956,7 +1389,7 @@ footer a:hover {
 }
 
 /* --------------------------------------------------
-   PRÉFÉRENCES UTILISATEUR
+   USER PREFERENCES
 -------------------------------------------------- */
 
 @media (prefers-reduced-motion: reduce) {
@@ -970,6 +1403,10 @@ footer a:hover {
   
   html {
     scroll-behavior: auto;
+  }
+  
+  .reading-progress::after {
+    animation: none;
   }
 }
 
@@ -1001,7 +1438,9 @@ footer a:hover {
   .sidebar,
   #TOC,
   .code-copy-button,
-  .code-fold-btn {
+  .code-fold-btn,
+  .reading-progress,
+  .back-to-top {
     display: none !important;
   }
   

@@ -40,9 +40,9 @@ website:
   # Page Footer
   page-footer:
     left: |
-      © 2025 Bootcamp Data Engineering · From Zero to Hero
+      Fait par Beerus SAMA
     center: |
-      Fait avec ❤️ par DIAKITE M. YOUSSOUF 
+      © 2025 Bootcamp Data Engineering · From Zero to Hero  
     right:
       - icon: github
         href: https://github.com/diakite-data/data-engineering-bootcamp
@@ -340,7 +340,7 @@ format:
     fig-responsive: true
     self-contained: false
     
-    # Include
+    # Include - Header (fonts, meta)
     include-in-header:
       - text: |
           <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -348,6 +348,18 @@ format:
           <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
           <meta name="author" content="Diakite Data">
           <meta name="keywords" content="data engineering, spark, kafka, python, kubernetes, lakehouse, delta lake, bootcamp">
+    
+    # Include - After Body (UI components: progress bar, back-to-top)
+    include-after-body:
+      - text: |
+          <!-- Reading Progress Indicator -->
+          <div class="reading-progress" aria-hidden="true"></div>
+          
+          <!-- Back to Top Button -->
+          <button class="back-to-top" aria-label="Retour en haut de page" title="Retour en haut"></button>
+          
+          <!-- UI Enhancement Script -->
+          <script src="bootcamp-ui.js"></script>
 
 # ==============================================================================
 # 📓 JUPYTER / NOTEBOOKS
@@ -375,3 +387,4 @@ resources:
   - notebooks/**/*.csv
   - notebooks/**/*.json
   - notebooks/**/*.parquet
+  - bootcamp-ui.js
