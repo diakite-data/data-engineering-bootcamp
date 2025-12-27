@@ -116,11 +116,24 @@ Maîtriser les technologies indispensables en entreprise : Docker, Kubernetes, S
 # 🟥 Niveau 3 : Avancé – Architecture, Optimisation & Seniority
 
 ### 🎯 Objectif  
-Atteindre le niveau "Senior Data Engineer / Architecte Data".
+Atteindre le niveau "Senior Data Engineer / Architecte Data" avec une maîtrise des systèmes distribués, de l'architecture et du leadership technique.
 
 ### 📚 Modules
 
-A venir
+| # | Module | Thèmes Clés |
+|:--|:-------|:------------|
+| 27 | Kubernetes Deep Dive | Operators, CRDs, Helm avancé, GitOps, troubleshooting |
+| 28 | Orchestration Avancée | Airflow 2.x, DAGs dynamiques, KubernetesPodOperator, Dagster |
+| 29 | Messaging Distribué | Kafka internals, Pulsar, RabbitMQ, patterns de messaging |
+| 30 | Spark & Scala Deep Dive | Internals Spark, Catalyst, Tungsten, optimisation bas niveau |
+| 31 | Data Engineering pour le ML | Feature Stores, pipelines ML, MLflow, model serving |
+| 32 | Data Mesh & Contracts | Data Products, Domain Ownership, Data Contracts, APIs |
+| 33 | Realtime OLAP & Dashboards | ClickHouse, Apache Druid, Pinot, dashboards temps réel |
+| 34 | Patterns & Décisions d'Architecture | ADR, RFC, trade-offs, design reviews, documentation |
+| 35 | Leadership & Trade-offs | Communication technique, mentoring, gestion de projet tech |
+
+> **🎯 Résultat :** Capable de concevoir et défendre une architecture Data complète, mener des design reviews, et guider une équipe technique.
+
 ---
 
 # 📊 Vue d'Ensemble du Parcours
@@ -129,25 +142,29 @@ A venir
 ┌─────────────────────────────────────────────────────────────────────────────┐
 │                           PARCOURS COMPLET                                  │
 │                                                                             │
-│   🟦 NIVEAU 1 : DÉBUTANT                    Durée estimée : x semaines   │
+│   🟦 NIVEAU 1 : DÉBUTANT                                                    │
 │   ════════════════════════                                                  │
 │   Modules 01-13                                                             │
 │   Python → SQL → Big Data → PySpark → MongoDB                               │
 │   📦 Projet : Pipeline simple                                               │
 │                          │                                                  │
 │                          ▼                                                  │
-│   🟩 NIVEAU 2 : INTERMÉDIAIRE               Durée estimée : x semaines  │
+│   🟩 NIVEAU 2 : INTERMÉDIAIRE                                               │
 │   ════════════════════════════                                              │
 │   Modules 14-26                                                             │
-│   Docker → K8s → Spark avancé → Lakehouse → Streaming → dbt                │
+│   Docker → K8s → Spark avancé → Lakehouse → Streaming → dbt                 │
 │   📦 Projet : Pipeline E-commerce (Olist)                                   │
 │                          │                                                  │
 │                          ▼                                                  │
-│   🟥 NIVEAU 3 : AVANCÉ                      Durée estimée : x semaines  │
+│   🟥 NIVEAU 3 : AVANCÉ                                                      │
 │   ═════════════════════                                                     │
-│   A venir                                                            │
-│      │
-│                                     │
+│   Modules 27-35                                                             │
+│   K8s Deep Dive → Orchestration → Messaging → Spark/Scala → ML             │
+│   Architecture → Data Mesh → OLAP → Leadership                              │
+│   📦 Projet : Plateforme Data Multi-tenant                                  │
+│                                                                             │
+│                          ▼                                                  │
+│                    🏆 SENIOR READY                                          │
 │                                                                             │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
@@ -160,12 +177,15 @@ A venir
 |:-----------|:--------:|:-------------:|:------:|
 | Python & SQL | ✅ | ✅✅ | ✅✅✅ |
 | PySpark | ✅ | ✅✅ | ✅✅✅ |
+| Spark Scala | - | - | ✅✅ |
 | Docker & Kubernetes | - | ✅✅ | ✅✅✅ |
 | Lakehouse (Delta/Iceberg) | - | ✅✅ | ✅✅✅ |
 | Streaming (Kafka) | - | ✅✅ | ✅✅✅ |
-| Flink | - | - | ✅✅ |
+| Orchestration (Airflow) | - | ✅ | ✅✅✅ |
 | dbt & Data Quality | - | ✅✅ | ✅✅ |
-| MLOps | - | - | ✅✅ |
+| OLAP & Realtime Analytics | - | - | ✅✅ |
+| MLOps & Feature Stores | - | - | ✅✅ |
+| Data Mesh & Contracts | - | - | ✅✅✅ |
 | Governance & Security | - | ✅ | ✅✅✅ |
 | Architecture & Design | - | ✅ | ✅✅✅ |
 | Leadership technique | - | - | ✅✅✅ |
@@ -174,11 +194,17 @@ A venir
 
 # 🚀 Démarrer le Bootcamp
 
-👉 Cliquez dans le menu de gauche pour ouvrir le premier module, ou démarrez ici :
+👉 Cliquez dans le menu de gauche pour ouvrir le premier module, ou choisissez votre point d'entrée :
 
-<div style="text-align: center; margin: 30px 0;">
-  <a href="notebooks/beginner/01_intro_data_engineering.ipynb" style="background-color: #4CAF50; color: white; padding: 15px 30px; text-decoration: none; font-size: 18px; border-radius: 5px;">
-    📘 Commencer le Module 01
+<div style="text-align: center; margin: 30px 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
+  <a href="notebooks/beginner/01_intro_data_engineering.ipynb" style="background: linear-gradient(135deg, #3b82f6, #1d4ed8); color: white; padding: 15px 30px; text-decoration: none; font-size: 16px; border-radius: 10px; font-weight: 600; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);">
+    🟦 Niveau Débutant
+  </a>
+  <a href="notebooks/intermediate/14_docker_for_data_engineers.ipynb" style="background: linear-gradient(135deg, #22c55e, #16a34a); color: white; padding: 15px 30px; text-decoration: none; font-size: 16px; border-radius: 10px; font-weight: 600; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);">
+    🟩 Niveau Intermédiaire
+  </a>
+  <a href="notebooks/advanced/27_kubernetes_deep_dive.ipynb" style="background: linear-gradient(135deg, #ef4444, #dc2626); color: white; padding: 15px 30px; text-decoration: none; font-size: 16px; border-radius: 10px; font-weight: 600; box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);">
+    🟥 Niveau Avancé
   </a>
 </div>
 

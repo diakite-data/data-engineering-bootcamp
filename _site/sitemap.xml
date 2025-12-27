@@ -74,7 +74,7 @@
   </url>
   <url>
     <loc>https://diakite-data.github.io/data-engineering-bootcamp/index.html</loc>
-    <lastmod>2025-12-17T10:06:21.957Z</lastmod>
+    <lastmod>2025-12-27T17:35:21.256Z</lastmod>
   </url>
   <url>
     <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/beginner/08_intro_big_data_distributed.html</loc>
@@ -127,5 +127,45 @@
   <url>
     <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/intermediate/22_cloud_and_object_storage.html</loc>
     <lastmod>2025-12-21T17:56:49.261Z</lastmod>
+  </url>
+  <url>
+    <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/beginner/13_fastapi_for_data_engineers.html</loc>
+    <lastmod>2025-12-21T17:56:49.250Z</lastmod>
+  </url>
+  <url>
+    <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/advanced/29_distributed_messaging.html</loc>
+    <lastmod>2025-12-27T17:21:58.467Z</lastmod>
+  </url>
+  <url>
+    <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/advanced/34_architecture_patterns_decisions.html</loc>
+    <lastmod>2025-12-27T17:22:52.307Z</lastmod>
+  </url>
+  <url>
+    <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/advanced/35_leadership_tradeoffs.html</loc>
+    <lastmod>2025-12-27T17:23:00.276Z</lastmod>
+  </url>
+  <url>
+    <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/advanced/27_kubernetes_deep_dive.html</loc>
+    <lastmod>2025-12-27T17:21:39.209Z</lastmod>
+  </url>
+  <url>
+    <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/advanced/31_data_engineering_for_ml.html</loc>
+    <lastmod>2025-12-27T17:22:20.759Z</lastmod>
+  </url>
+  <url>
+    <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/advanced/28_advanced_orchestration.html</loc>
+    <lastmod>2025-12-27T17:21:50.669Z</lastmod>
+  </url>
+  <url>
+    <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/advanced/30_spark_scala_deep_dive.html</loc>
+    <lastmod>2025-12-27T17:22:09.543Z</lastmod>
+  </url>
+  <url>
+    <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/advanced/32_data_mesh_contracts.html</loc>
+    <lastmod>2025-12-27T17:22:34.751Z</lastmod>
+  </url>
+  <url>
+    <loc>https://diakite-data.github.io/data-engineering-bootcamp/notebooks/advanced/33_realtime_olap_dashboards.html</loc>
+    <lastmod>2025-12-27T17:22:44.033Z</lastmod>
   </url>
 </urlset>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.8.26">
@@ -42,9 +42,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-fc8d3d93f0a84b7619e1f8ff6eb63d42.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-9b7f10339c3234d84e2088543817ad84.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-9b21fca14e7733f626e857f83a7ec58d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-9b7f10339c3234d84e2088543817ad84.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-e343b3f0bebe96ccb32e8952eba0f815.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-748d9631d2a9cba8c735999f2048c189.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-e343b3f0bebe96ccb32e8952eba0f815.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": true,
@@ -58,17 +58,17 @@ ul.task-list li input[type="checkbox"] {
     "s"
   ],
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
@@ -76,7 +76,9 @@ ul.task-list li input[type="checkbox"] {
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 <meta name="author" content="Diakite Data">
-<meta name="keywords" content="data engineering, spark, kafka, python, kubernetes, lakehouse, delta lake, bootcamp">
+<meta name="keywords" content="data engineering, spark, kafka, python, kubernetes, lakehouse, delta lake, bootcamp, formation, tutoriel">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://diakite-data.github.io/data-engineering-bootcamp">
 
 
 <meta property="og:title" content="Bootcamp Data Engineering – From Zero to Hero – Bootcamp Data Engineering">
@@ -264,8 +266,8 @@ ul.task-list li input[type="checkbox"] {
     <img src="./assets/images/logo.svg" alt="Data Engineering Bootcamp" class="navbar-logo dark-content">
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Recherche"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Basculer la navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -287,7 +289,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="./notebooks/intermediate/14_docker_for_data_engineers.html">
  <span class="dropdown-text">🟩 Niveau Intermédiaire</span></a>
   </li>  
-        <li class="dropdown-header">🟥 Niveau Avancé</li>
+        <li>
+    <a class="dropdown-item" href="./notebooks/advanced/27_kubernetes_deep_dive.html">
+ <span class="dropdown-text">🟥 Niveau Avancé</span></a>
+  </li>  
         <li><hr class="dropdown-divider"></li>
         <li>
     <a class="dropdown-item" href="./curriculum.html">
@@ -329,19 +334,24 @@ ul.task-list li input[type="checkbox"] {
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Basculer le mode sombre"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Basculer en mode lecteur">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Bootcamp Data Engineering – From Zero to Hero</li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Recherche" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -353,7 +363,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
+        <div id="quarto-search" class="" title="Recherche"></div>
         </div>
         </div>
     <div class="sidebar-menu-container"> 
@@ -362,7 +372,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
  <span class="menu-text">🟦 Niveau 1 : Débutant</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -372,7 +382,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
  <span class="menu-text">📌 Fondations</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -401,7 +411,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
  <span class="menu-text">🐍 Python</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -424,7 +434,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
  <span class="menu-text">🗄️ Bases de Données</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -447,7 +457,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
  <span class="menu-text">📊 Big Data &amp; NoSQL</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -476,7 +486,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
  <span class="menu-text">⚡ Spark &amp; Orchestration</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -499,14 +509,14 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
  <span class="menu-text">🎁 Bonus</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+  <a href="./notebooks/beginner/13_fastapi_for_data_engineers.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">13 · FastAPI pour Data Engineers</span></a>
   </div>
 </li>
@@ -522,7 +532,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
  <span class="menu-text">🟩 Niveau 2 : Intermédiaire</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -532,7 +542,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
  <span class="menu-text">🐳 Containers &amp; Cloud</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -561,7 +571,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false">
  <span class="menu-text">🚀 High Performance Python</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -584,7 +594,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false">
  <span class="menu-text">⚡ Spark Avancé</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -613,7 +623,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false">
  <span class="menu-text">🏠 Lakehouse &amp; Streaming &amp; Cloud</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -642,7 +652,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false">
  <span class="menu-text">🔧 Industrialisation</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -665,8 +675,129 @@ ul.task-list li input[type="checkbox"] {
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">
- <span class="menu-text">🟥 Niveau 3 : Avancé</span></span>
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false">
+ <span class="menu-text">🟥 Niveau 3 : Avancé</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="px-0"><hr class="sidebar-divider hi "></li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false">
+ <span class="menu-text">☸️ Infrastructure Avancée</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./notebooks/advanced/27_kubernetes_deep_dive.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">27 · Kubernetes Deep Dive</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./notebooks/advanced/28_advanced_orchestration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">28 · Orchestration Avancée</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./notebooks/advanced/29_distributed_messaging.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">29 · Messaging Distribué (Kafka, Pulsar)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="false">
+ <span class="menu-text">⚡ Processing Avancé</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-16" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./notebooks/advanced/30_spark_scala_deep_dive.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">30 · Spark &amp; Scala Deep Dive</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" role="navigation" aria-expanded="false">
+ <span class="menu-text">🤖 ML &amp; Analytics</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-17" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./notebooks/advanced/31_data_engineering_for_ml.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">31 · Data Engineering pour le ML</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./notebooks/advanced/33_realtime_olap_dashboards.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">33 · Realtime OLAP &amp; Dashboards</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" role="navigation" aria-expanded="false">
+ <span class="menu-text">🏛️ Architecture &amp; Governance</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-18" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./notebooks/advanced/32_data_mesh_contracts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">32 · Data Mesh &amp; Contracts</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./notebooks/advanced/34_architecture_patterns_decisions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">34 · Patterns &amp; Décisions d'Architecture</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-19" role="navigation" aria-expanded="false">
+ <span class="menu-text">👔 Leadership</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-19" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-19" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./notebooks/advanced/35_leadership_tradeoffs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">35 · Leadership &amp; Trade-offs</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="px-0"><hr class="sidebar-divider hi "></li>
+          <li class="sidebar-item">
+ <span class="menu-text">📦 **Projet Avancé**</span>
+  </li>
+      </ul>
   </li>
     </ul>
     </div>
@@ -988,13 +1119,75 @@ Il vous accompagne de manière progressive vers un niveau <strong>professionnel 
 <h1>🟥 Niveau 3 : Avancé – Architecture, Optimisation &amp; Seniority</h1>
 <section id="objectif-2" class="level3">
 <h3 class="anchored" data-anchor-id="objectif-2">🎯 Objectif</h3>
-<p>Atteindre le niveau “Senior Data Engineer / Architecte Data”.</p>
+<p>Atteindre le niveau “Senior Data Engineer / Architecte Data” avec une maîtrise des systèmes distribués, de l’architecture et du leadership technique.</p>
 </section>
 <section id="modules-2" class="level3">
 <h3 class="anchored" data-anchor-id="modules-2">📚 Modules</h3>
-</section>
-<section id="a-venir" class="level2">
-<h2 class="anchored" data-anchor-id="a-venir">A venir</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 33%">
+<col style="width: 54%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">#</th>
+<th style="text-align: left;">Module</th>
+<th style="text-align: left;">Thèmes Clés</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">27</td>
+<td style="text-align: left;">Kubernetes Deep Dive</td>
+<td style="text-align: left;">Operators, CRDs, Helm avancé, GitOps, troubleshooting</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">28</td>
+<td style="text-align: left;">Orchestration Avancée</td>
+<td style="text-align: left;">Airflow 2.x, DAGs dynamiques, KubernetesPodOperator, Dagster</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">29</td>
+<td style="text-align: left;">Messaging Distribué</td>
+<td style="text-align: left;">Kafka internals, Pulsar, RabbitMQ, patterns de messaging</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">30</td>
+<td style="text-align: left;">Spark &amp; Scala Deep Dive</td>
+<td style="text-align: left;">Internals Spark, Catalyst, Tungsten, optimisation bas niveau</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">31</td>
+<td style="text-align: left;">Data Engineering pour le ML</td>
+<td style="text-align: left;">Feature Stores, pipelines ML, MLflow, model serving</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">32</td>
+<td style="text-align: left;">Data Mesh &amp; Contracts</td>
+<td style="text-align: left;">Data Products, Domain Ownership, Data Contracts, APIs</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">33</td>
+<td style="text-align: left;">Realtime OLAP &amp; Dashboards</td>
+<td style="text-align: left;">ClickHouse, Apache Druid, Pinot, dashboards temps réel</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">34</td>
+<td style="text-align: left;">Patterns &amp; Décisions d’Architecture</td>
+<td style="text-align: left;">ADR, RFC, trade-offs, design reviews, documentation</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">35</td>
+<td style="text-align: left;">Leadership &amp; Trade-offs</td>
+<td style="text-align: left;">Communication technique, mentoring, gestion de projet tech</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="blockquote">
+<p><strong>🎯 Résultat :</strong> Capable de concevoir et défendre une architecture Data complète, mener des design reviews, et guider une équipe technique.</p>
+</blockquote>
+<hr>
 </section>
 </section>
 <section id="vue-densemble-du-parcours" class="level1">
@@ -1002,25 +1195,29 @@ Il vous accompagne de manière progressive vers un niveau <strong>professionnel 
 <pre><code>┌─────────────────────────────────────────────────────────────────────────────┐
 │                           PARCOURS COMPLET                                  │
 │                                                                             │
-│   🟦 NIVEAU 1 : DÉBUTANT                    Durée estimée : x semaines   │
+│   🟦 NIVEAU 1 : DÉBUTANT                                                    │
 │   ════════════════════════                                                  │
 │   Modules 01-13                                                             │
 │   Python → SQL → Big Data → PySpark → MongoDB                               │
 │   📦 Projet : Pipeline simple                                               │
 │                          │                                                  │
 │                          ▼                                                  │
-│   🟩 NIVEAU 2 : INTERMÉDIAIRE               Durée estimée : x semaines  │
+│   🟩 NIVEAU 2 : INTERMÉDIAIRE                                               │
 │   ════════════════════════════                                              │
 │   Modules 14-26                                                             │
-│   Docker → K8s → Spark avancé → Lakehouse → Streaming → dbt                │
+│   Docker → K8s → Spark avancé → Lakehouse → Streaming → dbt                 │
 │   📦 Projet : Pipeline E-commerce (Olist)                                   │
 │                          │                                                  │
 │                          ▼                                                  │
-│   🟥 NIVEAU 3 : AVANCÉ                      Durée estimée : x semaines  │
+│   🟥 NIVEAU 3 : AVANCÉ                                                      │
 │   ═════════════════════                                                     │
-│   A venir                                                            │
-│      │
-│                                     │
+│   Modules 27-35                                                             │
+│   K8s Deep Dive → Orchestration → Messaging → Spark/Scala → ML             │
+│   Architecture → Data Mesh → OLAP → Leadership                              │
+│   📦 Projet : Plateforme Data Multi-tenant                                  │
+│                                                                             │
+│                          ▼                                                  │
+│                    🏆 SENIOR READY                                          │
 │                                                                             │
 └─────────────────────────────────────────────────────────────────────────────┘</code></pre>
 <hr>
@@ -1050,54 +1247,72 @@ Il vous accompagne de manière progressive vers un niveau <strong>professionnel 
 <td style="text-align: center;">✅✅✅</td>
 </tr>
 <tr class="odd">
+<td style="text-align: left;">Spark Scala</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">✅✅</td>
+</tr>
+<tr class="even">
 <td style="text-align: left;">Docker &amp; Kubernetes</td>
 <td style="text-align: center;">-</td>
 <td style="text-align: center;">✅✅</td>
 <td style="text-align: center;">✅✅✅</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Lakehouse (Delta/Iceberg)</td>
 <td style="text-align: center;">-</td>
 <td style="text-align: center;">✅✅</td>
 <td style="text-align: center;">✅✅✅</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Streaming (Kafka)</td>
 <td style="text-align: center;">-</td>
 <td style="text-align: center;">✅✅</td>
 <td style="text-align: center;">✅✅✅</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">Flink</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">✅✅</td>
-</tr>
 <tr class="odd">
+<td style="text-align: left;">Orchestration (Airflow)</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅✅✅</td>
+</tr>
+<tr class="even">
 <td style="text-align: left;">dbt &amp; Data Quality</td>
 <td style="text-align: center;">-</td>
 <td style="text-align: center;">✅✅</td>
 <td style="text-align: center;">✅✅</td>
 </tr>
+<tr class="odd">
+<td style="text-align: left;">OLAP &amp; Realtime Analytics</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">✅✅</td>
+</tr>
 <tr class="even">
-<td style="text-align: left;">MLOps</td>
+<td style="text-align: left;">MLOps &amp; Feature Stores</td>
 <td style="text-align: center;">-</td>
 <td style="text-align: center;">-</td>
 <td style="text-align: center;">✅✅</td>
 </tr>
 <tr class="odd">
+<td style="text-align: left;">Data Mesh &amp; Contracts</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">✅✅✅</td>
+</tr>
+<tr class="even">
 <td style="text-align: left;">Governance &amp; Security</td>
 <td style="text-align: center;">-</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅✅✅</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Architecture &amp; Design</td>
 <td style="text-align: center;">-</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅✅✅</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Leadership technique</td>
 <td style="text-align: center;">-</td>
 <td style="text-align: center;">-</td>
@@ -1109,9 +1324,9 @@ Il vous accompagne de manière progressive vers un niveau <strong>professionnel 
 </section>
 <section id="démarrer-le-bootcamp" class="level1">
 <h1>🚀 Démarrer le Bootcamp</h1>
-<p>👉 Cliquez dans le menu de gauche pour ouvrir le premier module, ou démarrez ici :</p>
-<div style="text-align: center; margin: 30px 0;">
-<p><a href="./notebooks/beginner/01_intro_data_engineering.html" style="background-color: #4CAF50; color: white; padding: 15px 30px; text-decoration: none; font-size: 18px; border-radius: 5px;"> 📘 Commencer le Module 01 </a></p>
+<p>👉 Cliquez dans le menu de gauche pour ouvrir le premier module, ou choisissez votre point d’entrée :</p>
+<div style="text-align: center; margin: 30px 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
+<p><a href="./notebooks/beginner/01_intro_data_engineering.html" style="background: linear-gradient(135deg, #3b82f6, #1d4ed8); color: white; padding: 15px 30px; text-decoration: none; font-size: 16px; border-radius: 10px; font-weight: 600; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);"> 🟦 Niveau Débutant </a> <a href="./notebooks/intermediate/14_docker_for_data_engineers.html" style="background: linear-gradient(135deg, #22c55e, #16a34a); color: white; padding: 15px 30px; text-decoration: none; font-size: 16px; border-radius: 10px; font-weight: 600; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);"> 🟩 Niveau Intermédiaire </a> <a href="./notebooks/advanced/27_kubernetes_deep_dive.html" style="background: linear-gradient(135deg, #ef4444, #dc2626); color: white; padding: 15px 30px; text-decoration: none; font-size: 16px; border-radius: 10px; font-weight: 600; box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);"> 🟥 Niveau Avancé </a></p>
 </div>
 <hr>
 <section id="conseils-pour-réussir" class="level2">
@@ -1133,7 +1348,7 @@ Il vous accompagne de manière progressive vers un niveau <strong>professionnel 
 </section>
 </section>
 
-</main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Retour au sommet</a></main> <!-- /main -->
 <!-- ===== Floating PDF Download Button ===== -->
 
 <style>
@@ -1203,12 +1418,12 @@ function downloadPDF() {
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "Copié");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "Copié");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",
@@ -1621,11 +1836,11 @@ function downloadPDF() {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>© 2025 Bootcamp Data Engineering · From Zero to Hero</p>
+<p>Fait par Beerus SAMA</p>
 </div>   
     <div class="nav-footer-center">
-<p>Fait avec ❤️ par DIAKITE M. YOUSSOUF</p>
-<div class="toc-actions"><ul><li><a href="https://github.com/diakite-data/data-engineering-bootcamp/blob/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/diakite-data/data-engineering-bootcamp/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/diakite-data/data-engineering-bootcamp/edit/main/index.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li></ul></div></div>
+<p>© 2025 Bootcamp Data Engineering · From Zero to Hero</p>
+<div class="toc-actions"><ul><li><a href="https://github.com/diakite-data/data-engineering-bootcamp/blob/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Voir la source</a></li><li><a href="https://github.com/diakite-data/data-engineering-bootcamp/issues/new" class="toc-action"><i class="bi empty"></i>Faire part d'un problème</a></li><li><a href="https://github.com/diakite-data/data-engineering-bootcamp/edit/main/index.qmd" class="toc-action"><i class="bi empty"></i>Modifier cette page</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
@@ -1644,6 +1859,14 @@ function downloadPDF() {
     </div>
   </div>
 </footer>
+<!-- Reading Progress Indicator -->
+<div class="reading-progress" aria-hidden="true"></div>
+
+<!-- Back to Top Button -->
+<button class="back-to-top" aria-label="Retour en haut de page" title="Retour en haut"></button>
+
+<!-- UI Enhancement Script -->
+<script src="./bootcamp-ui.js"></script>
 
 
 

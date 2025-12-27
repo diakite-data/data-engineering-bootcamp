@@ -177,7 +177,7 @@ website:
           - section: "🎁 Bonus"
             contents:
               - text: "13 · FastAPI pour Data Engineers"
-                href: notebooks/beginner/13_fastapi_for_data_engineers.ipynb
+                href: notebooks/beginner/13_BONUS_fastapi_for_data_engineers.ipynb
           
           - text: "---"
           - text: "📦 **Projet Débutant**"

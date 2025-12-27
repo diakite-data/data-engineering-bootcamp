@@ -1,0 +1,2725 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>📨 Distributed Messaging pour Data Engineers – Bootcamp Data Engineering</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../notebooks/advanced/30_spark_scala_deep_dive.html" rel="next">
+<link href="../../notebooks/advanced/28_advanced_orchestration.html" rel="prev">
+<link href="../../assets/images/favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-fc8d3d93f0a84b7619e1f8ff6eb63d42.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-fc8d3d93f0a84b7619e1f8ff6eb63d42.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-fc8d3d93f0a84b7619e1f8ff6eb63d42.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-e343b3f0bebe96ccb32e8952eba0f815.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-748d9631d2a9cba8c735999f2048c189.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-e343b3f0bebe96ccb32e8952eba0f815.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": true,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<meta name="author" content="Diakite Data">
+<meta name="keywords" content="data engineering, spark, kafka, python, kubernetes, lakehouse, delta lake, bootcamp, formation, tutoriel">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://diakite-data.github.io/data-engineering-bootcamp">
+
+
+<meta property="og:title" content="📨 Distributed Messaging pour Data Engineers – Bootcamp Data Engineering">
+<meta property="og:description" content="Programme complet Data Engineering — Du débutant au Senior Engineer">
+<meta property="og:site_name" content="Bootcamp Data Engineering">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:title" content="📨 Distributed Messaging pour Data Engineers – Bootcamp Data Engineering">
+<meta name="twitter:description" content="Programme complet Data Engineering — Du débutant au Senior Engineer">
+<meta name="twitter:creator" content="@diakite_data">
+<meta name="twitter:site" content="@diakite_data">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../assets/images/logo.svg" alt="Data Engineering Bootcamp" class="navbar-logo light-content">
+    <img src="../../assets/images/logo.svg" alt="Data Engineering Bootcamp" class="navbar-logo dark-content">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Recherche"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Basculer la navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">🏠 Accueil</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-programme" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">📘 Programme</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-programme">    
+        <li>
+    <a class="dropdown-item" href="../../notebooks/beginner/01_intro_data_engineering.html">
+ <span class="dropdown-text">🟦 Niveau Débutant</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../notebooks/intermediate/14_docker_for_data_engineers.html">
+ <span class="dropdown-text">🟩 Niveau Intermédiaire</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../notebooks/advanced/27_kubernetes_deep_dive.html">
+ <span class="dropdown-text">🟥 Niveau Avancé</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li>
+    <a class="dropdown-item" href="../../curriculum.html">
+ <span class="dropdown-text">📊 Vue d’ensemble</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-ressources" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">🛠️ Ressources</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-ressources">    
+        <li>
+    <a class="dropdown-item" href="../../resources/documentation.html">
+ <span class="dropdown-text">📚 Documentation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../resources/setup.html">
+ <span class="dropdown-text">🔧 Setup Environnement</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../resources/faq.html">
+ <span class="dropdown-text">❓ FAQ</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li>
+    <a class="dropdown-item" href="../../resources/links.html">
+ <span class="dropdown-text">🔗 Liens Utiles</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/diakite-data/data-engineering-bootcamp"> <i class="bi bi-github" role="img" aria-label="GitHub Repository">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Basculer le mode sombre"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Basculer en mode lecteur">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">🟥 Niveau 3 : Avancé</li><li class="breadcrumb-item"><a href="../../notebooks/advanced/27_kubernetes_deep_dive.html">☸️ Infrastructure Avancée</a></li><li class="breadcrumb-item"><a href="../../notebooks/advanced/29_distributed_messaging.html">29 · Messaging Distribué (Kafka, Pulsar)</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Recherche" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Recherche"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">🟦 Niveau 1 : Débutant</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="px-0"><hr class="sidebar-divider hi "></li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">📌 Fondations</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/01_intro_data_engineering.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">01 · Introduction au Data Engineering</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/02_bash_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">02 · Linux &amp; Bash</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/03_git_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">03 · Git &amp; Versioning</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">🐍 Python</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/04_python_basics_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">04 · Python Fondamental</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/05_python_data_processing_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">05 · Python Data Processing</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">🗄️ Bases de Données</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/06_intro_relational_databases.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">06 · Introduction aux BDD Relationnelles</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/07_sql_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">07 · SQL pour Data Engineers</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">📊 Big Data &amp; NoSQL</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/08_intro_big_data_distributed.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">08 · Introduction Big Data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/09_mongodb_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">09 · MongoDB</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/10_elasticsearch_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">10 · Elasticsearch</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">⚡ Spark &amp; Orchestration</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/11_pyspark_for_data_engineering.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">11 · Introduction PySpark</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/12_orchestration_pipelines.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">12 · Orchestration de Pipelines</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">🎁 Bonus</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/13_BONUS_fastapi_for_data_engineers.ipynb" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">13 · FastAPI pour Data Engineers</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="px-0"><hr class="sidebar-divider hi "></li>
+          <li class="sidebar-item">
+ <span class="menu-text">📦 **Projet Débutant**</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
+ <span class="menu-text">🟩 Niveau 2 : Intermédiaire</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="px-0"><hr class="sidebar-divider hi "></li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
+ <span class="menu-text">🐳 Containers &amp; Cloud</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/14_docker_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">14 · Docker pour Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/15_kubernetes_fundamentals.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">15 · Kubernetes Fondamentaux</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/16_k8s_for_data_workloads.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">16 · K8s pour Data Workloads</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false">
+ <span class="menu-text">🚀 High Performance Python</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/17_polars_for_data_engineering.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">17 · Polars pour Data Engineering</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/18_high_performance_python.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">18 · High Performance Python</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false">
+ <span class="menu-text">⚡ Spark Avancé</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/19_pyspark_advanced.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">19 · PySpark Avancé</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/20_spark_sql_deep_dive.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">20 · Spark SQL Deep Dive</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/21_spark_on_kubernetes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">21 · Spark on Kubernetes</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false">
+ <span class="menu-text">🏠 Lakehouse &amp; Streaming &amp; Cloud</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/22_cloud_and_object_storage.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">22 · Cloud Object Storage</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/23_table_formats_delta_iceberg.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">23 · Table Formats (Delta, Iceberg)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/24_kafka_streaming.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">24 · Kafka &amp; Streaming</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false">
+ <span class="menu-text">🔧 Industrialisation</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/25_dbt_data_quality.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">25 · dbt &amp; Data Quality</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="px-0"><hr class="sidebar-divider hi "></li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/26_projet_integrateur.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">📦 <strong>Projet Intermédiaire</strong> (Olist)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="true">
+ <span class="menu-text">🟥 Niveau 3 : Avancé</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="true" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="px-0"><hr class="sidebar-divider hi "></li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="true">
+ <span class="menu-text">☸️ Infrastructure Avancée</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="true" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/advanced/27_kubernetes_deep_dive.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">27 · Kubernetes Deep Dive</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/advanced/28_advanced_orchestration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">28 · Orchestration Avancée</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/advanced/29_distributed_messaging.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">29 · Messaging Distribué (Kafka, Pulsar)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="false">
+ <span class="menu-text">⚡ Processing Avancé</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-16" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/advanced/30_spark_scala_deep_dive.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">30 · Spark &amp; Scala Deep Dive</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" role="navigation" aria-expanded="false">
+ <span class="menu-text">🤖 ML &amp; Analytics</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-17" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/advanced/31_data_engineering_for_ml.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">31 · Data Engineering pour le ML</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/advanced/33_realtime_olap_dashboards.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">33 · Realtime OLAP &amp; Dashboards</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" role="navigation" aria-expanded="false">
+ <span class="menu-text">🏛️ Architecture &amp; Governance</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-18" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/advanced/32_data_mesh_contracts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">32 · Data Mesh &amp; Contracts</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/advanced/34_architecture_patterns_decisions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">34 · Patterns &amp; Décisions d'Architecture</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-19" role="navigation" aria-expanded="false">
+ <span class="menu-text">👔 Leadership</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-19" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-19" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/advanced/35_leadership_tradeoffs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">35 · Leadership &amp; Trade-offs</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="px-0"><hr class="sidebar-divider hi "></li>
+          <li class="sidebar-item">
+ <span class="menu-text">📦 **Projet Avancé**</span>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="2">
+    <h2 id="toc-title">📑 Sommaire</h2>
+   
+  <ul>
+  <li><a href="#prérequis" id="toc-prérequis" class="nav-link active" data-scroll-target="#prérequis">Prérequis</a></li>
+  <li><a href="#objectifs-du-module" id="toc-objectifs-du-module" class="nav-link" data-scroll-target="#objectifs-du-module">🎯 Objectifs du module</a></li>
+  <li><a href="#rappel-ce-quon-a-vu-en-m24-vs-ce-quon-approfondit-ici" id="toc-rappel-ce-quon-a-vu-en-m24-vs-ce-quon-approfondit-ici" class="nav-link" data-scroll-target="#rappel-ce-quon-a-vu-en-m24-vs-ce-quon-approfondit-ici">Rappel : Ce qu’on a vu en M24 vs Ce qu’on approfondit ici</a>
+  <ul class="collapse">
+  <li><a href="#schéma-écosystème-messaging" id="toc-schéma-écosystème-messaging" class="nav-link" data-scroll-target="#schéma-écosystème-messaging">Schéma : Écosystème Messaging</a></li>
+  </ul></li>
+  <li><a href="#kafka-avancé" id="toc-kafka-avancé" class="nav-link" data-scroll-target="#kafka-avancé">1. Kafka Avancé</a>
+  <ul class="collapse">
+  <li><a href="#quotas-et-throttling" id="toc-quotas-et-throttling" class="nav-link" data-scroll-target="#quotas-et-throttling">1.1 Quotas et Throttling</a></li>
+  <li><a href="#tiered-storage-kip-405" id="toc-tiered-storage-kip-405" class="nav-link" data-scroll-target="#tiered-storage-kip-405">1.2 Tiered Storage (KIP-405)</a></li>
+  <li><a href="#transactions-et-exactly-once-semantics-eos" id="toc-transactions-et-exactly-once-semantics-eos" class="nav-link" data-scroll-target="#transactions-et-exactly-once-semantics-eos">1.3 Transactions et Exactly-Once Semantics (EOS)</a></li>
+  <li><a href="#schema-registry-avancé" id="toc-schema-registry-avancé" class="nav-link" data-scroll-target="#schema-registry-avancé">1.4 Schema Registry Avancé</a></li>
+  </ul></li>
+  <li><a href="#rabbitmq-lalternative-queue-based" id="toc-rabbitmq-lalternative-queue-based" class="nav-link" data-scroll-target="#rabbitmq-lalternative-queue-based">2. RabbitMQ — L’Alternative Queue-Based</a>
+  <ul class="collapse">
+  <li><a href="#kafka-vs-rabbitmq-comparaison-détaillée" id="toc-kafka-vs-rabbitmq-comparaison-détaillée" class="nav-link" data-scroll-target="#kafka-vs-rabbitmq-comparaison-détaillée">Kafka vs RabbitMQ — Comparaison détaillée</a></li>
+  <li><a href="#architecture-rabbitmq" id="toc-architecture-rabbitmq" class="nav-link" data-scroll-target="#architecture-rabbitmq">Architecture RabbitMQ</a></li>
+  <li><a href="#types-dexchanges" id="toc-types-dexchanges" class="nav-link" data-scroll-target="#types-dexchanges">Types d’Exchanges</a></li>
+  <li><a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation">Installation</a></li>
+  <li><a href="#producer-python-pika" id="toc-producer-python-pika" class="nav-link" data-scroll-target="#producer-python-pika">Producer Python (pika)</a></li>
+  <li><a href="#consumer-python" id="toc-consumer-python" class="nav-link" data-scroll-target="#consumer-python">Consumer Python</a></li>
+  <li><a href="#quand-utiliser-rabbitmq-vs-kafka" id="toc-quand-utiliser-rabbitmq-vs-kafka" class="nav-link" data-scroll-target="#quand-utiliser-rabbitmq-vs-kafka">Quand utiliser RabbitMQ vs Kafka ?</a></li>
+  </ul></li>
+  <li><a href="#apache-pulsar-le-challenger-multi-tenant" id="toc-apache-pulsar-le-challenger-multi-tenant" class="nav-link" data-scroll-target="#apache-pulsar-le-challenger-multi-tenant">3. Apache Pulsar — Le Challenger Multi-Tenant</a>
+  <ul class="collapse">
+  <li><a href="#kafka-vs-pulsar" id="toc-kafka-vs-pulsar" class="nav-link" data-scroll-target="#kafka-vs-pulsar">Kafka vs Pulsar</a></li>
+  <li><a href="#types-de-subscriptions-pulsar" id="toc-types-de-subscriptions-pulsar" class="nav-link" data-scroll-target="#types-de-subscriptions-pulsar">Types de Subscriptions Pulsar</a></li>
+  <li><a href="#producerconsumer-python" id="toc-producerconsumer-python" class="nav-link" data-scroll-target="#producerconsumer-python">Producer/Consumer Python</a></li>
+  </ul></li>
+  <li><a href="#debezium-change-data-capture-en-profondeur" id="toc-debezium-change-data-capture-en-profondeur" class="nav-link" data-scroll-target="#debezium-change-data-capture-en-profondeur">4. Debezium — Change Data Capture en Profondeur</a>
+  <ul class="collapse">
+  <li><a href="#pourquoi-le-cdc" id="toc-pourquoi-le-cdc" class="nav-link" data-scroll-target="#pourquoi-le-cdc">Pourquoi le CDC ?</a></li>
+  <li><a href="#architecture-debezium" id="toc-architecture-debezium" class="nav-link" data-scroll-target="#architecture-debezium">Architecture Debezium</a></li>
+  <li><a href="#connecteurs-debezium" id="toc-connecteurs-debezium" class="nav-link" data-scroll-target="#connecteurs-debezium">Connecteurs Debezium</a></li>
+  <li><a href="#docker-compose-complet" id="toc-docker-compose-complet" class="nav-link" data-scroll-target="#docker-compose-complet">Docker Compose complet</a></li>
+  <li><a href="#enregistrer-le-connecteur" id="toc-enregistrer-le-connecteur" class="nav-link" data-scroll-target="#enregistrer-le-connecteur">Enregistrer le connecteur</a></li>
+  <li><a href="#format-des-messages-debezium" id="toc-format-des-messages-debezium" class="nav-link" data-scroll-target="#format-des-messages-debezium">Format des messages Debezium</a></li>
+  <li><a href="#consumer-python-cdc" id="toc-consumer-python-cdc" class="nav-link" data-scroll-target="#consumer-python-cdc">Consumer Python CDC</a></li>
+  <li><a href="#outbox-pattern" id="toc-outbox-pattern" class="nav-link" data-scroll-target="#outbox-pattern">Outbox Pattern</a></li>
+  <li><a href="#use-cases-cdc" id="toc-use-cases-cdc" class="nav-link" data-scroll-target="#use-cases-cdc">Use Cases CDC</a></li>
+  </ul></li>
+  <li><a href="#patterns-de-messaging-distribué" id="toc-patterns-de-messaging-distribué" class="nav-link" data-scroll-target="#patterns-de-messaging-distribué">5. Patterns de Messaging Distribué</a>
+  <ul class="collapse">
+  <li><a href="#dead-letter-queue-dlq" id="toc-dead-letter-queue-dlq" class="nav-link" data-scroll-target="#dead-letter-queue-dlq">5.1 Dead Letter Queue (DLQ)</a></li>
+  <li><a href="#saga-pattern" id="toc-saga-pattern" class="nav-link" data-scroll-target="#saga-pattern">5.2 Saga Pattern</a></li>
+  <li><a href="#event-sourcing" id="toc-event-sourcing" class="nav-link" data-scroll-target="#event-sourcing">5.3 Event Sourcing</a></li>
+  <li><a href="#cqrs" id="toc-cqrs" class="nav-link" data-scroll-target="#cqrs">5.4 CQRS</a></li>
+  </ul></li>
+  <li><a href="#exercices-pratiques" id="toc-exercices-pratiques" class="nav-link" data-scroll-target="#exercices-pratiques">6. Exercices Pratiques</a>
+  <ul class="collapse">
+  <li><a href="#exercice-1-kafka-transactions" id="toc-exercice-1-kafka-transactions" class="nav-link" data-scroll-target="#exercice-1-kafka-transactions">Exercice 1 : Kafka Transactions</a></li>
+  <li><a href="#exercice-2-rabbitmq-task-queue" id="toc-exercice-2-rabbitmq-task-queue" class="nav-link" data-scroll-target="#exercice-2-rabbitmq-task-queue">Exercice 2 : RabbitMQ Task Queue</a></li>
+  <li><a href="#exercice-3-pipeline-cdc-complet" id="toc-exercice-3-pipeline-cdc-complet" class="nav-link" data-scroll-target="#exercice-3-pipeline-cdc-complet">Exercice 3 : Pipeline CDC Complet</a></li>
+  <li><a href="#exercice-4-comparatif-performance" id="toc-exercice-4-comparatif-performance" class="nav-link" data-scroll-target="#exercice-4-comparatif-performance">Exercice 4 : Comparatif Performance</a></li>
+  <li><a href="#exercice-5-outbox-pattern" id="toc-exercice-5-outbox-pattern" class="nav-link" data-scroll-target="#exercice-5-outbox-pattern">Exercice 5 : Outbox Pattern</a></li>
+  </ul></li>
+  <li><a href="#ressources" id="toc-ressources" class="nav-link" data-scroll-target="#ressources">📚 Ressources</a></li>
+  <li><a href="#prochaine-étape" id="toc-prochaine-étape" class="nav-link" data-scroll-target="#prochaine-étape">➡️ Prochaine étape</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/diakite-data/data-engineering-bootcamp/blob/main/notebooks/advanced/29_distributed_messaging.ipynb" class="toc-action"><i class="bi bi-github"></i>Voir la source</a></li><li><a href="https://github.com/diakite-data/data-engineering-bootcamp/issues/new" class="toc-action"><i class="bi empty"></i>Faire part d'un problème</a></li><li><a href="https://github.dev/diakite-data/data-engineering-bootcamp/blob/main/notebooks/advanced/29_distributed_messaging.ipynb" class="toc-action"><i class="bi empty"></i>Modifier cette page</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">🟥 Niveau 3 : Avancé</li><li class="breadcrumb-item"><a href="../../notebooks/advanced/27_kubernetes_deep_dive.html">☸️ Infrastructure Avancée</a></li><li class="breadcrumb-item"><a href="../../notebooks/advanced/29_distributed_messaging.html">29 · Messaging Distribué (Kafka, Pulsar)</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">📨 Distributed Messaging pour Data Engineers</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Bienvenue dans ce module avancé où tu vas maîtriser les <strong>systèmes de messaging distribués</strong>. Tu apprendras les fonctionnalités avancées de Kafka, les alternatives comme RabbitMQ et Pulsar, et le Change Data Capture avec Debezium — des compétences essentielles pour construire des architectures data temps réel !</p>
+<hr>
+<section id="prérequis" class="level2">
+<h2 class="anchored" data-anchor-id="prérequis">Prérequis</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 40%">
+<col style="width: 60%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Niveau</th>
+<th>Compétence</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>✅ Requis</td>
+<td>Avoir suivi le module <code>24_kafka_streaming</code> (Kafka, Spark SSS, Watermarks)</td>
+</tr>
+<tr class="even">
+<td>✅ Requis</td>
+<td>Maîtriser topics, partitions, offsets, consumer groups</td>
+</tr>
+<tr class="odd">
+<td>✅ Requis</td>
+<td>Connaître kafka-python et confluent-kafka (producers/consumers)</td>
+</tr>
+<tr class="even">
+<td>✅ Requis</td>
+<td>Maîtriser Spark Structured Streaming (readStream, writeStream, foreachBatch)</td>
+</tr>
+<tr class="odd">
+<td>✅ Requis</td>
+<td>Connaissances en Docker et Kubernetes (M14-M16, M27)</td>
+</tr>
+<tr class="even">
+<td>✅ Requis</td>
+<td>Bases de données relationnelles et SQL (pour Debezium CDC)</td>
+</tr>
+<tr class="odd">
+<td>💡 Recommandé</td>
+<td>Expérience avec des pipelines streaming en production</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="objectifs-du-module" class="level2">
+<h2 class="anchored" data-anchor-id="objectifs-du-module">🎯 Objectifs du module</h2>
+<p>À la fin de ce module, tu seras capable de :</p>
+<ul>
+<li>Configurer les fonctionnalités avancées de Kafka (Quotas, Tiered Storage, Transactions)</li>
+<li>Comprendre et choisir entre Kafka, RabbitMQ et Pulsar</li>
+<li>Implémenter le Change Data Capture complet avec Debezium</li>
+<li>Concevoir des architectures de messaging robustes</li>
+<li>Gérer les patterns avancés : exactly-once, dead letter queues, event sourcing</li>
+</ul>
+<hr>
+</section>
+<section id="rappel-ce-quon-a-vu-en-m24-vs-ce-quon-approfondit-ici" class="level2">
+<h2 class="anchored" data-anchor-id="rappel-ce-quon-a-vu-en-m24-vs-ce-quon-approfondit-ici">Rappel : Ce qu’on a vu en M24 vs Ce qu’on approfondit ici</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 51%">
+<col style="width: 48%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Module M24 (Intermediate)</th>
+<th>Ce module M29 (Advanced)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Architecture Lambda vs Kappa</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>Topics, Partitions, Offsets, Consumer Groups</td>
+<td>Tiered Storage, Quotas, Monitoring</td>
+</tr>
+<tr class="odd">
+<td>Producers / Consumers (kafka-python, confluent-kafka)</td>
+<td><strong>Transactions Kafka, Exactly-Once (EOS)</strong></td>
+</tr>
+<tr class="even">
+<td>Schema Registry basics (Avro)</td>
+<td><strong>Schema Registry avancé</strong> (compatibilité, évolution)</td>
+</tr>
+<tr class="odd">
+<td>Spark Structured Streaming complet</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>Windowing, Watermarks, foreachBatch</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td>Faust (aperçu)</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>Debezium (mentionné)</td>
+<td><strong>Debezium CDC en profondeur</strong></td>
+</tr>
+<tr class="odd">
+<td>—</td>
+<td><strong>RabbitMQ</strong> (alternative queue-based)</td>
+</tr>
+<tr class="even">
+<td>—</td>
+<td><strong>Apache Pulsar</strong> (alternative multi-tenant)</td>
+</tr>
+<tr class="odd">
+<td>—</td>
+<td><strong>Patterns</strong> : DLQ, Saga, Event Sourcing, CQRS</td>
+</tr>
+</tbody>
+</table>
+<section id="schéma-écosystème-messaging" class="level3">
+<h3 class="anchored" data-anchor-id="schéma-écosystème-messaging">Schéma : Écosystème Messaging</h3>
+<pre class="text"><code>┌─────────────────────────────────────────────────────────────────────────────┐
+│                    DISTRIBUTED MESSAGING LANDSCAPE                          │
+│                                                                             │
+│   ┌─────────────────┐   ┌─────────────────┐   ┌─────────────────┐          │
+│   │     KAFKA       │   │   RABBITMQ      │   │     PULSAR      │          │
+│   │  Log-based      │   │  Queue-based    │   │  Multi-tenant   │          │
+│   │  High throughput│   │  Flexible routing│  │  Geo-replication│          │
+│   └─────────────────┘   └─────────────────┘   └─────────────────┘          │
+│            │                    │                     │                     │
+│            └────────────────────┼─────────────────────┘                     │
+│                                 │                                           │
+│                                 ▼                                           │
+│   ┌─────────────────────────────────────────────────────────────────────┐  │
+│   │                        DEBEZIUM (CDC)                                │  │
+│   │   Capture changes from databases → Stream to messaging systems      │  │
+│   └─────────────────────────────────────────────────────────────────────┘  │
+└─────────────────────────────────────────────────────────────────────────────┘</code></pre>
+<blockquote class="blockquote">
+<p>ℹ️ <strong>Le savais-tu ?</strong></p>
+<p><strong>Kafka</strong> traite plus de <strong>7 trillions de messages par jour</strong> chez LinkedIn, son créateur.</p>
+<p><strong>RabbitMQ</strong> a été créé en 2007 et implémente le protocole <strong>AMQP</strong>, un standard ouvert pour le messaging.</p>
+<p><strong>Apache Pulsar</strong> a été développé par Yahoo! pour gérer leurs <strong>100 milliards de messages quotidiens</strong> avec une architecture multi-tenant native.</p>
+<p><strong>Debezium</strong> (du latin “from the beginning”) capture chaque changement depuis le début du log de la base de données — c’est la base du <strong>Change Data Capture</strong>.</p>
+<p>📖 <a href="https://engineering.linkedin.com/kafka">Kafka at LinkedIn</a></p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="kafka-avancé" class="level2">
+<h2 class="anchored" data-anchor-id="kafka-avancé">1. Kafka Avancé</h2>
+<p>Cette section couvre les fonctionnalités avancées de Kafka pour la production à grande échelle. Tu connais déjà les bases (M24), on passe directement aux sujets avancés.</p>
+<section id="quotas-et-throttling" class="level3">
+<h3 class="anchored" data-anchor-id="quotas-et-throttling">1.1 Quotas et Throttling</h3>
+<p>Les <strong>quotas</strong> permettent de limiter les ressources consommées par les clients pour éviter qu’un client ne monopolise le cluster.</p>
+<section id="types-de-quotas" class="level4">
+<h4 class="anchored" data-anchor-id="types-de-quotas">Types de quotas</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 48%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Quota</th>
+<th>Description</th>
+<th>Unité</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>producer_byte_rate</strong></td>
+<td>Débit max en écriture</td>
+<td>bytes/sec</td>
+</tr>
+<tr class="even">
+<td><strong>consumer_byte_rate</strong></td>
+<td>Débit max en lecture</td>
+<td>bytes/sec</td>
+</tr>
+<tr class="odd">
+<td><strong>request_percentage</strong></td>
+<td>% CPU du broker</td>
+<td>%</td>
+</tr>
+<tr class="even">
+<td><strong>controller_mutation_rate</strong></td>
+<td>Taux de mutations (create/delete)</td>
+<td>mutations/sec</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="configurer-les-quotas" class="level4">
+<h4 class="anchored" data-anchor-id="configurer-les-quotas">Configurer les quotas</h4>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Quota par user</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">kafka-configs.sh</span> <span class="at">--bootstrap-server</span> localhost:9092 <span class="dt">\</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">--alter</span> <span class="at">--add-config</span> <span class="st">'producer_byte_rate=1048576,consumer_byte_rate=2097152'</span> <span class="dt">\</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">--entity-type</span> users <span class="at">--entity-name</span> data-pipeline-user</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Quota par client-id</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="ex">kafka-configs.sh</span> <span class="at">--bootstrap-server</span> localhost:9092 <span class="dt">\</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">--alter</span> <span class="at">--add-config</span> <span class="st">'producer_byte_rate=5242880'</span> <span class="dt">\</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">--entity-type</span> clients <span class="at">--entity-name</span> etl-producer</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Quota par user + client-id (plus spécifique)</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="ex">kafka-configs.sh</span> <span class="at">--bootstrap-server</span> localhost:9092 <span class="dt">\</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">--alter</span> <span class="at">--add-config</span> <span class="st">'producer_byte_rate=10485760'</span> <span class="dt">\</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">--entity-type</span> users <span class="at">--entity-name</span> spark-user <span class="dt">\</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="at">--entity-type</span> clients <span class="at">--entity-name</span> spark-producer</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Quota par défaut pour tous les users</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="ex">kafka-configs.sh</span> <span class="at">--bootstrap-server</span> localhost:9092 <span class="dt">\</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  <span class="at">--alter</span> <span class="at">--add-config</span> <span class="st">'producer_byte_rate=1048576'</span> <span class="dt">\</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  <span class="at">--entity-type</span> users <span class="at">--entity-default</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Voir les quotas configurés</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="ex">kafka-configs.sh</span> <span class="at">--bootstrap-server</span> localhost:9092 <span class="dt">\</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>  <span class="at">--describe</span> <span class="at">--entity-type</span> users <span class="at">--entity-name</span> data-pipeline-user</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="quotas-dans-le-code-python" class="level4">
+<h4 class="anchored" data-anchor-id="quotas-dans-le-code-python">Quotas dans le code Python</h4>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> confluent_kafka <span class="im">import</span> Producer</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Le client doit spécifier son client.id pour être identifié par les quotas</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>producer <span class="op">=</span> Producer({</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'bootstrap.servers'</span>: <span class="st">'localhost:9092'</span>,</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'client.id'</span>: <span class="st">'etl-producer'</span>,  <span class="co"># Identifiant pour les quotas</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'acks'</span>: <span class="st">'all'</span>,</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Si le quota est dépassé, Kafka throttle automatiquement le client</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Le producer recevra des délais dans les réponses</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="tiered-storage-kip-405" class="level3">
+<h3 class="anchored" data-anchor-id="tiered-storage-kip-405">1.2 Tiered Storage (KIP-405)</h3>
+<p>Le <strong>Tiered Storage</strong> permet de stocker les données anciennes sur un stockage moins cher (S3, GCS, Azure Blob) tout en gardant les données récentes sur disque local.</p>
+<pre class="text"><code>┌─────────────────────────────────────────────────────────────────────────────┐
+│                         TIERED STORAGE                                      │
+│                                                                             │
+│   ┌─────────────────────────────────────────────────────────────────────┐  │
+│   │                    LOCAL TIER (Hot Data)                             │  │
+│   │   ┌─────┐ ┌─────┐ ┌─────┐ ┌─────┐ ┌─────┐                           │  │
+│   │   │Seg 5│ │Seg 6│ │Seg 7│ │Seg 8│ │Seg 9│  ← Données récentes      │  │
+│   │   └─────┘ └─────┘ └─────┘ └─────┘ └─────┘    (SSD local, rapide)    │  │
+│   └─────────────────────────────────────────────────────────────────────┘  │
+│                                    │                                        │
+│                        Offload automatique                                  │
+│                                    ▼                                        │
+│   ┌─────────────────────────────────────────────────────────────────────┐  │
+│   │                   REMOTE TIER (Cold Data)                            │  │
+│   │   ┌─────┐ ┌─────┐ ┌─────┐ ┌─────┐                                   │  │
+│   │   │Seg 1│ │Seg 2│ │Seg 3│ │Seg 4│  ← Données anciennes             │  │
+│   │   └─────┘ └─────┘ └─────┘ └─────┘    (S3/GCS/Azure, économique)    │  │
+│   └─────────────────────────────────────────────────────────────────────┘  │
+└─────────────────────────────────────────────────────────────────────────────┘</code></pre>
+<section id="configuration-tiered-storage" class="level4">
+<h4 class="anchored" data-anchor-id="configuration-tiered-storage">Configuration Tiered Storage</h4>
+<pre class="properties"><code># server.properties (broker)
+
+# Activer le tiered storage
+remote.log.storage.system.enable=true
+
+# Plugin de stockage (exemple S3)
+remote.log.storage.manager.class.name=org.apache.kafka.tiered.storage.s3.S3RemoteStorageManager
+remote.log.storage.manager.class.path=/opt/kafka/plugins/tiered-storage-s3.jar
+
+# Configuration S3
+remote.log.storage.s3.bucket=my-kafka-tiered-storage
+remote.log.storage.s3.region=eu-west-1
+
+# Rétention locale (données chaudes)
+local.retention.ms=86400000  # 1 jour en local
+
+# Rétention totale (incluant remote)
+retention.ms=2592000000  # 30 jours au total</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Activer le tiered storage sur un topic existant</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">kafka-configs.sh</span> <span class="at">--bootstrap-server</span> localhost:9092 <span class="dt">\</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">--alter</span> <span class="at">--entity-type</span> topics <span class="at">--entity-name</span> events <span class="dt">\</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">--add-config</span> <span class="st">'remote.storage.enable=true,local.retention.ms=86400000,retention.ms=2592000000'</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="avantages-du-tiered-storage" class="level4">
+<h4 class="anchored" data-anchor-id="avantages-du-tiered-storage">Avantages du Tiered Storage</h4>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Avantage</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Coût réduit</strong></td>
+<td>Stockage S3 ~10x moins cher que SSD</td>
+</tr>
+<tr class="even">
+<td><strong>Rétention illimitée</strong></td>
+<td>Garder des années de données</td>
+</tr>
+<tr class="odd">
+<td><strong>Cluster plus petit</strong></td>
+<td>Moins de disque local nécessaire</td>
+</tr>
+<tr class="even">
+<td><strong>Replay facilité</strong></td>
+<td>Relire des données anciennes pour reprocessing</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="transactions-et-exactly-once-semantics-eos" class="level3">
+<h3 class="anchored" data-anchor-id="transactions-et-exactly-once-semantics-eos">1.3 Transactions et Exactly-Once Semantics (EOS)</h3>
+<p>En M24, tu as vu les <strong>garanties de livraison</strong> (at-most-once, at-least-once, exactly-once). Ici, on va <strong>implémenter</strong> exactly-once avec les transactions Kafka.</p>
+<section id="rappel-des-garanties" class="level4">
+<h4 class="anchored" data-anchor-id="rappel-des-garanties">Rappel des garanties</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 44%">
+<col style="width: 27%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Niveau</th>
+<th>Description</th>
+<th>Risque</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>At-most-once</strong></td>
+<td>Fire &amp; forget</td>
+<td>Perte de messages</td>
+</tr>
+<tr class="even">
+<td><strong>At-least-once</strong></td>
+<td>Retry jusqu’à ACK</td>
+<td>Doublons possibles</td>
+</tr>
+<tr class="odd">
+<td><strong>Exactly-once</strong></td>
+<td>Transactions + idempotence</td>
+<td>Aucun (mais plus complexe)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="producer-idempotent-pas-de-doublons" class="level4">
+<h4 class="anchored" data-anchor-id="producer-idempotent-pas-de-doublons">Producer Idempotent (pas de doublons)</h4>
+<p>L’idempotence garantit qu’un message n’est écrit qu’une seule fois même en cas de retry réseau.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> confluent_kafka <span class="im">import</span> Producer</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Producer idempotent — PAS de duplicatas même avec retries</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>producer <span class="op">=</span> Producer({</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'bootstrap.servers'</span>: <span class="st">'localhost:9092'</span>,</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'enable.idempotence'</span>: <span class="va">True</span>,  <span class="co"># ← Active l'idempotence</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'acks'</span>: <span class="st">'all'</span>,               <span class="co"># Requis pour idempotence</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'retries'</span>: <span class="dv">2147483647</span>,       <span class="co"># Retries infinis (best practice)</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">'max.in.flight.requests.per.connection'</span>: <span class="dv">5</span>,  <span class="co"># Max 5 avec idempotence</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Comment ça marche ?</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Le producer assigne un Producer ID (PID) et un Sequence Number à chaque message</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Le broker détecte les doublons en comparant (PID, Sequence)</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Si un retry envoie le même message, le broker le reconnaît et ignore le doublon</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="transactions-complètes-multi-topics-atomique" class="level4">
+<h4 class="anchored" data-anchor-id="transactions-complètes-multi-topics-atomique">Transactions complètes (multi-topics atomique)</h4>
+<p>Les transactions permettent d’écrire sur <strong>plusieurs topics/partitions de manière atomique</strong> : tout réussit ou tout échoue.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> confluent_kafka <span class="im">import</span> Producer, KafkaException</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Producer transactionnel</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>producer <span class="op">=</span> Producer({</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'bootstrap.servers'</span>: <span class="st">'localhost:9092'</span>,</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'transactional.id'</span>: <span class="st">'etl-pipeline-001'</span>,  <span class="co"># ID unique et STABLE</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'enable.idempotence'</span>: <span class="va">True</span>,              <span class="co"># Implicitement activé</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'acks'</span>: <span class="st">'all'</span>,</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialiser les transactions (une seule fois au démarrage)</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>producer.init_transactions()</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>:</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Démarrer une transaction</span></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>    producer.begin_transaction()</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Écrire sur PLUSIEURS topics (atomique)</span></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>    producer.produce(<span class="st">'orders-processed'</span>, key<span class="op">=</span><span class="st">'order-1'</span>, value<span class="op">=</span><span class="st">'{"status": "done"}'</span>)</span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>    producer.produce(<span class="st">'audit-log'</span>, key<span class="op">=</span><span class="st">'order-1'</span>, value<span class="op">=</span><span class="st">'{"action": "order_processed"}'</span>)</span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>    producer.produce(<span class="st">'metrics'</span>, key<span class="op">=</span><span class="st">'counter'</span>, value<span class="op">=</span><span class="st">'{"orders_processed": 1}'</span>)</span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Commit la transaction — TOUT ou RIEN</span></span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>    producer.commit_transaction()</span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"✅ Transaction committed successfully"</span>)</span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span> KafkaException <span class="im">as</span> e:</span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Abort en cas d'erreur — aucun message n'est visible</span></span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>    producer.abort_transaction()</span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"❌ Transaction aborted: </span><span class="sc">{</span>e<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="pattern-read-process-write-exactly-once-complet" class="level4">
+<h4 class="anchored" data-anchor-id="pattern-read-process-write-exactly-once-complet">Pattern Read-Process-Write (Exactly-Once complet)</h4>
+<p>Le pattern le plus puissant : lire, traiter, écrire, et commiter les offsets <strong>dans la même transaction</strong>.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> confluent_kafka <span class="im">import</span> Consumer, Producer, KafkaException</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Consumer avec isolation transactionnelle</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>consumer <span class="op">=</span> Consumer({</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'bootstrap.servers'</span>: <span class="st">'localhost:9092'</span>,</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'group.id'</span>: <span class="st">'etl-group'</span>,</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'isolation.level'</span>: <span class="st">'read_committed'</span>,  <span class="co"># ← Ne lit que les messages committés</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'enable.auto.commit'</span>: <span class="va">False</span>,          <span class="co"># ← Commit manuel dans la transaction</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>producer <span class="op">=</span> Producer({</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">'bootstrap.servers'</span>: <span class="st">'localhost:9092'</span>,</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">'transactional.id'</span>: <span class="st">'etl-processor-001'</span>,</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">'enable.idempotence'</span>: <span class="va">True</span>,</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>producer.init_transactions()</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>consumer.subscribe([<span class="st">'raw-events'</span>])</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> <span class="va">True</span>:</span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>    msg <span class="op">=</span> consumer.poll(<span class="fl">1.0</span>)</span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> msg <span class="kw">is</span> <span class="va">None</span>:</span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>        <span class="cf">continue</span></span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> msg.error():</span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>        <span class="cf">continue</span></span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>:</span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 1. Démarrer la transaction</span></span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a>        producer.begin_transaction()</span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 2. Traiter le message</span></span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a>        processed <span class="op">=</span> process_message(msg.value())</span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 3. Écrire le résultat</span></span>
+<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a>        producer.produce(<span class="st">'processed-events'</span>, value<span class="op">=</span>processed)</span>
+<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 4. Commit les offsets DANS la transaction</span></span>
+<span id="cb9-38"><a href="#cb9-38" aria-hidden="true" tabindex="-1"></a>        producer.send_offsets_to_transaction(</span>
+<span id="cb9-39"><a href="#cb9-39" aria-hidden="true" tabindex="-1"></a>            consumer.position(consumer.assignment()),</span>
+<span id="cb9-40"><a href="#cb9-40" aria-hidden="true" tabindex="-1"></a>            consumer.consumer_group_metadata()</span>
+<span id="cb9-41"><a href="#cb9-41" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb9-42"><a href="#cb9-42" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb9-43"><a href="#cb9-43" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 5. Commit atomique : écriture + offset ensemble</span></span>
+<span id="cb9-44"><a href="#cb9-44" aria-hidden="true" tabindex="-1"></a>        producer.commit_transaction()</span>
+<span id="cb9-45"><a href="#cb9-45" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb9-46"><a href="#cb9-46" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
+<span id="cb9-47"><a href="#cb9-47" aria-hidden="true" tabindex="-1"></a>        producer.abort_transaction()</span>
+<span id="cb9-48"><a href="#cb9-48" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"Transaction failed: </span><span class="sc">{</span>e<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="schema-registry-avancé" class="level3">
+<h3 class="anchored" data-anchor-id="schema-registry-avancé">1.4 Schema Registry Avancé</h3>
+<p>En M24, tu as vu les bases du Schema Registry avec Avro. Approfondissons les <strong>modes de compatibilité</strong> et l’<strong>évolution de schémas</strong>.</p>
+<section id="modes-de-compatibilité-détaillés" class="level4">
+<h4 class="anchored" data-anchor-id="modes-de-compatibilité-détaillés">Modes de compatibilité détaillés</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 7%">
+<col style="width: 32%">
+<col style="width: 32%">
+<col style="width: 26%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Mode</th>
+<th>Nouveau consumer lit ancien</th>
+<th>Ancien consumer lit nouveau</th>
+<th>Changements autorisés</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>BACKWARD</strong></td>
+<td>✅ Oui</td>
+<td>❌ Non</td>
+<td>Ajouter champs optionnels, supprimer champs</td>
+</tr>
+<tr class="even">
+<td><strong>FORWARD</strong></td>
+<td>❌ Non</td>
+<td>✅ Oui</td>
+<td>Ajouter champs, supprimer champs optionnels</td>
+</tr>
+<tr class="odd">
+<td><strong>FULL</strong></td>
+<td>✅ Oui</td>
+<td>✅ Oui</td>
+<td>Ajouter/supprimer champs optionnels uniquement</td>
+</tr>
+<tr class="even">
+<td><strong>NONE</strong></td>
+<td>—</td>
+<td>—</td>
+<td>Tout (⚠️ dangereux en production)</td>
+</tr>
+</tbody>
+</table>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Configurer la compatibilité globale</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-X</span> PUT http://localhost:8081/config <span class="dt">\</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">-H</span> <span class="st">"Content-Type: application/json"</span> <span class="dt">\</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">-d</span> <span class="st">'{"compatibility": "BACKWARD"}'</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Configurer par sujet (override global)</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-X</span> PUT http://localhost:8081/config/orders-value <span class="dt">\</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">-H</span> <span class="st">"Content-Type: application/json"</span> <span class="dt">\</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">-d</span> <span class="st">'{"compatibility": "FULL"}'</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Tester la compatibilité AVANT de publier un nouveau schéma</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-X</span> POST http://localhost:8081/compatibility/subjects/orders-value/versions/latest <span class="dt">\</span></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">-H</span> <span class="st">"Content-Type: application/json"</span> <span class="dt">\</span></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">-d</span> <span class="st">'{"schema": "{...}"}'</span></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Réponse: {"is_compatible": true} ou {"is_compatible": false}</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="évolution-de-schéma-exemple-pratique" class="level4">
+<h4 class="anchored" data-anchor-id="évolution-de-schéma-exemple-pratique">Évolution de schéma — Exemple pratique</h4>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Version 1 du schéma</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>schema_v1 <span class="op">=</span> <span class="st">'''</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="st">{</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="st">  "type": "record",</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="st">  "name": "Order",</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="st">  "fields": [</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="st">    {"name": "order_id", "type": "string"},</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="st">    {"name": "amount", "type": "double"}</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="st">  ]</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="st">}</span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="st">'''</span></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Version 2 — Ajouter un champ optionnel (BACKWARD compatible)</span></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>schema_v2 <span class="op">=</span> <span class="st">'''</span></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a><span class="st">{</span></span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a><span class="st">  "type": "record",</span></span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a><span class="st">  "name": "Order",</span></span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a><span class="st">  "fields": [</span></span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a><span class="st">    {"name": "order_id", "type": "string"},</span></span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a><span class="st">    {"name": "amount", "type": "double"},</span></span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a><span class="st">    {"name": "currency", "type": "string", "default": "EUR"}</span></span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a><span class="st">  ]</span></span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a><span class="st">}</span></span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a><span class="st">'''</span></span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a><span class="co"># ✅ Les nouveaux consumers peuvent lire les anciens messages (currency = "EUR" par défaut)</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+</section>
+</section>
+<section id="rabbitmq-lalternative-queue-based" class="level2">
+<h2 class="anchored" data-anchor-id="rabbitmq-lalternative-queue-based">2. RabbitMQ — L’Alternative Queue-Based</h2>
+<blockquote class="blockquote">
+<p><strong>RabbitMQ</strong> est un message broker traditionnel implémentant le protocole AMQP. Contrairement à Kafka (log-based), RabbitMQ est <strong>queue-based</strong> avec un routage flexible.</p>
+</blockquote>
+<section id="kafka-vs-rabbitmq-comparaison-détaillée" class="level3">
+<h3 class="anchored" data-anchor-id="kafka-vs-rabbitmq-comparaison-détaillée">Kafka vs RabbitMQ — Comparaison détaillée</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 32%">
+<col style="width: 28%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Aspect</th>
+<th>Kafka</th>
+<th>RabbitMQ</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Modèle</strong></td>
+<td>Log distribué (append-only)</td>
+<td>Message queue (FIFO)</td>
+</tr>
+<tr class="even">
+<td><strong>Persistance</strong></td>
+<td>Toujours sur disque</td>
+<td>Optionnelle (mémoire ou disque)</td>
+</tr>
+<tr class="odd">
+<td><strong>Ordre</strong></td>
+<td>Garanti par partition</td>
+<td>Garanti par queue</td>
+</tr>
+<tr class="even">
+<td><strong>Replay</strong></td>
+<td>✅ Natif (offsets)</td>
+<td>❌ Messages supprimés après ACK</td>
+</tr>
+<tr class="odd">
+<td><strong>Routage</strong></td>
+<td>Topics + Partitions</td>
+<td>Exchanges (fanout, direct, topic, headers)</td>
+</tr>
+<tr class="even">
+<td><strong>Throughput</strong></td>
+<td>Très élevé (millions/sec)</td>
+<td>Élevé (dizaines de milliers/sec)</td>
+</tr>
+<tr class="odd">
+<td><strong>Latence</strong></td>
+<td>Millisecondes</td>
+<td>Sub-milliseconde</td>
+</tr>
+<tr class="even">
+<td><strong>Use case principal</strong></td>
+<td>Event streaming, analytics</td>
+<td>Task queues, RPC, notifications</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="architecture-rabbitmq" class="level3">
+<h3 class="anchored" data-anchor-id="architecture-rabbitmq">Architecture RabbitMQ</h3>
+<pre class="text"><code>┌─────────────────────────────────────────────────────────────────────────────┐
+│                         RABBITMQ ARCHITECTURE                               │
+│                                                                             │
+│   Producer ────────┐                                                        │
+│                    │                                                        │
+│                    ▼                                                        │
+│            ┌───────────────┐                                                │
+│            │   EXCHANGE    │  ← Routing logic (type: fanout/direct/topic)  │
+│            └───────┬───────┘                                                │
+│                    │ Bindings (routing rules)                               │
+│        ┌───────────┼───────────┐                                            │
+│        │           │           │                                            │
+│        ▼           ▼           ▼                                            │
+│   ┌─────────┐ ┌─────────┐ ┌─────────┐                                       │
+│   │ Queue 1 │ │ Queue 2 │ │ Queue 3 │  ← Messages stockés ici              │
+│   └────┬────┘ └────┬────┘ └────┬────┘                                       │
+│        │           │           │                                            │
+│        ▼           ▼           ▼                                            │
+│   Consumer 1   Consumer 2   Consumer 3                                      │
+└─────────────────────────────────────────────────────────────────────────────┘</code></pre>
+</section>
+<section id="types-dexchanges" class="level3">
+<h3 class="anchored" data-anchor-id="types-dexchanges">Types d’Exchanges</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 34%">
+<col style="width: 31%">
+<col style="width: 34%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Exchange</th>
+<th>Routage</th>
+<th>Use case</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Direct</strong></td>
+<td>routing_key exact match</td>
+<td>Logs par niveau (error→error_queue)</td>
+</tr>
+<tr class="even">
+<td><strong>Fanout</strong></td>
+<td>Broadcast à toutes les queues liées</td>
+<td>Notifications, cache invalidation</td>
+</tr>
+<tr class="odd">
+<td><strong>Topic</strong></td>
+<td>Pattern matching (*.error, logs.#)</td>
+<td>Logs multi-critères (app.module.level)</td>
+</tr>
+<tr class="even">
+<td><strong>Headers</strong></td>
+<td>Match sur headers du message</td>
+<td>Routage complexe multi-attributs</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="installation" class="level3">
+<h3 class="anchored" data-anchor-id="installation">Installation</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Docker</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">-d</span> <span class="at">--name</span> rabbitmq <span class="dt">\</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">-p</span> 5672:5672 <span class="dt">\</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">-p</span> 15672:15672 <span class="dt">\</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  rabbitmq:3-management</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Management UI: http://localhost:15672 (guest/guest)</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="producer-python-pika" class="level3">
+<h3 class="anchored" data-anchor-id="producer-python-pika">Producer Python (pika)</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pika</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Connexion</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>connection <span class="op">=</span> pika.BlockingConnection(pika.ConnectionParameters(<span class="st">'localhost'</span>))</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>channel <span class="op">=</span> connection.channel()</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Déclarer un exchange de type topic</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>channel.exchange_declare(exchange<span class="op">=</span><span class="st">'data_events'</span>, exchange_type<span class="op">=</span><span class="st">'topic'</span>, durable<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Publier un message</span></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>message <span class="op">=</span> {<span class="st">'event_type'</span>: <span class="st">'order_created'</span>, <span class="st">'order_id'</span>: <span class="st">'ORD-001'</span>, <span class="st">'amount'</span>: <span class="fl">99.99</span>}</span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>channel.basic_publish(</span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>    exchange<span class="op">=</span><span class="st">'data_events'</span>,</span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>    routing_key<span class="op">=</span><span class="st">'orders.created'</span>,</span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>    body<span class="op">=</span>json.dumps(message),</span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>    properties<span class="op">=</span>pika.BasicProperties(delivery_mode<span class="op">=</span><span class="dv">2</span>, content_type<span class="op">=</span><span class="st">'application/json'</span>)</span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>connection.close()</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="consumer-python" class="level3">
+<h3 class="anchored" data-anchor-id="consumer-python">Consumer Python</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pika</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>connection <span class="op">=</span> pika.BlockingConnection(pika.ConnectionParameters(<span class="st">'localhost'</span>))</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>channel <span class="op">=</span> connection.channel()</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>channel.queue_declare(queue<span class="op">=</span><span class="st">'order_processor'</span>, durable<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>channel.queue_bind(exchange<span class="op">=</span><span class="st">'data_events'</span>, queue<span class="op">=</span><span class="st">'order_processor'</span>, routing_key<span class="op">=</span><span class="st">'orders.*'</span>)</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> callback(ch, method, properties, body):</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>    message <span class="op">=</span> json.loads(body)</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Received: </span><span class="sc">{</span>message<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>    ch.basic_ack(delivery_tag<span class="op">=</span>method.delivery_tag)</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>channel.basic_qos(prefetch_count<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>channel.basic_consume(queue<span class="op">=</span><span class="st">'order_processor'</span>, on_message_callback<span class="op">=</span>callback)</span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>channel.start_consuming()</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="quand-utiliser-rabbitmq-vs-kafka" class="level3">
+<h3 class="anchored" data-anchor-id="quand-utiliser-rabbitmq-vs-kafka">Quand utiliser RabbitMQ vs Kafka ?</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>✅ RabbitMQ</th>
+<th>✅ Kafka</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Task queues (jobs async)</td>
+<td>Event streaming temps réel</td>
+</tr>
+<tr class="even">
+<td>RPC (request/reply)</td>
+<td>Log aggregation</td>
+</tr>
+<tr class="odd">
+<td>Routage complexe (exchanges)</td>
+<td>Replay de données historiques</td>
+</tr>
+<tr class="even">
+<td>Faible latence critique (&lt;1ms)</td>
+<td>Très haut throughput (millions/sec)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="apache-pulsar-le-challenger-multi-tenant" class="level2">
+<h2 class="anchored" data-anchor-id="apache-pulsar-le-challenger-multi-tenant">3. Apache Pulsar — Le Challenger Multi-Tenant</h2>
+<blockquote class="blockquote">
+<p><strong>Apache Pulsar</strong> combine les avantages de Kafka (log-based) et RabbitMQ (queuing) avec une architecture cloud-native.</p>
+</blockquote>
+<section id="kafka-vs-pulsar" class="level3">
+<h3 class="anchored" data-anchor-id="kafka-vs-pulsar">Kafka vs Pulsar</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 34%">
+<col style="width: 30%">
+<col style="width: 34%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Aspect</th>
+<th>Kafka</th>
+<th>Pulsar</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Architecture</strong></td>
+<td>Brokers = Storage + Compute</td>
+<td>Séparation Brokers / BookKeeper</td>
+</tr>
+<tr class="even">
+<td><strong>Multi-tenancy</strong></td>
+<td>Limité</td>
+<td>Natif (tenants, namespaces)</td>
+</tr>
+<tr class="odd">
+<td><strong>Geo-replication</strong></td>
+<td>MirrorMaker (externe)</td>
+<td>Natif et synchrone</td>
+</tr>
+<tr class="even">
+<td><strong>Queuing</strong></td>
+<td>Non natif</td>
+<td>Natif (shared subscriptions)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="types-de-subscriptions-pulsar" class="level3">
+<h3 class="anchored" data-anchor-id="types-de-subscriptions-pulsar">Types de Subscriptions Pulsar</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Type</th>
+<th>Description</th>
+<th>Équivalent</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Exclusive</strong></td>
+<td>1 seul consumer</td>
+<td>Kafka standard</td>
+</tr>
+<tr class="even">
+<td><strong>Failover</strong></td>
+<td>Failover automatique</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td><strong>Shared</strong></td>
+<td>Load balanced (round-robin)</td>
+<td>RabbitMQ</td>
+</tr>
+<tr class="even">
+<td><strong>Key_Shared</strong></td>
+<td>Ordre par clé</td>
+<td>Kafka partitions</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="producerconsumer-python" class="level3">
+<h3 class="anchored" data-anchor-id="producerconsumer-python">Producer/Consumer Python</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pulsar</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>client <span class="op">=</span> pulsar.Client(<span class="st">'pulsar://localhost:6650'</span>)</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Producer</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>producer <span class="op">=</span> client.create_producer(<span class="st">'persistent://public/default/orders'</span>)</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>producer.send(json.dumps({<span class="st">'order_id'</span>: <span class="st">'ORD-001'</span>}).encode(<span class="st">'utf-8'</span>))</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Consumer (shared = load balanced)</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>consumer <span class="op">=</span> client.subscribe(</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">'persistent://public/default/orders'</span>,</span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>    subscription_name<span class="op">=</span><span class="st">'order-processor'</span>,</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>    consumer_type<span class="op">=</span>pulsar.ConsumerType.Shared</span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>msg <span class="op">=</span> consumer.receive()</span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(json.loads(msg.data()))</span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a>consumer.acknowledge(msg)</span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a>client.close()</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+</section>
+<section id="debezium-change-data-capture-en-profondeur" class="level2">
+<h2 class="anchored" data-anchor-id="debezium-change-data-capture-en-profondeur">4. Debezium — Change Data Capture en Profondeur</h2>
+<blockquote class="blockquote">
+<p><strong>Debezium</strong> est une plateforme open-source de <strong>Change Data Capture (CDC)</strong> qui capture les changements dans les bases de données et les streame vers Kafka.</p>
+</blockquote>
+<p>En M24, Debezium était mentionné dans le quiz. Ici, on l’implémente en profondeur.</p>
+<section id="pourquoi-le-cdc" class="level3">
+<h3 class="anchored" data-anchor-id="pourquoi-le-cdc">Pourquoi le CDC ?</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Approche traditionnelle</th>
+<th>CDC avec Debezium</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Batch ETL (SELECT * toutes les heures)</td>
+<td>Streaming temps réel</td>
+</tr>
+<tr class="even">
+<td>Query la DB source (charge CPU/IO)</td>
+<td>Lit le transaction log (léger)</td>
+</tr>
+<tr class="odd">
+<td>Détection des DELETEs difficile</td>
+<td>Capture TOUS les changements</td>
+</tr>
+<tr class="even">
+<td>Latence élevée (heures)</td>
+<td>Latence sub-seconde</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="architecture-debezium" class="level3">
+<h3 class="anchored" data-anchor-id="architecture-debezium">Architecture Debezium</h3>
+<pre class="text"><code>┌─────────────────────────────────────────────────────────────────────────────┐
+│                         DEBEZIUM ARCHITECTURE                               │
+│                                                                             │
+│   ┌─────────────┐                                                           │
+│   │  PostgreSQL │     Transaction Log (WAL)                                 │
+│   │   (source)  │──────────────────┐                                        │
+│   └─────────────┘                  │                                        │
+│                                    ▼                                        │
+│   ┌─────────────┐    ┌─────────────────────┐    ┌─────────────────────┐    │
+│   │    MySQL    │───▶│   KAFKA CONNECT     │───▶│   KAFKA TOPICS      │    │
+│   │   (source)  │    │  + Debezium         │    │  (change events)    │    │
+│   └─────────────┘    │    Connectors       │    │                     │    │
+│                      └─────────────────────┘    │  • dbserver.schema  │    │
+│   ┌─────────────┐                               │    .table           │    │
+│   │   MongoDB   │───────────────────────────────┘                          │
+│   │   (source)  │                                         │                │
+│   └─────────────┘                                         ▼                │
+│                                                ┌─────────────────────┐     │
+│                                                │    Consumers        │     │
+│                                                │  • Data Warehouse   │     │
+│                                                │  • Elasticsearch    │     │
+│                                                │  • Microservices    │     │
+│                                                └─────────────────────┘     │
+└─────────────────────────────────────────────────────────────────────────────┘</code></pre>
+</section>
+<section id="connecteurs-debezium" class="level3">
+<h3 class="anchored" data-anchor-id="connecteurs-debezium">Connecteurs Debezium</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Base de données</th>
+<th>Méthode de capture</th>
+<th>Maturité</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>PostgreSQL</strong></td>
+<td>Logical replication (pgoutput)</td>
+<td>⭐⭐⭐⭐⭐</td>
+</tr>
+<tr class="even">
+<td><strong>MySQL/MariaDB</strong></td>
+<td>Binary log (binlog)</td>
+<td>⭐⭐⭐⭐⭐</td>
+</tr>
+<tr class="odd">
+<td><strong>MongoDB</strong></td>
+<td>Oplog / Change Streams</td>
+<td>⭐⭐⭐⭐⭐</td>
+</tr>
+<tr class="even">
+<td><strong>SQL Server</strong></td>
+<td>CDC tables</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr class="odd">
+<td><strong>Oracle</strong></td>
+<td>LogMiner</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="docker-compose-complet" class="level3">
+<h3 class="anchored" data-anchor-id="docker-compose-complet">Docker Compose complet</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">version</span><span class="kw">:</span><span class="at"> </span><span class="st">'3.8'</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">services</span><span class="kw">:</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">zookeeper</span><span class="kw">:</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">image</span><span class="kw">:</span><span class="at"> confluentinc/cp-zookeeper:7.5.0</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">environment</span><span class="kw">:</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">ZOOKEEPER_CLIENT_PORT</span><span class="kw">:</span><span class="at"> </span><span class="dv">2181</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">kafka</span><span class="kw">:</span></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">image</span><span class="kw">:</span><span class="at"> confluentinc/cp-kafka:7.5.0</span></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">depends_on</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">zookeeper</span><span class="kw">]</span></span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">ports</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">"9092:9092"</span><span class="kw">]</span></span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">environment</span><span class="kw">:</span></span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">KAFKA_BROKER_ID</span><span class="kw">:</span><span class="at"> </span><span class="dv">1</span></span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">KAFKA_ZOOKEEPER_CONNECT</span><span class="kw">:</span><span class="at"> zookeeper:2181</span></span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">KAFKA_ADVERTISED_LISTENERS</span><span class="kw">:</span><span class="at"> PLAINTEXT://kafka:29092,PLAINTEXT_HOST://localhost:9092</span></span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">KAFKA_LISTENER_SECURITY_PROTOCOL_MAP</span><span class="kw">:</span><span class="at"> PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT</span></span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">postgres</span><span class="kw">:</span></span>
+<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">image</span><span class="kw">:</span><span class="at"> postgres:15</span></span>
+<span id="cb18-20"><a href="#cb18-20" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">ports</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">"5432:5432"</span><span class="kw">]</span></span>
+<span id="cb18-21"><a href="#cb18-21" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">environment</span><span class="kw">:</span></span>
+<span id="cb18-22"><a href="#cb18-22" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">POSTGRES_USER</span><span class="kw">:</span><span class="at"> postgres</span></span>
+<span id="cb18-23"><a href="#cb18-23" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">POSTGRES_PASSWORD</span><span class="kw">:</span><span class="at"> postgres</span></span>
+<span id="cb18-24"><a href="#cb18-24" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">POSTGRES_DB</span><span class="kw">:</span><span class="at"> source_db</span></span>
+<span id="cb18-25"><a href="#cb18-25" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">command</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">"postgres"</span><span class="kw">,</span><span class="at"> </span><span class="st">"-c"</span><span class="kw">,</span><span class="at"> </span><span class="st">"wal_level=logical"</span><span class="kw">]</span><span class="co">  # CRUCIAL</span></span>
+<span id="cb18-26"><a href="#cb18-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-27"><a href="#cb18-27" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">connect</span><span class="kw">:</span></span>
+<span id="cb18-28"><a href="#cb18-28" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">image</span><span class="kw">:</span><span class="at"> debezium/connect:2.5</span></span>
+<span id="cb18-29"><a href="#cb18-29" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">depends_on</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">kafka</span><span class="kw">,</span><span class="at"> postgres</span><span class="kw">]</span></span>
+<span id="cb18-30"><a href="#cb18-30" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">ports</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">"8083:8083"</span><span class="kw">]</span></span>
+<span id="cb18-31"><a href="#cb18-31" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">environment</span><span class="kw">:</span></span>
+<span id="cb18-32"><a href="#cb18-32" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">BOOTSTRAP_SERVERS</span><span class="kw">:</span><span class="at"> kafka:29092</span></span>
+<span id="cb18-33"><a href="#cb18-33" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">GROUP_ID</span><span class="kw">:</span><span class="at"> debezium-connect</span></span>
+<span id="cb18-34"><a href="#cb18-34" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">CONFIG_STORAGE_TOPIC</span><span class="kw">:</span><span class="at"> connect_configs</span></span>
+<span id="cb18-35"><a href="#cb18-35" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">OFFSET_STORAGE_TOPIC</span><span class="kw">:</span><span class="at"> connect_offsets</span></span>
+<span id="cb18-36"><a href="#cb18-36" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">STATUS_STORAGE_TOPIC</span><span class="kw">:</span><span class="at"> connect_statuses</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="enregistrer-le-connecteur" class="level3">
+<h3 class="anchored" data-anchor-id="enregistrer-le-connecteur">Enregistrer le connecteur</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-X</span> POST http://localhost:8083/connectors <span class="dt">\</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">-H</span> <span class="st">"Content-Type: application/json"</span> <span class="dt">\</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">-d</span> <span class="st">'{</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="st">    "name": "postgres-connector",</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="st">    "config": {</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="st">      "connector.class": "io.debezium.connector.postgresql.PostgresConnector",</span></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="st">      "database.hostname": "postgres",</span></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a><span class="st">      "database.port": "5432",</span></span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="st">      "database.user": "postgres",</span></span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a><span class="st">      "database.password": "postgres",</span></span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a><span class="st">      "database.dbname": "source_db",</span></span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a><span class="st">      "topic.prefix": "cdc",</span></span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a><span class="st">      "table.include.list": "public.orders",</span></span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a><span class="st">      "plugin.name": "pgoutput",</span></span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a><span class="st">      "slot.name": "debezium_slot",</span></span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a><span class="st">      "transforms": "unwrap",</span></span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a><span class="st">      "transforms.unwrap.type": "io.debezium.transforms.ExtractNewRecordState",</span></span>
+<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a><span class="st">      "transforms.unwrap.drop.tombstones": "false",</span></span>
+<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a><span class="st">      "transforms.unwrap.delete.handling.mode": "rewrite",</span></span>
+<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a><span class="st">      "transforms.unwrap.add.fields": "op,source.ts_ms"</span></span>
+<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a><span class="st">    }</span></span>
+<span id="cb19-22"><a href="#cb19-22" aria-hidden="true" tabindex="-1"></a><span class="st">  }'</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="format-des-messages-debezium" class="level3">
+<h3 class="anchored" data-anchor-id="format-des-messages-debezium">Format des messages Debezium</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 35%">
+<col style="width: 65%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Champ</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>before</strong></td>
+<td>État AVANT le changement (null pour INSERT)</td>
+</tr>
+<tr class="even">
+<td><strong>after</strong></td>
+<td>État APRÈS le changement (null pour DELETE)</td>
+</tr>
+<tr class="odd">
+<td><strong>op</strong></td>
+<td>Opération : <code>c</code>=create, <code>u</code>=update, <code>d</code>=delete, <code>r</code>=read (snapshot)</td>
+</tr>
+<tr class="even">
+<td><strong>source</strong></td>
+<td>Métadonnées (table, transaction ID, LSN)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="consumer-python-cdc" class="level3">
+<h3 class="anchored" data-anchor-id="consumer-python-cdc">Consumer Python CDC</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> confluent_kafka <span class="im">import</span> Consumer</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>consumer <span class="op">=</span> Consumer({</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'bootstrap.servers'</span>: <span class="st">'localhost:9092'</span>,</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'group.id'</span>: <span class="st">'cdc-processor'</span>,</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'auto.offset.reset'</span>: <span class="st">'earliest'</span>,</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>consumer.subscribe([<span class="st">'cdc.public.orders'</span>])</span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> <span class="va">True</span>:</span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a>    msg <span class="op">=</span> consumer.poll(<span class="fl">1.0</span>)</span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> msg <span class="kw">is</span> <span class="va">None</span>:</span>
+<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a>        <span class="cf">continue</span></span>
+<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a>    event <span class="op">=</span> json.loads(msg.value())</span>
+<span id="cb20-17"><a href="#cb20-17" aria-hidden="true" tabindex="-1"></a>    op <span class="op">=</span> event.get(<span class="st">'__op'</span>)</span>
+<span id="cb20-18"><a href="#cb20-18" aria-hidden="true" tabindex="-1"></a>    data <span class="op">=</span> {k: v <span class="cf">for</span> k, v <span class="kw">in</span> event.items() <span class="cf">if</span> <span class="kw">not</span> k.startswith(<span class="st">'__'</span>)}</span>
+<span id="cb20-19"><a href="#cb20-19" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb20-20"><a href="#cb20-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> op <span class="kw">in</span> (<span class="st">'c'</span>, <span class="st">'r'</span>):  <span class="co"># INSERT ou SNAPSHOT</span></span>
+<span id="cb20-21"><a href="#cb20-21" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"INSERT: </span><span class="sc">{</span>data<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb20-22"><a href="#cb20-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> op <span class="op">==</span> <span class="st">'u'</span>:  <span class="co"># UPDATE</span></span>
+<span id="cb20-23"><a href="#cb20-23" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"UPDATE: </span><span class="sc">{</span>data<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb20-24"><a href="#cb20-24" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> op <span class="op">==</span> <span class="st">'d'</span>:  <span class="co"># DELETE</span></span>
+<span id="cb20-25"><a href="#cb20-25" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"DELETE: id=</span><span class="sc">{</span>data<span class="sc">.</span>get(<span class="st">'id'</span>)<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="outbox-pattern" class="level3">
+<h3 class="anchored" data-anchor-id="outbox-pattern">Outbox Pattern</h3>
+<p>Le <strong>Outbox Pattern</strong> garantit la cohérence entre les mises à jour DB et l’envoi d’événements.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Table outbox</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> outbox (</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">id</span> UUID <span class="kw">PRIMARY</span> <span class="kw">KEY</span> <span class="kw">DEFAULT</span> gen_random_uuid(),</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>    aggregate_type <span class="dt">VARCHAR</span>(<span class="dv">255</span>) <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>    aggregate_id <span class="dt">VARCHAR</span>(<span class="dv">255</span>) <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>    event_type <span class="dt">VARCHAR</span>(<span class="dv">255</span>) <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>    payload JSONB <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>    created_at <span class="dt">TIMESTAMP</span> <span class="kw">DEFAULT</span> NOW()</span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>);</span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a><span class="co">-- Dans une TRANSACTION</span></span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a><span class="cf">BEGIN</span>;</span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>    <span class="kw">UPDATE</span> orders <span class="kw">SET</span> status <span class="op">=</span> <span class="st">'shipped'</span> <span class="kw">WHERE</span> <span class="kw">id</span> <span class="op">=</span> <span class="dv">1</span>;</span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">INSERT</span> <span class="kw">INTO</span> outbox (aggregate_type, aggregate_id, event_type, payload)</span>
+<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">VALUES</span> (<span class="st">'Order'</span>, <span class="st">'1'</span>, <span class="st">'OrderShipped'</span>, <span class="st">'{"order_id": 1}'</span>);</span>
+<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a><span class="kw">COMMIT</span>;</span>
+<span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a><span class="co">-- Debezium capture l'INSERT dans outbox → Kafka</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="use-cases-cdc" class="level3">
+<h3 class="anchored" data-anchor-id="use-cases-cdc">Use Cases CDC</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 43%">
+<col style="width: 56%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Use Case</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Sync Data Warehouse</strong></td>
+<td>Réplication temps réel vers Snowflake, BigQuery</td>
+</tr>
+<tr class="even">
+<td><strong>Cache invalidation</strong></td>
+<td>Invalider Redis quand la DB change</td>
+</tr>
+<tr class="odd">
+<td><strong>Search indexing</strong></td>
+<td>Sync vers Elasticsearch</td>
+</tr>
+<tr class="even">
+<td><strong>Microservices events</strong></td>
+<td>Outbox pattern</td>
+</tr>
+<tr class="odd">
+<td><strong>Audit log</strong></td>
+<td>Compliance, RGPD</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="patterns-de-messaging-distribué" class="level2">
+<h2 class="anchored" data-anchor-id="patterns-de-messaging-distribué">5. Patterns de Messaging Distribué</h2>
+<section id="dead-letter-queue-dlq" class="level3">
+<h3 class="anchored" data-anchor-id="dead-letter-queue-dlq">5.1 Dead Letter Queue (DLQ)</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>MAX_RETRIES <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> <span class="va">True</span>:</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>    msg <span class="op">=</span> consumer.poll(<span class="fl">1.0</span>)</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>    headers <span class="op">=</span> <span class="bu">dict</span>(msg.headers() <span class="kw">or</span> [])</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>    retry_count <span class="op">=</span> <span class="bu">int</span>(headers.get(<span class="st">'retry_count'</span>, <span class="st">b'0'</span>))</span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>:</span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>        process_message(msg.value())</span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>        consumer.commit(msg)</span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> retry_count <span class="op">&gt;=</span> MAX_RETRIES:</span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Envoyer vers DLQ</span></span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a>            producer.produce(<span class="st">'orders-dlq'</span>, key<span class="op">=</span>msg.key(), value<span class="op">=</span>msg.value(),</span>
+<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a>                           headers<span class="op">=</span>[(<span class="st">'error'</span>, <span class="bu">str</span>(e))])</span>
+<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Retry</span></span>
+<span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a>            producer.produce(<span class="st">'orders-retry'</span>, key<span class="op">=</span>msg.key(), value<span class="op">=</span>msg.value(),</span>
+<span id="cb22-19"><a href="#cb22-19" aria-hidden="true" tabindex="-1"></a>                           headers<span class="op">=</span>[(<span class="st">'retry_count'</span>, <span class="bu">str</span>(retry_count <span class="op">+</span> <span class="dv">1</span>))])</span>
+<span id="cb22-20"><a href="#cb22-20" aria-hidden="true" tabindex="-1"></a>        consumer.commit(msg)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="saga-pattern" class="level3">
+<h3 class="anchored" data-anchor-id="saga-pattern">5.2 Saga Pattern</h3>
+<pre class="text"><code>Create Order ──▶ Reserve Stock ──▶ Process Payment ──▶ Ship Order
+      │               │                  │
+      ▼               ▼                  ▼
+Cancel Order ◀── Release Stock ◀── Refund Payment  (compensation)</code></pre>
+</section>
+<section id="event-sourcing" class="level3">
+<h3 class="anchored" data-anchor-id="event-sourcing">5.3 Event Sourcing</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>events <span class="op">=</span> [</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>    {<span class="st">'type'</span>: <span class="st">'OrderCreated'</span>, <span class="st">'order_id'</span>: <span class="dv">1</span>, <span class="st">'amount'</span>: <span class="dv">100</span>},</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>    {<span class="st">'type'</span>: <span class="st">'PaymentReceived'</span>, <span class="st">'order_id'</span>: <span class="dv">1</span>},</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>    {<span class="st">'type'</span>: <span class="st">'OrderShipped'</span>, <span class="st">'order_id'</span>: <span class="dv">1</span>},</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> rebuild_state(events):</span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>    state <span class="op">=</span> {}</span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> e <span class="kw">in</span> events:</span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> e[<span class="st">'type'</span>] <span class="op">==</span> <span class="st">'OrderCreated'</span>:</span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a>            state <span class="op">=</span> {<span class="st">'id'</span>: e[<span class="st">'order_id'</span>], <span class="st">'status'</span>: <span class="st">'created'</span>}</span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> e[<span class="st">'type'</span>] <span class="op">==</span> <span class="st">'PaymentReceived'</span>:</span>
+<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a>            state[<span class="st">'status'</span>] <span class="op">=</span> <span class="st">'paid'</span></span>
+<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> e[<span class="st">'type'</span>] <span class="op">==</span> <span class="st">'OrderShipped'</span>:</span>
+<span id="cb24-15"><a href="#cb24-15" aria-hidden="true" tabindex="-1"></a>            state[<span class="st">'status'</span>] <span class="op">=</span> <span class="st">'shipped'</span></span>
+<span id="cb24-16"><a href="#cb24-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> state</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="cqrs" class="level3">
+<h3 class="anchored" data-anchor-id="cqrs">5.4 CQRS</h3>
+<pre class="text"><code>Commands ──▶ Events (Kafka) ──▶ Projector ──▶ Read Model (optimized)
+   │                                              │
+   ▼                                              ▼
+Write DB                                      Query API
+(PostgreSQL)                                  (Elasticsearch)</code></pre>
+<hr>
+</section>
+</section>
+<section id="exercices-pratiques" class="level2">
+<h2 class="anchored" data-anchor-id="exercices-pratiques">6. Exercices Pratiques</h2>
+<section id="exercice-1-kafka-transactions" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-1-kafka-transactions">Exercice 1 : Kafka Transactions</h3>
+<p>Implémenter un producer transactionnel qui écrit sur 2 topics atomiquement.</p>
+</section>
+<section id="exercice-2-rabbitmq-task-queue" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-2-rabbitmq-task-queue">Exercice 2 : RabbitMQ Task Queue</h3>
+<p>Créer une task queue avec priorités et DLQ.</p>
+</section>
+<section id="exercice-3-pipeline-cdc-complet" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-3-pipeline-cdc-complet">Exercice 3 : Pipeline CDC Complet</h3>
+<p>Déployer PostgreSQL + Kafka + Debezium et sync vers un data warehouse.</p>
+</section>
+<section id="exercice-4-comparatif-performance" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-4-comparatif-performance">Exercice 4 : Comparatif Performance</h3>
+<p>Comparer Kafka vs RabbitMQ (100K messages, throughput, latence).</p>
+</section>
+<section id="exercice-5-outbox-pattern" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-5-outbox-pattern">Exercice 5 : Outbox Pattern</h3>
+<p>Implémenter le pattern Outbox avec Debezium.</p>
+<hr>
+</section>
+</section>
+<section id="ressources" class="level2">
+<h2 class="anchored" data-anchor-id="ressources">📚 Ressources</h2>
+<ul>
+<li><a href="https://kafka.apache.org/documentation/">Apache Kafka Docs</a></li>
+<li><a href="https://www.rabbitmq.com/documentation.html">RabbitMQ Docs</a></li>
+<li><a href="https://pulsar.apache.org/docs/">Apache Pulsar Docs</a></li>
+<li><a href="https://debezium.io/documentation/">Debezium Docs</a></li>
+<li><em>Kafka: The Definitive Guide</em> — Neha Narkhede</li>
+<li><em>Designing Data-Intensive Applications</em> — Martin Kleppmann</li>
+</ul>
+<hr>
+</section>
+<section id="prochaine-étape" class="level2">
+<h2 class="anchored" data-anchor-id="prochaine-étape">➡️ Prochaine étape</h2>
+<p>👉 <strong>Module suivant : <code>30_spark_scala_deep_dive</code></strong> — Spark &amp; Scala Deep Dive</p>
+<hr>
+<p>🎉 <strong>Félicitations !</strong> Tu as terminé le module Distributed Messaging.</p>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Retour au sommet</a></main> <!-- /main -->
+<!-- ===== Floating PDF Download Button ===== -->
+
+<style>
+#pdf-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #00b4d8;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 9999;
+  transition: 0.2s ease-in-out;
+}
+#pdf-button:hover {
+  background: #0077b6;
+}
+</style>
+
+<div id="pdf-button" onclick="downloadPDF()">
+  📄 Télécharger la version PDF
+</div>
+
+<script>
+function downloadPDF() {
+  window.print(); // fonctionne directement dans Quarto HTML
+}
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copié");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copié");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/diakite-data\.github\.io\/data-engineering-bootcamp");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<input type="hidden" id="giscus-base-theme" value="preferred_color_scheme">
+<input type="hidden" id="giscus-alt-theme" value="preferred_color_scheme">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      if (authorPrefersDark) {
+          [baseTheme, altTheme] = [altTheme, baseTheme];
+      }
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "diakite-data/data-engineering-bootcamp";
+    script.dataset.repoId = "R_kgDOQjHMsg";
+    script.dataset.category = "General";
+    script.dataset.categoryId = "DIC_kwDOQjHMss4CzeOO";
+    script.dataset.mapping = "pathname";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "top";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "fr";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../notebooks/advanced/28_advanced_orchestration.html" class="pagination-link" aria-label="28 · Orchestration Avancée">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">28 · Orchestration Avancée</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../notebooks/advanced/30_spark_scala_deep_dive.html" class="pagination-link" aria-label="30 · Spark &amp; Scala Deep Dive">
+        <span class="nav-page-text">30 · Spark &amp; Scala Deep Dive</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Fait par Beerus SAMA</p>
+</div>   
+    <div class="nav-footer-center">
+<p>© 2025 Bootcamp Data Engineering · From Zero to Hero</p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/diakite-data/data-engineering-bootcamp/blob/main/notebooks/advanced/29_distributed_messaging.ipynb" class="toc-action"><i class="bi bi-github"></i>Voir la source</a></li><li><a href="https://github.com/diakite-data/data-engineering-bootcamp/issues/new" class="toc-action"><i class="bi empty"></i>Faire part d'un problème</a></li><li><a href="https://github.dev/diakite-data/data-engineering-bootcamp/blob/main/notebooks/advanced/29_distributed_messaging.ipynb" class="toc-action"><i class="bi empty"></i>Modifier cette page</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/diakite-data/data-engineering-bootcamp">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://linkedin.com/in/diakite-data">
+      <i class="bi bi-linkedin" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+<!-- Reading Progress Indicator -->
+<div class="reading-progress" aria-hidden="true"></div>
+
+<!-- Back to Top Button -->
+<button class="back-to-top" aria-label="Retour en haut de page" title="Retour en haut"></button>
+
+<!-- UI Enhancement Script -->
+<script src="../../bootcamp-ui.js"></script>
+
+
+
+
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
