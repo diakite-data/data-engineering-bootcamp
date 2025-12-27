@@ -1,0 +1,2636 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>SQL for Data Engineers – Bootcamp Data Engineering</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../assets/images/favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-fc8d3d93f0a84b7619e1f8ff6eb63d42.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-fc8d3d93f0a84b7619e1f8ff6eb63d42.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-fc8d3d93f0a84b7619e1f8ff6eb63d42.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-1ded37139ab960446759ac96e383a6c7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-0c5e4731d53392a4fe54074a744a0e14.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-1ded37139ab960446759ac96e383a6c7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": true,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<meta name="author" content="Diakite Data">
+<meta name="keywords" content="data engineering, spark, kafka, python, kubernetes, lakehouse, delta lake, bootcamp">
+
+
+<meta property="og:title" content="SQL for Data Engineers – Bootcamp Data Engineering">
+<meta property="og:description" content="Programme complet Data Engineering — Du débutant au Senior Engineer">
+<meta property="og:site_name" content="Bootcamp Data Engineering">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:title" content="SQL for Data Engineers – Bootcamp Data Engineering">
+<meta name="twitter:description" content="Programme complet Data Engineering — Du débutant au Senior Engineer">
+<meta name="twitter:creator" content="@diakite_data">
+<meta name="twitter:site" content="@diakite_data">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../assets/images/logo.svg" alt="Data Engineering Bootcamp" class="navbar-logo light-content">
+    <img src="../../assets/images/logo.svg" alt="Data Engineering Bootcamp" class="navbar-logo dark-content">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">🏠 Accueil</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-programme" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">📘 Programme</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-programme">    
+        <li>
+    <a class="dropdown-item" href="../../notebooks/beginner/01_intro_data_engineering.html">
+ <span class="dropdown-text">🟦 Niveau Débutant</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../notebooks/intermediate/14_docker_for_data_engineers.html">
+ <span class="dropdown-text">🟩 Niveau Intermédiaire</span></a>
+  </li>  
+        <li class="dropdown-header">🟥 Niveau Avancé</li>
+        <li><hr class="dropdown-divider"></li>
+        <li>
+    <a class="dropdown-item" href="../../curriculum.html">
+ <span class="dropdown-text">📊 Vue d’ensemble</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-ressources" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">🛠️ Ressources</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-ressources">    
+        <li>
+    <a class="dropdown-item" href="../../resources/documentation.html">
+ <span class="dropdown-text">📚 Documentation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../resources/setup.html">
+ <span class="dropdown-text">🔧 Setup Environnement</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../resources/faq.html">
+ <span class="dropdown-text">❓ FAQ</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li>
+    <a class="dropdown-item" href="../../resources/links.html">
+ <span class="dropdown-text">🔗 Liens Utiles</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/diakite-data/data-engineering-bootcamp"> <i class="bi bi-github" role="img" aria-label="GitHub Repository">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">🟦 Niveau 1 : Débutant</li><li class="breadcrumb-item"><a href="../../notebooks/beginner/06_intro_relational_databases.html">🗄️ Bases de Données</a></li><li class="breadcrumb-item"><a href="../../notebooks/beginner/07_sql_for_data_engineers.html">07 · SQL pour Data Engineers</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">🟦 Niveau 1 : Débutant</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="px-0"><hr class="sidebar-divider hi "></li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">📌 Fondations</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/01_intro_data_engineering.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">01 · Introduction au Data Engineering</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/02_bash_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">02 · Linux &amp; Bash</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/03_git_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">03 · Git &amp; Versioning</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">🐍 Python</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/04_python_basics_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">04 · Python Fondamental</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/05_python_data_processing_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">05 · Python Data Processing</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">🗄️ Bases de Données</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/06_intro_relational_databases.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">06 · Introduction aux BDD Relationnelles</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/07_sql_for_data_engineers.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">07 · SQL pour Data Engineers</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">📊 Big Data &amp; NoSQL</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/08_intro_big_data_distributed.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">08 · Introduction Big Data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/09_mongodb_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">09 · MongoDB</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/10_elasticsearch_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">10 · Elasticsearch</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">⚡ Spark &amp; Orchestration</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/11_pyspark_for_data_engineering.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">11 · Introduction PySpark</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/12_orchestration_pipelines.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">12 · Orchestration de Pipelines</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">🎁 Bonus</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/beginner/13_BONUS_fastapi_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">13 · FastAPI pour Data Engineers</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="px-0"><hr class="sidebar-divider hi "></li>
+          <li class="sidebar-item">
+ <span class="menu-text">📦 **Projet Débutant**</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
+ <span class="menu-text">🟩 Niveau 2 : Intermédiaire</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="px-0"><hr class="sidebar-divider hi "></li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
+ <span class="menu-text">🐳 Containers &amp; Cloud</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/14_docker_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">14 · Docker pour Data Engineers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/15_kubernetes_fundamentals.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">15 · Kubernetes Fondamentaux</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/16_k8s_for_data_workloads.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">16 · K8s pour Data Workloads</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false">
+ <span class="menu-text">🚀 High Performance Python</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/17_polars_for_data_engineering.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">17 · Polars pour Data Engineering</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/18_high_performance_python.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">18 · High Performance Python</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false">
+ <span class="menu-text">⚡ Spark Avancé</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/19_pyspark_advanced.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">19 · PySpark Avancé</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/20_spark_sql_deep_dive.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">20 · Spark SQL Deep Dive</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/21_spark_on_kubernetes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">21 · Spark on Kubernetes</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false">
+ <span class="menu-text">🏠 Lakehouse &amp; Streaming &amp; Cloud</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/22_cloud_and_object_storage.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">22 · Cloud Object Storage</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/23_table_formats_delta_iceberg.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">23 · Table Formats (Delta, Iceberg)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/24_kafka_streaming.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">24 · Kafka &amp; Streaming</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false">
+ <span class="menu-text">🔧 Industrialisation</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/25_dbt_data_quality.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">25 · dbt &amp; Data Quality</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="px-0"><hr class="sidebar-divider hi "></li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/intermediate/26_projet_integrateur.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">📦 <strong>Projet Intermédiaire</strong> (Olist)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">🟥 Niveau 3 : Avancé</span></span>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="2">
+    <h2 id="toc-title">📑 Sommaire</h2>
+   
+  <ul>
+  <li><a href="#approche-de-ce-cours" id="toc-approche-de-ce-cours" class="nav-link active" data-scroll-target="#approche-de-ce-cours">Approche de ce cours</a></li>
+  <li><a href="#prérequis" id="toc-prérequis" class="nav-link" data-scroll-target="#prérequis">Prérequis</a></li>
+  <li><a href="#objectifs-du-module" id="toc-objectifs-du-module" class="nav-link" data-scroll-target="#objectifs-du-module">Objectifs du module</a></li>
+  <li><a href="#cest-quoi-sql" id="toc-cest-quoi-sql" class="nav-link" data-scroll-target="#cest-quoi-sql">C’est quoi SQL ?</a></li>
+  <li><a href="#pourquoi-cest-essentiel-pour-un-data-engineer" id="toc-pourquoi-cest-essentiel-pour-un-data-engineer" class="nav-link" data-scroll-target="#pourquoi-cest-essentiel-pour-un-data-engineer">Pourquoi c’est essentiel pour un Data Engineer ?</a></li>
+  <li><a href="#outils-en-ligne-pour-tester-du-sql" id="toc-outils-en-ligne-pour-tester-du-sql" class="nav-link" data-scroll-target="#outils-en-ligne-pour-tester-du-sql">Outils en ligne pour tester du SQL</a>
+  <ul class="collapse">
+  <li><a href="#outils-recommandés" id="toc-outils-recommandés" class="nav-link" data-scroll-target="#outils-recommandés">Outils recommandés</a></li>
+  <li><a href="#exemple-avec-db-fiddle" id="toc-exemple-avec-db-fiddle" class="nav-link" data-scroll-target="#exemple-avec-db-fiddle">💡 Exemple avec DB Fiddle</a></li>
+  <li><a href="#différences-entre-sgbd" id="toc-différences-entre-sgbd" class="nav-link" data-scroll-target="#différences-entre-sgbd">⚠️ Différences entre SGBD</a></li>
+  <li><a href="#pourquoi-on-utilise-python-duckdb-dans-ce-cours" id="toc-pourquoi-on-utilise-python-duckdb-dans-ce-cours" class="nav-link" data-scroll-target="#pourquoi-on-utilise-python-duckdb-dans-ce-cours">🎯 Pourquoi on utilise Python + DuckDB dans ce cours ?</a></li>
+  </ul></li>
+  <li><a href="#python-duckdb-sql-dans-ton-notebook" id="toc-python-duckdb-sql-dans-ton-notebook" class="nav-link" data-scroll-target="#python-duckdb-sql-dans-ton-notebook">Python + DuckDB — SQL dans ton notebook !</a>
+  <ul class="collapse">
+  <li><a href="#quest-ce-que-duckdb" id="toc-quest-ce-que-duckdb" class="nav-link" data-scroll-target="#quest-ce-que-duckdb">Qu’est-ce que DuckDB ?</a></li>
+  <li><a href="#duckdb-vs-autres-bases" id="toc-duckdb-vs-autres-bases" class="nav-link" data-scroll-target="#duckdb-vs-autres-bases">DuckDB vs autres bases</a></li>
+  </ul></li>
+  <li><a href="#cheatsheet-sql-commandes-essentielles" id="toc-cheatsheet-sql-commandes-essentielles" class="nav-link" data-scroll-target="#cheatsheet-sql-commandes-essentielles">Cheatsheet SQL — Commandes essentielles</a></li>
+  <li><a href="#select-sélectionner-des-données" id="toc-select-sélectionner-des-données" class="nav-link" data-scroll-target="#select-sélectionner-des-données">1. SELECT — Sélectionner des données</a>
+  <ul class="collapse">
+  <li><a href="#syntaxe-de-base" id="toc-syntaxe-de-base" class="nav-link" data-scroll-target="#syntaxe-de-base">Syntaxe de base</a></li>
+  </ul></li>
+  <li><a href="#agrégations-count-sum-avg-min-max" id="toc-agrégations-count-sum-avg-min-max" class="nav-link" data-scroll-target="#agrégations-count-sum-avg-min-max">2. Agrégations — COUNT, SUM, AVG, MIN, MAX</a></li>
+  <li><a href="#group-by-regrouper-les-données" id="toc-group-by-regrouper-les-données" class="nav-link" data-scroll-target="#group-by-regrouper-les-données">3. GROUP BY — Regrouper les données</a></li>
+  <li><a href="#join-combiner-les-tables" id="toc-join-combiner-les-tables" class="nav-link" data-scroll-target="#join-combiner-les-tables">4. JOIN — Combiner les tables</a></li>
+  <li><a href="#fonctions-de-date" id="toc-fonctions-de-date" class="nav-link" data-scroll-target="#fonctions-de-date">5. Fonctions de date</a></li>
+  <li><a href="#case-conditions-dans-les-requêtes" id="toc-case-conditions-dans-les-requêtes" class="nav-link" data-scroll-target="#case-conditions-dans-les-requêtes">6. CASE — Conditions dans les requêtes</a></li>
+  <li><a href="#cte-common-table-expression-requêtes-lisibles" id="toc-cte-common-table-expression-requêtes-lisibles" class="nav-link" data-scroll-target="#cte-common-table-expression-requêtes-lisibles">7. CTE (Common Table Expression) — Requêtes lisibles</a></li>
+  <li><a href="#window-functions-calculs-avancés" id="toc-window-functions-calculs-avancés" class="nav-link" data-scroll-target="#window-functions-calculs-avancés">8. Window Functions — Calculs avancés</a></li>
+  <li><a href="#intégration-avec-pandas" id="toc-intégration-avec-pandas" class="nav-link" data-scroll-target="#intégration-avec-pandas">9. Intégration avec Pandas</a></li>
+  <li><a href="#exercices-pratiques" id="toc-exercices-pratiques" class="nav-link" data-scroll-target="#exercices-pratiques">10. Exercices pratiques</a>
+  <ul class="collapse">
+  <li><a href="#exercice-1-facile" id="toc-exercice-1-facile" class="nav-link" data-scroll-target="#exercice-1-facile">Exercice 1 — Facile</a></li>
+  <li><a href="#exercice-2-facile" id="toc-exercice-2-facile" class="nav-link" data-scroll-target="#exercice-2-facile">Exercice 2 — Facile</a></li>
+  <li><a href="#exercice-3-intermédiaire" id="toc-exercice-3-intermédiaire" class="nav-link" data-scroll-target="#exercice-3-intermédiaire">Exercice 3 — Intermédiaire</a></li>
+  <li><a href="#exercice-4-intermédiaire" id="toc-exercice-4-intermédiaire" class="nav-link" data-scroll-target="#exercice-4-intermédiaire">Exercice 4 — Intermédiaire</a></li>
+  <li><a href="#exercice-5-avancé" id="toc-exercice-5-avancé" class="nav-link" data-scroll-target="#exercice-5-avancé">Exercice 5 — Avancé</a></li>
+  </ul></li>
+  <li><a href="#quiz" id="toc-quiz" class="nav-link" data-scroll-target="#quiz">Quiz</a>
+  <ul class="collapse">
+  <li><a href="#q1.-quelle-commande-affiche-toutes-les-colonnes-dune-table-clients" id="toc-q1.-quelle-commande-affiche-toutes-les-colonnes-dune-table-clients" class="nav-link" data-scroll-target="#q1.-quelle-commande-affiche-toutes-les-colonnes-dune-table-clients">❓ Q1. Quelle commande affiche toutes les colonnes d’une table <code>clients</code> ?</a></li>
+  <li><a href="#q2.-quelle-est-la-différence-entre-where-et-having" id="toc-q2.-quelle-est-la-différence-entre-where-et-having" class="nav-link" data-scroll-target="#q2.-quelle-est-la-différence-entre-where-et-having">❓ Q2. Quelle est la différence entre <code>WHERE</code> et <code>HAVING</code> ?</a></li>
+  <li><a href="#q3.-quel-join-retourne-uniquement-les-lignes-qui-ont-une-correspondance" id="toc-q3.-quel-join-retourne-uniquement-les-lignes-qui-ont-une-correspondance" class="nav-link" data-scroll-target="#q3.-quel-join-retourne-uniquement-les-lignes-qui-ont-une-correspondance">❓ Q3. Quel JOIN retourne UNIQUEMENT les lignes qui ont une correspondance ?</a></li>
+  <li><a href="#q4.-à-quoi-sert-une-cte-with" id="toc-q4.-à-quoi-sert-une-cte-with" class="nav-link" data-scroll-target="#q4.-à-quoi-sert-une-cte-with">❓ Q4. À quoi sert une CTE (<code>WITH</code>) ?</a></li>
+  <li><a href="#q5.-quelle-window-function-permet-de-classer-les-lignes" id="toc-q5.-quelle-window-function-permet-de-classer-les-lignes" class="nav-link" data-scroll-target="#q5.-quelle-window-function-permet-de-classer-les-lignes">❓ Q5. Quelle Window Function permet de classer les lignes ?</a></li>
+  <li><a href="#q6.-quel-avantage-de-duckdb-pour-un-data-engineer" id="toc-q6.-quel-avantage-de-duckdb-pour-un-data-engineer" class="nav-link" data-scroll-target="#q6.-quel-avantage-de-duckdb-pour-un-data-engineer">❓ Q6. Quel avantage de DuckDB pour un Data Engineer ?</a></li>
+  </ul></li>
+  <li><a href="#ressources" id="toc-ressources" class="nav-link" data-scroll-target="#ressources">📚 Ressources</a>
+  <ul class="collapse">
+  <li><a href="#pratiquer-sql-en-ligne" id="toc-pratiquer-sql-en-ligne" class="nav-link" data-scroll-target="#pratiquer-sql-en-ligne">🎮 Pratiquer SQL en ligne</a></li>
+  <li><a href="#duckdb" id="toc-duckdb" class="nav-link" data-scroll-target="#duckdb">🦆 DuckDB</a></li>
+  <li><a href="#documentation-sql" id="toc-documentation-sql" class="nav-link" data-scroll-target="#documentation-sql">📖 Documentation SQL</a></li>
+  </ul></li>
+  <li><a href="#prochaine-étape" id="toc-prochaine-étape" class="nav-link" data-scroll-target="#prochaine-étape">➡️ Prochaine étape</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/diakite-data/data-engineering-bootcamp/blob/main/notebooks/beginner/07_sql_for_data_engineers.ipynb" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/diakite-data/data-engineering-bootcamp/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.dev/diakite-data/data-engineering-bootcamp/blob/main/notebooks/beginner/07_sql_for_data_engineers.ipynb" class="toc-action"><i class="bi empty"></i>Edit this page</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">🟦 Niveau 1 : Débutant</li><li class="breadcrumb-item"><a href="../../notebooks/beginner/06_intro_relational_databases.html">🗄️ Bases de Données</a></li><li class="breadcrumb-item"><a href="../../notebooks/beginner/07_sql_for_data_engineers.html">07 · SQL pour Data Engineers</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">SQL for Data Engineers</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Ce module couvre les <strong>fondamentaux et concepts avancés de SQL</strong>, avec une pratique directe via <strong>Python + DuckDB</strong>.</p>
+<hr>
+<section id="approche-de-ce-cours" class="level2">
+<h2 class="anchored" data-anchor-id="approche-de-ce-cours">Approche de ce cours</h2>
+<pre><code>┌─────────────────────────────────────────────────────────────────┐
+│                       FOCUS DU COURS                            │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│   Ce cours utilise Python + DuckDB pour apprendre SQL           │
+│                                                                 │
+│   ✅ SQL standard (compatible PostgreSQL, MySQL, etc.)          │
+│   ✅ Exécution directe dans Jupyter (pas de serveur)            │
+│   ✅ Intégration native avec Pandas                             │
+│   ✅ Compétences transférables à tout SGBD                      │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘</code></pre>
+<blockquote class="blockquote">
+<p>💡 <strong>Le SQL appris ici fonctionne sur PostgreSQL, MySQL, SQLite, BigQuery, Snowflake, etc.</strong> avec des variations mineures de syntaxe.</p>
+</blockquote>
+<hr>
+</section>
+<section id="prérequis" class="level2">
+<h2 class="anchored" data-anchor-id="prérequis">Prérequis</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Niveau</th>
+<th>Compétence</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>✅ Requis</td>
+<td>Avoir suivi le module <code>06_intro_relational_databases</code></td>
+</tr>
+<tr class="even">
+<td>✅ Requis</td>
+<td>Comprendre les concepts de tables, colonnes, clés</td>
+</tr>
+<tr class="odd">
+<td>✅ Requis</td>
+<td>Bases de Python (module 04 et 05)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="objectifs-du-module" class="level2">
+<h2 class="anchored" data-anchor-id="objectifs-du-module">Objectifs du module</h2>
+<p>À la fin de ce notebook, tu seras capable de :</p>
+<ul>
+<li>Écrire des requêtes <code>SELECT</code>, <code>WHERE</code>, <code>ORDER BY</code></li>
+<li>Utiliser les fonctions d’agrégation (<code>COUNT</code>, <code>SUM</code>, <code>AVG</code>)</li>
+<li>Maîtriser <code>GROUP BY</code> et <code>HAVING</code></li>
+<li>Faire des jointures (<code>JOIN</code>, <code>LEFT JOIN</code>)</li>
+<li>Utiliser les fonctions de date (<code>DATE_TRUNC</code>, <code>EXTRACT</code>)</li>
+<li>Utiliser <code>CASE</code>, les CTEs et les Window Functions</li>
+<li><strong>Exécuter du SQL depuis Python avec DuckDB</strong></li>
+</ul>
+<hr>
+<blockquote class="blockquote">
+<p>💡 <strong>Ce notebook est interactif</strong> : tu peux exécuter les cellules de code directement !</p>
+</blockquote>
+<p><a href="https://colab.research.google.com/github/diakite-data/data-engineering-bootcamp/blob/main/notebooks/beginner/07_sql_for_data_engineers.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a></p>
+<blockquote class="blockquote">
+<p>💡 <strong>Conseil</strong> : Cliquez sur le badge ci-dessus pour exécuter ce notebook directement dans Google Colab (aucune installation requise).</p>
+</blockquote>
+<hr>
+</section>
+<section id="cest-quoi-sql" class="level2">
+<h2 class="anchored" data-anchor-id="cest-quoi-sql">C’est quoi SQL ?</h2>
+<p><strong>SQL</strong> (Structured Query Language) est un <strong>langage de requêtes</strong> pour interagir avec des bases de données relationnelles.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Action</th>
+<th>Commande SQL</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>🔍 <strong>Rechercher</strong></td>
+<td><code>SELECT</code></td>
+</tr>
+<tr class="even">
+<td>✏️ <strong>Insérer</strong></td>
+<td><code>INSERT</code></td>
+</tr>
+<tr class="odd">
+<td>🔄 <strong>Modifier</strong></td>
+<td><code>UPDATE</code></td>
+</tr>
+<tr class="even">
+<td>🗑️ <strong>Supprimer</strong></td>
+<td><code>DELETE</code></td>
+</tr>
+<tr class="odd">
+<td>📊 <strong>Agréger</strong></td>
+<td><code>COUNT</code>, <code>SUM</code>, <code>AVG</code></td>
+</tr>
+<tr class="even">
+<td>🔗 <strong>Joindre</strong></td>
+<td><code>JOIN</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="pourquoi-cest-essentiel-pour-un-data-engineer" class="level2">
+<h2 class="anchored" data-anchor-id="pourquoi-cest-essentiel-pour-un-data-engineer">Pourquoi c’est essentiel pour un Data Engineer ?</h2>
+<ul>
+<li>Interroger les <strong>data warehouses</strong> (BigQuery, Snowflake, Redshift…)</li>
+<li>Extraire / filtrer les données pour les pipelines</li>
+<li>Vérifier la <strong>qualité des données</strong></li>
+<li>Créer des <strong>vues</strong> et <strong>agrégats</strong> pour les dashboards</li>
+</ul>
+<hr>
+</section>
+<section id="outils-en-ligne-pour-tester-du-sql" class="level2">
+<h2 class="anchored" data-anchor-id="outils-en-ligne-pour-tester-du-sql">Outils en ligne pour tester du SQL</h2>
+<p>Avant de plonger dans Python + DuckDB, sache qu’il existe de nombreux <strong>outils en ligne gratuits</strong> pour tester des requêtes SQL sur différents SGBD. C’est utile pour :</p>
+<ul>
+<li>Tester rapidement une requête</li>
+<li>Vérifier la compatibilité entre SGBD</li>
+<li>S’entraîner sans rien installer</li>
+<li>Partager des exemples avec des collègues</li>
+</ul>
+<section id="outils-recommandés" class="level3">
+<h3 class="anchored" data-anchor-id="outils-recommandés">Outils recommandés</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Outil</th>
+<th>URL</th>
+<th>SGBD supportés</th>
+<th>Points forts</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>DB Fiddle</strong></td>
+<td><a href="https://www.db-fiddle.com/">db-fiddle.com</a></td>
+<td>PostgreSQL, MySQL, SQLite</td>
+<td>Interface claire, partage facile</td>
+</tr>
+<tr class="even">
+<td><strong>SQL Fiddle</strong></td>
+<td><a href="http://sqlfiddle.com/">sqlfiddle.com</a></td>
+<td>MySQL, PostgreSQL, Oracle, SQL Server</td>
+<td>Le classique, multi-SGBD</td>
+</tr>
+<tr class="odd">
+<td><strong>SQLite Online</strong></td>
+<td><a href="https://sqliteonline.com/">sqliteonline.com</a></td>
+<td>SQLite, PostgreSQL, MySQL</td>
+<td>Très simple, import CSV</td>
+</tr>
+<tr class="even">
+<td><strong>Programiz SQL</strong></td>
+<td><a href="https://www.programiz.com/sql/online-compiler/">programiz.com/sql/online-compiler</a></td>
+<td>SQLite</td>
+<td>Idéal débutants, tutoriels intégrés</td>
+</tr>
+<tr class="odd">
+<td><strong>OneCompiler</strong></td>
+<td><a href="https://onecompiler.com/mysql">onecompiler.com/mysql</a></td>
+<td>MySQL, PostgreSQL, SQL Server</td>
+<td>Rapide, moderne</td>
+</tr>
+<tr class="even">
+<td><strong>Replit</strong></td>
+<td><a href="https://replit.com/">replit.com</a></td>
+<td>SQLite, PostgreSQL</td>
+<td>Environnement complet, collaboratif</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="exemple-avec-db-fiddle" class="level3">
+<h3 class="anchored" data-anchor-id="exemple-avec-db-fiddle">💡 Exemple avec DB Fiddle</h3>
+<ol type="1">
+<li>Aller sur <a href="https://www.db-fiddle.com/">db-fiddle.com</a></li>
+<li>Choisir le SGBD (ex: <strong>PostgreSQL 15</strong>)</li>
+<li>Dans le panneau gauche, créer le schéma :</li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> employes (</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">id</span> <span class="dt">INT</span> <span class="kw">PRIMARY</span> <span class="kw">KEY</span>,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    nom <span class="dt">VARCHAR</span>(<span class="dv">50</span>),</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    salaire <span class="dt">INT</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>);</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="kw">INSERT</span> <span class="kw">INTO</span> employes <span class="kw">VALUES</span> </span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>(<span class="dv">1</span>, <span class="st">'Alice'</span>, <span class="dv">50000</span>),</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>(<span class="dv">2</span>, <span class="st">'Bob'</span>, <span class="dv">60000</span>),</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>(<span class="dv">3</span>, <span class="st">'Charlie'</span>, <span class="dv">55000</span>);</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ol start="4" type="1">
+<li>Dans le panneau droit, écrire ta requête :</li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> nom, salaire </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> employes </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> salaire <span class="op">&gt;</span> <span class="dv">52000</span>;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ol start="5" type="1">
+<li>Cliquer sur <strong>Run</strong> et voir le résultat !</li>
+</ol>
+</section>
+<section id="différences-entre-sgbd" class="level3">
+<h3 class="anchored" data-anchor-id="différences-entre-sgbd">⚠️ Différences entre SGBD</h3>
+<p>Le SQL est <strong>standardisé</strong>, mais chaque SGBD a ses particularités :</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 29%">
+<col style="width: 21%">
+<col style="width: 12%">
+<col style="width: 21%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Fonctionnalité</th>
+<th>PostgreSQL</th>
+<th>MySQL</th>
+<th>SQL Server</th>
+<th>SQLite</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Concaténation</td>
+<td><code>\|\|</code> ou <code>CONCAT()</code></td>
+<td><code>CONCAT()</code></td>
+<td><code>+</code> ou <code>CONCAT()</code></td>
+<td><code>\|\|</code></td>
+</tr>
+<tr class="even">
+<td>Limite résultats</td>
+<td><code>LIMIT 10</code></td>
+<td><code>LIMIT 10</code></td>
+<td><code>TOP 10</code></td>
+<td><code>LIMIT 10</code></td>
+</tr>
+<tr class="odd">
+<td>Auto-increment</td>
+<td><code>SERIAL</code></td>
+<td><code>AUTO_INCREMENT</code></td>
+<td><code>IDENTITY</code></td>
+<td><code>AUTOINCREMENT</code></td>
+</tr>
+<tr class="even">
+<td>Date actuelle</td>
+<td><code>CURRENT_DATE</code></td>
+<td><code>CURDATE()</code></td>
+<td><code>GETDATE()</code></td>
+<td><code>DATE('now')</code></td>
+</tr>
+<tr class="odd">
+<td>Booléens</td>
+<td><code>TRUE/FALSE</code></td>
+<td><code>1/0</code></td>
+<td><code>1/0</code></td>
+<td><code>1/0</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote class="blockquote">
+<p>💡 <strong>DuckDB</strong> utilise une syntaxe proche de <strong>PostgreSQL</strong>, ce qui est idéal car PostgreSQL est le standard de facto en Data Engineering.</p>
+</blockquote>
+<hr>
+</section>
+<section id="pourquoi-on-utilise-python-duckdb-dans-ce-cours" class="level3">
+<h3 class="anchored" data-anchor-id="pourquoi-on-utilise-python-duckdb-dans-ce-cours">🎯 Pourquoi on utilise Python + DuckDB dans ce cours ?</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Avantage</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Tout-en-un</strong></td>
+<td>SQL + Python dans le même notebook</td>
+</tr>
+<tr class="even">
+<td><strong>Pas d’installation serveur</strong></td>
+<td>DuckDB tourne en mémoire</td>
+</tr>
+<tr class="odd">
+<td><strong>Intégration Pandas</strong></td>
+<td>Résultats directement en DataFrame</td>
+</tr>
+<tr class="even">
+<td><strong>Fichiers directs</strong></td>
+<td>Lire CSV/Parquet/JSON sans import</td>
+</tr>
+<tr class="odd">
+<td><strong>Syntaxe standard</strong></td>
+<td>Compatible PostgreSQL → transférable</td>
+</tr>
+<tr class="even">
+<td><strong>Performance</strong></td>
+<td>Optimisé pour l’analytics (OLAP)</td>
+</tr>
+</tbody>
+</table>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Exemple : SQL → DataFrame en 1 ligne</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> con.execute(<span class="st">"SELECT * FROM clients WHERE pays = 'France'"</span>).df()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<blockquote class="blockquote">
+<p><strong>Les compétences SQL apprises ici sont directement applicables</strong> à PostgreSQL, BigQuery, Snowflake, Redshift, et tout autre SGBD en production.</p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="python-duckdb-sql-dans-ton-notebook" class="level2">
+<h2 class="anchored" data-anchor-id="python-duckdb-sql-dans-ton-notebook">Python + DuckDB — SQL dans ton notebook !</h2>
+<section id="quest-ce-que-duckdb" class="level3">
+<h3 class="anchored" data-anchor-id="quest-ce-que-duckdb">Qu’est-ce que DuckDB ?</h3>
+<p><strong>DuckDB</strong> est une base de données analytique <strong>embarquée</strong> (comme SQLite, mais optimisée pour l’analytics).</p>
+<pre><code>┌─────────────────────────────────────────────────────────────┐
+│                    POURQUOI DUCKDB ?                        │
+├─────────────────────────────────────────────────────────────┤
+│                                                             │
+│  ✅ Zéro installation serveur (fonctionne en mémoire)       │
+│  ✅ Syntaxe SQL standard (PostgreSQL-like)                  │
+│  ✅ Intégration native avec Pandas                         │
+│  ✅ Très rapide pour l'analytics (colonnar storage)        │
+│  ✅ Lit directement CSV, Parquet, JSON                      │
+│  ✅ Parfait pour apprendre SQL dans un notebook             │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘</code></pre>
+</section>
+<section id="duckdb-vs-autres-bases" class="level3">
+<h3 class="anchored" data-anchor-id="duckdb-vs-autres-bases">DuckDB vs autres bases</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 24%">
+<col style="width: 21%">
+<col style="width: 21%">
+<col style="width: 32%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Critère</th>
+<th>SQLite</th>
+<th>DuckDB</th>
+<th>PostgreSQL</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Installation</strong></td>
+<td>Embarqué</td>
+<td>Embarqué</td>
+<td>Serveur</td>
+</tr>
+<tr class="even">
+<td><strong>Optimisé pour</strong></td>
+<td>OLTP (transactions)</td>
+<td>OLAP (analytics)</td>
+<td>Les deux</td>
+</tr>
+<tr class="odd">
+<td><strong>Intégration Pandas</strong></td>
+<td>⚠️ Via SQLAlchemy</td>
+<td>✅ Native</td>
+<td>⚠️ Via psycopg2</td>
+</tr>
+<tr class="even">
+<td><strong>Fichiers CSV/Parquet</strong></td>
+<td>❌ Non</td>
+<td>✅ Direct</td>
+<td>❌ Non</td>
+</tr>
+<tr class="odd">
+<td><strong>Usage</strong></td>
+<td>Mobile, embarqué</td>
+<td>Data Science, ETL</td>
+<td>Production</td>
+</tr>
+</tbody>
+</table>
+<div id="cell-6" class="cell">
+<details class="code-fold">
+<summary>Voir le code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Installation de DuckDB</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install duckdb <span class="op">--</span>quiet</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"✅ DuckDB installé !"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<div id="cell-7" class="cell">
+<details class="code-fold">
+<summary>Voir le code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> duckdb</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Créer une connexion en mémoire</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>con <span class="op">=</span> duckdb.<span class="ex">connect</span>(database<span class="op">=</span><span class="st">':memory:'</span>)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"✅ Connexion DuckDB créée !"</span>)</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Version : </span><span class="sc">{</span>duckdb<span class="sc">.</span>__version__<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<div id="cell-8" class="cell">
+<details class="code-fold">
+<summary>Voir le code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Création des tables de démonstration</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Table clients</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>con.execute(<span class="st">"""</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="st">CREATE TABLE clients (</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="st">    id_client INTEGER PRIMARY KEY,</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="st">    nom VARCHAR(50),</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="st">    email VARCHAR(100),</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="st">    pays VARCHAR(50),</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="st">    date_inscription DATE</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="st">);</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span>)</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>con.execute(<span class="st">"""</span></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="st">INSERT INTO clients VALUES</span></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a><span class="st">    (1, 'Alice', 'alice@mail.com', 'France', '2023-01-15'),</span></span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a><span class="st">    (2, 'Bob', 'bob@mail.com', 'France', '2023-02-20'),</span></span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a><span class="st">    (3, 'Charlie', 'charlie@mail.com', 'Allemagne', '2023-03-10'),</span></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a><span class="st">    (4, 'Diana', 'diana@mail.com', 'Belgique', '2023-04-05'),</span></span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a><span class="st">    (5, 'Eve', 'eve@mail.com', 'France', '2023-05-12');</span></span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span>)</span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Table commandes</span></span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>con.execute(<span class="st">"""</span></span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a><span class="st">CREATE TABLE commandes (</span></span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a><span class="st">    id_commande INTEGER PRIMARY KEY,</span></span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a><span class="st">    id_client INTEGER,</span></span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a><span class="st">    produit VARCHAR(50),</span></span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a><span class="st">    montant DECIMAL(10,2),</span></span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a><span class="st">    date_commande DATE,</span></span>
+<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a><span class="st">    FOREIGN KEY (id_client) REFERENCES clients(id_client)</span></span>
+<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a><span class="st">);</span></span>
+<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span>)</span>
+<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a>con.execute(<span class="st">"""</span></span>
+<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a><span class="st">INSERT INTO commandes VALUES</span></span>
+<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a><span class="st">    (1, 1, 'Clavier', 50.00, '2023-07-12'),</span></span>
+<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a><span class="st">    (2, 1, 'Souris', 25.00, '2023-07-15'),</span></span>
+<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a><span class="st">    (3, 2, 'Écran', 120.00, '2023-08-01'),</span></span>
+<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a><span class="st">    (4, 1, 'Webcam', 45.00, '2023-08-20'),</span></span>
+<span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a><span class="st">    (5, 4, 'Casque', 80.00, '2023-09-05'),</span></span>
+<span id="cb8-42"><a href="#cb8-42" aria-hidden="true" tabindex="-1"></a><span class="st">    (6, 2, 'Clavier', 55.00, '2023-09-15'),</span></span>
+<span id="cb8-43"><a href="#cb8-43" aria-hidden="true" tabindex="-1"></a><span class="st">    (7, 5, 'Souris', 30.00, '2023-10-01'),</span></span>
+<span id="cb8-44"><a href="#cb8-44" aria-hidden="true" tabindex="-1"></a><span class="st">    (8, 4, 'Écran', 150.00, '2023-10-20');</span></span>
+<span id="cb8-45"><a href="#cb8-45" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span>)</span>
+<span id="cb8-46"><a href="#cb8-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-47"><a href="#cb8-47" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"✅ Tables créées : clients (5 lignes), commandes (8 lignes)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<div id="cell-9" class="cell">
+<details class="code-fold">
+<summary>Voir le code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérifier les données</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" Table clients :"</span>)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(con.execute(<span class="st">"SELECT * FROM clients"</span>).fetchdf())</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st"> Table commandes :"</span>)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(con.execute(<span class="st">"SELECT * FROM commandes"</span>).fetchdf())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<hr>
+</section>
+</section>
+<section id="cheatsheet-sql-commandes-essentielles" class="level2">
+<h2 class="anchored" data-anchor-id="cheatsheet-sql-commandes-essentielles">Cheatsheet SQL — Commandes essentielles</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 26%">
+<col style="width: 23%">
+<col style="width: 30%">
+<col style="width: 19%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Catégorie</th>
+<th>Commande</th>
+<th>Description</th>
+<th>Exemple</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Lecture</strong></td>
+<td><code>SELECT</code></td>
+<td>Sélectionner des colonnes</td>
+<td><code>SELECT nom, email FROM clients</code></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><code>SELECT *</code></td>
+<td>Toutes les colonnes</td>
+<td><code>SELECT * FROM clients</code></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><code>DISTINCT</code></td>
+<td>Valeurs uniques</td>
+<td><code>SELECT DISTINCT pays FROM clients</code></td>
+</tr>
+<tr class="even">
+<td><strong>Filtrage</strong></td>
+<td><code>WHERE</code></td>
+<td>Filtrer les lignes</td>
+<td><code>WHERE pays = 'France'</code></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><code>AND</code> / <code>OR</code></td>
+<td>Conditions multiples</td>
+<td><code>WHERE age &gt; 18 AND pays = 'France'</code></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><code>IN</code></td>
+<td>Liste de valeurs</td>
+<td><code>WHERE pays IN ('France', 'Belgique')</code></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><code>BETWEEN</code></td>
+<td>Plage de valeurs</td>
+<td><code>WHERE montant BETWEEN 50 AND 100</code></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><code>LIKE</code></td>
+<td>Recherche pattern</td>
+<td><code>WHERE nom LIKE 'A%'</code></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><code>IS NULL</code></td>
+<td>Valeurs nulles</td>
+<td><code>WHERE email IS NULL</code></td>
+</tr>
+<tr class="even">
+<td><strong>Tri</strong></td>
+<td><code>ORDER BY</code></td>
+<td>Trier les résultats</td>
+<td><code>ORDER BY nom ASC</code></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><code>LIMIT</code></td>
+<td>Limiter le nombre</td>
+<td><code>LIMIT 10</code></td>
+</tr>
+<tr class="even">
+<td><strong>Agrégation</strong></td>
+<td><code>COUNT()</code></td>
+<td>Compter</td>
+<td><code>SELECT COUNT(*) FROM clients</code></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><code>SUM()</code></td>
+<td>Somme</td>
+<td><code>SELECT SUM(montant) FROM commandes</code></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><code>AVG()</code></td>
+<td>Moyenne</td>
+<td><code>SELECT AVG(montant) FROM commandes</code></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><code>MIN()</code> / <code>MAX()</code></td>
+<td>Min / Max</td>
+<td><code>SELECT MAX(montant) FROM commandes</code></td>
+</tr>
+<tr class="even">
+<td><strong>Groupement</strong></td>
+<td><code>GROUP BY</code></td>
+<td>Regrouper</td>
+<td><code>GROUP BY pays</code></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><code>HAVING</code></td>
+<td>Filtrer après agrégation</td>
+<td><code>HAVING COUNT(*) &gt; 5</code></td>
+</tr>
+<tr class="even">
+<td><strong>Jointures</strong></td>
+<td><code>JOIN</code></td>
+<td>Jointure interne</td>
+<td><code>JOIN commandes ON ...</code></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><code>LEFT JOIN</code></td>
+<td>Jointure gauche</td>
+<td><code>LEFT JOIN commandes ON ...</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="select-sélectionner-des-données" class="level2">
+<h2 class="anchored" data-anchor-id="select-sélectionner-des-données">1. SELECT — Sélectionner des données</h2>
+<section id="syntaxe-de-base" class="level3">
+<h3 class="anchored" data-anchor-id="syntaxe-de-base">Syntaxe de base</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> colonne1, colonne2</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> <span class="kw">table</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> condition</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> colonne;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="cell-12" class="cell">
+<details class="code-fold">
+<summary>Voir le code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># SELECT * — Toutes les colonnes</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"SELECT * FROM clients"</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>con.execute(query).fetchdf()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<div id="cell-13" class="cell">
+<details class="code-fold">
+<summary>Voir le code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># SELECT colonnes spécifiques</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"SELECT nom, email, pays FROM clients"</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>con.execute(query).fetchdf()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<div id="cell-14" class="cell">
+<details class="code-fold">
+<summary>Voir le code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># WHERE — Filtrer les lignes</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"""</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="st">SELECT nom, email, pays</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="st">FROM clients</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="st">WHERE pays = 'France'</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>con.execute(query).fetchdf()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<div id="cell-15" class="cell">
+<details class="code-fold">
+<summary>Voir le code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ORDER BY + LIMIT</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"""</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="st">SELECT nom, montant, date_commande</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="st">FROM commandes</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="st">JOIN clients ON clients.id_client = commandes.id_client</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="st">ORDER BY montant DESC</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="st">LIMIT 3</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" Top 3 des commandes les plus chères :"</span>)</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>con.execute(query).fetchdf()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<hr>
+</section>
+</section>
+<section id="agrégations-count-sum-avg-min-max" class="level2">
+<h2 class="anchored" data-anchor-id="agrégations-count-sum-avg-min-max">2. Agrégations — COUNT, SUM, AVG, MIN, MAX</h2>
+<div id="cell-17" class="cell">
+<details class="code-fold">
+<summary>Voir le code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># COUNT — Compter les lignes</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"SELECT COUNT(*) AS nb_clients FROM clients"</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>con.execute(query).fetchdf()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<div id="cell-18" class="cell">
+<details class="code-fold">
+<summary>Voir le code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># SUM, AVG, MIN, MAX</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"""</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="st">SELECT </span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="st">    COUNT(*) AS nb_commandes,</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="st">    SUM(montant) AS total,</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="st">    AVG(montant) AS moyenne,</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="st">    MIN(montant) AS min,</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="st">    MAX(montant) AS max</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="st">FROM commandes</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>con.execute(query).fetchdf()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<hr>
+</section>
+<section id="group-by-regrouper-les-données" class="level2">
+<h2 class="anchored" data-anchor-id="group-by-regrouper-les-données">3. GROUP BY — Regrouper les données</h2>
+<div id="cell-20" class="cell">
+<details class="code-fold">
+<summary>Voir le code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># GROUP BY — Nombre de clients par pays</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"""</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="st">SELECT pays, COUNT(*) AS nb_clients</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="st">FROM clients</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="st">GROUP BY pays</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="st">ORDER BY nb_clients DESC</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>con.execute(query).fetchdf()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<div id="cell-21" class="cell">
+<details class="code-fold">
+<summary>Voir le code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Total des achats par client</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"""</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="st">SELECT c.nom, SUM(cmd.montant) AS total_achats</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="st">FROM clients c</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="st">JOIN commandes cmd ON c.id_client = cmd.id_client</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="st">GROUP BY c.nom</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="st">ORDER BY total_achats DESC</span></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>con.execute(query).fetchdf()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<div id="cell-22" class="cell">
+<details class="code-fold">
+<summary>Voir le code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># HAVING — Filtrer après agrégation</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Clients ayant dépensé plus de 100€</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"""</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="st">SELECT c.nom, SUM(cmd.montant) AS total_achats</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="st">FROM clients c</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="st">JOIN commandes cmd ON c.id_client = cmd.id_client</span></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="st">GROUP BY c.nom</span></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a><span class="st">HAVING SUM(cmd.montant) &gt; 100</span></span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="st">ORDER BY total_achats DESC</span></span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"🏆 Clients ayant dépensé plus de 100€ :"</span>)</span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>con.execute(query).fetchdf()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<hr>
+</section>
+<section id="join-combiner-les-tables" class="level2">
+<h2 class="anchored" data-anchor-id="join-combiner-les-tables">4. JOIN — Combiner les tables</h2>
+<pre><code>┌──────────────────────────────────────────────────────────────────┐
+│ INNER JOIN (JOIN)         │ Seulement les correspondances      │
+│ A ∩ B                      │                                    │
+├──────────────────────────────────────────────────────────────────┤
+│ LEFT JOIN                 │ Tout A + correspondances B         │
+│ A + (A ∩ B)               │ (NULL si pas de correspondance)    │
+├──────────────────────────────────────────────────────────────────┤
+│ RIGHT JOIN                │ Tout B + correspondances A         │
+│ B + (A ∩ B)               │                                    │
+├──────────────────────────────────────────────────────────────────┤
+│ FULL OUTER JOIN           │ Tout A + Tout B                    │
+│ A ∪ B                      │                                    │
+└──────────────────────────────────────────────────────────────────┘</code></pre>
+<div id="cell-24" class="cell">
+<details class="code-fold">
+<summary>Voir le code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># INNER JOIN — Clients avec leurs commandes</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"""</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="st">SELECT c.nom, cmd.produit, cmd.montant</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="st">FROM clients c</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="st">JOIN commandes cmd ON c.id_client = cmd.id_client</span></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="st">ORDER BY c.nom</span></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>con.execute(query).fetchdf()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<div id="cell-25" class="cell">
+<details class="code-fold">
+<summary>Voir le code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># LEFT JOIN — Tous les clients, même sans commande</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"""</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="st">SELECT c.nom, cmd.produit, cmd.montant</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="st">FROM clients c</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="st">LEFT JOIN commandes cmd ON c.id_client = cmd.id_client</span></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a><span class="st">ORDER BY c.nom</span></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"👀 Remarque : Charlie n'a pas de commande (NULL)"</span>)</span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>con.execute(query).fetchdf()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<div id="cell-26" class="cell">
+<details class="code-fold">
+<summary>Voir le code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Trouver les clients sans commande</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"""</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="st">SELECT c.nom, c.email</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="st">FROM clients c</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="st">LEFT JOIN commandes cmd ON c.id_client = cmd.id_client</span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="st">WHERE cmd.id_commande IS NULL</span></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"😴 Clients sans aucune commande :"</span>)</span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>con.execute(query).fetchdf()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<hr>
+</section>
+<section id="fonctions-de-date" class="level2">
+<h2 class="anchored" data-anchor-id="fonctions-de-date">5. Fonctions de date</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 32%">
+<col style="width: 41%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Fonction</th>
+<th>Description</th>
+<th>Exemple</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>CURRENT_DATE</code></td>
+<td>Date du jour</td>
+<td><code>2024-01-15</code></td>
+</tr>
+<tr class="even">
+<td><code>EXTRACT()</code></td>
+<td>Extraire une partie</td>
+<td><code>EXTRACT(YEAR FROM date)</code> → <code>2024</code></td>
+</tr>
+<tr class="odd">
+<td><code>DATE_TRUNC()</code></td>
+<td>Tronquer à une période</td>
+<td><code>DATE_TRUNC('month', date)</code> → <code>2024-01-01</code></td>
+</tr>
+<tr class="even">
+<td><code>DATE_DIFF()</code></td>
+<td>Différence entre dates</td>
+<td><code>DATE_DIFF('day', date1, date2)</code></td>
+</tr>
+</tbody>
+</table>
+<div id="cell-28" class="cell">
+<details class="code-fold">
+<summary>Voir le code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ventes par mois</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"""</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="st">SELECT </span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="st">    DATE_TRUNC('month', date_commande) AS mois,</span></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a><span class="st">    SUM(montant) AS total_ventes,</span></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a><span class="st">    COUNT(*) AS nb_commandes</span></span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a><span class="st">FROM commandes</span></span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a><span class="st">GROUP BY DATE_TRUNC('month', date_commande)</span></span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a><span class="st">ORDER BY mois</span></span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" Ventes mensuelles :"</span>)</span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a>con.execute(query).fetchdf()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<div id="cell-29" class="cell">
+<details class="code-fold">
+<summary>Voir le code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Commandes par jour de la semaine</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"""</span></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="st">SELECT </span></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="st">    EXTRACT(DOW FROM date_commande) AS jour_num,</span></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="st">    CASE EXTRACT(DOW FROM date_commande)</span></span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a><span class="st">        WHEN 0 THEN 'Dimanche'</span></span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a><span class="st">        WHEN 1 THEN 'Lundi'</span></span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a><span class="st">        WHEN 2 THEN 'Mardi'</span></span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a><span class="st">        WHEN 3 THEN 'Mercredi'</span></span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a><span class="st">        WHEN 4 THEN 'Jeudi'</span></span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a><span class="st">        WHEN 5 THEN 'Vendredi'</span></span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a><span class="st">        WHEN 6 THEN 'Samedi'</span></span>
+<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a><span class="st">    END AS jour,</span></span>
+<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a><span class="st">    COUNT(*) AS nb_commandes</span></span>
+<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a><span class="st">FROM commandes</span></span>
+<span id="cb25-16"><a href="#cb25-16" aria-hidden="true" tabindex="-1"></a><span class="st">GROUP BY EXTRACT(DOW FROM date_commande)</span></span>
+<span id="cb25-17"><a href="#cb25-17" aria-hidden="true" tabindex="-1"></a><span class="st">ORDER BY jour_num</span></span>
+<span id="cb25-18"><a href="#cb25-18" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
+<span id="cb25-19"><a href="#cb25-19" aria-hidden="true" tabindex="-1"></a>con.execute(query).fetchdf()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<hr>
+</section>
+<section id="case-conditions-dans-les-requêtes" class="level2">
+<h2 class="anchored" data-anchor-id="case-conditions-dans-les-requêtes">6. CASE — Conditions dans les requêtes</h2>
+<div id="cell-31" class="cell">
+<details class="code-fold">
+<summary>Voir le code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># CASE — Catégoriser les clients</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"""</span></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="st">SELECT </span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="st">    c.nom,</span></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="st">    SUM(cmd.montant) AS total_achats,</span></span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a><span class="st">    CASE</span></span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a><span class="st">        WHEN SUM(cmd.montant) &gt;= 150 THEN '🥇 Premium'</span></span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a><span class="st">        WHEN SUM(cmd.montant) &gt;= 100 THEN '🥈 Standard'</span></span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a><span class="st">        ELSE '🥉 Basique'</span></span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a><span class="st">    END AS categorie</span></span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a><span class="st">FROM clients c</span></span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a><span class="st">JOIN commandes cmd ON c.id_client = cmd.id_client</span></span>
+<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a><span class="st">GROUP BY c.nom</span></span>
+<span id="cb26-14"><a href="#cb26-14" aria-hidden="true" tabindex="-1"></a><span class="st">ORDER BY total_achats DESC</span></span>
+<span id="cb26-15"><a href="#cb26-15" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
+<span id="cb26-16"><a href="#cb26-16" aria-hidden="true" tabindex="-1"></a>con.execute(query).fetchdf()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<hr>
+</section>
+<section id="cte-common-table-expression-requêtes-lisibles" class="level2">
+<h2 class="anchored" data-anchor-id="cte-common-table-expression-requêtes-lisibles">7. CTE (Common Table Expression) — Requêtes lisibles</h2>
+<p>Les <strong>CTEs</strong> permettent de créer des “tables temporaires” pour clarifier les requêtes complexes.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="kw">WITH</span> nom_cte <span class="kw">AS</span> (</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">SELECT</span> <span class="op">..</span>.</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> nom_cte;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="cell-33" class="cell">
+<details class="code-fold">
+<summary>Voir le code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># CTE — Calcul intermédiaire réutilisable</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"""</span></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="st">WITH total_par_client AS (</span></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="st">    SELECT </span></span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="st">        c.id_client,</span></span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a><span class="st">        c.nom,</span></span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a><span class="st">        c.pays,</span></span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a><span class="st">        SUM(cmd.montant) AS total</span></span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a><span class="st">    FROM clients c</span></span>
+<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a><span class="st">    JOIN commandes cmd ON c.id_client = cmd.id_client</span></span>
+<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a><span class="st">    GROUP BY c.id_client, c.nom, c.pays</span></span>
+<span id="cb28-12"><a href="#cb28-12" aria-hidden="true" tabindex="-1"></a><span class="st">)</span></span>
+<span id="cb28-13"><a href="#cb28-13" aria-hidden="true" tabindex="-1"></a><span class="st">SELECT </span></span>
+<span id="cb28-14"><a href="#cb28-14" aria-hidden="true" tabindex="-1"></a><span class="st">    nom,</span></span>
+<span id="cb28-15"><a href="#cb28-15" aria-hidden="true" tabindex="-1"></a><span class="st">    pays,</span></span>
+<span id="cb28-16"><a href="#cb28-16" aria-hidden="true" tabindex="-1"></a><span class="st">    total,</span></span>
+<span id="cb28-17"><a href="#cb28-17" aria-hidden="true" tabindex="-1"></a><span class="st">    CASE WHEN total &gt; 100 THEN '✅ VIP' ELSE '❌' END AS vip</span></span>
+<span id="cb28-18"><a href="#cb28-18" aria-hidden="true" tabindex="-1"></a><span class="st">FROM total_par_client</span></span>
+<span id="cb28-19"><a href="#cb28-19" aria-hidden="true" tabindex="-1"></a><span class="st">ORDER BY total DESC</span></span>
+<span id="cb28-20"><a href="#cb28-20" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
+<span id="cb28-21"><a href="#cb28-21" aria-hidden="true" tabindex="-1"></a>con.execute(query).fetchdf()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<hr>
+</section>
+<section id="window-functions-calculs-avancés" class="level2">
+<h2 class="anchored" data-anchor-id="window-functions-calculs-avancés">8. Window Functions — Calculs avancés</h2>
+<p>Les <strong>Window Functions</strong> permettent de faire des calculs sur un groupe de lignes <strong>sans les regrouper</strong>.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Fonction</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>ROW_NUMBER()</code></td>
+<td>Numéro de ligne</td>
+</tr>
+<tr class="even">
+<td><code>RANK()</code></td>
+<td>Classement (avec ex-aequo)</td>
+</tr>
+<tr class="odd">
+<td><code>DENSE_RANK()</code></td>
+<td>Classement sans saut</td>
+</tr>
+<tr class="even">
+<td><code>LAG()</code></td>
+<td>Valeur de la ligne précédente</td>
+</tr>
+<tr class="odd">
+<td><code>LEAD()</code></td>
+<td>Valeur de la ligne suivante</td>
+</tr>
+<tr class="even">
+<td><code>SUM() OVER()</code></td>
+<td>Somme cumulative</td>
+</tr>
+</tbody>
+</table>
+<div id="cell-35" class="cell">
+<details class="code-fold">
+<summary>Voir le code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># RANK — Classement des clients par total d'achats</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"""</span></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="st">SELECT </span></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="st">    c.nom,</span></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="st">    SUM(cmd.montant) AS total_achats,</span></span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a><span class="st">    RANK() OVER (ORDER BY SUM(cmd.montant) DESC) AS rang</span></span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a><span class="st">FROM clients c</span></span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a><span class="st">JOIN commandes cmd ON c.id_client = cmd.id_client</span></span>
+<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a><span class="st">GROUP BY c.nom</span></span>
+<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
+<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a>con.execute(query).fetchdf()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<div id="cell-36" class="cell">
+<details class="code-fold">
+<summary>Voir le code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># SUM OVER — Total cumulatif</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"""</span></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="st">SELECT </span></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="st">    date_commande,</span></span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a><span class="st">    montant,</span></span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a><span class="st">    SUM(montant) OVER (ORDER BY date_commande) AS cumul</span></span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a><span class="st">FROM commandes</span></span>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a><span class="st">ORDER BY date_commande</span></span>
+<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
+<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" Évolution cumulative des ventes :"</span>)</span>
+<span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a>con.execute(query).fetchdf()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<div id="cell-37" class="cell">
+<details class="code-fold">
+<summary>Voir le code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># LAG — Comparer avec la période précédente</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"""</span></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="st">WITH mensuel AS (</span></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="st">    SELECT </span></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="st">        DATE_TRUNC('month', date_commande) AS mois,</span></span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a><span class="st">        SUM(montant) AS total</span></span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a><span class="st">    FROM commandes</span></span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a><span class="st">    GROUP BY DATE_TRUNC('month', date_commande)</span></span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a><span class="st">)</span></span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a><span class="st">SELECT </span></span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a><span class="st">    mois,</span></span>
+<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a><span class="st">    total,</span></span>
+<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a><span class="st">    LAG(total) OVER (ORDER BY mois) AS total_precedent,</span></span>
+<span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a><span class="st">    total - LAG(total) OVER (ORDER BY mois) AS evolution</span></span>
+<span id="cb31-15"><a href="#cb31-15" aria-hidden="true" tabindex="-1"></a><span class="st">FROM mensuel</span></span>
+<span id="cb31-16"><a href="#cb31-16" aria-hidden="true" tabindex="-1"></a><span class="st">ORDER BY mois</span></span>
+<span id="cb31-17"><a href="#cb31-17" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
+<span id="cb31-18"><a href="#cb31-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" Évolution mensuelle :"</span>)</span>
+<span id="cb31-19"><a href="#cb31-19" aria-hidden="true" tabindex="-1"></a>con.execute(query).fetchdf()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<hr>
+</section>
+<section id="intégration-avec-pandas" class="level2">
+<h2 class="anchored" data-anchor-id="intégration-avec-pandas">9. Intégration avec Pandas</h2>
+<p>DuckDB s’intègre parfaitement avec Pandas !</p>
+<div id="cell-39" class="cell">
+<details class="code-fold">
+<summary>Voir le code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Récupérer le résultat en DataFrame Pandas</span></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"""</span></span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a><span class="st">SELECT c.nom, c.pays, SUM(cmd.montant) AS total</span></span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a><span class="st">FROM clients c</span></span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a><span class="st">JOIN commandes cmd ON c.id_client = cmd.id_client</span></span>
+<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a><span class="st">GROUP BY c.nom, c.pays</span></span>
+<span id="cb32-9"><a href="#cb32-9" aria-hidden="true" tabindex="-1"></a><span class="st">ORDER BY total DESC</span></span>
+<span id="cb32-10"><a href="#cb32-10" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
+<span id="cb32-11"><a href="#cb32-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-12"><a href="#cb32-12" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> con.execute(query).fetchdf()</span>
+<span id="cb32-13"><a href="#cb32-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(df))  <span class="co"># C'est un DataFrame Pandas !</span></span>
+<span id="cb32-14"><a href="#cb32-14" aria-hidden="true" tabindex="-1"></a>df</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<div id="cell-40" class="cell">
+<details class="code-fold">
+<summary>Voir le code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Requêter directement un DataFrame Pandas avec SQL !</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>df_exemple <span class="op">=</span> pd.DataFrame({</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'produit'</span>: [<span class="st">'A'</span>, <span class="st">'B'</span>, <span class="st">'C'</span>, <span class="st">'A'</span>, <span class="st">'B'</span>],</span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'ventes'</span>: [<span class="dv">100</span>, <span class="dv">200</span>, <span class="dv">150</span>, <span class="dv">120</span>, <span class="dv">180</span>]</span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a><span class="co"># DuckDB peut requêter le DataFrame directement</span></span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> duckdb.query(<span class="st">"""</span></span>
+<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a><span class="st">    SELECT produit, SUM(ventes) AS total</span></span>
+<span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a><span class="st">    FROM df_exemple</span></span>
+<span id="cb33-11"><a href="#cb33-11" aria-hidden="true" tabindex="-1"></a><span class="st">    GROUP BY produit</span></span>
+<span id="cb33-12"><a href="#cb33-12" aria-hidden="true" tabindex="-1"></a><span class="st">    ORDER BY total DESC</span></span>
+<span id="cb33-13"><a href="#cb33-13" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span>).fetchdf()</span>
+<span id="cb33-14"><a href="#cb33-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-15"><a href="#cb33-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"SQL directement sur un DataFrame Pandas :"</span>)</span>
+<span id="cb33-16"><a href="#cb33-16" aria-hidden="true" tabindex="-1"></a>result</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<div id="cell-41" class="cell">
+<details class="code-fold">
+<summary>Voir le code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># DuckDB peut aussi lire directement des fichiers CSV/Parquet</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Exemple (si tu as un fichier) :</span></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="co"># duckdb.query("SELECT * FROM 'mon_fichier.csv' LIMIT 10")</span></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a><span class="co"># duckdb.query("SELECT * FROM 'data.parquet' WHERE date &gt; '2024-01-01'")</span></span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"💡 DuckDB peut lire directement :"</span>)</span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"   - CSV  : SELECT * FROM 'fichier.csv'"</span>)</span>
+<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"   - Parquet : SELECT * FROM 'fichier.parquet'"</span>)</span>
+<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"   - JSON : SELECT * FROM 'fichier.json'"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<hr>
+</section>
+<section id="exercices-pratiques" class="level2">
+<h2 class="anchored" data-anchor-id="exercices-pratiques">10. Exercices pratiques</h2>
+<p>Essaie de résoudre ces exercices dans les cellules de code ci-dessous !</p>
+<hr>
+<section id="exercice-1-facile" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-1-facile">Exercice 1 — Facile</h3>
+<p>Afficher tous les clients de France, triés par nom.</p>
+<details>
+<summary>
+💡 Solution
+</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb35"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> clients <span class="kw">WHERE</span> pays <span class="op">=</span> <span class="st">'France'</span> <span class="kw">ORDER</span> <span class="kw">BY</span> nom;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<hr>
+</section>
+<section id="exercice-2-facile" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-2-facile">Exercice 2 — Facile</h3>
+<p>Calculer le montant moyen des commandes.</p>
+<details>
+<summary>
+💡 Solution
+</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb36"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="fu">AVG</span>(montant) <span class="kw">AS</span> montant_moyen <span class="kw">FROM</span> commandes;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<hr>
+</section>
+<section id="exercice-3-intermédiaire" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-3-intermédiaire">Exercice 3 — Intermédiaire</h3>
+<p>Afficher le total des achats par client, y compris ceux sans commande (afficher 0).</p>
+<details>
+<summary>
+💡 Solution
+</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb37"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> c.nom, <span class="fu">COALESCE</span>(<span class="fu">SUM</span>(cmd.montant), <span class="dv">0</span>) <span class="kw">AS</span> total</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> clients c</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="kw">LEFT</span> <span class="kw">JOIN</span> commandes cmd <span class="kw">ON</span> c.id_client <span class="op">=</span> cmd.id_client</span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> c.nom</span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> total <span class="kw">DESC</span>;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<hr>
+</section>
+<section id="exercice-4-intermédiaire" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-4-intermédiaire">Exercice 4 — Intermédiaire</h3>
+<p>Calculer les ventes par mois avec <code>DATE_TRUNC</code>.</p>
+<details>
+<summary>
+💡 Solution
+</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb38"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> DATE_TRUNC(<span class="st">'month'</span>, date_commande) <span class="kw">AS</span> mois, <span class="fu">SUM</span>(montant) <span class="kw">AS</span> total</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> commandes</span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> DATE_TRUNC(<span class="st">'month'</span>, date_commande)</span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> mois;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<hr>
+</section>
+<section id="exercice-5-avancé" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-5-avancé">Exercice 5 — Avancé</h3>
+<p>Pour chaque client, afficher sa dernière commande (produit et date). <em>Indice : ROW_NUMBER()</em></p>
+<details>
+<summary>
+💡 Solution
+</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb39"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="kw">WITH</span> derniere <span class="kw">AS</span> (</span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">SELECT</span> c.nom, cmd.produit, cmd.date_commande,</span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>        <span class="fu">ROW_NUMBER</span>() <span class="kw">OVER</span> (<span class="kw">PARTITION</span> <span class="kw">BY</span> c.id_client <span class="kw">ORDER</span> <span class="kw">BY</span> cmd.date_commande <span class="kw">DESC</span>) <span class="kw">AS</span> rn</span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">FROM</span> clients c</span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">JOIN</span> commandes cmd <span class="kw">ON</span> c.id_client <span class="op">=</span> cmd.id_client</span>
+<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> nom, produit, date_commande <span class="kw">FROM</span> derniere <span class="kw">WHERE</span> rn <span class="op">=</span> <span class="dv">1</span>;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div id="cell-43" class="cell">
+<details class="code-fold">
+<summary>Voir le code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ✏️ Espace pour tes exercices</span></span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"""</span></span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a><span class="st">-- Écris ta requête ici</span></span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a><span class="st">SELECT * FROM clients LIMIT 5</span></span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
+<span id="cb40-6"><a href="#cb40-6" aria-hidden="true" tabindex="-1"></a>con.execute(query).fetchdf()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<hr>
+</section>
+</section>
+<section id="quiz" class="level2">
+<h2 class="anchored" data-anchor-id="quiz">Quiz</h2>
+<hr>
+<section id="q1.-quelle-commande-affiche-toutes-les-colonnes-dune-table-clients" class="level3">
+<h3 class="anchored" data-anchor-id="q1.-quelle-commande-affiche-toutes-les-colonnes-dune-table-clients">❓ Q1. Quelle commande affiche toutes les colonnes d’une table <code>clients</code> ?</h3>
+<ol type="a">
+<li><code>SHOW * FROM clients;</code><br>
+</li>
+<li><code>SELECT * FROM clients;</code><br>
+</li>
+<li><code>LIST * FROM clients;</code><br>
+</li>
+<li><code>DISPLAY * FROM clients;</code></li>
+</ol>
+<details>
+<summary>
+💡 Réponse
+</summary>
+✅ <strong>b</strong> — <code>SELECT * FROM clients;</code> affiche toutes les colonnes.
+</details>
+<hr>
+</section>
+<section id="q2.-quelle-est-la-différence-entre-where-et-having" class="level3">
+<h3 class="anchored" data-anchor-id="q2.-quelle-est-la-différence-entre-where-et-having">❓ Q2. Quelle est la différence entre <code>WHERE</code> et <code>HAVING</code> ?</h3>
+<ol type="a">
+<li>Aucune différence<br>
+</li>
+<li><code>WHERE</code> s’utilise avant <code>GROUP BY</code>, <code>HAVING</code> après<br>
+</li>
+<li><code>HAVING</code> est plus rapide<br>
+</li>
+<li><code>WHERE</code> ne peut filtrer que les nombres</li>
+</ol>
+<details>
+<summary>
+💡 Réponse
+</summary>
+✅ <strong>b</strong> — <code>WHERE</code> filtre avant agrégation, <code>HAVING</code> filtre après.
+</details>
+<hr>
+</section>
+<section id="q3.-quel-join-retourne-uniquement-les-lignes-qui-ont-une-correspondance" class="level3">
+<h3 class="anchored" data-anchor-id="q3.-quel-join-retourne-uniquement-les-lignes-qui-ont-une-correspondance">❓ Q3. Quel JOIN retourne UNIQUEMENT les lignes qui ont une correspondance ?</h3>
+<ol type="a">
+<li><code>LEFT JOIN</code><br>
+</li>
+<li><code>RIGHT JOIN</code><br>
+</li>
+<li><code>INNER JOIN</code><br>
+</li>
+<li><code>FULL OUTER JOIN</code></li>
+</ol>
+<details>
+<summary>
+💡 Réponse
+</summary>
+✅ <strong>c</strong> — <code>INNER JOIN</code> ne garde que les correspondances.
+</details>
+<hr>
+</section>
+<section id="q4.-à-quoi-sert-une-cte-with" class="level3">
+<h3 class="anchored" data-anchor-id="q4.-à-quoi-sert-une-cte-with">❓ Q4. À quoi sert une CTE (<code>WITH</code>) ?</h3>
+<ol type="a">
+<li>Créer une table permanente<br>
+</li>
+<li>Définir une sous-requête réutilisable<br>
+</li>
+<li>Supprimer des données<br>
+</li>
+<li>Créer un index</li>
+</ol>
+<details>
+<summary>
+💡 Réponse
+</summary>
+✅ <strong>b</strong> — Les CTEs créent des “tables temporaires” pour clarifier les requêtes.
+</details>
+<hr>
+</section>
+<section id="q5.-quelle-window-function-permet-de-classer-les-lignes" class="level3">
+<h3 class="anchored" data-anchor-id="q5.-quelle-window-function-permet-de-classer-les-lignes">❓ Q5. Quelle Window Function permet de classer les lignes ?</h3>
+<ol type="a">
+<li><code>COUNT()</code><br>
+</li>
+<li><code>RANK()</code><br>
+</li>
+<li><code>SUM()</code><br>
+</li>
+<li><code>GROUP BY</code></li>
+</ol>
+<details>
+<summary>
+💡 Réponse
+</summary>
+✅ <strong>b</strong> — <code>RANK() OVER (ORDER BY ...)</code> attribue un classement.
+</details>
+<hr>
+</section>
+<section id="q6.-quel-avantage-de-duckdb-pour-un-data-engineer" class="level3">
+<h3 class="anchored" data-anchor-id="q6.-quel-avantage-de-duckdb-pour-un-data-engineer">❓ Q6. Quel avantage de DuckDB pour un Data Engineer ?</h3>
+<ol type="a">
+<li>Il nécessite un serveur<br>
+</li>
+<li>Il peut requêter directement des DataFrames Pandas<br>
+</li>
+<li>Il ne supporte pas SQL standard<br>
+</li>
+<li>Il ne lit pas les fichiers CSV</li>
+</ol>
+<details>
+<summary>
+💡 Réponse
+</summary>
+✅ <strong>b</strong> — DuckDB peut requêter directement des DataFrames Pandas avec SQL.
+</details>
+<hr>
+</section>
+</section>
+<section id="ressources" class="level2">
+<h2 class="anchored" data-anchor-id="ressources">📚 Ressources</h2>
+<section id="pratiquer-sql-en-ligne" class="level3">
+<h3 class="anchored" data-anchor-id="pratiquer-sql-en-ligne">🎮 Pratiquer SQL en ligne</h3>
+<ul>
+<li><a href="https://sqlbolt.com/">SQLBolt</a> — Tutoriel interactif</li>
+<li><a href="https://mode.com/sql-tutorial/">Mode SQL Tutorial</a> — Cas business réels</li>
+<li><a href="https://leetcode.com/problemset/database/">LeetCode SQL</a> — Défis progressifs</li>
+<li><a href="https://www.hackerrank.com/domains/sql">HackerRank SQL</a> — Exercices variés</li>
+</ul>
+</section>
+<section id="duckdb" class="level3">
+<h3 class="anchored" data-anchor-id="duckdb">🦆 DuckDB</h3>
+<ul>
+<li><a href="https://duckdb.org/docs/">DuckDB Documentation</a></li>
+<li><a href="https://duckdb.org/docs/sql/introduction">DuckDB SQL Reference</a></li>
+</ul>
+</section>
+<section id="documentation-sql" class="level3">
+<h3 class="anchored" data-anchor-id="documentation-sql">📖 Documentation SQL</h3>
+<ul>
+<li><a href="https://www.postgresql.org/docs/current/sql.html">PostgreSQL Documentation</a></li>
+<li><a href="https://www.w3schools.com/sql/">W3Schools SQL</a></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="prochaine-étape" class="level2">
+<h2 class="anchored" data-anchor-id="prochaine-étape">➡️ Prochaine étape</h2>
+<p>Tu maîtrises maintenant SQL et sais l’exécuter depuis Python ! Découvrons les concepts du <strong>Big Data</strong> et les bases <strong>NoSQL</strong>.</p>
+<p>👉 <strong>Module suivant : <code>08_intro_big_data_nosql</code></strong> — Big Data, traitement distribué et NoSQL</p>
+<hr>
+<p>🎉 <strong>Félicitations !</strong> Tu as terminé le module SQL pour Data Engineers.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<!-- ===== Floating PDF Download Button ===== -->
+
+<style>
+#pdf-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #00b4d8;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 9999;
+  transition: 0.2s ease-in-out;
+}
+#pdf-button:hover {
+  background: #0077b6;
+}
+</style>
+
+<div id="pdf-button" onclick="downloadPDF()">
+  📄 Télécharger la version PDF
+</div>
+
+<script>
+function downloadPDF() {
+  window.print(); // fonctionne directement dans Quarto HTML
+}
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/diakite-data\.github\.io\/data-engineering-bootcamp");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<input type="hidden" id="giscus-base-theme" value="preferred_color_scheme">
+<input type="hidden" id="giscus-alt-theme" value="preferred_color_scheme">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      if (authorPrefersDark) {
+          [baseTheme, altTheme] = [altTheme, baseTheme];
+      }
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "diakite-data/data-engineering-bootcamp";
+    script.dataset.repoId = "R_kgDOQjHMsg";
+    script.dataset.category = "General";
+    script.dataset.categoryId = "DIC_kwDOQjHMss4CzeOO";
+    script.dataset.mapping = "pathname";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "top";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "fr";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2025 Bootcamp Data Engineering · From Zero to Hero</p>
+</div>   
+    <div class="nav-footer-center">
+<p>Fait avec ❤️ par DIAKITE M. YOUSSOUF</p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/diakite-data/data-engineering-bootcamp/blob/main/notebooks/beginner/07_sql_for_data_engineers.ipynb" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/diakite-data/data-engineering-bootcamp/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.dev/diakite-data/data-engineering-bootcamp/blob/main/notebooks/beginner/07_sql_for_data_engineers.ipynb" class="toc-action"><i class="bi empty"></i>Edit this page</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/diakite-data/data-engineering-bootcamp">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://linkedin.com/in/diakite-data">
+      <i class="bi bi-linkedin" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
