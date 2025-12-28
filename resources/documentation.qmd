@@ -1,195 +1,256 @@
 ---
 title: "📖 Documentation"
-subtitle: "Ressources et documentation officielle"
+subtitle: "Ressources et documentation officielle par niveau"
 ---
 
-## 📚 Documentation Officielle par Technologie
-
-### 🐍 Python & Data Processing
-
-| Technologie | Documentation | Notes |
-|-------------|---------------|-------|
-| **Python** | [docs.python.org](https://docs.python.org/3/) | Référence complète |
-| **Pandas** | [pandas.pydata.org](https://pandas.pydata.org/docs/) | Manipulation de données |
-| **Polars** | [pola.rs](https://docs.pola.rs/) | Alternative haute performance |
-| **NumPy** | [numpy.org](https://numpy.org/doc/) | Calcul scientifique |
+::: {.callout-tip}
+## 📌 Organisation par niveau
+Cette page liste les documentations officielles organisées par niveau du bootcamp. Consultez-les au fur et à mesure de votre progression.
+:::
 
 ---
 
-### ⚡ Apache Spark
+# 🟦 Niveau 1 : Débutant
 
-| Ressource | Lien | Description |
-|-----------|------|-------------|
-| **Documentation officielle** | [spark.apache.org/docs](https://spark.apache.org/docs/latest/) | Guide complet |
-| **PySpark API** | [spark.apache.org/docs/latest/api/python](https://spark.apache.org/docs/latest/api/python/) | Référence API Python |
-| **Spark SQL Guide** | [spark.apache.org/docs/latest/sql-programming-guide](https://spark.apache.org/docs/latest/sql-programming-guide.html) | Guide SQL |
-| **Structured Streaming** | [spark.apache.org/docs/latest/structured-streaming](https://spark.apache.org/docs/latest/structured-streaming-programming-guide.html) | Streaming guide |
+## 🐍 Python & Data Processing
 
-**Livres recommandés** :
+| Technologie | Documentation | Module associé |
+|-------------|---------------|----------------|
+| **Python** | [docs.python.org](https://docs.python.org/3/) | [04 - Python Fondamental](notebooks/beginner/04_python_basics_for_data_engineers.ipynb) |
+| **Pandas** | [pandas.pydata.org/docs](https://pandas.pydata.org/docs/) | [05 - Python Data Processing](notebooks/beginner/05_python_data_processing_for_data_engineers.ipynb) |
+| **NumPy** | [numpy.org/doc](https://numpy.org/doc/) | [05 - Python Data Processing](notebooks/beginner/05_python_data_processing_for_data_engineers.ipynb) |
 
-- *Learning Spark, 2nd Edition* — O'Reilly
-- *Spark: The Definitive Guide* — O'Reilly
+## 🗄️ Bases de Données & SQL
 
----
+| Technologie | Documentation | Module associé |
+|-------------|---------------|----------------|
+| **PostgreSQL** | [postgresql.org/docs](https://www.postgresql.org/docs/) | [06 - Intro BDD](notebooks/beginner/06_intro_relational_databases.ipynb) |
+| **SQL Tutorial** | [w3schools.com/sql](https://www.w3schools.com/sql/) | [07 - SQL](notebooks/beginner/07_sql_for_data_engineers.ipynb) |
+| **MongoDB** | [mongodb.com/docs](https://www.mongodb.com/docs/) | [09 - MongoDB](notebooks/beginner/09_mongodb_for_data_engineers.ipynb) |
+| **Elasticsearch** | [elastic.co/guide](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html) | [10 - Elasticsearch](notebooks/beginner/10_elasticsearch_for_data_engineers.ipynb) |
 
-### 🏠 Lakehouse & Table Formats
+## 🔧 Outils Fondamentaux
 
-| Format | Documentation | GitHub |
-|--------|---------------|--------|
-| **Delta Lake** | [docs.delta.io](https://docs.delta.io/) | [delta-io/delta](https://github.com/delta-io/delta) |
-| **Apache Iceberg** | [iceberg.apache.org](https://iceberg.apache.org/docs/latest/) | [apache/iceberg](https://github.com/apache/iceberg) |
-| **Apache Hudi** | [hudi.apache.org](https://hudi.apache.org/docs/overview) | [apache/hudi](https://github.com/apache/hudi) |
+| Technologie | Documentation | Module associé |
+|-------------|---------------|----------------|
+| **Git** | [git-scm.com/doc](https://git-scm.com/doc) | [03 - Git & Versioning](notebooks/beginner/03_git_for_data_engineers.ipynb) |
+| **Bash** | [gnu.org/software/bash/manual](https://www.gnu.org/software/bash/manual/) | [02 - Linux & Bash](notebooks/beginner/02_bash_for_data_engineers.ipynb) |
+| **FastAPI** | [fastapi.tiangolo.com](https://fastapi.tiangolo.com/) | [13 - FastAPI](notebooks/beginner/13_fastapi_for_data_engineers.ipynb) |
 
----
+## ⚡ Introduction Spark
 
-### 📨 Streaming & Messaging
-
-| Technologie | Documentation | Notes |
-|-------------|---------------|-------|
-| **Apache Kafka** | [kafka.apache.org/documentation](https://kafka.apache.org/documentation/) | Message broker |
-| **Confluent** | [docs.confluent.io](https://docs.confluent.io/) | Kafka enterprise |
-| **Apache Flink** | [flink.apache.org/docs](https://nightlies.apache.org/flink/flink-docs-stable/) | Stream processing |
-| **Debezium** | [debezium.io/documentation](https://debezium.io/documentation/) | CDC |
-
----
-
-### 🐳 Containers & Orchestration
-
-| Technologie | Documentation | Cheatsheet |
-|-------------|---------------|------------|
-| **Docker** | [docs.docker.com](https://docs.docker.com/) | [Docker Cheatsheet](https://dockerlabs.collabnix.com/docker/cheatsheet/) |
-| **Kubernetes** | [kubernetes.io/docs](https://kubernetes.io/docs/home/) | [kubectl Cheatsheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/) |
-| **Helm** | [helm.sh/docs](https://helm.sh/docs/) | Package manager K8s |
-| **ArgoCD** | [argo-cd.readthedocs.io](https://argo-cd.readthedocs.io/) | GitOps |
+| Ressource | Lien | Module associé |
+|-----------|------|----------------|
+| **PySpark Quickstart** | [spark.apache.org/docs/latest/api/python/getting_started](https://spark.apache.org/docs/latest/api/python/getting_started/index.html) | [11 - Intro PySpark](notebooks/beginner/11_pyspark_for_data_engineering.ipynb) |
+| **DataFrame Guide** | [spark.apache.org/docs/latest/sql-programming-guide](https://spark.apache.org/docs/latest/sql-programming-guide.html) | [11 - Intro PySpark](notebooks/beginner/11_pyspark_for_data_engineering.ipynb) |
 
 ---
 
-### 🔄 Orchestration & ETL
+# 🟩 Niveau 2 : Intermédiaire
 
-| Technologie | Documentation | Notes |
-|-------------|---------------|-------|
-| **Apache Airflow** | [airflow.apache.org/docs](https://airflow.apache.org/docs/) | Orchestration |
-| **dbt** | [docs.getdbt.com](https://docs.getdbt.com/) | Transformation |
-| **Great Expectations** | [docs.greatexpectations.io](https://docs.greatexpectations.io/) | Data Quality |
-| **Dagster** | [docs.dagster.io](https://docs.dagster.io/) | Alternative moderne |
+## 🐳 Containers & Kubernetes
+
+| Technologie | Documentation | Cheatsheet | Module associé |
+|-------------|---------------|------------|----------------|
+| **Docker** | [docs.docker.com](https://docs.docker.com/) | [Cheatsheet](https://dockerlabs.collabnix.com/docker/cheatsheet/) | [14 - Docker](notebooks/intermediate/14_docker_for_data_engineers.ipynb) |
+| **Kubernetes** | [kubernetes.io/docs](https://kubernetes.io/docs/home/) | [kubectl Cheatsheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/) | [15 - K8s Fundamentals](notebooks/intermediate/15_kubernetes_fundamentals.ipynb) |
+| **Spark Operator** | [github.com/kubeflow/spark-operator](https://github.com/kubeflow/spark-operator) | - | [21 - Spark on K8s](notebooks/intermediate/21_spark_on_kubernetes.ipynb) |
+
+## 🚀 High Performance Python
+
+| Technologie | Documentation | Module associé |
+|-------------|---------------|----------------|
+| **Polars** | [docs.pola.rs](https://docs.pola.rs/) | [17 - Polars](notebooks/intermediate/17_polars_for_data_engineering.ipynb) |
+| **PyArrow** | [arrow.apache.org/docs/python](https://arrow.apache.org/docs/python/) | [17 - Polars](notebooks/intermediate/17_polars_for_data_engineering.ipynb) |
+
+## ⚡ Apache Spark Avancé
+
+| Ressource | Lien | Module associé |
+|-----------|------|----------------|
+| **Spark Documentation** | [spark.apache.org/docs/latest](https://spark.apache.org/docs/latest/) | [19 - PySpark Avancé](notebooks/intermediate/19_pyspark_advanced.ipynb) |
+| **PySpark API Reference** | [spark.apache.org/docs/latest/api/python](https://spark.apache.org/docs/latest/api/python/) | [19 - PySpark Avancé](notebooks/intermediate/19_pyspark_advanced.ipynb) |
+| **Spark SQL Guide** | [spark.apache.org/docs/latest/sql-ref](https://spark.apache.org/docs/latest/sql-ref.html) | [20 - Spark SQL Deep Dive](notebooks/intermediate/20_spark_sql_deep_dive.ipynb) |
+| **Performance Tuning** | [spark.apache.org/docs/latest/sql-performance-tuning](https://spark.apache.org/docs/latest/sql-performance-tuning.html) | [20 - Spark SQL Deep Dive](notebooks/intermediate/20_spark_sql_deep_dive.ipynb) |
+
+## 🏠 Lakehouse & Table Formats
+
+| Format | Documentation | GitHub | Module associé |
+|--------|---------------|--------|----------------|
+| **Delta Lake** | [docs.delta.io](https://docs.delta.io/) | [delta-io/delta](https://github.com/delta-io/delta) | [23 - Table Formats](notebooks/intermediate/23_table_formats_delta_iceberg.ipynb) |
+| **Apache Iceberg** | [iceberg.apache.org/docs](https://iceberg.apache.org/docs/latest/) | [apache/iceberg](https://github.com/apache/iceberg) | [23 - Table Formats](notebooks/intermediate/23_table_formats_delta_iceberg.ipynb) |
+| **Apache Hudi** | [hudi.apache.org/docs](https://hudi.apache.org/docs/overview) | [apache/hudi](https://github.com/apache/hudi) | - |
+
+## 📨 Streaming & Messaging
+
+| Technologie | Documentation | Module associé |
+|-------------|---------------|----------------|
+| **Apache Kafka** | [kafka.apache.org/documentation](https://kafka.apache.org/documentation/) | [24 - Kafka & Streaming](notebooks/intermediate/24_kafka_streaming.ipynb) |
+| **Confluent Platform** | [docs.confluent.io](https://docs.confluent.io/) | [24 - Kafka & Streaming](notebooks/intermediate/24_kafka_streaming.ipynb) |
+| **kafka-python** | [kafka-python.readthedocs.io](https://kafka-python.readthedocs.io/) | [24 - Kafka & Streaming](notebooks/intermediate/24_kafka_streaming.ipynb) |
+
+## ☁️ Cloud Object Storage
+
+| Provider | Documentation | Module associé |
+|----------|---------------|----------------|
+| **AWS S3** | [docs.aws.amazon.com/s3](https://docs.aws.amazon.com/s3/) | [22 - Cloud Storage](notebooks/intermediate/22_cloud_and_object_storage.ipynb) |
+| **GCP GCS** | [cloud.google.com/storage/docs](https://cloud.google.com/storage/docs) | [22 - Cloud Storage](notebooks/intermediate/22_cloud_and_object_storage.ipynb) |
+| **MinIO** | [min.io/docs](https://min.io/docs/minio/linux/index.html) | [22 - Cloud Storage](notebooks/intermediate/22_cloud_and_object_storage.ipynb) |
+
+## 🔧 Data Quality & Transformation
+
+| Technologie | Documentation | Module associé |
+|-------------|---------------|----------------|
+| **dbt** | [docs.getdbt.com](https://docs.getdbt.com/) | [25 - dbt & Data Quality](notebooks/intermediate/25_dbt_data_quality.ipynb) |
+| **Great Expectations** | [docs.greatexpectations.io](https://docs.greatexpectations.io/) | [25 - dbt & Data Quality](notebooks/intermediate/25_dbt_data_quality.ipynb) |
 
 ---
 
-### ☁️ Cloud Providers
+# 🟥 Niveau 3 : Avancé
 
-| Provider | Documentation Data | Services clés |
-|----------|-------------------|---------------|
-| **AWS** | [docs.aws.amazon.com](https://docs.aws.amazon.com/) | S3, EMR, Glue, Redshift |
-| **GCP** | [cloud.google.com/docs](https://cloud.google.com/docs) | GCS, Dataproc, BigQuery |
-| **Azure** | [docs.microsoft.com/azure](https://docs.microsoft.com/en-us/azure/) | Blob, Synapse, Databricks |
+## ☸️ Infrastructure Avancée
 
----
+| Technologie | Documentation | Module associé |
+|-------------|---------------|----------------|
+| **Helm** | [helm.sh/docs](https://helm.sh/docs/) | [27 - K8s Deep Dive](notebooks/advanced/27_kubernetes_deep_dive.ipynb) |
+| **ArgoCD** | [argo-cd.readthedocs.io](https://argo-cd.readthedocs.io/) | [27 - K8s Deep Dive](notebooks/advanced/27_kubernetes_deep_dive.ipynb) |
+| **Kubernetes Operators** | [kubernetes.io/docs/concepts/extend-kubernetes/operator](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/) | [27 - K8s Deep Dive](notebooks/advanced/27_kubernetes_deep_dive.ipynb) |
 
-### 📊 Monitoring & Observability
+## 🔄 Orchestration Avancée
+
+| Technologie | Documentation | Module associé |
+|-------------|---------------|----------------|
+| **Apache Airflow** | [airflow.apache.org/docs](https://airflow.apache.org/docs/) | [28 - Orchestration Avancée](notebooks/advanced/28_advanced_orchestration.ipynb) |
+| **Dagster** | [docs.dagster.io](https://docs.dagster.io/) | [28 - Orchestration Avancée](notebooks/advanced/28_advanced_orchestration.ipynb) |
+| **Prefect** | [docs.prefect.io](https://docs.prefect.io/) | - |
+
+## 📨 Messaging Distribué
+
+| Technologie | Documentation | Module associé |
+|-------------|---------------|----------------|
+| **Kafka Internals** | [kafka.apache.org/documentation/#design](https://kafka.apache.org/documentation/#design) | [29 - Distributed Messaging](notebooks/advanced/29_distributed_messaging.ipynb) |
+| **Apache Pulsar** | [pulsar.apache.org/docs](https://pulsar.apache.org/docs/3.0.x/) | [29 - Distributed Messaging](notebooks/advanced/29_distributed_messaging.ipynb) |
+| **RabbitMQ** | [rabbitmq.com/documentation](https://www.rabbitmq.com/documentation.html) | [29 - Distributed Messaging](notebooks/advanced/29_distributed_messaging.ipynb) |
+| **Debezium** | [debezium.io/documentation](https://debezium.io/documentation/) | [29 - Distributed Messaging](notebooks/advanced/29_distributed_messaging.ipynb) |
+
+## ⚡ Spark & Scala
+
+| Ressource | Lien | Module associé |
+|-----------|------|----------------|
+| **Scala Documentation** | [docs.scala-lang.org](https://docs.scala-lang.org/) | [30 - Spark & Scala](notebooks/advanced/30_spark_scala_deep_dive.ipynb) |
+| **Spark Internals** | [spark.apache.org/docs/latest/rdd-programming-guide](https://spark.apache.org/docs/latest/rdd-programming-guide.html) | [30 - Spark & Scala](notebooks/advanced/30_spark_scala_deep_dive.ipynb) |
+| **Catalyst Optimizer** | [databricks.com/blog/2015/04/13/deep-dive-into-spark-sqls-catalyst-optimizer](https://www.databricks.com/blog/2015/04/13/deep-dive-into-spark-sqls-catalyst-optimizer.html) | [30 - Spark & Scala](notebooks/advanced/30_spark_scala_deep_dive.ipynb) |
+
+## 🤖 MLOps & Feature Engineering
+
+| Technologie | Documentation | Module associé |
+|-------------|---------------|----------------|
+| **MLflow** | [mlflow.org/docs/latest](https://mlflow.org/docs/latest/index.html) | [31 - DE for ML](notebooks/advanced/31_data_engineering_for_ml.ipynb) |
+| **Feast** | [docs.feast.dev](https://docs.feast.dev/) | [31 - DE for ML](notebooks/advanced/31_data_engineering_for_ml.ipynb) |
+| **Tecton** | [docs.tecton.ai](https://docs.tecton.ai/) | [31 - DE for ML](notebooks/advanced/31_data_engineering_for_ml.ipynb) |
+
+## 🏛️ Data Mesh & Governance
+
+| Ressource | Lien | Module associé |
+|-----------|------|----------------|
+| **Data Mesh Principles** | [martinfowler.com/articles/data-mesh-principles](https://martinfowler.com/articles/data-mesh-principles.html) | [32 - Data Mesh](notebooks/advanced/32_data_mesh_contracts.ipynb) |
+| **Data Contracts** | [datacontract.com](https://datacontract.com/) | [32 - Data Mesh](notebooks/advanced/32_data_mesh_contracts.ipynb) |
+| **DataHub** | [datahubproject.io/docs](https://datahubproject.io/docs/) | [32 - Data Mesh](notebooks/advanced/32_data_mesh_contracts.ipynb) |
+| **OpenMetadata** | [docs.open-metadata.org](https://docs.open-metadata.org/) | [32 - Data Mesh](notebooks/advanced/32_data_mesh_contracts.ipynb) |
+
+## 📊 OLAP & Real-time Analytics
+
+| Technologie | Documentation | Module associé |
+|-------------|---------------|----------------|
+| **ClickHouse** | [clickhouse.com/docs](https://clickhouse.com/docs/) | [33 - Realtime OLAP](notebooks/advanced/33_realtime_olap_dashboards.ipynb) |
+| **Apache Druid** | [druid.apache.org/docs/latest](https://druid.apache.org/docs/latest/design/) | [33 - Realtime OLAP](notebooks/advanced/33_realtime_olap_dashboards.ipynb) |
+| **Apache Pinot** | [docs.pinot.apache.org](https://docs.pinot.apache.org/) | [33 - Realtime OLAP](notebooks/advanced/33_realtime_olap_dashboards.ipynb) |
+
+## 📊 Monitoring & Observability
 
 | Outil | Documentation | Usage |
 |-------|---------------|-------|
 | **Prometheus** | [prometheus.io/docs](https://prometheus.io/docs/) | Métriques |
 | **Grafana** | [grafana.com/docs](https://grafana.com/docs/) | Dashboards |
-| **DataHub** | [datahubproject.io/docs](https://datahubproject.io/docs/) | Data Catalog |
+| **OpenTelemetry** | [opentelemetry.io/docs](https://opentelemetry.io/docs/) | Tracing |
 
 ---
 
-## 🎓 Cours & Formations Gratuits
+# 📚 Ressources Transversales
 
-### Plateformes
+## 📖 Livres Essentiels
 
-| Plateforme | Cours recommandés |
-|------------|-------------------|
-| **Coursera** | [Data Engineering on Google Cloud](https://www.coursera.org/professional-certificates/gcp-data-engineering) |
-| **DataCamp** | [Data Engineer Track](https://www.datacamp.com/tracks/data-engineer) |
-| **Udemy** | Spark, Airflow, Kafka courses |
-| **YouTube** | Databricks, Confluent channels |
+::: {.callout-tip}
+## 📌 Top 3 à lire absolument
+1. *Designing Data-Intensive Applications* — Martin Kleppmann
+2. *Fundamentals of Data Engineering* — Joe Reis & Matt Housley
+3. *Learning Spark, 2nd Edition* — Damji et al.
+:::
 
-### Tutoriels officiels
-
-- [dbt Learn](https://courses.getdbt.com/) — Gratuit, certifiant
-- [Kafka Tutorials](https://developer.confluent.io/tutorials/) — Confluent Developer
-- [Databricks Academy](https://www.databricks.com/learn) — Spark & Delta Lake
-
----
-
-## 📝 Blogs & Articles
-
-### Blogs techniques
-
-| Blog | Focus |
-|------|-------|
-| [Databricks Blog](https://www.databricks.com/blog) | Spark, Delta Lake |
-| [Confluent Blog](https://www.confluent.io/blog/) | Kafka, Streaming |
-| [dbt Blog](https://www.getdbt.com/blog/) | Analytics Engineering |
-| [Towards Data Science](https://towardsdatascience.com/) | Data Engineering articles |
-| [Data Engineering Weekly](https://www.dataengineeringweekly.com/) | Newsletter |
-
-### Articles fondamentaux
-
-- [The Modern Data Stack](https://preset.io/blog/modern-data-stack/)
-- [Medallion Architecture](https://www.databricks.com/glossary/medallion-architecture)
-- [Data Mesh Principles](https://martinfowler.com/articles/data-mesh-principles.html)
-- [Lakehouse Architecture](https://www.databricks.com/glossary/data-lakehouse)
+| Livre | Auteur | Niveau | Sujet |
+|-------|--------|--------|-------|
+| *Designing Data-Intensive Applications* | Martin Kleppmann | 🟩🟥 | Architecture distribuée |
+| *Fundamentals of Data Engineering* | Joe Reis & Matt Housley | 🟦🟩 | Vue d'ensemble DE |
+| *Learning Spark, 2nd Edition* | Damji et al. | 🟦🟩 | PySpark |
+| *Spark: The Definitive Guide* | Chambers & Zaharia | 🟩🟥 | Spark avancé |
+| *Data Pipelines Pocket Reference* | James Densmore | 🟦🟩 | Pipelines |
+| *Streaming Systems* | Akidau et al. | 🟥 | Streaming avancé |
+| *The Data Warehouse Toolkit* | Ralph Kimball | 🟩🟥 | Modélisation dimensionnelle |
+| *Building Microservices* | Sam Newman | 🟥 | Architecture |
 
 ---
 
-## 🛠️ Outils Utiles
+## 🎓 Formations Gratuites
 
-### IDEs & Éditeurs
-
-| Outil | Usage | Lien |
-|-------|-------|------|
-| **VS Code** | Développement général | [code.visualstudio.com](https://code.visualstudio.com/) |
-| **PyCharm** | Python IDE | [jetbrains.com/pycharm](https://www.jetbrains.com/pycharm/) |
-| **DataGrip** | SQL IDE | [jetbrains.com/datagrip](https://www.jetbrains.com/datagrip/) |
-| **DBeaver** | SQL gratuit | [dbeaver.io](https://dbeaver.io/) |
-
-### Extensions VS Code recommandées
-
-```
-- Python
-- Jupyter
-- Docker
-- Kubernetes
-- YAML
-- SQL Tools
-- GitLens
-```
+| Plateforme | Cours | Niveau |
+|------------|-------|--------|
+| **dbt Learn** | [courses.getdbt.com](https://courses.getdbt.com/) | 🟩 |
+| **Databricks Academy** | [databricks.com/learn](https://www.databricks.com/learn) | 🟦🟩🟥 |
+| **Confluent Developer** | [developer.confluent.io](https://developer.confluent.io/) | 🟩🟥 |
+| **Data Talks Club** | [datatalks.club](https://datatalks.club/) | 🟦🟩 |
+| **Coursera - GCP DE** | [coursera.org/...gcp-data-engineering](https://www.coursera.org/professional-certificates/gcp-data-engineering) | 🟩 |
 
 ---
 
-## 📖 Livres Recommandés
+## 📝 Blogs & Newsletters
 
-### Essentiels
+| Ressource | Focus | Fréquence |
+|-----------|-------|-----------|
+| [Databricks Blog](https://www.databricks.com/blog) | Spark, Delta Lake, Lakehouse | Hebdo |
+| [Confluent Blog](https://www.confluent.io/blog/) | Kafka, Streaming | Hebdo |
+| [dbt Blog](https://www.getdbt.com/blog/) | Analytics Engineering | Hebdo |
+| [Data Engineering Weekly](https://www.dataengineeringweekly.com/) | Newsletter DE | Hebdo |
+| [Seattle Data Guy](https://www.theseattledataguy.com/) | Carrière, tutoriels | Hebdo |
+| [Start Data Engineering](https://www.startdataengineering.com/) | Tutoriels pratiques | Mensuel |
 
-| Livre | Auteur | Sujet |
-|-------|--------|-------|
-| *Designing Data-Intensive Applications* | Martin Kleppmann | Architecture |
-| *Fundamentals of Data Engineering* | Joe Reis & Matt Housley | Vue d'ensemble |
-| *Data Pipelines Pocket Reference* | James Densmore | Pipelines |
-| *Learning Spark, 2nd Ed* | Damji et al. | Spark |
+---
 
-### Avancés
+## 🛠️ IDEs & Outils
 
-| Livre | Auteur | Sujet |
-|-------|--------|-------|
-| *Streaming Systems* | Akidau et al. | Streaming |
-| *Building Microservices* | Sam Newman | Architecture |
-| *The Data Warehouse Toolkit* | Ralph Kimball | Modélisation |
+| Outil | Usage | Lien | Gratuit |
+|-------|-------|------|---------|
+| **VS Code** | IDE polyvalent | [code.visualstudio.com](https://code.visualstudio.com/) | ✅ |
+| **PyCharm** | Python IDE | [jetbrains.com/pycharm](https://www.jetbrains.com/pycharm/) | ✅ Community |
+| **DataGrip** | SQL IDE | [jetbrains.com/datagrip](https://www.jetbrains.com/datagrip/) | 30j trial |
+| **DBeaver** | SQL gratuit | [dbeaver.io](https://dbeaver.io/) | ✅ |
+| **Postman** | API testing | [postman.com](https://www.postman.com/) | ✅ |
+| **k9s** | Terminal UI K8s | [k9scli.io](https://k9scli.io/) | ✅ |
 
 ---
 
 ## 🔗 Communautés
 
-| Communauté | Plateforme |
-|------------|------------|
-| **Data Engineering** | [r/dataengineering](https://www.reddit.com/r/dataengineering/) |
-| **dbt Community** | [community.getdbt.com](https://community.getdbt.com/) |
-| **Apache Slack** | [the-asf.slack.com](https://the-asf.slack.com/) |
-| **Data Talks Club** | [datatalks.club](https://datatalks.club/) |
+| Communauté | Plateforme | Focus |
+|------------|------------|-------|
+| **r/dataengineering** | [Reddit](https://www.reddit.com/r/dataengineering/) | Discussions générales |
+| **dbt Community** | [Slack](https://community.getdbt.com/) | dbt, Analytics Engineering |
+| **Data Talks Club** | [Slack](https://datatalks.club/slack.html) | Cours, networking |
+| **Apache Slack** | [Slack](https://the-asf.slack.com/) | Projets Apache |
+| **Locally Optimistic** | [Slack](https://locallyoptimistic.com/community/) | Data leaders |
 
 ---
 
-[🔙 Retour à l'accueil](../index.qmd){.btn .btn-secondary}
+<div style="text-align: center; margin: 30px 0;">
+  <a href="index.qmd" style="background: linear-gradient(135deg, #6b7280, #4b5563); color: white; padding: 15px 30px; text-decoration: none; font-size: 16px; border-radius: 10px; font-weight: 600; box-shadow: 0 4px 15px rgba(107, 114, 128, 0.3);">
+    🏠 Retour à l'accueil
+  </a>
+</div>

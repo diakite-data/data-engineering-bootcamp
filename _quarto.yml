@@ -375,14 +375,11 @@ format:
           <meta name="robots" content="index, follow">
           <link rel="canonical" href="https://diakite-data.github.io/data-engineering-bootcamp">
     
-    # Include - After Body (UI components: progress bar, back-to-top)
+    # Include - After Body (Reading progress only - back-to-top handled by Quarto)
     include-after-body:
       - text: |
           <!-- Reading Progress Indicator -->
           <div class="reading-progress" aria-hidden="true"></div>
-          
-          <!-- Back to Top Button -->
-          <button class="back-to-top" aria-label="Retour en haut de page" title="Retour en haut"></button>
           
           <!-- UI Enhancement Script -->
           <script src="/bootcamp-ui.js"></script>
