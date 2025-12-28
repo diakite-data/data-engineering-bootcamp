@@ -82,11 +82,11 @@ ul.task-list li input[type="checkbox"] {
 
 
 <meta property="og:title" content="📖 Documentation – Bootcamp Data Engineering">
-<meta property="og:description" content="Ressources et documentation officielle">
+<meta property="og:description" content="Ressources et documentation officielle par niveau">
 <meta property="og:site_name" content="Bootcamp Data Engineering">
 <meta property="og:locale" content="fr_FR">
 <meta name="twitter:title" content="📖 Documentation – Bootcamp Data Engineering">
-<meta name="twitter:description" content="Ressources et documentation officielle">
+<meta name="twitter:description" content="Ressources et documentation officielle par niveau">
 <meta name="twitter:creator" content="@diakite_data">
 <meta name="twitter:site" content="@diakite_data">
 <meta name="twitter:card" content="summary">
@@ -809,38 +809,42 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">📑 Sommaire</h2>
    
   <ul>
-  <li><a href="#documentation-officielle-par-technologie" id="toc-documentation-officielle-par-technologie" class="nav-link active" data-scroll-target="#documentation-officielle-par-technologie">📚 Documentation Officielle par Technologie</a>
+  <li><a href="#niveau-1-débutant" id="toc-niveau-1-débutant" class="nav-link active" data-scroll-target="#niveau-1-débutant">🟦 Niveau 1 : Débutant</a>
   <ul class="collapse">
   <li><a href="#python-data-processing" id="toc-python-data-processing" class="nav-link" data-scroll-target="#python-data-processing">🐍 Python &amp; Data Processing</a></li>
-  <li><a href="#apache-spark" id="toc-apache-spark" class="nav-link" data-scroll-target="#apache-spark">⚡ Apache Spark</a></li>
+  <li><a href="#bases-de-données-sql" id="toc-bases-de-données-sql" class="nav-link" data-scroll-target="#bases-de-données-sql">🗄️ Bases de Données &amp; SQL</a></li>
+  <li><a href="#outils-fondamentaux" id="toc-outils-fondamentaux" class="nav-link" data-scroll-target="#outils-fondamentaux">🔧 Outils Fondamentaux</a></li>
+  <li><a href="#introduction-spark" id="toc-introduction-spark" class="nav-link" data-scroll-target="#introduction-spark">⚡ Introduction Spark</a></li>
+  </ul></li>
+  <li><a href="#niveau-2-intermédiaire" id="toc-niveau-2-intermédiaire" class="nav-link" data-scroll-target="#niveau-2-intermédiaire">🟩 Niveau 2 : Intermédiaire</a>
+  <ul class="collapse">
+  <li><a href="#containers-kubernetes" id="toc-containers-kubernetes" class="nav-link" data-scroll-target="#containers-kubernetes">🐳 Containers &amp; Kubernetes</a></li>
+  <li><a href="#high-performance-python" id="toc-high-performance-python" class="nav-link" data-scroll-target="#high-performance-python">🚀 High Performance Python</a></li>
+  <li><a href="#apache-spark-avancé" id="toc-apache-spark-avancé" class="nav-link" data-scroll-target="#apache-spark-avancé">⚡ Apache Spark Avancé</a></li>
   <li><a href="#lakehouse-table-formats" id="toc-lakehouse-table-formats" class="nav-link" data-scroll-target="#lakehouse-table-formats">🏠 Lakehouse &amp; Table Formats</a></li>
   <li><a href="#streaming-messaging" id="toc-streaming-messaging" class="nav-link" data-scroll-target="#streaming-messaging">📨 Streaming &amp; Messaging</a></li>
-  <li><a href="#containers-orchestration" id="toc-containers-orchestration" class="nav-link" data-scroll-target="#containers-orchestration">🐳 Containers &amp; Orchestration</a></li>
-  <li><a href="#orchestration-etl" id="toc-orchestration-etl" class="nav-link" data-scroll-target="#orchestration-etl">🔄 Orchestration &amp; ETL</a></li>
-  <li><a href="#cloud-providers" id="toc-cloud-providers" class="nav-link" data-scroll-target="#cloud-providers">☁️ Cloud Providers</a></li>
+  <li><a href="#cloud-object-storage" id="toc-cloud-object-storage" class="nav-link" data-scroll-target="#cloud-object-storage">☁️ Cloud Object Storage</a></li>
+  <li><a href="#data-quality-transformation" id="toc-data-quality-transformation" class="nav-link" data-scroll-target="#data-quality-transformation">🔧 Data Quality &amp; Transformation</a></li>
+  </ul></li>
+  <li><a href="#niveau-3-avancé" id="toc-niveau-3-avancé" class="nav-link" data-scroll-target="#niveau-3-avancé">🟥 Niveau 3 : Avancé</a>
+  <ul class="collapse">
+  <li><a href="#infrastructure-avancée" id="toc-infrastructure-avancée" class="nav-link" data-scroll-target="#infrastructure-avancée">☸️ Infrastructure Avancée</a></li>
+  <li><a href="#orchestration-avancée" id="toc-orchestration-avancée" class="nav-link" data-scroll-target="#orchestration-avancée">🔄 Orchestration Avancée</a></li>
+  <li><a href="#messaging-distribué" id="toc-messaging-distribué" class="nav-link" data-scroll-target="#messaging-distribué">📨 Messaging Distribué</a></li>
+  <li><a href="#spark-scala" id="toc-spark-scala" class="nav-link" data-scroll-target="#spark-scala">⚡ Spark &amp; Scala</a></li>
+  <li><a href="#mlops-feature-engineering" id="toc-mlops-feature-engineering" class="nav-link" data-scroll-target="#mlops-feature-engineering">🤖 MLOps &amp; Feature Engineering</a></li>
+  <li><a href="#data-mesh-governance" id="toc-data-mesh-governance" class="nav-link" data-scroll-target="#data-mesh-governance">🏛️ Data Mesh &amp; Governance</a></li>
+  <li><a href="#olap-real-time-analytics" id="toc-olap-real-time-analytics" class="nav-link" data-scroll-target="#olap-real-time-analytics">📊 OLAP &amp; Real-time Analytics</a></li>
   <li><a href="#monitoring-observability" id="toc-monitoring-observability" class="nav-link" data-scroll-target="#monitoring-observability">📊 Monitoring &amp; Observability</a></li>
   </ul></li>
-  <li><a href="#cours-formations-gratuits" id="toc-cours-formations-gratuits" class="nav-link" data-scroll-target="#cours-formations-gratuits">🎓 Cours &amp; Formations Gratuits</a>
+  <li><a href="#ressources-transversales" id="toc-ressources-transversales" class="nav-link" data-scroll-target="#ressources-transversales">📚 Ressources Transversales</a>
   <ul class="collapse">
-  <li><a href="#plateformes" id="toc-plateformes" class="nav-link" data-scroll-target="#plateformes">Plateformes</a></li>
-  <li><a href="#tutoriels-officiels" id="toc-tutoriels-officiels" class="nav-link" data-scroll-target="#tutoriels-officiels">Tutoriels officiels</a></li>
-  </ul></li>
-  <li><a href="#blogs-articles" id="toc-blogs-articles" class="nav-link" data-scroll-target="#blogs-articles">📝 Blogs &amp; Articles</a>
-  <ul class="collapse">
-  <li><a href="#blogs-techniques" id="toc-blogs-techniques" class="nav-link" data-scroll-target="#blogs-techniques">Blogs techniques</a></li>
-  <li><a href="#articles-fondamentaux" id="toc-articles-fondamentaux" class="nav-link" data-scroll-target="#articles-fondamentaux">Articles fondamentaux</a></li>
-  </ul></li>
-  <li><a href="#outils-utiles" id="toc-outils-utiles" class="nav-link" data-scroll-target="#outils-utiles">🛠️ Outils Utiles</a>
-  <ul class="collapse">
-  <li><a href="#ides-éditeurs" id="toc-ides-éditeurs" class="nav-link" data-scroll-target="#ides-éditeurs">IDEs &amp; Éditeurs</a></li>
-  <li><a href="#extensions-vs-code-recommandées" id="toc-extensions-vs-code-recommandées" class="nav-link" data-scroll-target="#extensions-vs-code-recommandées">Extensions VS Code recommandées</a></li>
-  </ul></li>
-  <li><a href="#livres-recommandés" id="toc-livres-recommandés" class="nav-link" data-scroll-target="#livres-recommandés">📖 Livres Recommandés</a>
-  <ul class="collapse">
-  <li><a href="#essentiels" id="toc-essentiels" class="nav-link" data-scroll-target="#essentiels">Essentiels</a></li>
-  <li><a href="#avancés" id="toc-avancés" class="nav-link" data-scroll-target="#avancés">Avancés</a></li>
-  </ul></li>
+  <li><a href="#livres-essentiels" id="toc-livres-essentiels" class="nav-link" data-scroll-target="#livres-essentiels">📖 Livres Essentiels</a></li>
+  <li><a href="#formations-gratuites" id="toc-formations-gratuites" class="nav-link" data-scroll-target="#formations-gratuites">🎓 Formations Gratuites</a></li>
+  <li><a href="#blogs-newsletters" id="toc-blogs-newsletters" class="nav-link" data-scroll-target="#blogs-newsletters">📝 Blogs &amp; Newsletters</a></li>
+  <li><a href="#ides-outils" id="toc-ides-outils" class="nav-link" data-scroll-target="#ides-outils">🛠️ IDEs &amp; Outils</a></li>
   <li><a href="#communautés" id="toc-communautés" class="nav-link" data-scroll-target="#communautés">🔗 Communautés</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/diakite-data/data-engineering-bootcamp/blob/main/resources/documentation.qmd" class="toc-action"><i class="bi bi-github"></i>Voir la source</a></li><li><a href="https://github.com/diakite-data/data-engineering-bootcamp/issues/new" class="toc-action"><i class="bi empty"></i>Faire part d'un problème</a></li><li><a href="https://github.com/diakite-data/data-engineering-bootcamp/edit/main/resources/documentation.qmd" class="toc-action"><i class="bi empty"></i>Modifier cette page</a></li></ul></div></nav>
     </div>
@@ -851,7 +855,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">📖 Documentation</h1>
-<p class="subtitle lead">Ressources et documentation officielle</p>
+<p class="subtitle lead">Ressources et documentation officielle par niveau</p>
 </div>
 
 
@@ -868,91 +872,242 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="documentation-officielle-par-technologie" class="level2">
-<h2 class="anchored" data-anchor-id="documentation-officielle-par-technologie">📚 Documentation Officielle par Technologie</h2>
-<section id="python-data-processing" class="level3">
-<h3 class="anchored" data-anchor-id="python-data-processing">🐍 Python &amp; Data Processing</h3>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Astuce</span>📌 Organisation par niveau
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Cette page liste les documentations officielles organisées par niveau du bootcamp. Consultez-les au fur et à mesure de votre progression.</p>
+</div>
+</div>
+<hr>
+<section id="niveau-1-débutant" class="level1">
+<h1>🟦 Niveau 1 : Débutant</h1>
+<section id="python-data-processing" class="level2">
+<h2 class="anchored" data-anchor-id="python-data-processing">🐍 Python &amp; Data Processing</h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
 <th>Technologie</th>
 <th>Documentation</th>
-<th>Notes</th>
+<th>Module associé</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><strong>Python</strong></td>
 <td><a href="https://docs.python.org/3/">docs.python.org</a></td>
-<td>Référence complète</td>
+<td><a href="notebooks/beginner/04_python_basics_for_data_engineers.ipynb">04 - Python Fondamental</a></td>
 </tr>
 <tr class="even">
 <td><strong>Pandas</strong></td>
-<td><a href="https://pandas.pydata.org/docs/">pandas.pydata.org</a></td>
-<td>Manipulation de données</td>
+<td><a href="https://pandas.pydata.org/docs/">pandas.pydata.org/docs</a></td>
+<td><a href="notebooks/beginner/05_python_data_processing_for_data_engineers.ipynb">05 - Python Data Processing</a></td>
 </tr>
 <tr class="odd">
-<td><strong>Polars</strong></td>
-<td><a href="https://docs.pola.rs/">pola.rs</a></td>
-<td>Alternative haute performance</td>
-</tr>
-<tr class="even">
 <td><strong>NumPy</strong></td>
-<td><a href="https://numpy.org/doc/">numpy.org</a></td>
-<td>Calcul scientifique</td>
+<td><a href="https://numpy.org/doc/">numpy.org/doc</a></td>
+<td><a href="notebooks/beginner/05_python_data_processing_for_data_engineers.ipynb">05 - Python Data Processing</a></td>
 </tr>
 </tbody>
 </table>
-<hr>
 </section>
-<section id="apache-spark" class="level3">
-<h3 class="anchored" data-anchor-id="apache-spark">⚡ Apache Spark</h3>
+<section id="bases-de-données-sql" class="level2">
+<h2 class="anchored" data-anchor-id="bases-de-données-sql">🗄️ Bases de Données &amp; SQL</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Technologie</th>
+<th>Documentation</th>
+<th>Module associé</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>PostgreSQL</strong></td>
+<td><a href="https://www.postgresql.org/docs/">postgresql.org/docs</a></td>
+<td><a href="notebooks/beginner/06_intro_relational_databases.ipynb">06 - Intro BDD</a></td>
+</tr>
+<tr class="even">
+<td><strong>SQL Tutorial</strong></td>
+<td><a href="https://www.w3schools.com/sql/">w3schools.com/sql</a></td>
+<td><a href="notebooks/beginner/07_sql_for_data_engineers.ipynb">07 - SQL</a></td>
+</tr>
+<tr class="odd">
+<td><strong>MongoDB</strong></td>
+<td><a href="https://www.mongodb.com/docs/">mongodb.com/docs</a></td>
+<td><a href="notebooks/beginner/09_mongodb_for_data_engineers.ipynb">09 - MongoDB</a></td>
+</tr>
+<tr class="even">
+<td><strong>Elasticsearch</strong></td>
+<td><a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html">elastic.co/guide</a></td>
+<td><a href="notebooks/beginner/10_elasticsearch_for_data_engineers.ipynb">10 - Elasticsearch</a></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="outils-fondamentaux" class="level2">
+<h2 class="anchored" data-anchor-id="outils-fondamentaux">🔧 Outils Fondamentaux</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Technologie</th>
+<th>Documentation</th>
+<th>Module associé</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Git</strong></td>
+<td><a href="https://git-scm.com/doc">git-scm.com/doc</a></td>
+<td><a href="notebooks/beginner/03_git_for_data_engineers.ipynb">03 - Git &amp; Versioning</a></td>
+</tr>
+<tr class="even">
+<td><strong>Bash</strong></td>
+<td><a href="https://www.gnu.org/software/bash/manual/">gnu.org/software/bash/manual</a></td>
+<td><a href="notebooks/beginner/02_bash_for_data_engineers.ipynb">02 - Linux &amp; Bash</a></td>
+</tr>
+<tr class="odd">
+<td><strong>FastAPI</strong></td>
+<td><a href="https://fastapi.tiangolo.com/">fastapi.tiangolo.com</a></td>
+<td><a href="notebooks/beginner/13_fastapi_for_data_engineers.ipynb">13 - FastAPI</a></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="introduction-spark" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-spark">⚡ Introduction Spark</h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
 <th>Ressource</th>
 <th>Lien</th>
-<th>Description</th>
+<th>Module associé</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>Documentation officielle</strong></td>
-<td><a href="https://spark.apache.org/docs/latest/">spark.apache.org/docs</a></td>
-<td>Guide complet</td>
+<td><strong>PySpark Quickstart</strong></td>
+<td><a href="https://spark.apache.org/docs/latest/api/python/getting_started/index.html">spark.apache.org/docs/latest/api/python/getting_started</a></td>
+<td><a href="notebooks/beginner/11_pyspark_for_data_engineering.ipynb">11 - Intro PySpark</a></td>
 </tr>
 <tr class="even">
-<td><strong>PySpark API</strong></td>
-<td><a href="https://spark.apache.org/docs/latest/api/python/">spark.apache.org/docs/latest/api/python</a></td>
-<td>Référence API Python</td>
-</tr>
-<tr class="odd">
-<td><strong>Spark SQL Guide</strong></td>
+<td><strong>DataFrame Guide</strong></td>
 <td><a href="https://spark.apache.org/docs/latest/sql-programming-guide.html">spark.apache.org/docs/latest/sql-programming-guide</a></td>
-<td>Guide SQL</td>
-</tr>
-<tr class="even">
-<td><strong>Structured Streaming</strong></td>
-<td><a href="https://spark.apache.org/docs/latest/structured-streaming-programming-guide.html">spark.apache.org/docs/latest/structured-streaming</a></td>
-<td>Streaming guide</td>
+<td><a href="notebooks/beginner/11_pyspark_for_data_engineering.ipynb">11 - Intro PySpark</a></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Livres recommandés</strong> :</p>
-<ul>
-<li><em>Learning Spark, 2nd Edition</em> — O’Reilly</li>
-<li><em>Spark: The Definitive Guide</em> — O’Reilly</li>
-</ul>
 <hr>
 </section>
-<section id="lakehouse-table-formats" class="level3">
-<h3 class="anchored" data-anchor-id="lakehouse-table-formats">🏠 Lakehouse &amp; Table Formats</h3>
+</section>
+<section id="niveau-2-intermédiaire" class="level1">
+<h1>🟩 Niveau 2 : Intermédiaire</h1>
+<section id="containers-kubernetes" class="level2">
+<h2 class="anchored" data-anchor-id="containers-kubernetes">🐳 Containers &amp; Kubernetes</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Technologie</th>
+<th>Documentation</th>
+<th>Cheatsheet</th>
+<th>Module associé</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Docker</strong></td>
+<td><a href="https://docs.docker.com/">docs.docker.com</a></td>
+<td><a href="https://dockerlabs.collabnix.com/docker/cheatsheet/">Cheatsheet</a></td>
+<td><a href="notebooks/intermediate/14_docker_for_data_engineers.ipynb">14 - Docker</a></td>
+</tr>
+<tr class="even">
+<td><strong>Kubernetes</strong></td>
+<td><a href="https://kubernetes.io/docs/home/">kubernetes.io/docs</a></td>
+<td><a href="https://kubernetes.io/docs/reference/kubectl/cheatsheet/">kubectl Cheatsheet</a></td>
+<td><a href="notebooks/intermediate/15_kubernetes_fundamentals.ipynb">15 - K8s Fundamentals</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Spark Operator</strong></td>
+<td><a href="https://github.com/kubeflow/spark-operator">github.com/kubeflow/spark-operator</a></td>
+<td>-</td>
+<td><a href="notebooks/intermediate/21_spark_on_kubernetes.ipynb">21 - Spark on K8s</a></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="high-performance-python" class="level2">
+<h2 class="anchored" data-anchor-id="high-performance-python">🚀 High Performance Python</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Technologie</th>
+<th>Documentation</th>
+<th>Module associé</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Polars</strong></td>
+<td><a href="https://docs.pola.rs/">docs.pola.rs</a></td>
+<td><a href="notebooks/intermediate/17_polars_for_data_engineering.ipynb">17 - Polars</a></td>
+</tr>
+<tr class="even">
+<td><strong>PyArrow</strong></td>
+<td><a href="https://arrow.apache.org/docs/python/">arrow.apache.org/docs/python</a></td>
+<td><a href="notebooks/intermediate/17_polars_for_data_engineering.ipynb">17 - Polars</a></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="apache-spark-avancé" class="level2">
+<h2 class="anchored" data-anchor-id="apache-spark-avancé">⚡ Apache Spark Avancé</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Ressource</th>
+<th>Lien</th>
+<th>Module associé</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Spark Documentation</strong></td>
+<td><a href="https://spark.apache.org/docs/latest/">spark.apache.org/docs/latest</a></td>
+<td><a href="notebooks/intermediate/19_pyspark_advanced.ipynb">19 - PySpark Avancé</a></td>
+</tr>
+<tr class="even">
+<td><strong>PySpark API Reference</strong></td>
+<td><a href="https://spark.apache.org/docs/latest/api/python/">spark.apache.org/docs/latest/api/python</a></td>
+<td><a href="notebooks/intermediate/19_pyspark_advanced.ipynb">19 - PySpark Avancé</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Spark SQL Guide</strong></td>
+<td><a href="https://spark.apache.org/docs/latest/sql-ref.html">spark.apache.org/docs/latest/sql-ref</a></td>
+<td><a href="notebooks/intermediate/20_spark_sql_deep_dive.ipynb">20 - Spark SQL Deep Dive</a></td>
+</tr>
+<tr class="even">
+<td><strong>Performance Tuning</strong></td>
+<td><a href="https://spark.apache.org/docs/latest/sql-performance-tuning.html">spark.apache.org/docs/latest/sql-performance-tuning</a></td>
+<td><a href="notebooks/intermediate/20_spark_sql_deep_dive.ipynb">20 - Spark SQL Deep Dive</a></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="lakehouse-table-formats" class="level2">
+<h2 class="anchored" data-anchor-id="lakehouse-table-formats">🏠 Lakehouse &amp; Table Formats</h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
 <th>Format</th>
 <th>Documentation</th>
 <th>GitHub</th>
+<th>Module associé</th>
 </tr>
 </thead>
 <tbody>
@@ -960,158 +1115,324 @@ ul.task-list li input[type="checkbox"] {
 <td><strong>Delta Lake</strong></td>
 <td><a href="https://docs.delta.io/">docs.delta.io</a></td>
 <td><a href="https://github.com/delta-io/delta">delta-io/delta</a></td>
+<td><a href="notebooks/intermediate/23_table_formats_delta_iceberg.ipynb">23 - Table Formats</a></td>
 </tr>
 <tr class="even">
 <td><strong>Apache Iceberg</strong></td>
-<td><a href="https://iceberg.apache.org/docs/latest/">iceberg.apache.org</a></td>
+<td><a href="https://iceberg.apache.org/docs/latest/">iceberg.apache.org/docs</a></td>
 <td><a href="https://github.com/apache/iceberg">apache/iceberg</a></td>
+<td><a href="notebooks/intermediate/23_table_formats_delta_iceberg.ipynb">23 - Table Formats</a></td>
 </tr>
 <tr class="odd">
 <td><strong>Apache Hudi</strong></td>
-<td><a href="https://hudi.apache.org/docs/overview">hudi.apache.org</a></td>
+<td><a href="https://hudi.apache.org/docs/overview">hudi.apache.org/docs</a></td>
 <td><a href="https://github.com/apache/hudi">apache/hudi</a></td>
+<td>-</td>
 </tr>
 </tbody>
 </table>
-<hr>
 </section>
-<section id="streaming-messaging" class="level3">
-<h3 class="anchored" data-anchor-id="streaming-messaging">📨 Streaming &amp; Messaging</h3>
+<section id="streaming-messaging" class="level2">
+<h2 class="anchored" data-anchor-id="streaming-messaging">📨 Streaming &amp; Messaging</h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
 <th>Technologie</th>
 <th>Documentation</th>
-<th>Notes</th>
+<th>Module associé</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><strong>Apache Kafka</strong></td>
 <td><a href="https://kafka.apache.org/documentation/">kafka.apache.org/documentation</a></td>
-<td>Message broker</td>
+<td><a href="notebooks/intermediate/24_kafka_streaming.ipynb">24 - Kafka &amp; Streaming</a></td>
 </tr>
 <tr class="even">
-<td><strong>Confluent</strong></td>
+<td><strong>Confluent Platform</strong></td>
 <td><a href="https://docs.confluent.io/">docs.confluent.io</a></td>
-<td>Kafka enterprise</td>
+<td><a href="notebooks/intermediate/24_kafka_streaming.ipynb">24 - Kafka &amp; Streaming</a></td>
 </tr>
 <tr class="odd">
-<td><strong>Apache Flink</strong></td>
-<td><a href="https://nightlies.apache.org/flink/flink-docs-stable/">flink.apache.org/docs</a></td>
-<td>Stream processing</td>
-</tr>
-<tr class="even">
-<td><strong>Debezium</strong></td>
-<td><a href="https://debezium.io/documentation/">debezium.io/documentation</a></td>
-<td>CDC</td>
+<td><strong>kafka-python</strong></td>
+<td><a href="https://kafka-python.readthedocs.io/">kafka-python.readthedocs.io</a></td>
+<td><a href="notebooks/intermediate/24_kafka_streaming.ipynb">24 - Kafka &amp; Streaming</a></td>
 </tr>
 </tbody>
 </table>
-<hr>
 </section>
-<section id="containers-orchestration" class="level3">
-<h3 class="anchored" data-anchor-id="containers-orchestration">🐳 Containers &amp; Orchestration</h3>
+<section id="cloud-object-storage" class="level2">
+<h2 class="anchored" data-anchor-id="cloud-object-storage">☁️ Cloud Object Storage</h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th>Technologie</th>
+<th>Provider</th>
 <th>Documentation</th>
-<th>Cheatsheet</th>
+<th>Module associé</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>Docker</strong></td>
-<td><a href="https://docs.docker.com/">docs.docker.com</a></td>
-<td><a href="https://dockerlabs.collabnix.com/docker/cheatsheet/">Docker Cheatsheet</a></td>
+<td><strong>AWS S3</strong></td>
+<td><a href="https://docs.aws.amazon.com/s3/">docs.aws.amazon.com/s3</a></td>
+<td><a href="notebooks/intermediate/22_cloud_and_object_storage.ipynb">22 - Cloud Storage</a></td>
 </tr>
 <tr class="even">
-<td><strong>Kubernetes</strong></td>
-<td><a href="https://kubernetes.io/docs/home/">kubernetes.io/docs</a></td>
-<td><a href="https://kubernetes.io/docs/reference/kubectl/cheatsheet/">kubectl Cheatsheet</a></td>
+<td><strong>GCP GCS</strong></td>
+<td><a href="https://cloud.google.com/storage/docs">cloud.google.com/storage/docs</a></td>
+<td><a href="notebooks/intermediate/22_cloud_and_object_storage.ipynb">22 - Cloud Storage</a></td>
 </tr>
 <tr class="odd">
-<td><strong>Helm</strong></td>
-<td><a href="https://helm.sh/docs/">helm.sh/docs</a></td>
-<td>Package manager K8s</td>
-</tr>
-<tr class="even">
-<td><strong>ArgoCD</strong></td>
-<td><a href="https://argo-cd.readthedocs.io/">argo-cd.readthedocs.io</a></td>
-<td>GitOps</td>
+<td><strong>MinIO</strong></td>
+<td><a href="https://min.io/docs/minio/linux/index.html">min.io/docs</a></td>
+<td><a href="notebooks/intermediate/22_cloud_and_object_storage.ipynb">22 - Cloud Storage</a></td>
 </tr>
 </tbody>
 </table>
-<hr>
 </section>
-<section id="orchestration-etl" class="level3">
-<h3 class="anchored" data-anchor-id="orchestration-etl">🔄 Orchestration &amp; ETL</h3>
+<section id="data-quality-transformation" class="level2">
+<h2 class="anchored" data-anchor-id="data-quality-transformation">🔧 Data Quality &amp; Transformation</h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
 <th>Technologie</th>
 <th>Documentation</th>
-<th>Notes</th>
+<th>Module associé</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>dbt</strong></td>
+<td><a href="https://docs.getdbt.com/">docs.getdbt.com</a></td>
+<td><a href="notebooks/intermediate/25_dbt_data_quality.ipynb">25 - dbt &amp; Data Quality</a></td>
+</tr>
+<tr class="even">
+<td><strong>Great Expectations</strong></td>
+<td><a href="https://docs.greatexpectations.io/">docs.greatexpectations.io</a></td>
+<td><a href="notebooks/intermediate/25_dbt_data_quality.ipynb">25 - dbt &amp; Data Quality</a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="niveau-3-avancé" class="level1">
+<h1>🟥 Niveau 3 : Avancé</h1>
+<section id="infrastructure-avancée" class="level2">
+<h2 class="anchored" data-anchor-id="infrastructure-avancée">☸️ Infrastructure Avancée</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Technologie</th>
+<th>Documentation</th>
+<th>Module associé</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Helm</strong></td>
+<td><a href="https://helm.sh/docs/">helm.sh/docs</a></td>
+<td><a href="notebooks/advanced/27_kubernetes_deep_dive.ipynb">27 - K8s Deep Dive</a></td>
+</tr>
+<tr class="even">
+<td><strong>ArgoCD</strong></td>
+<td><a href="https://argo-cd.readthedocs.io/">argo-cd.readthedocs.io</a></td>
+<td><a href="notebooks/advanced/27_kubernetes_deep_dive.ipynb">27 - K8s Deep Dive</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Kubernetes Operators</strong></td>
+<td><a href="https://kubernetes.io/docs/concepts/extend-kubernetes/operator/">kubernetes.io/docs/concepts/extend-kubernetes/operator</a></td>
+<td><a href="notebooks/advanced/27_kubernetes_deep_dive.ipynb">27 - K8s Deep Dive</a></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="orchestration-avancée" class="level2">
+<h2 class="anchored" data-anchor-id="orchestration-avancée">🔄 Orchestration Avancée</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Technologie</th>
+<th>Documentation</th>
+<th>Module associé</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><strong>Apache Airflow</strong></td>
 <td><a href="https://airflow.apache.org/docs/">airflow.apache.org/docs</a></td>
-<td>Orchestration</td>
-</tr>
-<tr class="even">
-<td><strong>dbt</strong></td>
-<td><a href="https://docs.getdbt.com/">docs.getdbt.com</a></td>
-<td>Transformation</td>
-</tr>
-<tr class="odd">
-<td><strong>Great Expectations</strong></td>
-<td><a href="https://docs.greatexpectations.io/">docs.greatexpectations.io</a></td>
-<td>Data Quality</td>
+<td><a href="notebooks/advanced/28_advanced_orchestration.ipynb">28 - Orchestration Avancée</a></td>
 </tr>
 <tr class="even">
 <td><strong>Dagster</strong></td>
 <td><a href="https://docs.dagster.io/">docs.dagster.io</a></td>
-<td>Alternative moderne</td>
+<td><a href="notebooks/advanced/28_advanced_orchestration.ipynb">28 - Orchestration Avancée</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Prefect</strong></td>
+<td><a href="https://docs.prefect.io/">docs.prefect.io</a></td>
+<td>-</td>
 </tr>
 </tbody>
 </table>
-<hr>
 </section>
-<section id="cloud-providers" class="level3">
-<h3 class="anchored" data-anchor-id="cloud-providers">☁️ Cloud Providers</h3>
+<section id="messaging-distribué" class="level2">
+<h2 class="anchored" data-anchor-id="messaging-distribué">📨 Messaging Distribué</h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th>Provider</th>
-<th>Documentation Data</th>
-<th>Services clés</th>
+<th>Technologie</th>
+<th>Documentation</th>
+<th>Module associé</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>AWS</strong></td>
-<td><a href="https://docs.aws.amazon.com/">docs.aws.amazon.com</a></td>
-<td>S3, EMR, Glue, Redshift</td>
+<td><strong>Kafka Internals</strong></td>
+<td><a href="https://kafka.apache.org/documentation/#design">kafka.apache.org/documentation/#design</a></td>
+<td><a href="notebooks/advanced/29_distributed_messaging.ipynb">29 - Distributed Messaging</a></td>
 </tr>
 <tr class="even">
-<td><strong>GCP</strong></td>
-<td><a href="https://cloud.google.com/docs">cloud.google.com/docs</a></td>
-<td>GCS, Dataproc, BigQuery</td>
+<td><strong>Apache Pulsar</strong></td>
+<td><a href="https://pulsar.apache.org/docs/3.0.x/">pulsar.apache.org/docs</a></td>
+<td><a href="notebooks/advanced/29_distributed_messaging.ipynb">29 - Distributed Messaging</a></td>
 </tr>
 <tr class="odd">
-<td><strong>Azure</strong></td>
-<td><a href="https://docs.microsoft.com/en-us/azure/">docs.microsoft.com/azure</a></td>
-<td>Blob, Synapse, Databricks</td>
+<td><strong>RabbitMQ</strong></td>
+<td><a href="https://www.rabbitmq.com/documentation.html">rabbitmq.com/documentation</a></td>
+<td><a href="notebooks/advanced/29_distributed_messaging.ipynb">29 - Distributed Messaging</a></td>
+</tr>
+<tr class="even">
+<td><strong>Debezium</strong></td>
+<td><a href="https://debezium.io/documentation/">debezium.io/documentation</a></td>
+<td><a href="notebooks/advanced/29_distributed_messaging.ipynb">29 - Distributed Messaging</a></td>
 </tr>
 </tbody>
 </table>
-<hr>
 </section>
-<section id="monitoring-observability" class="level3">
-<h3 class="anchored" data-anchor-id="monitoring-observability">📊 Monitoring &amp; Observability</h3>
+<section id="spark-scala" class="level2">
+<h2 class="anchored" data-anchor-id="spark-scala">⚡ Spark &amp; Scala</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Ressource</th>
+<th>Lien</th>
+<th>Module associé</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Scala Documentation</strong></td>
+<td><a href="https://docs.scala-lang.org/">docs.scala-lang.org</a></td>
+<td><a href="notebooks/advanced/30_spark_scala_deep_dive.ipynb">30 - Spark &amp; Scala</a></td>
+</tr>
+<tr class="even">
+<td><strong>Spark Internals</strong></td>
+<td><a href="https://spark.apache.org/docs/latest/rdd-programming-guide.html">spark.apache.org/docs/latest/rdd-programming-guide</a></td>
+<td><a href="notebooks/advanced/30_spark_scala_deep_dive.ipynb">30 - Spark &amp; Scala</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Catalyst Optimizer</strong></td>
+<td><a href="https://www.databricks.com/blog/2015/04/13/deep-dive-into-spark-sqls-catalyst-optimizer.html">databricks.com/blog/2015/04/13/deep-dive-into-spark-sqls-catalyst-optimizer</a></td>
+<td><a href="notebooks/advanced/30_spark_scala_deep_dive.ipynb">30 - Spark &amp; Scala</a></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="mlops-feature-engineering" class="level2">
+<h2 class="anchored" data-anchor-id="mlops-feature-engineering">🤖 MLOps &amp; Feature Engineering</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Technologie</th>
+<th>Documentation</th>
+<th>Module associé</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>MLflow</strong></td>
+<td><a href="https://mlflow.org/docs/latest/index.html">mlflow.org/docs/latest</a></td>
+<td><a href="notebooks/advanced/31_data_engineering_for_ml.ipynb">31 - DE for ML</a></td>
+</tr>
+<tr class="even">
+<td><strong>Feast</strong></td>
+<td><a href="https://docs.feast.dev/">docs.feast.dev</a></td>
+<td><a href="notebooks/advanced/31_data_engineering_for_ml.ipynb">31 - DE for ML</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Tecton</strong></td>
+<td><a href="https://docs.tecton.ai/">docs.tecton.ai</a></td>
+<td><a href="notebooks/advanced/31_data_engineering_for_ml.ipynb">31 - DE for ML</a></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="data-mesh-governance" class="level2">
+<h2 class="anchored" data-anchor-id="data-mesh-governance">🏛️ Data Mesh &amp; Governance</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Ressource</th>
+<th>Lien</th>
+<th>Module associé</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Data Mesh Principles</strong></td>
+<td><a href="https://martinfowler.com/articles/data-mesh-principles.html">martinfowler.com/articles/data-mesh-principles</a></td>
+<td><a href="notebooks/advanced/32_data_mesh_contracts.ipynb">32 - Data Mesh</a></td>
+</tr>
+<tr class="even">
+<td><strong>Data Contracts</strong></td>
+<td><a href="https://datacontract.com/">datacontract.com</a></td>
+<td><a href="notebooks/advanced/32_data_mesh_contracts.ipynb">32 - Data Mesh</a></td>
+</tr>
+<tr class="odd">
+<td><strong>DataHub</strong></td>
+<td><a href="https://datahubproject.io/docs/">datahubproject.io/docs</a></td>
+<td><a href="notebooks/advanced/32_data_mesh_contracts.ipynb">32 - Data Mesh</a></td>
+</tr>
+<tr class="even">
+<td><strong>OpenMetadata</strong></td>
+<td><a href="https://docs.open-metadata.org/">docs.open-metadata.org</a></td>
+<td><a href="notebooks/advanced/32_data_mesh_contracts.ipynb">32 - Data Mesh</a></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="olap-real-time-analytics" class="level2">
+<h2 class="anchored" data-anchor-id="olap-real-time-analytics">📊 OLAP &amp; Real-time Analytics</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Technologie</th>
+<th>Documentation</th>
+<th>Module associé</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>ClickHouse</strong></td>
+<td><a href="https://clickhouse.com/docs/">clickhouse.com/docs</a></td>
+<td><a href="notebooks/advanced/33_realtime_olap_dashboards.ipynb">33 - Realtime OLAP</a></td>
+</tr>
+<tr class="even">
+<td><strong>Apache Druid</strong></td>
+<td><a href="https://druid.apache.org/docs/latest/design/">druid.apache.org/docs/latest</a></td>
+<td><a href="notebooks/advanced/33_realtime_olap_dashboards.ipynb">33 - Realtime OLAP</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Apache Pinot</strong></td>
+<td><a href="https://docs.pinot.apache.org/">docs.pinot.apache.org</a></td>
+<td><a href="notebooks/advanced/33_realtime_olap_dashboards.ipynb">33 - Realtime OLAP</a></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="monitoring-observability" class="level2">
+<h2 class="anchored" data-anchor-id="monitoring-observability">📊 Monitoring &amp; Observability</h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -1132,164 +1453,48 @@ ul.task-list li input[type="checkbox"] {
 <td>Dashboards</td>
 </tr>
 <tr class="odd">
-<td><strong>DataHub</strong></td>
-<td><a href="https://datahubproject.io/docs/">datahubproject.io/docs</a></td>
-<td>Data Catalog</td>
+<td><strong>OpenTelemetry</strong></td>
+<td><a href="https://opentelemetry.io/docs/">opentelemetry.io/docs</a></td>
+<td>Tracing</td>
 </tr>
 </tbody>
 </table>
 <hr>
 </section>
 </section>
-<section id="cours-formations-gratuits" class="level2">
-<h2 class="anchored" data-anchor-id="cours-formations-gratuits">🎓 Cours &amp; Formations Gratuits</h2>
-<section id="plateformes" class="level3">
-<h3 class="anchored" data-anchor-id="plateformes">Plateformes</h3>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Plateforme</th>
-<th>Cours recommandés</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Coursera</strong></td>
-<td><a href="https://www.coursera.org/professional-certificates/gcp-data-engineering">Data Engineering on Google Cloud</a></td>
-</tr>
-<tr class="even">
-<td><strong>DataCamp</strong></td>
-<td><a href="https://www.datacamp.com/tracks/data-engineer">Data Engineer Track</a></td>
-</tr>
-<tr class="odd">
-<td><strong>Udemy</strong></td>
-<td>Spark, Airflow, Kafka courses</td>
-</tr>
-<tr class="even">
-<td><strong>YouTube</strong></td>
-<td>Databricks, Confluent channels</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="tutoriels-officiels" class="level3">
-<h3 class="anchored" data-anchor-id="tutoriels-officiels">Tutoriels officiels</h3>
-<ul>
-<li><a href="https://courses.getdbt.com/">dbt Learn</a> — Gratuit, certifiant</li>
-<li><a href="https://developer.confluent.io/tutorials/">Kafka Tutorials</a> — Confluent Developer</li>
-<li><a href="https://www.databricks.com/learn">Databricks Academy</a> — Spark &amp; Delta Lake</li>
-</ul>
-<hr>
-</section>
-</section>
-<section id="blogs-articles" class="level2">
-<h2 class="anchored" data-anchor-id="blogs-articles">📝 Blogs &amp; Articles</h2>
-<section id="blogs-techniques" class="level3">
-<h3 class="anchored" data-anchor-id="blogs-techniques">Blogs techniques</h3>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Blog</th>
-<th>Focus</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="https://www.databricks.com/blog">Databricks Blog</a></td>
-<td>Spark, Delta Lake</td>
-</tr>
-<tr class="even">
-<td><a href="https://www.confluent.io/blog/">Confluent Blog</a></td>
-<td>Kafka, Streaming</td>
-</tr>
-<tr class="odd">
-<td><a href="https://www.getdbt.com/blog/">dbt Blog</a></td>
-<td>Analytics Engineering</td>
-</tr>
-<tr class="even">
-<td><a href="https://towardsdatascience.com/">Towards Data Science</a></td>
-<td>Data Engineering articles</td>
-</tr>
-<tr class="odd">
-<td><a href="https://www.dataengineeringweekly.com/">Data Engineering Weekly</a></td>
-<td>Newsletter</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="articles-fondamentaux" class="level3">
-<h3 class="anchored" data-anchor-id="articles-fondamentaux">Articles fondamentaux</h3>
-<ul>
-<li><a href="https://preset.io/blog/modern-data-stack/">The Modern Data Stack</a></li>
-<li><a href="https://www.databricks.com/glossary/medallion-architecture">Medallion Architecture</a></li>
-<li><a href="https://martinfowler.com/articles/data-mesh-principles.html">Data Mesh Principles</a></li>
-<li><a href="https://www.databricks.com/glossary/data-lakehouse">Lakehouse Architecture</a></li>
-</ul>
-<hr>
-</section>
-</section>
-<section id="outils-utiles" class="level2">
-<h2 class="anchored" data-anchor-id="outils-utiles">🛠️ Outils Utiles</h2>
-<section id="ides-éditeurs" class="level3">
-<h3 class="anchored" data-anchor-id="ides-éditeurs">IDEs &amp; Éditeurs</h3>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Outil</th>
-<th>Usage</th>
-<th>Lien</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>VS Code</strong></td>
-<td>Développement général</td>
-<td><a href="https://code.visualstudio.com/">code.visualstudio.com</a></td>
-</tr>
-<tr class="even">
-<td><strong>PyCharm</strong></td>
-<td>Python IDE</td>
-<td><a href="https://www.jetbrains.com/pycharm/">jetbrains.com/pycharm</a></td>
-</tr>
-<tr class="odd">
-<td><strong>DataGrip</strong></td>
-<td>SQL IDE</td>
-<td><a href="https://www.jetbrains.com/datagrip/">jetbrains.com/datagrip</a></td>
-</tr>
-<tr class="even">
-<td><strong>DBeaver</strong></td>
-<td>SQL gratuit</td>
-<td><a href="https://dbeaver.io/">dbeaver.io</a></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="extensions-vs-code-recommandées" class="level3">
-<h3 class="anchored" data-anchor-id="extensions-vs-code-recommandées">Extensions VS Code recommandées</h3>
-<pre><code>- Python
-- Jupyter
-- Docker
-- Kubernetes
-- YAML
-- SQL Tools
-- GitLens</code></pre>
-<hr>
-</section>
-</section>
-<section id="livres-recommandés" class="level2">
-<h2 class="anchored" data-anchor-id="livres-recommandés">📖 Livres Recommandés</h2>
-<section id="essentiels" class="level3">
-<h3 class="anchored" data-anchor-id="essentiels">Essentiels</h3>
+<section id="ressources-transversales" class="level1">
+<h1>📚 Ressources Transversales</h1>
+<section id="livres-essentiels" class="level2">
+<h2 class="anchored" data-anchor-id="livres-essentiels">📖 Livres Essentiels</h2>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Astuce</span>📌 Top 3 à lire absolument
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><em>Designing Data-Intensive Applications</em> — Martin Kleppmann</li>
+<li><em>Fundamentals of Data Engineering</em> — Joe Reis &amp; Matt Housley</li>
+<li><em>Learning Spark, 2nd Edition</em> — Damji et al.</li>
+</ol>
+</div>
+</div>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 31%">
-<col style="width: 36%">
-<col style="width: 31%">
+<col style="width: 23%">
+<col style="width: 26%">
+<col style="width: 26%">
+<col style="width: 23%">
 </colgroup>
 <thead>
 <tr class="header">
 <th>Livre</th>
 <th>Auteur</th>
+<th>Niveau</th>
 <th>Sujet</th>
 </tr>
 </thead>
@@ -1297,56 +1502,191 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td><em>Designing Data-Intensive Applications</em></td>
 <td>Martin Kleppmann</td>
-<td>Architecture</td>
+<td>🟩🟥</td>
+<td>Architecture distribuée</td>
 </tr>
 <tr class="even">
 <td><em>Fundamentals of Data Engineering</em></td>
 <td>Joe Reis &amp; Matt Housley</td>
-<td>Vue d’ensemble</td>
+<td>🟦🟩</td>
+<td>Vue d’ensemble DE</td>
+</tr>
+<tr class="odd">
+<td><em>Learning Spark, 2nd Edition</em></td>
+<td>Damji et al.</td>
+<td>🟦🟩</td>
+<td>PySpark</td>
+</tr>
+<tr class="even">
+<td><em>Spark: The Definitive Guide</em></td>
+<td>Chambers &amp; Zaharia</td>
+<td>🟩🟥</td>
+<td>Spark avancé</td>
 </tr>
 <tr class="odd">
 <td><em>Data Pipelines Pocket Reference</em></td>
 <td>James Densmore</td>
+<td>🟦🟩</td>
 <td>Pipelines</td>
 </tr>
 <tr class="even">
-<td><em>Learning Spark, 2nd Ed</em></td>
-<td>Damji et al.</td>
-<td>Spark</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="avancés" class="level3">
-<h3 class="anchored" data-anchor-id="avancés">Avancés</h3>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Livre</th>
-<th>Auteur</th>
-<th>Sujet</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
 <td><em>Streaming Systems</em></td>
 <td>Akidau et al.</td>
-<td>Streaming</td>
-</tr>
-<tr class="even">
-<td><em>Building Microservices</em></td>
-<td>Sam Newman</td>
-<td>Architecture</td>
+<td>🟥</td>
+<td>Streaming avancé</td>
 </tr>
 <tr class="odd">
 <td><em>The Data Warehouse Toolkit</em></td>
 <td>Ralph Kimball</td>
-<td>Modélisation</td>
+<td>🟩🟥</td>
+<td>Modélisation dimensionnelle</td>
+</tr>
+<tr class="even">
+<td><em>Building Microservices</em></td>
+<td>Sam Newman</td>
+<td>🟥</td>
+<td>Architecture</td>
 </tr>
 </tbody>
 </table>
 <hr>
 </section>
+<section id="formations-gratuites" class="level2">
+<h2 class="anchored" data-anchor-id="formations-gratuites">🎓 Formations Gratuites</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Plateforme</th>
+<th>Cours</th>
+<th>Niveau</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>dbt Learn</strong></td>
+<td><a href="https://courses.getdbt.com/">courses.getdbt.com</a></td>
+<td>🟩</td>
+</tr>
+<tr class="even">
+<td><strong>Databricks Academy</strong></td>
+<td><a href="https://www.databricks.com/learn">databricks.com/learn</a></td>
+<td>🟦🟩🟥</td>
+</tr>
+<tr class="odd">
+<td><strong>Confluent Developer</strong></td>
+<td><a href="https://developer.confluent.io/">developer.confluent.io</a></td>
+<td>🟩🟥</td>
+</tr>
+<tr class="even">
+<td><strong>Data Talks Club</strong></td>
+<td><a href="https://datatalks.club/">datatalks.club</a></td>
+<td>🟦🟩</td>
+</tr>
+<tr class="odd">
+<td><strong>Coursera - GCP DE</strong></td>
+<td><a href="https://www.coursera.org/professional-certificates/gcp-data-engineering">coursera.org/…gcp-data-engineering</a></td>
+<td>🟩</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="blogs-newsletters" class="level2">
+<h2 class="anchored" data-anchor-id="blogs-newsletters">📝 Blogs &amp; Newsletters</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Ressource</th>
+<th>Focus</th>
+<th>Fréquence</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://www.databricks.com/blog">Databricks Blog</a></td>
+<td>Spark, Delta Lake, Lakehouse</td>
+<td>Hebdo</td>
+</tr>
+<tr class="even">
+<td><a href="https://www.confluent.io/blog/">Confluent Blog</a></td>
+<td>Kafka, Streaming</td>
+<td>Hebdo</td>
+</tr>
+<tr class="odd">
+<td><a href="https://www.getdbt.com/blog/">dbt Blog</a></td>
+<td>Analytics Engineering</td>
+<td>Hebdo</td>
+</tr>
+<tr class="even">
+<td><a href="https://www.dataengineeringweekly.com/">Data Engineering Weekly</a></td>
+<td>Newsletter DE</td>
+<td>Hebdo</td>
+</tr>
+<tr class="odd">
+<td><a href="https://www.theseattledataguy.com/">Seattle Data Guy</a></td>
+<td>Carrière, tutoriels</td>
+<td>Hebdo</td>
+</tr>
+<tr class="even">
+<td><a href="https://www.startdataengineering.com/">Start Data Engineering</a></td>
+<td>Tutoriels pratiques</td>
+<td>Mensuel</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="ides-outils" class="level2">
+<h2 class="anchored" data-anchor-id="ides-outils">🛠️ IDEs &amp; Outils</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Outil</th>
+<th>Usage</th>
+<th>Lien</th>
+<th>Gratuit</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>VS Code</strong></td>
+<td>IDE polyvalent</td>
+<td><a href="https://code.visualstudio.com/">code.visualstudio.com</a></td>
+<td>✅</td>
+</tr>
+<tr class="even">
+<td><strong>PyCharm</strong></td>
+<td>Python IDE</td>
+<td><a href="https://www.jetbrains.com/pycharm/">jetbrains.com/pycharm</a></td>
+<td>✅ Community</td>
+</tr>
+<tr class="odd">
+<td><strong>DataGrip</strong></td>
+<td>SQL IDE</td>
+<td><a href="https://www.jetbrains.com/datagrip/">jetbrains.com/datagrip</a></td>
+<td>30j trial</td>
+</tr>
+<tr class="even">
+<td><strong>DBeaver</strong></td>
+<td>SQL gratuit</td>
+<td><a href="https://dbeaver.io/">dbeaver.io</a></td>
+<td>✅</td>
+</tr>
+<tr class="odd">
+<td><strong>Postman</strong></td>
+<td>API testing</td>
+<td><a href="https://www.postman.com/">postman.com</a></td>
+<td>✅</td>
+</tr>
+<tr class="even">
+<td><strong>k9s</strong></td>
+<td>Terminal UI K8s</td>
+<td><a href="https://k9scli.io/">k9scli.io</a></td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<hr>
 </section>
 <section id="communautés" class="level2">
 <h2 class="anchored" data-anchor-id="communautés">🔗 Communautés</h2>
@@ -1355,31 +1695,44 @@ ul.task-list li input[type="checkbox"] {
 <tr class="header">
 <th>Communauté</th>
 <th>Plateforme</th>
+<th>Focus</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>Data Engineering</strong></td>
-<td><a href="https://www.reddit.com/r/dataengineering/">r/dataengineering</a></td>
+<td><strong>r/dataengineering</strong></td>
+<td><a href="https://www.reddit.com/r/dataengineering/">Reddit</a></td>
+<td>Discussions générales</td>
 </tr>
 <tr class="even">
 <td><strong>dbt Community</strong></td>
-<td><a href="https://community.getdbt.com/">community.getdbt.com</a></td>
+<td><a href="https://community.getdbt.com/">Slack</a></td>
+<td>dbt, Analytics Engineering</td>
 </tr>
 <tr class="odd">
-<td><strong>Apache Slack</strong></td>
-<td><a href="https://the-asf.slack.com/">the-asf.slack.com</a></td>
+<td><strong>Data Talks Club</strong></td>
+<td><a href="https://datatalks.club/slack.html">Slack</a></td>
+<td>Cours, networking</td>
 </tr>
 <tr class="even">
-<td><strong>Data Talks Club</strong></td>
-<td><a href="https://datatalks.club/">datatalks.club</a></td>
+<td><strong>Apache Slack</strong></td>
+<td><a href="https://the-asf.slack.com/">Slack</a></td>
+<td>Projets Apache</td>
+</tr>
+<tr class="odd">
+<td><strong>Locally Optimistic</strong></td>
+<td><a href="https://locallyoptimistic.com/community/">Slack</a></td>
+<td>Data leaders</td>
 </tr>
 </tbody>
 </table>
 <hr>
-<p><a href="../index.html" class="btn btn-secondary">🔙 Retour à l’accueil</a></p>
+<div style="text-align: center; margin: 30px 0;">
+<p><a href="index.qmd" style="background: linear-gradient(135deg, #6b7280, #4b5563); color: white; padding: 15px 30px; text-decoration: none; font-size: 16px; border-radius: 10px; font-weight: 600; box-shadow: 0 4px 15px rgba(107, 114, 128, 0.3);"> 🏠 Retour à l’accueil </a></p>
+</div>
 
 
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Retour au sommet</a></main> <!-- /main -->
@@ -1388,30 +1741,65 @@ ul.task-list li input[type="checkbox"] {
 <style>
 #pdf-button {
   position: fixed;
-  bottom: 20px;
+  bottom: 80px;  /* Plus haut pour éviter le bouton back-to-top de Quarto */
   right: 20px;
-  background: #00b4d8;
+  background: linear-gradient(135deg, #00b4d8, #0077b6);
   color: white;
-  padding: 10px 20px;
+  padding: 12px 20px;
   border-radius: 30px;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 15px rgba(0, 180, 216, 0.4);
   font-size: 14px;
+  font-weight: 500;
   cursor: pointer;
-  z-index: 9999;
-  transition: 0.2s ease-in-out;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
+
 #pdf-button:hover {
-  background: #0077b6;
+  background: linear-gradient(135deg, #0077b6, #005f8a);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 119, 182, 0.5);
+}
+
+#pdf-button:active {
+  transform: translateY(0);
+}
+
+/* Responsive - plus petit sur mobile */
+@media (max-width: 768px) {
+  #pdf-button {
+    bottom: 70px;
+    right: 15px;
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  #pdf-button {
+    background: linear-gradient(135deg, #0096c7, #0077b6);
+    box-shadow: 0 4px 15px rgba(0, 150, 199, 0.3);
+  }
+  
+  #pdf-button:hover {
+    background: linear-gradient(135deg, #00b4d8, #0096c7);
+    box-shadow: 0 6px 20px rgba(0, 180, 216, 0.4);
+  }
 }
 </style>
 
-<div id="pdf-button" onclick="downloadPDF()">
-  📄 Télécharger la version PDF
-</div>
+<button id="pdf-button" onclick="downloadPDF()" aria-label="Télécharger en PDF">
+  📄 Télécharger en PDF
+</button>
 
 <script>
 function downloadPDF() {
-  window.print(); // fonctionne directement dans Quarto HTML
+  window.print();
 }
 </script>
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1895,9 +2283,6 @@ function downloadPDF() {
 </footer>
 <!-- Reading Progress Indicator -->
 <div class="reading-progress" aria-hidden="true"></div>
-
-<!-- Back to Top Button -->
-<button class="back-to-top" aria-label="Retour en haut de page" title="Retour en haut"></button>
 
 <!-- UI Enhancement Script -->
 <script src="../bootcamp-ui.js"></script>

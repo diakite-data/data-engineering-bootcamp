@@ -1,119 +1,48 @@
 /**
- * 🚀 BOOTCAMP DATA ENGINEERING - Enhanced UI Components
- * JavaScript pour l'indicateur de progression et le bouton retour en haut
+ * Bootcamp Data Engineering - UI Enhancements
+ * Version: 3.1 (sans back-to-top - géré par Quarto)
  * 
- * INSTALLATION :
- * 1. Ajouter ce script dans ton fichier _quarto.yml :
- *    include-after-body:
- *      - text: |
- *          <div class="reading-progress"></div>
- *          <button class="back-to-top" aria-label="Retour en haut de page"></button>
- *          <script src="bootcamp-ui.js"></script>
- * 
- * OU ajouter directement dans ton template HTML avant </body>
+ * Features:
+ * - Reading progress indicator
+ * - Smooth scroll for anchor links
+ * - Skip link for accessibility
  */
 
 (function() {
   'use strict';
 
-  // ==================================================
-  // 📊 READING PROGRESS INDICATOR
-  // ==================================================
+  // ==========================================================================
+  // READING PROGRESS INDICATOR
+  // ==========================================================================
   
   const progressBar = document.querySelector('.reading-progress');
   
   if (progressBar) {
+    let ticking = false;
+    
     function updateProgress() {
       const scrollTop = window.scrollY;
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
       const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      
       progressBar.style.width = Math.min(progress, 100) + '%';
+      ticking = false;
     }
     
-    // Throttle pour performance
-    let ticking = false;
-    window.addEventListener('scroll', function() {
+    function onScroll() {
       if (!ticking) {
-        window.requestAnimationFrame(function() {
-          updateProgress();
-          ticking = false;
-        });
+        requestAnimationFrame(updateProgress);
         ticking = true;
       }
-    }, { passive: true });
-    
-    // Initial call
-    updateProgress();
-  }
-
-  // ==================================================
-  // ⬆️ BACK TO TOP BUTTON
-  // ==================================================
-  
-  const backToTop = document.querySelector('.back-to-top');
-  
-  if (backToTop) {
-    const SCROLL_THRESHOLD = 300; // Pixels avant d'afficher le bouton
-    
-    function toggleBackToTop() {
-      if (window.scrollY > SCROLL_THRESHOLD) {
-        backToTop.classList.add('visible');
-      } else {
-        backToTop.classList.remove('visible');
-      }
     }
     
-    // Throttle pour performance
-    let btTicking = false;
-    window.addEventListener('scroll', function() {
-      if (!btTicking) {
-        window.requestAnimationFrame(function() {
-          toggleBackToTop();
-          btTicking = false;
-        });
-        btTicking = true;
-      }
-    }, { passive: true });
-    
-    // Click handler
-    backToTop.addEventListener('click', function() {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
-    
-    // Keyboard support
-    backToTop.addEventListener('keydown', function(e) {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        });
-      }
-    });
-    
-    // Initial check
-    toggleBackToTop();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    updateProgress(); // Initial call
   }
 
-  // ==================================================
-  // ♿ SKIP LINK (Accessibilité)
-  // ==================================================
-  
-  // Créer le skip link s'il n'existe pas
-  if (!document.querySelector('.skip-link')) {
-    const skipLink = document.createElement('a');
-    skipLink.href = '#quarto-content';
-    skipLink.className = 'skip-link';
-    skipLink.textContent = 'Aller au contenu principal';
-    document.body.insertBefore(skipLink, document.body.firstChild);
-  }
-
-  // ==================================================
-  // 🎯 SMOOTH SCROLL FOR ANCHOR LINKS
-  // ==================================================
+  // ==========================================================================
+  // SMOOTH SCROLL FOR ANCHOR LINKS
+  // ==========================================================================
   
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
@@ -128,27 +57,60 @@
           block: 'start'
         });
         
-        // Update focus for accessibility
-        target.setAttribute('tabindex', '-1');
-        target.focus({ preventScroll: true });
+        // Update URL without jumping
+        history.pushState(null, null, targetId);
       }
     });
   });
 
-  // ==================================================
-  // 🌙 DARK MODE DETECTION (Optional logging)
-  // ==================================================
+  // ==========================================================================
+  // SKIP LINK FOR ACCESSIBILITY
+  // ==========================================================================
   
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-  
-  function handleDarkModeChange(e) {
-    console.log('[Bootcamp UI] Mode sombre:', e.matches ? 'activé' : 'désactivé');
-    // Tu peux ajouter des actions supplémentaires ici si nécessaire
+  function createSkipLink() {
+    if (document.querySelector('.skip-link')) return;
+    
+    const skipLink = document.createElement('a');
+    skipLink.href = '#quarto-document-content';
+    skipLink.className = 'skip-link';
+    skipLink.textContent = 'Aller au contenu principal';
+    
+    // Style inline pour garantir le fonctionnement
+    skipLink.style.cssText = `
+      position: fixed;
+      top: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--bs-primary, #0d6efd);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 0 0 8px 8px;
+      z-index: 10000;
+      transition: top 0.3s ease;
+      text-decoration: none;
+      font-weight: 600;
+    `;
+    
+    skipLink.addEventListener('focus', () => {
+      skipLink.style.top = '0';
+    });
+    
+    skipLink.addEventListener('blur', () => {
+      skipLink.style.top = '-100px';
+    });
+    
+    document.body.insertBefore(skipLink, document.body.firstChild);
   }
   
-  prefersDark.addEventListener('change', handleDarkModeChange);
+  createSkipLink();
+
+  // ==========================================================================
+  // DARK MODE DETECTION LOG (for debugging)
+  // ==========================================================================
   
-  // Log initial state
-  console.log('[Bootcamp UI] Initialisé - Mode sombre:', prefersDark.matches ? 'activé' : 'désactivé');
+  if (window.matchMedia) {
+    const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    console.log('🌓 Dark mode:', darkModeQuery.matches ? 'enabled' : 'disabled');
+  }
 
 })();
