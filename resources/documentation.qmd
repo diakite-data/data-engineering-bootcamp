@@ -16,33 +16,33 @@ Cette page liste les documentations officielles organisées par niveau du bootca
 
 | Technologie | Documentation | Module associé |
 |-------------|---------------|----------------|
-| **Python** | [docs.python.org](https://docs.python.org/3/) | [04 - Python Fondamental](notebooks/beginner/04_python_basics_for_data_engineers.ipynb) |
-| **Pandas** | [pandas.pydata.org/docs](https://pandas.pydata.org/docs/) | [05 - Python Data Processing](notebooks/beginner/05_python_data_processing_for_data_engineers.ipynb) |
-| **NumPy** | [numpy.org/doc](https://numpy.org/doc/) | [05 - Python Data Processing](notebooks/beginner/05_python_data_processing_for_data_engineers.ipynb) |
+| **Python** | [docs.python.org](https://docs.python.org/3/) | [04 - Python Fondamental](../notebooks/beginner/04_python_basics_for_data_engineers.ipynb) |
+| **Pandas** | [pandas.pydata.org/docs](https://pandas.pydata.org/docs/) | [05 - Python Data Processing](../notebooks/beginner/05_python_data_processing_for_data_engineers.ipynb) |
+| **NumPy** | [numpy.org/doc](https://numpy.org/doc/) | [05 - Python Data Processing](../notebooks/beginner/05_python_data_processing_for_data_engineers.ipynb) |
 
 ## 🗄️ Bases de Données & SQL
 
 | Technologie | Documentation | Module associé |
 |-------------|---------------|----------------|
-| **PostgreSQL** | [postgresql.org/docs](https://www.postgresql.org/docs/) | [06 - Intro BDD](notebooks/beginner/06_intro_relational_databases.ipynb) |
-| **SQL Tutorial** | [w3schools.com/sql](https://www.w3schools.com/sql/) | [07 - SQL](notebooks/beginner/07_sql_for_data_engineers.ipynb) |
-| **MongoDB** | [mongodb.com/docs](https://www.mongodb.com/docs/) | [09 - MongoDB](notebooks/beginner/09_mongodb_for_data_engineers.ipynb) |
-| **Elasticsearch** | [elastic.co/guide](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html) | [10 - Elasticsearch](notebooks/beginner/10_elasticsearch_for_data_engineers.ipynb) |
+| **PostgreSQL** | [postgresql.org/docs](https://www.postgresql.org/docs/) | [06 - Intro BDD](../notebooks/beginner/06_intro_relational_databases.ipynb) |
+| **SQL Tutorial** | [w3schools.com/sql](https://www.w3schools.com/sql/) | [07 - SQL](../notebooks/beginner/07_sql_for_data_engineers.ipynb) |
+| **MongoDB** | [mongodb.com/docs](https://www.mongodb.com/docs/) | [09 - MongoDB](../notebooks/beginner/09_mongodb_for_data_engineers.ipynb) |
+| **Elasticsearch** | [elastic.co/guide](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html) | [10 - Elasticsearch](../notebooks/beginner/10_elasticsearch_for_data_engineers.ipynb) |
 
 ## 🔧 Outils Fondamentaux
 
 | Technologie | Documentation | Module associé |
 |-------------|---------------|----------------|
-| **Git** | [git-scm.com/doc](https://git-scm.com/doc) | [03 - Git & Versioning](notebooks/beginner/03_git_for_data_engineers.ipynb) |
-| **Bash** | [gnu.org/software/bash/manual](https://www.gnu.org/software/bash/manual/) | [02 - Linux & Bash](notebooks/beginner/02_bash_for_data_engineers.ipynb) |
-| **FastAPI** | [fastapi.tiangolo.com](https://fastapi.tiangolo.com/) | [13 - FastAPI](notebooks/beginner/13_fastapi_for_data_engineers.ipynb) |
+| **Git** | [git-scm.com/doc](https://git-scm.com/doc) | [03 - Git & Versioning](../notebooks/beginner/03_git_for_data_engineers.ipynb) |
+| **Bash** | [gnu.org/software/bash/manual](https://www.gnu.org/software/bash/manual/) | [02 - Linux & Bash](../notebooks/beginner/02_bash_for_data_engineers.ipynb) |
+| **FastAPI** | [fastapi.tiangolo.com](https://fastapi.tiangolo.com/) | [13 - FastAPI](../notebooks/beginner/13_fastapi_for_data_engineers.ipynb) |
 
 ## ⚡ Introduction Spark
 
 | Ressource | Lien | Module associé |
 |-----------|------|----------------|
-| **PySpark Quickstart** | [spark.apache.org/docs/latest/api/python/getting_started](https://spark.apache.org/docs/latest/api/python/getting_started/index.html) | [11 - Intro PySpark](notebooks/beginner/11_pyspark_for_data_engineering.ipynb) |
-| **DataFrame Guide** | [spark.apache.org/docs/latest/sql-programming-guide](https://spark.apache.org/docs/latest/sql-programming-guide.html) | [11 - Intro PySpark](notebooks/beginner/11_pyspark_for_data_engineering.ipynb) |
+| **PySpark Quickstart** | [spark.apache.org/docs/latest/api/python/getting_started](https://spark.apache.org/docs/latest/api/python/getting_started/index.html) | [11 - Intro PySpark](../notebooks/beginner/11_pyspark_for_data_engineering.ipynb) |
+| **DataFrame Guide** | [spark.apache.org/docs/latest/sql-programming-guide](https://spark.apache.org/docs/latest/sql-programming-guide.html) | [11 - Intro PySpark](../notebooks/beginner/11_pyspark_for_data_engineering.ipynb) |
 
 ---
 
@@ -52,56 +52,56 @@ Cette page liste les documentations officielles organisées par niveau du bootca
 
 | Technologie | Documentation | Cheatsheet | Module associé |
 |-------------|---------------|------------|----------------|
-| **Docker** | [docs.docker.com](https://docs.docker.com/) | [Cheatsheet](https://dockerlabs.collabnix.com/docker/cheatsheet/) | [14 - Docker](notebooks/intermediate/14_docker_for_data_engineers.ipynb) |
-| **Kubernetes** | [kubernetes.io/docs](https://kubernetes.io/docs/home/) | [kubectl Cheatsheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/) | [15 - K8s Fundamentals](notebooks/intermediate/15_kubernetes_fundamentals.ipynb) |
-| **Spark Operator** | [github.com/kubeflow/spark-operator](https://github.com/kubeflow/spark-operator) | - | [21 - Spark on K8s](notebooks/intermediate/21_spark_on_kubernetes.ipynb) |
+| **Docker** | [docs.docker.com](https://docs.docker.com/) | [Cheatsheet](https://dockerlabs.collabnix.com/docker/cheatsheet/) | [14 - Docker](../notebooks/intermediate/14_docker_for_data_engineers.ipynb) |
+| **Kubernetes** | [kubernetes.io/docs](https://kubernetes.io/docs/home/) | [kubectl Cheatsheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/) | [15 - K8s Fundamentals](../notebooks/intermediate/15_kubernetes_fundamentals.ipynb) |
+| **Spark Operator** | [github.com/kubeflow/spark-operator](https://github.com/kubeflow/spark-operator) | - | [21 - Spark on K8s](../notebooks/intermediate/21_spark_on_kubernetes.ipynb) |
 
 ## 🚀 High Performance Python
 
 | Technologie | Documentation | Module associé |
 |-------------|---------------|----------------|
-| **Polars** | [docs.pola.rs](https://docs.pola.rs/) | [17 - Polars](notebooks/intermediate/17_polars_for_data_engineering.ipynb) |
-| **PyArrow** | [arrow.apache.org/docs/python](https://arrow.apache.org/docs/python/) | [17 - Polars](notebooks/intermediate/17_polars_for_data_engineering.ipynb) |
+| **Polars** | [docs.pola.rs](https://docs.pola.rs/) | [17 - Polars](../notebooks/intermediate/17_polars_for_data_engineering.ipynb) |
+| **PyArrow** | [arrow.apache.org/docs/python](https://arrow.apache.org/docs/python/) | [17 - Polars](../notebooks/intermediate/17_polars_for_data_engineering.ipynb) |
 
 ## ⚡ Apache Spark Avancé
 
 | Ressource | Lien | Module associé |
 |-----------|------|----------------|
-| **Spark Documentation** | [spark.apache.org/docs/latest](https://spark.apache.org/docs/latest/) | [19 - PySpark Avancé](notebooks/intermediate/19_pyspark_advanced.ipynb) |
-| **PySpark API Reference** | [spark.apache.org/docs/latest/api/python](https://spark.apache.org/docs/latest/api/python/) | [19 - PySpark Avancé](notebooks/intermediate/19_pyspark_advanced.ipynb) |
-| **Spark SQL Guide** | [spark.apache.org/docs/latest/sql-ref](https://spark.apache.org/docs/latest/sql-ref.html) | [20 - Spark SQL Deep Dive](notebooks/intermediate/20_spark_sql_deep_dive.ipynb) |
-| **Performance Tuning** | [spark.apache.org/docs/latest/sql-performance-tuning](https://spark.apache.org/docs/latest/sql-performance-tuning.html) | [20 - Spark SQL Deep Dive](notebooks/intermediate/20_spark_sql_deep_dive.ipynb) |
+| **Spark Documentation** | [spark.apache.org/docs/latest](https://spark.apache.org/docs/latest/) | [19 - PySpark Avancé](../notebooks/intermediate/19_pyspark_advanced.ipynb) |
+| **PySpark API Reference** | [spark.apache.org/docs/latest/api/python](https://spark.apache.org/docs/latest/api/python/) | [19 - PySpark Avancé](../notebooks/intermediate/19_pyspark_advanced.ipynb) |
+| **Spark SQL Guide** | [spark.apache.org/docs/latest/sql-ref](https://spark.apache.org/docs/latest/sql-ref.html) | [20 - Spark SQL Deep Dive](../notebooks/intermediate/20_spark_sql_deep_dive.ipynb) |
+| **Performance Tuning** | [spark.apache.org/docs/latest/sql-performance-tuning](https://spark.apache.org/docs/latest/sql-performance-tuning.html) | [20 - Spark SQL Deep Dive](../notebooks/intermediate/20_spark_sql_deep_dive.ipynb) |
 
 ## 🏠 Lakehouse & Table Formats
 
 | Format | Documentation | GitHub | Module associé |
 |--------|---------------|--------|----------------|
-| **Delta Lake** | [docs.delta.io](https://docs.delta.io/) | [delta-io/delta](https://github.com/delta-io/delta) | [23 - Table Formats](notebooks/intermediate/23_table_formats_delta_iceberg.ipynb) |
-| **Apache Iceberg** | [iceberg.apache.org/docs](https://iceberg.apache.org/docs/latest/) | [apache/iceberg](https://github.com/apache/iceberg) | [23 - Table Formats](notebooks/intermediate/23_table_formats_delta_iceberg.ipynb) |
+| **Delta Lake** | [docs.delta.io](https://docs.delta.io/) | [delta-io/delta](https://github.com/delta-io/delta) | [23 - Table Formats](../notebooks/intermediate/23_table_formats_delta_iceberg.ipynb) |
+| **Apache Iceberg** | [iceberg.apache.org/docs](https://iceberg.apache.org/docs/latest/) | [apache/iceberg](https://github.com/apache/iceberg) | [23 - Table Formats](../notebooks/intermediate/23_table_formats_delta_iceberg.ipynb) |
 | **Apache Hudi** | [hudi.apache.org/docs](https://hudi.apache.org/docs/overview) | [apache/hudi](https://github.com/apache/hudi) | - |
 
 ## 📨 Streaming & Messaging
 
 | Technologie | Documentation | Module associé |
 |-------------|---------------|----------------|
-| **Apache Kafka** | [kafka.apache.org/documentation](https://kafka.apache.org/documentation/) | [24 - Kafka & Streaming](notebooks/intermediate/24_kafka_streaming.ipynb) |
-| **Confluent Platform** | [docs.confluent.io](https://docs.confluent.io/) | [24 - Kafka & Streaming](notebooks/intermediate/24_kafka_streaming.ipynb) |
-| **kafka-python** | [kafka-python.readthedocs.io](https://kafka-python.readthedocs.io/) | [24 - Kafka & Streaming](notebooks/intermediate/24_kafka_streaming.ipynb) |
+| **Apache Kafka** | [kafka.apache.org/documentation](https://kafka.apache.org/documentation/) | [24 - Kafka & Streaming](../notebooks/intermediate/24_kafka_streaming.ipynb) |
+| **Confluent Platform** | [docs.confluent.io](https://docs.confluent.io/) | [24 - Kafka & Streaming](../notebooks/intermediate/24_kafka_streaming.ipynb) |
+| **kafka-python** | [kafka-python.readthedocs.io](https://kafka-python.readthedocs.io/) | [24 - Kafka & Streaming](../notebooks/intermediate/24_kafka_streaming.ipynb) |
 
 ## ☁️ Cloud Object Storage
 
 | Provider | Documentation | Module associé |
 |----------|---------------|----------------|
-| **AWS S3** | [docs.aws.amazon.com/s3](https://docs.aws.amazon.com/s3/) | [22 - Cloud Storage](notebooks/intermediate/22_cloud_and_object_storage.ipynb) |
-| **GCP GCS** | [cloud.google.com/storage/docs](https://cloud.google.com/storage/docs) | [22 - Cloud Storage](notebooks/intermediate/22_cloud_and_object_storage.ipynb) |
-| **MinIO** | [min.io/docs](https://min.io/docs/minio/linux/index.html) | [22 - Cloud Storage](notebooks/intermediate/22_cloud_and_object_storage.ipynb) |
+| **AWS S3** | [docs.aws.amazon.com/s3](https://docs.aws.amazon.com/s3/) | [22 - Cloud Storage](../notebooks/intermediate/22_cloud_and_object_storage.ipynb) |
+| **GCP GCS** | [cloud.google.com/storage/docs](https://cloud.google.com/storage/docs) | [22 - Cloud Storage](../notebooks/intermediate/22_cloud_and_object_storage.ipynb) |
+| **MinIO** | [min.io/docs](https://min.io/docs/minio/linux/index.html) | [22 - Cloud Storage](../notebooks/intermediate/22_cloud_and_object_storage.ipynb) |
 
 ## 🔧 Data Quality & Transformation
 
 | Technologie | Documentation | Module associé |
 |-------------|---------------|----------------|
-| **dbt** | [docs.getdbt.com](https://docs.getdbt.com/) | [25 - dbt & Data Quality](notebooks/intermediate/25_dbt_data_quality.ipynb) |
-| **Great Expectations** | [docs.greatexpectations.io](https://docs.greatexpectations.io/) | [25 - dbt & Data Quality](notebooks/intermediate/25_dbt_data_quality.ipynb) |
+| **dbt** | [docs.getdbt.com](https://docs.getdbt.com/) | [25 - dbt & Data Quality](../notebooks/intermediate/25_dbt_data_quality.ipynb) |
+| **Great Expectations** | [docs.greatexpectations.io](https://docs.greatexpectations.io/) | [25 - dbt & Data Quality](../notebooks/intermediate/25_dbt_data_quality.ipynb) |
 
 ---
 
@@ -111,59 +111,59 @@ Cette page liste les documentations officielles organisées par niveau du bootca
 
 | Technologie | Documentation | Module associé |
 |-------------|---------------|----------------|
-| **Helm** | [helm.sh/docs](https://helm.sh/docs/) | [27 - K8s Deep Dive](notebooks/advanced/27_kubernetes_deep_dive.ipynb) |
-| **ArgoCD** | [argo-cd.readthedocs.io](https://argo-cd.readthedocs.io/) | [27 - K8s Deep Dive](notebooks/advanced/27_kubernetes_deep_dive.ipynb) |
-| **Kubernetes Operators** | [kubernetes.io/docs/concepts/extend-kubernetes/operator](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/) | [27 - K8s Deep Dive](notebooks/advanced/27_kubernetes_deep_dive.ipynb) |
+| **Helm** | [helm.sh/docs](https://helm.sh/docs/) | [27 - K8s Deep Dive](../notebooks/advanced/27_kubernetes_deep_dive.ipynb) |
+| **ArgoCD** | [argo-cd.readthedocs.io](https://argo-cd.readthedocs.io/) | [27 - K8s Deep Dive](../notebooks/advanced/27_kubernetes_deep_dive.ipynb) |
+| **Kubernetes Operators** | [kubernetes.io/docs/concepts/extend-kubernetes/operator](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/) | [27 - K8s Deep Dive](../notebooks/advanced/27_kubernetes_deep_dive.ipynb) |
 
 ## 🔄 Orchestration Avancée
 
 | Technologie | Documentation | Module associé |
 |-------------|---------------|----------------|
-| **Apache Airflow** | [airflow.apache.org/docs](https://airflow.apache.org/docs/) | [28 - Orchestration Avancée](notebooks/advanced/28_advanced_orchestration.ipynb) |
-| **Dagster** | [docs.dagster.io](https://docs.dagster.io/) | [28 - Orchestration Avancée](notebooks/advanced/28_advanced_orchestration.ipynb) |
+| **Apache Airflow** | [airflow.apache.org/docs](https://airflow.apache.org/docs/) | [28 - Orchestration Avancée](../notebooks/advanced/28_advanced_orchestration.ipynb) |
+| **Dagster** | [docs.dagster.io](https://docs.dagster.io/) | [28 - Orchestration Avancée](../notebooks/advanced/28_advanced_orchestration.ipynb) |
 | **Prefect** | [docs.prefect.io](https://docs.prefect.io/) | - |
 
 ## 📨 Messaging Distribué
 
 | Technologie | Documentation | Module associé |
 |-------------|---------------|----------------|
-| **Kafka Internals** | [kafka.apache.org/documentation/#design](https://kafka.apache.org/documentation/#design) | [29 - Distributed Messaging](notebooks/advanced/29_distributed_messaging.ipynb) |
-| **Apache Pulsar** | [pulsar.apache.org/docs](https://pulsar.apache.org/docs/3.0.x/) | [29 - Distributed Messaging](notebooks/advanced/29_distributed_messaging.ipynb) |
-| **RabbitMQ** | [rabbitmq.com/documentation](https://www.rabbitmq.com/documentation.html) | [29 - Distributed Messaging](notebooks/advanced/29_distributed_messaging.ipynb) |
-| **Debezium** | [debezium.io/documentation](https://debezium.io/documentation/) | [29 - Distributed Messaging](notebooks/advanced/29_distributed_messaging.ipynb) |
+| **Kafka Internals** | [kafka.apache.org/documentation/#design](https://kafka.apache.org/documentation/#design) | [29 - Distributed Messaging](../notebooks/advanced/29_distributed_messaging.ipynb) |
+| **Apache Pulsar** | [pulsar.apache.org/docs](https://pulsar.apache.org/docs/3.0.x/) | [29 - Distributed Messaging](../notebooks/advanced/29_distributed_messaging.ipynb) |
+| **RabbitMQ** | [rabbitmq.com/documentation](https://www.rabbitmq.com/documentation.html) | [29 - Distributed Messaging](../notebooks/advanced/29_distributed_messaging.ipynb) |
+| **Debezium** | [debezium.io/documentation](https://debezium.io/documentation/) | [29 - Distributed Messaging](../notebooks/advanced/29_distributed_messaging.ipynb) |
 
 ## ⚡ Spark & Scala
 
 | Ressource | Lien | Module associé |
 |-----------|------|----------------|
-| **Scala Documentation** | [docs.scala-lang.org](https://docs.scala-lang.org/) | [30 - Spark & Scala](notebooks/advanced/30_spark_scala_deep_dive.ipynb) |
-| **Spark Internals** | [spark.apache.org/docs/latest/rdd-programming-guide](https://spark.apache.org/docs/latest/rdd-programming-guide.html) | [30 - Spark & Scala](notebooks/advanced/30_spark_scala_deep_dive.ipynb) |
-| **Catalyst Optimizer** | [databricks.com/blog/2015/04/13/deep-dive-into-spark-sqls-catalyst-optimizer](https://www.databricks.com/blog/2015/04/13/deep-dive-into-spark-sqls-catalyst-optimizer.html) | [30 - Spark & Scala](notebooks/advanced/30_spark_scala_deep_dive.ipynb) |
+| **Scala Documentation** | [docs.scala-lang.org](https://docs.scala-lang.org/) | [30 - Spark & Scala](../notebooks/advanced/30_spark_scala_deep_dive.ipynb) |
+| **Spark Internals** | [spark.apache.org/docs/latest/rdd-programming-guide](https://spark.apache.org/docs/latest/rdd-programming-guide.html) | [30 - Spark & Scala](../notebooks/advanced/30_spark_scala_deep_dive.ipynb) |
+| **Catalyst Optimizer** | [databricks.com/blog/2015/04/13/deep-dive-into-spark-sqls-catalyst-optimizer](https://www.databricks.com/blog/2015/04/13/deep-dive-into-spark-sqls-catalyst-optimizer.html) | [30 - Spark & Scala](../notebooks/advanced/30_spark_scala_deep_dive.ipynb) |
 
 ## 🤖 MLOps & Feature Engineering
 
 | Technologie | Documentation | Module associé |
 |-------------|---------------|----------------|
-| **MLflow** | [mlflow.org/docs/latest](https://mlflow.org/docs/latest/index.html) | [31 - DE for ML](notebooks/advanced/31_data_engineering_for_ml.ipynb) |
-| **Feast** | [docs.feast.dev](https://docs.feast.dev/) | [31 - DE for ML](notebooks/advanced/31_data_engineering_for_ml.ipynb) |
-| **Tecton** | [docs.tecton.ai](https://docs.tecton.ai/) | [31 - DE for ML](notebooks/advanced/31_data_engineering_for_ml.ipynb) |
+| **MLflow** | [mlflow.org/docs/latest](https://mlflow.org/docs/latest/index.html) | [31 - DE for ML](../notebooks/advanced/31_data_engineering_for_ml.ipynb) |
+| **Feast** | [docs.feast.dev](https://docs.feast.dev/) | [31 - DE for ML](../notebooks/advanced/31_data_engineering_for_ml.ipynb) |
+| **Tecton** | [docs.tecton.ai](https://docs.tecton.ai/) | [31 - DE for ML](../notebooks/advanced/31_data_engineering_for_ml.ipynb) |
 
 ## 🏛️ Data Mesh & Governance
 
 | Ressource | Lien | Module associé |
 |-----------|------|----------------|
-| **Data Mesh Principles** | [martinfowler.com/articles/data-mesh-principles](https://martinfowler.com/articles/data-mesh-principles.html) | [32 - Data Mesh](notebooks/advanced/32_data_mesh_contracts.ipynb) |
-| **Data Contracts** | [datacontract.com](https://datacontract.com/) | [32 - Data Mesh](notebooks/advanced/32_data_mesh_contracts.ipynb) |
-| **DataHub** | [datahubproject.io/docs](https://datahubproject.io/docs/) | [32 - Data Mesh](notebooks/advanced/32_data_mesh_contracts.ipynb) |
-| **OpenMetadata** | [docs.open-metadata.org](https://docs.open-metadata.org/) | [32 - Data Mesh](notebooks/advanced/32_data_mesh_contracts.ipynb) |
+| **Data Mesh Principles** | [martinfowler.com/articles/data-mesh-principles](https://martinfowler.com/articles/data-mesh-principles.html) | [32 - Data Mesh](../notebooks/advanced/32_data_mesh_contracts.ipynb) |
+| **Data Contracts** | [datacontract.com](https://datacontract.com/) | [32 - Data Mesh](../notebooks/advanced/32_data_mesh_contracts.ipynb) |
+| **DataHub** | [datahubproject.io/docs](https://datahubproject.io/docs/) | [32 - Data Mesh](../notebooks/advanced/32_data_mesh_contracts.ipynb) |
+| **OpenMetadata** | [docs.open-metadata.org](https://docs.open-metadata.org/) | [32 - Data Mesh](../notebooks/advanced/32_data_mesh_contracts.ipynb) |
 
 ## 📊 OLAP & Real-time Analytics
 
 | Technologie | Documentation | Module associé |
 |-------------|---------------|----------------|
-| **ClickHouse** | [clickhouse.com/docs](https://clickhouse.com/docs/) | [33 - Realtime OLAP](notebooks/advanced/33_realtime_olap_dashboards.ipynb) |
-| **Apache Druid** | [druid.apache.org/docs/latest](https://druid.apache.org/docs/latest/design/) | [33 - Realtime OLAP](notebooks/advanced/33_realtime_olap_dashboards.ipynb) |
-| **Apache Pinot** | [docs.pinot.apache.org](https://docs.pinot.apache.org/) | [33 - Realtime OLAP](notebooks/advanced/33_realtime_olap_dashboards.ipynb) |
+| **ClickHouse** | [clickhouse.com/docs](https://clickhouse.com/docs/) | [33 - Realtime OLAP](../notebooks/advanced/33_realtime_olap_dashboards.ipynb) |
+| **Apache Druid** | [druid.apache.org/docs/latest](https://druid.apache.org/docs/latest/design/) | [33 - Realtime OLAP](../notebooks/advanced/33_realtime_olap_dashboards.ipynb) |
+| **Apache Pinot** | [docs.pinot.apache.org](https://docs.pinot.apache.org/) | [33 - Realtime OLAP](../notebooks/advanced/33_realtime_olap_dashboards.ipynb) |
 
 ## 📊 Monitoring & Observability
 

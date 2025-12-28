@@ -160,7 +160,7 @@ Le bootcamp utilise **minikube** dans les exemples.
 | **PySpark** | Facile, écosystème Python riche | 90% des cas |
 | **Scala** | Performance, API native Spark | Optimisation fine, contributions Spark |
 
-Le bootcamp utilise **PySpark** aux niveaux 1-2, et introduit **Scala** au [module 30](notebooks/advanced/30_spark_scala_deep_dive.ipynb).
+Le bootcamp utilise **PySpark** aux niveaux 1-2, et introduit **Scala** au [module 30](../notebooks/advanced/30_spark_scala_deep_dive.ipynb).
 
 ---
 
@@ -173,7 +173,7 @@ Le bootcamp utilise **PySpark** aux niveaux 1-2, et introduit **Scala** au [modu
 | **Kubernetes** | Production cloud-native | Spark Operator |
 | **YARN** | Hadoop existant | Cluster Hadoop |
 
-Pour le bootcamp, le **mode local** suffit. Le [module 21](notebooks/intermediate/21_spark_on_kubernetes.ipynb) couvre Spark sur Kubernetes.
+Pour le bootcamp, le **mode local** suffit. Le [module 21](../notebooks/intermediate/21_spark_on_kubernetes.ipynb) couvre Spark sur Kubernetes.
 
 ---
 
@@ -185,7 +185,7 @@ Pour le bootcamp, le **mode local** suffit. Le [module 21](notebooks/intermediat
 | **Iceberg** | Multi-engine, open | Trino, Flink, Spark |
 | **Hudi** | CDC, upserts rapides | Kafka, Flink |
 
-Le bootcamp couvre **Delta Lake** en priorité ([module 23](notebooks/intermediate/23_table_formats_delta_iceberg.ipynb)) avec une introduction à Iceberg.
+Le bootcamp couvre **Delta Lake** en priorité ([module 23](../notebooks/intermediate/23_table_formats_delta_iceberg.ipynb)) avec une introduction à Iceberg.
 
 ::: {.callout-tip}
 ## 💡 Conseil
@@ -204,7 +204,7 @@ En 2024-2025, Delta Lake et Iceberg sont les plus demandés. Maîtrisez-en un, c
 | **Dagster** | 🥈 Croissant | Moderne, testable | Moins adopté |
 | **Prefect** | 🥉 Niche | Simple, cloud-native | Moins de features |
 
-Le bootcamp enseigne **Airflow** ([module 28](notebooks/advanced/28_advanced_orchestration.ipynb)) car c'est le standard de l'industrie.
+Le bootcamp enseigne **Airflow** ([module 28](../notebooks/advanced/28_advanced_orchestration.ipynb)) car c'est le standard de l'industrie.
 
 ---
 
@@ -236,7 +236,7 @@ Le **Lakehouse** combine le meilleur des deux mondes :
 
 **Architecture Medallion** : Bronze (raw) → Silver (cleaned) → Gold (business-ready)
 
-Voir [module 23](notebooks/intermediate/23_table_formats_delta_iceberg.ipynb) pour la mise en pratique.
+Voir [module 23](../notebooks/intermediate/23_table_formats_delta_iceberg.ipynb) pour la mise en pratique.
 
 ---
 
@@ -251,7 +251,7 @@ Le **Data Mesh** est une approche organisationnelle où chaque domaine métier e
 | **Self-serve Platform** | Plateforme mutualisée pour tous |
 | **Federated Governance** | Gouvernance distribuée mais cohérente |
 
-Voir [module 32](notebooks/advanced/32_data_mesh_contracts.ipynb) pour approfondir.
+Voir [module 32](../notebooks/advanced/32_data_mesh_contracts.ipynb) pour approfondir.
 
 ---
 

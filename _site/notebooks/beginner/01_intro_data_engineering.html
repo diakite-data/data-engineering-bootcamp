@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Bootcamp Data Engineering – From Zero to Hero – Bootcamp Data Engineering</title>
+<title>Introduction au Data Engineering – Bootcamp Data Engineering</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,28 +23,29 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./assets/images/favicon.svg" rel="icon" type="image/svg+xml">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-fc8d3d93f0a84b7619e1f8ff6eb63d42.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-fc8d3d93f0a84b7619e1f8ff6eb63d42.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-fc8d3d93f0a84b7619e1f8ff6eb63d42.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-e343b3f0bebe96ccb32e8952eba0f815.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-748d9631d2a9cba8c735999f2048c189.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-e343b3f0bebe96ccb32e8952eba0f815.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../notebooks/beginner/02_bash_for_data_engineers.html" rel="next">
+<link href="../../assets/images/favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-fc8d3d93f0a84b7619e1f8ff6eb63d42.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-fc8d3d93f0a84b7619e1f8ff6eb63d42.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-fc8d3d93f0a84b7619e1f8ff6eb63d42.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-e343b3f0bebe96ccb32e8952eba0f815.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-748d9631d2a9cba8c735999f2048c189.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-e343b3f0bebe96ccb32e8952eba0f815.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": true,
@@ -81,18 +82,18 @@ ul.task-list li input[type="checkbox"] {
 <link rel="canonical" href="https://diakite-data.github.io/data-engineering-bootcamp">
 
 
-<meta property="og:title" content="Bootcamp Data Engineering – From Zero to Hero – Bootcamp Data Engineering">
+<meta property="og:title" content="Introduction au Data Engineering – Bootcamp Data Engineering">
 <meta property="og:description" content="Programme complet Data Engineering — Du débutant au Senior Engineer">
 <meta property="og:site_name" content="Bootcamp Data Engineering">
 <meta property="og:locale" content="fr_FR">
-<meta name="twitter:title" content="Bootcamp Data Engineering – From Zero to Hero – Bootcamp Data Engineering">
+<meta name="twitter:title" content="Introduction au Data Engineering – Bootcamp Data Engineering">
 <meta name="twitter:description" content="Programme complet Data Engineering — Du débutant au Senior Engineer">
 <meta name="twitter:creator" content="@diakite_data">
 <meta name="twitter:site" content="@diakite_data">
 <meta name="twitter:card" content="summary">
 </head>
 
-<body class="nav-sidebar floating nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -261,9 +262,9 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./assets/images/logo.svg" alt="Data Engineering Bootcamp" class="navbar-logo light-content">
-    <img src="./assets/images/logo.svg" alt="Data Engineering Bootcamp" class="navbar-logo dark-content">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../assets/images/logo.svg" alt="Data Engineering Bootcamp" class="navbar-logo light-content">
+    <img src="../../assets/images/logo.svg" alt="Data Engineering Bootcamp" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Recherche"></div>
@@ -273,7 +274,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">🏠 Accueil</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -282,20 +283,20 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-programme">    
         <li>
-    <a class="dropdown-item" href="./notebooks/beginner/01_intro_data_engineering.html">
+    <a class="dropdown-item" href="../../notebooks/beginner/01_intro_data_engineering.html">
  <span class="dropdown-text">🟦 Niveau Débutant</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./notebooks/intermediate/14_docker_for_data_engineers.html">
+    <a class="dropdown-item" href="../../notebooks/intermediate/14_docker_for_data_engineers.html">
  <span class="dropdown-text">🟩 Niveau Intermédiaire</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./notebooks/advanced/27_kubernetes_deep_dive.html">
+    <a class="dropdown-item" href="../../notebooks/advanced/27_kubernetes_deep_dive.html">
  <span class="dropdown-text">🟥 Niveau Avancé</span></a>
   </li>  
         <li><hr class="dropdown-divider"></li>
         <li>
-    <a class="dropdown-item" href="./curriculum.html">
+    <a class="dropdown-item" href="../../curriculum.html">
  <span class="dropdown-text">📊 Vue d’ensemble</span></a>
   </li>  
     </ul>
@@ -306,20 +307,20 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-ressources">    
         <li>
-    <a class="dropdown-item" href="./resources/documentation.html">
+    <a class="dropdown-item" href="../../resources/documentation.html">
  <span class="dropdown-text">📚 Documentation</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./resources/setup.html">
+    <a class="dropdown-item" href="../../resources/setup.html">
  <span class="dropdown-text">🔧 Setup Environnement</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./resources/faq.html">
+    <a class="dropdown-item" href="../../resources/faq.html">
  <span class="dropdown-text">❓ FAQ</span></a>
   </li>  
         <li><hr class="dropdown-divider"></li>
         <li>
-    <a class="dropdown-item" href="./resources/links.html">
+    <a class="dropdown-item" href="../../resources/links.html">
  <span class="dropdown-text">🔗 Liens Utiles</span></a>
   </li>  
     </ul>
@@ -348,7 +349,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Bootcamp Data Engineering – From Zero to Hero</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">🟦 Niveau 1 : Débutant</li><li class="breadcrumb-item"><a href="../../notebooks/beginner/01_intro_data_engineering.html">📌 Fondations</a></li><li class="breadcrumb-item"><a href="../../notebooks/beginner/01_intro_data_engineering.html">01 · Introduction au Data Engineering</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Recherche" onclick="window.quartoOpenSearch();">
@@ -370,38 +371,38 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">🟦 Niveau 1 : Débutant</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="px-0"><hr class="sidebar-divider hi "></li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">📌 Fondations</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/beginner/01_intro_data_engineering.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notebooks/beginner/01_intro_data_engineering.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">01 · Introduction au Data Engineering</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/beginner/02_bash_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notebooks/beginner/02_bash_for_data_engineers.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">02 · Linux &amp; Bash</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/beginner/03_git_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notebooks/beginner/03_git_for_data_engineers.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">03 · Git &amp; Versioning</span></a>
   </div>
 </li>
@@ -418,13 +419,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/beginner/04_python_basics_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notebooks/beginner/04_python_basics_for_data_engineers.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">04 · Python Fondamental</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/beginner/05_python_data_processing_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notebooks/beginner/05_python_data_processing_for_data_engineers.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">05 · Python Data Processing</span></a>
   </div>
 </li>
@@ -441,13 +442,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/beginner/06_intro_relational_databases.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notebooks/beginner/06_intro_relational_databases.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">06 · Introduction aux BDD Relationnelles</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/beginner/07_sql_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notebooks/beginner/07_sql_for_data_engineers.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">07 · SQL pour Data Engineers</span></a>
   </div>
 </li>
@@ -464,19 +465,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/beginner/08_intro_big_data_distributed.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notebooks/beginner/08_intro_big_data_distributed.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">08 · Introduction Big Data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/beginner/09_mongodb_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notebooks/beginner/09_mongodb_for_data_engineers.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">09 · MongoDB</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/beginner/10_elasticsearch_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notebooks/beginner/10_elasticsearch_for_data_engineers.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">10 · Elasticsearch</span></a>
   </div>
 </li>
@@ -493,13 +494,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/beginner/11_pyspark_for_data_engineering.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notebooks/beginner/11_pyspark_for_data_engineering.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">11 · Introduction PySpark</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/beginner/12_orchestration_pipelines.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notebooks/beginner/12_orchestration_pipelines.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">12 · Orchestration de Pipelines</span></a>
   </div>
 </li>
@@ -516,7 +517,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/beginner/13_fastapi_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notebooks/beginner/13_fastapi_for_data_engineers.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">13 · FastAPI pour Data Engineers</span></a>
   </div>
 </li>
@@ -549,19 +550,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/intermediate/14_docker_for_data_engineers.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notebooks/intermediate/14_docker_for_data_engineers.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">14 · Docker pour Data Engineers</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/intermediate/15_kubernetes_fundamentals.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notebooks/intermediate/15_kubernetes_fundamentals.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">15 · Kubernetes Fondamentaux</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/intermediate/16_k8s_for_data_workloads.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notebooks/intermediate/16_k8s_for_data_workloads.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">16 · K8s pour Data Workloads</span></a>
   </div>
 </li>
@@ -578,13 +579,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/intermediate/17_polars_for_data_engineering.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notebooks/intermediate/17_polars_for_data_engineering.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">17 · Polars pour Data Engineering</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/intermediate/18_high_performance_python.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notebooks/intermediate/18_high_performance_python.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">18 · High Performance Python</span></a>
   </div>
 </li>
@@ -601,19 +602,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/intermediate/19_pyspark_advanced.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notebooks/intermediate/19_pyspark_advanced.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">19 · PySpark Avancé</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/intermediate/20_spark_sql_deep_dive.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notebooks/intermediate/20_spark_sql_deep_dive.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">20 · Spark SQL Deep Dive</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/intermediate/21_spark_on_kubernetes.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notebooks/intermediate/21_spark_on_kubernetes.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">21 · Spark on Kubernetes</span></a>
   </div>
 </li>
@@ -630,19 +631,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/intermediate/22_cloud_and_object_storage.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notebooks/intermediate/22_cloud_and_object_storage.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">22 · Cloud Object Storage</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/intermediate/23_table_formats_delta_iceberg.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notebooks/intermediate/23_table_formats_delta_iceberg.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">23 · Table Formats (Delta, Iceberg)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/intermediate/24_kafka_streaming.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notebooks/intermediate/24_kafka_streaming.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">24 · Kafka &amp; Streaming</span></a>
   </div>
 </li>
@@ -659,7 +660,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/intermediate/25_dbt_data_quality.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notebooks/intermediate/25_dbt_data_quality.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">25 · dbt &amp; Data Quality</span></a>
   </div>
 </li>
@@ -668,7 +669,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="px-0"><hr class="sidebar-divider hi "></li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/intermediate/26_projet_integrateur.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notebooks/intermediate/26_projet_integrateur.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">📦 <strong>Projet Intermédiaire</strong> (Olist)</span></a>
   </div>
 </li>
@@ -695,19 +696,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/advanced/27_kubernetes_deep_dive.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notebooks/advanced/27_kubernetes_deep_dive.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">27 · Kubernetes Deep Dive</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/advanced/28_advanced_orchestration.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notebooks/advanced/28_advanced_orchestration.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">28 · Orchestration Avancée</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/advanced/29_distributed_messaging.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notebooks/advanced/29_distributed_messaging.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">29 · Messaging Distribué (Kafka, Pulsar)</span></a>
   </div>
 </li>
@@ -724,7 +725,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-16" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/advanced/30_spark_scala_deep_dive.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notebooks/advanced/30_spark_scala_deep_dive.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">30 · Spark &amp; Scala Deep Dive</span></a>
   </div>
 </li>
@@ -741,13 +742,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-17" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/advanced/31_data_engineering_for_ml.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notebooks/advanced/31_data_engineering_for_ml.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">31 · Data Engineering pour le ML</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/advanced/33_realtime_olap_dashboards.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notebooks/advanced/33_realtime_olap_dashboards.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">33 · Realtime OLAP &amp; Dashboards</span></a>
   </div>
 </li>
@@ -764,13 +765,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-18" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/advanced/32_data_mesh_contracts.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notebooks/advanced/32_data_mesh_contracts.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">32 · Data Mesh &amp; Contracts</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/advanced/34_architecture_patterns_decisions.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notebooks/advanced/34_architecture_patterns_decisions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">34 · Patterns &amp; Décisions d'Architecture</span></a>
   </div>
 </li>
@@ -787,7 +788,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-19" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/advanced/35_leadership_tradeoffs.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notebooks/advanced/35_leadership_tradeoffs.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">35 · Leadership &amp; Trade-offs</span></a>
   </div>
 </li>
@@ -804,14 +805,64 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="2">
+    <h2 id="toc-title">📑 Sommaire</h2>
+   
+  <ul>
+  <li><a href="#prérequis" id="toc-prérequis" class="nav-link active" data-scroll-target="#prérequis">Prérequis</a></li>
+  <li><a href="#cest-quoi-le-data-engineering" id="toc-cest-quoi-le-data-engineering" class="nav-link" data-scroll-target="#cest-quoi-le-data-engineering">1. C’est quoi le Data Engineering ?</a>
+  <ul class="collapse">
+  <li><a href="#exemples-concrets-en-entreprise" id="toc-exemples-concrets-en-entreprise" class="nav-link" data-scroll-target="#exemples-concrets-en-entreprise">Exemples concrets en entreprise</a></li>
+  </ul></li>
+  <li><a href="#différences-entre-métiers" id="toc-différences-entre-métiers" class="nav-link" data-scroll-target="#différences-entre-métiers">2. Différences entre métiers</a>
+  <ul class="collapse">
+  <li><a href="#comment-ces-rôles-collaborent" id="toc-comment-ces-rôles-collaborent" class="nav-link" data-scroll-target="#comment-ces-rôles-collaborent">Comment ces rôles collaborent ?</a></li>
+  </ul></li>
+  <li><a href="#architecture-typique-dun-pipeline-de-données-moderne" id="toc-architecture-typique-dun-pipeline-de-données-moderne" class="nav-link" data-scroll-target="#architecture-typique-dun-pipeline-de-données-moderne">3. Architecture typique d’un pipeline de données moderne</a>
+  <ul class="collapse">
+  <li><a href="#etl-vs-elt-quelle-est-la-différence" id="toc-etl-vs-elt-quelle-est-la-différence" class="nav-link" data-scroll-target="#etl-vs-elt-quelle-est-la-différence">ETL vs ELT — Quelle est la différence ?</a></li>
+  </ul></li>
+  <li><a href="#pipelines-batch-vs-streaming" id="toc-pipelines-batch-vs-streaming" class="nav-link" data-scroll-target="#pipelines-batch-vs-streaming">4. Pipelines batch vs streaming</a>
+  <ul class="collapse">
+  <li><a href="#comment-choisir" id="toc-comment-choisir" class="nav-link" data-scroll-target="#comment-choisir">Comment choisir ?</a></li>
+  <li><a href="#fondations-des-pipelines-de-données" id="toc-fondations-des-pipelines-de-données" class="nav-link" data-scroll-target="#fondations-des-pipelines-de-données">Fondations des pipelines de données</a></li>
+  </ul></li>
+  <li><a href="#panorama-des-outils-du-data-engineer" id="toc-panorama-des-outils-du-data-engineer" class="nav-link" data-scroll-target="#panorama-des-outils-du-data-engineer">5. Panorama des outils du Data Engineer</a>
+  <ul class="collapse">
+  <li><a href="#stack-moderne-typique-2024" id="toc-stack-moderne-typique-2024" class="nav-link" data-scroll-target="#stack-moderne-typique-2024">Stack moderne typique (2024)</a></li>
+  </ul></li>
+  <li><a href="#soft-skills-mindset-du-data-engineer" id="toc-soft-skills-mindset-du-data-engineer" class="nav-link" data-scroll-target="#soft-skills-mindset-du-data-engineer">6. Soft Skills &amp; Mindset du Data Engineer</a></li>
+  <li><a href="#quiz-de-fin-de-module" id="toc-quiz-de-fin-de-module" class="nav-link" data-scroll-target="#quiz-de-fin-de-module">Quiz de fin de module</a>
+  <ul class="collapse">
+  <li><a href="#q1.-quel-est-le-rôle-principal-dun-data-engineer" id="toc-q1.-quel-est-le-rôle-principal-dun-data-engineer" class="nav-link" data-scroll-target="#q1.-quel-est-le-rôle-principal-dun-data-engineer">❓ Q1. Quel est le rôle principal d’un Data Engineer ?</a></li>
+  <li><a href="#q2.-dans-un-pipeline-etl-que-signifie-le-t" id="toc-q2.-dans-un-pipeline-etl-que-signifie-le-t" class="nav-link" data-scroll-target="#q2.-dans-un-pipeline-etl-que-signifie-le-t">❓ Q2. Dans un pipeline <strong>ETL</strong>, que signifie le “T” ?</a></li>
+  <li><a href="#q3.-quelle-est-la-principale-différence-entre-etl-et-elt" id="toc-q3.-quelle-est-la-principale-différence-entre-etl-et-elt" class="nav-link" data-scroll-target="#q3.-quelle-est-la-principale-différence-entre-etl-et-elt">❓ Q3. Quelle est la principale différence entre ETL et ELT ?</a></li>
+  <li><a href="#q4.-lequel-de-ces-outils-est-utilisé-pour-orchestrer-des-pipelines" id="toc-q4.-lequel-de-ces-outils-est-utilisé-pour-orchestrer-des-pipelines" class="nav-link" data-scroll-target="#q4.-lequel-de-ces-outils-est-utilisé-pour-orchestrer-des-pipelines">❓ Q4. Lequel de ces outils est utilisé pour orchestrer des pipelines ?</a></li>
+  <li><a href="#q5.-le-traitement-batch-consiste-à" id="toc-q5.-le-traitement-batch-consiste-à" class="nav-link" data-scroll-target="#q5.-le-traitement-batch-consiste-à">❓ Q5. Le traitement <strong>batch</strong> consiste à :</a></li>
+  </ul></li>
+  <li><a href="#bonus-quiz-nouveaux-paradigmes-etlt-reverse-etl" id="toc-bonus-quiz-nouveaux-paradigmes-etlt-reverse-etl" class="nav-link" data-scroll-target="#bonus-quiz-nouveaux-paradigmes-etlt-reverse-etl">Bonus Quiz — Nouveaux paradigmes : ETLt &amp; Reverse ETL</a>
+  <ul class="collapse">
+  <li><a href="#q6.-que-signifie-etlt" id="toc-q6.-que-signifie-etlt" class="nav-link" data-scroll-target="#q6.-que-signifie-etlt">❓ Q6. Que signifie <strong>ETLt</strong> ?</a></li>
+  <li><a href="#q7.-le-reverse-etl-est-utilisé-pour" id="toc-q7.-le-reverse-etl-est-utilisé-pour" class="nav-link" data-scroll-target="#q7.-le-reverse-etl-est-utilisé-pour">❓ Q7. Le <strong>Reverse ETL</strong> est utilisé pour :</a></li>
+  </ul></li>
+  <li><a href="#ressources-pour-aller-plus-loin" id="toc-ressources-pour-aller-plus-loin" class="nav-link" data-scroll-target="#ressources-pour-aller-plus-loin">📚 Ressources pour aller plus loin</a>
+  <ul class="collapse">
+  <li><a href="#lectures-recommandées" id="toc-lectures-recommandées" class="nav-link" data-scroll-target="#lectures-recommandées">📖 Lectures recommandées</a></li>
+  <li><a href="#sites-blogs" id="toc-sites-blogs" class="nav-link" data-scroll-target="#sites-blogs">🌐 Sites &amp; Blogs</a></li>
+  <li><a href="#certifications" id="toc-certifications" class="nav-link" data-scroll-target="#certifications">🎓 Certifications</a></li>
+  </ul></li>
+  <li><a href="#prochaine-étape" id="toc-prochaine-étape" class="nav-link" data-scroll-target="#prochaine-étape">➡️ Prochaine étape</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/diakite-data/data-engineering-bootcamp/blob/main/notebooks/beginner/01_intro_data_engineering.ipynb" class="toc-action"><i class="bi bi-github"></i>Voir la source</a></li><li><a href="https://github.com/diakite-data/data-engineering-bootcamp/issues/new" class="toc-action"><i class="bi empty"></i>Faire part d'un problème</a></li><li><a href="https://github.dev/diakite-data/data-engineering-bootcamp/blob/main/notebooks/beginner/01_intro_data_engineering.ipynb" class="toc-action"><i class="bi empty"></i>Modifier cette page</a></li></ul></div></nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">🟦 Niveau 1 : Débutant</li><li class="breadcrumb-item"><a href="../../notebooks/beginner/01_intro_data_engineering.html">📌 Fondations</a></li><li class="breadcrumb-item"><a href="../../notebooks/beginner/01_intro_data_engineering.html">01 · Introduction au Data Engineering</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Bootcamp Data Engineering – From Zero to Hero</h1>
+<h1 class="title">Introduction au Data Engineering</h1>
 </div>
 
 
@@ -828,46 +879,269 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="hero" style="padding: 40px 0; text-align:center;">
-<h2 class="anchored">
-🚀 Bootcamp Data Engineering
-</h2>
-<h1>
-From Zero to Hero
-</h1>
-<h3 class="anchored">
-Devenez un Data Engineer opérationnel, prêt pour l’entreprise.
-</h3>
-</div>
-<hr>
-<section id="pourquoi-choisir-ce-bootcamp" class="level2">
-<h2 class="anchored" data-anchor-id="pourquoi-choisir-ce-bootcamp">🎯 Pourquoi choisir ce Bootcamp ?</h2>
-<p>Ce programme a été conçu par des Data Engineers expérimentés, en se concentrant sur les <strong>exigences réelles du marché</strong>.<br>
-Il vous accompagne de manière progressive vers un niveau <strong>professionnel – Senior Ready</strong>.</p>
-<section id="ce-que-vous-allez-maîtriser" class="level3">
-<h3 class="anchored" data-anchor-id="ce-que-vous-allez-maîtriser">✔ Ce que vous allez maîtriser</h3>
+<p>Bienvenue dans cette première leçon du parcours <strong>Data Engineering — From Zero to Hero</strong>.</p>
+<p>Dans ce notebook, nous allons découvrir :</p>
 <ul>
-<li><strong>Outils industriels</strong> : Spark 3.x, Kafka, Flink, Docker, Kubernetes, dbt, Lakehouse (Delta/Iceberg).</li>
-<li><strong>Architectures modernes</strong> : Médaillon (Bronze/Silver/Gold), Kappa, Lambda, Data Lakehouse, Data Mesh.</li>
-<li><strong>Compétences d’ingénierie</strong> : optimisation, gouvernance, orchestration, CI/CD, cloud.</li>
-<li><strong>Industrialisation</strong> : création de pipelines batch et streaming totalement opérationnels.</li>
-<li><strong>Leadership technique</strong> : RFC, Design Reviews, ADR, pensée architecturale.</li>
+<li>Ce qu’est le Data Engineering</li>
+<li>Les différences entre Data Engineer, Data Scientist et Data Analyst</li>
+<li>L’architecture d’un système de données moderne
+<ul>
+<li>ETL vs ELT — Quelle est la différence ?</li>
+</ul></li>
+<li>Les types de pipelines (batch vs streaming)
+<ul>
+<li>Fondations des pipelines de données</li>
+</ul></li>
+<li>Panorama des outils du Data Engineer</li>
+<li>Soft Skills &amp; Mindset du Data Engineer</li>
+<li>Quiz de fin de module</li>
 </ul>
 <hr>
+<section id="prérequis" class="level2">
+<h2 class="anchored" data-anchor-id="prérequis">Prérequis</h2>
+<p>Avant de commencer ce parcours, il est recommandé d’avoir :</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 40%">
+<col style="width: 60%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Niveau</th>
+<th>Compétence</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>✅ Basique</td>
+<td>Savoir utiliser un ordinateur et naviguer dans des fichiers</td>
+</tr>
+<tr class="even">
+<td>✅ Basique</td>
+<td>Connaître les concepts de base d’internet</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="blockquote">
+<p>💡 <strong>Pas de panique !</strong> Ce parcours est conçu pour les débutants. Nous couvrirons tout ce dont tu as besoin.</p>
+</blockquote>
+</section>
+<section id="cest-quoi-le-data-engineering" class="level2">
+<h2 class="anchored" data-anchor-id="cest-quoi-le-data-engineering">1. C’est quoi le Data Engineering ?</h2>
+<p>Le <strong>Data Engineering</strong> (ou ingénierie des données) est une discipline qui consiste à <strong>concevoir, construire, maintenir et optimiser</strong> les systèmes de traitement de données.</p>
+<p>Le Data Engineer, spécialiste en gestion des données, conçoit et maintient l’infrastructure data (bases de données, entrepôts de données, lacs de données) et développe des pipelines automatisés qui extraient, transforment et chargent les données dans des systèmes adaptés.</p>
+<p>C’est le socle technique qui garantit la qualité, la disponibilité et la sécurité des données utilisées par les Data Analysts et Data Scientists pour générer des insights et orienter les stratégies d’entreprise.</p>
+<section id="exemples-concrets-en-entreprise" class="level3">
+<h3 class="anchored" data-anchor-id="exemples-concrets-en-entreprise">Exemples concrets en entreprise</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 29%">
+<col style="width: 70%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Entreprise</th>
+<th>Cas d’usage Data Engineering</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Netflix</strong></td>
+<td>Pipeline qui collecte les données de visionnage de millions d’utilisateurs pour alimenter le système de recommandation</td>
+</tr>
+<tr class="even">
+<td><strong>Uber</strong></td>
+<td>Traitement en temps réel des données GPS de milliers de chauffeurs pour optimiser les trajets et les prix</td>
+</tr>
+<tr class="odd">
+<td><strong>Spotify</strong></td>
+<td>Agrégation des données d’écoute pour générer les playlists “Discover Weekly” personnalisées</td>
+</tr>
+<tr class="even">
+<td><strong>Airbnb</strong></td>
+<td>Pipeline de données pour analyser les prix du marché et suggérer des tarifs aux hôtes</td>
+</tr>
+<tr class="odd">
+<td><strong>E-commerce</strong></td>
+<td>Synchronisation des stocks entre le site web, l’ERP et les entrepôts en temps réel</td>
+</tr>
+</tbody>
+</table>
 </section>
 </section>
-<section id="à-qui-sadresse-ce-bootcamp" class="level2">
-<h2 class="anchored" data-anchor-id="à-qui-sadresse-ce-bootcamp">👥 À qui s’adresse ce Bootcamp ?</h2>
-<ul>
-<li><strong>Étudiants / Développeurs</strong> voulant entrer dans le monde du Big Data.</li>
-<li><strong>Analystes BI</strong> souhaitant évoluer vers le Data Engineering moderne.</li>
-<li><strong>Professionnels expérimentés</strong> voulant structurer une plateforme Data complète.</li>
-<li><strong>Architectes &amp; Managers</strong> cherchant à comprendre les technos Data modernes.</li>
-</ul>
-<hr>
+<section id="différences-entre-métiers" class="level2">
+<h2 class="anchored" data-anchor-id="différences-entre-métiers">2. Différences entre métiers</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 34%">
+<col style="width: 15%">
+<col style="width: 38%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Métier</th>
+<th>Rôle Principal</th>
+<th>Focus</th>
+<th>Outils Clés</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Data Engineer</td>
+<td>Construire et maintenir l’infrastructure de données</td>
+<td>Infrastructure &amp; Pipelines</td>
+<td>Apache Airflow, Apache Spark, Kafka, Snowflake, dbt, Python, SQL, Prefect, Docker, Kubernetes, etc…</td>
+</tr>
+<tr class="even">
+<td>Data Scientist</td>
+<td>Extraire des insights et créer des modèles prédictifs</td>
+<td>Modélisation &amp; ML</td>
+<td>Python, R, scikit-learn, TensorFlow, PyTorch, Jupyter, MLflow, Pandas, XGBoost, etc…</td>
+</tr>
+<tr class="odd">
+<td>Data Analyst</td>
+<td>Transformer les données en insights actionnables</td>
+<td>Business Intelligence</td>
+<td>SQL, Excel, Power BI, Tableau, Looker, Google Analytics, Python (basique)</td>
+</tr>
+</tbody>
+</table>
+<section id="comment-ces-rôles-collaborent" class="level3">
+<h3 class="anchored" data-anchor-id="comment-ces-rôles-collaborent">Comment ces rôles collaborent ?</h3>
+<pre><code>┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
+│  Data Engineer  │ ──▶ │  Data Scientist │ ──▶ │  Data Analyst   │
+│                 │     │                 │     │                 │
+│ • Collecte      │     │ • Modélisation  │     │ • Visualisation │
+│ • Pipelines     │     │ • Prédictions   │     │ • Reporting     │
+│ • Infrastructure│     │ • ML/AI         │     │ • Insights      │
+└─────────────────┘     └─────────────────┘     └─────────────────┘
+        │                                               │
+        └───────────── Feedback &amp; Besoins ◀─────────────┘</code></pre>
 </section>
-<section id="votre-boîte-à-outils-data-engineering" class="level2">
-<h2 class="anchored" data-anchor-id="votre-boîte-à-outils-data-engineering">🛠️ Votre Boîte à Outils Data Engineering</h2>
+</section>
+<section id="architecture-typique-dun-pipeline-de-données-moderne" class="level2">
+<h2 class="anchored" data-anchor-id="architecture-typique-dun-pipeline-de-données-moderne">3. Architecture typique d’un pipeline de données moderne</h2>
+<p>Un pipeline de données moderne suit généralement ce flux :</p>
+<pre><code>                 ┌─────────────────────────────────────────────────────────┐
+                 │                🛡️  GOUVERNANCE DATA                    │
+                 │ Catalogue, Qualité, Lineage, Sécurité, RBAC, Privacy   │
+                 │ Compliance, MDM                                        │
+                 └─────────────────────────────────────────────────────────┘
+
+
+┌──────────────────┐         ┌───────────────────────────────────────────┐
+│   📥 SOURCES      │   →     │               💾 STOCKAGE                 │
+│ API, DB, Logs,    │         │         (Data Lakehouse : S3, ADLS…)     │
+│ CSV, IoT          │         │                                           │
+└──────────────────┘         │   BRONZE : Données brutes (Raw)           │
+                             │   - Ingérées telles quelles                │
+                             │   - Formats variés (JSON, CSV, Parquet)    │
+   ┌──────────────────────┐  │   - Pas de qualité garantie                │
+   │   🔄 INGESTION        │  │                                           │
+   │ ETL/ELT, Streams     │  │   SILVER : Données nettoyées (Clean)       │
+   │ Airbyte, Fivetran    │  │   - Normalisées, typées, dédupliquées      │
+   └──────────────────────┘  │   - Qualité contrôlée                      │
+                             │   - Jointures simples / enrichissement     │
+                             │                                           │
+   ┌──────────────────────┐  │   GOLD : Données business (Curated)        │
+   │ ⚙️ TRANSFORMATION      │  │   - Modèles analytiques (Star Schema)      │
+   │ dbt, SQL, Spark,      │  │   - KPIs, métriques, tables prêtes BI     │
+   │ Pandas, MLflow        │  │   - Haute qualité et gouvernance forte     │
+   └──────────────────────┘  └───────────────────────────────────────────┘
+
+
+                              ┌──────────────────────────────┐
+                              │        📊 EXPOSITION         │
+                              │ Dashboards, ML, APIs, Apps   │
+                              │ Power BI, Tableau, Looker    │
+                              │ (⚠️ Toujours à partir du GOLD)│
+                              └──────────────────────────────┘
+</code></pre>
+<section id="etl-vs-elt-quelle-est-la-différence" class="level3">
+<h3 class="anchored" data-anchor-id="etl-vs-elt-quelle-est-la-différence">ETL vs ELT — Quelle est la différence ?</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 19%">
+<col style="width: 40%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Critère</th>
+<th>ETL (Extract → Transform → Load)</th>
+<th>ELT (Extract → Load → Transform)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>🔄 Ordre</td>
+<td>Extraction → Transformation → Chargement</td>
+<td>Extraction → Chargement → Transformation</td>
+</tr>
+<tr class="even">
+<td>📍 Lieu de la transformation</td>
+<td>En dehors du stockage (dans un script ou un outil)</td>
+<td>Directement dans le data warehouse</td>
+</tr>
+<tr class="odd">
+<td>✅ Avantages</td>
+<td>Plus de contrôle sur la transformation</td>
+<td>Plus rapide sur des gros volumes</td>
+</tr>
+<tr class="even">
+<td>⚠️ Inconvénients</td>
+<td>Peut surcharger les outils intermédiaires</td>
+<td>Besoin d’un entrepôt puissant (coûts)</td>
+</tr>
+<tr class="odd">
+<td>🛠️ Outils typiques</td>
+<td>Informatica, Talend, scripts Python, …</td>
+<td>dbt, Snowflake, BigQuery, …</td>
+</tr>
+<tr class="even">
+<td>📅 Cas d’usage</td>
+<td>Données sensibles nécessitant un pré-traitement</td>
+<td>Analytics modernes sur le cloud</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="pipelines-batch-vs-streaming" class="level2">
+<h2 class="anchored" data-anchor-id="pipelines-batch-vs-streaming">4. Pipelines batch vs streaming</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 32%">
+<col style="width: 24%">
+<col style="width: 27%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Mode</th>
+<th>Définition</th>
+<th>Latence</th>
+<th>Exemples</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Batch</strong></td>
+<td>Traitement périodique (toutes les heures, tous les jours…)</td>
+<td>Minutes à heures</td>
+<td>Rapport quotidien, import CSV, agrégations nocturnes</td>
+</tr>
+<tr class="even">
+<td><strong>Streaming</strong></td>
+<td>Traitement en temps réel, événement par événement</td>
+<td>Millisecondes à secondes</td>
+<td>Logs serveurs, capteurs IoT, transactions bancaires, détection de fraude</td>
+</tr>
+</tbody>
+</table>
+<section id="comment-choisir" class="level3">
+<h3 class="anchored" data-anchor-id="comment-choisir">Comment choisir ?</h3>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -875,477 +1149,404 @@ Il vous accompagne de manière progressive vers un niveau <strong>professionnel 
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Domaine</th>
-<th style="text-align: left;">Outils &amp; Technologies</th>
+<th>Question</th>
+<th>Si oui →</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;"><strong>Big Data Processing</strong></td>
-<td style="text-align: left;">PySpark, Spark SQL, Scala, Polars, Dask</td>
+<td>Les données doivent-elles être traitées immédiatement ?</td>
+<td><strong>Streaming</strong></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><strong>Lakehouse</strong></td>
-<td style="text-align: left;">Delta Lake, Apache Iceberg, Hudi</td>
+<td>Le volume est-il très élevé mais la latence peu critique ?</td>
+<td><strong>Batch</strong></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><strong>Streaming</strong></td>
-<td style="text-align: left;">Kafka, Spark Streaming, Flink, Debezium CDC</td>
+<td>Avez-vous besoin de détecter des anomalies en temps réel ?</td>
+<td><strong>Streaming</strong></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><strong>DevOps / Infra</strong></td>
-<td style="text-align: left;">Docker, Kubernetes, Helm, ArgoCD, Spark Operator</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><strong>Monitoring</strong></td>
-<td style="text-align: left;">Prometheus, Grafana, Alertmanager</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><strong>Cloud</strong></td>
-<td style="text-align: left;">AWS S3, GCP GCS, Azure Blob, IAM, MinIO</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><strong>Qualité &amp; ETL</strong></td>
-<td style="text-align: left;">dbt, Great Expectations, Data Contracts</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><strong>MLOps</strong></td>
-<td style="text-align: left;">MLflow, Feast (Feature Store), Model Monitoring</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><strong>Governance</strong></td>
-<td style="text-align: left;">DataHub, Unity Catalog, RLS/CLS, GDPR</td>
+<td>S’agit-il de rapports quotidiens/hebdomadaires ?</td>
+<td><strong>Batch</strong></td>
 </tr>
 </tbody>
 </table>
-<hr>
 </section>
-<section id="structure-complète-du-programme-3-niveaux" class="level1">
-<h1>📘 Structure Complète du Programme (3 Niveaux)</h1>
-<p>La progression est organisée selon un parcours <strong>pédagogique optimal</strong> :</p>
-<hr>
-</section>
-<section id="niveau-1-débutant-fondations-premiers-pipelines" class="level1">
-<h1>🟦 Niveau 1 : Débutant – Fondations &amp; Premiers Pipelines</h1>
-<section id="objectif" class="level3">
-<h3 class="anchored" data-anchor-id="objectif">🎯 Objectif</h3>
-<p>Construire des bases solides en Python, SQL, systèmes distribués, modélisation et premiers pipelines.</p>
-</section>
-<section id="modules" class="level3">
-<h3 class="anchored" data-anchor-id="modules">📚 Modules</h3>
+<section id="fondations-des-pipelines-de-données" class="level3">
+<h3 class="anchored" data-anchor-id="fondations-des-pipelines-de-données">Fondations des pipelines de données</h3>
+<p>Tout pipeline de données repose sur plusieurs piliers fondamentaux :</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 12%">
-<col style="width: 33%">
-<col style="width: 54%">
+<col style="width: 50%">
+<col style="width: 22%">
+<col style="width: 27%">
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">#</th>
-<th style="text-align: left;">Module</th>
-<th style="text-align: left;">Thèmes Clés</th>
+<th>Pilier</th>
+<th>Description</th>
+<th>Module associé</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">01</td>
-<td style="text-align: left;">Introduction au Data Engineering</td>
-<td style="text-align: left;">Rôle du DE, écosystème, architectures (Lambda, Kappa, Lakehouse)</td>
+<td><strong>1. Data Collecting</strong></td>
+<td>Comment collecter les données brutes (fichiers, API, capteurs…)</td>
+<td>Python, APIs</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">02</td>
-<td style="text-align: left;">Fondamentaux Linux &amp; Bash</td>
-<td style="text-align: left;">Commandes essentielles, scripting, cron, permissions</td>
+<td><strong>2. Data Ingestion</strong></td>
+<td>Comment les intégrer dans un système (DB, data lake…)</td>
+<td>ETL, Airbyte</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">03</td>
-<td style="text-align: left;">Git &amp; Versioning</td>
-<td style="text-align: left;">Branches, merge, rebase, workflows collaboratifs</td>
+<td><strong>3. Data Storage</strong></td>
+<td>Comment et où les stocker (SQL, NoSQL, S3…)</td>
+<td>Databases, Cloud</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">04</td>
-<td style="text-align: left;">Python pour Data Engineering</td>
-<td style="text-align: left;">Syntaxe, structures, fichiers, exceptions</td>
+<td><strong>4. Data Processing</strong></td>
+<td>Comment les transformer, nettoyer, agréger</td>
+<td>Python, Spark, dbt</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">05</td>
-<td style="text-align: left;">Python Avancé</td>
-<td style="text-align: left;">POO, décorateurs, générateurs, context managers</td>
+<td><strong>5. Data Modeling</strong></td>
+<td>Comment organiser les données pour l’analyse</td>
+<td>SQL, dbt</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">06</td>
-<td style="text-align: left;">Packaging &amp; Environnements</td>
-<td style="text-align: left;">venv, pip, pyproject.toml, structure projet</td>
+<td><strong>6. Data Quality &amp; Governance</strong></td>
+<td>Comment garantir la fiabilité et la traçabilité</td>
+<td>Great Expectations</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">07</td>
-<td style="text-align: left;">SQL Fondamental</td>
-<td style="text-align: left;">SELECT, JOIN, agrégations, sous-requêtes</td>
+<td><strong>7. Data Orchestration</strong></td>
+<td>Comment automatiser les tâches et gérer les dépendances</td>
+<td>Airflow, Prefect</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">08</td>
-<td style="text-align: left;">SQL Avancé</td>
-<td style="text-align: left;">Window functions, CTE, optimisation, indexation</td>
+<td><strong>8. Scalabilité &amp; Performance</strong></td>
+<td>Comment faire face à de gros volumes ou à la charge</td>
+<td>Spark, Kubernetes</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">09</td>
-<td style="text-align: left;">Modélisation de Données</td>
-<td style="text-align: left;">Normalisation, Star Schema, Data Vault, SCD</td>
+<td><strong>9. Sécurité des données</strong></td>
+<td>Chiffrement, contrôle d’accès, audit</td>
+<td>IAM, Vault</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">10</td>
-<td style="text-align: left;">Introduction Big Data</td>
-<td style="text-align: left;">Hadoop, HDFS, MapReduce, écosystème</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">11</td>
-<td style="text-align: left;">Introduction PySpark</td>
-<td style="text-align: left;">RDD, DataFrame, transformations, actions</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">12</td>
-<td style="text-align: left;">MongoDB pour Data Engineers</td>
-<td style="text-align: left;">NoSQL, CRUD, agrégations, indexation</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">13</td>
-<td style="text-align: left;">Projet Intégrateur Débutant</td>
-<td style="text-align: left;">Pipeline CSV → Nettoyage → Agrégation → Export</td>
+<td><strong>10. DevOps pour la Data</strong></td>
+<td>Conteneurisation, CI/CD, monitoring</td>
+<td>Docker, GitHub Actions</td>
 </tr>
 </tbody>
 </table>
 <blockquote class="blockquote">
-<p><strong>🎯 Résultat :</strong> Capable d’ingérer, transformer et produire un dataset Gold simple.</p>
+<p>📘 Ces concepts seront abordés progressivement dans le parcours.</p>
 </blockquote>
-<hr>
 </section>
 </section>
-<section id="niveau-2-intermédiaire-industrialisation-lakehouse" class="level1">
-<h1>🟩 Niveau 2 : Intermédiaire – Industrialisation &amp; Lakehouse</h1>
-<section id="objectif-1" class="level3">
-<h3 class="anchored" data-anchor-id="objectif-1">🎯 Objectif</h3>
-<p>Maîtriser les technologies indispensables en entreprise : Docker, Kubernetes, Spark avancé, Lakehouse, streaming, orchestration.</p>
-</section>
-<section id="modules-1" class="level3">
-<h3 class="anchored" data-anchor-id="modules-1">📚 Modules</h3>
+<section id="panorama-des-outils-du-data-engineer" class="level2">
+<h2 class="anchored" data-anchor-id="panorama-des-outils-du-data-engineer">5. Panorama des outils du Data Engineer</h2>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 12%">
-<col style="width: 33%">
-<col style="width: 54%">
+<col style="width: 34%">
+<col style="width: 52%">
+<col style="width: 13%">
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">#</th>
-<th style="text-align: left;">Module</th>
-<th style="text-align: left;">Thèmes Clés</th>
+<th>Domaine</th>
+<th>Outils populaires</th>
+<th>Niveau</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">14</td>
-<td style="text-align: left;">Docker pour Data Engineers</td>
-<td style="text-align: left;">Images, containers, volumes, Dockerfile, Compose</td>
+<td>📥 Collecte</td>
+<td>Python, API REST, Scrapy, Kafka</td>
+<td>Débutant → Intermédiaire</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">15</td>
-<td style="text-align: left;">Kubernetes Fondamentaux</td>
-<td style="text-align: left;">Pods, Deployments, Services, ConfigMaps, Secrets</td>
+<td>🔄 Ingestion</td>
+<td>Airbyte, Fivetran, Python scripts</td>
+<td>Débutant</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">16</td>
-<td style="text-align: left;">K8s pour Data Workloads</td>
-<td style="text-align: left;">StatefulSets, Jobs, CronJobs, volumes persistants</td>
+<td>💾 Stockage</td>
+<td>PostgreSQL, Snowflake, S3, Delta Lake</td>
+<td>Débutant → Avancé</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">17</td>
-<td style="text-align: left;">Polars pour Data Engineering</td>
-<td style="text-align: left;">API Polars, lazy evaluation, vs Pandas/Spark</td>
+<td>⚙️ Traitement (Batch)</td>
+<td>Pandas, Spark, dbt, SQL</td>
+<td>Débutant → Avancé</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">18</td>
-<td style="text-align: left;">High Performance Python</td>
-<td style="text-align: left;">Profiling, optimisation, multiprocessing, Cython</td>
+<td>⚡ Traitement (Streaming)</td>
+<td>Kafka, Spark Streaming, Flink</td>
+<td>Intermédiaire → Avancé</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">19</td>
-<td style="text-align: left;">PySpark Avancé</td>
-<td style="text-align: left;">Partitioning, caching, broadcast, UDF, optimisation</td>
+<td>🎼 Orchestration</td>
+<td>Apache Airflow, Prefect, Dagster</td>
+<td>Intermédiaire</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">20</td>
-<td style="text-align: left;">Spark SQL Deep Dive</td>
-<td style="text-align: left;">Catalyst, plans d’exécution, tuning, adaptive query</td>
+<td>🐳 DevOps &amp; CI/CD</td>
+<td>Docker, GitHub Actions, Terraform</td>
+<td>Intermédiaire</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">21</td>
-<td style="text-align: left;">Spark on Kubernetes</td>
-<td style="text-align: left;">Spark Operator, SparkApplication, scaling, monitoring</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">22</td>
-<td style="text-align: left;">Cloud Object Storage</td>
-<td style="text-align: left;">S3, GCS, Azure Blob, MinIO, IAM, performances</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">23</td>
-<td style="text-align: left;">Table Formats (Delta, Iceberg, Hudi)</td>
-<td style="text-align: left;">ACID, Time Travel, Schema Evolution, MERGE INTO</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">24</td>
-<td style="text-align: left;">Kafka &amp; Streaming</td>
-<td style="text-align: left;">Producers, Consumers, Topics, Partitions, Consumer Groups</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">25</td>
-<td style="text-align: left;">dbt &amp; Data Quality</td>
-<td style="text-align: left;">Models, Tests, Documentation, Great Expectations</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">26</td>
-<td style="text-align: left;">Projet Intégrateur Intermédiaire</td>
-<td style="text-align: left;">Pipeline Kafka → Spark → Delta Lake → dbt (Dataset Olist)</td>
+<td>📊 Monitoring</td>
+<td>Grafana, Prometheus, ELK Stack</td>
+<td>Intermédiaire</td>
 </tr>
 </tbody>
 </table>
-<blockquote class="blockquote">
-<p><strong>🎯 Résultat :</strong> Déployer un job Spark sur Kubernetes, stocker en Delta, orchestrer &amp; monitorer.</p>
-</blockquote>
-<hr>
+<section id="stack-moderne-typique-2024" class="level3">
+<h3 class="anchored" data-anchor-id="stack-moderne-typique-2024">Stack moderne typique (2024)</h3>
+<pre><code>┌─────────────────────────────────────────────────────────────┐
+│                    STACK DATA MODERNE                       │
+├─────────────────────────────────────────────────────────────┤
+│  Orchestration    │  Airflow / Prefect / Dagster            │
+│  Transformation   │  dbt / Spark / Python                   │
+│  Warehouse        │  Snowflake / BigQuery / Redshift        │
+│  Ingestion        │  Airbyte / Fivetran / Stitch            │
+│  Sources          │  APIs / Databases / SaaS / Files        │
+└─────────────────────────────────────────────────────────────┘</code></pre>
 </section>
 </section>
-<section id="niveau-3-avancé-architecture-optimisation-seniority" class="level1">
-<h1>🟥 Niveau 3 : Avancé – Architecture, Optimisation &amp; Seniority</h1>
-<section id="objectif-2" class="level3">
-<h3 class="anchored" data-anchor-id="objectif-2">🎯 Objectif</h3>
-<p>Atteindre le niveau “Senior Data Engineer / Architecte Data” avec une maîtrise des systèmes distribués, de l’architecture et du leadership technique.</p>
-</section>
-<section id="modules-2" class="level3">
-<h3 class="anchored" data-anchor-id="modules-2">📚 Modules</h3>
+<section id="soft-skills-mindset-du-data-engineer" class="level2">
+<h2 class="anchored" data-anchor-id="soft-skills-mindset-du-data-engineer">6. Soft Skills &amp; Mindset du Data Engineer</h2>
+<p>Le métier de Data Engineer n’est pas uniquement technique. Pour réussir dans ce domaine, il faut aussi développer des compétences humaines et professionnelles essentielles :</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 12%">
-<col style="width: 33%">
-<col style="width: 54%">
+<col style="width: 24%">
+<col style="width: 26%">
+<col style="width: 50%">
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">#</th>
-<th style="text-align: left;">Module</th>
-<th style="text-align: left;">Thèmes Clés</th>
+<th>Compétence</th>
+<th>Description</th>
+<th>Pourquoi c’est important</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">27</td>
-<td style="text-align: left;">Kubernetes Deep Dive</td>
-<td style="text-align: left;">Operators, CRDs, Helm avancé, GitOps, troubleshooting</td>
+<td>📝 <strong>Documenter</strong></td>
+<td>Écrire une documentation claire pour son code et ses pipelines</td>
+<td>Facilite la maintenance et l’onboarding des nouveaux membres</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">28</td>
-<td style="text-align: left;">Orchestration Avancée</td>
-<td style="text-align: left;">Airflow 2.x, DAGs dynamiques, KubernetesPodOperator, Dagster</td>
+<td>🤝 <strong>Collaborer</strong></td>
+<td>Travailler avec les équipes Data Science, BI, Produit, DevOps</td>
+<td>Les données traversent toute l’organisation</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">29</td>
-<td style="text-align: left;">Messaging Distribué</td>
-<td style="text-align: left;">Kafka internals, Pulsar, RabbitMQ, patterns de messaging</td>
+<td>🎯 <strong>Être rigoureux</strong></td>
+<td>Garantir la qualité, la fiabilité et la traçabilité des données</td>
+<td>Une erreur de données peut avoir des conséquences business majeures</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">30</td>
-<td style="text-align: left;">Spark &amp; Scala Deep Dive</td>
-<td style="text-align: left;">Internals Spark, Catalyst, Tungsten, optimisation bas niveau</td>
+<td>🕵🏽‍♂️ <strong>Investiguer</strong></td>
+<td>Savoir débugger des anomalies, logs ou échecs de pipeline</td>
+<td>Les pipelines cassent, il faut savoir pourquoi rapidement</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">31</td>
-<td style="text-align: left;">Data Engineering pour le ML</td>
-<td style="text-align: left;">Feature Stores, pipelines ML, MLflow, model serving</td>
+<td>📚 <strong>Apprendre en continu</strong></td>
+<td>Se tenir à jour sur les nouveaux outils et pratiques</td>
+<td>Le domaine évolue très rapidement</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">32</td>
-<td style="text-align: left;">Data Mesh &amp; Contracts</td>
-<td style="text-align: left;">Data Products, Domain Ownership, Data Contracts, APIs</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">33</td>
-<td style="text-align: left;">Realtime OLAP &amp; Dashboards</td>
-<td style="text-align: left;">ClickHouse, Apache Druid, Pinot, dashboards temps réel</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">34</td>
-<td style="text-align: left;">Patterns &amp; Décisions d’Architecture</td>
-<td style="text-align: left;">ADR, RFC, trade-offs, design reviews, documentation</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">35</td>
-<td style="text-align: left;">Leadership &amp; Trade-offs</td>
-<td style="text-align: left;">Communication technique, mentoring, gestion de projet tech</td>
+<td>💬 <strong>Communiquer</strong></td>
+<td>Expliquer des concepts techniques à des non-techniques</td>
+<td>Alignement avec les équipes métier</td>
 </tr>
 </tbody>
 </table>
-<blockquote class="blockquote">
-<p><strong>🎯 Résultat :</strong> Capable de concevoir et défendre une architecture Data complète, mener des design reviews, et guider une équipe technique.</p>
-</blockquote>
-<hr>
 </section>
-</section>
-<section id="vue-densemble-du-parcours" class="level1">
-<h1>📊 Vue d’Ensemble du Parcours</h1>
-<pre><code>┌─────────────────────────────────────────────────────────────────────────────┐
-│                           PARCOURS COMPLET                                  │
-│                                                                             │
-│   🟦 NIVEAU 1 : DÉBUTANT                                                    │
-│   ════════════════════════                                                  │
-│   Modules 01-13                                                             │
-│   Python → SQL → Big Data → PySpark → MongoDB                               │
-│   📦 Projet : Pipeline simple                                               │
-│                          │                                                  │
-│                          ▼                                                  │
-│   🟩 NIVEAU 2 : INTERMÉDIAIRE                                               │
-│   ════════════════════════════                                              │
-│   Modules 14-26                                                             │
-│   Docker → K8s → Spark avancé → Lakehouse → Streaming → dbt                 │
-│   📦 Projet : Pipeline E-commerce (Olist)                                   │
-│                          │                                                  │
-│                          ▼                                                  │
-│   🟥 NIVEAU 3 : AVANCÉ                                                      │
-│   ═════════════════════                                                     │
-│   Modules 27-35                                                             │
-│   K8s Deep Dive → Orchestration → Messaging → Spark/Scala → ML             │
-│   Architecture → Data Mesh → OLAP → Leadership                              │
-│   📦 Projet : Plateforme Data Multi-tenant                                  │
-│                                                                             │
-│                          ▼                                                  │
-│                    🏆 SENIOR READY                                          │
-│                                                                             │
-└─────────────────────────────────────────────────────────────────────────────┘</code></pre>
+<section id="quiz-de-fin-de-module" class="level2">
+<h2 class="anchored" data-anchor-id="quiz-de-fin-de-module">Quiz de fin de module</h2>
+<p>Réponds aux questions suivantes pour valider tes acquis 👇🏽</p>
 <hr>
-</section>
-<section id="compétences-acquises-par-niveau" class="level1">
-<h1>🏆 Compétences Acquises par Niveau</h1>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Compétence</th>
-<th style="text-align: center;">Débutant</th>
-<th style="text-align: center;">Intermédiaire</th>
-<th style="text-align: center;">Avancé</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Python &amp; SQL</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">✅✅</td>
-<td style="text-align: center;">✅✅✅</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">PySpark</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">✅✅</td>
-<td style="text-align: center;">✅✅✅</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Spark Scala</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">✅✅</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Docker &amp; Kubernetes</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">✅✅</td>
-<td style="text-align: center;">✅✅✅</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Lakehouse (Delta/Iceberg)</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">✅✅</td>
-<td style="text-align: center;">✅✅✅</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Streaming (Kafka)</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">✅✅</td>
-<td style="text-align: center;">✅✅✅</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Orchestration (Airflow)</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">✅✅✅</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">dbt &amp; Data Quality</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">✅✅</td>
-<td style="text-align: center;">✅✅</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">OLAP &amp; Realtime Analytics</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">✅✅</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">MLOps &amp; Feature Stores</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">✅✅</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Data Mesh &amp; Contracts</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">✅✅✅</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Governance &amp; Security</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">✅✅✅</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Architecture &amp; Design</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">✅✅✅</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Leadership technique</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">✅✅✅</td>
-</tr>
-</tbody>
-</table>
-<hr>
-</section>
-<section id="démarrer-le-bootcamp" class="level1">
-<h1>🚀 Démarrer le Bootcamp</h1>
-<p>👉 Cliquez dans le menu de gauche pour ouvrir le premier module, ou choisissez votre point d’entrée :</p>
-<div style="text-align: center; margin: 30px 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
-<p><a href="./notebooks/beginner/01_intro_data_engineering.html" style="background: linear-gradient(135deg, #3b82f6, #1d4ed8); color: white; padding: 15px 30px; text-decoration: none; font-size: 16px; border-radius: 10px; font-weight: 600; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);"> 🟦 Niveau Débutant </a> <a href="./notebooks/intermediate/14_docker_for_data_engineers.html" style="background: linear-gradient(135deg, #22c55e, #16a34a); color: white; padding: 15px 30px; text-decoration: none; font-size: 16px; border-radius: 10px; font-weight: 600; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);"> 🟩 Niveau Intermédiaire </a> <a href="./notebooks/advanced/27_kubernetes_deep_dive.html" style="background: linear-gradient(135deg, #ef4444, #dc2626); color: white; padding: 15px 30px; text-decoration: none; font-size: 16px; border-radius: 10px; font-weight: 600; box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);"> 🟥 Niveau Avancé </a></p>
-</div>
-<hr>
-<section id="conseils-pour-réussir" class="level2">
-<h2 class="anchored" data-anchor-id="conseils-pour-réussir">💡 Conseils pour Réussir</h2>
-<ol type="1">
-<li><strong>Suivez l’ordre</strong> : Les modules sont conçus pour être suivis séquentiellement.</li>
-<li><strong>Pratiquez</strong> : Faites tous les exercices et projets intégrateurs.</li>
-<li><strong>Expérimentez</strong> : Modifiez le code, cassez des choses, apprenez des erreurs.</li>
-<li><strong>Documentez</strong> : Prenez des notes, créez votre propre documentation.</li>
-<li><strong>Construisez votre portfolio</strong> : Les projets intégrateurs sont présentables en entretien.</li>
+<section id="q1.-quel-est-le-rôle-principal-dun-data-engineer" class="level3">
+<h3 class="anchored" data-anchor-id="q1.-quel-est-le-rôle-principal-dun-data-engineer">❓ Q1. Quel est le rôle principal d’un Data Engineer ?</h3>
+<ol type="a">
+<li>Créer des modèles prédictifs<br>
+</li>
+<li>Visualiser les données dans Power BI<br>
+</li>
+<li>Concevoir et maintenir des pipelines de données<br>
+</li>
+<li>Faire des analyses statistiques dans Excel</li>
 </ol>
+<details>
+<summary>
+💡 Voir la réponse
+</summary>
+<p>✅ <strong>Réponse : c</strong> — Le Data Engineer conçoit et maintient des pipelines de données.</p>
+</details>
 <hr>
 </section>
-<section id="bonne-montée-en-compétence" class="level2">
-<h2 class="anchored" data-anchor-id="bonne-montée-en-compétence">🎉 Bonne montée en compétence !</h2>
-<p>Vous êtes maintenant prêt à progresser étape par étape jusqu’au niveau <strong>Senior Data Engineer</strong>.</p>
-
-
+<section id="q2.-dans-un-pipeline-etl-que-signifie-le-t" class="level3">
+<h3 class="anchored" data-anchor-id="q2.-dans-un-pipeline-etl-que-signifie-le-t">❓ Q2. Dans un pipeline <strong>ETL</strong>, que signifie le “T” ?</h3>
+<ol type="a">
+<li>Transfer<br>
+</li>
+<li>Trigger<br>
+</li>
+<li>Transform<br>
+</li>
+<li>Transport</li>
+</ol>
+<details>
+<summary>
+💡 Voir la réponse
+</summary>
+<p>✅ <strong>Réponse : c</strong> — “T” signifie <em>Transform</em>, c’est l’étape de transformation des données.</p>
+</details>
+<hr>
 </section>
+<section id="q3.-quelle-est-la-principale-différence-entre-etl-et-elt" class="level3">
+<h3 class="anchored" data-anchor-id="q3.-quelle-est-la-principale-différence-entre-etl-et-elt">❓ Q3. Quelle est la principale différence entre ETL et ELT ?</h3>
+<ol type="a">
+<li>ELT ne fait pas de transformation<br>
+</li>
+<li>ELT transforme les données <strong>après</strong> les avoir chargées<br>
+</li>
+<li>ETL est utilisé uniquement pour les fichiers CSV<br>
+</li>
+<li>ELT est un outil comme Apache Airflow</li>
+</ol>
+<details>
+<summary>
+💡 Voir la réponse
+</summary>
+<p>✅ <strong>Réponse : b</strong> — ELT charge d’abord les données, puis les transforme dans le data warehouse.</p>
+</details>
+<hr>
+</section>
+<section id="q4.-lequel-de-ces-outils-est-utilisé-pour-orchestrer-des-pipelines" class="level3">
+<h3 class="anchored" data-anchor-id="q4.-lequel-de-ces-outils-est-utilisé-pour-orchestrer-des-pipelines">❓ Q4. Lequel de ces outils est utilisé pour orchestrer des pipelines ?</h3>
+<ol type="a">
+<li>Apache Kafka<br>
+</li>
+<li>Apache Airflow<br>
+</li>
+<li>Tableau<br>
+</li>
+<li>PostgreSQL</li>
+</ol>
+<details>
+<summary>
+💡 Voir la réponse
+</summary>
+<p>✅ <strong>Réponse : b</strong> — Apache Airflow est un outil d’orchestration de pipelines.</p>
+</details>
+<hr>
+</section>
+<section id="q5.-le-traitement-batch-consiste-à" class="level3">
+<h3 class="anchored" data-anchor-id="q5.-le-traitement-batch-consiste-à">❓ Q5. Le traitement <strong>batch</strong> consiste à :</h3>
+<ol type="a">
+<li>Traiter les données en continu<br>
+</li>
+<li>Traiter les données en petits lots à la volée<br>
+</li>
+<li>Traiter les données par groupe, à intervalle régulier<br>
+</li>
+<li>Traiter uniquement les données texte</li>
+</ol>
+<details>
+<summary>
+💡 Voir la réponse
+</summary>
+<p>✅ <strong>Réponse : c</strong> — Le batch consiste à traiter les données par lots à intervalles définis.</p>
+</details>
+<hr>
+</section>
+</section>
+<section id="bonus-quiz-nouveaux-paradigmes-etlt-reverse-etl" class="level2">
+<h2 class="anchored" data-anchor-id="bonus-quiz-nouveaux-paradigmes-etlt-reverse-etl">Bonus Quiz — Nouveaux paradigmes : ETLt &amp; Reverse ETL</h2>
+<hr>
+<section id="q6.-que-signifie-etlt" class="level3">
+<h3 class="anchored" data-anchor-id="q6.-que-signifie-etlt">❓ Q6. Que signifie <strong>ETLt</strong> ?</h3>
+<ol type="a">
+<li>Une erreur dans la chaîne ETL<br>
+</li>
+<li>Une combinaison hybride entre ETL et ELT<br>
+</li>
+<li>Une technique de transfert via email<br>
+</li>
+<li>Une transformation uniquement après chargement</li>
+</ol>
+<details>
+<summary>
+💡 Voir la réponse
+</summary>
+<p>✅ <strong>Réponse : b</strong> — ETLt correspond à : <strong>Extract → Transform (1) → Load → Transform (2)</strong>.<br>
+C’est une approche hybride où une partie des transformations est faite <strong>avant</strong> le chargement, et une autre <strong>après</strong>.</p>
+</details>
+<hr>
+</section>
+<section id="q7.-le-reverse-etl-est-utilisé-pour" class="level3">
+<h3 class="anchored" data-anchor-id="q7.-le-reverse-etl-est-utilisé-pour">❓ Q7. Le <strong>Reverse ETL</strong> est utilisé pour :</h3>
+<ol type="a">
+<li>Recharger les données sources depuis le warehouse<br>
+</li>
+<li>Supprimer les données invalides dans un lac de données<br>
+</li>
+<li>Pousser les données du data warehouse vers les outils métiers<br>
+</li>
+<li>Transformer les données en reverse-engineering</li>
+</ol>
+<details>
+<summary>
+💡 Voir la réponse
+</summary>
+<p>✅ <strong>Réponse : c</strong> — Reverse ETL consiste à <strong>extraire les données d’un data warehouse</strong> (ex. BigQuery) pour les charger dans des <strong>outils métiers</strong> comme Salesforce, Notion, Slack, etc.</p>
+</details>
+<hr>
+</section>
+</section>
+<section id="ressources-pour-aller-plus-loin" class="level2">
+<h2 class="anchored" data-anchor-id="ressources-pour-aller-plus-loin">📚 Ressources pour aller plus loin</h2>
+<section id="lectures-recommandées" class="level3">
+<h3 class="anchored" data-anchor-id="lectures-recommandées">📖 Lectures recommandées</h3>
+<ul>
+<li><a href="https://www.oreilly.com/library/view/fundamentals-of-data/9781098108298/">Fundamentals of Data Engineering</a> — Joe Reis &amp; Matt Housley</li>
+<li><a href="https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/books/">The Data Warehouse Toolkit</a> — Ralph Kimball</li>
+<li><a href="https://dataintensive.net/">Designing Data-Intensive Applications</a> — Martin Kleppmann</li>
+</ul>
+</section>
+<section id="sites-blogs" class="level3">
+<h3 class="anchored" data-anchor-id="sites-blogs">🌐 Sites &amp; Blogs</h3>
+<ul>
+<li><a href="https://www.dataengineeringweekly.com/">Data Engineering Weekly</a> — Newsletter hebdomadaire</li>
+<li><a href="https://www.youtube.com/@SeattleDataGuy">Seattle Data Guy</a> — Chaîne YouTube</li>
+<li><a href="https://www.startdataengineering.com/">Start Data Engineering</a> — Tutoriels pratiques</li>
+</ul>
+</section>
+<section id="certifications" class="level3">
+<h3 class="anchored" data-anchor-id="certifications">🎓 Certifications</h3>
+<ul>
+<li>Google Cloud Professional Data Engineer</li>
+<li>AWS Certified Data Engineer</li>
+<li>Databricks Certified Data Engineer</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="prochaine-étape" class="level2">
+<h2 class="anchored" data-anchor-id="prochaine-étape">➡️ Prochaine étape</h2>
+<p>Maintenant que tu as une vue d’ensemble du Data Engineering, passons à la pratique !</p>
+<p>👉 <strong>Module suivant : <code>02_bash_for_data_engineers</code></strong> — Maîtriser la ligne de commande</p>
+<hr>
+<p>🎉 <strong>Félicitations !</strong> Tu as terminé le premier module du parcours Data Engineering.</p>
+
+
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Retour au sommet</a></main> <!-- /main -->
@@ -1867,6 +2068,15 @@ function downloadPDF() {
   }
   loadGiscus();
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../notebooks/beginner/02_bash_for_data_engineers.html" class="pagination-link" aria-label="02 · Linux &amp; Bash">
+        <span class="nav-page-text">02 · Linux &amp; Bash</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -1875,7 +2085,7 @@ function downloadPDF() {
 </div>   
     <div class="nav-footer-center">
 <p>© 2025 Bootcamp Data Engineering · From Zero to Hero</p>
-<div class="toc-actions"><ul><li><a href="https://github.com/diakite-data/data-engineering-bootcamp/blob/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Voir la source</a></li><li><a href="https://github.com/diakite-data/data-engineering-bootcamp/issues/new" class="toc-action"><i class="bi empty"></i>Faire part d'un problème</a></li><li><a href="https://github.com/diakite-data/data-engineering-bootcamp/edit/main/index.qmd" class="toc-action"><i class="bi empty"></i>Modifier cette page</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/diakite-data/data-engineering-bootcamp/blob/main/notebooks/beginner/01_intro_data_engineering.ipynb" class="toc-action"><i class="bi bi-github"></i>Voir la source</a></li><li><a href="https://github.com/diakite-data/data-engineering-bootcamp/issues/new" class="toc-action"><i class="bi empty"></i>Faire part d'un problème</a></li><li><a href="https://github.dev/diakite-data/data-engineering-bootcamp/blob/main/notebooks/beginner/01_intro_data_engineering.ipynb" class="toc-action"><i class="bi empty"></i>Modifier cette page</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
@@ -1898,10 +2108,10 @@ function downloadPDF() {
 <div class="reading-progress" aria-hidden="true"></div>
 
 <!-- UI Enhancement Script -->
-<script src="./bootcamp-ui.js"></script>
+<script src="../../bootcamp-ui.js"></script>
 
 
 
 
-<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
