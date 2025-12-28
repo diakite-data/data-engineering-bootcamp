@@ -2323,30 +2323,65 @@ feature/etl       └───●───●───●───┘     (nouve
 <style>
 #pdf-button {
   position: fixed;
-  bottom: 20px;
+  bottom: 80px;  /* Plus haut pour éviter le bouton back-to-top de Quarto */
   right: 20px;
-  background: #00b4d8;
+  background: linear-gradient(135deg, #00b4d8, #0077b6);
   color: white;
-  padding: 10px 20px;
+  padding: 12px 20px;
   border-radius: 30px;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 15px rgba(0, 180, 216, 0.4);
   font-size: 14px;
+  font-weight: 500;
   cursor: pointer;
-  z-index: 9999;
-  transition: 0.2s ease-in-out;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
+
 #pdf-button:hover {
-  background: #0077b6;
+  background: linear-gradient(135deg, #0077b6, #005f8a);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 119, 182, 0.5);
+}
+
+#pdf-button:active {
+  transform: translateY(0);
+}
+
+/* Responsive - plus petit sur mobile */
+@media (max-width: 768px) {
+  #pdf-button {
+    bottom: 70px;
+    right: 15px;
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  #pdf-button {
+    background: linear-gradient(135deg, #0096c7, #0077b6);
+    box-shadow: 0 4px 15px rgba(0, 150, 199, 0.3);
+  }
+  
+  #pdf-button:hover {
+    background: linear-gradient(135deg, #00b4d8, #0096c7);
+    box-shadow: 0 6px 20px rgba(0, 180, 216, 0.4);
+  }
 }
 </style>
 
-<div id="pdf-button" onclick="downloadPDF()">
-  📄 Télécharger la version PDF
-</div>
+<button id="pdf-button" onclick="downloadPDF()" aria-label="Télécharger en PDF">
+  📄 Télécharger en PDF
+</button>
 
 <script>
 function downloadPDF() {
-  window.print(); // fonctionne directement dans Quarto HTML
+  window.print();
 }
 </script>
 <script id="quarto-html-after-body" type="application/javascript">
@@ -2842,9 +2877,6 @@ function downloadPDF() {
 </footer>
 <!-- Reading Progress Indicator -->
 <div class="reading-progress" aria-hidden="true"></div>
-
-<!-- Back to Top Button -->
-<button class="back-to-top" aria-label="Retour en haut de page" title="Retour en haut"></button>
 
 <!-- UI Enhancement Script -->
 <script src="../../bootcamp-ui.js"></script>
