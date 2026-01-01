@@ -181,7 +181,7 @@ website:
           
           - text: "---"
           - text: "📦 **Projet Débutant**"
-          #  href: notebooks/beginner/projet_debutant.ipynb
+            href: notebooks/beginner/projet_debutant.ipynb
 
       # =========================================================================
       # 🟩 NIVEAU 2 : INTERMÉDIAIRE
