@@ -25,6 +25,7 @@ date-format: "D MMMM YYYY"
 
 website:
   title: "Bootcamp Data Engineering"
+  google-analytics: "G-NZSBZFMZN7"
   description: "Programme complet Data Engineering — Du débutant au Senior Engineer"
   site-url: "https://diakite-data.github.io/data-engineering-bootcamp"
   repo-url: "https://github.com/diakite-data/data-engineering-bootcamp"

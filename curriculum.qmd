@@ -5,7 +5,7 @@ subtitle: "Vue d'ensemble du programme Data Engineering — From Zero to Hero"
 
 ::: {.callout-note}
 ## 🎯 Objectif du Programme
-Ce bootcamp vous emmène de **zéro à Senior Data Engineer** à travers 35 modules progressifs, 3 projets intégrateurs et des centaines d'exercices pratiques.
+Ce bootcamp vous emmène de **zéro à Senior Data Engineer** à travers 35 modules progressifs, 2 projets intégrateurs et des centaines d'exercices pratiques.
 :::
 
 ---
@@ -18,7 +18,7 @@ Ce bootcamp vous emmène de **zéro à Senior Data Engineer** à travers 35 modu
 │   🟦 DÉBUTANT ──────► 🟩 INTERMÉDIAIRE ──────► 🟥 AVANCÉ ──────► 🏆        │
 │                                                                             │
 │   Modules 01-13        Modules 14-26            Modules 27-35     SENIOR   │
-│   Fondations           Industrialisation        Architecture      READY    │
+│   + Projet 🎮          + Projet 📦              Spécialisation    READY    │
 │                                                                             │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
@@ -52,9 +52,22 @@ Aucun prérequis technique. Une curiosité pour les données et une motivation �
 | 12 | [Orchestration de Pipelines](notebooks/beginner/12_orchestration_pipelines.ipynb) | Concepts, scheduling, dépendances |
 | 13 | [**Bonus** : FastAPI](notebooks/beginner/13_fastapi_for_data_engineers.ipynb) | API REST pour exposer vos données |
 
-### 📦 Projet Intégrateur Débutant
+### 🎮 Projet Intégrateur Débutant — Video Games Analytics
 
-> **Pipeline Batch Simple** : CSV → Nettoyage Python → Transformation SQL → Agrégation Spark → Export
+> **Pipeline complet** : Kaggle CSV → Web Scraping → DuckDB + Elasticsearch → PySpark → FastAPI → Streamlit Dashboard
+>
+> [🚀 Accéder au projet](notebooks/beginner/14_projet_integrateur_debutant.ipynb)
+
+**Ce que vous allez construire :**
+
+```
+┌──────────────┐      ┌──────────────┐      ┌──────────────┐      ┌──────────────┐
+│  📥 SOURCES  │      │ ⚙️ PROCESSING │      │ 💾 STOCKAGE  │      │📊 DASHBOARD  │
+├──────────────┤      ├──────────────┤      ├──────────────┤      ├──────────────┤
+│ Kaggle CSV   │─────▶│   Pandas     │─────▶│   DuckDB     │─────▶│   FastAPI    │
+│ Web Scraping │      │   PySpark    │      │Elasticsearch │      │  Streamlit   │
+└──────────────┘      └──────────────┘      └──────────────┘      └──────────────┘
+```
 
 **✅ À la fin de ce niveau, vous savez :**
 
@@ -62,6 +75,7 @@ Aucun prérequis technique. Une curiosité pour les données et une motivation �
 - Manipuler des données avec SQL et PySpark
 - Comprendre les architectures Big Data
 - Versionner votre code avec Git
+- **Construire un pipeline data de bout en bout**
 
 ---
 
@@ -91,11 +105,11 @@ Avoir complété le Niveau 1 ou équivalent (Python, SQL, bases Spark).
 | 24 | [Kafka & Streaming](notebooks/intermediate/24_kafka_streaming.ipynb) | Producers, Consumers, Topics, Partitions, Consumer Groups |
 | 25 | [dbt & Data Quality](notebooks/intermediate/25_dbt_data_quality.ipynb) | Models, Tests, Documentation, Great Expectations |
 
-### 📦 Projet Intégrateur Intermédiaire
+### 📦 Projet Intégrateur Intermédiaire — E-commerce Olist
 
-> **Pipeline E-commerce Olist** : Kafka → Spark Streaming → Delta Lake → dbt → Dashboard
+> **Pipeline Lakehouse** : Kafka → Spark Streaming → Delta Lake → dbt → Dashboard
 >
-> [Accéder au projet](notebooks/intermediate/26_projet_integrateur.ipynb)
+> [🚀 Accéder au projet](notebooks/intermediate/26_projet_integrateur.ipynb)
 
 **✅ À la fin de ce niveau, vous savez :**
 
@@ -129,10 +143,6 @@ Avoir complété le Niveau 2 ou expérience équivalente en entreprise.
 | 33 | [Realtime OLAP & Dashboards](notebooks/advanced/33_realtime_olap_dashboards.ipynb) | ClickHouse, Apache Druid, Pinot, dashboards temps réel |
 | 34 | [Patterns & Décisions d'Architecture](notebooks/advanced/34_architecture_patterns_decisions.ipynb) | ADR, RFC, trade-offs, design reviews, documentation |
 | 35 | [Leadership & Trade-offs](notebooks/advanced/35_leadership_tradeoffs.ipynb) | Communication technique, mentoring, gestion de projet |
-
-### 📦 Projet Intégrateur Avancé
-
-> **Plateforme Data Multi-Tenant** : Architecture complète avec K8s + Kafka + Spark + OLAP + Governance + Monitoring
 
 **✅ À la fin de ce niveau, vous savez :**
 
