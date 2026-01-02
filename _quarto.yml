@@ -276,8 +276,8 @@ website:
               - text: "35 · Leadership & Trade-offs"
                 href: notebooks/advanced/35_leadership_tradeoffs.ipynb
           
-          - text: "---"
-          - text: "📦 **Projet Avancé**"
+          #- text: "---"
+          #- text: "📦 **Projet Avancé**"
           #  href: notebooks/advanced/projet_avance.ipynb
 
       # =========================================================================
