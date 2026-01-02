@@ -32,7 +32,7 @@ Créé par des Data Engineers expérimentés, il se concentre sur les **exigence
 
 - 🎯 **35 modules** progressifs répartis sur 3 niveaux
 - 💻 **100% pratique** avec des notebooks Jupyter interactifs
-- 🏗️ **3 projets intégrateurs** présentables en entretien
+- 🗂️ **2 projets intégrateurs** présentables en entretien
 - 🆓 **Gratuit et open source**
 - 🇫🇷 **En français**
 
@@ -71,7 +71,8 @@ Créé par des Data Engineers expérimentés, il se concentre sur les **exigence
 | 12 | Orchestration de Pipelines |
 | 13 | **Bonus** : FastAPI |
 
-📦 **Projet** : Pipeline Batch Simple
+🎮 **Projet** : Video Games Analytics Platform
+> Pipeline complet : Kaggle CSV → Web Scraping → DuckDB + Elasticsearch → PySpark → FastAPI → Streamlit Dashboard
 
 ---
 
@@ -113,8 +114,6 @@ Créé par des Data Engineers expérimentés, il se concentre sur les **exigence
 | 33 | Realtime OLAP & Dashboards |
 | 34 | Patterns & Décisions d'Architecture |
 | 35 | Leadership & Trade-offs |
-
-📦 **Projet** : Plateforme Data Multi-Tenant
 
 ---
 
@@ -231,18 +230,18 @@ Vous pouvez également suivre le bootcamp directement sur le site web :
 
 ```
 data-engineering-bootcamp/
-├── 📁 notebooks/
-│   ├── 📁 beginner/          # Modules 01-13
-│   ├── 📁 intermediate/      # Modules 14-26
-│   └── 📁 advanced/          # Modules 27-35
-├── 📁 resources/
+├── 📂 notebooks/
+│   ├── 📂 beginner/          # Modules 01-13 + Projet
+│   ├── 📂 intermediate/      # Modules 14-26 + Projet
+│   └── 📂 advanced/          # Modules 27-35
+├── 📂 resources/
 │   ├── setup.qmd             # Guide d'installation
 │   ├── documentation.qmd     # Documentation
 │   ├── faq.qmd               # FAQ
 │   └── links.qmd             # Liens utiles
-├── 📁 assets/
-│   └── 📁 images/
-├── 📁 includes/
+├── 📂 assets/
+│   └── 📂 images/
+├── 📂 includes/
 ├── index.qmd                 # Page d'accueil
 ├── curriculum.qmd            # Vue d'ensemble du programme
 ├── _quarto.yml               # Configuration Quarto
@@ -266,7 +265,7 @@ Les contributions sont les bienvenues ! Voici comment participer :
 
 - 🐛 Corrections de bugs / typos
 - 📝 Améliorations de contenu
-- 🌐 Traductions
+- 🌍 Traductions
 - 💡 Suggestions de nouveaux modules
 - 🎨 Améliorations UI/UX
 
@@ -275,8 +274,8 @@ Les contributions sont les bienvenues ! Voici comment participer :
 ## 📊 Progression recommandée
 
 ```
-Semaine 1-10   →   🟦 Niveau Débutant
-Semaine 11-22  →   🟩 Niveau Intermédiaire  
+Semaine 1-10   →   🟦 Niveau Débutant + Projet Video Games
+Semaine 11-22  →   🟩 Niveau Intermédiaire + Projet Olist
 Semaine 23-32  →   🟥 Niveau Avancé
                    ↓
               🏆 Senior Ready
