@@ -6325,7 +6325,7 @@
     "href": "index.html#votre-boîte-à-outils-data-engineering",
     "title": "Bootcamp Data Engineering – From Zero to Hero",
     "section": "🛠️ Votre Boîte à Outils Data Engineering",
-    "text": "🛠️ Votre Boîte à Outils Data Engineering\n\n\n\n\n\n\n\nDomaine\nOutils & Technologies\n\n\n\n\nBig Data Processing\nPySpark, Spark SQL, Scala, Polars, Dask\n\n\nLakehouse\nDelta Lake, Apache Iceberg, Hudi\n\n\nStreaming\nKafka, Spark Streaming, Flink, Debezium CDC\n\n\nDevOps / Infra\nDocker, Kubernetes, Helm, ArgoCD, Spark Operator\n\n\nMonitoring\nPrometheus, Grafana, Alertmanager\n\n\nCloud\nAWS S3, GCP GCS, Azure Blob, IAM, MinIO\n\n\nQualité & ETL\ndbt, Great Expectations, Data Contracts\n\n\nMLOps\nMLflow, Feast (Feature Store), Model Monitoring\n\n\nGovernance\nDataHub, Unity Catalog, RLS/CLS, GDPR"
+    "text": "🛠️ Votre Boîte à Outils Data Engineering\n\n\n\n\n\n\n\nDomaine\nOutils & Technologies\n\n\n\n\nBig Data Processing\nPySpark, Spark SQL, Scala, Polars, Pandas\n\n\nLakehouse\nDelta Lake, Apache Iceberg, Hudi\n\n\nStreaming\nKafka, Spark Streaming, Flink, Debezium CDC\n\n\nDevOps / Infra\nDocker, Kubernetes, Helm, ArgoCD, Spark Operator\n\n\nMonitoring\nPrometheus, Grafana, Alertmanager\n\n\nCloud\nAWS S3, GCP GCS, Azure Blob, IAM, MinIO\n\n\nQualité & ETL\ndbt, Great Expectations, Data Contracts\n\n\nMLOps\nMLflow, Feast (Feature Store), Model Monitoring\n\n\nGovernance\nDataHub, Unity Catalog, RLS/CLS, GDPR"
   },
   {
     "objectID": "index.html#conseils-pour-réussir",

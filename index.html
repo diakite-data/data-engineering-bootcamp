@@ -890,7 +890,7 @@ Il vous accompagne de manière progressive vers un niveau <strong>professionnel 
 <tbody>
 <tr class="odd">
 <td style="text-align: left;"><strong>Big Data Processing</strong></td>
-<td style="text-align: left;">PySpark, Spark SQL, Scala, Polars, Dask</td>
+<td style="text-align: left;">PySpark, Spark SQL, Scala, Polars, Pandas</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><strong>Lakehouse</strong></td>
@@ -937,7 +937,7 @@ Il vous accompagne de manière progressive vers un niveau <strong>professionnel 
 <h1>🟦 Niveau 1 : Débutant – Fondations &amp; Premiers Pipelines</h1>
 <section id="objectif" class="level3">
 <h3 class="anchored" data-anchor-id="objectif">🎯 Objectif</h3>
-<p>Construire des bases solides en Python, SQL, systèmes distribués, modélisation et premiers pipelines.</p>
+<p>Construire des bases solides en Python, SQL, systèmes distribués et premiers pipelines.</p>
 </section>
 <section id="modules" class="level3">
 <h3 class="anchored" data-anchor-id="modules">📚 Modules</h3>
@@ -972,38 +972,38 @@ Il vous accompagne de manière progressive vers un niveau <strong>professionnel 
 </tr>
 <tr class="even">
 <td style="text-align: left;">04</td>
-<td style="text-align: left;">Python pour Data Engineering</td>
+<td style="text-align: left;">Python Fondamental</td>
 <td style="text-align: left;">Syntaxe, structures, fichiers, exceptions</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">05</td>
-<td style="text-align: left;">Python Avancé</td>
+<td style="text-align: left;">Python Data Processing</td>
 <td style="text-align: left;">POO, décorateurs, générateurs, context managers</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">06</td>
-<td style="text-align: left;">Packaging &amp; Environnements</td>
-<td style="text-align: left;">venv, pip, pyproject.toml, structure projet</td>
+<td style="text-align: left;">Introduction BDD Relationnelles</td>
+<td style="text-align: left;">Concepts SGBD, modélisation, normalisation</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">07</td>
-<td style="text-align: left;">SQL Fondamental</td>
-<td style="text-align: left;">SELECT, JOIN, agrégations, sous-requêtes</td>
+<td style="text-align: left;">SQL pour Data Engineers</td>
+<td style="text-align: left;">Requêtes, jointures, window functions, optimisation</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">08</td>
-<td style="text-align: left;">SQL Avancé</td>
-<td style="text-align: left;">Window functions, CTE, optimisation, indexation</td>
+<td style="text-align: left;">Introduction Big Data</td>
+<td style="text-align: left;">Hadoop, HDFS, MapReduce, écosystème distribué</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">09</td>
-<td style="text-align: left;">Modélisation de Données</td>
-<td style="text-align: left;">Normalisation, Star Schema, Data Vault, SCD</td>
+<td style="text-align: left;">MongoDB pour Data Engineers</td>
+<td style="text-align: left;">NoSQL, CRUD, agrégations, indexation</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">10</td>
-<td style="text-align: left;">Introduction Big Data</td>
-<td style="text-align: left;">Hadoop, HDFS, MapReduce, écosystème</td>
+<td style="text-align: left;">Elasticsearch</td>
+<td style="text-align: left;">Recherche full-text, indexation, requêtes DSL</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">11</td>
@@ -1012,18 +1012,25 @@ Il vous accompagne de manière progressive vers un niveau <strong>professionnel 
 </tr>
 <tr class="even">
 <td style="text-align: left;">12</td>
-<td style="text-align: left;">MongoDB pour Data Engineers</td>
-<td style="text-align: left;">NoSQL, CRUD, agrégations, indexation</td>
+<td style="text-align: left;">Orchestration de Pipelines</td>
+<td style="text-align: left;">Concepts, scheduling, dépendances</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">13</td>
-<td style="text-align: left;">Projet Intégrateur Débutant</td>
-<td style="text-align: left;">Pipeline CSV → Nettoyage → Agrégation → Export</td>
+<td style="text-align: left;"><strong>Bonus</strong> : FastAPI</td>
+<td style="text-align: left;">API REST pour exposer vos données</td>
 </tr>
 </tbody>
 </table>
+</section>
+<section id="projet-intégrateur-video-games-analytics-platform" class="level3">
+<h3 class="anchored" data-anchor-id="projet-intégrateur-video-games-analytics-platform">🎮 Projet Intégrateur : Video Games Analytics Platform</h3>
 <blockquote class="blockquote">
-<p><strong>🎯 Résultat :</strong> Capable d’ingérer, transformer et produire un dataset Gold simple.</p>
+<p><strong>Pipeline complet</strong> : Kaggle CSV → Web Scraping → DuckDB + Elasticsearch → PySpark → FastAPI → Streamlit Dashboard</p>
+<p><a href="notebooks/beginner/14_projet_integrateur_debutant.ipynb">🚀 Accéder au projet</a></p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>🎯 Résultat :</strong> Capable de construire un pipeline data de bout en bout, de l’ingestion au dashboard.</p>
 </blockquote>
 <hr>
 </section>
@@ -1073,7 +1080,7 @@ Il vous accompagne de manière progressive vers un niveau <strong>professionnel 
 <tr class="odd">
 <td style="text-align: left;">18</td>
 <td style="text-align: left;">High Performance Python</td>
-<td style="text-align: left;">Profiling, optimisation, multiprocessing, Cython</td>
+<td style="text-align: left;">Profiling, optimisation, multiprocessing, async</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">19</td>
@@ -1097,7 +1104,7 @@ Il vous accompagne de manière progressive vers un niveau <strong>professionnel 
 </tr>
 <tr class="even">
 <td style="text-align: left;">23</td>
-<td style="text-align: left;">Table Formats (Delta, Iceberg, Hudi)</td>
+<td style="text-align: left;">Table Formats (Delta, Iceberg)</td>
 <td style="text-align: left;">ACID, Time Travel, Schema Evolution, MERGE INTO</td>
 </tr>
 <tr class="odd">
@@ -1110,13 +1117,15 @@ Il vous accompagne de manière progressive vers un niveau <strong>professionnel 
 <td style="text-align: left;">dbt &amp; Data Quality</td>
 <td style="text-align: left;">Models, Tests, Documentation, Great Expectations</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">26</td>
-<td style="text-align: left;">Projet Intégrateur Intermédiaire</td>
-<td style="text-align: left;">Pipeline Kafka → Spark → Delta Lake → dbt (Dataset Olist)</td>
-</tr>
 </tbody>
 </table>
+</section>
+<section id="projet-intégrateur-pipeline-e-commerce-olist" class="level3">
+<h3 class="anchored" data-anchor-id="projet-intégrateur-pipeline-e-commerce-olist">📦 Projet Intégrateur : Pipeline E-commerce Olist</h3>
+<blockquote class="blockquote">
+<p><strong>Pipeline Lakehouse</strong> : Kafka → Spark Streaming → Delta Lake → dbt → Dashboard</p>
+<p><a href="./notebooks/intermediate/26_projet_integrateur.html">🚀 Accéder au projet</a></p>
+</blockquote>
 <blockquote class="blockquote">
 <p><strong>🎯 Résultat :</strong> Déployer un job Spark sur Kubernetes, stocker en Delta, orchestrer &amp; monitorer.</p>
 </blockquote>
@@ -1206,15 +1215,15 @@ Il vous accompagne de manière progressive vers un niveau <strong>professionnel 
 │   🟦 NIVEAU 1 : DÉBUTANT                                                    │
 │   ════════════════════════                                                  │
 │   Modules 01-13                                                             │
-│   Python → SQL → Big Data → PySpark → MongoDB                               │
-│   📦 Projet : Pipeline simple                                               │
+│   Python → SQL → Big Data → PySpark → MongoDB → Elasticsearch              │
+│   🎮 Projet : Video Games Analytics Platform                                │
 │                          │                                                  │
 │                          ▼                                                  │
 │   🟩 NIVEAU 2 : INTERMÉDIAIRE                                               │
 │   ════════════════════════════                                              │
-│   Modules 14-26                                                             │
+│   Modules 14-25                                                             │
 │   Docker → K8s → Spark avancé → Lakehouse → Streaming → dbt                 │
-│   📦 Projet : Pipeline E-commerce (Olist)                                   │
+│   📦 Projet : Pipeline E-commerce Olist                                     │
 │                          │                                                  │
 │                          ▼                                                  │
 │   🟥 NIVEAU 3 : AVANCÉ                                                      │
@@ -1222,7 +1231,6 @@ Il vous accompagne de manière progressive vers un niveau <strong>professionnel 
 │   Modules 27-35                                                             │
 │   K8s Deep Dive → Orchestration → Messaging → Spark/Scala → ML             │
 │   Architecture → Data Mesh → OLAP → Leadership                              │
-│   📦 Projet : Plateforme Data Multi-tenant                                  │
 │                                                                             │
 │                          ▼                                                  │
 │                    🏆 SENIOR READY                                          │
