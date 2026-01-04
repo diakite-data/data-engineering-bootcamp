@@ -23,6 +23,24 @@ Bookmark cette page ! Elle regroupe tous les liens utiles pour votre parcours Da
 | **DBeaver** | Client SQL universel | ✅ | [dbeaver.io](https://dbeaver.io/) |
 | **Postman** | Test d'API REST | ✅ | [postman.com](https://www.postman.com/) |
 
+## Bases de Données Analytiques
+
+| Outil | Description | Gratuit | Lien |
+|-------|-------------|---------|------|
+| **DuckDB** | Base SQL analytique in-process | ✅ | [duckdb.org](https://duckdb.org/) |
+| **SQLite** | Base SQL embarquée | ✅ | [sqlite.org](https://www.sqlite.org/) |
+| **ClickHouse** | OLAP temps réel | ✅ | [clickhouse.com](https://clickhouse.com/) |
+
+## Dashboards & Visualisation
+
+| Outil | Description | Gratuit | Lien |
+|-------|-------------|---------|------|
+| **Streamlit** | Dashboards Python (recommandé) | ✅ | [streamlit.io](https://streamlit.io/) |
+| **Gradio** | UI ML rapide | ✅ | [gradio.app](https://gradio.app/) |
+| **Apache Superset** | BI open source | ✅ | [superset.apache.org](https://superset.apache.org/) |
+| **Metabase** | BI simple | ✅ | [metabase.com](https://www.metabase.com/) |
+| **Plotly Dash** | Dashboards interactifs | ✅ | [dash.plotly.com](https://dash.plotly.com/) |
+
 ## Terminal & Shell
 
 | Outil | Description | OS | Lien |
@@ -52,7 +70,8 @@ Bookmark cette page ! Elle regroupe tous les liens utiles pour votre parcours Da
 
 | Dataset | Utilisé dans | Lien |
 |---------|--------------|------|
-| **Olist E-commerce** | Projet Intermédiaire | [kaggle.com/olistbr](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) |
+| **Video Game Sales** | 🎮 Projet Débutant | [kaggle.com/rush4ratio](https://www.kaggle.com/datasets/rush4ratio/video-game-sales-with-ratings) |
+| **Olist E-commerce** | 📦 Projet Intermédiaire | [kaggle.com/olistbr](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) |
 
 ## Datasets Populaires
 
@@ -116,6 +135,7 @@ Bookmark cette page ! Elle regroupe tous les liens utiles pour votre parcours Da
 |-------|---------|------|
 | **DB Fiddle** | PostgreSQL, MySQL, SQLite | [db-fiddle.com](https://www.db-fiddle.com/) |
 | **SQL Fiddle** | Multi-DB | [sqlfiddle.com](http://sqlfiddle.com/) |
+| **DuckDB Shell** | DuckDB en ligne | [shell.duckdb.org](https://shell.duckdb.org/) |
 | **Mode SQL Tutorial** | Cours interactif | [mode.com/sql-tutorial](https://mode.com/sql-tutorial/) |
 | **SQLZoo** | Tutoriels progressifs | [sqlzoo.net](https://sqlzoo.net/) |
 
@@ -194,6 +214,7 @@ Bookmark cette page ! Elle regroupe tous les liens utiles pour votre parcours Da
 | **Databricks Blog** | Spark, Delta, Lakehouse | [databricks.com/blog](https://www.databricks.com/blog) |
 | **Confluent Blog** | Kafka, Streaming | [confluent.io/blog](https://www.confluent.io/blog/) |
 | **dbt Blog** | Analytics Engineering | [getdbt.com/blog](https://www.getdbt.com/blog/) |
+| **DuckDB Blog** | Analytique in-process | [duckdb.org/news](https://duckdb.org/news/) |
 | **Start Data Engineering** | Tutoriels pratiques | [startdataengineering.com](https://www.startdataengineering.com/) |
 | **Martin Fowler** | Architecture | [martinfowler.com](https://martinfowler.com/) |
 
@@ -279,10 +300,12 @@ Bookmark cette page ! Elle regroupe tous les liens utiles pour votre parcours Da
 │   ├── kafka.apache.org/documentation  
 │   ├── docs.delta.io
 │   ├── docs.getdbt.com
+│   ├── duckdb.org/docs
 │   └── kubernetes.io/docs
 │
 ├── 📁 Playgrounds/
 │   ├── community.cloud.databricks.com (Spark gratuit)
+│   ├── shell.duckdb.org (DuckDB en ligne)
 │   ├── db-fiddle.com (SQL)
 │   └── killercoda.com (K8s)
 │

@@ -294,7 +294,7 @@ Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de 
 ## 👨‍💻 Auteur
 
 <p align="center">
-  <strong>Beerus SAMA</strong>
+  <strong>DIAKITE YOUSSOUF</strong>
   <br>
   Data Engineer
 </p>
