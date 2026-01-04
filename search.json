@@ -5975,21 +5975,21 @@
     "href": "resources/documentation.html#python-data-processing",
     "title": "📖 Documentation",
     "section": "🐍 Python & Data Processing",
-    "text": "🐍 Python & Data Processing\n\n\n\nTechnologie\nDocumentation\nModule associé\n\n\n\n\nPython\ndocs.python.org\n04 - Python Fondamental\n\n\nPandas\npandas.pydata.org/docs\n05 - Python Data Processing\n\n\nNumPy\nnumpy.org/doc\n05 - Python Data Processing"
+    "text": "🐍 Python & Data Processing\n\n\n\nTechnologie\nDocumentation\nModule associé\n\n\n\n\nPython\ndocs.python.org\n04 - Python Fondamental\n\n\nPandas\npandas.pydata.org/docs\n05 - Python Data Processing\n\n\nNumPy\nnumpy.org/doc\n05 - Python Data Processing\n\n\nBeautifulSoup\nbeautiful-soup-4.readthedocs.io\n🎮 Projet Débutant"
   },
   {
     "objectID": "resources/documentation.html#bases-de-données-sql",
     "href": "resources/documentation.html#bases-de-données-sql",
     "title": "📖 Documentation",
     "section": "🗄️ Bases de Données & SQL",
-    "text": "🗄️ Bases de Données & SQL\n\n\n\nTechnologie\nDocumentation\nModule associé\n\n\n\n\nPostgreSQL\npostgresql.org/docs\n06 - Intro BDD\n\n\nSQL Tutorial\nw3schools.com/sql\n07 - SQL\n\n\nMongoDB\nmongodb.com/docs\n09 - MongoDB\n\n\nElasticsearch\nelastic.co/guide\n10 - Elasticsearch"
+    "text": "🗄️ Bases de Données & SQL\n\n\n\nTechnologie\nDocumentation\nModule associé\n\n\n\n\nPostgreSQL\npostgresql.org/docs\n06 - Intro BDD\n\n\nSQL Tutorial\nw3schools.com/sql\n07 - SQL\n\n\nDuckDB\nduckdb.org/docs\n🎮 Projet Débutant\n\n\nMongoDB\nmongodb.com/docs\n09 - MongoDB\n\n\nElasticsearch\nelastic.co/guide\n10 - Elasticsearch"
   },
   {
     "objectID": "resources/documentation.html#outils-fondamentaux",
     "href": "resources/documentation.html#outils-fondamentaux",
     "title": "📖 Documentation",
     "section": "🔧 Outils Fondamentaux",
-    "text": "🔧 Outils Fondamentaux\n\n\n\nTechnologie\nDocumentation\nModule associé\n\n\n\n\nGit\ngit-scm.com/doc\n03 - Git & Versioning\n\n\nBash\ngnu.org/software/bash/manual\n02 - Linux & Bash\n\n\nFastAPI\nfastapi.tiangolo.com\n13 - FastAPI"
+    "text": "🔧 Outils Fondamentaux\n\n\n\nTechnologie\nDocumentation\nModule associé\n\n\n\n\nGit\ngit-scm.com/doc\n03 - Git & Versioning\n\n\nBash\ngnu.org/software/bash/manual\n02 - Linux & Bash\n\n\nFastAPI\nfastapi.tiangolo.com\n13 - FastAPI\n\n\nStreamlit\ndocs.streamlit.io\n🎮 Projet Débutant"
   },
   {
     "objectID": "resources/documentation.html#introduction-spark",
@@ -6066,7 +6066,7 @@
     "href": "resources/documentation.html#messaging-distribué",
     "title": "📖 Documentation",
     "section": "📨 Messaging Distribué",
-    "text": "📨 Messaging Distribué\n\n\n\nTechnologie\nDocumentation\nModule associé\n\n\n\n\nKafka Internals\nkafka.apache.org/documentation/#design\n29 - Distributed Messaging\n\n\nApache Pulsar\npulsar.apache.org/docs\n29 - Distributed Messaging\n\n\nRabbitMQ\nrabbitmq.com/documentation\n29 - Distributed Messaging\n\n\nDebezium\ndebezium.io/documentation\n29 - Distributed Messaging"
+    "text": "📨 Messaging Distribué\n\n\n\nTechnologie\nDocumentation\nModule associé\n\n\n\n\nApache Pulsar\npulsar.apache.org/docs\n29 - Distributed Messaging\n\n\nRabbitMQ\nrabbitmq.com/documentation\n29 - Distributed Messaging\n\n\nDebezium\ndebezium.io/documentation\n29 - Distributed Messaging"
   },
   {
     "objectID": "resources/documentation.html#spark-scala",
@@ -6122,7 +6122,7 @@
     "href": "resources/documentation.html#blogs-newsletters",
     "title": "📖 Documentation",
     "section": "📝 Blogs & Newsletters",
-    "text": "📝 Blogs & Newsletters\n\n\n\nRessource\nFocus\nFréquence\n\n\n\n\nDatabricks Blog\nSpark, Delta Lake, Lakehouse\nHebdo\n\n\nConfluent Blog\nKafka, Streaming\nHebdo\n\n\ndbt Blog\nAnalytics Engineering\nHebdo\n\n\nData Engineering Weekly\nNewsletter DE\nHebdo\n\n\nSeattle Data Guy\nCarrière, tutoriels\nHebdo\n\n\nStart Data Engineering\nTutoriels pratiques\nMensuel"
+    "text": "📝 Blogs & Newsletters\n\n\n\nRessource\nFocus\nFréquence\n\n\n\n\nDatabricks Blog\nSpark, Delta Lake, Lakehouse\nHebdo\n\n\nConfluent Blog\nKafka, Streaming\nHebdo\n\n\ndbt Blog\nAnalytics Engineering\nHebdo\n\n\nDuckDB Blog\nAnalytique in-process\nMensuel\n\n\nData Engineering Weekly\nNewsletter DE\nHebdo\n\n\nSeattle Data Guy\nCarrière, tutoriels\nHebdo\n\n\nStart Data Engineering\nTutoriels pratiques\nMensuel"
   },
   {
     "objectID": "resources/documentation.html#ides-outils",
@@ -6153,6 +6153,20 @@
     "text": "IDEs & Éditeurs\n\n\n\nOutil\nUsage\nGratuit\nLien\n\n\n\n\nVS Code\nIDE polyvalent (recommandé)\n✅\ncode.visualstudio.com\n\n\nPyCharm\nIDE Python\n✅ Community\njetbrains.com/pycharm\n\n\nIntelliJ IDEA\nIDE Scala/Java\n✅ Community\njetbrains.com/idea\n\n\nDataGrip\nIDE SQL puissant\n30j trial\njetbrains.com/datagrip\n\n\nDBeaver\nClient SQL universel\n✅\ndbeaver.io\n\n\nPostman\nTest d’API REST\n✅\npostman.com"
   },
   {
+    "objectID": "resources/links.html#bases-de-données-analytiques",
+    "href": "resources/links.html#bases-de-données-analytiques",
+    "title": "🔗 Liens Utiles",
+    "section": "Bases de Données Analytiques",
+    "text": "Bases de Données Analytiques\n\n\n\nOutil\nDescription\nGratuit\nLien\n\n\n\n\nDuckDB\nBase SQL analytique in-process\n✅\nduckdb.org\n\n\nSQLite\nBase SQL embarquée\n✅\nsqlite.org\n\n\nClickHouse\nOLAP temps réel\n✅\nclickhouse.com"
+  },
+  {
+    "objectID": "resources/links.html#dashboards-visualisation",
+    "href": "resources/links.html#dashboards-visualisation",
+    "title": "🔗 Liens Utiles",
+    "section": "Dashboards & Visualisation",
+    "text": "Dashboards & Visualisation\n\n\n\nOutil\nDescription\nGratuit\nLien\n\n\n\n\nStreamlit\nDashboards Python (recommandé)\n✅\nstreamlit.io\n\n\nGradio\nUI ML rapide\n✅\ngradio.app\n\n\nApache Superset\nBI open source\n✅\nsuperset.apache.org\n\n\nMetabase\nBI simple\n✅\nmetabase.com\n\n\nPlotly Dash\nDashboards interactifs\n✅\ndash.plotly.com"
+  },
+  {
     "objectID": "resources/links.html#terminal-shell",
     "href": "resources/links.html#terminal-shell",
     "title": "🔗 Liens Utiles",
@@ -6171,7 +6185,7 @@
     "href": "resources/links.html#datasets-du-bootcamp",
     "title": "🔗 Liens Utiles",
     "section": "Datasets du Bootcamp",
-    "text": "Datasets du Bootcamp\n\n\n\nDataset\nUtilisé dans\nLien\n\n\n\n\nOlist E-commerce\nProjet Intermédiaire\nkaggle.com/olistbr"
+    "text": "Datasets du Bootcamp\n\n\n\nDataset\nUtilisé dans\nLien\n\n\n\n\nVideo Game Sales\n🎮 Projet Débutant\nkaggle.com/rush4ratio\n\n\nOlist E-commerce\n📦 Projet Intermédiaire\nkaggle.com/olistbr"
   },
   {
     "objectID": "resources/links.html#datasets-populaires",
@@ -6213,7 +6227,7 @@
     "href": "resources/links.html#sql",
     "title": "🔗 Liens Utiles",
     "section": "SQL",
-    "text": "SQL\n\n\n\nOutil\nEngines\nLien\n\n\n\n\nDB Fiddle\nPostgreSQL, MySQL, SQLite\ndb-fiddle.com\n\n\nSQL Fiddle\nMulti-DB\nsqlfiddle.com\n\n\nMode SQL Tutorial\nCours interactif\nmode.com/sql-tutorial\n\n\nSQLZoo\nTutoriels progressifs\nsqlzoo.net"
+    "text": "SQL\n\n\n\nOutil\nEngines\nLien\n\n\n\n\nDB Fiddle\nPostgreSQL, MySQL, SQLite\ndb-fiddle.com\n\n\nSQL Fiddle\nMulti-DB\nsqlfiddle.com\n\n\nDuckDB Shell\nDuckDB en ligne\nshell.duckdb.org\n\n\nMode SQL Tutorial\nCours interactif\nmode.com/sql-tutorial\n\n\nSQLZoo\nTutoriels progressifs\nsqlzoo.net"
   },
   {
     "objectID": "resources/links.html#python-notebooks",
@@ -6262,7 +6276,7 @@
     "href": "resources/links.html#blogs-techniques",
     "title": "🔗 Liens Utiles",
     "section": "Blogs Techniques",
-    "text": "Blogs Techniques\n\n\n\nBlog\nFocus\nLien\n\n\n\n\nDatabricks Blog\nSpark, Delta, Lakehouse\ndatabricks.com/blog\n\n\nConfluent Blog\nKafka, Streaming\nconfluent.io/blog\n\n\ndbt Blog\nAnalytics Engineering\ngetdbt.com/blog\n\n\nStart Data Engineering\nTutoriels pratiques\nstartdataengineering.com\n\n\nMartin Fowler\nArchitecture\nmartinfowler.com"
+    "text": "Blogs Techniques\n\n\n\nBlog\nFocus\nLien\n\n\n\n\nDatabricks Blog\nSpark, Delta, Lakehouse\ndatabricks.com/blog\n\n\nConfluent Blog\nKafka, Streaming\nconfluent.io/blog\n\n\ndbt Blog\nAnalytics Engineering\ngetdbt.com/blog\n\n\nDuckDB Blog\nAnalytique in-process\nduckdb.org/news\n\n\nStart Data Engineering\nTutoriels pratiques\nstartdataengineering.com\n\n\nMartin Fowler\nArchitecture\nmartinfowler.com"
   },
   {
     "objectID": "resources/links.html#tech-blogs-dentreprises",
