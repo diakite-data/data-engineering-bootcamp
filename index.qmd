@@ -41,7 +41,7 @@ Il vous accompagne de manière progressive vers un niveau **professionnel – Se
 
 | Domaine | Outils & Technologies |
 | :--- | :--- |
-| **Big Data Processing** | PySpark, Spark SQL, Scala, Polars, Dask |
+| **Big Data Processing** | PySpark, Spark SQL, Scala, Polars, Pandas |
 | **Lakehouse** | Delta Lake, Apache Iceberg, Hudi |
 | **Streaming** | Kafka, Spark Streaming, Flink, Debezium CDC |
 | **DevOps / Infra** | Docker, Kubernetes, Helm, ArgoCD, Spark Operator |
@@ -62,7 +62,7 @@ La progression est organisée selon un parcours **pédagogique optimal** :
 # 🟦 Niveau 1 : Débutant – Fondations & Premiers Pipelines
 
 ### 🎯 Objectif  
-Construire des bases solides en Python, SQL, systèmes distribués, modélisation et premiers pipelines.
+Construire des bases solides en Python, SQL, systèmes distribués et premiers pipelines.
 
 ### 📚 Modules
 
@@ -71,18 +71,24 @@ Construire des bases solides en Python, SQL, systèmes distribués, modélisatio
 | 01 | Introduction au Data Engineering | Rôle du DE, écosystème, architectures (Lambda, Kappa, Lakehouse) |
 | 02 | Fondamentaux Linux & Bash | Commandes essentielles, scripting, cron, permissions |
 | 03 | Git & Versioning | Branches, merge, rebase, workflows collaboratifs |
-| 04 | Python pour Data Engineering | Syntaxe, structures, fichiers, exceptions |
-| 05 | Python Avancé | POO, décorateurs, générateurs, context managers |
-| 06 | Packaging & Environnements | venv, pip, pyproject.toml, structure projet |
-| 07 | SQL Fondamental | SELECT, JOIN, agrégations, sous-requêtes |
-| 08 | SQL Avancé | Window functions, CTE, optimisation, indexation |
-| 09 | Modélisation de Données | Normalisation, Star Schema, Data Vault, SCD |
-| 10 | Introduction Big Data | Hadoop, HDFS, MapReduce, écosystème |
+| 04 | Python Fondamental | Syntaxe, structures, fichiers, exceptions |
+| 05 | Python Data Processing | POO, décorateurs, générateurs, context managers |
+| 06 | Introduction BDD Relationnelles | Concepts SGBD, modélisation, normalisation |
+| 07 | SQL pour Data Engineers | Requêtes, jointures, window functions, optimisation |
+| 08 | Introduction Big Data | Hadoop, HDFS, MapReduce, écosystème distribué |
+| 09 | MongoDB pour Data Engineers | NoSQL, CRUD, agrégations, indexation |
+| 10 | Elasticsearch | Recherche full-text, indexation, requêtes DSL |
 | 11 | Introduction PySpark | RDD, DataFrame, transformations, actions |
-| 12 | MongoDB pour Data Engineers | NoSQL, CRUD, agrégations, indexation |
-| 13 | Projet Intégrateur Débutant | Pipeline CSV → Nettoyage → Agrégation → Export |
+| 12 | Orchestration de Pipelines | Concepts, scheduling, dépendances |
+| 13 | **Bonus** : FastAPI | API REST pour exposer vos données |
 
-> **🎯 Résultat :** Capable d'ingérer, transformer et produire un dataset Gold simple.
+### 🎮 Projet Intégrateur : Video Games Analytics Platform
+
+> **Pipeline complet** : Kaggle CSV → Web Scraping → DuckDB + Elasticsearch → PySpark → FastAPI → Streamlit Dashboard
+>
+> [🚀 Accéder au projet](notebooks/beginner/14_projet_integrateur_debutant.ipynb)
+
+> **🎯 Résultat :** Capable de construire un pipeline data de bout en bout, de l'ingestion au dashboard.
 
 ---
 
@@ -99,15 +105,20 @@ Maîtriser les technologies indispensables en entreprise : Docker, Kubernetes, S
 | 15 | Kubernetes Fondamentaux | Pods, Deployments, Services, ConfigMaps, Secrets |
 | 16 | K8s pour Data Workloads | StatefulSets, Jobs, CronJobs, volumes persistants |
 | 17 | Polars pour Data Engineering | API Polars, lazy evaluation, vs Pandas/Spark |
-| 18 | High Performance Python | Profiling, optimisation, multiprocessing, Cython |
+| 18 | High Performance Python | Profiling, optimisation, multiprocessing, async |
 | 19 | PySpark Avancé | Partitioning, caching, broadcast, UDF, optimisation |
 | 20 | Spark SQL Deep Dive | Catalyst, plans d'exécution, tuning, adaptive query |
 | 21 | Spark on Kubernetes | Spark Operator, SparkApplication, scaling, monitoring |
 | 22 | Cloud Object Storage | S3, GCS, Azure Blob, MinIO, IAM, performances |
-| 23 | Table Formats (Delta, Iceberg, Hudi) | ACID, Time Travel, Schema Evolution, MERGE INTO |
+| 23 | Table Formats (Delta, Iceberg) | ACID, Time Travel, Schema Evolution, MERGE INTO |
 | 24 | Kafka & Streaming | Producers, Consumers, Topics, Partitions, Consumer Groups |
 | 25 | dbt & Data Quality | Models, Tests, Documentation, Great Expectations |
-| 26 | Projet Intégrateur Intermédiaire | Pipeline Kafka → Spark → Delta Lake → dbt (Dataset Olist) |
+
+### 📦 Projet Intégrateur : Pipeline E-commerce Olist
+
+> **Pipeline Lakehouse** : Kafka → Spark Streaming → Delta Lake → dbt → Dashboard
+>
+> [🚀 Accéder au projet](notebooks/intermediate/26_projet_integrateur.ipynb)
 
 > **🎯 Résultat :** Déployer un job Spark sur Kubernetes, stocker en Delta, orchestrer & monitorer.
 
@@ -145,15 +156,15 @@ Atteindre le niveau "Senior Data Engineer / Architecte Data" avec une maîtrise 
 │   🟦 NIVEAU 1 : DÉBUTANT                                                    │
 │   ════════════════════════                                                  │
 │   Modules 01-13                                                             │
-│   Python → SQL → Big Data → PySpark → MongoDB                               │
-│   📦 Projet : Pipeline simple                                               │
+│   Python → SQL → Big Data → PySpark → MongoDB → Elasticsearch              │
+│   🎮 Projet : Video Games Analytics Platform                                │
 │                          │                                                  │
 │                          ▼                                                  │
 │   🟩 NIVEAU 2 : INTERMÉDIAIRE                                               │
 │   ════════════════════════════                                              │
-│   Modules 14-26                                                             │
+│   Modules 14-25                                                             │
 │   Docker → K8s → Spark avancé → Lakehouse → Streaming → dbt                 │
-│   📦 Projet : Pipeline E-commerce (Olist)                                   │
+│   📦 Projet : Pipeline E-commerce Olist                                     │
 │                          │                                                  │
 │                          ▼                                                  │
 │   🟥 NIVEAU 3 : AVANCÉ                                                      │
@@ -161,7 +172,6 @@ Atteindre le niveau "Senior Data Engineer / Architecte Data" avec une maîtrise 
 │   Modules 27-35                                                             │
 │   K8s Deep Dive → Orchestration → Messaging → Spark/Scala → ML             │
 │   Architecture → Data Mesh → OLAP → Leadership                              │
-│   📦 Projet : Plateforme Data Multi-tenant                                  │
 │                                                                             │
 │                          ▼                                                  │
 │                    🏆 SENIOR READY                                          │
