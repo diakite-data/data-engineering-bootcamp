@@ -596,38 +596,39 @@ select:focus-visible {
 .sidebar-toggle-btn {
   position: fixed !important;
   top: 70px !important;
-  left: 290px !important;
+  left: 255px !important;
   z-index: 1050 !important;
-  width: 40px !important;
-  height: 40px !important;
-  background: var(--bg-primary) !important;
-  color: var(--sky-600) !important;
-  border: 2px solid var(--sky-500) !important;
-  border-radius: var(--radius-md) !important;
-  font-size: 1.25rem !important;
+  width: 28px !important;
+  height: 28px !important;
+  background: var(--bg-secondary) !important;
+  color: var(--text-tertiary) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 6px !important;
+  font-size: 0.75rem !important;
   cursor: pointer !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  box-shadow: var(--shadow-lg) !important;
+  box-shadow: var(--shadow-sm) !important;
   transition: all var(--transition-base) !important;
+  opacity: 0.7;
 }
 
 .sidebar-toggle-btn:hover {
-  background: var(--sky-500) !important;
-  color: white !important;
-  transform: scale(1.05);
-  box-shadow: var(--shadow-xl), var(--shadow-sky) !important;
+  background: var(--bg-tertiary) !important;
+  color: var(--text-secondary) !important;
+  opacity: 1;
+  box-shadow: var(--shadow-md) !important;
 }
 
 .sidebar-toggle-btn:focus-visible {
-  box-shadow: var(--shadow-lg), var(--focus-ring) !important;
+  box-shadow: var(--shadow-sm), var(--focus-ring) !important;
 }
 
 /* Icon animation */
 .sidebar-toggle-btn .toggle-icon {
-  width: 18px !important;
-  height: 14px !important;
+  width: 12px !important;
+  height: 10px !important;
   display: flex !important;
   flex-direction: column !important;
   justify-content: space-between !important;
@@ -636,7 +637,7 @@ select:focus-visible {
 .sidebar-toggle-btn .toggle-icon span {
   display: block !important;
   width: 100% !important;
-  height: 2px !important;
+  height: 1.5px !important;
   background: currentColor !important;
   border-radius: var(--radius-full) !important;
   transition: all var(--transition-fast) !important;
@@ -644,7 +645,7 @@ select:focus-visible {
 
 /* Collapsed state - X icon */
 body.sidebar-collapsed .sidebar-toggle-btn .toggle-icon span:nth-child(1) {
-  transform: rotate(45deg) translate(4px, 4px);
+  transform: rotate(45deg) translate(3px, 3px);
 }
 
 body.sidebar-collapsed .sidebar-toggle-btn .toggle-icon span:nth-child(2) {
@@ -652,12 +653,12 @@ body.sidebar-collapsed .sidebar-toggle-btn .toggle-icon span:nth-child(2) {
 }
 
 body.sidebar-collapsed .sidebar-toggle-btn .toggle-icon span:nth-child(3) {
-  transform: rotate(-45deg) translate(4px, -4px);
+  transform: rotate(-45deg) translate(3px, -3px);
 }
 
 /* Button position when collapsed */
 body.sidebar-collapsed .sidebar-toggle-btn {
-  left: 15px !important;
+  left: 10px !important;
 }
 
 /* Sidebar transition */
