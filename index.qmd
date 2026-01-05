@@ -86,7 +86,7 @@ Construire des bases solides en Python, SQL, systèmes distribués et premiers p
 
 > **Pipeline complet** : Kaggle CSV → Web Scraping → DuckDB + Elasticsearch → PySpark → FastAPI → Streamlit Dashboard
 >
-> [🚀 Accéder au projet](notebooks/beginner/14_projet_integrateur_debutant.ipynb)
+> [🚀 Accéder au projet](notebooks/beginner/projet_debutant.ipynb)
 
 > **🎯 Résultat :** Capable de construire un pipeline data de bout en bout, de l'ingestion au dashboard.
 
