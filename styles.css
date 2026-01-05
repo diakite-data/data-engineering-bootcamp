@@ -594,52 +594,52 @@ select:focus-visible {
 -------------------------------------------------- */
 
 .sidebar-toggle-btn {
-  position: fixed;
-  top: 80px;
-  left: 15px;
-  z-index: 1050;
-  width: 44px;
-  height: 44px;
-  background: var(--bg-primary);
-  color: var(--sky-600);
-  border: 2px solid var(--sky-500);
-  border-radius: var(--radius-md);
-  font-size: 1.25rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: var(--shadow-lg);
-  transition: all var(--transition-base);
+  position: fixed !important;
+  top: 70px !important;
+  left: 290px !important;
+  z-index: 1050 !important;
+  width: 40px !important;
+  height: 40px !important;
+  background: var(--bg-primary) !important;
+  color: var(--sky-600) !important;
+  border: 2px solid var(--sky-500) !important;
+  border-radius: var(--radius-md) !important;
+  font-size: 1.25rem !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: var(--shadow-lg) !important;
+  transition: all var(--transition-base) !important;
 }
 
 .sidebar-toggle-btn:hover {
-  background: var(--sky-500);
-  color: white;
+  background: var(--sky-500) !important;
+  color: white !important;
   transform: scale(1.05);
-  box-shadow: var(--shadow-xl), var(--shadow-sky);
+  box-shadow: var(--shadow-xl), var(--shadow-sky) !important;
 }
 
 .sidebar-toggle-btn:focus-visible {
-  box-shadow: var(--shadow-lg), var(--focus-ring);
+  box-shadow: var(--shadow-lg), var(--focus-ring) !important;
 }
 
 /* Icon animation */
 .sidebar-toggle-btn .toggle-icon {
-  width: 20px;
-  height: 14px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  width: 18px !important;
+  height: 14px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
 }
 
 .sidebar-toggle-btn .toggle-icon span {
-  display: block;
-  width: 100%;
-  height: 2px;
-  background: currentColor;
-  border-radius: var(--radius-full);
-  transition: all var(--transition-fast);
+  display: block !important;
+  width: 100% !important;
+  height: 2px !important;
+  background: currentColor !important;
+  border-radius: var(--radius-full) !important;
+  transition: all var(--transition-fast) !important;
 }
 
 /* Collapsed state - X icon */
@@ -655,9 +655,9 @@ body.sidebar-collapsed .sidebar-toggle-btn .toggle-icon span:nth-child(3) {
   transform: rotate(-45deg) translate(4px, -4px);
 }
 
-/* Move button when sidebar is visible */
-body:not(.sidebar-collapsed) .sidebar-toggle-btn {
-  left: calc(var(--sidebar-width) + 15px);
+/* Button position when collapsed */
+body.sidebar-collapsed .sidebar-toggle-btn {
+  left: 15px !important;
 }
 
 /* Sidebar transition */
@@ -691,15 +691,10 @@ body.sidebar-collapsed #quarto-content main {
   padding: 0 2rem;
 }
 
-/* Button position when collapsed */
-body.sidebar-collapsed .sidebar-toggle-btn {
-  left: 15px;
-}
-
 /* Hide on mobile - sidebar already toggles differently */
 @media (max-width: 991px) {
   .sidebar-toggle-btn {
-    display: none;
+    display: none !important;
   }
 }
 
