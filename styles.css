@@ -3,13 +3,14 @@
 /* ==================================================
    🚀 BOOTCAMP DATA ENGINEERING - PREMIUM STYLESHEET
    From Zero to Hero - Orange & Sky Blue Theme
-   Version 3.0 - Enhanced Edition
+   Version 3.1 - Enhanced Edition + Sidebar Toggle
    
-   Améliorations v3.0 :
+   Améliorations v3.1 :
    ✅ Mode sombre automatique
    ✅ États de focus accessibles (WCAG 2.1)
    ✅ Indicateur de progression de lecture
    ✅ Bouton retour en haut
+   ✅ Bouton toggle sidebar (NEW)
    ================================================== */
 
 /*-- scss:rules --*/
@@ -118,6 +119,9 @@
   --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
   --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Sidebar width for toggle */
+  --sidebar-width: 280px;
 }
 
 /* --------------------------------------------------
@@ -313,6 +317,19 @@
   
   .back-to-top:hover {
     background: var(--sky-600) !important;
+    border-color: var(--sky-600) !important;
+  }
+  
+  /* Sidebar toggle dark mode */
+  .sidebar-toggle-btn {
+    background: var(--bg-secondary) !important;
+    color: var(--sky-400) !important;
+    border-color: var(--border-color) !important;
+  }
+  
+  .sidebar-toggle-btn:hover {
+    background: var(--sky-600) !important;
+    color: white !important;
     border-color: var(--sky-600) !important;
   }
   
@@ -569,6 +586,120 @@ select:focus-visible {
     right: 20px;
     width: 44px;
     height: 44px;
+  }
+}
+
+/* --------------------------------------------------
+   🔀 SIDEBAR TOGGLE BUTTON (NEW)
+-------------------------------------------------- */
+
+.sidebar-toggle-btn {
+  position: fixed;
+  top: 80px;
+  left: 15px;
+  z-index: 1050;
+  width: 44px;
+  height: 44px;
+  background: var(--bg-primary);
+  color: var(--sky-600);
+  border: 2px solid var(--sky-500);
+  border-radius: var(--radius-md);
+  font-size: 1.25rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+  transition: all var(--transition-base);
+}
+
+.sidebar-toggle-btn:hover {
+  background: var(--sky-500);
+  color: white;
+  transform: scale(1.05);
+  box-shadow: var(--shadow-xl), var(--shadow-sky);
+}
+
+.sidebar-toggle-btn:focus-visible {
+  box-shadow: var(--shadow-lg), var(--focus-ring);
+}
+
+/* Icon animation */
+.sidebar-toggle-btn .toggle-icon {
+  width: 20px;
+  height: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar-toggle-btn .toggle-icon span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: currentColor;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+}
+
+/* Collapsed state - X icon */
+body.sidebar-collapsed .sidebar-toggle-btn .toggle-icon span:nth-child(1) {
+  transform: rotate(45deg) translate(4px, 4px);
+}
+
+body.sidebar-collapsed .sidebar-toggle-btn .toggle-icon span:nth-child(2) {
+  opacity: 0;
+}
+
+body.sidebar-collapsed .sidebar-toggle-btn .toggle-icon span:nth-child(3) {
+  transform: rotate(-45deg) translate(4px, -4px);
+}
+
+/* Move button when sidebar is visible */
+body:not(.sidebar-collapsed) .sidebar-toggle-btn {
+  left: calc(var(--sidebar-width) + 15px);
+}
+
+/* Sidebar transition */
+#quarto-sidebar,
+.sidebar {
+  transition: transform var(--transition-base), opacity var(--transition-base), width var(--transition-base);
+}
+
+/* Sidebar collapsed state */
+body.sidebar-collapsed #quarto-sidebar,
+body.sidebar-collapsed .sidebar {
+  transform: translateX(-100%);
+  opacity: 0;
+  pointer-events: none;
+  width: 0 !important;
+  min-width: 0 !important;
+}
+
+/* Content expansion when sidebar collapsed */
+body.sidebar-collapsed #quarto-content {
+  margin-left: 0 !important;
+}
+
+body.sidebar-collapsed .page-columns .content {
+  grid-column: page-start / page-end !important;
+}
+
+body.sidebar-collapsed #quarto-content main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Button position when collapsed */
+body.sidebar-collapsed .sidebar-toggle-btn {
+  left: 15px;
+}
+
+/* Hide on mobile - sidebar already toggles differently */
+@media (max-width: 991px) {
+  .sidebar-toggle-btn {
+    display: none;
   }
 }
 
@@ -1440,7 +1571,8 @@ footer a:hover {
   .code-copy-button,
   .code-fold-btn,
   .reading-progress,
-  .back-to-top {
+  .back-to-top,
+  .sidebar-toggle-btn {
     display: none !important;
   }
   

@@ -48,17 +48,6 @@ website:
     creator: "@diakite_data"
     site: "@diakite_data"
   
-  # Google Analytics (optionnel)
-  # google-analytics: "G-XXXXXXXXXX"
-  
-  # Page 404 personnalisée
-  # 404:
-  #   title: "🔍 Page non trouvée"
-  #   body: |
-  #     La page que vous recherchez n'existe pas ou a été déplacée.
-  #     
-  #     [🏠 Retour à l'accueil](/)
-  
   # Page Footer
   page-footer:
     left: |
@@ -181,8 +170,8 @@ website:
                 href: notebooks/beginner/13_fastapi_for_data_engineers.ipynb
           
           - text: "---"
-          - text: "📦 **Projet Débutant**"
-            href: notebooks/beginner/projet_debutant.ipynb
+          - text: "🎮 **Projet Débutant**"
+            href: notebooks/beginner/14_projet_integrateur_debutant.ipynb
 
       # =========================================================================
       # 🟩 NIVEAU 2 : INTERMÉDIAIRE
@@ -227,12 +216,8 @@ website:
           
           - section: "🔧 Industrialisation"
             contents:
-              #- text: "26 · Orchestration Airflow"
-               # href: notebooks/intermediate/26_airflow_orchestration.ipynb
               - text: "25 · dbt & Data Quality"
                 href: notebooks/intermediate/25_dbt_data_quality.ipynb
-             # - text: "28 · CI/CD pour Data Pipelines"
-             #   href: notebooks/intermediate/28_cicd_data_pipelines.ipynb
           
           - text: "---"
           - text: "📦 **Projet Intermédiaire** (Olist)"
@@ -276,26 +261,6 @@ website:
             contents:
               - text: "35 · Leadership & Trade-offs"
                 href: notebooks/advanced/35_leadership_tradeoffs.ipynb
-          
-          #- text: "---"
-          #- text: "📦 **Projet Avancé**"
-          #  href: notebooks/advanced/projet_avance.ipynb
-
-      # =========================================================================
-      # 📚 RESSOURCES
-      # =========================================================================
-      # - text: "---"
-      # - section: "📚 Ressources"
-      #   contents:
-      #      - text: "🔧 Setup Environnement"
-      #        href: resources/setup.qmd
-      #      - text: "📖 Documentation"
-      #        href: resources/documentation.qmd
-      #      - text: "❓ FAQ"
-      #        href: resources/faq.qmd
-      #      - text: "🔗 Liens Utiles"
-      #        href: resources/links.qmd
-
 
   # ---------------------------------------------------------------------------
   # 🔍 SEARCH
@@ -376,14 +341,15 @@ format:
           <meta name="robots" content="index, follow">
           <link rel="canonical" href="https://diakite-data.github.io/data-engineering-bootcamp">
     
-    # Include - After Body (Reading progress only - back-to-top handled by Quarto)
+    # Include - After Body (Reading progress + Sidebar toggle)
     include-after-body:
       - text: |
           <!-- Reading Progress Indicator -->
           <div class="reading-progress" aria-hidden="true"></div>
           
-          <!-- UI Enhancement Script -->
+          <!-- UI Enhancement Scripts -->
           <script src="/bootcamp-ui.js"></script>
+          <script src="/sidebar-toggle.js"></script>
 
 # ==============================================================================
 # 📓 JUPYTER / NOTEBOOKS
@@ -408,6 +374,7 @@ metadata-files:
 resources:
   - assets/images/**
   - assets/data/**
+  - sidebar-toggle.js
   - notebooks/**/*.csv
   - notebooks/**/*.json
   - notebooks/**/*.parquet
