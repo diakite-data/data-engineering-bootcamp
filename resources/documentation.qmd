@@ -19,7 +19,7 @@ Cette page liste les documentations officielles organisées par niveau du bootca
 | **Python** | [docs.python.org](https://docs.python.org/3/) | [04 - Python Fondamental](../notebooks/beginner/04_python_basics_for_data_engineers.ipynb) |
 | **Pandas** | [pandas.pydata.org/docs](https://pandas.pydata.org/docs/) | [05 - Python Data Processing](../notebooks/beginner/05_python_data_processing_for_data_engineers.ipynb) |
 | **NumPy** | [numpy.org/doc](https://numpy.org/doc/) | [05 - Python Data Processing](../notebooks/beginner/05_python_data_processing_for_data_engineers.ipynb) |
-| **BeautifulSoup** | [beautiful-soup-4.readthedocs.io](https://beautiful-soup-4.readthedocs.io/) | [🎮 Projet Débutant](../notebooks/beginner/14_projet_integrateur_debutant.ipynb) |
+| **BeautifulSoup** | [beautiful-soup-4.readthedocs.io](https://beautiful-soup-4.readthedocs.io/) | [🎮 Projet Débutant](../notebooks/beginner/projet_debutant.ipynb) |
 
 ## 🗄️ Bases de Données & SQL
 
@@ -27,7 +27,7 @@ Cette page liste les documentations officielles organisées par niveau du bootca
 |-------------|---------------|----------------|
 | **PostgreSQL** | [postgresql.org/docs](https://www.postgresql.org/docs/) | [06 - Intro BDD](../notebooks/beginner/06_intro_relational_databases.ipynb) |
 | **SQL Tutorial** | [w3schools.com/sql](https://www.w3schools.com/sql/) | [07 - SQL](../notebooks/beginner/07_sql_for_data_engineers.ipynb) |
-| **DuckDB** | [duckdb.org/docs](https://duckdb.org/docs/) | [🎮 Projet Débutant](../notebooks/beginner/14_projet_integrateur_debutant.ipynb) |
+| **DuckDB** | [duckdb.org/docs](https://duckdb.org/docs/) | [🎮 Projet Débutant](../notebooks/beginner/projet_debutant.ipynb) |
 | **MongoDB** | [mongodb.com/docs](https://www.mongodb.com/docs/) | [09 - MongoDB](../notebooks/beginner/09_mongodb_for_data_engineers.ipynb) |
 | **Elasticsearch** | [elastic.co/guide](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html) | [10 - Elasticsearch](../notebooks/beginner/10_elasticsearch_for_data_engineers.ipynb) |
 
@@ -38,7 +38,7 @@ Cette page liste les documentations officielles organisées par niveau du bootca
 | **Git** | [git-scm.com/doc](https://git-scm.com/doc) | [03 - Git & Versioning](../notebooks/beginner/03_git_for_data_engineers.ipynb) |
 | **Bash** | [gnu.org/software/bash/manual](https://www.gnu.org/software/bash/manual/) | [02 - Linux & Bash](../notebooks/beginner/02_bash_for_data_engineers.ipynb) |
 | **FastAPI** | [fastapi.tiangolo.com](https://fastapi.tiangolo.com/) | [13 - FastAPI](../notebooks/beginner/13_fastapi_for_data_engineers.ipynb) |
-| **Streamlit** | [docs.streamlit.io](https://docs.streamlit.io/) | [🎮 Projet Débutant](../notebooks/beginner/14_projet_integrateur_debutant.ipynb) |
+| **Streamlit** | [docs.streamlit.io](https://docs.streamlit.io/) | [🎮 Projet Débutant](../notebooks/beginner/projet_debutant.ipynb) |
 
 ## ⚡ Introduction Spark
 
