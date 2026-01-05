@@ -56,7 +56,7 @@ Aucun prérequis technique. Une curiosité pour les données et une motivation �
 
 > **Pipeline complet** : Kaggle CSV → Web Scraping → DuckDB + Elasticsearch → PySpark → FastAPI → Streamlit Dashboard
 >
-> [🚀 Accéder au projet](notebooks/beginner/14_projet_integrateur_debutant.ipynb)
+> [🚀 Accéder au projet](notebooks/beginner/projet_debutant.ipynb)
 
 **Ce que vous allez construire :**
 
