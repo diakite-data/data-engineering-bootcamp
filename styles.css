@@ -595,7 +595,7 @@ select:focus-visible {
 
 .sidebar-toggle-btn {
   position: fixed !important;
-  top: 70px !important;
+  top: 120px !important;
   left: 255px !important;
   z-index: 1050 !important;
   width: 28px !important;
