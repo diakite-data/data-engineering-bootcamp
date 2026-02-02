@@ -1,15 +1,12 @@
 [build]
-  command = "quarto render"
   publish = "_site"
+  command = """
+    wget -q https://github.com/quarto-dev/quarto-cli/releases/download/v1.4.549/quarto-1.4.549-linux-amd64.tar.gz && \
+    mkdir -p /opt/build/repo/.quarto && \
+    tar -xzf quarto-1.4.549-linux-amd64.tar.gz -C /opt/build/repo/.quarto && \
+    export PATH="/opt/build/repo/.quarto/quarto-1.4.549/bin:$PATH" && \
+    quarto render
+  """
 
 [build.environment]
-  QUARTO_VERSION = "1.4.549"
-
-[context.production]
-  command = "wget https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.deb && sudo dpkg -i quarto-${QUARTO_VERSION}-linux-amd64.deb && quarto render"
-
-[context.deploy-preview]
-  command = "wget https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.deb && sudo dpkg -i quarto-${QUARTO_VERSION}-linux-amd64.deb && quarto render"
-
-[context.branch-deploy]
-  command = "wget https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.deb && sudo dpkg -i quarto-${QUARTO_VERSION}-linux-amd64.deb && quarto render"
+  NODE_VERSION = "18"
