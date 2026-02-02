@@ -887,6 +887,37 @@ pre code {
   overflow-x: auto;
 }
 
+/* ==================================================
+   🌐 GOOGLE TRANSLATE - Force ASCII diagram translation
+   À ajouter dans ton styles.css après la section CODE BLOCKS
+   ================================================== */
+
+/* Force Google Translate to translate ASCII diagrams in <pre> blocks */
+pre:not(.sourceCode):not([class*="language-"]) {
+  translate: yes !important;
+}
+
+/* Prevent translation of actual source code */
+.sourceCode,
+pre.sourceCode,
+pre[class*="language-"],
+.cell-code pre {
+  translate: no !important;
+}
+
+/* Force translation for code elements outside sourceCode blocks (inline code, diagrams) */
+code:not(.sourceCode *):not([class*="language-"]) {
+  translate: yes !important;
+}
+
+/* Ensure sourceCode content is never translated */
+.sourceCode code,
+.sourceCode *,
+pre[class*="language-"] code,
+pre[class*="language-"] * {
+  translate: no !important;
+}
+
 /* --------------------------------------------------
    NAVBAR - Sky Blue dominant
 -------------------------------------------------- */
