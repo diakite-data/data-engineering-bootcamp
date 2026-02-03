@@ -109,7 +109,7 @@ website:
           - text: "🏢 Formation Corporate"
             href: corporate.qmd
       - text: "💬 Communauté"
-        href: https://t.me/tongroupe
+        href: https://t.me/fromzerotoherodataeng
         aria-label: "Rejoindre le groupe Telegram"
     
     right:
