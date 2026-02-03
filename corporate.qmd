@@ -1,0 +1,164 @@
+---
+title: "🏢 Formation Corporate"
+description: "Formations Data Engineering sur mesure pour entreprises"
+page-layout: article
+---
+
+## 📚 Formations Data Engineering pour entreprises
+
+Formez vos équipes aux technologies et pratiques modernes du Data Engineering avec des formations adaptées à vos besoins et à votre niveau.
+
+---
+
+## 🎯 Publics cibles
+
+### 👨‍💻 Data Engineers
+
+Montée en compétences sur les technologies modernes du data engineering.
+
+**Exemples de formations :**
+- Architecture lakehouse (Delta Lake, Iceberg)
+- Kafka et streaming temps réel
+- Kubernetes pour data workloads
+- dbt et data quality
+
+---
+
+### 👨‍🔬 Data Scientists / Analysts
+
+Transition vers le Data Engineering ou acquisition de compétences techniques complémentaires.
+
+**Exemples de formations :**
+- Python pour Data Engineers
+- PySpark et traitement distribué
+- Orchestration de pipelines (Airflow)
+- SQL avancé et optimisation
+
+---
+
+### 👔 Managers & Tech Leads
+
+Compréhension des enjeux techniques pour mieux piloter les projets data.
+
+**Exemples de formations :**
+- Vue d'ensemble de l'écosystème data moderne
+- Architecture et décisions techniques
+- Data governance et qualité
+- Stratégie lakehouse et cloud
+
+---
+
+## 📖 Formats disponibles
+
+### 🖥️ Remote
+
+Formation en visioconférence avec sessions interactives, exercices pratiques et support sur plateforme dédiée.
+
+**Avantages :** Flexible, économique, accessible partout
+
+---
+
+### 🏢 Présentiel
+
+Formation dans vos locaux ou en centre de formation avec matériel et environnement technique fournis.
+
+**Avantages :** Immersion totale, team building, personnalisation maximale
+
+**Zones :** Côte d'Ivoire, Afrique de l'Ouest, France (sur demande)
+
+---
+
+### 🎨 Sur mesure
+
+Contenu adapté précisément à votre stack technique, vos projets en cours et vos objectifs.
+
+**Processus :**
+1. Analyse de vos besoins
+2. Définition du programme
+3. Création du contenu personnalisé
+4. Formation et suivi
+
+---
+
+## ⏱️ Durées
+
+Les formations peuvent être organisées selon différents formats :
+
+- **Workshop intensif** : 1-2 jours (introduction à une technologie)
+- **Formation standard** : 3-5 jours (maîtrise d'une technologie)
+- **Programme complet** : 2-4 semaines (plusieurs technologies)
+
+Le format est adapté à vos contraintes et objectifs.
+
+---
+
+## 🛠️ Méthode pédagogique
+
+**80% pratique, 20% théorie**
+
+- ✅ Exercices sur cas réels
+- ✅ Projets fil rouge
+- ✅ Code reviews en live
+- ✅ Best practices et patterns
+- ✅ Support post-formation (1 mois)
+
+**Tous les participants repartent avec :**
+- Accès aux supports de formation
+- Code source des exercices
+- Documentation et ressources
+- Certificat de formation
+
+---
+
+## 💼 Exemples de missions réalisées
+
+**Banque** - Formation PySpark et architecture lakehouse (3 jours, 12 participants)
+
+**Telco** - Workshop Kafka et streaming temps réel (2 jours, 8 participants)
+
+**Startup** - Formation complète Data Engineering (4 semaines, 5 participants)
+
+---
+
+## 📞 Demander un devis
+
+Intéressé par une formation pour votre équipe ?
+
+**Contactez-moi sur LinkedIn** : [linkedin.com/in/diakite-data](https://linkedin.com/in/diakite-data)
+
+Indiquez :
+- Nombre de participants
+- Niveau actuel de l'équipe
+- Objectifs de la formation
+- Technologies souhaitées
+- Format préféré (remote/présentiel)
+- Timeline
+
+Je reviendrai vers vous avec une proposition personnalisée sous 48-72h.
+
+---
+
+## ⚠️ Disponibilité
+
+**Places limitées** - J'accepte un nombre restreint de formations par mois pour garantir la qualité et la personnalisation.
+
+Réservez plusieurs semaines à l'avance pour les formations présentielles.
+
+---
+
+## 🎓 Pourquoi cette formation ?
+
+- ✅ **Contenu à jour** : Basé sur les pratiques et technologies actuelles du marché
+- ✅ **Expérience terrain** : Retours d'expérience concrets de projets en production
+- ✅ **Pédagogie éprouvée** : Créateur du bootcamp From Zero to Hero (1,100+ apprenants)
+- ✅ **Approche pratique** : 80% d'exercices sur cas réels
+- ✅ **Contexte local** : Connaissance des enjeux africains et internationaux
+
+---
+
+*💡 Vous cherchez du consulting individuel ? Consultez l'offre [Consulting Data Engineering](consulting.qmd)*
+
+---
+
+**MAMADOU YOUSSOUF DIAKITE**  
+*Tech Lead Data Engineering @ Orange Côte d'Ivoire*

@@ -51,14 +51,18 @@ website:
   # Page Footer
   page-footer:
     left: |
-      Fait par DIAKITE YOUSSOUF
+      Créé par MAMADOU YOUSSOUF DIAKITE
     center: |
-      © 2026 Bootcamp Data Engineering · From Zero to Hero  
+      © 2026 From Zero to Hero · Bootcamp Data Engineering  
+      Contenu sous licence [CC BY-NC-SA 4.0](LICENSE.md) · Usage commercial interdit  
+      ☕ [Soutenez ce projet](support.qmd) · 💬 [Communauté Telegram](https://t.me/tongroupe)
     right:
       - icon: github
         href: https://github.com/diakite-data/data-engineering-bootcamp
+        aria-label: "Star sur GitHub"
       - icon: linkedin
         href: https://linkedin.com/in/diakite-data
+        aria-label: "LinkedIn"
     border: true
     background: dark
 
@@ -98,9 +102,21 @@ website:
           - text: "---"
           - text: "🔗 Liens Utiles"
             href: resources/links.qmd
+      - text: "💼 Services"
+        menu:
+          - text: "💼 Consulting"
+            href: consulting.qmd
+          - text: "🏢 Formation Corporate"
+            href: corporate.qmd
+      - text: "💬 Communauté"
+        href: https://t.me/tongroupe
+        aria-label: "Rejoindre le groupe Telegram"
     
     right:
       - id: google_translate_element
+      - text: "☕ Soutenir"
+        href: support.qmd
+        aria-label: "Soutenez ce bootcamp gratuit"
       - icon: search
         id: search
       - icon: moon

@@ -1,0 +1,117 @@
+---
+title: "💼 Consulting Data Engineering"
+description: "Services de consulting en architecture et engineering de données"
+page-layout: article
+---
+
+## 👨‍💼 Expertise Data Engineering
+
+Tech Lead Data Engineering chez Orange Côte d'Ivoire avec plusieurs années d'expérience dans la conception et l'implémentation de pipelines data à grande échelle.
+
+---
+
+## 🎯 Services proposés
+
+### 🏗️ Architecture de données
+
+Conception d'architectures data scalables et résilientes adaptées à vos besoins métier.
+
+- Architecture lakehouse (Delta Lake, Iceberg)
+- Pipelines temps réel et batch
+- Migration vers le cloud
+- Modernisation d'infrastructures existantes
+
+---
+
+### ⚡ Optimisation de performances
+
+Amélioration des performances de vos pipelines et systèmes de données.
+
+- Optimisation Spark (PySpark, Spark SQL)
+- Tuning de bases de données
+- Réduction des coûts infrastructure
+- Debugging de pipelines complexes
+
+---
+
+### 🔍 Audit & Conseil stratégique
+
+Évaluation de votre stack data et recommandations d'amélioration.
+
+- Audit d'architecture existante
+- Choix technologiques (Kafka, Airflow, dbt)
+- Data quality & governance
+- Stratégie de migration
+
+---
+
+### 📚 Formation technique
+
+Accompagnement de vos équipes sur les technologies data modernes.
+
+- Formation sur mesure pour vos besoins
+- Workshops pratiques (Spark, Kafka, Kubernetes)
+- Code reviews et best practices
+- Mentoring technique
+
+---
+
+## 💻 Technologies maîtrisées
+
+**Processing & Orchestration**  
+Python • PySpark • Spark SQL • Scala • Airflow • Dagster • Prefect
+
+**Streaming & Messaging**  
+Kafka • Kafka Streams • Flink • Pulsar
+
+**Storage & Lakehouse**  
+Delta Lake • Iceberg • Parquet • S3 • ADLS
+
+**Infrastructure**  
+Docker • Kubernetes • Terraform • AWS • Azure • GCP
+
+**Data Quality & Testing**  
+dbt • Great Expectations • Soda
+
+---
+
+## ⚠️ Disponibilité
+
+**Disponibilité limitée** - Je sélectionne un nombre restreint de missions par mois en fonction de leur complexité et de mes engagements actuels.
+
+Les missions courtes (audit, conseil stratégique) sont privilégiées, mais les projets plus longs peuvent être envisagés selon le calendrier.
+
+---
+
+## 📞 Contact
+
+Intéressé par une collaboration ?
+
+**Contactez-moi sur LinkedIn** : [linkedin.com/in/diakite-data](https://linkedin.com/in/diakite-data)
+
+Décrivez brièvement :
+- Votre besoin ou problématique
+- Type de mission (audit, architecture, formation, etc.)
+- Durée estimée
+- Timeline souhaitée
+
+Je reviendrai vers vous sous 48-72h pour discuter de la faisabilité.
+
+---
+
+## 🎓 Pourquoi me choisir ?
+
+- ✅ **Expérience terrain** : Projets data en production chez Orange
+- ✅ **Expertise technique** : Stack moderne (Spark, Kafka, Kubernetes, Lakehouse)
+- ✅ **Pédagogie** : Créateur du bootcamp From Zero to Hero (1,100+ apprenants)
+- ✅ **Pragmatisme** : Solutions adaptées à vos contraintes (budget, timeline, équipe)
+- ✅ **Francophone & International** : Missions en français ou anglais
+
+---
+
+*💡 Vous cherchez une formation pour plusieurs personnes ? Consultez l'offre [Formation Corporate](corporate.qmd)*
+
+---
+
+**MAMADOU YOUSSOUF DIAKITE**  
+*Tech Lead Data Engineering @ Orange Côte d'Ivoire*

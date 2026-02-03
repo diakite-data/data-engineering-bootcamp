@@ -1,0 +1,72 @@
+---
+title: "☕ Soutenez le Bootcamp"
+description: "Votre soutien aide à maintenir ce bootcamp 100% gratuit"
+page-layout: article
+---
+
+## 🙏 Merci de votre soutien !
+
+Ce bootcamp **Data Engineering** est **100% gratuit** et le restera toujours.
+
+Votre contribution m'aide à :
+
+- ✅ Créer de nouveaux modules
+- ✅ Maintenir le contenu à jour avec les dernières technologies
+- ✅ Consacrer du temps aux réponses communautaires
+- ✅ Améliorer continuellement le contenu
+
+---
+
+## 💰 Comment soutenir ?
+
+### 📱 Orange Money / Wave
+
+**Numéro** : `+225 07 08 45 98 37`
+
+Transférez le montant de votre choix via Orange Money ou Wave.
+
+---
+
+### 🏦 Virement bancaire
+
+**IBAN** : `CI93 CI20 1010 0111 1755 7420 1760`  
+**Titulaire** : **MAMADOU YOUSSOUF DIAKITE**  
+
+---
+
+## 🎁 Autres façons de soutenir (gratuites)
+
+Pas de budget disponible ? **Aucun problème !** Voici d'autres moyens d'aider :
+
+- ⭐ **[Star sur GitHub](https://github.com/diakite-data/data-engineering-bootcamp)** - Ça aide énormément pour la visibilité
+- 🔗 **Partager** sur LinkedIn, Twitter, ou avec vos collègues
+- 💬 **Rejoindre la communauté** - Aider d'autres apprenants
+- 📝 **Témoignage** - Partagez votre succès avec le bootcamp
+- 🐛 **Contribuer** - Signaler des bugs ou proposer des améliorations
+
+---
+
+## 📊 Transparence
+
+Vos contributions servent à :
+
+- 🖥️ Hébergement et infrastructure
+- 📚 Outils et ressources pédagogiques
+- ⏰ Temps consacré à la création de contenu
+- 🌍 Rendre l'éducation accessible partout
+
+---
+
+## 🙏 Merci !
+
+Que vous contribuiez financièrement ou non, **merci** d'être partie prenante de ce projet.
+
+Ensemble, nous démocratisons l'accès au Data Engineering !
+
+---
+
+*💡 Besoin d'aide ? [Contactez-moi sur LinkedIn](https://linkedin.com/in/diakite-data)*
+
+---
+
+**YOUSSOUF DIAKITE**  
