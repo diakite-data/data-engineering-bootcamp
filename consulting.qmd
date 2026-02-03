@@ -1,117 +1,140 @@
 ---
-title: "💼 Consulting Data Engineering"
-description: "Services de consulting en architecture et engineering de données"
+title: "💼 Architecte Data & Expert Data Engineering | Consulting"
+description: "Concevoir, optimiser et industrialiser vos plateformes data pour des enjeux critiques. Expertise terrain en architecture, performance et stratégie."
 page-layout: article
 ---
 
-## 👨‍💼 Expertise Data Engineering
+## Expert Data Engineering & Architecture
 
-Tech Lead Data Engineering chez Orange Côte d'Ivoire avec plusieurs années d'expérience dans la conception et l'implémentation de pipelines data à grande échelle.
+Chef de service **Études & Architecture Data** à l’**Agence Nationale du Service Universel des Télécommunications/TIC (ANSUT)** en Côte d’Ivoire — organisme public responsable de l’accès universel aux services numériques — et ancien **Tech Lead Data Engineering chez Orange Côte d’Ivoire**, où j’ai piloté des plateformes data en production et managé une équipe de plus de 15 data engineers.
 
----
+Je contribue à la conception et à l’industrialisation de plateformes data à grande échelle dans un contexte institutionnel et national.
 
-## 🎯 Services proposés
+Fort de cette expérience terrain, architecture et delivery, j’accompagne les organisations à transformer leurs données en atout stratégique via des architectures robustes, scalables et alignées sur la valeur métier.
 
-### 🏗️ Architecture de données
+J’interviens auprès de :
 
-Conception d'architectures data scalables et résilientes adaptées à vos besoins métier.
-
-- Architecture lakehouse (Delta Lake, Iceberg)
-- Pipelines temps réel et batch
-- Migration vers le cloud
-- Modernisation d'infrastructures existantes
+- Organisations publiques et institutions
+- Grandes entreprises en transformation data
+- Scale-ups data-driven
+- Équipes techniques en structuration ou évolution
 
 ---
 
-### ⚡ Optimisation de performances
+## 🎯 Mes Domaines d'Expertise
 
-Amélioration des performances de vos pipelines et systèmes de données.
+### 🏗️ Architecture & Conception de Plateformes Data
 
-- Optimisation Spark (PySpark, Spark SQL)
-- Tuning de bases de données
-- Réduction des coûts infrastructure
-- Debugging de pipelines complexes
+De la vision stratégique aux plans de déploiement : je conçois l’architecture qui supporte votre croissance et votre performance analytique.
 
----
-
-### 🔍 Audit & Conseil stratégique
-
-Évaluation de votre stack data et recommandations d'amélioration.
-
-- Audit d'architecture existante
-- Choix technologiques (Kafka, Airflow, dbt)
-- Data quality & governance
-- Stratégie de migration
+- Conception de Lakehouse & Data Platforms modernes (Delta Lake, Iceberg)
+- Design de pipelines batch et temps réel (Spark, Kafka, Flink)
+- Architectures Cloud, hybrides et on-premise (AWS, Azure, GCP, Kubernetes)
+- Modernisation de plateformes legacy vers des architectures agiles
+- Intégration de la gouvernance et de la qualité dès la conception
 
 ---
 
-### 📚 Formation technique
+### ⚡ Audit, Optimisation & Résolution de Problèmes
 
-Accompagnement de vos équipes sur les technologies data modernes.
+Diagnostic technique approfondi et amélioration de plateformes data existantes.
 
-- Formation sur mesure pour vos besoins
-- Workshops pratiques (Spark, Kafka, Kubernetes)
-- Code reviews et best practices
-- Mentoring technique
-
----
-
-## 💻 Technologies maîtrisées
-
-**Processing & Orchestration**  
-Python • PySpark • Spark SQL • Scala • Airflow • Dagster • Prefect
-
-**Streaming & Messaging**  
-Kafka • Kafka Streams • Flink • Pulsar
-
-**Storage & Lakehouse**  
-Delta Lake • Iceberg • Parquet • S3 • ADLS
-
-**Infrastructure**  
-Docker • Kubernetes • Terraform • AWS • Azure • GCP
-
-**Data Quality & Testing**  
-dbt • Great Expectations • Soda
+- Audit technique indépendant de votre stack data
+- Optimisation avancée Spark, SQL et moteurs de traitement
+- Réduction mesurable des coûts d'infrastructure cloud (selon contexte)
+- Stabilisation et fiabilisation de pipelines complexes
+- Recommandations priorisées et actionnables pour des gains rapides
 
 ---
 
-## ⚠️ Disponibilité
+### 🧩 Conseil Stratégique & Cadrage
 
-**Disponibilité limitée** - Je sélectionne un nombre restreint de missions par mois en fonction de leur complexité et de mes engagements actuels.
+Aligner vos choix techniques data avec vos objectifs métier et contraintes réelles.
 
-Les missions courtes (audit, conseil stratégique) sont privilégiées, mais les projets plus longs peuvent être envisagés selon le calendrier.
-
----
-
-## 📞 Contact
-
-Intéressé par une collaboration ?
-
-**Contactez-moi sur LinkedIn** : [linkedin.com/in/diakite-data](https://linkedin.com/in/diakite-data)
-
-Décrivez brièvement :
-- Votre besoin ou problématique
-- Type de mission (audit, architecture, formation, etc.)
-- Durée estimée
-- Timeline souhaitée
-
-Je reviendrai vers vous sous 48-72h pour discuter de la faisabilité.
+- Recommandations éclairées sur les choix technologiques
+- Cadrage d'architecture et roadmap technique réaliste
+- Stratégies de migration et de refonte de plateforme
+- Fondations data platform : Data Quality, DataOps, Observability
+- Approche build vs buy adaptée à votre contexte
 
 ---
 
-## 🎓 Pourquoi me choisir ?
+### 🎓 Transfert de Compétences & Coaching
 
-- ✅ **Expérience terrain** : Projets data en production chez Orange
-- ✅ **Expertise technique** : Stack moderne (Spark, Kafka, Kubernetes, Lakehouse)
-- ✅ **Pédagogie** : Créateur du bootcamp From Zero to Hero (1,100+ apprenants)
-- ✅ **Pragmatisme** : Solutions adaptées à vos contraintes (budget, timeline, équipe)
-- ✅ **Francophone & International** : Missions en français ou anglais
+Renforcement durable des capacités de vos équipes techniques.
 
----
-
-*💡 Vous cherchez une formation pour plusieurs personnes ? Consultez l'offre [Formation Corporate](corporate.qmd)*
+- Formations techniques sur mesure (Spark, Kafka, Architecture Data)
+- Workshops pratiques de conception et résolution de problèmes
+- Code reviews et mise en place de bonnes pratiques d'engineering
+- Mentoring Data Engineers & Architects
+- Bootcamp **“Data Engineering – From Zero to Hero”**
 
 ---
 
-**MAMADOU YOUSSOUF DIAKITE**  
-*Tech Lead Data Engineering @ Orange Côte d'Ivoire*
+## 🛠️ Stack Technique Maîtrisée
+
+| Domaine | Technologies |
+|---------|--------------|
+| Traitement & Orchestration | Apache Spark (PySpark, Spark SQL, Scala), Airflow, Dagster, Prefect |
+| Streaming & Événements | Apache Kafka, Kafka Streams, Apache Flink, Pulsar |
+| Stockage & Lakehouse | Delta Lake, Apache Iceberg, Parquet, AWS S3, Azure ADLS |
+| Infrastructure & Cloud | Docker, Kubernetes, AWS, Azure, GCP |
+| Data Quality & Analytics | dbt, Great Expectations, frameworks de tests data |
+
+---
+
+## ✨ Pourquoi travailler avec moi
+
+- ✅ Double expérience stratégique : architecture publique à large échelle ET delivery opérationnel en entreprise
+- ✅ Expertise validée en production : plateformes data déployées à échelle nationale
+- ✅ Vision architecture + profondeur technique : conception + optimisation terrain
+- ✅ Expertise technique avancée : Spark, Kafka, Kubernetes, architectures Lakehouse et écosystèmes data associés
+- ✅ Expérience de pilotage d’équipes data (15+ ingénieurs)
+- ✅ Approche pragmatique orientée résultats
+- ✅ Pédagogue & formateur : créateur du bootcamp Data Engineering
+- ✅ Francophone & International
+
+---
+
+## 📋 Modalités & Disponibilité
+
+Je sélectionne un nombre restreint de missions par an pour m'engager pleinement et garantir un impact maximal et des livrables de qualité.
+
+**Priorité donnée aux :**
+
+- Audits techniques et conseil stratégique
+- Cadrage & architecture de plateforme data
+- Missions d'optimisation ciblées
+- Résolution de problèmes complexes
+- Formation & coaching d'équipes techniques
+
+Les projets au long cours sont étudiés au cas par cas.
+
+---
+
+## 📬 Démarrons une Conversation
+
+Prêt à rendre votre plateforme data plus performante, fiable et alignée avec vos objectifs ?
+
+Contactez-moi via LinkedIn pour une discussion exploratoire.
+
+🔗 **LinkedIn :** https://linkedin.com/in/diakite-data
+
+Pour une réponse rapide et pertinente, merci de préciser :
+
+1. Contexte et objectif du projet
+2. Type de besoin (audit, architecture, optimisation, formation)
+3. Environnement technique actuel ou envisagé
+4. Contraintes de timing et durée estimée
+
+*Réponse sous 48h.*
+
+---
+
+**YOUSSOUF DIAKITE**  
+*Architecte Data & Expert Data Engineering*
+
+---
+
+💡 Formation d’équipe ou département complet :  
+[Formation Data Engineering Corporate](corporate.qmd)

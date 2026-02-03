@@ -10990,9 +10990,9 @@
   {
     "objectID": "corporate.html",
     "href": "corporate.html",
-    "title": "🏢 Formation Corporate",
+    "title": "🏢 Formation Data Engineering Corporate",
     "section": "",
-    "text": "Formez vos équipes aux technologies et pratiques modernes du Data Engineering avec des formations adaptées à vos besoins et à votre niveau."
+    "text": "J’interviens auprès d’entreprises et d’institutions pour concevoir et animer des formations Data Engineering sur mesure, directement alignées sur les environnements techniques réels, les contraintes opérationnelles et les objectifs de montée en compétence.\nLes interventions s’appuient sur des retours d’expérience terrain, des architectures data modernes et des pratiques d’industrialisation utilisées en production.\nObjectif : permettre aux équipes techniques de gagner en autonomie, rigueur d’ingénierie et capacité d’exécution.\n\n\n\n\n\nData Engineers\nAnalytics / Analytics Engineers\nData Scientists en phase d’industrialisation\nTech Leads & Architectes\nÉquipes data pluridisciplinaires\nÉquipes en structuration de data platform\n\n\n\n\n\nLe contenu, le niveau et l’organisation sont définis au cas par cas selon :\n\nle profil des participants\nvotre stack technique\nvos cas d’usage\nvotre maturité data\nvos priorités opérationnelles\nmes disponibilités\n\nChaque programme est construit pour être directement applicable dans votre contexte réel.\n\n\n\n\nSelon les besoins, les interventions peuvent couvrir une combinaison de ces axes :\n\n\n\n\n\n\n\nAxe\nFocus possible\n\n\n\n\nArchitecture Data Moderne\nLakehouse, data platform, batch vs streaming, cloud data architecture\n\n\nIndustrialisation & DataOps\nCI/CD data, tests, qualité, observabilité, fiabilisation pipelines\n\n\nProcessing Distribué\nSpark / PySpark / SQL distribué, performance & optimisation\n\n\nStreaming & Temps Réel\nKafka, pipelines événementiels, patterns streaming\n\n\nOrchestration\nAirflow, Dagster, structuration workflows\n\n\nQualité & Gouvernance Technique\nData quality, validation, monitoring, bonnes pratiques\n\n\nPerformance & Coûts\noptimisation traitements & usages infrastructure\n\n\n\nLes axes retenus sont ajustés au contexte de la mission.\n\n\n\n\n\nÉchange de cadrage\nAnalyse besoin & niveau équipe\nDéfinition des objectifs pédagogiques\nProposition de programme adapté\nValidation faisabilité & disponibilité\nIntervention & support associé\n\n\n\n\n\nLes modalités (sessions techniques, workshops, accompagnement, format synchrone, présentiel ou distant) sont définies au cas par cas selon :\n\nle contexte\nles objectifs\nles contraintes opérationnelles\nla localisation\nmes disponibilités\n\nAucun format standard n’est imposé.\n\n\n\n\nLa durée et le rythme sont définis spécifiquement pour chaque demande : sessions ciblées, ateliers techniques, parcours progressif ou accompagnement structuré.\n\n\n\n\nApproche fortement orientée pratique :\n\n✅ labs contextualisés\n✅ cas réels\n✅ exercices guidés\n✅ revues de code\n✅ patterns & anti-patterns\n✅ retours d’expérience production\n✅ bonnes pratiques d’ingénierie data\n\nLes livrables pédagogiques sont définis selon la mission.\n\n\n\n\n\n✅ Basé sur architectures et pipelines en production\n✅ Double vision architecture + delivery terrain\n✅ Expertise data platform moderne\n✅ Pédagogie éprouvée (bootcamp Data Engineering)\n✅ Approche sur mesure\n✅ Orientation autonomie équipes\n✅ Contexte africain & international\n\n\n\n\n\nContact via LinkedIn :\n🔗 https://linkedin.com/in/diakite-data\nMerci de préciser :\n\nprofils concernés\nniveau estimé\ncontexte technique\nobjectifs prioritaires\ncontraintes calendrier\n\nUne réponse est apportée après étude de faisabilité et de disponibilité.\n\n\n\n\nLes interventions formation sont acceptées en nombre limité, selon priorisation et calendrier.\n\nYOUSSOUF DIAKITE\nArchitecte Data & Expert Data Engineering\n\n💡 Besoin d’expertise ou d’audit ?\nVoir : Consulting Data Engineering"
   },
   {
     "objectID": "corporate.html#formations-data-engineering-pour-entreprises",
@@ -11046,9 +11046,9 @@
   {
     "objectID": "corporate.html#disponibilité",
     "href": "corporate.html#disponibilité",
-    "title": "🏢 Formation Corporate",
-    "section": "⚠️ Disponibilité",
-    "text": "⚠️ Disponibilité\nPlaces limitées - J’accepte un nombre restreint de formations par mois pour garantir la qualité et la personnalisation.\nRéservez plusieurs semaines à l’avance pour les formations présentielles."
+    "title": "🏢 Formation Data Engineering Corporate",
+    "section": "",
+    "text": "Les interventions formation sont acceptées en nombre limité, selon priorisation et calendrier.\n\nYOUSSOUF DIAKITE\nArchitecte Data & Expert Data Engineering\n\n💡 Besoin d’expertise ou d’audit ?\nVoir : Consulting Data Engineering"
   },
   {
     "objectID": "corporate.html#pourquoi-cette-formation",
@@ -11060,9 +11060,9 @@
   {
     "objectID": "consulting.html",
     "href": "consulting.html",
-    "title": "💼 Consulting Data Engineering",
+    "title": "💼 Architecte Data & Expert Data Engineering | Consulting",
     "section": "",
-    "text": "Tech Lead Data Engineering chez Orange Côte d’Ivoire avec plusieurs années d’expérience dans la conception et l’implémentation de pipelines data à grande échelle."
+    "text": "Chef de service Études & Architecture Data à l’Agence Nationale du Service Universel des Télécommunications/TIC (ANSUT) en Côte d’Ivoire — organisme public responsable de l’accès universel aux services numériques — et ancien Tech Lead Data Engineering chez Orange Côte d’Ivoire, où j’ai piloté des plateformes data en production et managé une équipe de plus de 15 data engineers.\nJe contribue à la conception et à l’industrialisation de plateformes data à grande échelle dans un contexte institutionnel et national.\nFort de cette expérience terrain, architecture et delivery, j’accompagne les organisations à transformer leurs données en atout stratégique via des architectures robustes, scalables et alignées sur la valeur métier.\nJ’interviens auprès de :\n\nOrganisations publiques et institutions\nGrandes entreprises en transformation data\nScale-ups data-driven\nÉquipes techniques en structuration ou évolution"
   },
   {
     "objectID": "consulting.html#expertise-data-engineering",
@@ -11075,15 +11075,15 @@
     "objectID": "consulting.html#services-proposés",
     "href": "consulting.html#services-proposés",
     "title": "💼 Consulting Data Engineering",
-    "section": "🎯 Services proposés",
-    "text": "🎯 Services proposés\n\n🏗️ Architecture de données\nConception d’architectures data scalables et résilientes adaptées à vos besoins métier.\n\nArchitecture lakehouse (Delta Lake, Iceberg)\nPipelines temps réel et batch\nMigration vers le cloud\nModernisation d’infrastructures existantes\n\n\n\n\n⚡ Optimisation de performances\nAmélioration des performances de vos pipelines et systèmes de données.\n\nOptimisation Spark (PySpark, Spark SQL)\nTuning de bases de données\nRéduction des coûts infrastructure\nDebugging de pipelines complexes\n\n\n\n\n🔍 Audit & Conseil stratégique\nÉvaluation de votre stack data et recommandations d’amélioration.\n\nAudit d’architecture existante\nChoix technologiques (Kafka, Airflow, dbt)\nData quality & governance\nStratégie de migration\n\n\n\n\n📚 Formation technique\nAccompagnement de vos équipes sur les technologies data modernes.\n\nFormation sur mesure pour vos besoins\nWorkshops pratiques (Spark, Kafka, Kubernetes)\nCode reviews et best practices\nMentoring technique"
+    "section": "Services proposés",
+    "text": "Services proposés\n\nArchitecture de données\nConception d’architectures data scalables et résilientes adaptées à vos besoins métier.\n\nArchitecture lakehouse ou autre\nPipelines temps réel et batch\nModernisation d’infrastructures existantes\n\n\n\n\nOptimisation de performances\nAmélioration des performances de vos pipelines et systèmes de données.\n\nOptimisation Spark\nTuning de bases de données\nRéduction des coûts infrastructure\nDebugging de pipelines complexes\n\n\n\n\nAudit & Conseil stratégique\nÉvaluation de votre stack data et recommandations d’amélioration.\n\nAudit d’architecture existante\nChoix technologiques\nData quality & governance\nStratégie de migration\n\n\n\n\nFormation technique\nAccompagnement de vos équipes sur les technologies data modernes.\n\nFormation sur mesure pour vos besoins\nWorkshops pratiques\nCode reviews et best practices\nMentoring technique"
   },
   {
     "objectID": "consulting.html#technologies-maîtrisées",
     "href": "consulting.html#technologies-maîtrisées",
     "title": "💼 Consulting Data Engineering",
-    "section": "💻 Technologies maîtrisées",
-    "text": "💻 Technologies maîtrisées\nProcessing & Orchestration\nPython • PySpark • Spark SQL • Scala • Airflow • Dagster • Prefect\nStreaming & Messaging\nKafka • Kafka Streams • Flink • Pulsar\nStorage & Lakehouse\nDelta Lake • Iceberg • Parquet • S3 • ADLS\nInfrastructure\nDocker • Kubernetes • Terraform • AWS • Azure • GCP\nData Quality & Testing\ndbt • Great Expectations • Soda"
+    "section": "Technologies maîtrisées",
+    "text": "Technologies maîtrisées\nProcessing & Orchestration\nPython • PySpark • Spark SQL • Scala • Airflow • Dagster • Prefect\nStreaming & Messaging\nKafka • Kafka Streams • Flink • Pulsar\nStorage & Lakehouse\nDelta Lake • Iceberg • Parquet • S3 • ADLS\nInfrastructure\nDocker • Kubernetes • AWS • Azure • GCP\nData Quality & Testing\ndbt • Great Expectations"
   },
   {
     "objectID": "consulting.html#disponibilité",
@@ -11103,7 +11103,119 @@
     "objectID": "consulting.html#pourquoi-me-choisir",
     "href": "consulting.html#pourquoi-me-choisir",
     "title": "💼 Consulting Data Engineering",
-    "section": "🎓 Pourquoi me choisir ?",
-    "text": "🎓 Pourquoi me choisir ?\n\n✅ Expérience terrain : Projets data en production chez Orange\n✅ Expertise technique : Stack moderne (Spark, Kafka, Kubernetes, Lakehouse)\n✅ Pédagogie : Créateur du bootcamp From Zero to Hero (1,100+ apprenants)\n✅ Pragmatisme : Solutions adaptées à vos contraintes (budget, timeline, équipe)\n✅ Francophone & International : Missions en français ou anglais\n\n\n💡 Vous cherchez une formation pour plusieurs personnes ? Consultez l’offre Formation Corporate\n\nMAMADOU YOUSSOUF DIAKITE\nTech Lead Data Engineering @ Orange Côte d’Ivoire"
+    "section": "Pourquoi me choisir ?",
+    "text": "Pourquoi me choisir ?\n\n✅ Expérience terrain : Projets data en production chez Orange\n✅ Expertise technique : Stack moderne (Spark, Kafka, Kubernetes, Lakehouse, etc…)\n✅ Pédagogie : Créateur du bootcamp From Zero to Hero (1,100+ apprenants)\n✅ Pragmatisme : Solutions adaptées à vos contraintes (budget, timeline, équipe)\n✅ Francophone & International : Missions en français ou anglais\n\n\n💡 Vous cherchez une formation pour plusieurs personnes ? Consultez l’offre Formation Corporate\n\nYOUSSOUF DIAKITE"
+  },
+  {
+    "objectID": "consulting.html#expert-data-engineering-architecture",
+    "href": "consulting.html#expert-data-engineering-architecture",
+    "title": "💼 Architecte Data & Expert Data Engineering | Consulting",
+    "section": "",
+    "text": "Chef de service Études & Architecture Data à l’Agence Nationale du Service Universel des Télécommunications/TIC (ANSUT) en Côte d’Ivoire — organisme public responsable de l’accès universel aux services numériques — et ancien Tech Lead Data Engineering chez Orange Côte d’Ivoire, où j’ai piloté des plateformes data en production et managé une équipe de plus de 15 data engineers.\nJe contribue à la conception et à l’industrialisation de plateformes data à grande échelle dans un contexte institutionnel et national.\nFort de cette expérience terrain, architecture et delivery, j’accompagne les organisations à transformer leurs données en atout stratégique via des architectures robustes, scalables et alignées sur la valeur métier.\nJ’interviens auprès de :\n\nOrganisations publiques et institutions\nGrandes entreprises en transformation data\nScale-ups data-driven\nÉquipes techniques en structuration ou évolution"
+  },
+  {
+    "objectID": "consulting.html#mes-domaines-dexpertise",
+    "href": "consulting.html#mes-domaines-dexpertise",
+    "title": "💼 Architecte Data & Expert Data Engineering | Consulting",
+    "section": "🎯 Mes Domaines d’Expertise",
+    "text": "🎯 Mes Domaines d’Expertise\n\n🏗️ Architecture & Conception de Plateformes Data\nDe la vision stratégique aux plans de déploiement : je conçois l’architecture qui supporte votre croissance et votre performance analytique.\n\nConception de Lakehouse & Data Platforms modernes (Delta Lake, Iceberg)\nDesign de pipelines batch et temps réel (Spark, Kafka, Flink)\nArchitectures Cloud, hybrides et on-premise (AWS, Azure, GCP, Kubernetes)\nModernisation de plateformes legacy vers des architectures agiles\nIntégration de la gouvernance et de la qualité dès la conception\n\n\n\n\n⚡ Audit, Optimisation & Résolution de Problèmes\nDiagnostic technique approfondi et amélioration de plateformes data existantes.\n\nAudit technique indépendant de votre stack data\nOptimisation avancée Spark, SQL et moteurs de traitement\nRéduction mesurable des coûts d’infrastructure cloud (selon contexte)\nStabilisation et fiabilisation de pipelines complexes\nRecommandations priorisées et actionnables pour des gains rapides\n\n\n\n\n🧩 Conseil Stratégique & Cadrage\nAligner vos choix techniques data avec vos objectifs métier et contraintes réelles.\n\nRecommandations éclairées sur les choix technologiques\nCadrage d’architecture et roadmap technique réaliste\nStratégies de migration et de refonte de plateforme\nFondations data platform : Data Quality, DataOps, Observability\nApproche build vs buy adaptée à votre contexte\n\n\n\n\n🎓 Transfert de Compétences & Coaching\nRenforcement durable des capacités de vos équipes techniques.\n\nFormations techniques sur mesure (Spark, Kafka, Architecture Data)\nWorkshops pratiques de conception et résolution de problèmes\nCode reviews et mise en place de bonnes pratiques d’engineering\nMentoring Data Engineers & Architects\nBootcamp “Data Engineering – From Zero to Hero”"
+  },
+  {
+    "objectID": "consulting.html#stack-technique-maîtrisée",
+    "href": "consulting.html#stack-technique-maîtrisée",
+    "title": "💼 Architecte Data & Expert Data Engineering | Consulting",
+    "section": "🛠️ Stack Technique Maîtrisée",
+    "text": "🛠️ Stack Technique Maîtrisée\n\n\n\n\n\n\n\nDomaine\nTechnologies\n\n\n\n\nTraitement & Orchestration\nApache Spark (PySpark, Spark SQL, Scala), Airflow, Dagster, Prefect\n\n\nStreaming & Événements\nApache Kafka, Kafka Streams, Apache Flink, Pulsar\n\n\nStockage & Lakehouse\nDelta Lake, Apache Iceberg, Parquet, AWS S3, Azure ADLS\n\n\nInfrastructure & Cloud\nDocker, Kubernetes, AWS, Azure, GCP\n\n\nData Quality & Analytics\ndbt, Great Expectations, frameworks de tests data"
+  },
+  {
+    "objectID": "consulting.html#pourquoi-travailler-avec-moi",
+    "href": "consulting.html#pourquoi-travailler-avec-moi",
+    "title": "💼 Architecte Data & Expert Data Engineering | Consulting",
+    "section": "✨ Pourquoi travailler avec moi",
+    "text": "✨ Pourquoi travailler avec moi\n\n✅ Double expérience stratégique : architecture publique à large échelle ET delivery opérationnel en entreprise\n✅ Expertise validée en production : plateformes data déployées à échelle nationale\n✅ Vision architecture + profondeur technique : conception + optimisation terrain\n✅ Expertise technique avancée : Spark, Kafka, Kubernetes, architectures Lakehouse et écosystèmes data associés\n✅ Expérience de pilotage d’équipes data (15+ ingénieurs)\n✅ Approche pragmatique orientée résultats\n✅ Pédagogue & formateur : créateur du bootcamp Data Engineering\n✅ Francophone & International"
+  },
+  {
+    "objectID": "consulting.html#modalités-disponibilité",
+    "href": "consulting.html#modalités-disponibilité",
+    "title": "💼 Architecte Data & Expert Data Engineering | Consulting",
+    "section": "📋 Modalités & Disponibilité",
+    "text": "📋 Modalités & Disponibilité\nJe sélectionne un nombre restreint de missions par an pour m’engager pleinement et garantir un impact maximal et des livrables de qualité.\nPriorité donnée aux :\n\nAudits techniques et conseil stratégique\nCadrage & architecture de plateforme data\nMissions d’optimisation ciblées\nRésolution de problèmes complexes\nFormation & coaching d’équipes techniques\n\nLes projets au long cours sont étudiés au cas par cas."
+  },
+  {
+    "objectID": "consulting.html#démarrons-une-conversation",
+    "href": "consulting.html#démarrons-une-conversation",
+    "title": "💼 Architecte Data & Expert Data Engineering | Consulting",
+    "section": "📬 Démarrons une Conversation",
+    "text": "📬 Démarrons une Conversation\nPrêt à rendre votre plateforme data plus performante, fiable et alignée avec vos objectifs ?\nContactez-moi via LinkedIn pour une discussion exploratoire.\n🔗 LinkedIn : https://linkedin.com/in/diakite-data\nPour une réponse rapide et pertinente, merci de préciser :\n\nContexte et objectif du projet\nType de besoin (audit, architecture, optimisation, formation)\nEnvironnement technique actuel ou envisagé\nContraintes de timing et durée estimée\n\nRéponse sous 48h.\n\nYOUSSOUF DIAKITE\nArchitecte Data & Expert Data Engineering\n\n💡 Formation d’équipe ou département complet :\nFormation Data Engineering Corporate"
+  },
+  {
+    "objectID": "corporate.html#renforcer-durablement-les-compétences-data-engineering-de-vos-équipes",
+    "href": "corporate.html#renforcer-durablement-les-compétences-data-engineering-de-vos-équipes",
+    "title": "🏢 Formation Data Engineering Corporate",
+    "section": "",
+    "text": "J’interviens auprès d’entreprises et d’institutions pour concevoir et animer des formations Data Engineering sur mesure, directement alignées sur les environnements techniques réels, les contraintes opérationnelles et les objectifs de montée en compétence.\nLes interventions s’appuient sur des retours d’expérience terrain, des architectures data modernes et des pratiques d’industrialisation utilisées en production.\nObjectif : permettre aux équipes techniques de gagner en autonomie, rigueur d’ingénierie et capacité d’exécution."
+  },
+  {
+    "objectID": "corporate.html#à-qui-sadressent-ces-formations",
+    "href": "corporate.html#à-qui-sadressent-ces-formations",
+    "title": "🏢 Formation Data Engineering Corporate",
+    "section": "",
+    "text": "Data Engineers\nAnalytics / Analytics Engineers\nData Scientists en phase d’industrialisation\nTech Leads & Architectes\nÉquipes data pluridisciplinaires\nÉquipes en structuration de data platform"
+  },
+  {
+    "objectID": "corporate.html#approche-sur-mesure-pas-de-catalogue-standard",
+    "href": "corporate.html#approche-sur-mesure-pas-de-catalogue-standard",
+    "title": "🏢 Formation Data Engineering Corporate",
+    "section": "",
+    "text": "Le contenu, le niveau et l’organisation sont définis au cas par cas selon :\n\nle profil des participants\nvotre stack technique\nvos cas d’usage\nvotre maturité data\nvos priorités opérationnelles\nmes disponibilités\n\nChaque programme est construit pour être directement applicable dans votre contexte réel."
+  },
+  {
+    "objectID": "corporate.html#axes-thématiques-possibles",
+    "href": "corporate.html#axes-thématiques-possibles",
+    "title": "🏢 Formation Data Engineering Corporate",
+    "section": "",
+    "text": "Selon les besoins, les interventions peuvent couvrir une combinaison de ces axes :\n\n\n\n\n\n\n\nAxe\nFocus possible\n\n\n\n\nArchitecture Data Moderne\nLakehouse, data platform, batch vs streaming, cloud data architecture\n\n\nIndustrialisation & DataOps\nCI/CD data, tests, qualité, observabilité, fiabilisation pipelines\n\n\nProcessing Distribué\nSpark / PySpark / SQL distribué, performance & optimisation\n\n\nStreaming & Temps Réel\nKafka, pipelines événementiels, patterns streaming\n\n\nOrchestration\nAirflow, Dagster, structuration workflows\n\n\nQualité & Gouvernance Technique\nData quality, validation, monitoring, bonnes pratiques\n\n\nPerformance & Coûts\noptimisation traitements & usages infrastructure\n\n\n\nLes axes retenus sont ajustés au contexte de la mission."
+  },
+  {
+    "objectID": "corporate.html#démarche-dintervention",
+    "href": "corporate.html#démarche-dintervention",
+    "title": "🏢 Formation Data Engineering Corporate",
+    "section": "",
+    "text": "Échange de cadrage\nAnalyse besoin & niveau équipe\nDéfinition des objectifs pédagogiques\nProposition de programme adapté\nValidation faisabilité & disponibilité\nIntervention & support associé"
+  },
+  {
+    "objectID": "corporate.html#modalités-dintervention",
+    "href": "corporate.html#modalités-dintervention",
+    "title": "🏢 Formation Data Engineering Corporate",
+    "section": "",
+    "text": "Les modalités (sessions techniques, workshops, accompagnement, format synchrone, présentiel ou distant) sont définies au cas par cas selon :\n\nle contexte\nles objectifs\nles contraintes opérationnelles\nla localisation\nmes disponibilités\n\nAucun format standard n’est imposé."
+  },
+  {
+    "objectID": "corporate.html#organisation-durée",
+    "href": "corporate.html#organisation-durée",
+    "title": "🏢 Formation Data Engineering Corporate",
+    "section": "",
+    "text": "La durée et le rythme sont définis spécifiquement pour chaque demande : sessions ciblées, ateliers techniques, parcours progressif ou accompagnement structuré."
+  },
+  {
+    "objectID": "corporate.html#approche-pédagogique",
+    "href": "corporate.html#approche-pédagogique",
+    "title": "🏢 Formation Data Engineering Corporate",
+    "section": "",
+    "text": "Approche fortement orientée pratique :\n\n✅ labs contextualisés\n✅ cas réels\n✅ exercices guidés\n✅ revues de code\n✅ patterns & anti-patterns\n✅ retours d’expérience production\n✅ bonnes pratiques d’ingénierie data\n\nLes livrables pédagogiques sont définis selon la mission."
+  },
+  {
+    "objectID": "corporate.html#points-différenciants",
+    "href": "corporate.html#points-différenciants",
+    "title": "🏢 Formation Data Engineering Corporate",
+    "section": "",
+    "text": "✅ Basé sur architectures et pipelines en production\n✅ Double vision architecture + delivery terrain\n✅ Expertise data platform moderne\n✅ Pédagogie éprouvée (bootcamp Data Engineering)\n✅ Approche sur mesure\n✅ Orientation autonomie équipes\n✅ Contexte africain & international"
+  },
+  {
+    "objectID": "corporate.html#demande-de-formation",
+    "href": "corporate.html#demande-de-formation",
+    "title": "🏢 Formation Data Engineering Corporate",
+    "section": "",
+    "text": "Contact via LinkedIn :\n🔗 https://linkedin.com/in/diakite-data\nMerci de préciser :\n\nprofils concernés\nniveau estimé\ncontexte technique\nobjectifs prioritaires\ncontraintes calendrier\n\nUne réponse est apportée après étude de faisabilité et de disponibilité."
   }
 ]
