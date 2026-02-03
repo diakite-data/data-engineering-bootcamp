@@ -1,26 +1,24 @@
 ---
-title: "🏢 Formation Data Engineering Corporate"
-description: "Formations Data Engineering sur mesure pour entreprises et institutions — construites au cas par cas selon vos enjeux techniques."
+title: "🏢 Formation Corporate"
+description: "Formations Data Engineering sur mesure pour entreprises et institutions"
 page-layout: article
 ---
 
-# 🏢 Formation Data Engineering Corporate
+## Renforcer les compétences de vos équipes
 
-## Renforcer durablement les compétences Data Engineering de vos équipes
+J'interviens auprès d'entreprises et d'institutions pour concevoir et animer des **formations Data Engineering sur mesure**, directement alignées sur les environnements techniques réels, les contraintes opérationnelles et les objectifs de montée en compétence.
 
-J’interviens auprès d’entreprises et d’institutions pour concevoir et animer des **formations Data Engineering sur mesure**, directement alignées sur les environnements techniques réels, les contraintes opérationnelles et les objectifs de montée en compétence.
+Les interventions s'appuient sur des retours d'expérience terrain, des architectures data modernes et des pratiques d'industrialisation utilisées en production.
 
-Les interventions s’appuient sur des retours d’expérience terrain, des architectures data modernes et des pratiques d’industrialisation utilisées en production.
-
-Objectif : permettre aux équipes techniques de gagner en **autonomie, rigueur d’ingénierie et capacité d’exécution**.
+Objectif : permettre aux équipes techniques de gagner en **autonomie, rigueur d'ingénierie et capacité d'exécution**.
 
 ---
 
-## 🎯 À qui s’adressent ces formations
+## 🎯 À qui s'adressent ces formations
 
 - Data Engineers
 - Analytics / Analytics Engineers
-- Data Scientists en phase d’industrialisation
+- Data Scientists en phase d'industrialisation
 - Tech Leads & Architectes
 - Équipes data pluridisciplinaires
 - Équipes en structuration de data platform
@@ -29,11 +27,11 @@ Objectif : permettre aux équipes techniques de gagner en **autonomie, rigueur d
 
 ## 🧩 Approche sur mesure — pas de catalogue standard
 
-Le contenu, le niveau et l’organisation sont définis **au cas par cas** selon :
+Le contenu, le niveau et l'organisation sont définis **au cas par cas** selon :
 
 - le profil des participants
 - votre stack technique
-- vos cas d’usage
+- vos cas d'usage
 - votre maturité data
 - vos priorités opérationnelles
 - mes disponibilités
@@ -48,7 +46,7 @@ Selon les besoins, les interventions peuvent couvrir une combinaison de ces axes
 
 | Axe | Focus possible |
 |------|----------------|
-| Architecture Data Moderne | Lakehouse, data platform, batch vs streaming, cloud data architecture |
+| Architecture Data Moderne | Lakehouse, data platform, batch vs streaming, data architecture |
 | Industrialisation & DataOps | CI/CD data, tests, qualité, observabilité, fiabilisation pipelines |
 | Processing Distribué | Spark / PySpark / SQL distribué, performance & optimisation |
 | Streaming & Temps Réel | Kafka, pipelines événementiels, patterns streaming |
@@ -60,7 +58,7 @@ Les axes retenus sont ajustés au contexte de la mission.
 
 ---
 
-## 🧭 Démarche d’intervention
+## 🧭 Démarche d'intervention
 
 1. Échange de cadrage
 2. Analyse besoin & niveau équipe
@@ -71,7 +69,7 @@ Les axes retenus sont ajustés au contexte de la mission.
 
 ---
 
-## 🖥️ Modalités d’intervention
+## 🖥️ Modalités d'intervention
 
 Les modalités (sessions techniques, workshops, accompagnement, format synchrone, présentiel ou distant) sont définies **au cas par cas** selon :
 
@@ -81,7 +79,7 @@ Les modalités (sessions techniques, workshops, accompagnement, format synchrone
 - la localisation
 - mes disponibilités
 
-Aucun format standard n’est imposé.
+Aucun format standard n'est imposé.
 
 ---
 
@@ -100,8 +98,8 @@ Approche fortement orientée pratique :
 - ✅ exercices guidés
 - ✅ revues de code
 - ✅ patterns & anti-patterns
-- ✅ retours d’expérience production
-- ✅ bonnes pratiques d’ingénierie data
+- ✅ retours d'expérience production
+- ✅ bonnes pratiques d'ingénierie data
 
 Les livrables pédagogiques sont définis selon la mission.
 
@@ -142,10 +140,10 @@ Les interventions formation sont acceptées en nombre limité, selon priorisatio
 
 ---
 
-**YOUSSOUF DIAKITE**  
+**MAMADOU YOUSSOUF DIAKITE**  
 *Architecte Data & Expert Data Engineering*
 
 ---
 
-💡 Besoin d’expertise ou d’audit ?  
+💡 Besoin d'expertise ou d'audit ?  
 Voir : [Consulting Data Engineering](consulting.qmd)

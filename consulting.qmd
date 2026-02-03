@@ -75,9 +75,9 @@ Renforcement durable des capacités de vos équipes techniques.
 
 | Domaine | Technologies |
 |---------|--------------|
-| Traitement & Orchestration | Apache Spark (PySpark, Spark SQL, Scala), Airflow, Dagster, Prefect |
-| Streaming & Événements | Apache Kafka, Kafka Streams, Apache Flink, Pulsar |
-| Stockage & Lakehouse | Delta Lake, Apache Iceberg, Parquet, AWS S3, Azure ADLS |
+| Traitement & Orchestration | Apache Spark (PySpark, Spark SQL, Scala), Airflow |
+| Streaming & Événements | Apache Kafka, Kafka Streams, Apache Flink |
+| Stockage & Lakehouse | Delta Lake, Apache Iceberg, Parquet, AWS S3 |
 | Infrastructure & Cloud | Docker, Kubernetes, AWS, Azure, GCP |
 | Data Quality & Analytics | dbt, Great Expectations, frameworks de tests data |
 

@@ -10990,9 +10990,9 @@
   {
     "objectID": "corporate.html",
     "href": "corporate.html",
-    "title": "🏢 Formation Data Engineering Corporate",
+    "title": "🏢 Formation Corporate",
     "section": "",
-    "text": "J’interviens auprès d’entreprises et d’institutions pour concevoir et animer des formations Data Engineering sur mesure, directement alignées sur les environnements techniques réels, les contraintes opérationnelles et les objectifs de montée en compétence.\nLes interventions s’appuient sur des retours d’expérience terrain, des architectures data modernes et des pratiques d’industrialisation utilisées en production.\nObjectif : permettre aux équipes techniques de gagner en autonomie, rigueur d’ingénierie et capacité d’exécution.\n\n\n\n\n\nData Engineers\nAnalytics / Analytics Engineers\nData Scientists en phase d’industrialisation\nTech Leads & Architectes\nÉquipes data pluridisciplinaires\nÉquipes en structuration de data platform\n\n\n\n\n\nLe contenu, le niveau et l’organisation sont définis au cas par cas selon :\n\nle profil des participants\nvotre stack technique\nvos cas d’usage\nvotre maturité data\nvos priorités opérationnelles\nmes disponibilités\n\nChaque programme est construit pour être directement applicable dans votre contexte réel.\n\n\n\n\nSelon les besoins, les interventions peuvent couvrir une combinaison de ces axes :\n\n\n\n\n\n\n\nAxe\nFocus possible\n\n\n\n\nArchitecture Data Moderne\nLakehouse, data platform, batch vs streaming, cloud data architecture\n\n\nIndustrialisation & DataOps\nCI/CD data, tests, qualité, observabilité, fiabilisation pipelines\n\n\nProcessing Distribué\nSpark / PySpark / SQL distribué, performance & optimisation\n\n\nStreaming & Temps Réel\nKafka, pipelines événementiels, patterns streaming\n\n\nOrchestration\nAirflow, Dagster, structuration workflows\n\n\nQualité & Gouvernance Technique\nData quality, validation, monitoring, bonnes pratiques\n\n\nPerformance & Coûts\noptimisation traitements & usages infrastructure\n\n\n\nLes axes retenus sont ajustés au contexte de la mission.\n\n\n\n\n\nÉchange de cadrage\nAnalyse besoin & niveau équipe\nDéfinition des objectifs pédagogiques\nProposition de programme adapté\nValidation faisabilité & disponibilité\nIntervention & support associé\n\n\n\n\n\nLes modalités (sessions techniques, workshops, accompagnement, format synchrone, présentiel ou distant) sont définies au cas par cas selon :\n\nle contexte\nles objectifs\nles contraintes opérationnelles\nla localisation\nmes disponibilités\n\nAucun format standard n’est imposé.\n\n\n\n\nLa durée et le rythme sont définis spécifiquement pour chaque demande : sessions ciblées, ateliers techniques, parcours progressif ou accompagnement structuré.\n\n\n\n\nApproche fortement orientée pratique :\n\n✅ labs contextualisés\n✅ cas réels\n✅ exercices guidés\n✅ revues de code\n✅ patterns & anti-patterns\n✅ retours d’expérience production\n✅ bonnes pratiques d’ingénierie data\n\nLes livrables pédagogiques sont définis selon la mission.\n\n\n\n\n\n✅ Basé sur architectures et pipelines en production\n✅ Double vision architecture + delivery terrain\n✅ Expertise data platform moderne\n✅ Pédagogie éprouvée (bootcamp Data Engineering)\n✅ Approche sur mesure\n✅ Orientation autonomie équipes\n✅ Contexte africain & international\n\n\n\n\n\nContact via LinkedIn :\n🔗 https://linkedin.com/in/diakite-data\nMerci de préciser :\n\nprofils concernés\nniveau estimé\ncontexte technique\nobjectifs prioritaires\ncontraintes calendrier\n\nUne réponse est apportée après étude de faisabilité et de disponibilité.\n\n\n\n\nLes interventions formation sont acceptées en nombre limité, selon priorisation et calendrier.\n\nYOUSSOUF DIAKITE\nArchitecte Data & Expert Data Engineering\n\n💡 Besoin d’expertise ou d’audit ?\nVoir : Consulting Data Engineering"
+    "text": "J’interviens auprès d’entreprises et d’institutions pour concevoir et animer des formations Data Engineering sur mesure, directement alignées sur les environnements techniques réels, les contraintes opérationnelles et les objectifs de montée en compétence.\nLes interventions s’appuient sur des retours d’expérience terrain, des architectures data modernes et des pratiques d’industrialisation utilisées en production.\nObjectif : permettre aux équipes techniques de gagner en autonomie, rigueur d’ingénierie et capacité d’exécution."
   },
   {
     "objectID": "corporate.html#formations-data-engineering-pour-entreprises",
@@ -11046,9 +11046,9 @@
   {
     "objectID": "corporate.html#disponibilité",
     "href": "corporate.html#disponibilité",
-    "title": "🏢 Formation Data Engineering Corporate",
-    "section": "",
-    "text": "Les interventions formation sont acceptées en nombre limité, selon priorisation et calendrier.\n\nYOUSSOUF DIAKITE\nArchitecte Data & Expert Data Engineering\n\n💡 Besoin d’expertise ou d’audit ?\nVoir : Consulting Data Engineering"
+    "title": "🏢 Formation Corporate",
+    "section": "⚠️ Disponibilité",
+    "text": "⚠️ Disponibilité\nLes interventions formation sont acceptées en nombre limité, selon priorisation et calendrier.\n\nMAMADOU YOUSSOUF DIAKITE\nArchitecte Data & Expert Data Engineering\n\n💡 Besoin d’expertise ou d’audit ?\nVoir : Consulting Data Engineering"
   },
   {
     "objectID": "corporate.html#pourquoi-cette-formation",
@@ -11125,7 +11125,7 @@
     "href": "consulting.html#stack-technique-maîtrisée",
     "title": "💼 Architecte Data & Expert Data Engineering | Consulting",
     "section": "🛠️ Stack Technique Maîtrisée",
-    "text": "🛠️ Stack Technique Maîtrisée\n\n\n\n\n\n\n\nDomaine\nTechnologies\n\n\n\n\nTraitement & Orchestration\nApache Spark (PySpark, Spark SQL, Scala), Airflow, Dagster, Prefect\n\n\nStreaming & Événements\nApache Kafka, Kafka Streams, Apache Flink, Pulsar\n\n\nStockage & Lakehouse\nDelta Lake, Apache Iceberg, Parquet, AWS S3, Azure ADLS\n\n\nInfrastructure & Cloud\nDocker, Kubernetes, AWS, Azure, GCP\n\n\nData Quality & Analytics\ndbt, Great Expectations, frameworks de tests data"
+    "text": "🛠️ Stack Technique Maîtrisée\n\n\n\n\n\n\n\nDomaine\nTechnologies\n\n\n\n\nTraitement & Orchestration\nApache Spark (PySpark, Spark SQL, Scala), Airflow\n\n\nStreaming & Événements\nApache Kafka, Kafka Streams, Apache Flink\n\n\nStockage & Lakehouse\nDelta Lake, Apache Iceberg, Parquet, AWS S3\n\n\nInfrastructure & Cloud\nDocker, Kubernetes, AWS, Azure, GCP\n\n\nData Quality & Analytics\ndbt, Great Expectations, frameworks de tests data"
   },
   {
     "objectID": "consulting.html#pourquoi-travailler-avec-moi",
@@ -11158,64 +11158,71 @@
   {
     "objectID": "corporate.html#à-qui-sadressent-ces-formations",
     "href": "corporate.html#à-qui-sadressent-ces-formations",
-    "title": "🏢 Formation Data Engineering Corporate",
-    "section": "",
-    "text": "Data Engineers\nAnalytics / Analytics Engineers\nData Scientists en phase d’industrialisation\nTech Leads & Architectes\nÉquipes data pluridisciplinaires\nÉquipes en structuration de data platform"
+    "title": "🏢 Formation Corporate",
+    "section": "🎯 À qui s’adressent ces formations",
+    "text": "🎯 À qui s’adressent ces formations\n\nData Engineers\nAnalytics / Analytics Engineers\nData Scientists en phase d’industrialisation\nTech Leads & Architectes\nÉquipes data pluridisciplinaires\nÉquipes en structuration de data platform"
   },
   {
     "objectID": "corporate.html#approche-sur-mesure-pas-de-catalogue-standard",
     "href": "corporate.html#approche-sur-mesure-pas-de-catalogue-standard",
-    "title": "🏢 Formation Data Engineering Corporate",
-    "section": "",
-    "text": "Le contenu, le niveau et l’organisation sont définis au cas par cas selon :\n\nle profil des participants\nvotre stack technique\nvos cas d’usage\nvotre maturité data\nvos priorités opérationnelles\nmes disponibilités\n\nChaque programme est construit pour être directement applicable dans votre contexte réel."
+    "title": "🏢 Formation Corporate",
+    "section": "🧩 Approche sur mesure — pas de catalogue standard",
+    "text": "🧩 Approche sur mesure — pas de catalogue standard\nLe contenu, le niveau et l’organisation sont définis au cas par cas selon :\n\nle profil des participants\nvotre stack technique\nvos cas d’usage\nvotre maturité data\nvos priorités opérationnelles\nmes disponibilités\n\nChaque programme est construit pour être directement applicable dans votre contexte réel."
   },
   {
     "objectID": "corporate.html#axes-thématiques-possibles",
     "href": "corporate.html#axes-thématiques-possibles",
-    "title": "🏢 Formation Data Engineering Corporate",
-    "section": "",
-    "text": "Selon les besoins, les interventions peuvent couvrir une combinaison de ces axes :\n\n\n\n\n\n\n\nAxe\nFocus possible\n\n\n\n\nArchitecture Data Moderne\nLakehouse, data platform, batch vs streaming, cloud data architecture\n\n\nIndustrialisation & DataOps\nCI/CD data, tests, qualité, observabilité, fiabilisation pipelines\n\n\nProcessing Distribué\nSpark / PySpark / SQL distribué, performance & optimisation\n\n\nStreaming & Temps Réel\nKafka, pipelines événementiels, patterns streaming\n\n\nOrchestration\nAirflow, Dagster, structuration workflows\n\n\nQualité & Gouvernance Technique\nData quality, validation, monitoring, bonnes pratiques\n\n\nPerformance & Coûts\noptimisation traitements & usages infrastructure\n\n\n\nLes axes retenus sont ajustés au contexte de la mission."
+    "title": "🏢 Formation Corporate",
+    "section": "🛠️ Axes thématiques possibles",
+    "text": "🛠️ Axes thématiques possibles\nSelon les besoins, les interventions peuvent couvrir une combinaison de ces axes :\n\n\n\n\n\n\n\nAxe\nFocus possible\n\n\n\n\nArchitecture Data Moderne\nLakehouse, data platform, batch vs streaming, data architecture\n\n\nIndustrialisation & DataOps\nCI/CD data, tests, qualité, observabilité, fiabilisation pipelines\n\n\nProcessing Distribué\nSpark / PySpark / SQL distribué, performance & optimisation\n\n\nStreaming & Temps Réel\nKafka, pipelines événementiels, patterns streaming\n\n\nOrchestration\nAirflow, Dagster, structuration workflows\n\n\nQualité & Gouvernance Technique\nData quality, validation, monitoring, bonnes pratiques\n\n\nPerformance & Coûts\noptimisation traitements & usages infrastructure\n\n\n\nLes axes retenus sont ajustés au contexte de la mission."
   },
   {
     "objectID": "corporate.html#démarche-dintervention",
     "href": "corporate.html#démarche-dintervention",
-    "title": "🏢 Formation Data Engineering Corporate",
-    "section": "",
-    "text": "Échange de cadrage\nAnalyse besoin & niveau équipe\nDéfinition des objectifs pédagogiques\nProposition de programme adapté\nValidation faisabilité & disponibilité\nIntervention & support associé"
+    "title": "🏢 Formation Corporate",
+    "section": "🧭 Démarche d’intervention",
+    "text": "🧭 Démarche d’intervention\n\nÉchange de cadrage\nAnalyse besoin & niveau équipe\nDéfinition des objectifs pédagogiques\nProposition de programme adapté\nValidation faisabilité & disponibilité\nIntervention & support associé"
   },
   {
     "objectID": "corporate.html#modalités-dintervention",
     "href": "corporate.html#modalités-dintervention",
-    "title": "🏢 Formation Data Engineering Corporate",
-    "section": "",
-    "text": "Les modalités (sessions techniques, workshops, accompagnement, format synchrone, présentiel ou distant) sont définies au cas par cas selon :\n\nle contexte\nles objectifs\nles contraintes opérationnelles\nla localisation\nmes disponibilités\n\nAucun format standard n’est imposé."
+    "title": "🏢 Formation Corporate",
+    "section": "🖥️ Modalités d’intervention",
+    "text": "🖥️ Modalités d’intervention\nLes modalités (sessions techniques, workshops, accompagnement, format synchrone, présentiel ou distant) sont définies au cas par cas selon :\n\nle contexte\nles objectifs\nles contraintes opérationnelles\nla localisation\nmes disponibilités\n\nAucun format standard n’est imposé."
   },
   {
     "objectID": "corporate.html#organisation-durée",
     "href": "corporate.html#organisation-durée",
-    "title": "🏢 Formation Data Engineering Corporate",
-    "section": "",
-    "text": "La durée et le rythme sont définis spécifiquement pour chaque demande : sessions ciblées, ateliers techniques, parcours progressif ou accompagnement structuré."
+    "title": "🏢 Formation Corporate",
+    "section": "⏱️ Organisation & durée",
+    "text": "⏱️ Organisation & durée\nLa durée et le rythme sont définis spécifiquement pour chaque demande : sessions ciblées, ateliers techniques, parcours progressif ou accompagnement structuré."
   },
   {
     "objectID": "corporate.html#approche-pédagogique",
     "href": "corporate.html#approche-pédagogique",
-    "title": "🏢 Formation Data Engineering Corporate",
-    "section": "",
-    "text": "Approche fortement orientée pratique :\n\n✅ labs contextualisés\n✅ cas réels\n✅ exercices guidés\n✅ revues de code\n✅ patterns & anti-patterns\n✅ retours d’expérience production\n✅ bonnes pratiques d’ingénierie data\n\nLes livrables pédagogiques sont définis selon la mission."
+    "title": "🏢 Formation Corporate",
+    "section": "🛠️ Approche pédagogique",
+    "text": "🛠️ Approche pédagogique\nApproche fortement orientée pratique :\n\n✅ labs contextualisés\n✅ cas réels\n✅ exercices guidés\n✅ revues de code\n✅ patterns & anti-patterns\n✅ retours d’expérience production\n✅ bonnes pratiques d’ingénierie data\n\nLes livrables pédagogiques sont définis selon la mission."
   },
   {
     "objectID": "corporate.html#points-différenciants",
     "href": "corporate.html#points-différenciants",
-    "title": "🏢 Formation Data Engineering Corporate",
-    "section": "",
-    "text": "✅ Basé sur architectures et pipelines en production\n✅ Double vision architecture + delivery terrain\n✅ Expertise data platform moderne\n✅ Pédagogie éprouvée (bootcamp Data Engineering)\n✅ Approche sur mesure\n✅ Orientation autonomie équipes\n✅ Contexte africain & international"
+    "title": "🏢 Formation Corporate",
+    "section": "✨ Points différenciants",
+    "text": "✨ Points différenciants\n\n✅ Basé sur architectures et pipelines en production\n✅ Double vision architecture + delivery terrain\n✅ Expertise data platform moderne\n✅ Pédagogie éprouvée (bootcamp Data Engineering)\n✅ Approche sur mesure\n✅ Orientation autonomie équipes\n✅ Contexte africain & international"
   },
   {
     "objectID": "corporate.html#demande-de-formation",
     "href": "corporate.html#demande-de-formation",
-    "title": "🏢 Formation Data Engineering Corporate",
+    "title": "🏢 Formation Corporate",
+    "section": "📞 Demande de formation",
+    "text": "📞 Demande de formation\nContact via LinkedIn :\n🔗 https://linkedin.com/in/diakite-data\nMerci de préciser :\n\nprofils concernés\nniveau estimé\ncontexte technique\nobjectifs prioritaires\ncontraintes calendrier\n\nUne réponse est apportée après étude de faisabilité et de disponibilité."
+  },
+  {
+    "objectID": "corporate.html#renforcer-les-compétences-de-vos-équipes",
+    "href": "corporate.html#renforcer-les-compétences-de-vos-équipes",
+    "title": "🏢 Formation Corporate",
     "section": "",
-    "text": "Contact via LinkedIn :\n🔗 https://linkedin.com/in/diakite-data\nMerci de préciser :\n\nprofils concernés\nniveau estimé\ncontexte technique\nobjectifs prioritaires\ncontraintes calendrier\n\nUne réponse est apportée après étude de faisabilité et de disponibilité."
+    "text": "J’interviens auprès d’entreprises et d’institutions pour concevoir et animer des formations Data Engineering sur mesure, directement alignées sur les environnements techniques réels, les contraintes opérationnelles et les objectifs de montée en compétence.\nLes interventions s’appuient sur des retours d’expérience terrain, des architectures data modernes et des pratiques d’industrialisation utilisées en production.\nObjectif : permettre aux équipes techniques de gagner en autonomie, rigueur d’ingénierie et capacité d’exécution."
   }
 ]
