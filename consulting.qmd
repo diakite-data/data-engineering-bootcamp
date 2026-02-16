@@ -4,15 +4,29 @@ description: "Concevoir, optimiser et industrialiser vos plateformes data pour d
 page-layout: article
 ---
 
+:::{.callout-warning}
+## ⚠️ Services Professionnels Payants
+
+Cette page concerne des **services de consulting payants** destinés aux entreprises et organisations.
+
+**Le bootcamp "From Zero to Hero" reste 100% gratuit pour tous.**
+
+Ces services sont **indépendants** du bootcamp.
+
+[← Retour au bootcamp gratuit](index.qmd)
+:::
+
+---
+
 ## Expert Data Engineering & Architecture
 
-Chef de service **Études & Architecture Data** à l’**Agence Nationale du Service Universel des Télécommunications/TIC (ANSUT)** en Côte d’Ivoire — organisme public responsable de l’accès universel aux services numériques — et ancien **Tech Lead Data Engineering chez Orange Côte d’Ivoire**, où j’ai piloté des plateformes data en production et managé une équipe de plus de 15 data engineers.
+Chef de service **Études & Architecture Data** à l'**Agence Nationale du Service Universel des Télécommunications/TIC (ANSUT)** en Côte d'Ivoire — organisme public responsable de l'accès universel aux services numériques — et ancien **Tech Lead Data Engineering chez Orange Côte d'Ivoire**, où j'ai piloté des plateformes data en production et managé une équipe de plus de 15 data engineers.
 
-Je contribue à la conception et à l’industrialisation de plateformes data à grande échelle dans un contexte institutionnel et national.
+Je contribue à la conception et à l'industrialisation de plateformes data à grande échelle dans un contexte institutionnel et national.
 
-Fort de cette expérience terrain, architecture et delivery, j’accompagne les organisations à transformer leurs données en atout stratégique via des architectures robustes, scalables et alignées sur la valeur métier.
+Fort de cette expérience terrain, architecture et delivery, j'accompagne les organisations à transformer leurs données en atout stratégique via des architectures robustes, scalables et alignées sur la valeur métier.
 
-J’interviens auprès de :
+J'interviens auprès de :
 
 - Organisations publiques et institutions
 - Grandes entreprises en transformation data
@@ -25,7 +39,7 @@ J’interviens auprès de :
 
 ### 🏗️ Architecture & Conception de Plateformes Data
 
-De la vision stratégique aux plans de déploiement : je conçois l’architecture qui supporte votre croissance et votre performance analytique.
+De la vision stratégique aux plans de déploiement : je conçois l'architecture qui supporte votre croissance et votre performance analytique.
 
 - Conception de Lakehouse & Data Platforms modernes (Delta Lake, Iceberg)
 - Design de pipelines batch et temps réel (Spark, Kafka, Flink)
@@ -67,7 +81,7 @@ Renforcement durable des capacités de vos équipes techniques.
 - Workshops pratiques de conception et résolution de problèmes
 - Code reviews et mise en place de bonnes pratiques d'engineering
 - Mentoring Data Engineers & Architects
-- Bootcamp **“Data Engineering – From Zero to Hero”**
+- Bootcamp **"Data Engineering – From Zero to Hero"**
 
 ---
 
@@ -89,7 +103,7 @@ Renforcement durable des capacités de vos équipes techniques.
 - ✅ Expertise validée en production : plateformes data déployées à échelle nationale
 - ✅ Vision architecture + profondeur technique : conception + optimisation terrain
 - ✅ Expertise technique avancée : Spark, Kafka, Kubernetes, architectures Lakehouse et écosystèmes data associés
-- ✅ Expérience de pilotage d’équipes data (15+ ingénieurs)
+- ✅ Expérience de pilotage d'équipes data (15+ ingénieurs)
 - ✅ Approche pragmatique orientée résultats
 - ✅ Pédagogue & formateur : créateur du bootcamp Data Engineering
 - ✅ Francophone & International
@@ -136,5 +150,5 @@ Pour une réponse rapide et pertinente, merci de préciser :
 
 ---
 
-💡 Formation d’équipe ou département complet :  
+💡 Formation d'équipe ou département complet :  
 [Formation Data Engineering Corporate](corporate.qmd)

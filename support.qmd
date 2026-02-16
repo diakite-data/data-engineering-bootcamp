@@ -1,72 +1,59 @@
 ---
-title: "☕ Soutenez le Bootcamp"
-description: "Votre soutien aide à maintenir ce bootcamp 100% gratuit"
+title: "☕ Soutenir le Projet"
+description: "Donations volontaires pour maintenir le bootcamp gratuit"
 page-layout: article
 ---
 
-## 🙏 Merci de votre soutien !
+:::{.callout-important}
+## ⚠️ Le Bootcamp Reste 100% Gratuit
 
-Ce bootcamp **Data Engineering** est **100% gratuit** et le restera toujours.
+**Aucune obligation de donner.**
 
-Votre contribution m'aide à :
+✅ Le bootcamp est et restera **totalement gratuit**  
+✅ Tous les modules accessibles à tous  
+✅ Aucun contenu premium
 
-- ✅ Créer de nouveaux modules
-- ✅ Maintenir le contenu à jour avec les dernières technologies
-- ✅ Consacrer du temps aux réponses communautaires
-- ✅ Améliorer continuellement le contenu
+[← Retour au bootcamp](index.qmd)
+:::
 
 ---
 
-## 💰 Comment soutenir ?
+## 💰 Soutien Volontaire
+
+Le bootcamp est gratuit. Ton soutien aide à maintenir l'infrastructure et créer de nouveaux modules.
 
 ### 📱 Orange Money / Wave
 
 **Numéro** : `+225 07 08 45 98 37`
 
-Transférez le montant de votre choix via Orange Money ou Wave.
-
 ---
 
-### 🏦 Virement bancaire
+### 🏦 Virement Bancaire
 
 **IBAN** : `CI93 CI20 1010 0111 1755 7420 1760`  
 **Titulaire** : **MAMADOU YOUSSOUF DIAKITE**  
 
 ---
 
-## 🎁 Autres façons de soutenir (gratuites)
+## 🎁 Soutien Gratuit
 
-Pas de budget disponible ? **Aucun problème !** Voici d'autres moyens d'aider :
-
-- ⭐ **[Star sur GitHub](https://github.com/diakite-data/data-engineering-bootcamp)** - Ça aide énormément pour la visibilité
-- 🔗 **Partager** sur LinkedIn, Twitter, ou avec vos collègues
-- 💬 **Rejoindre la communauté** - Aider d'autres apprenants
-- 📝 **Témoignage** - Partagez votre succès avec le bootcamp
-- 🐛 **Contribuer** - Signaler des bugs ou proposer des améliorations
+- ⭐ **[Star sur GitHub](https://github.com/diakite-data/data-engineering-bootcamp)**
+- 🔗 **Partager** sur LinkedIn, Twitter
+- 💬 **Aider** d'autres apprenants
+- 📝 **Témoignage** sur ton parcours
+- 🐛 **Signaler** bugs ou améliorations
 
 ---
 
-## 📊 Transparence
+## 💼 Entreprises
 
-Vos contributions servent à :
+Services professionnels payants disponibles :
 
-- 🖥️ Hébergement et infrastructure
-- 📚 Outils et ressources pédagogiques
-- ⏰ Temps consacré à la création de contenu
-- 🌍 Rendre l'éducation accessible partout
+- [👔 Consulting](consulting.qmd)
+- [🏢 Formation Corporate](corporate.qmd)
 
----
-
-## 🙏 Merci !
-
-Que vous contribuiez financièrement ou non, **merci** d'être partie prenante de ce projet.
-
-Ensemble, nous démocratisons l'accès au Data Engineering !
+Ces services sont **indépendants** du bootcamp gratuit.
 
 ---
 
-*💡 Besoin d'aide ? [Contactez-moi sur LinkedIn](https://linkedin.com/in/diakite-data)*
-
----
-
-**YOUSSOUF DIAKITE**  
+**YOUSSOUF DIAKITE**

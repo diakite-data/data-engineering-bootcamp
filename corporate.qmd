@@ -4,6 +4,20 @@ description: "Formations Data Engineering sur mesure pour entreprises et institu
 page-layout: article
 ---
 
+:::{.callout-warning}
+## ⚠️ Formation Entreprise Payante
+
+Cette page concerne des **formations sur mesure pour entreprises** (service payant).
+
+**Le bootcamp "From Zero to Hero" reste 100% gratuit pour tous.**
+
+Ces formations sont **indépendantes** du bootcamp gratuit.
+
+[← Retour au bootcamp gratuit](index.qmd)
+:::
+
+---
+
 ## Renforcer les compétences de vos équipes
 
 J'interviens auprès d'entreprises et d'institutions pour concevoir et animer des **formations Data Engineering sur mesure**, directement alignées sur les environnements techniques réels, les contraintes opérationnelles et les objectifs de montée en compétence.

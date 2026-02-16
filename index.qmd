@@ -13,6 +13,37 @@ format:
 
 ---
 
+:::{.callout-note icon=false collapse=false}
+## 💎 Transparence Totale - Notre Modèle
+
+### 📚 Le Bootcamp : 100% GRATUIT
+
+✅ **Tous les modules** accessibles gratuitement  
+✅ **Communauté Telegram** gratuite  
+---
+
+### ☕ Support Volontaire (Optionnel)
+
+💡 Si tu veux soutenir le projet : **[Faire un don →](support.qmd)**  
+💡 Aucune obligation, le bootcamp reste gratuit pour tous  
+💡 Ton soutien aide à maintenir l'infrastructure et créer de nouveaux modules
+
+---
+
+### 💼 Services Professionnels (Entreprises)
+
+Pour les entreprises qui ont besoin de :
+- Formation équipes sur mesure
+- Consulting Data Engineering
+- Audit infrastructure
+
+📧 Ces services sont **indépendants** du bootcamp gratuit  
+📧 **[En savoir plus →](consulting.qmd)**
+
+:::
+
+---
+
 ## 🎯 Pourquoi choisir ce Bootcamp ?
 
 Ce programme a été conçu par des Data Engineers expérimentés, en se concentrant sur les **exigences réelles du marché**.  

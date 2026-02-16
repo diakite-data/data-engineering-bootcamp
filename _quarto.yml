@@ -67,7 +67,7 @@ website:
     background: dark
 
   # ---------------------------------------------------------------------------
-  # 🧭 NAVBAR
+  # 🧭 NAVBAR - RESTRUCTURÉE POUR CLARIFICATION V2
   # ---------------------------------------------------------------------------
   navbar:
     background: dark
@@ -80,6 +80,7 @@ website:
     left:
       - text: "🏠 Accueil"
         href: index.qmd
+      
       - text: "📘 Programme"
         menu:
           - text: "🟦 Niveau Débutant"
@@ -91,6 +92,7 @@ website:
           - text: "---"
           - text: "📊 Vue d'ensemble"
             href: curriculum.qmd
+      
       - text: "🛠️ Ressources"
         menu:
           - text: "📚 Documentation"
@@ -102,21 +104,34 @@ website:
           - text: "---"
           - text: "🔗 Liens Utiles"
             href: resources/links.qmd
-      - text: "💼 Services"
+      
+      # ========================================================================
+      # NOUVEAU : Grouper Communauté (Telegram + Support volontaire)
+      # ========================================================================
+      - text: "🤝 Communauté"
         menu:
-          - text: "💼 Consulting"
+          - text: "💬 Telegram"
+            href: https://t.me/fromzerotoherodataeng
+            aria-label: "Rejoindre le groupe Telegram"
+          - text: "---"
+          - text: "☕ Soutenir le projet"
+            href: support.qmd
+            aria-label: "Donations volontaires pour maintenir le bootcamp gratuit"
+      
+      # ========================================================================
+      # NOUVEAU : Séparer "Pour Entreprises" (Services payants)
+      # ========================================================================
+      - text: "💼 Pour Entreprises"
+        menu:
+          - text: "👔 Consulting"
             href: consulting.qmd
+            aria-label: "Services de consulting Data Engineering (payant)"
           - text: "🏢 Formation Corporate"
             href: corporate.qmd
-      - text: "💬 Communauté"
-        href: https://t.me/fromzerotoherodataeng
-        aria-label: "Rejoindre le groupe Telegram"
+            aria-label: "Formations sur mesure pour entreprises (payant)"
     
     right:
       - id: google_translate_element
-      - text: "☕ Soutenir"
-        href: support.qmd
-        aria-label: "Soutenez ce bootcamp gratuit"
       - icon: search
         id: search
       - icon: moon
