@@ -266,6 +266,20 @@ Atteindre le niveau "Senior Data Engineer / Architecte Data" avec une maîtrise 
 
 ---
 
+:::{.callout-tip icon=false collapse=false}
+## 🚀 Bientôt Disponible
+
+### Module "Data Engineering for AI"
+
+Nouveau parcours spécialisé sur l'infrastructure data pour projets IA/ML.
+
+**📅 Lancement prévu :** Mars 2026
+
+[🔔 Recevoir une notification sur Telegram](https://t.me/fromzerotoherodataeng)
+:::
+
+---
+
 ## 🎉 Bonne montée en compétence !  
 
 Vous êtes maintenant prêt à progresser étape par étape jusqu'au niveau **Senior Data Engineer**.
