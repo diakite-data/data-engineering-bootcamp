@@ -119,16 +119,16 @@ website:
             aria-label: "Donations volontaires pour maintenir le bootcamp gratuit"
       
       # ========================================================================
-      # NOUVEAU : Séparer "Pour Entreprises" (Services payants)
+      # NOUVEAU : Séparer "Pour Organisations" (Services payants)
       # ========================================================================
-      - text: "💼 Pour Entreprises"
+      - text: "💼 Pour Organisations"
         menu:
           - text: "👔 Consulting"
             href: consulting.qmd
             aria-label: "Services de consulting Data Engineering (payant)"
-          - text: "🏢 Formation Corporate"
+          - text: "🎓 Formations"
             href: corporate.qmd
-            aria-label: "Formations sur mesure pour entreprises (payant)"
+            aria-label: "Formations sur mesure pour organisations (payant)"
     
     right:
       - id: google_translate_element

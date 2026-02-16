@@ -18,6 +18,16 @@ page-layout: article
 
 ---
 
+## 🎁 Soutien Gratuit
+
+- ⭐ **[Star sur GitHub](https://github.com/diakite-data/data-engineering-bootcamp)**
+- 🔗 **Partager** sur LinkedIn, WhatsApp, Telegram 
+- 💬 **Aider** d'autres apprenants
+- 📝 **Témoignage** sur ton parcours
+- 🐛 **Signaler** bugs ou améliorations
+
+---
+
 ## 💰 Soutien Volontaire
 
 Le bootcamp est gratuit. Ton soutien aide à maintenir l'infrastructure et créer de nouveaux modules.
@@ -35,22 +45,12 @@ Le bootcamp est gratuit. Ton soutien aide à maintenir l'infrastructure et crée
 
 ---
 
-## 🎁 Soutien Gratuit
-
-- ⭐ **[Star sur GitHub](https://github.com/diakite-data/data-engineering-bootcamp)**
-- 🔗 **Partager** sur LinkedIn, Twitter
-- 💬 **Aider** d'autres apprenants
-- 📝 **Témoignage** sur ton parcours
-- 🐛 **Signaler** bugs ou améliorations
-
----
-
-## 💼 Entreprises
+## 💼 Organisations
 
 Services professionnels payants disponibles :
 
 - [👔 Consulting](consulting.qmd)
-- [🏢 Formation Corporate](corporate.qmd)
+- [🎓 Formations](corporate.qmd)
 
 Ces services sont **indépendants** du bootcamp gratuit.
 

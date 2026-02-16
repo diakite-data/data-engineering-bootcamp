@@ -14,30 +14,33 @@ format:
 ---
 
 :::{.callout-note icon=false collapse=false}
-## 💎 Transparence Totale - Notre Modèle
+## 💎 Transparence Totale
 
 ### 📚 Le Bootcamp : 100% GRATUIT
 
 ✅ **Tous les modules** accessibles gratuitement  
+✅ **Aucun paywall**, jamais  
 ✅ **Communauté Telegram** gratuite  
+✅ Le bootcamp restera **TOUJOURS gratuit**
+
 ---
 
 ### ☕ Support Volontaire (Optionnel)
 
-💡 Si tu veux soutenir le projet : **[Faire un don →](support.qmd)**  
-💡 Aucune obligation, le bootcamp reste gratuit pour tous  
-💡 Ton soutien aide à maintenir l'infrastructure et créer de nouveaux modules
+💡 Si tu veux soutenir : **[Faire un don →](support.qmd)**  
+💡 Aucune obligation  
+💡 Le bootcamp reste gratuit pour tous
 
 ---
 
-### 💼 Services Professionnels (Entreprises)
+### 💼 Services Professionnels (Organisations)
 
-Pour les entreprises qui ont besoin de :
-- Formation équipes sur mesure
+Pour organisations ayant besoin de :
+- Formations sur mesure
 - Consulting Data Engineering
 - Audit infrastructure
 
-📧 Ces services sont **indépendants** du bootcamp gratuit  
+📧 Services **indépendants** du bootcamp gratuit  
 📧 **[En savoir plus →](consulting.qmd)**
 
 :::

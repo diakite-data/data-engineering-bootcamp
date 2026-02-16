@@ -150,5 +150,5 @@ Pour une réponse rapide et pertinente, merci de préciser :
 
 ---
 
-💡 Formation d'équipe ou département complet :  
-[Formation Data Engineering Corporate](corporate.qmd)
+💡 Formations pour équipes ou organisations :  
+[Formations sur Mesure](corporate.qmd)
