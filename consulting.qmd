@@ -3,7 +3,7 @@ title: "💼 Architecte Data & Expert Data Engineering | Consulting"
 description: "Concevoir, optimiser et industrialiser vos plateformes data pour des enjeux critiques. Expertise terrain en architecture, performance et stratégie."
 page-layout: article
 ---
-
+<!--
 :::{.callout-warning}
 ## ⚠️ Services Professionnels Payants
 
@@ -17,7 +17,7 @@ Ces services sont **indépendants** du bootcamp.
 :::
 
 ---
-
+-->
 ## Expert Data Engineering & Architecture
 
 Chef de service **Études & Architecture Data** à l'**Agence Nationale du Service Universel des Télécommunications/TIC (ANSUT)** en Côte d'Ivoire — organisme public responsable de l'accès universel aux services numériques — et ancien **Tech Lead Data Engineering chez Orange Côte d'Ivoire**, où j'ai piloté des plateformes data en production et managé une équipe de plus de 15 data engineers.

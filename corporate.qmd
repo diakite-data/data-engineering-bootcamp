@@ -3,7 +3,7 @@ title: "🏢 Formation Corporate"
 description: "Formations Data Engineering sur mesure pour entreprises et institutions"
 page-layout: article
 ---
-
+<!--
 :::{.callout-warning}
 ## ⚠️ Formation Entreprise Payante
 
@@ -17,6 +17,7 @@ Ces formations sont **indépendantes** du bootcamp gratuit.
 :::
 
 ---
+-->
 
 ## Renforcer les compétences de vos équipes
 
@@ -145,6 +146,8 @@ Merci de préciser :
 - contraintes calendrier
 
 Une réponse est apportée après étude de faisabilité et de disponibilité.
+
+*Réponse sous 48h.*
 
 ---
 
