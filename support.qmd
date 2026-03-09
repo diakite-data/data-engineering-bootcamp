@@ -1,13 +1,13 @@
 ---
 title: "☕ Soutenir le Projet"
-description: "Donations volontaires pour maintenir le bootcamp gratuit"
+description: "Comment aider le bootcamp gratuit à grandir"
 page-layout: article
 ---
 
 :::{.callout-important}
 ## ⚠️ Le Bootcamp Reste 100% Gratuit
 
-**Aucune obligation de donner.**
+**Aucune obligation.**
 
 ✅ Le bootcamp est et restera **totalement gratuit**  
 ✅ Tous les modules accessibles à tous  
@@ -18,43 +18,28 @@ page-layout: article
 
 ---
 
-## 🎁 Soutien Gratuit
+## 🎁 Comment Soutenir (gratuitement)
+
+Le bootcamp est gratuit et le restera. Voici comment tu peux aider :
 
 - ⭐ **[Star sur GitHub](https://github.com/diakite-data/data-engineering-bootcamp)**
-- 🔗 **Partager** sur LinkedIn, WhatsApp, Telegram 
-- 💬 **Aider** d'autres apprenants
-- 📝 **Témoignage** sur ton parcours
-- 🐛 **Signaler** bugs ou améliorations
+- 🔗 **Partager** sur LinkedIn, Twitter, WhatsApp
+- 💬 **Aider** d'autres apprenants sur Telegram
+- 📝 **Témoignage** de ton parcours avec le bootcamp
+- 🐛 **Signaler** bugs ou proposer des améliorations
 
 ---
 
-## 💰 Soutien Volontaire
+## 💼 Pour Organisations
 
-Le bootcamp est gratuit. Ton soutien aide à maintenir l'infrastructure et créer de nouveaux modules.
+Services professionnels disponibles :
 
-### 📱 Orange Money / Wave
-
-**Numéro** : `+225 xx xx xx xx xx`
-
----
-
-### 🏦 Virement Bancaire
-
-**IBAN** : `CI93 CI20 1010 0111 1755 7420 1760`  
-**Titulaire** : **Beerus SAMA**  
-
----
-
-## 💼 Organisations
-
-Services professionnels payants disponibles :
-
-- [👔 Consulting](consulting.qmd)
-- [🎓 Formations](corporate.qmd)
+- [👔 Consulting Data Engineering](consulting.qmd)
+- [🎓 Formations sur mesure](corporate.qmd)
 
 Ces services sont **indépendants** du bootcamp gratuit.
 
 ---
 
-**YOUSSOUF DIAKITE**
+**YOUSSOUF DIAKITE**  
 *Architecte Data & Expert Data Engineering*
