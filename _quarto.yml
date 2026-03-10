@@ -3,7 +3,6 @@
 # ==============================================================================
 # Configuration Quarto pour le site web du bootcamp
 # Structure : Débutant (01-13) → Intermédiaire (14-26) → Avancé (27-35)
-
 # ==============================================================================
 
 project:
@@ -90,6 +89,9 @@ website:
             href: notebooks/intermediate/14_docker_for_data_engineers.ipynb
           - text: "🟥 Niveau Avancé"
             href: notebooks/advanced/27_kubernetes_deep_dive.ipynb
+          - text: "---"
+          - text: "🤖 Data Engineering for AI"
+            href: notebooks/ai/module1_introduction_data_centric_ai.ipynb
           - text: "---"
           - text: "📊 Vue d'ensemble"
             href: curriculum.qmd
@@ -294,6 +296,29 @@ website:
             contents:
               - text: "35 · Leadership & Trade-offs"
                 href: notebooks/advanced/35_leadership_tradeoffs.ipynb
+
+      # =========================================================================
+      # 🤖 DATA ENGINEERING FOR AI
+      # =========================================================================
+      - section: "🤖 Data Engineering for AI"
+        contents:
+          - text: "---"
+          - text: "1 · Introduction — Data-Centric AI"
+            href: notebooks/ai/module1_introduction_data_centric_ai.ipynb
+          - text: "2 · Stocker les données"
+            href: notebooks/ai/module2_stocker.ipynb
+          - text: "3 · Transformer les données"
+            href: notebooks/ai/module3_transformer.ipynb
+          - text: "4 · Enrichir les données"
+            href: notebooks/ai/module4_enrichir.ipynb
+          - text: "5 · Automatiser le pipeline"
+            href: notebooks/ai/module5_automatiser.ipynb
+          - text: "---"
+          # Projet final — à venir
+          # - text: "6a · Infrastructure & API"
+          #   href: notebooks/ai/module6a_infrastructure_api.ipynb
+          # - text: "6b · Frontend & Déploiement"
+          #   href: notebooks/ai/module6b_frontend_deploy.ipynb
 
   # ---------------------------------------------------------------------------
   # 🔍 SEARCH
