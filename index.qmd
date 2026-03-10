@@ -250,17 +250,17 @@ Atteindre le niveau "Senior Data Engineer / Architecte Data" avec une maîtrise 
 
 👉 Cliquez dans le menu de gauche pour ouvrir le premier module, ou choisissez votre point d'entrée :
 
-<div style="text-align: center; margin: 30px 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
-  <a href="notebooks/beginner/01_intro_data_engineering.ipynb" style="background: linear-gradient(135deg, #3b82f6, #1d4ed8); color: white; padding: 15px 30px; text-decoration: none; font-size: 16px; border-radius: 10px; font-weight: 600; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);">
+<div style="text-align: center; margin: 30px 0; display: flex; flex-wrap: nowrap; justify-content: center; gap: 12px;">
+  <a href="notebooks/beginner/01_intro_data_engineering.ipynb" style="background: linear-gradient(135deg, #3b82f6, #1d4ed8); color: white; padding: 14px 20px; text-decoration: none; font-size: 15px; border-radius: 10px; font-weight: 600; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3); white-space: nowrap; flex: 1; text-align: center;">
     🟦 Niveau Débutant
   </a>
-  <a href="notebooks/intermediate/14_docker_for_data_engineers.ipynb" style="background: linear-gradient(135deg, #22c55e, #16a34a); color: white; padding: 15px 30px; text-decoration: none; font-size: 16px; border-radius: 10px; font-weight: 600; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);">
+  <a href="notebooks/intermediate/14_docker_for_data_engineers.ipynb" style="background: linear-gradient(135deg, #22c55e, #16a34a); color: white; padding: 14px 20px; text-decoration: none; font-size: 15px; border-radius: 10px; font-weight: 600; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3); white-space: nowrap; flex: 1; text-align: center;">
     🟩 Niveau Intermédiaire
   </a>
-  <a href="notebooks/advanced/27_kubernetes_deep_dive.ipynb" style="background: linear-gradient(135deg, #ef4444, #dc2626); color: white; padding: 15px 30px; text-decoration: none; font-size: 16px; border-radius: 10px; font-weight: 600; box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);">
+  <a href="notebooks/advanced/27_kubernetes_deep_dive.ipynb" style="background: linear-gradient(135deg, #ef4444, #dc2626); color: white; padding: 14px 20px; text-decoration: none; font-size: 15px; border-radius: 10px; font-weight: 600; box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3); white-space: nowrap; flex: 1; text-align: center;">
     🟥 Niveau Avancé
   </a>
-  <a href="notebooks/ai/module1_introduction_data_centric_ai.ipynb" style="background: linear-gradient(135deg, #a855f7, #7c3aed); color: white; padding: 15px 30px; text-decoration: none; font-size: 16px; border-radius: 10px; font-weight: 600; box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3); white-space: nowrap;">
+  <a href="notebooks/ai/module1_introduction_data_centric_ai.ipynb" style="background: linear-gradient(135deg, #a855f7, #7c3aed); color: white; padding: 14px 20px; text-decoration: none; font-size: 15px; border-radius: 10px; font-weight: 600; box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3); white-space: nowrap; flex: 1; text-align: center;">
     🤖 DE for AI
   </a>
 </div>
