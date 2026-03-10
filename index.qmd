@@ -260,8 +260,8 @@ Atteindre le niveau "Senior Data Engineer / Architecte Data" avec une maîtrise 
   <a href="notebooks/advanced/27_kubernetes_deep_dive.ipynb" style="background: linear-gradient(135deg, #ef4444, #dc2626); color: white; padding: 15px 30px; text-decoration: none; font-size: 16px; border-radius: 10px; font-weight: 600; box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);">
     🟥 Niveau Avancé
   </a>
-  <a href="notebooks/ai/module1_introduction_data_centric_ai.ipynb" style="background: linear-gradient(135deg, #a855f7, #7c3aed); color: white; padding: 15px 30px; text-decoration: none; font-size: 16px; border-radius: 10px; font-weight: 600; box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);">
-    🤖 Data Engineering for AI
+  <a href="notebooks/ai/module1_introduction_data_centric_ai.ipynb" style="background: linear-gradient(135deg, #a855f7, #7c3aed); color: white; padding: 15px 30px; text-decoration: none; font-size: 16px; border-radius: 10px; font-weight: 600; box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3); white-space: nowrap;">
+    🤖 DE for AI
   </a>
 </div>
 
