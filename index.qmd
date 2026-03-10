@@ -197,7 +197,7 @@ Atteindre le niveau "Senior Data Engineer / Architecte Data" avec une maîtrise 
 │   🟩 NIVEAU 2 : INTERMÉDIAIRE                                               │
 │   ════════════════════════════                                              │
 │   Modules 14-25                                                             │
-│   Docker → K8s → Spark avancé → Lakehouse → Streaming → dbt                 │
+│   Docker → K8s → Spark avancé → Lakehouse → Streaming → dbt                │
 │   📦 Projet : Pipeline E-commerce Olist                                     │
 │                          │                                                  │
 │                          ▼                                                  │
@@ -206,9 +206,17 @@ Atteindre le niveau "Senior Data Engineer / Architecte Data" avec une maîtrise 
 │   Modules 27-35                                                             │
 │   K8s Deep Dive → Orchestration → Messaging → Spark/Scala → ML             │
 │   Architecture → Data Mesh → OLAP → Leadership                              │
-│                                                                             │
+│                          │                                                  │
 │                          ▼                                                  │
 │                    🏆 SENIOR READY                                          │
+│                                                                             │
+│   ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─   │
+│                                                                             │
+│   🤖 DATA ENGINEERING FOR AI                                                │
+│   ═══════════════════════════                                               │
+│   Modules 1-5                                                               │
+│   Stocker → Transformer → Enrichir (Embeddings) → Automatiser              │
+│   🎯 Projet : Image Search — MinIO + CLIP + Chroma + FastAPI                │
 │                                                                             │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
@@ -252,6 +260,9 @@ Atteindre le niveau "Senior Data Engineer / Architecte Data" avec une maîtrise 
   <a href="notebooks/advanced/27_kubernetes_deep_dive.ipynb" style="background: linear-gradient(135deg, #ef4444, #dc2626); color: white; padding: 15px 30px; text-decoration: none; font-size: 16px; border-radius: 10px; font-weight: 600; box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);">
     🟥 Niveau Avancé
   </a>
+  <a href="notebooks/ai/module1_introduction_data_centric_ai.ipynb" style="background: linear-gradient(135deg, #a855f7, #7c3aed); color: white; padding: 15px 30px; text-decoration: none; font-size: 16px; border-radius: 10px; font-weight: 600; box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);">
+    🤖 Data Engineering for AI
+  </a>
 </div>
 
 ---
@@ -266,17 +277,24 @@ Atteindre le niveau "Senior Data Engineer / Architecte Data" avec une maîtrise 
 
 ---
 
-:::{.callout-tip icon=false collapse=false}
-## 🚀 Bientôt Disponible
+# 🤖 Data Engineering for AI
 
-### Module "Data Engineering for AI"
+### 🎯 Objectif  
+Maîtriser l'infrastructure data pour les projets d'IA et de Machine Learning : stockage, transformation, enrichissement et automatisation de pipelines orientés ML.
 
-Nouveau parcours spécialisé sur l'infrastructure data pour projets IA/ML.
+### 📚 Modules
 
-**📅 Lancement prévu :** Mars 2026
+| # | Module | Thèmes Clés |
+|:--|:-------|:------------|
+| 1 | Introduction — Data-Centric AI | Paradigme data-centric, rôle du DE dans les projets IA, stack technique |
+| 2 | Stocker les données | MinIO, formats optimisés (Parquet, WebDataset), métadonnées |
+| 3 | Transformer les données | Preprocessing images à grande échelle, Pillow, data quality |
+| 4 | Enrichir les données | Embeddings, CLIP, Vector Databases (Chroma), indexation sémantique |
+| 5 | Automatiser le pipeline | Orchestration avec Prefect, DAGs, retry automatique, monitoring |
 
-[🔔 Recevoir une notification sur Telegram](https://t.me/fromzerotoherodataeng)
-:::
+> **🎯 Résultat :** Capable de construire un pipeline data complet pour alimenter un projet IA, de l'ingestion brute jusqu'aux embeddings en production.
+
+> **Projet final** *(à venir)* : Système de recherche d'images par description textuelle — MinIO + CLIP + Chroma + FastAPI + Streamlit.
 
 ---
 
