@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>Bootcamp Data Engineering – From Zero to Hero – Bootcamp Data Engineering</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -32,19 +35,18 @@ ul.task-list li input[type="checkbox"] {
 <link href="./assets/images/favicon.svg" rel="icon" type="image/svg+xml">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-fc8d3d93f0a84b7619e1f8ff6eb63d42.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-fc8d3d93f0a84b7619e1f8ff6eb63d42.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-fc8d3d93f0a84b7619e1f8ff6eb63d42.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-0cda25dcbb8fe09c7138904322940710.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-0cda25dcbb8fe09c7138904322940710.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-0cda25dcbb8fe09c7138904322940710.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-158fc3315b9ab2c04d7955da212b30ae.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-6061651b5b1fab8070c767ff15b2e7f7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-158fc3315b9ab2c04d7955da212b30ae.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-141e124763d9ae5e6620eaab1d9e8c7f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-05c9cdaf6a8954ea356181a11d8b40e2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-141e124763d9ae5e6620eaab1d9e8c7f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": true,
@@ -92,13 +94,19 @@ gtag('config', 'G-NZSBZFMZN7', { 'anonymize_ip': true});
 
 <meta property="og:title" content="Bootcamp Data Engineering – From Zero to Hero – Bootcamp Data Engineering">
 <meta property="og:description" content="Programme complet Data Engineering — Du débutant au Senior Engineer">
+<meta property="og:image" content="https://diakite-data.github.io/data-engineering-bootcamp/assets/images/boite_outils.png">
 <meta property="og:site_name" content="Bootcamp Data Engineering">
 <meta property="og:locale" content="fr_FR">
+<meta property="og:image:height" content="768">
+<meta property="og:image:width" content="1408">
 <meta name="twitter:title" content="Bootcamp Data Engineering – From Zero to Hero – Bootcamp Data Engineering">
 <meta name="twitter:description" content="Programme complet Data Engineering — Du débutant au Senior Engineer">
+<meta name="twitter:image" content="https://diakite-data.github.io/data-engineering-bootcamp/assets/images/boite_outils.png">
 <meta name="twitter:creator" content="@diakite_data">
 <meta name="twitter:site" content="@diakite_data">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:image-height" content="768">
+<meta name="twitter:image-width" content="1408">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-sidebar floating nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -876,57 +884,9 @@ Il vous accompagne de manière progressive vers un niveau <strong>professionnel 
 </section>
 <section id="votre-boîte-à-outils-data-engineering" class="level2">
 <h2 class="anchored" data-anchor-id="votre-boîte-à-outils-data-engineering">🛠️ Votre Boîte à Outils Data Engineering</h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Domaine</th>
-<th style="text-align: left;">Outils &amp; Technologies</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><strong>Big Data Processing</strong></td>
-<td style="text-align: left;">PySpark, Spark SQL, Scala, Polars, Pandas</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><strong>Lakehouse</strong></td>
-<td style="text-align: left;">Delta Lake, Apache Iceberg, Hudi</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><strong>Streaming</strong></td>
-<td style="text-align: left;">Kafka, Spark Streaming, Flink, Debezium CDC</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><strong>DevOps / Infra</strong></td>
-<td style="text-align: left;">Docker, Kubernetes, Helm, ArgoCD, Spark Operator</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><strong>Monitoring</strong></td>
-<td style="text-align: left;">Prometheus, Grafana, Alertmanager</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><strong>Cloud</strong></td>
-<td style="text-align: left;">AWS S3, GCP GCS, Azure Blob, IAM, MinIO</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><strong>Qualité &amp; ETL</strong></td>
-<td style="text-align: left;">dbt, Great Expectations, Data Contracts</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><strong>MLOps</strong></td>
-<td style="text-align: left;">MLflow, Feast (Feature Store), Model Monitoring</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><strong>Governance</strong></td>
-<td style="text-align: left;">DataHub, Unity Catalog, RLS/CLS, GDPR</td>
-</tr>
-</tbody>
-</table>
-<hr>
+</section>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"><img src="assets/images/boite_outils.png" class="img-fluid"></h2>
 </section>
 <section id="structure-complète-du-programme-3-niveaux" class="level1">
 <h1>📘 Structure Complète du Programme (3 Niveaux)</h1>
@@ -941,87 +901,7 @@ Il vous accompagne de manière progressive vers un niveau <strong>professionnel 
 </section>
 <section id="modules" class="level3">
 <h3 class="anchored" data-anchor-id="modules">📚 Modules</h3>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 12%">
-<col style="width: 33%">
-<col style="width: 54%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">#</th>
-<th style="text-align: left;">Module</th>
-<th style="text-align: left;">Thèmes Clés</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">01</td>
-<td style="text-align: left;">Introduction au Data Engineering</td>
-<td style="text-align: left;">Rôle du DE, écosystème, architectures (Lambda, Kappa, Lakehouse)</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">02</td>
-<td style="text-align: left;">Fondamentaux Linux &amp; Bash</td>
-<td style="text-align: left;">Commandes essentielles, scripting, cron, permissions</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">03</td>
-<td style="text-align: left;">Git &amp; Versioning</td>
-<td style="text-align: left;">Branches, merge, rebase, workflows collaboratifs</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">04</td>
-<td style="text-align: left;">Python Fondamental</td>
-<td style="text-align: left;">Syntaxe, structures, fichiers, exceptions</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">05</td>
-<td style="text-align: left;">Python Data Processing</td>
-<td style="text-align: left;">POO, décorateurs, générateurs, context managers</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">06</td>
-<td style="text-align: left;">Introduction BDD Relationnelles</td>
-<td style="text-align: left;">Concepts SGBD, modélisation, normalisation</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">07</td>
-<td style="text-align: left;">SQL pour Data Engineers</td>
-<td style="text-align: left;">Requêtes, jointures, window functions, optimisation</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">08</td>
-<td style="text-align: left;">Introduction Big Data</td>
-<td style="text-align: left;">Hadoop, HDFS, MapReduce, écosystème distribué</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">09</td>
-<td style="text-align: left;">MongoDB pour Data Engineers</td>
-<td style="text-align: left;">NoSQL, CRUD, agrégations, indexation</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">10</td>
-<td style="text-align: left;">Elasticsearch</td>
-<td style="text-align: left;">Recherche full-text, indexation, requêtes DSL</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">11</td>
-<td style="text-align: left;">Introduction PySpark</td>
-<td style="text-align: left;">RDD, DataFrame, transformations, actions</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">12</td>
-<td style="text-align: left;">Orchestration de Pipelines</td>
-<td style="text-align: left;">Concepts, scheduling, dépendances</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">13</td>
-<td style="text-align: left;"><strong>Bonus</strong> : FastAPI</td>
-<td style="text-align: left;">API REST pour exposer vos données</td>
-</tr>
-</tbody>
-</table>
+<p><img src="assets/images/modules_debutant.png" class="img-fluid"></p>
 </section>
 <section id="projet-intégrateur-video-games-analytics-platform" class="level3">
 <h3 class="anchored" data-anchor-id="projet-intégrateur-video-games-analytics-platform">🎮 Projet Intégrateur : Video Games Analytics Platform</h3>
@@ -1043,82 +923,7 @@ Il vous accompagne de manière progressive vers un niveau <strong>professionnel 
 </section>
 <section id="modules-1" class="level3">
 <h3 class="anchored" data-anchor-id="modules-1">📚 Modules</h3>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 12%">
-<col style="width: 33%">
-<col style="width: 54%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">#</th>
-<th style="text-align: left;">Module</th>
-<th style="text-align: left;">Thèmes Clés</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">14</td>
-<td style="text-align: left;">Docker pour Data Engineers</td>
-<td style="text-align: left;">Images, containers, volumes, Dockerfile, Compose</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">15</td>
-<td style="text-align: left;">Kubernetes Fondamentaux</td>
-<td style="text-align: left;">Pods, Deployments, Services, ConfigMaps, Secrets</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">16</td>
-<td style="text-align: left;">K8s pour Data Workloads</td>
-<td style="text-align: left;">StatefulSets, Jobs, CronJobs, volumes persistants</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">17</td>
-<td style="text-align: left;">Polars pour Data Engineering</td>
-<td style="text-align: left;">API Polars, lazy evaluation, vs Pandas/Spark</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">18</td>
-<td style="text-align: left;">High Performance Python</td>
-<td style="text-align: left;">Profiling, optimisation, multiprocessing, async</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">19</td>
-<td style="text-align: left;">PySpark Avancé</td>
-<td style="text-align: left;">Partitioning, caching, broadcast, UDF, optimisation</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">20</td>
-<td style="text-align: left;">Spark SQL Deep Dive</td>
-<td style="text-align: left;">Catalyst, plans d’exécution, tuning, adaptive query</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">21</td>
-<td style="text-align: left;">Spark on Kubernetes</td>
-<td style="text-align: left;">Spark Operator, SparkApplication, scaling, monitoring</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">22</td>
-<td style="text-align: left;">Cloud Object Storage</td>
-<td style="text-align: left;">S3, GCS, Azure Blob, MinIO, IAM, performances</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">23</td>
-<td style="text-align: left;">Table Formats (Delta, Iceberg)</td>
-<td style="text-align: left;">ACID, Time Travel, Schema Evolution, MERGE INTO</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">24</td>
-<td style="text-align: left;">Kafka &amp; Streaming</td>
-<td style="text-align: left;">Producers, Consumers, Topics, Partitions, Consumer Groups</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">25</td>
-<td style="text-align: left;">dbt &amp; Data Quality</td>
-<td style="text-align: left;">Models, Tests, Documentation, Great Expectations</td>
-</tr>
-</tbody>
-</table>
+<p><img src="assets/images/modules_intermediaire.png" class="img-fluid"></p>
 </section>
 <section id="projet-intégrateur-pipeline-e-commerce-olist" class="level3">
 <h3 class="anchored" data-anchor-id="projet-intégrateur-pipeline-e-commerce-olist">📦 Projet Intégrateur : Pipeline E-commerce Olist</h3>
@@ -1140,67 +945,7 @@ Il vous accompagne de manière progressive vers un niveau <strong>professionnel 
 </section>
 <section id="modules-2" class="level3">
 <h3 class="anchored" data-anchor-id="modules-2">📚 Modules</h3>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 12%">
-<col style="width: 33%">
-<col style="width: 54%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">#</th>
-<th style="text-align: left;">Module</th>
-<th style="text-align: left;">Thèmes Clés</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">27</td>
-<td style="text-align: left;">Kubernetes Deep Dive</td>
-<td style="text-align: left;">Operators, CRDs, Helm avancé, GitOps, troubleshooting</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">28</td>
-<td style="text-align: left;">Orchestration Avancée</td>
-<td style="text-align: left;">Airflow 2.x, DAGs dynamiques, KubernetesPodOperator, Dagster</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">29</td>
-<td style="text-align: left;">Messaging Distribué</td>
-<td style="text-align: left;">Kafka internals, Pulsar, RabbitMQ, patterns de messaging</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">30</td>
-<td style="text-align: left;">Spark &amp; Scala Deep Dive</td>
-<td style="text-align: left;">Internals Spark, Catalyst, Tungsten, optimisation bas niveau</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">31</td>
-<td style="text-align: left;">Data Engineering pour le ML</td>
-<td style="text-align: left;">Feature Stores, pipelines ML, MLflow, model serving</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">32</td>
-<td style="text-align: left;">Data Mesh &amp; Contracts</td>
-<td style="text-align: left;">Data Products, Domain Ownership, Data Contracts, APIs</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">33</td>
-<td style="text-align: left;">Realtime OLAP &amp; Dashboards</td>
-<td style="text-align: left;">ClickHouse, Apache Druid, Pinot, dashboards temps réel</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">34</td>
-<td style="text-align: left;">Patterns &amp; Décisions d’Architecture</td>
-<td style="text-align: left;">ADR, RFC, trade-offs, design reviews, documentation</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">35</td>
-<td style="text-align: left;">Leadership &amp; Trade-offs</td>
-<td style="text-align: left;">Communication technique, mentoring, gestion de projet tech</td>
-</tr>
-</tbody>
-</table>
+<p><img src="assets/images/modules_avance.png" class="img-fluid"></p>
 <blockquote class="blockquote">
 <p><strong>🎯 Résultat :</strong> Capable de concevoir et défendre une architecture Data complète, mener des design reviews, et guider une équipe technique.</p>
 </blockquote>
@@ -1209,145 +954,12 @@ Il vous accompagne de manière progressive vers un niveau <strong>professionnel 
 </section>
 <section id="vue-densemble-du-parcours" class="level1">
 <h1>📊 Vue d’Ensemble du Parcours</h1>
-<pre><code>┌─────────────────────────────────────────────────────────────────────────────┐
-│                           PARCOURS COMPLET                                  │
-│                                                                             │
-│   🟦 NIVEAU 1 : DÉBUTANT                                                    │
-│   ════════════════════════                                                  │
-│   Modules 01-13                                                             │
-│   Python → SQL → Big Data → PySpark → MongoDB → Elasticsearch              │
-│   🎮 Projet : Video Games Analytics Platform                                │
-│                          │                                                  │
-│                          ▼                                                  │
-│   🟩 NIVEAU 2 : INTERMÉDIAIRE                                               │
-│   ════════════════════════════                                              │
-│   Modules 14-25                                                             │
-│   Docker → K8s → Spark avancé → Lakehouse → Streaming → dbt                 │
-│   📦 Projet : Pipeline E-commerce Olist                                     │
-│                          │                                                  │
-│                          ▼                                                  │
-│   🟥 NIVEAU 3 : AVANCÉ                                                      │
-│   ═════════════════════                                                     │
-│   Modules 27-35                                                             │
-│   K8s Deep Dive → Orchestration → Messaging → Spark/Scala → ML             │
-│   Architecture → Data Mesh → OLAP → Leadership                              │
-│                                                                             │
-│                          ▼                                                  │
-│                    🏆 SENIOR READY                                          │
-│                                                                             │
-└─────────────────────────────────────────────────────────────────────────────┘</code></pre>
+<p><img src="assets/images/vue_ensemble.png" class="img-fluid"></p>
 <hr>
 </section>
 <section id="compétences-acquises-par-niveau" class="level1">
 <h1>🏆 Compétences Acquises par Niveau</h1>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Compétence</th>
-<th style="text-align: center;">Débutant</th>
-<th style="text-align: center;">Intermédiaire</th>
-<th style="text-align: center;">Avancé</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Linux &amp; Bash</td>
-<td style="text-align: center;">✅✅</td>
-<td style="text-align: center;">✅✅✅</td>
-<td style="text-align: center;">✅✅✅</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Python &amp; SQL</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">✅✅</td>
-<td style="text-align: center;">✅✅✅</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Git &amp; Versioning</td>
-<td style="text-align: center;">✅✅</td>
-<td style="text-align: center;">✅✅</td>
-<td style="text-align: center;">✅✅</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">PySpark</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">✅✅</td>
-<td style="text-align: center;">✅✅✅</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Spark Scala</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">✅✅</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Docker &amp; Kubernetes</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">✅✅</td>
-<td style="text-align: center;">✅✅✅</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Lakehouse (Delta/Iceberg)</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">✅✅</td>
-<td style="text-align: center;">✅✅✅</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Streaming (Kafka)</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">✅✅</td>
-<td style="text-align: center;">✅✅✅</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Orchestration (Airflow)</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">✅✅✅</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">dbt &amp; Data Quality</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">✅✅</td>
-<td style="text-align: center;">✅✅</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">OLAP &amp; Realtime Analytics</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">✅✅</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">MLOps &amp; Feature Stores</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">✅✅</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Data Mesh &amp; Contracts</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">✅✅✅</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Governance &amp; Security</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">✅✅✅</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Architecture &amp; Design</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">✅✅✅</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Leadership technique</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">✅✅✅</td>
-</tr>
-</tbody>
-</table>
+<p><img src="assets/images/competences.png" class="img-fluid"></p>
 <hr>
 </section>
 <section id="démarrer-le-bootcamp" class="level1">

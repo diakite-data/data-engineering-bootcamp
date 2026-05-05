@@ -39,17 +39,9 @@ Il vous accompagne de manière progressive vers un niveau **professionnel – Se
 
 ## 🛠️ Votre Boîte à Outils Data Engineering
 
-| Domaine | Outils & Technologies |
-| :--- | :--- |
-| **Big Data Processing** | PySpark, Spark SQL, Scala, Polars, Pandas |
-| **Lakehouse** | Delta Lake, Apache Iceberg, Hudi |
-| **Streaming** | Kafka, Spark Streaming, Flink, Debezium CDC |
-| **DevOps / Infra** | Docker, Kubernetes, Helm, ArgoCD, Spark Operator |
-| **Monitoring** | Prometheus, Grafana, Alertmanager |
-| **Cloud** | AWS S3, GCP GCS, Azure Blob, IAM, MinIO |
-| **Qualité & ETL** | dbt, Great Expectations, Data Contracts |
-| **MLOps** | MLflow, Feast (Feature Store), Model Monitoring |
-| **Governance** | DataHub, Unity Catalog, RLS/CLS, GDPR |
+<div style="text-align: center;">
+  <img src="assets/images/boite_outils.png" style="max-width: 100%; height: auto;" />
+</div>
 
 ---
 
@@ -66,21 +58,10 @@ Construire des bases solides en Python, SQL, systèmes distribués et premiers p
 
 ### 📚 Modules
 
-| # | Module | Thèmes Clés |
-|:--|:-------|:------------|
-| 01 | Introduction au Data Engineering | Rôle du DE, écosystème, architectures (Lambda, Kappa, Lakehouse) |
-| 02 | Fondamentaux Linux & Bash | Commandes essentielles, scripting, cron, permissions |
-| 03 | Git & Versioning | Branches, merge, rebase, workflows collaboratifs |
-| 04 | Python Fondamental | Syntaxe, structures, fichiers, exceptions |
-| 05 | Python Data Processing | POO, décorateurs, générateurs, context managers |
-| 06 | Introduction BDD Relationnelles | Concepts SGBD, modélisation, normalisation |
-| 07 | SQL pour Data Engineers | Requêtes, jointures, window functions, optimisation |
-| 08 | Introduction Big Data | Hadoop, HDFS, MapReduce, écosystème distribué |
-| 09 | MongoDB pour Data Engineers | NoSQL, CRUD, agrégations, indexation |
-| 10 | Elasticsearch | Recherche full-text, indexation, requêtes DSL |
-| 11 | Introduction PySpark | RDD, DataFrame, transformations, actions |
-| 12 | Orchestration de Pipelines | Concepts, scheduling, dépendances |
-| 13 | **Bonus** : FastAPI | API REST pour exposer vos données |
+<div style="text-align: center;">
+  <img src="assets/images/modules_debutant.png" style="max-width: 100%; height: auto;" />
+</div>
+
 
 ### 🎮 Projet Intégrateur : Video Games Analytics Platform
 
@@ -99,20 +80,10 @@ Maîtriser les technologies indispensables en entreprise : Docker, Kubernetes, S
 
 ### 📚 Modules
 
-| # | Module | Thèmes Clés |
-|:--|:-------|:------------|
-| 14 | Docker pour Data Engineers | Images, containers, volumes, Dockerfile, Compose |
-| 15 | Kubernetes Fondamentaux | Pods, Deployments, Services, ConfigMaps, Secrets |
-| 16 | K8s pour Data Workloads | StatefulSets, Jobs, CronJobs, volumes persistants |
-| 17 | Polars pour Data Engineering | API Polars, lazy evaluation, vs Pandas/Spark |
-| 18 | High Performance Python | Profiling, optimisation, multiprocessing, async |
-| 19 | PySpark Avancé | Partitioning, caching, broadcast, UDF, optimisation |
-| 20 | Spark SQL Deep Dive | Catalyst, plans d'exécution, tuning, adaptive query |
-| 21 | Spark on Kubernetes | Spark Operator, SparkApplication, scaling, monitoring |
-| 22 | Cloud Object Storage | S3, GCS, Azure Blob, MinIO, IAM, performances |
-| 23 | Table Formats (Delta, Iceberg) | ACID, Time Travel, Schema Evolution, MERGE INTO |
-| 24 | Kafka & Streaming | Producers, Consumers, Topics, Partitions, Consumer Groups |
-| 25 | dbt & Data Quality | Models, Tests, Documentation, Great Expectations |
+
+<div style="text-align: center;">
+  <img src="assets/images/modules_intermediaire.png" style="max-width: 100%; height: auto;" />
+</div>
 
 ### 📦 Projet Intégrateur : Pipeline E-commerce Olist
 
@@ -131,17 +102,7 @@ Atteindre le niveau "Senior Data Engineer / Architecte Data" avec une maîtrise 
 
 ### 📚 Modules
 
-| # | Module | Thèmes Clés |
-|:--|:-------|:------------|
-| 27 | Kubernetes Deep Dive | Operators, CRDs, Helm avancé, GitOps, troubleshooting |
-| 28 | Orchestration Avancée | Airflow 2.x, DAGs dynamiques, KubernetesPodOperator, Dagster |
-| 29 | Messaging Distribué | Kafka internals, Pulsar, RabbitMQ, patterns de messaging |
-| 30 | Spark & Scala Deep Dive | Internals Spark, Catalyst, Tungsten, optimisation bas niveau |
-| 31 | Data Engineering pour le ML | Feature Stores, pipelines ML, MLflow, model serving |
-| 32 | Data Mesh & Contracts | Data Products, Domain Ownership, Data Contracts, APIs |
-| 33 | Realtime OLAP & Dashboards | ClickHouse, Apache Druid, Pinot, dashboards temps réel |
-| 34 | Patterns & Décisions d'Architecture | ADR, RFC, trade-offs, design reviews, documentation |
-| 35 | Leadership & Trade-offs | Communication technique, mentoring, gestion de projet tech |
+![](assets/images/modules_avance.png)
 
 > **🎯 Résultat :** Capable de concevoir et défendre une architecture Data complète, mener des design reviews, et guider une équipe technique.
 
@@ -149,58 +110,18 @@ Atteindre le niveau "Senior Data Engineer / Architecte Data" avec une maîtrise 
 
 # 📊 Vue d'Ensemble du Parcours
 
-```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                           PARCOURS COMPLET                                  │
-│                                                                             │
-│   🟦 NIVEAU 1 : DÉBUTANT                                                    │
-│   ════════════════════════                                                  │
-│   Modules 01-13                                                             │
-│   Python → SQL → Big Data → PySpark → MongoDB → Elasticsearch              │
-│   🎮 Projet : Video Games Analytics Platform                                │
-│                          │                                                  │
-│                          ▼                                                  │
-│   🟩 NIVEAU 2 : INTERMÉDIAIRE                                               │
-│   ════════════════════════════                                              │
-│   Modules 14-25                                                             │
-│   Docker → K8s → Spark avancé → Lakehouse → Streaming → dbt                 │
-│   📦 Projet : Pipeline E-commerce Olist                                     │
-│                          │                                                  │
-│                          ▼                                                  │
-│   🟥 NIVEAU 3 : AVANCÉ                                                      │
-│   ═════════════════════                                                     │
-│   Modules 27-35                                                             │
-│   K8s Deep Dive → Orchestration → Messaging → Spark/Scala → ML             │
-│   Architecture → Data Mesh → OLAP → Leadership                              │
-│                                                                             │
-│                          ▼                                                  │
-│                    🏆 SENIOR READY                                          │
-│                                                                             │
-└─────────────────────────────────────────────────────────────────────────────┘
-```
+<div style="text-align: center;">
+  <img src="assets/images/vue_ensemble.png" style="max-width: 100%; height: auto;" />
+</div>
 
 ---
 
 # 🏆 Compétences Acquises par Niveau
 
-| Compétence | Débutant | Intermédiaire | Avancé |
-|:-----------|:--------:|:-------------:|:------:|
-| Linux & Bash | ✅✅ | ✅✅✅ | ✅✅✅ |
-| Python & SQL | ✅ | ✅✅ | ✅✅✅ |
-| Git & Versioning | ✅✅ | ✅✅ | ✅✅ |
-| PySpark | ✅ | ✅✅ | ✅✅✅ |
-| Spark Scala | - | - | ✅✅ |
-| Docker & Kubernetes | - | ✅✅ | ✅✅✅ |
-| Lakehouse (Delta/Iceberg) | - | ✅✅ | ✅✅✅ |
-| Streaming (Kafka) | - | ✅✅ | ✅✅✅ |
-| Orchestration (Airflow) | - | ✅ | ✅✅✅ |
-| dbt & Data Quality | - | ✅✅ | ✅✅ |
-| OLAP & Realtime Analytics | - | - | ✅✅ |
-| MLOps & Feature Stores | - | - | ✅✅ |
-| Data Mesh & Contracts | - | - | ✅✅✅ |
-| Governance & Security | - | ✅ | ✅✅✅ |
-| Architecture & Design | - | ✅ | ✅✅✅ |
-| Leadership technique | - | - | ✅✅✅ |
+
+<div style="text-align: center;">
+  <img src="assets/images/competences.png" style="max-width: 100%; height: auto;" />
+</div>
 
 ---
 
